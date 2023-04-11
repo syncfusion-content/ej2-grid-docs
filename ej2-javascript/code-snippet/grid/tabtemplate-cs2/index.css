@@ -1,0 +1,40 @@
+#container {
+  visibility: hidden;
+}
+
+
+
+#loader {
+color: #008cff;
+font-family: 'Helvetica Neue','calibiri';
+font-size: 14px;
+height: 40px;
+left: 45%;
+position: absolute;
+top: 45%;
+width: 30%;
+}
+
+.form-group.col-md-6 {
+width: 250px;
+}
+#ShipAddress{
+resize: vertical;
+}
+
+.e-grid .e-edit-dialog {
+min-height: 0;
+}
+
+.e-grid .e-dialog .e-footer-content {
+display: none;
+}
+
+.e-grid .e-tab .e-toolbar {
+  border: 0;
+}
+
+.e-tab .e-content.e-control {
+overflow-x: hidden;
+overflow-y: hidden;
+}
