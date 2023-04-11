@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>EJ2 Grid</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Typescript Grid Control" />
+    <meta name="author" content="Syncfusion" />
+    <link href="index.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" >
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-base/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-grids/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-buttons/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-popups/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-navigations/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-dropdowns/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-lists/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-inputs/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-calendars/styles/material.css" rel="stylesheet" />
+    
+    
+    
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
+    <script src="systemjs.config.js"></script>
+</head>
+<body>
+    <div id='loader'>Loading....</div>
+    <div id='container'>
+        <div id='Grid'></div>        
+    </div>
+    <script id='dialogtemplate' type="text/x-template">
+        <div>
+            <div class="form-row" >
+                <div class="form-group col-md-6">
+                    <div class="e-float-input e-control-wrapper">
+                        <input id="OrderID" name="OrderID" type="text" value=${if(isAdd)} '' ${else} ${OrderID} ${/if}  ${if(isAdd)}'' ${else} disabled ${/if}/>
+                        <span class="e-float-line"></span>
+                        <label class="e-float-text e-label-top" for="OrderID">Order ID</label>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <div class="e-float-input e-control-wrapper">
+                        <input id="CustomerID" name="CustomerID" type="text" value=${if(isAdd)} '' ${else} ${CustomerID} ${/if} />
+                        <span class="e-float-line"></span>
+                        <label class="e-float-text e-label-top" for="CustomerID">Customer ID</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <div>
+                        <input id="ShipCountry" name="ShipCountry" type="text" value=${if(isAdd)} '' ${else} ${ShipCountry} ${/if} />
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <input id="Freight" value=${if(isAdd)} '' ${else} ${Freight} ${/if} />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <div class="e-float-input e-control-wrapper">
+                        <textarea type="text" name="ShipAddress" id="ShipAddress" value=${if(isAdd)} '' ${else} ${ShipAddress} ${/if}>${if(isAdd)}  ${else} ${ShipAddress} ${/if}</textarea>
+                        <span class="e-float-line"></span>
+                        <label class="e-float-text e-label-top" for="ShipAddress">Ship Address</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="checkbox" name="Verified" id="Verified" ${if(isAdd)} '' ${else} checked ${/if} />
+                </div>
+            </div>
+        </div>      
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>EJ2 Grid</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Typescript Grid Control">
+    <meta name="author" content="Syncfusion">
+    <link href="index.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-base/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-grids/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-buttons/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-popups/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-navigations/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-dropdowns/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-lists/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-inputs/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-calendars/styles/material.css" rel="stylesheet">
+
+
+
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-splitbuttons/styles/material.css" rel="stylesheet">
+
+
+    
+    
+    
+    <style>
+        .immutablegrid,
+        .normalgrid {
+            pointer-events: none;
+        }
+    </style>
+<script src="https://cdn.syncfusion.com/ej2/20.4.38/dist/ej2.min.js" type="text/javascript"></script>
+<script src="es5-datasource.js" type="text/javascript"></script>
+</head>
+
+<body>
+    
+    <div id="container">
+        <script id="template" type="text/x-template">
+            <div class="image">
+                <img src="${Id}.png" alt="${Id}" />
+            </div>
+        </script>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <span id="immutableDelete"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="normalDelete"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <button id="addtop" class="e-control e-btn e-lib e-info">Add 5 rows at top</button>
+                            <button id="addbottom" class="e-control e-btn e-lib e-info">Add 5 rows at bottom</button>
+                            <button id="delete" class="e-control e-btn e-lib e-info">Delete 5 rows</button>
+                            <button id="reverse" class="e-control e-btn e-lib e-info">Sort Order ID</button>
+                            <button id="paging" class="e-control e-btn e-lib e-info">Paging</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span><b>Immutable Grid</b></span>
+                        <div id="immutable" class="immutablegrid"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span><b>Normal Grid</b></span>
+                        <div id="normal" class="normalgrid"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+<script>
+var ele = document.getElementById('container');
+if(ele) {
+  ele.style.visibility = "visible";
+}   
+      </script>
+<script src="index.js" type="text/javascript"></script>
+</body></html>

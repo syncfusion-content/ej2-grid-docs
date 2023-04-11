@@ -1,0 +1,28 @@
+ej.grids.Grid.Inject(ej.grids.DetailRow);
+var grid = new ej.grids.Grid({
+    dataSource: employeeData,
+    columns: [
+        { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 120 },
+        { field: 'FirstName', headerText: 'First Name', width: 150 },
+        { field: 'City', headerText: 'City', width: 150 },
+        { field: 'Country', headerText: 'Country', width: 150 }
+    ],
+    childGrid: {
+        dataSource: childdata,
+        queryString: 'ID',
+        columns: [
+            { field: 'ID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
+            { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
+            { field: 'ShipCity', headerText: 'Ship City', width: 150 },
+            { field: 'ShipName', headerText: 'Ship Name', width: 150 }
+        ],
+        load: load,
+    },
+    height: 315
+});
+grid.appendTo('#Grid');
+
+function load(args) {
+      this.parentDetails.parentKeyFieldValue = this.parentDetails.parentRowData['EmployeeID'];
+}
+
