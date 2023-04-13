@@ -22,7 +22,7 @@ The column [`template`](../../api/grid/column/#template) has options to display 
 {% include code-snippet/grid/column-template-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-template-cs1/ts/index.html %}
+{% include code-snippet/grid/column-template-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ The column [`template`](../../api/grid/column/#template) has options to display 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/column-template-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-template-cs1/js/index.html %}
+{% include code-snippet/grid/column-template-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -83,7 +84,7 @@ Using the [`queryCellInfo`](../../api/grid/#querycellinfo) event, you can render
 {% include code-snippet/grid/column-sync-comp-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-sync-comp-cs1/ts/index.html %}
+{% include code-snippet/grid/column-sync-comp-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -91,11 +92,12 @@ Using the [`queryCellInfo`](../../api/grid/#querycellinfo) event, you can render
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/column-sync-comp-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-sync-comp-cs1/js/index.html %}
+{% include code-snippet/grid/column-sync-comp-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -125,7 +127,7 @@ In the following code, checkbox is rendered based on **Discontinued** field valu
 {% include code-snippet/grid/condition-inside-template-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/condition-inside-template-cs1/ts/index.html %}
+{% include code-snippet/grid/condition-inside-template-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -133,11 +135,12 @@ In the following code, checkbox is rendered based on **Discontinued** field valu
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/condition-inside-template-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/condition-inside-template-cs1/js/index.html %}
+{% include code-snippet/grid/condition-inside-template-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -157,7 +160,7 @@ In the following sample, the button element is rendered in the Employee Data col
 {% include code-snippet/grid/row-object-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-object-cs1/ts/index.html %}
+{% include code-snippet/grid/row-object-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -165,11 +168,12 @@ In the following sample, the button element is rendered in the Employee Data col
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/row-object-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-object-cs1/js/index.html %}
+{% include code-snippet/grid/row-object-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

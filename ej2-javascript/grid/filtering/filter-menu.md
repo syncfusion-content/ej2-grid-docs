@@ -20,7 +20,7 @@ You can enable filter menu by setting the [`filterSettings.type`](../../api/grid
 {% include code-snippet/grid/grid-cs65/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs65/ts/index.html %}
+{% include code-snippet/grid/grid-cs65/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -28,11 +28,12 @@ You can enable filter menu by setting the [`filterSettings.type`](../../api/grid
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs65/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs65/js/index.html %}
+{% include code-snippet/grid/grid-cs65/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -61,7 +62,7 @@ In the following sample, dropdown is used  as custom component in the OrderID co
 {% include code-snippet/grid/grid-cs66/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs66/ts/index.html %}
+{% include code-snippet/grid/grid-cs66/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -69,11 +70,12 @@ In the following sample, dropdown is used  as custom component in the OrderID co
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs66/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs66/js/index.html %}
+{% include code-snippet/grid/grid-cs66/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -98,7 +100,7 @@ The following sample illustrates customizing the string filter operators.
 {% include code-snippet/grid/grid-cs67/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs67/ts/index.html %}
+{% include code-snippet/grid/grid-cs67/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -106,11 +108,12 @@ The following sample illustrates customizing the string filter operators.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs67/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs67/js/index.html %}
+{% include code-snippet/grid/grid-cs67/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -130,7 +133,7 @@ In the following sample menu filter is enabled by default and checkbox filter is
 {% include code-snippet/grid/grid-cs68/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs68/ts/index.html %}
+{% include code-snippet/grid/grid-cs68/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -138,11 +141,12 @@ In the following sample menu filter is enabled by default and checkbox filter is
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs68/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs68/js/index.html %}
+{% include code-snippet/grid/grid-cs68/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -162,7 +166,7 @@ In the following sample, filtering action with multiple keywords can be done by 
 {% include code-snippet/grid/grid-cs69/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs69/ts/index.html %}
+{% include code-snippet/grid/grid-cs69/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -170,11 +174,12 @@ In the following sample, filtering action with multiple keywords can be done by 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs69/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs69/js/index.html %}
+{% include code-snippet/grid/grid-cs69/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -26,7 +26,7 @@ You can achieve this by destroying the grid after disabling the `enablePersisten
 {% include code-snippet/grid/initial-grid-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/initial-grid-cs1/ts/index.html %}
+{% include code-snippet/grid/initial-grid-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -34,11 +34,12 @@ You can achieve this by destroying the grid after disabling the `enablePersisten
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/initial-grid-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/initial-grid-cs1/js/index.html %}
+{% include code-snippet/grid/initial-grid-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -56,7 +57,7 @@ The grid does not maintain the query params after page load event when the [enab
 {% include code-snippet/grid/grouping-event-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grouping-event-cs2/ts/index.html %}
+{% include code-snippet/grid/grouping-event-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -64,11 +65,12 @@ The grid does not maintain the query params after page load event when the [enab
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grouping-event-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grouping-event-cs2/js/index.html %}
+{% include code-snippet/grid/grouping-event-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -86,7 +88,7 @@ The Grid columns can be persisted when the [enablePersistence](../../api/grid/#e
 {% include code-snippet/grid/add-column-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/add-column-cs1/ts/index.html %}
+{% include code-snippet/grid/add-column-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -94,11 +96,12 @@ The Grid columns can be persisted when the [enablePersistence](../../api/grid/#e
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/add-column-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/add-column-cs1/js/index.html %}
+{% include code-snippet/grid/add-column-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -26,7 +26,7 @@ To sort, inject the [`Sort`](../api/grid/sort) module in the grid.
 {% include code-snippet/grid/grid-cs166/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs166/ts/index.html %}
+{% include code-snippet/grid/grid-cs166/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -34,11 +34,12 @@ To sort, inject the [`Sort`](../api/grid/sort) module in the grid.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs166/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs166/js/index.html %}
+{% include code-snippet/grid/grid-cs166/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -60,7 +61,7 @@ To sort at initial rendering, set the [`field`](../api/grid/sortDescriptorModel/
 {% include code-snippet/grid/grid-cs167/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs167/ts/index.html %}
+{% include code-snippet/grid/grid-cs167/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -68,11 +69,12 @@ To sort at initial rendering, set the [`field`](../api/grid/sortDescriptorModel/
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs167/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs167/js/index.html %}
+{% include code-snippet/grid/grid-cs167/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -95,7 +97,7 @@ To clear sorting for a particular column, press the "Shift + mouse left click".
 {% include code-snippet/grid/grid-cs168/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs168/ts/index.html %}
+{% include code-snippet/grid/grid-cs168/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -103,11 +105,12 @@ To clear sorting for a particular column, press the "Shift + mouse left click".
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs168/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs168/js/index.html %}
+{% include code-snippet/grid/grid-cs168/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -214,7 +217,7 @@ During the sort action, the grid component triggers two events. The [`actionBegi
 {% include code-snippet/grid/sorting-event-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/sorting-event-cs1/ts/index.html %}
+{% include code-snippet/grid/sorting-event-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -222,11 +225,12 @@ During the sort action, the grid component triggers two events. The [`actionBegi
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/sorting-event-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/sorting-event-cs1/js/index.html %}
+{% include code-snippet/grid/sorting-event-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -248,7 +252,7 @@ In the following example, custom sort comparer function was defined in the `Cust
 {% include code-snippet/grid/sort-comparer-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/sort-comparer-cs2/ts/index.html %}
+{% include code-snippet/grid/sort-comparer-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -256,11 +260,12 @@ In the following example, custom sort comparer function was defined in the `Cust
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/sort-comparer-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/sort-comparer-cs2/js/index.html %}
+{% include code-snippet/grid/sort-comparer-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

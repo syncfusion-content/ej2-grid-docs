@@ -25,7 +25,7 @@ To bind local data to the grid, you can assign a JavaScript object array to the 
 {% include code-snippet/grid/grid-cs120/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs120/js/index.html %}
+{% include code-snippet/grid/grid-cs120/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -42,7 +42,7 @@ To bind remote data to grid component, assign service data as an instance of [`D
 {% include code-snippet/grid/grid-cs121/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs121/js/index.html %}
+{% include code-snippet/grid/grid-cs121/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -59,7 +59,7 @@ To bind remote data to grid component, assign service data as an instance of [`D
 {% include code-snippet/grid/grid-cs122/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs122/js/index.html %}
+{% include code-snippet/grid/grid-cs122/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -74,7 +74,7 @@ The ODataV4 is an improved version of OData protocols, and the [`DataManager`](.
 {% include code-snippet/grid/grid-cs123/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs123/js/index.html %}
+{% include code-snippet/grid/grid-cs123/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -180,7 +180,7 @@ You can create your own adaptor by extending the built-in adaptors. The followin
 {% include code-snippet/grid/grid-cs124/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs124/js/index.html %}
+{% include code-snippet/grid/grid-cs124/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -195,7 +195,7 @@ On remote data binding, all grid actions such as paging, sorting, editing, group
 {% include code-snippet/grid/grid-cs125/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs125/js/index.html %}
+{% include code-snippet/grid/grid-cs125/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -210,7 +210,7 @@ To add a custom parameter to the data request, use the **addParams** method of *
 {% include code-snippet/grid/grid-cs126/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs126/js/index.html %}
+{% include code-snippet/grid/grid-cs126/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -230,7 +230,7 @@ The argument passed to the [`actionFailure`](../api/grid/#actionfailure) event c
 {% include code-snippet/grid/grid-cs127/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs127/js/index.html %}
+{% include code-snippet/grid/grid-cs127/index.html %}
 {% endhighlight %}
 {% endtabs %}
         

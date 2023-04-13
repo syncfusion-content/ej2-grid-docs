@@ -37,7 +37,7 @@ N/A |N/A |`Equal` operator will always be used for Boolean filter. |Boolean
 {% include code-snippet/grid/grid-cs64/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs64/ts/index.html %}
+{% include code-snippet/grid/grid-cs64/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -45,11 +45,12 @@ N/A |N/A |`Equal` operator will always be used for Boolean filter. |Boolean
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs64/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs64/js/index.html %}
+{% include code-snippet/grid/grid-cs64/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -71,7 +72,7 @@ In the following sample, the dropdown is used as a custom component in the Emplo
 {% include code-snippet/grid/filter-template-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/filter-template-cs1/ts/index.html %}
+{% include code-snippet/grid/filter-template-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -79,11 +80,12 @@ In the following sample, the dropdown is used as a custom component in the Emplo
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/filter-template-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/filter-template-cs1/js/index.html %}
+{% include code-snippet/grid/filter-template-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -103,7 +105,7 @@ In this below demo, we have applied the filter operator `contains` for CustomerI
 {% include code-snippet/grid/filteroperator-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/filteroperator-cs1/ts/index.html %}
+{% include code-snippet/grid/filteroperator-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -111,11 +113,12 @@ In this below demo, we have applied the filter operator `contains` for CustomerI
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/filteroperator-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/filteroperator-cs1/js/index.html %}
+{% include code-snippet/grid/filteroperator-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

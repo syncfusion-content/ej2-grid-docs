@@ -24,7 +24,7 @@ If you wish to restore all these column properties, then you can achieve it by c
 {% include code-snippet/grid/column-persist-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-persist-cs1/ts/index.html %}
+{% include code-snippet/grid/column-persist-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -32,11 +32,12 @@ If you wish to restore all these column properties, then you can achieve it by c
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/column-persist-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-persist-cs1/js/index.html %}
+{% include code-snippet/grid/column-persist-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

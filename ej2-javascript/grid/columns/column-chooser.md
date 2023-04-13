@@ -22,7 +22,7 @@ To use the column chooser, inject the **ColumnChooser** module in the grid.
 {% include code-snippet/grid/columnchooser-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/columnchooser-cs1/ts/index.html %}
+{% include code-snippet/grid/columnchooser-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ To use the column chooser, inject the **ColumnChooser** module in the grid.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/columnchooser-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/columnchooser-cs1/js/index.html %}
+{% include code-snippet/grid/columnchooser-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -54,7 +55,7 @@ The Column chooser can be displayed on a page through external button by invokin
 {% include code-snippet/grid/columnchooser-method-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/columnchooser-method-cs1/ts/index.html %}
+{% include code-snippet/grid/columnchooser-method-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -62,11 +63,12 @@ The Column chooser can be displayed on a page through external button by invokin
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/columnchooser-method-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/columnchooser-method-cs1/js/index.html %}
+{% include code-snippet/grid/columnchooser-method-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

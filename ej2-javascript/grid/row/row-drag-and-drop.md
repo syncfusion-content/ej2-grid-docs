@@ -22,7 +22,7 @@ To use row drag and drop, inject the **RowDD** module in the grid.
 {% include code-snippet/grid/draganddrop-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/draganddrop-cs1/ts/index.html %}
+{% include code-snippet/grid/draganddrop-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ To use row drag and drop, inject the **RowDD** module in the grid.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/draganddrop-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/draganddrop-cs1/js/index.html %}
+{% include code-snippet/grid/draganddrop-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -56,7 +57,7 @@ The grid row drag and drop allows you to drag and drop grid rows on the same gri
 {% include code-snippet/grid/draganddrop-single-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/draganddrop-single-cs1/ts/index.html %}
+{% include code-snippet/grid/draganddrop-single-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -64,11 +65,12 @@ The grid row drag and drop allows you to drag and drop grid rows on the same gri
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/draganddrop-single-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/draganddrop-single-cs1/js/index.html %}
+{% include code-snippet/grid/draganddrop-single-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -88,7 +90,7 @@ In the below example, the selected grid row is dragged and dropped in to the Tre
 {% include code-snippet/grid/draganddrop-custom-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/draganddrop-custom-cs1/ts/index.html %}
+{% include code-snippet/grid/draganddrop-custom-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -96,11 +98,12 @@ In the below example, the selected grid row is dragged and dropped in to the Tre
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/draganddrop-custom-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/draganddrop-custom-cs1/js/index.html %}
+{% include code-snippet/grid/draganddrop-custom-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -118,7 +121,7 @@ In the following demo, you can achieve the grid row drag and drop support with f
 {% include code-snippet/grid/draganddrop-single-filter-sort-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/draganddrop-single-filter-sort-cs1/ts/index.html %}
+{% include code-snippet/grid/draganddrop-single-filter-sort-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -126,11 +129,12 @@ In the following demo, you can achieve the grid row drag and drop support with f
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/draganddrop-single-filter-sort-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/draganddrop-single-filter-sort-cs1/js/index.html %}
+{% include code-snippet/grid/draganddrop-single-filter-sort-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -173,7 +177,7 @@ By setting the [targetID](../../api/grid/rowDropSettings/#targetid), the Grid wi
 {% include code-snippet/grid/draganddrop-single-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/draganddrop-single-cs2/ts/index.html %}
+{% include code-snippet/grid/draganddrop-single-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -181,11 +185,12 @@ By setting the [targetID](../../api/grid/rowDropSettings/#targetid), the Grid wi
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/draganddrop-single-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/draganddrop-single-cs2/js/index.html %}
+{% include code-snippet/grid/draganddrop-single-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

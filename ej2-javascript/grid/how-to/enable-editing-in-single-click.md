@@ -24,7 +24,7 @@ Bind the **mouseup** event for Grid and in the event handler call the [`startEdi
 {% include code-snippet/grid/grid-cs107/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs107/ts/index.html %}
+{% include code-snippet/grid/grid-cs107/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -32,11 +32,12 @@ Bind the **mouseup** event for Grid and in the event handler call the [`startEdi
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs107/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs107/js/index.html %}
+{% include code-snippet/grid/grid-cs107/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -54,7 +55,7 @@ You can open the default dropdown edit popup with single click edit by focusing 
 {% include code-snippet/grid/grid-cs108/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs108/ts/index.html %}
+{% include code-snippet/grid/grid-cs108/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -62,11 +63,12 @@ You can open the default dropdown edit popup with single click edit by focusing 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs108/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs108/js/index.html %}
+{% include code-snippet/grid/grid-cs108/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

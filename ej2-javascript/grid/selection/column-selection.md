@@ -22,7 +22,7 @@ You can enable column selection by setting the [`selectionSettings.allowColumnSe
 {% include code-snippet/grid/selected-index-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/selected-index-cs1/ts/index.html %}
+{% include code-snippet/grid/selected-index-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ You can enable column selection by setting the [`selectionSettings.allowColumnSe
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/selected-index-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/selected-index-cs1/js/index.html %}
+{% include code-snippet/grid/selected-index-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

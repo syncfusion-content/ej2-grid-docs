@@ -24,7 +24,7 @@ To search records, inject the [`Search`](../api/grid/search) module in the grid.
 {% include code-snippet/grid/grid-cs155/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs155/ts/index.html %}
+{% include code-snippet/grid/grid-cs155/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -32,11 +32,12 @@ To search records, inject the [`Search`](../api/grid/search) module in the grid.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs155/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs155/js/index.html %}
+{% include code-snippet/grid/grid-cs155/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -54,7 +55,7 @@ To apply search at initial rendering, set the fields, operator, key, and ignoreC
 {% include code-snippet/grid/grid-cs156/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs156/ts/index.html %}
+{% include code-snippet/grid/grid-cs156/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -62,11 +63,12 @@ To apply search at initial rendering, set the fields, operator, key, and ignoreC
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs156/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs156/js/index.html %}
+{% include code-snippet/grid/grid-cs156/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -102,7 +104,7 @@ To search grid records from an external button, invoke the [`search`](../api/gri
 {% include code-snippet/grid/search-method-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/search-method-cs1/ts/index.html %}
+{% include code-snippet/grid/search-method-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -110,11 +112,12 @@ To search grid records from an external button, invoke the [`search`](../api/gri
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/search-method-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/search-method-cs1/js/index.html %}
+{% include code-snippet/grid/search-method-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -132,7 +135,7 @@ By default, grid searches all visible columns. You can search specific columns b
 {% include code-snippet/grid/column-search-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-search-cs1/ts/index.html %}
+{% include code-snippet/grid/column-search-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -140,11 +143,12 @@ By default, grid searches all visible columns. You can search specific columns b
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/column-search-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-search-cs1/js/index.html %}
+{% include code-snippet/grid/column-search-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -162,7 +166,7 @@ To clear the searched grid records from the external button, set [`searchSetting
 {% include code-snippet/grid/clear-search-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/clear-search-cs1/ts/index.html %}
+{% include code-snippet/grid/clear-search-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -170,11 +174,12 @@ To clear the searched grid records from the external button, set [`searchSetting
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/clear-search-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/clear-search-cs1/js/index.html %}
+{% include code-snippet/grid/clear-search-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -192,7 +197,7 @@ You can search the Grid data on each key stroke by binding the `keyup` event for
 {% include code-snippet/grid/column-search-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-search-cs2/ts/index.html %}
+{% include code-snippet/grid/column-search-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -200,11 +205,12 @@ You can search the Grid data on each key stroke by binding the `keyup` event for
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/column-search-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-search-cs2/js/index.html %}
+{% include code-snippet/grid/column-search-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -222,7 +228,7 @@ You can highlight the search text in the Grid content by adding the style inside
 {% include code-snippet/grid/column-search-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-search-cs3/ts/index.html %}
+{% include code-snippet/grid/column-search-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -230,11 +236,12 @@ You can highlight the search text in the Grid content by adding the style inside
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/column-search-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-search-cs3/js/index.html %}
+{% include code-snippet/grid/column-search-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -252,7 +259,7 @@ You can perform a searching operation in the Grid using multiple keywords. This 
 {% include code-snippet/grid/column-search-cs4/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-search-cs4/ts/index.html %}
+{% include code-snippet/grid/column-search-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -260,11 +267,12 @@ You can perform a searching operation in the Grid using multiple keywords. This 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/column-search-cs4/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-search-cs4/js/index.html %}
+{% include code-snippet/grid/column-search-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

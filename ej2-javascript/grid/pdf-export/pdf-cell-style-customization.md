@@ -24,7 +24,7 @@ In the below sample, we have set the background color for `Freight` column in th
 {% include code-snippet/grid/grid-cs139/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs139/ts/index.html %}
+{% include code-snippet/grid/grid-cs139/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -32,11 +32,12 @@ In the below sample, we have set the background color for `Freight` column in th
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs139/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs139/js/index.html %}
+{% include code-snippet/grid/grid-cs139/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -56,7 +57,7 @@ To apply theme in exported PDF, define the `theme` in `exportProperties` .
 {% include code-snippet/grid/grid-cs140/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs140/ts/index.html %}
+{% include code-snippet/grid/grid-cs140/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -64,11 +65,12 @@ To apply theme in exported PDF, define the `theme` in `exportProperties` .
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs140/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs140/js/index.html %}
+{% include code-snippet/grid/grid-cs140/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

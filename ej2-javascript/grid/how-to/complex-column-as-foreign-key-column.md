@@ -22,7 +22,7 @@ In the following example, `Employee.EmployeeID` is a complex column and also dec
 {% include code-snippet/grid/foreign-key-cs11/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs11/ts/index.html %}
+{% include code-snippet/grid/foreign-key-cs11/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ In the following example, `Employee.EmployeeID` is a complex column and also dec
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/foreign-key-cs11/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs11/js/index.html %}
+{% include code-snippet/grid/foreign-key-cs11/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

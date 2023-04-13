@@ -24,7 +24,7 @@ When we enable the [`enableAdaptiveUI`](../api/grid/#enableadaptiveui) property,
 {% include code-snippet/grid/adaptive-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/adaptive-cs1/ts/index.html %}
+{% include code-snippet/grid/adaptive-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -32,11 +32,12 @@ When we enable the [`enableAdaptiveUI`](../api/grid/#enableadaptiveui) property,
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/adaptive-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/adaptive-cs1/js/index.html %}
+{% include code-snippet/grid/adaptive-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -54,7 +55,7 @@ The grid will render the row elements in vertical order while setting the [`rowR
 {% include code-snippet/grid/vertical-rendering-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/vertical-rendering-cs1/ts/index.html %}
+{% include code-snippet/grid/vertical-rendering-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -62,11 +63,12 @@ The grid will render the row elements in vertical order while setting the [`rowR
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/vertical-rendering-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/vertical-rendering-cs1/js/index.html %}
+{% include code-snippet/grid/vertical-rendering-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

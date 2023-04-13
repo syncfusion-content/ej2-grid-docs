@@ -24,7 +24,7 @@ The excel export provides an option to export the current page into excel. To ex
 {% include code-snippet/grid/grid-cs52/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs52/ts/index.html %}
+{% include code-snippet/grid/grid-cs52/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -32,11 +32,12 @@ The excel export provides an option to export the current page into excel. To ex
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs52/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs52/js/index.html %}
+{% include code-snippet/grid/grid-cs52/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -56,7 +57,7 @@ In the below exporting demo, We can get the selected records using `getSelectedR
 {% include code-snippet/grid/grid-cs53/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs53/ts/index.html %}
+{% include code-snippet/grid/grid-cs53/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -64,11 +65,12 @@ In the below exporting demo, We can get the selected records using `getSelectedR
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs53/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs53/js/index.html %}
+{% include code-snippet/grid/grid-cs53/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -86,7 +88,7 @@ The excel export provides an option to export hidden columns of grid by defining
 {% include code-snippet/grid/grid-cs54/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs54/ts/index.html %}
+{% include code-snippet/grid/grid-cs54/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -94,11 +96,12 @@ The excel export provides an option to export hidden columns of grid by defining
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs54/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs54/js/index.html %}
+{% include code-snippet/grid/grid-cs54/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -122,7 +125,7 @@ In the below example, we have `CustomerID` as a hidden column in the grid. While
 {% include code-snippet/grid/grid-cs55/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs55/ts/index.html %}
+{% include code-snippet/grid/grid-cs55/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -130,11 +133,12 @@ In the below example, we have `CustomerID` as a hidden column in the grid. While
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs55/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs55/js/index.html %}
+{% include code-snippet/grid/grid-cs55/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -153,7 +157,7 @@ It requires the [`allowFiltering`](../../api/grid/#allowfiltering) to be true.
 {% include code-snippet/grid/grid-cs56/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs56/ts/index.html %}
+{% include code-snippet/grid/grid-cs56/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -161,11 +165,12 @@ It requires the [`allowFiltering`](../../api/grid/#allowfiltering) to be true.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs56/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs56/js/index.html %}
+{% include code-snippet/grid/grid-cs56/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -183,7 +188,7 @@ The excel export provides outline option for grouped records which hides the det
 {% include code-snippet/grid/grid-cs57/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs57/ts/index.html %}
+{% include code-snippet/grid/grid-cs57/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -191,11 +196,12 @@ The excel export provides outline option for grouped records which hides the det
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs57/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs57/js/index.html %}
+{% include code-snippet/grid/grid-cs57/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -213,7 +219,7 @@ You can assign the file name for the exported document by defining `fileName` pr
 {% include code-snippet/grid/grid-cs58/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs58/ts/index.html %}
+{% include code-snippet/grid/grid-cs58/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -221,11 +227,12 @@ You can assign the file name for the exported document by defining `fileName` pr
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs58/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs58/js/index.html %}
+{% include code-snippet/grid/grid-cs58/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -245,7 +252,7 @@ To export the master-detail grid on the same sheet in the following sample, you 
 {% include code-snippet/grid/exportmastergrid-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/exportmastergrid-cs1/ts/index.html %}
+{% include code-snippet/grid/exportmastergrid-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -253,11 +260,12 @@ To export the master-detail grid on the same sheet in the following sample, you 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/exportmastergrid-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/exportmastergrid-cs1/js/index.html %}
+{% include code-snippet/grid/exportmastergrid-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -41,7 +41,7 @@ The following table shows built-in toolbar items and its actions.
 {% include code-snippet/grid/grid-cs169/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs169/ts/index.html %}
+{% include code-snippet/grid/grid-cs169/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -49,11 +49,12 @@ The following table shows built-in toolbar items and its actions.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs169/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs169/js/index.html %}
+{% include code-snippet/grid/grid-cs169/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -76,7 +77,7 @@ By default, Custom toolbar items are in position `Left`. You can change the posi
 {% include code-snippet/grid/custom-toolbar-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-toolbar-cs1/ts/index.html %}
+{% include code-snippet/grid/custom-toolbar-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -84,11 +85,12 @@ By default, Custom toolbar items are in position `Left`. You can change the posi
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/custom-toolbar-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-toolbar-cs1/js/index.html %}
+{% include code-snippet/grid/custom-toolbar-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -111,7 +113,7 @@ In the below example, `Add`, `Edit`, `Delete`, `Update`, `Cancel` are built-in t
 {% include code-snippet/grid/grid-cs170/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs170/ts/index.html %}
+{% include code-snippet/grid/grid-cs170/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -119,11 +121,12 @@ In the below example, `Add`, `Edit`, `Delete`, `Update`, `Cancel` are built-in t
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs170/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs170/js/index.html %}
+{% include code-snippet/grid/grid-cs170/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -142,7 +145,7 @@ Actions for this toolbar template items are defined in the [`toolbarClick`](../a
 {% include code-snippet/grid/toolbar-template-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/toolbar-template-cs1/ts/index.html %}
+{% include code-snippet/grid/toolbar-template-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -150,11 +153,12 @@ Actions for this toolbar template items are defined in the [`toolbarClick`](../a
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/toolbar-template-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/toolbar-template-cs1/js/index.html %}
+{% include code-snippet/grid/toolbar-template-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -172,7 +176,7 @@ You can enable/disable toolbar items by using the `enableItems` method.
 {% include code-snippet/grid/toolbar-enable-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/toolbar-enable-cs1/ts/index.html %}
+{% include code-snippet/grid/toolbar-enable-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -180,11 +184,12 @@ You can enable/disable toolbar items by using the `enableItems` method.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/toolbar-enable-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/toolbar-enable-cs1/js/index.html %}
+{% include code-snippet/grid/toolbar-enable-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

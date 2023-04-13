@@ -22,7 +22,7 @@ To use reordering, inject the [`Reorder`](../../api/grid/reorder) module in the 
 {% include code-snippet/grid/row-template-cs8/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs8/ts/index.html %}
+{% include code-snippet/grid/row-template-cs8/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ To use reordering, inject the [`Reorder`](../../api/grid/reorder) module in the 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/row-template-cs8/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs8/js/index.html %}
+{% include code-snippet/grid/row-template-cs8/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -54,7 +55,7 @@ Grid have option to reorder Columns either by Interaction or by using the [`reor
 {% include code-snippet/grid/reorder-single-column-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/reorder-single-column-cs1/ts/index.html %}
+{% include code-snippet/grid/reorder-single-column-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -62,11 +63,12 @@ Grid have option to reorder Columns either by Interaction or by using the [`reor
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/reorder-single-column-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/reorder-single-column-cs1/js/index.html %}
+{% include code-snippet/grid/reorder-single-column-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -86,7 +88,7 @@ In the below sample, **Ship City** and **Ship Region** column is reordered to la
 {% include code-snippet/grid/reorder-column-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/reorder-column-cs1/ts/index.html %}
+{% include code-snippet/grid/reorder-column-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -94,11 +96,12 @@ In the below sample, **Ship City** and **Ship Region** column is reordered to la
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/reorder-column-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/reorder-column-cs1/js/index.html %}
+{% include code-snippet/grid/reorder-column-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -120,7 +123,7 @@ During the reorder action, the grid component triggers the below three events.
 {% include code-snippet/grid/row-template-cs9/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs9/ts/index.html %}
+{% include code-snippet/grid/row-template-cs9/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -128,11 +131,12 @@ During the reorder action, the grid component triggers the below three events.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/row-template-cs9/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs9/js/index.html %}
+{% include code-snippet/grid/row-template-cs9/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -22,7 +22,7 @@ In the below demo, all the grouped rows are collapsed at initial rendering.
 {% include code-snippet/grid/grid-cs105/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs105/ts/index.html %}
+{% include code-snippet/grid/grid-cs105/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ In the below demo, all the grouped rows are collapsed at initial rendering.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs105/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs105/js/index.html %}
+{% include code-snippet/grid/grid-cs105/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -25,7 +25,7 @@ object.
 {% include code-snippet/grid/aggregates-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/aggregates-cs1/ts/index.html %}
+{% include code-snippet/grid/aggregates-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -33,11 +33,12 @@ object.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/aggregates-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/aggregates-cs1/js/index.html %}
+{% include code-snippet/grid/aggregates-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -59,7 +60,7 @@ In this below demo, we have show the count of distinct value for `ShipCountry` c
 {% include code-snippet/grid/custom-agg-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-agg-cs1/ts/index.html %}
+{% include code-snippet/grid/custom-agg-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -67,11 +68,12 @@ In this below demo, we have show the count of distinct value for `ShipCountry` c
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/custom-agg-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-agg-cs1/js/index.html %}
+{% include code-snippet/grid/custom-agg-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

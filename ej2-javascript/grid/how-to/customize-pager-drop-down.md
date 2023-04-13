@@ -20,7 +20,7 @@ To customize the default values of pager drop-down, you need to define the [`pag
 {% include code-snippet/grid/pagerdropdown-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/pagerdropdown-cs3/ts/index.html %}
+{% include code-snippet/grid/pagerdropdown-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -28,11 +28,12 @@ To customize the default values of pager drop-down, you need to define the [`pag
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/pagerdropdown-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/pagerdropdown-cs3/js/index.html %}
+{% include code-snippet/grid/pagerdropdown-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

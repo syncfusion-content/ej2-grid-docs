@@ -30,7 +30,7 @@ To specify the [`width`](../api/grid/#width) and [`height`](../api/grid/#height)
 {% include code-snippet/grid/scroller-cs5/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/scroller-cs5/ts/index.html %}
+{% include code-snippet/grid/scroller-cs5/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -38,11 +38,12 @@ To specify the [`width`](../api/grid/#width) and [`height`](../api/grid/#height)
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/scroller-cs5/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/scroller-cs5/js/index.html %}
+{% include code-snippet/grid/scroller-cs5/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -61,7 +62,7 @@ Setting the [`height`](../api/grid/#height) to `100%` requires the grid parent e
 {% include code-snippet/grid/scroll-parent-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/scroll-parent-cs1/ts/index.html %}
+{% include code-snippet/grid/scroll-parent-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -69,11 +70,12 @@ Setting the [`height`](../api/grid/#height) to `100%` requires the grid parent e
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/scroll-parent-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/scroll-parent-cs1/js/index.html %}
+{% include code-snippet/grid/scroll-parent-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -93,7 +95,7 @@ In the below demo, the Grid headers will be sticky while scrolling the Grid's pa
 {% include code-snippet/grid/sticky-header-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/sticky-header-cs1/ts/index.html %}
+{% include code-snippet/grid/sticky-header-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -101,11 +103,12 @@ In the below demo, the Grid headers will be sticky while scrolling the Grid's pa
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/sticky-header-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/sticky-header-cs1/js/index.html %}
+{% include code-snippet/grid/sticky-header-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -123,7 +126,7 @@ You can scroll the grid content to the selected row position by using the [`rowS
 {% include code-snippet/grid/scroll-to-select-row-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/scroll-to-select-row-cs1/ts/index.html %}
+{% include code-snippet/grid/scroll-to-select-row-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -131,11 +134,12 @@ You can scroll the grid content to the selected row position by using the [`rowS
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/scroll-to-select-row-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/scroll-to-select-row-cs1/js/index.html %}
+{% include code-snippet/grid/scroll-to-select-row-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -155,7 +159,7 @@ In the following sample, we have invoked the [`hideScroll`](../api/grid/#hidescr
 {% include code-snippet/grid/scroller-cs6/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/scroller-cs6/ts/index.html %}
+{% include code-snippet/grid/scroller-cs6/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -163,11 +167,12 @@ In the following sample, we have invoked the [`hideScroll`](../api/grid/#hidescr
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/scroller-cs6/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/scroller-cs6/js/index.html %}
+{% include code-snippet/grid/scroller-cs6/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

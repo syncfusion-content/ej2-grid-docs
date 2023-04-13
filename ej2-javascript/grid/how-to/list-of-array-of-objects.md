@@ -18,7 +18,7 @@ The following example shows how to set Complex field for datasource having Array
 {% include code-snippet/grid/complex-binding-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/complex-binding-cs2/ts/index.html %}
+{% include code-snippet/grid/complex-binding-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
           

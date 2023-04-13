@@ -22,7 +22,7 @@ In the below demo we have displayed the null values at bottom of the Grid row wh
 {% include code-snippet/grid/sort-comparer-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/sort-comparer-cs1/ts/index.html %}
+{% include code-snippet/grid/sort-comparer-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ In the below demo we have displayed the null values at bottom of the Grid row wh
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/sort-comparer-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/sort-comparer-cs1/js/index.html %}
+{% include code-snippet/grid/sort-comparer-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

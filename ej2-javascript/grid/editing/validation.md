@@ -23,7 +23,7 @@ Grid uses `Form Validator` component for column validation. You can set validati
 {% include code-snippet/grid/grid-cs46/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs46/ts/index.html %}
+{% include code-snippet/grid/grid-cs46/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -31,11 +31,12 @@ Grid uses `Form Validator` component for column validation. You can set validati
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs46/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs46/js/index.html %}
+{% include code-snippet/grid/grid-cs46/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -55,7 +56,7 @@ In the below demo, custom validation applied for `CustomerID` column.
 {% include code-snippet/grid/grid-cs47/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs47/ts/index.html %}
+{% include code-snippet/grid/grid-cs47/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -63,11 +64,12 @@ In the below demo, custom validation applied for `CustomerID` column.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs47/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs47/js/index.html %}
+{% include code-snippet/grid/grid-cs47/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -87,7 +89,7 @@ In the following sample, dropdownlist edit type is used for the **Role** and **S
 {% include code-snippet/grid/grid-cs48/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs48/ts/index.html %}
+{% include code-snippet/grid/grid-cs48/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -95,11 +97,12 @@ In the following sample, dropdownlist edit type is used for the **Role** and **S
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs48/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs48/js/index.html %}
+{% include code-snippet/grid/grid-cs48/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

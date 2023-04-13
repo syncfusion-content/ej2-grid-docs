@@ -44,7 +44,7 @@ The [`valueAccessor`](../../api/grid/column/#valueaccessor) is used to access/ma
 {% include code-snippet/grid/value-accessor-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/value-accessor-cs1/ts/index.html %}
+{% include code-snippet/grid/value-accessor-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -52,11 +52,12 @@ The [`valueAccessor`](../../api/grid/column/#valueaccessor) is used to access/ma
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/value-accessor-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/value-accessor-cs1/js/index.html %}
+{% include code-snippet/grid/value-accessor-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -74,7 +75,7 @@ You can bind an array of objects in a column by using the [`valueAccessor`](../.
 {% include code-snippet/grid/array-of-string-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/array-of-string-cs1/ts/index.html %}
+{% include code-snippet/grid/array-of-string-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -82,11 +83,12 @@ You can bind an array of objects in a column by using the [`valueAccessor`](../.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/array-of-string-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/array-of-string-cs1/js/index.html %}
+{% include code-snippet/grid/array-of-string-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -104,7 +106,7 @@ You can achieve the expression column by using the [`valueAccessor`](../../api/g
 {% include code-snippet/grid/expression-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/expression-cs1/ts/index.html %}
+{% include code-snippet/grid/expression-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -112,11 +114,12 @@ You can achieve the expression column by using the [`valueAccessor`](../../api/g
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/expression-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/expression-cs1/js/index.html %}
+{% include code-snippet/grid/expression-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -135,7 +138,7 @@ values.
 {% include code-snippet/grid/grid-cs4/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs4/ts/index.html %}
+{% include code-snippet/grid/grid-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -143,11 +146,12 @@ values.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs4/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs4/js/index.html %}
+{% include code-snippet/grid/grid-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -191,7 +195,7 @@ Format | Formatted value
 {% include code-snippet/grid/pagerdropdown-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/pagerdropdown-cs1/ts/index.html %}
+{% include code-snippet/grid/pagerdropdown-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -199,11 +203,12 @@ Format | Formatted value
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/pagerdropdown-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/pagerdropdown-cs1/js/index.html %}
+{% include code-snippet/grid/pagerdropdown-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -221,7 +226,7 @@ To render boolean values as checkbox in columns, you need to set [`displayAsChec
 {% include code-snippet/grid/grid-cs5/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs5/ts/index.html %}
+{% include code-snippet/grid/grid-cs5/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -229,11 +234,12 @@ To render boolean values as checkbox in columns, you need to set [`displayAsChec
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs5/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs5/js/index.html %}
+{% include code-snippet/grid/grid-cs5/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -251,7 +257,7 @@ You can hide any particular column in Grid before rendering by defining [`visibl
 {% include code-snippet/grid/grid-cs6/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs6/ts/index.html %}
+{% include code-snippet/grid/grid-cs6/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -259,11 +265,12 @@ You can hide any particular column in Grid before rendering by defining [`visibl
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs6/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs6/js/index.html %}
+{% include code-snippet/grid/grid-cs6/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -283,7 +290,7 @@ In the below example, **Ship City** column is locked and its reordering function
 {% include code-snippet/grid/lock-column-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/lock-column-cs1/ts/index.html %}
+{% include code-snippet/grid/lock-column-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -291,11 +298,12 @@ In the below example, **Ship City** column is locked and its reordering function
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/lock-column-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/lock-column-cs1/js/index.html %}
+{% include code-snippet/grid/lock-column-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -314,7 +322,7 @@ You can enable or disable grid action for a particular column by setting the [`a
 {% include code-snippet/grid/grouping-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grouping-cs1/ts/index.html %}
+{% include code-snippet/grid/grouping-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -322,11 +330,12 @@ You can enable or disable grid action for a particular column by setting the [`a
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grouping-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grouping-cs1/js/index.html %}
+{% include code-snippet/grid/grouping-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -344,7 +353,7 @@ You can show or hide grid columns dynamically using external buttons by invoking
 {% include code-snippet/grid/show-hide-columns-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/show-hide-columns-cs1/ts/index.html %}
+{% include code-snippet/grid/show-hide-columns-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -352,11 +361,12 @@ You can show or hide grid columns dynamically using external buttons by invoking
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/show-hide-columns-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/show-hide-columns-cs1/js/index.html %}
+{% include code-snippet/grid/show-hide-columns-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -406,7 +416,7 @@ Add the custom CSS class to the specified column by using the [`customAttributes
 {% include code-snippet/grid/custom-column-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-column-cs1/ts/index.html %}
+{% include code-snippet/grid/custom-column-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -414,11 +424,12 @@ Add the custom CSS class to the specified column by using the [`customAttributes
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/custom-column-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-column-cs1/js/index.html %}
+{% include code-snippet/grid/custom-column-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -446,7 +457,7 @@ function beforeRender(args) {
 {% include code-snippet/grid/custom-tooltip-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-tooltip-cs1/ts/index.html %}
+{% include code-snippet/grid/custom-tooltip-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -454,11 +465,12 @@ function beforeRender(args) {
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/custom-tooltip-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-tooltip-cs1/js/index.html %}
+{% include code-snippet/grid/custom-tooltip-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -482,7 +494,7 @@ Grid column supports the following alignments:
 {% include code-snippet/grid/grid-cs7/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs7/ts/index.html %}
+{% include code-snippet/grid/grid-cs7/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -490,11 +502,12 @@ Grid column supports the following alignments:
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs7/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs7/js/index.html %}
+{% include code-snippet/grid/grid-cs7/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -514,7 +527,7 @@ In the following sample, the `rowDataBound` event of the Grid is used to set the
 {% include code-snippet/grid/blank-row-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/blank-row-cs1/ts/index.html %}
+{% include code-snippet/grid/blank-row-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -522,11 +535,12 @@ In the following sample, the `rowDataBound` event of the Grid is used to set the
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/blank-row-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/blank-row-cs1/js/index.html %}
+{% include code-snippet/grid/blank-row-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -20,7 +20,7 @@ In Dialog edit mode, when you start editing the currently selected row data will
 {% include code-snippet/grid/grid-cs22/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs22/ts/index.html %}
+{% include code-snippet/grid/grid-cs22/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -28,11 +28,12 @@ In Dialog edit mode, when you start editing the currently selected row data will
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs22/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs22/js/index.html %}
+{% include code-snippet/grid/grid-cs22/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,7 +53,7 @@ In the following example, We have customized the dialog's height and title of th
 {% include code-snippet/grid/grid-cs23/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs23/ts/index.html %}
+{% include code-snippet/grid/grid-cs23/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -60,11 +61,12 @@ In the following example, We have customized the dialog's height and title of th
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs23/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs23/js/index.html %}
+{% include code-snippet/grid/grid-cs23/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -88,7 +90,7 @@ In the following example, the CustomerID column is rendered as a hidden column, 
 {% include code-snippet/grid/grid-cs24/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs24/ts/index.html %}
+{% include code-snippet/grid/grid-cs24/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -96,11 +98,12 @@ In the following example, the CustomerID column is rendered as a hidden column, 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs24/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs24/js/index.html %}
+{% include code-snippet/grid/grid-cs24/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -120,7 +123,7 @@ The following example demonstrates the wizard-like editing in the grid with obtr
 {% include code-snippet/grid/wizardtemplate-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/wizardtemplate-cs1/ts/index.html %}
+{% include code-snippet/grid/wizardtemplate-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -128,11 +131,12 @@ The following example demonstrates the wizard-like editing in the grid with obtr
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/wizardtemplate-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/wizardtemplate-cs1/js/index.html %}
+{% include code-snippet/grid/wizardtemplate-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -152,7 +156,7 @@ In the following sample, using the `dialog` argument of the `actionComplete` eve
 {% include code-snippet/grid/grid-cs25/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs25/ts/index.html %}
+{% include code-snippet/grid/grid-cs25/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -160,11 +164,12 @@ In the following sample, using the `dialog` argument of the `actionComplete` eve
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs25/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs25/js/index.html %}
+{% include code-snippet/grid/grid-cs25/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

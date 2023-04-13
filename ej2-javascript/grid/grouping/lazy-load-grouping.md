@@ -26,7 +26,7 @@ To enable this feature, you have to set the [`groupSettings.enableLazyLoading`](
 {% include code-snippet/grid/lazy-load-group-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/lazy-load-group-cs1/ts/index.html %}
+{% include code-snippet/grid/lazy-load-group-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -34,11 +34,12 @@ To enable this feature, you have to set the [`groupSettings.enableLazyLoading`](
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/lazy-load-group-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/lazy-load-group-cs1/js/index.html %}
+{% include code-snippet/grid/lazy-load-group-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -120,7 +121,7 @@ This is demonstrated in the following sample:
 {% include code-snippet/grid/lazy-load-group-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/lazy-load-group-cs2/ts/index.html %}
+{% include code-snippet/grid/lazy-load-group-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -128,11 +129,12 @@ This is demonstrated in the following sample:
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/lazy-load-group-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/lazy-load-group-cs2/js/index.html %}
+{% include code-snippet/grid/lazy-load-group-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

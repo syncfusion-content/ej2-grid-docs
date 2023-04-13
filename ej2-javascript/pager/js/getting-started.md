@@ -166,7 +166,7 @@ pager.appendTo('#Pager');
 {% include code-snippet/pager/pager-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pager/pager-cs1/js/index.html %}
+{% include code-snippet/pager/pager-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -181,7 +181,7 @@ pager.appendTo('#Pager');
 {% include code-snippet/pager/pager-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pager/pager-cs2/js/index.html %}
+{% include code-snippet/pager/pager-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -198,7 +198,7 @@ Output will be appears as follows.
 {% include code-snippet/pager/pager-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pager/pager-cs3/js/index.html %}
+{% include code-snippet/pager/pager-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         

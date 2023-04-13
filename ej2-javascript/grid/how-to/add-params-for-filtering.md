@@ -22,7 +22,7 @@ In the below sample, OrderID and Freight Columns are numeric columns, while open
 {% include code-snippet/grid/grid-cs103/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs103/ts/index.html %}
+{% include code-snippet/grid/grid-cs103/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ In the below sample, OrderID and Freight Columns are numeric columns, while open
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs103/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs103/js/index.html %}
+{% include code-snippet/grid/grid-cs103/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

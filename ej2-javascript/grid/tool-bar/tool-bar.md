@@ -26,7 +26,7 @@ You can enable/disable toolbar items by using the **enableItems** method.
 {% include code-snippet/grid/toolbar-enable-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/toolbar-enable-cs2/ts/index.html %}
+{% include code-snippet/grid/toolbar-enable-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -34,11 +34,12 @@ You can enable/disable toolbar items by using the **enableItems** method.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/toolbar-enable-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/toolbar-enable-cs2/js/index.html %}
+{% include code-snippet/grid/toolbar-enable-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -56,7 +57,7 @@ You can add the Grid toolbar component at the bottom of Grid using the ['created
 {% include code-snippet/grid/toolbar-bottom-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/toolbar-bottom-cs1/ts/index.html %}
+{% include code-snippet/grid/toolbar-bottom-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -64,11 +65,12 @@ You can add the Grid toolbar component at the bottom of Grid using the ['created
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/toolbar-bottom-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/toolbar-bottom-cs1/js/index.html %}
+{% include code-snippet/grid/toolbar-bottom-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

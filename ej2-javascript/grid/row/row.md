@@ -27,7 +27,7 @@ You can customize the appearance of a row by using the [`rowDataBound`](../../ap
 {% include code-snippet/grid/custom-row-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-row-cs3/ts/index.html %}
+{% include code-snippet/grid/custom-row-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -35,11 +35,12 @@ You can customize the appearance of a row by using the [`rowDataBound`](../../ap
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/custom-row-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-row-cs3/js/index.html %}
+{% include code-snippet/grid/custom-row-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -65,7 +66,7 @@ Please refer to the following example.
 {% include code-snippet/grid/how-to-alt-row-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/how-to-alt-row-cs1/ts/index.html %}
+{% include code-snippet/grid/how-to-alt-row-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -73,11 +74,12 @@ Please refer to the following example.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/how-to-alt-row-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/how-to-alt-row-cs1/js/index.html %}
+{% include code-snippet/grid/how-to-alt-row-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -103,7 +105,7 @@ This is demonstrated in the following sample:
 {% include code-snippet/grid/how-to-alt-row-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/how-to-alt-row-cs2/ts/index.html %}
+{% include code-snippet/grid/how-to-alt-row-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -111,11 +113,12 @@ This is demonstrated in the following sample:
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/how-to-alt-row-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/how-to-alt-row-cs2/js/index.html %}
+{% include code-snippet/grid/how-to-alt-row-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -135,7 +138,7 @@ This is demonstrated in the following sample:
 {% include code-snippet/grid/add-row-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/add-row-cs1/ts/index.html %}
+{% include code-snippet/grid/add-row-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -143,11 +146,12 @@ This is demonstrated in the following sample:
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/add-row-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/add-row-cs1/js/index.html %}
+{% include code-snippet/grid/add-row-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -169,7 +173,7 @@ In the following sample, the `mouseover` event is bound to a grid row in the `ro
 {% include code-snippet/grid/grid-cs154/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs154/ts/index.html %}
+{% include code-snippet/grid/grid-cs154/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -177,11 +181,12 @@ In the following sample, the `mouseover` event is bound to a grid row in the `ro
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs154/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs154/js/index.html %}
+{% include code-snippet/grid/grid-cs154/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

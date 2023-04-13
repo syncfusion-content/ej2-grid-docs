@@ -38,7 +38,7 @@ The following table shows built-in toolbar items and its actions.
 {% include code-snippet/grid/grid-cs171/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs171/ts/index.html %}
+{% include code-snippet/grid/grid-cs171/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -46,11 +46,12 @@ The following table shows built-in toolbar items and its actions.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs171/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs171/js/index.html %}
+{% include code-snippet/grid/grid-cs171/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -78,7 +79,7 @@ This is demonstrated in the following sample:
 {% include code-snippet/grid/toolbar-icon-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/toolbar-icon-cs1/ts/index.html %}
+{% include code-snippet/grid/toolbar-icon-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -86,11 +87,12 @@ This is demonstrated in the following sample:
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/toolbar-icon-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/toolbar-icon-cs1/js/index.html %}
+{% include code-snippet/grid/toolbar-icon-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -110,7 +112,7 @@ By default, Custom toolbar items are in position **Left**. You can change the po
 {% include code-snippet/grid/custom-toolbar-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-toolbar-cs2/ts/index.html %}
+{% include code-snippet/grid/custom-toolbar-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -118,11 +120,12 @@ By default, Custom toolbar items are in position **Left**. You can change the po
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/custom-toolbar-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-toolbar-cs2/js/index.html %}
+{% include code-snippet/grid/custom-toolbar-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -146,7 +149,7 @@ In the below example, `Add`, `Edit`, `Delete`, `Update`, `Cancel` are built-in t
 {% include code-snippet/grid/grid-cs172/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs172/ts/index.html %}
+{% include code-snippet/grid/grid-cs172/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -154,11 +157,12 @@ In the below example, `Add`, `Edit`, `Delete`, `Update`, `Cancel` are built-in t
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs172/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs172/js/index.html %}
+{% include code-snippet/grid/grid-cs172/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -176,7 +180,7 @@ By default, Custom toolbar items are in the Left position. You can change the po
 {% include code-snippet/grid/custom-toolbar-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-toolbar-cs3/ts/index.html %}
+{% include code-snippet/grid/custom-toolbar-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -184,11 +188,12 @@ By default, Custom toolbar items are in the Left position. You can change the po
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/custom-toolbar-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-toolbar-cs3/js/index.html %}
+{% include code-snippet/grid/custom-toolbar-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

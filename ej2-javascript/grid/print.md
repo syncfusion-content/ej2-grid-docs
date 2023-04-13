@@ -20,7 +20,7 @@ To print the Grid, use the [`print`](../api/grid/print/#print) method from grid 
 {% include code-snippet/grid/grid-cs152/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs152/ts/index.html %}
+{% include code-snippet/grid/grid-cs152/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -28,11 +28,12 @@ To print the Grid, use the [`print`](../api/grid/print/#print) method from grid 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs152/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs152/js/index.html %}
+{% include code-snippet/grid/grid-cs152/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -59,7 +60,7 @@ To print the grid from an external button, invoke the [`print`](../api/grid/prin
 {% include code-snippet/grid/print-method-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/print-method-cs1/ts/index.html %}
+{% include code-snippet/grid/print-method-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -67,11 +68,12 @@ To print the grid from an external button, invoke the [`print`](../api/grid/prin
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/print-method-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/print-method-cs1/js/index.html %}
+{% include code-snippet/grid/print-method-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -89,7 +91,7 @@ By default, the grid prints all the pages. To print the current page alone, set 
 {% include code-snippet/grid/grid-cs153/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs153/ts/index.html %}
+{% include code-snippet/grid/grid-cs153/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -97,11 +99,12 @@ By default, the grid prints all the pages. To print the current page alone, set 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs153/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs153/js/index.html %}
+{% include code-snippet/grid/grid-cs153/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -125,7 +128,7 @@ By default, the grid will be print the master and expanded child grids alone. yo
 {% include code-snippet/grid/hierarchy-print-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/hierarchy-print-cs3/ts/index.html %}
+{% include code-snippet/grid/hierarchy-print-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -133,11 +136,12 @@ By default, the grid will be print the master and expanded child grids alone. yo
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/hierarchy-print-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/hierarchy-print-cs3/js/index.html %}
+{% include code-snippet/grid/hierarchy-print-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -157,7 +161,7 @@ In the following sample, the detail grid is added to the `element` argument of t
 {% include code-snippet/grid/printmastergrid-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/printmastergrid-cs1/ts/index.html %}
+{% include code-snippet/grid/printmastergrid-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -165,11 +169,12 @@ In the following sample, the detail grid is added to the `element` argument of t
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/printmastergrid-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/printmastergrid-cs1/js/index.html %}
+{% include code-snippet/grid/printmastergrid-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -201,7 +206,7 @@ In the below example, we have `CustomerID` as a hidden column in the grid. While
 {% include code-snippet/grid/showhideColumns-print-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/showhideColumns-print-cs1/ts/index.html %}
+{% include code-snippet/grid/showhideColumns-print-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -209,11 +214,12 @@ In the below example, we have `CustomerID` as a hidden column in the grid. While
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/showhideColumns-print-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/showhideColumns-print-cs1/js/index.html %}
+{% include code-snippet/grid/showhideColumns-print-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -22,7 +22,7 @@ To use hierarchical binding, inject the [`DetailRow`](../api/grid/detailRow) mod
 {% include code-snippet/grid/grid-cs85/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs85/ts/index.html %}
+{% include code-snippet/grid/grid-cs85/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ To use hierarchical binding, inject the [`DetailRow`](../api/grid/detailRow) mod
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs85/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs85/js/index.html %}
+{% include code-snippet/grid/grid-cs85/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -55,7 +56,7 @@ By default, grid renders in collapsed state. You can expand all child grid rows 
 {% include code-snippet/grid/hierarchy-method-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/hierarchy-method-cs1/ts/index.html %}
+{% include code-snippet/grid/hierarchy-method-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -63,11 +64,12 @@ By default, grid renders in collapsed state. You can expand all child grid rows 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/hierarchy-method-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/hierarchy-method-cs1/js/index.html %}
+{% include code-snippet/grid/hierarchy-method-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -85,7 +87,7 @@ You can expand a particular child grid at initial rendering by invoking the [`ex
 {% include code-snippet/grid/grid-cs86/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs86/ts/index.html %}
+{% include code-snippet/grid/grid-cs86/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -93,11 +95,12 @@ You can expand a particular child grid at initial rendering by invoking the [`ex
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs86/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs86/js/index.html %}
+{% include code-snippet/grid/grid-cs86/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -115,7 +118,7 @@ You can dynamically load child grid dataSource by using the [`load`](../api/grid
 {% include code-snippet/grid/grid-cs87/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs87/ts/index.html %}
+{% include code-snippet/grid/grid-cs87/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -123,11 +126,12 @@ You can dynamically load child grid dataSource by using the [`load`](../api/grid
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs87/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs87/js/index.html %}
+{% include code-snippet/grid/grid-cs87/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -147,7 +151,7 @@ In the below sample, we have bound the child and parent grid with different fiel
 {% include code-snippet/grid/grid-cs88/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs88/ts/index.html %}
+{% include code-snippet/grid/grid-cs88/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -155,11 +159,12 @@ In the below sample, we have bound the child and parent grid with different fiel
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs88/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs88/js/index.html %}
+{% include code-snippet/grid/grid-cs88/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -179,7 +184,7 @@ In the below demo, `EmployeeID` field relates the parent and child grids. To add
 {% include code-snippet/grid/grid-cs89/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs89/ts/index.html %}
+{% include code-snippet/grid/grid-cs89/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -187,11 +192,12 @@ In the below demo, `EmployeeID` field relates the parent and child grids. To add
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs89/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs89/js/index.html %}
+{% include code-snippet/grid/grid-cs89/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -211,7 +217,7 @@ While expanding the child Grid, the `detailDataBound` event will be triggered. I
 {% include code-snippet/grid/grid-cs90/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs90/ts/index.html %}
+{% include code-snippet/grid/grid-cs90/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -219,11 +225,12 @@ While expanding the child Grid, the `detailDataBound` event will be triggered. I
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs90/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs90/js/index.html %}
+{% include code-snippet/grid/grid-cs90/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

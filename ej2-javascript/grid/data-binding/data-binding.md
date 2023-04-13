@@ -27,7 +27,7 @@ To add a custom parameter to the data request, use the **addParams** method of *
 {% include code-snippet/grid/grid-cs9/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs9/ts/index.html %}
+{% include code-snippet/grid/grid-cs9/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -35,11 +35,12 @@ To add a custom parameter to the data request, use the **addParams** method of *
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs9/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs9/js/index.html %}
+{% include code-snippet/grid/grid-cs9/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -62,7 +63,7 @@ The argument passed to the [`actionFailure`](../../api/grid/#actionfailure) even
 {% include code-snippet/grid/grid-cs10/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs10/ts/index.html %}
+{% include code-snippet/grid/grid-cs10/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -70,11 +71,12 @@ The argument passed to the [`actionFailure`](../../api/grid/#actionfailure) even
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs10/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs10/js/index.html %}
+{% include code-snippet/grid/grid-cs10/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

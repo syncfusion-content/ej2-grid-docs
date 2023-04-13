@@ -20,7 +20,7 @@ You can customize the group caption by using the [`groupSettings.captionTemplate
 {% include code-snippet/grid/captiontemplate-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/captiontemplate-cs1/ts/index.html %}
+{% include code-snippet/grid/captiontemplate-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -28,11 +28,12 @@ You can customize the group caption by using the [`groupSettings.captionTemplate
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/captiontemplate-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/captiontemplate-cs1/js/index.html %}
+{% include code-snippet/grid/captiontemplate-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -50,7 +51,7 @@ You can customize the group caption text by using the [`groupSettings.captionTem
 {% include code-snippet/grid/customText-captiontemplate-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/customText-captiontemplate-cs1/ts/index.html %}
+{% include code-snippet/grid/customText-captiontemplate-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -58,11 +59,12 @@ You can customize the group caption text by using the [`groupSettings.captionTem
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/customText-captiontemplate-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/customText-captiontemplate-cs1/js/index.html %}
+{% include code-snippet/grid/customText-captiontemplate-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -82,7 +84,7 @@ In the below demo, we have rendered the EJ2 [`ButtonComponent`](../../button/get
 {% include code-snippet/grid/customComponent-captiontemplate-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/customComponent-captiontemplate-cs1/ts/index.html %}
+{% include code-snippet/grid/customComponent-captiontemplate-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -90,11 +92,12 @@ In the below demo, we have rendered the EJ2 [`ButtonComponent`](../../button/get
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/customComponent-captiontemplate-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/customComponent-captiontemplate-cs1/js/index.html %}
+{% include code-snippet/grid/customComponent-captiontemplate-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

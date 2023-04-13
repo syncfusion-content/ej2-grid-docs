@@ -27,7 +27,7 @@ Interaction keys |Description
 {% include code-snippet/grid/grid-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs1/ts/index.html %}
+{% include code-snippet/grid/grid-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -35,11 +35,12 @@ Interaction keys |Description
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs1/js/index.html %}
+{% include code-snippet/grid/grid-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -57,7 +58,7 @@ To copy selected rows or cells data into the clipboard with help of external but
 {% include code-snippet/grid/copy-method-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/copy-method-cs1/ts/index.html %}
+{% include code-snippet/grid/copy-method-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -65,11 +66,12 @@ To copy selected rows or cells data into the clipboard with help of external but
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/copy-method-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/copy-method-cs1/js/index.html %}
+{% include code-snippet/grid/copy-method-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -87,7 +89,7 @@ AutoFill Feature allows you to copy the data of selected cells and paste it to a
 {% include code-snippet/grid/grid-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs2/ts/index.html %}
+{% include code-snippet/grid/grid-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -95,11 +97,12 @@ AutoFill Feature allows you to copy the data of selected cells and paste it to a
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs2/js/index.html %}
+{% include code-snippet/grid/grid-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -125,7 +128,7 @@ You can able to copy the content of a cell or a group of cells by selecting the 
 {% include code-snippet/grid/grid-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs3/ts/index.html %}
+{% include code-snippet/grid/grid-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -133,11 +136,12 @@ You can able to copy the content of a cell or a group of cells by selecting the 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs3/js/index.html %}
+{% include code-snippet/grid/grid-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

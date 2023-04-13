@@ -20,7 +20,7 @@ The [`rowTemplate`](../../api/grid/#rowtemplate) has an option to customise the 
 {% include code-snippet/grid/row-template-cs30/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs30/ts/index.html %}
+{% include code-snippet/grid/row-template-cs30/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -28,11 +28,12 @@ The [`rowTemplate`](../../api/grid/#rowtemplate) has an option to customise the 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/row-template-cs30/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs30/js/index.html %}
+{% include code-snippet/grid/row-template-cs30/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,7 +53,7 @@ If the [`rowTemplate`](../../api/grid/#rowtemplate) is used, the value cannot be
 {% include code-snippet/grid/row-template-format-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-format-cs1/ts/index.html %}
+{% include code-snippet/grid/row-template-format-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -60,11 +61,12 @@ If the [`rowTemplate`](../../api/grid/#rowtemplate) is used, the value cannot be
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/row-template-format-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-format-cs1/js/index.html %}
+{% include code-snippet/grid/row-template-format-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

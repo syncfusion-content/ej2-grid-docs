@@ -58,7 +58,7 @@ In the below demo, the expand/collapse icon in the row with `EmployeeID` as `1` 
 {% include code-snippet/grid/grid-cs110/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs110/ts/index.html %}
+{% include code-snippet/grid/grid-cs110/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -66,11 +66,12 @@ In the below demo, the expand/collapse icon in the row with `EmployeeID` as `1` 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs110/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs110/js/index.html %}
+{% include code-snippet/grid/grid-cs110/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

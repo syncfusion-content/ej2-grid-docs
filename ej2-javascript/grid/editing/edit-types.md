@@ -46,7 +46,7 @@ Component |Example
 {% include code-snippet/grid/grid-cs26/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs26/ts/index.html %}
+{% include code-snippet/grid/grid-cs26/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -54,11 +54,12 @@ Component |Example
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs26/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs26/js/index.html %}
+{% include code-snippet/grid/grid-cs26/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -80,7 +81,7 @@ In the below demo, while editing the row we have restricted to type the decimal 
 {% include code-snippet/grid/prevent-decimal-points-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/prevent-decimal-points-cs1/ts/index.html %}
+{% include code-snippet/grid/prevent-decimal-points-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -88,11 +89,12 @@ In the below demo, while editing the row we have restricted to type the decimal 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/prevent-decimal-points-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/prevent-decimal-points-cs1/js/index.html %}
+{% include code-snippet/grid/prevent-decimal-points-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -127,7 +129,7 @@ In the below demo, DropDownList is rendered with custom Datasource for the `Ship
 {% include code-snippet/grid/grid-cs27/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs27/ts/index.html %}
+{% include code-snippet/grid/grid-cs27/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -135,11 +137,12 @@ In the below demo, DropDownList is rendered with custom Datasource for the `Ship
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs27/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs27/js/index.html %}
+{% include code-snippet/grid/grid-cs27/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -159,7 +162,7 @@ In the below demo, we have bound the focus event for the edit DropDownList using
 {% include code-snippet/grid/grid-cs28/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs28/ts/index.html %}
+{% include code-snippet/grid/grid-cs28/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -167,11 +170,12 @@ In the below demo, we have bound the focus event for the edit DropDownList using
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs28/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs28/js/index.html %}
+{% include code-snippet/grid/grid-cs28/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -201,7 +205,7 @@ Use the cell edit template feature of the Grid to render the TimePicker componen
 {% include code-snippet/grid/grid-cs29/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs29/ts/index.html %}
+{% include code-snippet/grid/grid-cs29/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -209,11 +213,12 @@ Use the cell edit template feature of the Grid to render the TimePicker componen
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs29/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs29/js/index.html %}
+{% include code-snippet/grid/grid-cs29/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -231,7 +236,7 @@ Use the cell edit template feature of the Grid to render the AutoComplete compon
 {% include code-snippet/grid/grid-cs30/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs30/ts/index.html %}
+{% include code-snippet/grid/grid-cs30/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -239,11 +244,12 @@ Use the cell edit template feature of the Grid to render the AutoComplete compon
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs30/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs30/js/index.html %}
+{% include code-snippet/grid/grid-cs30/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -261,7 +267,7 @@ Use the cell edit template feature of the Grid to render the MultiSelect DropDow
 {% include code-snippet/grid/grid-cs31/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs31/ts/index.html %}
+{% include code-snippet/grid/grid-cs31/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -269,11 +275,12 @@ Use the cell edit template feature of the Grid to render the MultiSelect DropDow
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs31/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs31/js/index.html %}
+{% include code-snippet/grid/grid-cs31/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -291,7 +298,7 @@ Use the cell edit template feature of the Grid to render the MaskedTextBox compo
 {% include code-snippet/grid/grid-cs32/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs32/ts/index.html %}
+{% include code-snippet/grid/grid-cs32/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -299,11 +306,12 @@ Use the cell edit template feature of the Grid to render the MaskedTextBox compo
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs32/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs32/js/index.html %}
+{% include code-snippet/grid/grid-cs32/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -321,7 +329,7 @@ Use the cell edit template feature of the Grid to render the RichTextEditor comp
 {% include code-snippet/grid/grid-cs33/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs33/ts/index.html %}
+{% include code-snippet/grid/grid-cs33/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -329,11 +337,12 @@ Use the cell edit template feature of the Grid to render the RichTextEditor comp
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs33/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs33/js/index.html %}
+{% include code-snippet/grid/grid-cs33/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -355,7 +364,7 @@ This is demonstrated in the following sample.
 {% include code-snippet/grid/multicolumn-dropdown-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/multicolumn-dropdown-cs1/ts/index.html %}
+{% include code-snippet/grid/multicolumn-dropdown-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -363,11 +372,12 @@ This is demonstrated in the following sample.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/multicolumn-dropdown-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/multicolumn-dropdown-cs1/js/index.html %}
+{% include code-snippet/grid/multicolumn-dropdown-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -387,7 +397,7 @@ In the below demo, you can access the Editor component instance while adding or 
 {% include code-snippet/grid/grid-cs34/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs34/ts/index.html %}
+{% include code-snippet/grid/grid-cs34/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -395,11 +405,12 @@ In the below demo, you can access the Editor component instance while adding or 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs34/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs34/js/index.html %}
+{% include code-snippet/grid/grid-cs34/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

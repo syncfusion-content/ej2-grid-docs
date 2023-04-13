@@ -20,7 +20,7 @@ PDF export provides an option for exporting multiple grids to same file. In this
 {% include code-snippet/grid/export-mutiple-grid-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/export-mutiple-grid-cs3/ts/index.html %}
+{% include code-snippet/grid/export-mutiple-grid-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -28,11 +28,12 @@ PDF export provides an option for exporting multiple grids to same file. In this
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/export-mutiple-grid-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/export-mutiple-grid-cs3/js/index.html %}
+{% include code-snippet/grid/export-mutiple-grid-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -26,7 +26,7 @@ In the following sample, grid enabled with dialog template editing.
 {% include code-snippet/grid/dialogtemplate-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/dialogtemplate-cs1/ts/index.html %}
+{% include code-snippet/grid/dialogtemplate-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -34,11 +34,12 @@ In the following sample, grid enabled with dialog template editing.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/dialogtemplate-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/dialogtemplate-cs1/js/index.html %}
+{% include code-snippet/grid/dialogtemplate-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -226,7 +227,7 @@ The following example demonstrates rendering the tab control inside the edit dia
 {% include code-snippet/grid/tabtemplate-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/tabtemplate-cs1/ts/index.html %}
+{% include code-snippet/grid/tabtemplate-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -234,11 +235,12 @@ The following example demonstrates rendering the tab control inside the edit dia
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/tabtemplate-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/tabtemplate-cs1/js/index.html %}
+{% include code-snippet/grid/tabtemplate-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

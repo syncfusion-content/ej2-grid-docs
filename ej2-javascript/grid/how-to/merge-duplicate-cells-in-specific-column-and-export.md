@@ -22,7 +22,7 @@ In the below demo,  the duplicate cells are merged for the `OrderID` column  in 
 {% include code-snippet/grid/custom-cellmerge-export-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-cellmerge-export-cs1/ts/index.html %}
+{% include code-snippet/grid/custom-cellmerge-export-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ In the below demo,  the duplicate cells are merged for the `OrderID` column  in 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/custom-cellmerge-export-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-cellmerge-export-cs1/js/index.html %}
+{% include code-snippet/grid/custom-cellmerge-export-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

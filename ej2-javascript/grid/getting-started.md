@@ -171,7 +171,7 @@ The paging feature enables users to view the grid record in a paged view. It can
 {% include code-snippet/grid/grid-cs72/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs72/ts/index.html %}
+{% include code-snippet/grid/grid-cs72/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -179,11 +179,12 @@ The paging feature enables users to view the grid record in a paged view. It can
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs72/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs72/js/index.html %}
+{% include code-snippet/grid/grid-cs72/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -202,7 +203,7 @@ The sorting feature enables you to order the records. It can be enabled by setti
 {% include code-snippet/grid/grid-cs73/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs73/ts/index.html %}
+{% include code-snippet/grid/grid-cs73/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -210,11 +211,12 @@ The sorting feature enables you to order the records. It can be enabled by setti
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs73/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs73/js/index.html %}
+{% include code-snippet/grid/grid-cs73/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -233,7 +235,7 @@ The filtering feature enables you to view reduced amount of records based on fil
 {% include code-snippet/grid/grid-cs74/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs74/ts/index.html %}
+{% include code-snippet/grid/grid-cs74/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -241,11 +243,12 @@ The filtering feature enables you to view reduced amount of records based on fil
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs74/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs74/js/index.html %}
+{% include code-snippet/grid/grid-cs74/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -263,7 +266,7 @@ The grouping feature enables users to view the grid record in a grouped view. It
 {% include code-snippet/grid/grid-cs75/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs75/ts/index.html %}
+{% include code-snippet/grid/grid-cs75/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -271,11 +274,12 @@ The grouping feature enables users to view the grid record in a grouped view. It
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs75/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs75/js/index.html %}
+{% include code-snippet/grid/grid-cs75/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -299,7 +303,7 @@ Output will be displayed as follows.
 {% include code-snippet/grid/grid-cs76/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs76/ts/index.html %}
+{% include code-snippet/grid/grid-cs76/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -307,11 +311,12 @@ Output will be displayed as follows.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs76/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs76/js/index.html %}
+{% include code-snippet/grid/grid-cs76/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

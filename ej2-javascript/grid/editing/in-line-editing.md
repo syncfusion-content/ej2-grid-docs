@@ -20,7 +20,7 @@ In Normal edit mode, when you start editing the currently selected record is cha
 {% include code-snippet/grid/grid-cs40/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs40/ts/index.html %}
+{% include code-snippet/grid/grid-cs40/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -28,11 +28,12 @@ In Normal edit mode, when you start editing the currently selected record is cha
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs40/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs40/js/index.html %}
+{% include code-snippet/grid/grid-cs40/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -54,7 +55,7 @@ In the below demo, we have update the `TotalCost` column value based on the `Uni
 {% include code-snippet/grid/grid-cs41/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs41/ts/index.html %}
+{% include code-snippet/grid/grid-cs41/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -62,11 +63,12 @@ In the below demo, we have update the `TotalCost` column value based on the `Uni
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs41/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs41/js/index.html %}
+{% include code-snippet/grid/grid-cs41/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -86,7 +88,7 @@ In the below demo, we prevent the CRUD operation based on the `Role` column valu
 {% include code-snippet/grid/grid-cs42/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs42/ts/index.html %}
+{% include code-snippet/grid/grid-cs42/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -94,11 +96,12 @@ In the below demo, we prevent the CRUD operation based on the `Role` column valu
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs42/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs42/js/index.html %}
+{% include code-snippet/grid/grid-cs42/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -128,7 +131,7 @@ Grid methods can be used to perform CRUD operations programmatically. The [addRe
 {% include code-snippet/grid/programmaticedit-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/programmaticedit-cs1/ts/index.html %}
+{% include code-snippet/grid/programmaticedit-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -136,11 +139,12 @@ Grid methods can be used to perform CRUD operations programmatically. The [addRe
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/programmaticedit-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/programmaticedit-cs1/js/index.html %}
+{% include code-snippet/grid/programmaticedit-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -158,7 +162,7 @@ The delete confirm dialog can be shown when deleting a record by defining the [`
 {% include code-snippet/grid/grid-cs43/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs43/ts/index.html %}
+{% include code-snippet/grid/grid-cs43/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -166,11 +170,12 @@ The delete confirm dialog can be shown when deleting a record by defining the [`
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs43/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs43/js/index.html %}
+{% include code-snippet/grid/grid-cs43/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -190,7 +195,7 @@ The grid provides an option to set the default value for the columns when adding
 {% include code-snippet/grid/grid-cs44/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs44/ts/index.html %}
+{% include code-snippet/grid/grid-cs44/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -198,11 +203,12 @@ The grid provides an option to set the default value for the columns when adding
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs44/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs44/js/index.html %}
+{% include code-snippet/grid/grid-cs44/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -220,7 +226,7 @@ By default, a new row will be added at the top of the grid. You can change it by
 {% include code-snippet/grid/grid-cs45/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs45/ts/index.html %}
+{% include code-snippet/grid/grid-cs45/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -228,11 +234,12 @@ By default, a new row will be added at the top of the grid. You can change it by
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs45/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs45/js/index.html %}
+{% include code-snippet/grid/grid-cs45/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -252,7 +259,7 @@ The [recordDoubleClick](../../api/grid/#recordDoubleClick) event allows you to m
 {% include code-snippet/grid/focus-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/focus-cs1/ts/index.html %}
+{% include code-snippet/grid/focus-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -260,11 +267,12 @@ The [recordDoubleClick](../../api/grid/#recordDoubleClick) event allows you to m
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/focus-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/focus-cs1/js/index.html %}
+{% include code-snippet/grid/focus-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

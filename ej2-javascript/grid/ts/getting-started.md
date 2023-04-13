@@ -254,7 +254,7 @@ The paging feature enables users to view the grid record in a paged view. It can
 {% include code-snippet/grid/grid-cs173/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs173/ts/index.html %}
+{% include code-snippet/grid/grid-cs173/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
@@ -269,7 +269,7 @@ The sorting feature enables you to order the records. It can be enabled by setti
 {% include code-snippet/grid/grid-cs174/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs174/ts/index.html %}
+{% include code-snippet/grid/grid-cs174/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
@@ -285,7 +285,7 @@ If [`Filter`](../api/grid/filter/) module is not injected,  filter bar will not 
 {% include code-snippet/grid/grid-cs175/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs175/ts/index.html %}
+{% include code-snippet/grid/grid-cs175/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
@@ -300,7 +300,7 @@ The grouping feature enables users to view the grid record in a grouped view. It
 {% include code-snippet/grid/grid-cs176/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs176/ts/index.html %}
+{% include code-snippet/grid/grid-cs176/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
@@ -321,7 +321,7 @@ Output will be displayed as follows.
 {% include code-snippet/grid/grid-cs177/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs177/ts/index.html %}
+{% include code-snippet/grid/grid-cs177/index.html %}
 {% endhighlight %}
 {% endtabs %}
           

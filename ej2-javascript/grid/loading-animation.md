@@ -22,7 +22,7 @@ In the following sample, the Shimmer indicator is displayed while the grid is lo
 {% include code-snippet/grid/grid-cs133/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs133/ts/index.html %}
+{% include code-snippet/grid/grid-cs133/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ In the following sample, the Shimmer indicator is displayed while the grid is lo
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs133/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs133/js/index.html %}
+{% include code-snippet/grid/grid-cs133/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

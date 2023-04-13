@@ -20,7 +20,7 @@ You can enable Excel like filter by defining. [`filterSettings.type`](../../api/
 {% include code-snippet/grid/grid-cs63/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs63/ts/index.html %}
+{% include code-snippet/grid/grid-cs63/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -28,11 +28,12 @@ You can enable Excel like filter by defining. [`filterSettings.type`](../../api/
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs63/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs63/js/index.html %}
+{% include code-snippet/grid/grid-cs63/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

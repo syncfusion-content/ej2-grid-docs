@@ -21,7 +21,7 @@ The [`hideAtMedia`](../../api/grid/column/#hideatmedia) accepts valid [Media Que
 {% include code-snippet/grid/hide-media-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/hide-media-cs1/ts/index.html %}
+{% include code-snippet/grid/hide-media-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -29,11 +29,12 @@ The [`hideAtMedia`](../../api/grid/column/#hideatmedia) accepts valid [Media Que
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/hide-media-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/hide-media-cs1/js/index.html %}
+{% include code-snippet/grid/hide-media-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

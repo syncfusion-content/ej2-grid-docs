@@ -35,7 +35,7 @@ The default items are displayed in following table.
 {% include code-snippet/grid/row-template-cs4/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs4/ts/index.html %}
+{% include code-snippet/grid/row-template-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -43,11 +43,12 @@ The default items are displayed in following table.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/row-template-cs4/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs4/js/index.html %}
+{% include code-snippet/grid/row-template-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -71,7 +72,7 @@ During the resizing action, the grid component triggers the below two events.
 {% include code-snippet/grid/row-template-cs5/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs5/ts/index.html %}
+{% include code-snippet/grid/row-template-cs5/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -79,11 +80,12 @@ During the resizing action, the grid component triggers the below two events.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/row-template-cs5/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs5/js/index.html %}
+{% include code-snippet/grid/row-template-cs5/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -101,7 +103,7 @@ Custom column menu items can be added by defining the [`columnMenuItems`](../../
 {% include code-snippet/grid/row-template-cs6/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs6/ts/index.html %}
+{% include code-snippet/grid/row-template-cs6/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -109,11 +111,12 @@ Custom column menu items can be added by defining the [`columnMenuItems`](../../
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/row-template-cs6/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs6/js/index.html %}
+{% include code-snippet/grid/row-template-cs6/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -133,7 +136,7 @@ The following sample, **Filter** item was hidden in column menu when opens for t
 {% include code-snippet/grid/row-template-cs7/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs7/ts/index.html %}
+{% include code-snippet/grid/row-template-cs7/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -141,11 +144,12 @@ The following sample, **Filter** item was hidden in column menu when opens for t
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/row-template-cs7/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs7/js/index.html %}
+{% include code-snippet/grid/row-template-cs7/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -171,7 +175,7 @@ In the below sample, grid is rendered with a customized column menu icon.
 {% include code-snippet/grid/custom-column-menu-icon-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-column-menu-icon-cs1/ts/index.html %}
+{% include code-snippet/grid/custom-column-menu-icon-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -179,11 +183,12 @@ In the below sample, grid is rendered with a customized column menu icon.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/custom-column-menu-icon-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-column-menu-icon-cs1/js/index.html %}
+{% include code-snippet/grid/custom-column-menu-icon-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

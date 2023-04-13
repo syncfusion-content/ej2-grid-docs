@@ -26,7 +26,7 @@ The following example demonstrates how to prevent Grid columns from persisting. 
 {% include code-snippet/grid/column-prevent-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-prevent-cs1/ts/index.html %}
+{% include code-snippet/grid/column-prevent-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -34,11 +34,12 @@ The following example demonstrates how to prevent Grid columns from persisting. 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/column-prevent-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-prevent-cs1/js/index.html %}
+{% include code-snippet/grid/column-prevent-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

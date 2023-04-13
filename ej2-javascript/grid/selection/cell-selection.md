@@ -25,7 +25,7 @@ The grid supports two types of cell selection mode that can be set by using the 
 {% include code-snippet/grid/grid-cs157/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs157/ts/index.html %}
+{% include code-snippet/grid/grid-cs157/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -33,11 +33,12 @@ The grid supports two types of cell selection mode that can be set by using the 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs157/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs157/js/index.html %}
+{% include code-snippet/grid/grid-cs157/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -57,7 +58,7 @@ The Toggle selection allows to perform selection and unselection of the particul
 {% include code-snippet/grid/grid-cs158/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs158/ts/index.html %}
+{% include code-snippet/grid/grid-cs158/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -65,11 +66,12 @@ The Toggle selection allows to perform selection and unselection of the particul
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs158/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs158/js/index.html %}
+{% include code-snippet/grid/grid-cs158/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
