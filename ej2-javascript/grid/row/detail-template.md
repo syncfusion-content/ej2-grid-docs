@@ -22,7 +22,7 @@ To use detail template, inject the [`DetailRow`](../../api/grid/detailRow)) modu
 {% include code-snippet/grid/detail-template-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/detail-template-cs1/ts/index.html %}
+{% include code-snippet/grid/detail-template-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ To use detail template, inject the [`DetailRow`](../../api/grid/detailRow)) modu
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/detail-template-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/detail-template-cs1/js/index.html %}
+{% include code-snippet/grid/detail-template-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -54,7 +55,7 @@ For example, to render grid inside the detail row, place an HTML div element as 
 {% include code-snippet/grid/detail-template-childgrid-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/detail-template-childgrid-cs1/ts/index.html %}
+{% include code-snippet/grid/detail-template-childgrid-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -62,11 +63,12 @@ For example, to render grid inside the detail row, place an HTML div element as 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/detail-template-childgrid-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/detail-template-childgrid-cs1/js/index.html %}
+{% include code-snippet/grid/detail-template-childgrid-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -84,7 +86,7 @@ By default, detail rows render in collapsed state. You can expand a detail row b
 {% include code-snippet/grid/detail-template-method-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/detail-template-method-cs1/ts/index.html %}
+{% include code-snippet/grid/detail-template-method-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -92,11 +94,12 @@ By default, detail rows render in collapsed state. You can expand a detail row b
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/detail-template-method-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/detail-template-method-cs1/js/index.html %}
+{% include code-snippet/grid/detail-template-method-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

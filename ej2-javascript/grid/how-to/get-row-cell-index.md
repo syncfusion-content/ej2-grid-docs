@@ -20,7 +20,7 @@ You can get the specific row and cell index of the grid by using `rowSelected` e
 {% include code-snippet/grid/grid-cs109/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs109/ts/index.html %}
+{% include code-snippet/grid/grid-cs109/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -28,11 +28,12 @@ You can get the specific row and cell index of the grid by using `rowSelected` e
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs109/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs109/js/index.html %}
+{% include code-snippet/grid/grid-cs109/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

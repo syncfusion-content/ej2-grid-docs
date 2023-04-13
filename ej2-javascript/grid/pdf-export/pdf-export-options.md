@@ -22,7 +22,7 @@ PDF export provides an option to export the current page into PDF. To export cur
 {% include code-snippet/grid/grid-cs141/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs141/ts/index.html %}
+{% include code-snippet/grid/grid-cs141/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ PDF export provides an option to export the current page into PDF. To export cur
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs141/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs141/js/index.html %}
+{% include code-snippet/grid/grid-cs141/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -54,7 +55,7 @@ In the below exporting demo, We can get the selected records using `getSelectedR
 {% include code-snippet/grid/grid-cs142/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs142/ts/index.html %}
+{% include code-snippet/grid/grid-cs142/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -62,11 +63,12 @@ In the below exporting demo, We can get the selected records using `getSelectedR
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs142/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs142/js/index.html %}
+{% include code-snippet/grid/grid-cs142/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -86,7 +88,7 @@ In the below Pdf exporting demo, We have gotten the filtered data by applying fi
 {% include code-snippet/grid/exporting-filtered-data-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/exporting-filtered-data-cs2/ts/index.html %}
+{% include code-snippet/grid/exporting-filtered-data-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -94,11 +96,12 @@ In the below Pdf exporting demo, We have gotten the filtered data by applying fi
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/exporting-filtered-data-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/exporting-filtered-data-cs2/js/index.html %}
+{% include code-snippet/grid/exporting-filtered-data-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -116,7 +119,7 @@ PDF export provides an option to export hidden columns of Grid by defining the `
 {% include code-snippet/grid/grid-cs143/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs143/ts/index.html %}
+{% include code-snippet/grid/grid-cs143/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -124,11 +127,12 @@ PDF export provides an option to export hidden columns of Grid by defining the `
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs143/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs143/js/index.html %}
+{% include code-snippet/grid/grid-cs143/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -152,7 +156,7 @@ In the below example, we have `CustomerID` as a hidden column in the grid. While
 {% include code-snippet/grid/grid-cs144/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs144/ts/index.html %}
+{% include code-snippet/grid/grid-cs144/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -160,11 +164,12 @@ In the below example, we have `CustomerID` as a hidden column in the grid. While
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs144/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs144/js/index.html %}
+{% include code-snippet/grid/grid-cs144/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -182,7 +187,7 @@ Page orientation can be changed Landscape(Default Portrait) for the exported doc
 {% include code-snippet/grid/grid-cs145/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs145/ts/index.html %}
+{% include code-snippet/grid/grid-cs145/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -190,11 +195,12 @@ Page orientation can be changed Landscape(Default Portrait) for the exported doc
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs145/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs145/js/index.html %}
+{% include code-snippet/grid/grid-cs145/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -240,7 +246,7 @@ Supported page sizes are:
 {% include code-snippet/grid/grid-cs146/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs146/ts/index.html %}
+{% include code-snippet/grid/grid-cs146/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -248,11 +254,12 @@ Supported page sizes are:
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs146/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs146/js/index.html %}
+{% include code-snippet/grid/grid-cs146/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -270,7 +277,7 @@ You can assign the file name for the exported document by defining `fileName` pr
 {% include code-snippet/grid/grid-cs147/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs147/ts/index.html %}
+{% include code-snippet/grid/grid-cs147/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -278,11 +285,12 @@ You can assign the file name for the exported document by defining `fileName` pr
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs147/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs147/js/index.html %}
+{% include code-snippet/grid/grid-cs147/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -332,7 +340,7 @@ In the following example, we have used Advent Pro font to export the grid with H
 {% include code-snippet/grid/gridcustomfont-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/gridcustomfont-cs1/ts/index.html %}
+{% include code-snippet/grid/gridcustomfont-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -340,11 +348,12 @@ In the following example, we have used Advent Pro font to export the grid with H
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/gridcustomfont-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/gridcustomfont-cs1/js/index.html %}
+{% include code-snippet/grid/gridcustomfont-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

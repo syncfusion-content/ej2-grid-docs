@@ -20,7 +20,7 @@ The [`columns`](../../api/grid/column) are automatically generated when [`column
 {% include code-snippet/grid/row-template-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs2/ts/index.html %}
+{% include code-snippet/grid/row-template-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -28,11 +28,12 @@ The [`columns`](../../api/grid/column) are automatically generated when [`column
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/row-template-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs2/js/index.html %}
+{% include code-snippet/grid/row-template-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -110,7 +111,7 @@ In the below example, [`width`](../../api/grid/column/#width) is set for **Order
 {% include code-snippet/grid/row-template-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs3/ts/index.html %}
+{% include code-snippet/grid/row-template-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -118,11 +119,12 @@ In the below example, [`width`](../../api/grid/column/#width) is set for **Order
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/row-template-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs3/js/index.html %}
+{% include code-snippet/grid/row-template-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

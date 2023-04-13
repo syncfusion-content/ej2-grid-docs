@@ -23,7 +23,7 @@ In the below example, the **rowHeight** is set as '60px'.
 {% include code-snippet/grid/custom-row-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-row-cs1/ts/index.html %}
+{% include code-snippet/grid/custom-row-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -31,11 +31,12 @@ In the below example, the **rowHeight** is set as '60px'.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/custom-row-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-row-cs1/js/index.html %}
+{% include code-snippet/grid/custom-row-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -55,7 +56,7 @@ In the below example, the row height for the row with OrderID as '10249' is set 
 {% include code-snippet/grid/custom-row-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-row-cs2/ts/index.html %}
+{% include code-snippet/grid/custom-row-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -63,11 +64,12 @@ In the below example, the row height for the row with OrderID as '10249' is set 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/custom-row-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-row-cs2/js/index.html %}
+{% include code-snippet/grid/custom-row-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

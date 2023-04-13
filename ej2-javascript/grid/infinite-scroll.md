@@ -24,7 +24,7 @@ To enable Infinite scrolling, set `enableInfiniteScrolling` property as true.
 {% include code-snippet/grid/grid-cs113/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs113/ts/index.html %}
+{% include code-snippet/grid/grid-cs113/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -32,11 +32,12 @@ To enable Infinite scrolling, set `enableInfiniteScrolling` property as true.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs113/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs113/js/index.html %}
+{% include code-snippet/grid/grid-cs113/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -56,7 +57,7 @@ In the below demo, we have changed this property value to load five page records
 {% include code-snippet/grid/grid-cs114/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs114/ts/index.html %}
+{% include code-snippet/grid/grid-cs114/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -64,11 +65,12 @@ In the below demo, we have changed this property value to load five page records
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs114/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs114/js/index.html %}
+{% include code-snippet/grid/grid-cs114/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -88,7 +90,7 @@ To enable the cache mode in Infinite scrolling, set `infiniteScrollSettings.enab
 {% include code-snippet/grid/grid-cs115/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs115/ts/index.html %}
+{% include code-snippet/grid/grid-cs115/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -96,11 +98,12 @@ To enable the cache mode in Infinite scrolling, set `infiniteScrollSettings.enab
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs115/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs115/js/index.html %}
+{% include code-snippet/grid/grid-cs115/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

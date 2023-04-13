@@ -28,7 +28,7 @@ The number of records displayed in the Grid is determined implicitly by height o
 {% include code-snippet/grid/grid-cs178/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs178/ts/index.html %}
+{% include code-snippet/grid/grid-cs178/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -36,11 +36,12 @@ The number of records displayed in the Grid is determined implicitly by height o
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs178/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs178/js/index.html %}
+{% include code-snippet/grid/grid-cs178/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -62,7 +63,7 @@ To setup the column virtualization, set the
 {% include code-snippet/grid/grid-cs179/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs179/ts/index.html %}
+{% include code-snippet/grid/grid-cs179/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -70,11 +71,12 @@ To setup the column virtualization, set the
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs179/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs179/js/index.html %}
+{% include code-snippet/grid/grid-cs179/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

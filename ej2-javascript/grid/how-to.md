@@ -44,7 +44,7 @@ Refresh the grid after the data source change by using the [`refresh`](../api/gr
 {% include code-snippet/grid/refresh-grid-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/refresh-grid-cs2/ts/index.html %}
+{% include code-snippet/grid/refresh-grid-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -52,11 +52,12 @@ Refresh the grid after the data source change by using the [`refresh`](../api/gr
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/refresh-grid-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/refresh-grid-cs2/js/index.html %}
+{% include code-snippet/grid/refresh-grid-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -97,7 +98,7 @@ To render the DropDownList component, use the [`dataBound`](../api/grid/#databou
 {% include code-snippet/grid/toolbar-dropdown-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/toolbar-dropdown-cs2/ts/index.html %}
+{% include code-snippet/grid/toolbar-dropdown-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -105,11 +106,12 @@ To render the DropDownList component, use the [`dataBound`](../api/grid/#databou
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/toolbar-dropdown-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/toolbar-dropdown-cs2/js/index.html %}
+{% include code-snippet/grid/toolbar-dropdown-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -164,7 +166,7 @@ In the below demo, the button click will enable/disable the Grid and its actions
 {% include code-snippet/grid/disablegrid-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/disablegrid-cs1/ts/index.html %}
+{% include code-snippet/grid/disablegrid-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -172,11 +174,12 @@ In the below demo, the button click will enable/disable the Grid and its actions
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/disablegrid-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/disablegrid-cs1/js/index.html %}
+{% include code-snippet/grid/disablegrid-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -218,7 +221,7 @@ grid.refreshHeader();
 {% include code-snippet/grid/change-header-text-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/change-header-text-cs2/ts/index.html %}
+{% include code-snippet/grid/change-header-text-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -226,11 +229,12 @@ grid.refreshHeader();
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/change-header-text-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/change-header-text-cs2/js/index.html %}
+{% include code-snippet/grid/change-header-text-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -280,7 +284,7 @@ Add the custom CSS class to the specified column by using the [`customAttributes
 {% include code-snippet/grid/custom-column-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-column-cs2/ts/index.html %}
+{% include code-snippet/grid/custom-column-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -288,11 +292,12 @@ Add the custom CSS class to the specified column by using the [`customAttributes
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/custom-column-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-column-cs2/js/index.html %}
+{% include code-snippet/grid/custom-column-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -321,7 +326,7 @@ function tooltip (args: QueryCellInfoEventArgs) {
 {% include code-snippet/grid/custom-tooltip-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-tooltip-cs2/ts/index.html %}
+{% include code-snippet/grid/custom-tooltip-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -329,11 +334,12 @@ function tooltip (args: QueryCellInfoEventArgs) {
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/custom-tooltip-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-tooltip-cs2/js/index.html %}
+{% include code-snippet/grid/custom-tooltip-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -381,7 +387,7 @@ Using the [`queryCellInfo`](../api/grid/#querycellinfo) event, you can render th
 {% include code-snippet/grid/column-sync-comp-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-sync-comp-cs2/ts/index.html %}
+{% include code-snippet/grid/column-sync-comp-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -389,11 +395,12 @@ Using the [`queryCellInfo`](../api/grid/#querycellinfo) event, you can render th
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/column-sync-comp-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-sync-comp-cs2/js/index.html %}
+{% include code-snippet/grid/column-sync-comp-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -448,7 +455,7 @@ function setHeaderHeight(args) {
 {% include code-snippet/grid/orientation-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/orientation-cs2/ts/index.html %}
+{% include code-snippet/grid/orientation-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -456,11 +463,12 @@ function setHeaderHeight(args) {
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/orientation-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/orientation-cs2/js/index.html %}
+{% include code-snippet/grid/orientation-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -486,7 +494,7 @@ In the below sample, grid is rendered with a customized column menu icon.
 {% include code-snippet/grid/custom-column-menu-icon-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-column-menu-icon-cs2/ts/index.html %}
+{% include code-snippet/grid/custom-column-menu-icon-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -494,11 +502,12 @@ In the below sample, grid is rendered with a customized column menu icon.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/custom-column-menu-icon-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-column-menu-icon-cs2/js/index.html %}
+{% include code-snippet/grid/custom-column-menu-icon-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -520,7 +529,7 @@ In the below demo, the `ShipCountry` column is rendered with the template.
 {% include code-snippet/grid/edit-column-template-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/edit-column-template-cs2/ts/index.html %}
+{% include code-snippet/grid/edit-column-template-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -528,11 +537,12 @@ In the below demo, the `ShipCountry` column is rendered with the template.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/edit-column-template-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/edit-column-template-cs2/js/index.html %}
+{% include code-snippet/grid/edit-column-template-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -552,7 +562,7 @@ In the following example, the dialog's header text has been changed for editing 
 {% include code-snippet/grid/customizedialog-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/customizedialog-cs1/ts/index.html %}
+{% include code-snippet/grid/customizedialog-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -560,11 +570,12 @@ In the following example, the dialog's header text has been changed for editing 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/customizedialog-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/customizedialog-cs1/js/index.html %}
+{% include code-snippet/grid/customizedialog-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -588,7 +599,7 @@ In the below example, we have rendered the grid columns `CustomerID` as hidden c
 {% include code-snippet/grid/grid-cs91/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs91/ts/index.html %}
+{% include code-snippet/grid/grid-cs91/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -596,11 +607,12 @@ In the below example, we have rendered the grid columns `CustomerID` as hidden c
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs91/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs91/js/index.html %}
+{% include code-snippet/grid/grid-cs91/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -620,7 +632,7 @@ In the below demo, Cascading DropDownList is rendered for the `ShipCountry` and 
 {% include code-snippet/grid/grid-cs92/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs92/ts/index.html %}
+{% include code-snippet/grid/grid-cs92/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -628,11 +640,12 @@ In the below demo, Cascading DropDownList is rendered for the `ShipCountry` and 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs92/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs92/js/index.html %}
+{% include code-snippet/grid/grid-cs92/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -667,7 +680,7 @@ In the below demo, DropDownList is rendered with custom Datasource for the `Ship
 {% include code-snippet/grid/grid-cs93/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs93/ts/index.html %}
+{% include code-snippet/grid/grid-cs93/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -675,11 +688,12 @@ In the below demo, DropDownList is rendered with custom Datasource for the `Ship
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs93/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs93/js/index.html %}
+{% include code-snippet/grid/grid-cs93/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -699,7 +713,7 @@ In the below demo, you can access the Editor component instance while adding or 
 {% include code-snippet/grid/grid-cs94/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs94/ts/index.html %}
+{% include code-snippet/grid/grid-cs94/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -707,11 +721,12 @@ In the below demo, you can access the Editor component instance while adding or 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs94/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs94/js/index.html %}
+{% include code-snippet/grid/grid-cs94/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -731,7 +746,7 @@ The following example demonstrates the wizard-like editing in the grid with obtr
 {% include code-snippet/grid/wizardtemplate-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/wizardtemplate-cs2/ts/index.html %}
+{% include code-snippet/grid/wizardtemplate-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -739,11 +754,12 @@ The following example demonstrates the wizard-like editing in the grid with obtr
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/wizardtemplate-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/wizardtemplate-cs2/js/index.html %}
+{% include code-snippet/grid/wizardtemplate-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -829,7 +845,7 @@ The following example demonstrates rendering the tab control inside the edit dia
 {% include code-snippet/grid/tabtemplate-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/tabtemplate-cs2/ts/index.html %}
+{% include code-snippet/grid/tabtemplate-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -837,11 +853,12 @@ The following example demonstrates rendering the tab control inside the edit dia
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/tabtemplate-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/tabtemplate-cs2/js/index.html %}
+{% include code-snippet/grid/tabtemplate-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -861,7 +878,7 @@ In the below demo, the rows which are having the value for `ShipCountry` column 
 {% include code-snippet/grid/grid-cs95/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs95/ts/index.html %}
+{% include code-snippet/grid/grid-cs95/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -869,11 +886,12 @@ In the below demo, the rows which are having the value for `ShipCountry` column 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs95/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs95/js/index.html %}
+{% include code-snippet/grid/grid-cs95/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -889,7 +907,7 @@ For batch mode of editing, you can use [`cellEdit`](../api/grid/#celledit) event
 {% include code-snippet/grid/grid-cs96/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs96/ts/index.html %}
+{% include code-snippet/grid/grid-cs96/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -897,11 +915,12 @@ For batch mode of editing, you can use [`cellEdit`](../api/grid/#celledit) event
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs96/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs96/js/index.html %}
+{% include code-snippet/grid/grid-cs96/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -923,7 +942,7 @@ The following example demonstrates on `Adding` a new row when `Enter` key is pre
 {% include code-snippet/grid/grid-cs97/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs97/ts/index.html %}
+{% include code-snippet/grid/grid-cs97/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -931,11 +950,12 @@ The following example demonstrates on `Adding` a new row when `Enter` key is pre
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs97/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs97/js/index.html %}
+{% include code-snippet/grid/grid-cs97/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -955,7 +975,7 @@ Bind the click event for Grid and in the click event handler call the [`editCell
 {% include code-snippet/grid/grid-cs98/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs98/ts/index.html %}
+{% include code-snippet/grid/grid-cs98/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -963,11 +983,12 @@ Bind the click event for Grid and in the click event handler call the [`editCell
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs98/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs98/js/index.html %}
+{% include code-snippet/grid/grid-cs98/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -994,7 +1015,7 @@ The following sample illustrates customizing the string filter operators.
 {% include code-snippet/grid/grid-cs99/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs99/ts/index.html %}
+{% include code-snippet/grid/grid-cs99/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -1002,11 +1023,12 @@ The following sample illustrates customizing the string filter operators.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs99/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs99/js/index.html %}
+{% include code-snippet/grid/grid-cs99/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -1045,7 +1067,7 @@ In the below demo, click on the corresponding button to perform single-column or
 {% include code-snippet/grid/sort-how-to-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/sort-how-to-cs1/ts/index.html %}
+{% include code-snippet/grid/sort-how-to-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -1053,11 +1075,12 @@ In the below demo, click on the corresponding button to perform single-column or
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/sort-how-to-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/sort-how-to-cs1/js/index.html %}
+{% include code-snippet/grid/sort-how-to-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -1099,7 +1122,7 @@ In the below demo, click on the corresponding button to clear sort for particula
 {% include code-snippet/grid/clear-sort-how-to-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/clear-sort-how-to-cs1/ts/index.html %}
+{% include code-snippet/grid/clear-sort-how-to-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -1107,11 +1130,12 @@ In the below demo, click on the corresponding button to clear sort for particula
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/clear-sort-how-to-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/clear-sort-how-to-cs1/js/index.html %}
+{% include code-snippet/grid/clear-sort-how-to-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -1133,7 +1157,7 @@ In the following code example, the `Employee Name` is a foreign key column. When
 {% include code-snippet/grid/foreign-key-cs7/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs7/ts/index.html %}
+{% include code-snippet/grid/foreign-key-cs7/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -1141,11 +1165,12 @@ In the following code example, the `Employee Name` is a foreign key column. When
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/foreign-key-cs7/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs7/js/index.html %}
+{% include code-snippet/grid/foreign-key-cs7/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -1165,7 +1190,7 @@ In the following example, The `Employee Name` is a foreign key column. DropDownL
 {% include code-snippet/grid/foreign-key-cs8/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs8/ts/index.html %}
+{% include code-snippet/grid/foreign-key-cs8/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -1173,11 +1198,12 @@ In the following example, The `Employee Name` is a foreign key column. DropDownL
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/foreign-key-cs8/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs8/js/index.html %}
+{% include code-snippet/grid/foreign-key-cs8/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -1197,7 +1223,7 @@ In the following example, The `Employee Name` is a foreign key column. This colu
 {% include code-snippet/grid/foreign-key-cs9/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs9/ts/index.html %}
+{% include code-snippet/grid/foreign-key-cs9/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -1205,11 +1231,12 @@ In the following example, The `Employee Name` is a foreign key column. This colu
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/foreign-key-cs9/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs9/js/index.html %}
+{% include code-snippet/grid/foreign-key-cs9/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -1229,7 +1256,7 @@ In the following example, The `Employee Name` is a foreign key column and the ag
 {% include code-snippet/grid/foreign-key-cs10/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs10/ts/index.html %}
+{% include code-snippet/grid/foreign-key-cs10/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -1237,11 +1264,12 @@ In the following example, The `Employee Name` is a foreign key column and the ag
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/foreign-key-cs10/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs10/js/index.html %}
+{% include code-snippet/grid/foreign-key-cs10/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -1259,7 +1287,7 @@ When editing, you can bind foreign key datasource to a dropdown list by using [`
 {% include code-snippet/grid/grid-cs100/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs100/ts/index.html %}
+{% include code-snippet/grid/grid-cs100/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -1267,11 +1295,12 @@ When editing, you can bind foreign key datasource to a dropdown list by using [`
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs100/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs100/js/index.html %}
+{% include code-snippet/grid/grid-cs100/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -1293,7 +1322,7 @@ Cordova application does not support direct file download. So we have to use the
 {% include code-snippet/grid/exporting-blob-data-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/exporting-blob-data-cs1/ts/index.html %}
+{% include code-snippet/grid/exporting-blob-data-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -1301,11 +1330,12 @@ Cordova application does not support direct file download. So we have to use the
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/exporting-blob-data-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/exporting-blob-data-cs1/js/index.html %}
+{% include code-snippet/grid/exporting-blob-data-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -1325,7 +1355,7 @@ In the below Pdf exporting demo, We have gotten the filtered data by applying fi
 {% include code-snippet/grid/exporting-filtered-data-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/exporting-filtered-data-cs1/ts/index.html %}
+{% include code-snippet/grid/exporting-filtered-data-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -1333,11 +1363,12 @@ In the below Pdf exporting demo, We have gotten the filtered data by applying fi
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/exporting-filtered-data-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/exporting-filtered-data-cs1/js/index.html %}
+{% include code-snippet/grid/exporting-filtered-data-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -1357,7 +1388,7 @@ To customize the default values of pager drop-down, you need to define the [`pag
 {% include code-snippet/grid/pagerdropdown-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/pagerdropdown-cs2/ts/index.html %}
+{% include code-snippet/grid/pagerdropdown-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -1365,11 +1396,12 @@ To customize the default values of pager drop-down, you need to define the [`pag
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/pagerdropdown-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/pagerdropdown-cs2/js/index.html %}
+{% include code-snippet/grid/pagerdropdown-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -1425,7 +1457,7 @@ In the below demo, the expand/collapse icon in the row with `EmployeeID` as `1` 
 {% include code-snippet/grid/grid-cs101/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs101/ts/index.html %}
+{% include code-snippet/grid/grid-cs101/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -1433,11 +1465,12 @@ In the below demo, the expand/collapse icon in the row with `EmployeeID` as `1` 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs101/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs101/js/index.html %}
+{% include code-snippet/grid/grid-cs101/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -1457,7 +1490,7 @@ The below example shows how to use the itemTemplate property in the DropDownList
 {% include code-snippet/grid/grid-cs102/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs102/ts/index.html %}
+{% include code-snippet/grid/grid-cs102/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -1465,11 +1498,12 @@ The below example shows how to use the itemTemplate property in the DropDownList
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs102/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs102/js/index.html %}
+{% include code-snippet/grid/grid-cs102/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

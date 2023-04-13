@@ -20,7 +20,7 @@ Group and caption aggregate values are calculated from the current group items. 
 {% include code-snippet/grid/aggregates-cs5/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/aggregates-cs5/ts/index.html %}
+{% include code-snippet/grid/aggregates-cs5/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -28,11 +28,12 @@ Group and caption aggregate values are calculated from the current group items. 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/aggregates-cs5/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/aggregates-cs5/js/index.html %}
+{% include code-snippet/grid/aggregates-cs5/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

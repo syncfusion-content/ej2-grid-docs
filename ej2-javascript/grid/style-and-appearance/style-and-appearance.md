@@ -36,7 +36,7 @@ In the following sample, the font family of grid content is changed to **cursive
 {% include code-snippet/grid/style-appearance-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/style-appearance-cs1/ts/index.html %}
+{% include code-snippet/grid/style-appearance-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -44,11 +44,12 @@ In the following sample, the font family of grid content is changed to **cursive
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/style-appearance-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/style-appearance-cs1/js/index.html %}
+{% include code-snippet/grid/style-appearance-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

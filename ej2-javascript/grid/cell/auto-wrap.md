@@ -30,7 +30,7 @@ In the following example, the [`textWrapSettings.wrapMode`](../../api/grid/textW
 {% include code-snippet/grid/autowrap-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/autowrap-cs1/ts/index.html %}
+{% include code-snippet/grid/autowrap-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -38,11 +38,12 @@ In the following example, the [`textWrapSettings.wrapMode`](../../api/grid/textW
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/autowrap-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/autowrap-cs1/js/index.html %}
+{% include code-snippet/grid/autowrap-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -25,7 +25,7 @@ The [`columns`](../api/grid/column) are automatically generated when [`columns`]
 {% include code-snippet/grid/row-template-cs18/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs18/js/index.html %}
+{% include code-snippet/grid/row-template-cs18/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -94,7 +94,7 @@ In the below example, [`width`](../api/grid/column/#width) is set for **OrderID*
 {% include code-snippet/grid/row-template-cs19/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs19/js/index.html %}
+{% include code-snippet/grid/row-template-cs19/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -109,7 +109,7 @@ You can achieve complex data binding in the grid by using the dot(.) operator in
 {% include code-snippet/grid/complex-binding-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/complex-binding-cs3/js/index.html %}
+{% include code-snippet/grid/complex-binding-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -155,7 +155,7 @@ In the following example, **Employee Name** is a foreign column which shows **Fi
 {% include code-snippet/grid/foreign-key-cs12/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs12/js/index.html %}
+{% include code-snippet/grid/foreign-key-cs12/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -173,7 +173,7 @@ You can customize the header element by using the [`headerTemplate`](../api/grid
 {% include code-snippet/grid/headertemplate-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/headertemplate-cs2/js/index.html %}
+{% include code-snippet/grid/headertemplate-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -188,7 +188,7 @@ By default, column header title is displayed from column [`field`](../api/grid/c
 {% include code-snippet/grid/grid-cs116/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs116/js/index.html %}
+{% include code-snippet/grid/grid-cs116/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -207,7 +207,7 @@ values.
 {% include code-snippet/grid/grid-cs117/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs117/js/index.html %}
+{% include code-snippet/grid/grid-cs117/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -248,7 +248,7 @@ Format | Formatted value
 {% include code-snippet/grid/pagerdropdown-cs4/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/pagerdropdown-cs4/js/index.html %}
+{% include code-snippet/grid/pagerdropdown-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -263,7 +263,7 @@ You can hide any particular column in Grid before rendering by defining [`visibl
 {% include code-snippet/grid/grid-cs118/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs118/js/index.html %}
+{% include code-snippet/grid/grid-cs118/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -280,7 +280,7 @@ To use the [`autoFitColumns`](../api/grid/#autofitcolumns) method, inject the **
 {% include code-snippet/grid/autofit-columns-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/autofit-columns-cs2/js/index.html %}
+{% include code-snippet/grid/autofit-columns-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -299,7 +299,7 @@ To use reordering, inject the [`Reorder`](../api/grid/reorder) module in the gri
 {% include code-snippet/grid/row-template-cs20/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs20/js/index.html %}
+{% include code-snippet/grid/row-template-cs20/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -316,7 +316,7 @@ Grid have option to reorder Columns either by Interaction or by using the [`reor
 {% include code-snippet/grid/reorder-single-column-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/reorder-single-column-cs2/js/index.html %}
+{% include code-snippet/grid/reorder-single-column-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -333,7 +333,7 @@ In the below sample, **Ship City** and **Ship Region** column is reordered to la
 {% include code-snippet/grid/reorder-column-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/reorder-column-cs2/js/index.html %}
+{% include code-snippet/grid/reorder-column-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -352,7 +352,7 @@ During the reorder action, the grid component triggers the below three events.
 {% include code-snippet/grid/row-template-cs21/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs21/js/index.html %}
+{% include code-snippet/grid/row-template-cs21/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -369,7 +369,7 @@ In the below example, **Ship City** column is locked and its reordering function
 {% include code-snippet/grid/lock-column-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/lock-column-cs2/js/index.html %}
+{% include code-snippet/grid/lock-column-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -386,7 +386,7 @@ To use the column resize, inject **Resize** module in the grid.
 {% include code-snippet/grid/row-template-cs22/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs22/js/index.html %}
+{% include code-snippet/grid/row-template-cs22/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -422,7 +422,7 @@ In the following sample, minimum and maximum width are defined for **OrderID**, 
 {% include code-snippet/grid/row-template-cs23/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs23/js/index.html %}
+{% include code-snippet/grid/row-template-cs23/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -439,7 +439,7 @@ In this example, we have disabled resize for **Ship City** column.
 {% include code-snippet/grid/row-template-cs24/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs24/js/index.html %}
+{% include code-snippet/grid/row-template-cs24/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -466,7 +466,7 @@ During the resizing action, the grid component triggers the below three events.
 {% include code-snippet/grid/row-template-cs25/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs25/js/index.html %}
+{% include code-snippet/grid/row-template-cs25/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -481,7 +481,7 @@ The column [`template`](../api/grid/column/#template) has options to display cus
 {% include code-snippet/grid/column-template-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-template-cs2/js/index.html %}
+{% include code-snippet/grid/column-template-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -509,7 +509,7 @@ In the following code, checkbox is rendered based on **Discontinued** field valu
 {% include code-snippet/grid/condition-inside-template-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/condition-inside-template-cs2/js/index.html %}
+{% include code-snippet/grid/condition-inside-template-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -542,7 +542,7 @@ To use the column chooser, inject the **ColumnChooser** module in the grid.
 {% include code-snippet/grid/columnchooser-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/columnchooser-cs2/js/index.html %}
+{% include code-snippet/grid/columnchooser-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -559,7 +559,7 @@ The Column chooser can be displayed on a page through external button by invokin
 {% include code-snippet/grid/columnchooser-method-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/columnchooser-method-cs2/js/index.html %}
+{% include code-snippet/grid/columnchooser-method-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -589,7 +589,7 @@ The default items are displayed in following table.
 {% include code-snippet/grid/row-template-cs26/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs26/js/index.html %}
+{% include code-snippet/grid/row-template-cs26/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -610,7 +610,7 @@ During the resizing action, the grid component triggers the below two events.
 {% include code-snippet/grid/row-template-cs27/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs27/js/index.html %}
+{% include code-snippet/grid/row-template-cs27/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -625,7 +625,7 @@ Custom column menu items can be added by defining the [`columnMenuItems`](../api
 {% include code-snippet/grid/row-template-cs28/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs28/js/index.html %}
+{% include code-snippet/grid/row-template-cs28/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -642,7 +642,7 @@ The following sample, **Filter** item was hidden in column menu when opens for t
 {% include code-snippet/grid/row-template-cs29/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs29/js/index.html %}
+{% include code-snippet/grid/row-template-cs29/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -659,7 +659,7 @@ In the following demo, employee **Davolio** is doing analysis from 9.00 A.M. to 
 {% include code-snippet/grid/column-spanning-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-spanning-cs2/js/index.html %}
+{% include code-snippet/grid/column-spanning-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -677,7 +677,7 @@ The [`hideAtMedia`](../api/grid/column/#hideatmedia) accepts valid
 {% include code-snippet/grid/hide-media-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/hide-media-cs2/js/index.html %}
+{% include code-snippet/grid/hide-media-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -693,7 +693,7 @@ You can enable or disable grid action for a particular column by setting the [`a
 {% include code-snippet/grid/grouping-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grouping-cs2/js/index.html %}
+{% include code-snippet/grid/grouping-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -708,7 +708,7 @@ You can show or hide grid columns dynamically using external buttons by invoking
 {% include code-snippet/grid/show-hide-columns-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/show-hide-columns-cs2/js/index.html %}
+{% include code-snippet/grid/show-hide-columns-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -723,7 +723,7 @@ The [`valueAccessor`](../api/grid/column/#valueaccessor) is used to access/manip
 {% include code-snippet/grid/value-accessor-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/value-accessor-cs2/js/index.html %}
+{% include code-snippet/grid/value-accessor-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -738,7 +738,7 @@ You can bind an array of objects in a column by using the [`valueAccessor`](../a
 {% include code-snippet/grid/array-of-string-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/array-of-string-cs2/js/index.html %}
+{% include code-snippet/grid/array-of-string-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -753,7 +753,7 @@ You can achieve the expression column by using the [`valueAccessor`](../api/grid
 {% include code-snippet/grid/expression-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/expression-cs2/js/index.html %}
+{% include code-snippet/grid/expression-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -768,7 +768,7 @@ To render boolean values as checkbox in columns, you need to set [`displayAsChec
 {% include code-snippet/grid/grid-cs119/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs119/js/index.html %}
+{% include code-snippet/grid/grid-cs119/index.html %}
 {% endhighlight %}
 {% endtabs %}
         

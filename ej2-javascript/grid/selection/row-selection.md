@@ -22,7 +22,7 @@ To select a row at initial rendering, set the [`selectedRowIndex`](../../api/gri
 {% include code-snippet/grid/grid-cs162/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs162/ts/index.html %}
+{% include code-snippet/grid/grid-cs162/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ To select a row at initial rendering, set the [`selectedRowIndex`](../../api/gri
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs162/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs162/js/index.html %}
+{% include code-snippet/grid/grid-cs162/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,7 +53,7 @@ You can get the selected row indexes by using the [`getSelectedRowIndexes`](../.
 {% include code-snippet/grid/selected-index-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/selected-index-cs2/ts/index.html %}
+{% include code-snippet/grid/selected-index-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -60,11 +61,12 @@ You can get the selected row indexes by using the [`getSelectedRowIndexes`](../.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/selected-index-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/selected-index-cs2/js/index.html %}
+{% include code-snippet/grid/selected-index-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -82,7 +84,7 @@ You can select multiple rows by clicking on rows one by one. This will not desel
 {% include code-snippet/grid/selected-index-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/selected-index-cs3/ts/index.html %}
+{% include code-snippet/grid/selected-index-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -90,11 +92,12 @@ You can select multiple rows by clicking on rows one by one. This will not desel
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/selected-index-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/selected-index-cs3/js/index.html %}
+{% include code-snippet/grid/selected-index-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -112,7 +115,7 @@ The Toggle selection allows to perform selection and unselection of the particul
 {% include code-snippet/grid/grid-cs163/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs163/ts/index.html %}
+{% include code-snippet/grid/grid-cs163/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -120,11 +123,12 @@ The Toggle selection allows to perform selection and unselection of the particul
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs163/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs163/js/index.html %}
+{% include code-snippet/grid/grid-cs163/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -146,7 +150,7 @@ In the demo below, we initially selected the third row using [selectedRowIndex](
 {% include code-snippet/grid/clear-selection-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/clear-selection-cs1/ts/index.html %}
+{% include code-snippet/grid/clear-selection-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -154,11 +158,12 @@ In the demo below, we initially selected the third row using [selectedRowIndex](
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/clear-selection-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/clear-selection-cs1/js/index.html %}
+{% include code-snippet/grid/clear-selection-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -180,7 +185,7 @@ You can get the selected records using the [getSelectedRecords](./api-grid.html#
 {% include code-snippet/grid/selected-records-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/selected-records-cs1/ts/index.html %}
+{% include code-snippet/grid/selected-records-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -188,11 +193,12 @@ You can get the selected records using the [getSelectedRecords](./api-grid.html#
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/selected-records-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/selected-records-cs1/js/index.html %}
+{% include code-snippet/grid/selected-records-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

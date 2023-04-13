@@ -24,7 +24,7 @@ To use paging, inject the [`Page`](../api/grid/page) module in the grid.
 {% include code-snippet/grid/grid-cs134/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs134/ts/index.html %}
+{% include code-snippet/grid/grid-cs134/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -32,11 +32,12 @@ To use paging, inject the [`Page`](../api/grid/page) module in the grid.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs134/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs134/js/index.html %}
+{% include code-snippet/grid/grid-cs134/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -56,7 +57,7 @@ You can use custom elements inside the pager instead of default elements. The cu
 {% include code-snippet/grid/pager-template-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/pager-template-cs1/ts/index.html %}
+{% include code-snippet/grid/pager-template-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -64,11 +65,12 @@ You can use custom elements inside the pager instead of default elements. The cu
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/pager-template-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/pager-template-cs1/js/index.html %}
+{% include code-snippet/grid/pager-template-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -86,7 +88,7 @@ The pager Dropdown allows you to change the number of records in the Grid dynami
 {% include code-snippet/grid/grid-cs135/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs135/ts/index.html %}
+{% include code-snippet/grid/grid-cs135/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -94,11 +96,12 @@ The pager Dropdown allows you to change the number of records in the Grid dynami
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs135/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs135/js/index.html %}
+{% include code-snippet/grid/grid-cs135/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -116,7 +119,7 @@ By default, Pager will be rendered at the bottom of the Grid. You can also rende
 {% include code-snippet/grid/grid-cs136/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs136/ts/index.html %}
+{% include code-snippet/grid/grid-cs136/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -124,11 +127,12 @@ By default, Pager will be rendered at the bottom of the Grid. You can also rende
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs136/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs136/js/index.html %}
+{% include code-snippet/grid/grid-cs136/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

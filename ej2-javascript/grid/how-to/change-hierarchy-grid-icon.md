@@ -42,7 +42,7 @@ In this below demo, we have changed the expand/collapse icon to Plus/Minus icon.
 {% include code-snippet/grid/changeicon-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/changeicon-cs1/ts/index.html %}
+{% include code-snippet/grid/changeicon-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -50,11 +50,12 @@ In this below demo, we have changed the expand/collapse icon to Plus/Minus icon.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/changeicon-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/changeicon-cs1/js/index.html %}
+{% include code-snippet/grid/changeicon-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

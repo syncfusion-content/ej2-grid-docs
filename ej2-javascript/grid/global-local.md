@@ -128,7 +128,7 @@ The following example demonstrates the Grid in `Deutsch` culture.
 {% include code-snippet/grid/grid-cs77/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs77/ts/index.html %}
+{% include code-snippet/grid/grid-cs77/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -136,11 +136,12 @@ The following example demonstrates the Grid in `Deutsch` culture.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs77/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs77/js/index.html %}
+{% include code-snippet/grid/grid-cs77/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -158,7 +159,7 @@ The [`Internationalization`](../common/localization) library is used to globaliz
 {% include code-snippet/grid/grid-cs78/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs78/ts/index.html %}
+{% include code-snippet/grid/grid-cs78/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -166,11 +167,12 @@ The [`Internationalization`](../common/localization) library is used to globaliz
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs78/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs78/js/index.html %}
+{% include code-snippet/grid/grid-cs78/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -191,7 +193,7 @@ RTL provides an option to switch the text direction and layout of the Grid compo
 {% include code-snippet/grid/grid-cs79/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs79/ts/index.html %}
+{% include code-snippet/grid/grid-cs79/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -199,11 +201,12 @@ RTL provides an option to switch the text direction and layout of the Grid compo
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs79/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs79/js/index.html %}
+{% include code-snippet/grid/grid-cs79/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

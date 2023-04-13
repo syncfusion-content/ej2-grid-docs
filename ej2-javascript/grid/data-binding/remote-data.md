@@ -20,7 +20,7 @@ To bind remote data to grid component, assign service data as an instance of [`D
 {% include code-snippet/grid/grid-cs12/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs12/ts/index.html %}
+{% include code-snippet/grid/grid-cs12/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -28,11 +28,12 @@ To bind remote data to grid component, assign service data as an instance of [`D
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs12/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs12/js/index.html %}
+{% include code-snippet/grid/grid-cs12/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,7 +53,7 @@ To bind remote data to grid component, assign service data as an instance of [`D
 {% include code-snippet/grid/grid-cs13/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs13/ts/index.html %}
+{% include code-snippet/grid/grid-cs13/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -60,11 +61,12 @@ To bind remote data to grid component, assign service data as an instance of [`D
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs13/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs13/js/index.html %}
+{% include code-snippet/grid/grid-cs13/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -82,7 +84,7 @@ The ODataV4 is an improved version of OData protocols, and the [`DataManager`](.
 {% include code-snippet/grid/grid-cs14/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs14/ts/index.html %}
+{% include code-snippet/grid/grid-cs14/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -90,11 +92,12 @@ The ODataV4 is an improved version of OData protocols, and the [`DataManager`](.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs14/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs14/js/index.html %}
+{% include code-snippet/grid/grid-cs14/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -209,7 +212,7 @@ You can create your own adaptor by extending the built-in adaptors. The followin
 {% include code-snippet/grid/grid-cs15/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs15/ts/index.html %}
+{% include code-snippet/grid/grid-cs15/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -217,11 +220,12 @@ You can create your own adaptor by extending the built-in adaptors. The followin
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs15/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs15/js/index.html %}
+{% include code-snippet/grid/grid-cs15/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -239,7 +243,7 @@ On remote data binding, all grid actions such as paging, sorting, editing, group
 {% include code-snippet/grid/grid-cs16/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs16/ts/index.html %}
+{% include code-snippet/grid/grid-cs16/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -247,11 +251,12 @@ On remote data binding, all grid actions such as paging, sorting, editing, group
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs16/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs16/js/index.html %}
+{% include code-snippet/grid/grid-cs16/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

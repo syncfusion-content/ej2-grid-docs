@@ -24,7 +24,7 @@ The following example demonstrates on `Adding` a new row when `Enter` key is pre
 {% include code-snippet/grid/grid-cs111/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs111/ts/index.html %}
+{% include code-snippet/grid/grid-cs111/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -32,11 +32,12 @@ The following example demonstrates on `Adding` a new row when `Enter` key is pre
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs111/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs111/js/index.html %}
+{% include code-snippet/grid/grid-cs111/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -22,7 +22,7 @@ Actions for this toolbar template items are defined in the [`toolbarClick`](../.
 {% include code-snippet/grid/toolbar-template-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/toolbar-template-cs2/ts/index.html %}
+{% include code-snippet/grid/toolbar-template-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ Actions for this toolbar template items are defined in the [`toolbarClick`](../.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/toolbar-template-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/toolbar-template-cs2/js/index.html %}
+{% include code-snippet/grid/toolbar-template-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -73,7 +74,7 @@ To render the DropDownList component, use the [`dataBound`](../../api/grid/#data
 {% include code-snippet/grid/toolbar-dropdown-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/toolbar-dropdown-cs3/ts/index.html %}
+{% include code-snippet/grid/toolbar-dropdown-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -81,11 +82,12 @@ To render the DropDownList component, use the [`dataBound`](../../api/grid/#data
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/toolbar-dropdown-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/toolbar-dropdown-cs3/js/index.html %}
+{% include code-snippet/grid/toolbar-dropdown-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -22,7 +22,7 @@ In the following demo, employee **Davolio** is doing analysis from 9.00 A.M. to 
 {% include code-snippet/grid/column-spanning-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-spanning-cs1/ts/index.html %}
+{% include code-snippet/grid/column-spanning-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ In the following demo, employee **Davolio** is doing analysis from 9.00 A.M. to 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/column-spanning-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-spanning-cs1/js/index.html %}
+{% include code-snippet/grid/column-spanning-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

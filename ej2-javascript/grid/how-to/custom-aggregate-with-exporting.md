@@ -20,7 +20,7 @@ The following example shows how to export the grid with custom aggregate.
 {% include code-snippet/grid/grid-cs106/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs106/ts/index.html %}
+{% include code-snippet/grid/grid-cs106/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -28,11 +28,12 @@ The following example shows how to export the grid with custom aggregate.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs106/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs106/js/index.html %}
+{% include code-snippet/grid/grid-cs106/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

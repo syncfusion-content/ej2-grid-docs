@@ -26,7 +26,7 @@ To use CRUD, inject the [`Edit`](../../api/grid/edit) module in grid.
 {% include code-snippet/grid/grid-cs35/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs35/ts/index.html %}
+{% include code-snippet/grid/grid-cs35/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -34,11 +34,12 @@ To use CRUD, inject the [`Edit`](../../api/grid/edit) module in grid.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs35/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs35/js/index.html %}
+{% include code-snippet/grid/grid-cs35/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -59,7 +60,7 @@ The grid toolbar has the [built-in items](../tool-bar) to execute Editing action
 {% include code-snippet/grid/grid-cs36/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs36/ts/index.html %}
+{% include code-snippet/grid/grid-cs36/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -67,11 +68,12 @@ The grid toolbar has the [built-in items](../tool-bar) to execute Editing action
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs36/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs36/js/index.html %}
+{% include code-snippet/grid/grid-cs36/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -91,7 +93,7 @@ In the following demo, editing is disabled for the `CustomerID` column.
 {% include code-snippet/grid/grid-cs37/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs37/ts/index.html %}
+{% include code-snippet/grid/grid-cs37/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -99,11 +101,12 @@ In the following demo, editing is disabled for the `CustomerID` column.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs37/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs37/js/index.html %}
+{% include code-snippet/grid/grid-cs37/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -123,7 +126,7 @@ In the below demo, the rows which are having the value for `ShipCountry` column 
 {% include code-snippet/grid/grid-cs38/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs38/ts/index.html %}
+{% include code-snippet/grid/grid-cs38/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -131,11 +134,12 @@ In the below demo, the rows which are having the value for `ShipCountry` column 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs38/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs38/js/index.html %}
+{% include code-snippet/grid/grid-cs38/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -151,7 +155,7 @@ For batch mode of editing, you can use [`cellEdit`](../../api/grid/#celledit) ev
 {% include code-snippet/grid/grid-cs39/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs39/ts/index.html %}
+{% include code-snippet/grid/grid-cs39/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -159,11 +163,12 @@ For batch mode of editing, you can use [`cellEdit`](../../api/grid/#celledit) ev
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs39/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs39/js/index.html %}
+{% include code-snippet/grid/grid-cs39/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -183,7 +188,7 @@ In the below demo, the `ShipCountry` column is rendered with the template.
 {% include code-snippet/grid/edit-column-template-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/edit-column-template-cs1/ts/index.html %}
+{% include code-snippet/grid/edit-column-template-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -191,11 +196,12 @@ In the below demo, the `ShipCountry` column is rendered with the template.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/edit-column-template-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/edit-column-template-cs1/js/index.html %}
+{% include code-snippet/grid/edit-column-template-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -219,7 +225,7 @@ In the following example, the textbox is rendered in the Freight column using a 
 {% include code-snippet/grid/editable-grid-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/editable-grid-cs1/ts/index.html %}
+{% include code-snippet/grid/editable-grid-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -227,11 +233,12 @@ In the following example, the textbox is rendered in the Freight column using a 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/editable-grid-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/editable-grid-cs1/js/index.html %}
+{% include code-snippet/grid/editable-grid-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -24,7 +24,7 @@ The excel export provides support to export multiple grids in same sheet. To exp
 {% include code-snippet/grid/export-mutiple-grid-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/export-mutiple-grid-cs1/ts/index.html %}
+{% include code-snippet/grid/export-mutiple-grid-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -32,11 +32,12 @@ The excel export provides support to export multiple grids in same sheet. To exp
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/export-mutiple-grid-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/export-mutiple-grid-cs1/js/index.html %}
+{% include code-snippet/grid/export-mutiple-grid-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -56,7 +57,7 @@ Excel exporting provides support to export multiple grids in new sheet. To expor
 {% include code-snippet/grid/export-mutiple-grid-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/export-mutiple-grid-cs2/ts/index.html %}
+{% include code-snippet/grid/export-mutiple-grid-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -64,11 +65,12 @@ Excel exporting provides support to export multiple grids in new sheet. To expor
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/export-mutiple-grid-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/export-mutiple-grid-cs2/js/index.html %}
+{% include code-snippet/grid/export-mutiple-grid-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

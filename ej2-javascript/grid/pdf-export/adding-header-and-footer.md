@@ -128,7 +128,7 @@ The below code illustrates the pdf export customization.
 {% include code-snippet/grid/grid-cs137/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs137/ts/index.html %}
+{% include code-snippet/grid/grid-cs137/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -136,11 +136,12 @@ The below code illustrates the pdf export customization.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs137/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs137/js/index.html %}
+{% include code-snippet/grid/grid-cs137/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -160,7 +161,7 @@ In the below sample, we have enabled `repeatHeader` property in [`pdfHeaderQuery
 {% include code-snippet/grid/grid-cs138/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs138/ts/index.html %}
+{% include code-snippet/grid/grid-cs138/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -168,11 +169,12 @@ In the below sample, we have enabled `repeatHeader` property in [`pdfHeaderQuery
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs138/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs138/js/index.html %}
+{% include code-snippet/grid/grid-cs138/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

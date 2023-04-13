@@ -20,7 +20,7 @@ To bind local data to the grid, you can assign a JavaScript object array to the 
 {% include code-snippet/grid/grid-cs11/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs11/ts/index.html %}
+{% include code-snippet/grid/grid-cs11/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -28,11 +28,12 @@ To bind local data to the grid, you can assign a JavaScript object array to the 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs11/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs11/js/index.html %}
+{% include code-snippet/grid/grid-cs11/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -74,7 +75,7 @@ Refresh the grid after the data source change by using the [`refresh`](../../api
 {% include code-snippet/grid/refresh-grid-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/refresh-grid-cs1/ts/index.html %}
+{% include code-snippet/grid/refresh-grid-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -82,11 +83,12 @@ Refresh the grid after the data source change by using the [`refresh`](../../api
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/refresh-grid-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/refresh-grid-cs1/js/index.html %}
+{% include code-snippet/grid/refresh-grid-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

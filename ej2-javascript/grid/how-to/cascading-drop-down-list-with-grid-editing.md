@@ -22,7 +22,7 @@ In the below demo, Cascading DropDownList is rendered for the `ShipCountry` and 
 {% include code-snippet/grid/grid-cs104/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs104/ts/index.html %}
+{% include code-snippet/grid/grid-cs104/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ In the below demo, Cascading DropDownList is rendered for the `ShipCountry` and 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs104/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs104/js/index.html %}
+{% include code-snippet/grid/grid-cs104/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

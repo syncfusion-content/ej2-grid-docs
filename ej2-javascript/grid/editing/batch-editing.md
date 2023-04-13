@@ -20,7 +20,7 @@ In Batch edit mode, when you double-click on the grid cell, then the target cell
 {% include code-snippet/grid/grid-cs17/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs17/ts/index.html %}
+{% include code-snippet/grid/grid-cs17/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -28,11 +28,12 @@ In Batch edit mode, when you double-click on the grid cell, then the target cell
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs17/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs17/js/index.html %}
+{% include code-snippet/grid/grid-cs17/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -54,7 +55,7 @@ In the below demo, we have update the `TotalCost` column value based on the `Uni
 {% include code-snippet/grid/grid-cs18/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs18/ts/index.html %}
+{% include code-snippet/grid/grid-cs18/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -62,11 +63,12 @@ In the below demo, we have update the `TotalCost` column value based on the `Uni
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs18/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs18/js/index.html %}
+{% include code-snippet/grid/grid-cs18/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -86,7 +88,7 @@ In the below demo, we prevent the CRUD operation based on the `Role` column valu
 {% include code-snippet/grid/grid-cs19/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs19/ts/index.html %}
+{% include code-snippet/grid/grid-cs19/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -94,11 +96,12 @@ In the below demo, we prevent the CRUD operation based on the `Role` column valu
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs19/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs19/js/index.html %}
+{% include code-snippet/grid/grid-cs19/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -116,7 +119,7 @@ By default, grid will show the confirm dialog when saving or canceling or perfor
 {% include code-snippet/grid/grid-cs20/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs20/ts/index.html %}
+{% include code-snippet/grid/grid-cs20/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -124,11 +127,12 @@ By default, grid will show the confirm dialog when saving or canceling or perfor
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs20/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs20/js/index.html %}
+{% include code-snippet/grid/grid-cs20/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -151,7 +155,7 @@ In the following sample, the [load](../../api/grid/#load) event of the Grid will
 {% include code-snippet/grid/grid-cs21/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs21/ts/index.html %}
+{% include code-snippet/grid/grid-cs21/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -159,11 +163,12 @@ In the following sample, the [load](../../api/grid/#load) event of the Grid will
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs21/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs21/js/index.html %}
+{% include code-snippet/grid/grid-cs21/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

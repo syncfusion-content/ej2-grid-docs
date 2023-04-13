@@ -55,7 +55,7 @@ In the below demo, the button click will enable/disable the Grid and its actions
 {% include code-snippet/grid/disablegrid-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/disablegrid-cs2/ts/index.html %}
+{% include code-snippet/grid/disablegrid-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
           

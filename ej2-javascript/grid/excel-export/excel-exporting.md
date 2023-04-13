@@ -22,7 +22,7 @@ To use excel export, You need to inject the `ExcelExport` module in grid.
 {% include code-snippet/grid/grid-cs59/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs59/ts/index.html %}
+{% include code-snippet/grid/grid-cs59/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ To use excel export, You need to inject the `ExcelExport` module in grid.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs59/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs59/js/index.html %}
+{% include code-snippet/grid/grid-cs59/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -58,7 +59,7 @@ In the below demo, we have rendered the default spinner component when exporting
 {% include code-snippet/grid/grid-cs60/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs60/ts/index.html %}
+{% include code-snippet/grid/grid-cs60/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -66,11 +67,12 @@ In the below demo, we have rendered the default spinner component when exporting
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs60/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs60/js/index.html %}
+{% include code-snippet/grid/grid-cs60/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -88,7 +90,7 @@ The excel export provides an option to define datasource dynamically before expo
 {% include code-snippet/grid/grid-cs61/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs61/ts/index.html %}
+{% include code-snippet/grid/grid-cs61/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -96,11 +98,12 @@ The excel export provides an option to define datasource dynamically before expo
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs61/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs61/js/index.html %}
+{% include code-snippet/grid/grid-cs61/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -120,7 +123,7 @@ In the below example, we have passed `recordcount` as `12` using `addParams` met
 {% include code-snippet/grid/grid-cs62/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs62/ts/index.html %}
+{% include code-snippet/grid/grid-cs62/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -128,11 +131,12 @@ In the below example, we have passed `recordcount` as `12` using `addParams` met
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs62/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs62/js/index.html %}
+{% include code-snippet/grid/grid-cs62/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -22,7 +22,7 @@ To enable grouping in the grid, set the [`allowGrouping`](../../api/grid/#allowg
 {% include code-snippet/grid/grid-cs80/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs80/ts/index.html %}
+{% include code-snippet/grid/grid-cs80/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ To enable grouping in the grid, set the [`allowGrouping`](../../api/grid/#allowg
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs80/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs80/js/index.html %}
+{% include code-snippet/grid/grid-cs80/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -55,7 +56,7 @@ To apply group at initial rendering, set the column field name in the `groupSett
 {% include code-snippet/grid/grid-cs81/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs81/ts/index.html %}
+{% include code-snippet/grid/grid-cs81/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -63,11 +64,12 @@ To apply group at initial rendering, set the column field name in the `groupSett
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs81/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs81/js/index.html %}
+{% include code-snippet/grid/grid-cs81/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -85,7 +87,7 @@ To avoid ungrouping or further grouping of a column after initial column groupin
 {% include code-snippet/grid/grid-cs82/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs82/ts/index.html %}
+{% include code-snippet/grid/grid-cs82/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -93,11 +95,12 @@ To avoid ungrouping or further grouping of a column after initial column groupin
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs82/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs82/js/index.html %}
+{% include code-snippet/grid/grid-cs82/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -122,7 +125,7 @@ grid columns.
 {% include code-snippet/grid/grid-cs83/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs83/ts/index.html %}
+{% include code-snippet/grid/grid-cs83/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -130,11 +133,12 @@ grid columns.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs83/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs83/js/index.html %}
+{% include code-snippet/grid/grid-cs83/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -152,7 +156,7 @@ During the group action, the grid component triggers two events. The [`actionBeg
 {% include code-snippet/grid/grouping-event-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grouping-event-cs1/ts/index.html %}
+{% include code-snippet/grid/grouping-event-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -160,11 +164,12 @@ During the group action, the grid component triggers two events. The [`actionBeg
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grouping-event-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grouping-event-cs1/js/index.html %}
+{% include code-snippet/grid/grouping-event-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -184,7 +189,7 @@ You can collapse the selected group from an external button by invoking the [`ex
 {% include code-snippet/grid/grouping-collapse-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grouping-collapse-cs1/ts/index.html %}
+{% include code-snippet/grid/grouping-collapse-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -192,11 +197,12 @@ You can collapse the selected group from an external button by invoking the [`ex
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grouping-collapse-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grouping-collapse-cs1/js/index.html %}
+{% include code-snippet/grid/grouping-collapse-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -216,7 +222,7 @@ The `CustomerID` column will be sorted in descending order when the grid is init
 {% include code-snippet/grid/grid-cs84/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs84/ts/index.html %}
+{% include code-snippet/grid/grid-cs84/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -224,11 +230,12 @@ The `CustomerID` column will be sorted in descending order when the grid is init
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs84/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs84/js/index.html %}
+{% include code-snippet/grid/grid-cs84/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

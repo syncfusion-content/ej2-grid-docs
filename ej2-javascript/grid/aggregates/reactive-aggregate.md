@@ -24,7 +24,7 @@ When using batch editing, the aggregate values will be refreshed on every cell s
 {% include code-snippet/grid/aggregates-cs6/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/aggregates-cs6/ts/index.html %}
+{% include code-snippet/grid/aggregates-cs6/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -32,11 +32,12 @@ When using batch editing, the aggregate values will be refreshed on every cell s
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/aggregates-cs6/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/aggregates-cs6/js/index.html %}
+{% include code-snippet/grid/aggregates-cs6/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -56,7 +57,7 @@ In the following code, the input event for the Freight column editor has been re
 {% include code-snippet/grid/aggregates-cs7/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/aggregates-cs7/ts/index.html %}
+{% include code-snippet/grid/aggregates-cs7/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -64,11 +65,12 @@ In the following code, the input event for the Freight column editor has been re
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/aggregates-cs7/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/aggregates-cs7/js/index.html %}
+{% include code-snippet/grid/aggregates-cs7/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

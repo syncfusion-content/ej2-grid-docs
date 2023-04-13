@@ -26,7 +26,7 @@ In the following example, **Employee Name** is a foreign column which shows **Fi
 {% include code-snippet/grid/foreign-key-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs1/ts/index.html %}
+{% include code-snippet/grid/foreign-key-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -34,11 +34,12 @@ In the following example, **Employee Name** is a foreign column which shows **Fi
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/foreign-key-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs1/js/index.html %}
+{% include code-snippet/grid/foreign-key-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -61,7 +62,7 @@ In the following code example, the `Employee Name` is a foreign key column. When
 {% include code-snippet/grid/foreign-key-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs2/ts/index.html %}
+{% include code-snippet/grid/foreign-key-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -69,11 +70,12 @@ In the following code example, the `Employee Name` is a foreign key column. When
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/foreign-key-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs2/js/index.html %}
+{% include code-snippet/grid/foreign-key-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -93,7 +95,7 @@ In the following example, The `Employee Name` is a foreign key column. DropDownL
 {% include code-snippet/grid/foreign-key-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs3/ts/index.html %}
+{% include code-snippet/grid/foreign-key-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -101,11 +103,12 @@ In the following example, The `Employee Name` is a foreign key column. DropDownL
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/foreign-key-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs3/js/index.html %}
+{% include code-snippet/grid/foreign-key-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -125,7 +128,7 @@ In the following example, The `Employee Name` is a foreign key column. This colu
 {% include code-snippet/grid/foreign-key-cs4/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs4/ts/index.html %}
+{% include code-snippet/grid/foreign-key-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -133,11 +136,12 @@ In the following example, The `Employee Name` is a foreign key column. This colu
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/foreign-key-cs4/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs4/js/index.html %}
+{% include code-snippet/grid/foreign-key-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -157,7 +161,7 @@ In the following example, The `Employee Name` is a foreign key column and the ag
 {% include code-snippet/grid/foreign-key-cs5/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs5/ts/index.html %}
+{% include code-snippet/grid/foreign-key-cs5/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -165,11 +169,12 @@ In the following example, The `Employee Name` is a foreign key column and the ag
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/foreign-key-cs5/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs5/js/index.html %}
+{% include code-snippet/grid/foreign-key-cs5/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -189,7 +194,7 @@ In the following example, **Customer Name** and **Ship City** are foreign key co
 {% include code-snippet/grid/foreign-key-cs6/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs6/ts/index.html %}
+{% include code-snippet/grid/foreign-key-cs6/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -197,11 +202,12 @@ In the following example, **Customer Name** and **Ship City** are foreign key co
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/foreign-key-cs6/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs6/js/index.html %}
+{% include code-snippet/grid/foreign-key-cs6/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

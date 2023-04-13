@@ -24,7 +24,7 @@ In this demo, the [`frozenColumns`](../api/grid/#frozencolumns) is set as '2' an
 {% include code-snippet/grid/scroller-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/scroller-cs1/ts/index.html %}
+{% include code-snippet/grid/scroller-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -32,11 +32,12 @@ In this demo, the [`frozenColumns`](../api/grid/#frozencolumns) is set as '2' an
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/scroller-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/scroller-cs1/js/index.html %}
+{% include code-snippet/grid/scroller-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -68,7 +69,7 @@ In this demo, the columns with field name `OrderID` and `EmployeeID` is frozen u
 {% include code-snippet/grid/scroller-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/scroller-cs2/ts/index.html %}
+{% include code-snippet/grid/scroller-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -76,11 +77,12 @@ In this demo, the columns with field name `OrderID` and `EmployeeID` is frozen u
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/scroller-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/scroller-cs2/js/index.html %}
+{% include code-snippet/grid/scroller-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -107,7 +109,7 @@ In this demo, the **ShipCountry** column is frozen at the left and the **Custome
 {% include code-snippet/grid/scroller-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/scroller-cs3/ts/index.html %}
+{% include code-snippet/grid/scroller-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -115,11 +117,12 @@ In this demo, the **ShipCountry** column is frozen at the left and the **Custome
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/scroller-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/scroller-cs3/js/index.html %}
+{% include code-snippet/grid/scroller-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -159,7 +162,7 @@ Validation rules for the 'EmployeeID' and 'Freight' columns can be added in the 
 {% include code-snippet/grid/scroller-cs4/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/scroller-cs4/ts/index.html %}
+{% include code-snippet/grid/scroller-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -167,11 +170,12 @@ Validation rules for the 'EmployeeID' and 'Freight' columns can be added in the 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/scroller-cs4/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/scroller-cs4/js/index.html %}
+{% include code-snippet/grid/scroller-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

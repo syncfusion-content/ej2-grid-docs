@@ -26,7 +26,7 @@ The grid has an option to export the hierarchy grid to excel document. By defaul
 {% include code-snippet/grid/hierarchy-print-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/hierarchy-print-cs1/ts/index.html %}
+{% include code-snippet/grid/hierarchy-print-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -34,11 +34,12 @@ The grid has an option to export the hierarchy grid to excel document. By defaul
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/hierarchy-print-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/hierarchy-print-cs1/js/index.html %}
+{% include code-snippet/grid/hierarchy-print-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

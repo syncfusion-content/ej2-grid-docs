@@ -22,7 +22,7 @@ To use the column resize, inject **Resize** module in the grid.
 {% include code-snippet/grid/row-template-cs10/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs10/ts/index.html %}
+{% include code-snippet/grid/row-template-cs10/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ To use the column resize, inject **Resize** module in the grid.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/row-template-cs10/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs10/js/index.html %}
+{% include code-snippet/grid/row-template-cs10/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -73,7 +74,7 @@ In the following sample, minimum and maximum width are defined for **OrderID**, 
 {% include code-snippet/grid/row-template-cs11/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs11/ts/index.html %}
+{% include code-snippet/grid/row-template-cs11/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -81,11 +82,12 @@ In the following sample, minimum and maximum width are defined for **OrderID**, 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/row-template-cs11/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs11/js/index.html %}
+{% include code-snippet/grid/row-template-cs11/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -107,7 +109,7 @@ In this example, we have disabled resize for **Ship City** column.
 {% include code-snippet/grid/row-template-cs12/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs12/ts/index.html %}
+{% include code-snippet/grid/row-template-cs12/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -115,11 +117,12 @@ In this example, we have disabled resize for **Ship City** column.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/row-template-cs12/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs12/js/index.html %}
+{% include code-snippet/grid/row-template-cs12/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -149,7 +152,7 @@ During the resizing action, the grid component triggers the below three events.
 {% include code-snippet/grid/row-template-cs13/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs13/ts/index.html %}
+{% include code-snippet/grid/row-template-cs13/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -157,11 +160,12 @@ During the resizing action, the grid component triggers the below three events.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/row-template-cs13/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs13/js/index.html %}
+{% include code-snippet/grid/row-template-cs13/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

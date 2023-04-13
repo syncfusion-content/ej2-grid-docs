@@ -22,7 +22,7 @@ To render the checkbox in each grid row, you need to use checkbox column with ty
 {% include code-snippet/grid/grid-cs159/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs159/ts/index.html %}
+{% include code-snippet/grid/grid-cs159/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ To render the checkbox in each grid row, you need to use checkbox column with ty
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs159/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs159/js/index.html %}
+{% include code-snippet/grid/grid-cs159/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -60,7 +61,7 @@ and hold CTRL key and click the desired rows. To select range of rows, press and
 {% include code-snippet/grid/grid-cs160/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs160/ts/index.html %}
+{% include code-snippet/grid/grid-cs160/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -68,11 +69,12 @@ and hold CTRL key and click the desired rows. To select range of rows, press and
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs160/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs160/js/index.html %}
+{% include code-snippet/grid/grid-cs160/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -92,7 +94,7 @@ In the following sample, the selection of specific rows has been prevented based
 {% include code-snippet/grid/grid-cs161/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs161/ts/index.html %}
+{% include code-snippet/grid/grid-cs161/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -100,11 +102,12 @@ In the following sample, the selection of specific rows has been prevented based
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs161/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs161/js/index.html %}
+{% include code-snippet/grid/grid-cs161/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

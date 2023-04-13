@@ -20,7 +20,7 @@ The HTML tags can be displayed in the Grid header and content by enabling the [`
 {% include code-snippet/grid/cell-html-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/cell-html-cs1/ts/index.html %}
+{% include code-snippet/grid/cell-html-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -28,11 +28,12 @@ The HTML tags can be displayed in the Grid header and content by enabling the [`
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/cell-html-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/cell-html-cs1/js/index.html %}
+{% include code-snippet/grid/cell-html-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

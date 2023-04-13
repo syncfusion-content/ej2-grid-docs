@@ -22,7 +22,7 @@ In the below demo, we have selected the grid rows only when `EmployeeID` column 
 {% include code-snippet/grid/databasedselect-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/databasedselect-cs1/ts/index.html %}
+{% include code-snippet/grid/databasedselect-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ In the below demo, we have selected the grid rows only when `EmployeeID` column 
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/databasedselect-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/databasedselect-cs1/js/index.html %}
+{% include code-snippet/grid/databasedselect-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

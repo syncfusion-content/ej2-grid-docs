@@ -45,7 +45,7 @@ Items| Description
 {% include code-snippet/grid/row-template-cs14/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs14/ts/index.html %}
+{% include code-snippet/grid/row-template-cs14/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -53,11 +53,12 @@ Items| Description
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/row-template-cs14/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs14/js/index.html %}
+{% include code-snippet/grid/row-template-cs14/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -76,7 +77,7 @@ The custom context menu items can be added by defining the [`contextMenuItems`](
 {% include code-snippet/grid/row-template-cs15/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs15/ts/index.html %}
+{% include code-snippet/grid/row-template-cs15/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -84,11 +85,12 @@ The custom context menu items can be added by defining the [`contextMenuItems`](
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/row-template-cs15/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs15/js/index.html %}
+{% include code-snippet/grid/row-template-cs15/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -110,7 +112,7 @@ This is demonstrated in the following sample.
 {% include code-snippet/grid/row-template-cs16/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs16/ts/index.html %}
+{% include code-snippet/grid/row-template-cs16/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -118,11 +120,12 @@ This is demonstrated in the following sample.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/row-template-cs16/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs16/js/index.html %}
+{% include code-snippet/grid/row-template-cs16/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -144,7 +147,7 @@ In the following sample, the Copy item is enabled or disabled based on some cond
 {% include code-snippet/grid/row-template-cs17/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs17/ts/index.html %}
+{% include code-snippet/grid/row-template-cs17/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -152,11 +155,12 @@ In the following sample, the Copy item is enabled or disabled based on some cond
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/row-template-cs17/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs17/js/index.html %}
+{% include code-snippet/grid/row-template-cs17/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -22,7 +22,7 @@ The below example shows how to use the itemTemplate property in the DropDownList
 {% include code-snippet/grid/grid-cs112/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs112/ts/index.html %}
+{% include code-snippet/grid/grid-cs112/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ The below example shows how to use the itemTemplate property in the DropDownList
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs112/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs112/js/index.html %}
+{% include code-snippet/grid/grid-cs112/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

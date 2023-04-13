@@ -20,7 +20,7 @@ The excel export provides an option to include header and footer content for exp
 {% include code-snippet/grid/grid-cs49/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs49/ts/index.html %}
+{% include code-snippet/grid/grid-cs49/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -28,11 +28,12 @@ The excel export provides an option to include header and footer content for exp
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs49/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs49/js/index.html %}
+{% include code-snippet/grid/grid-cs49/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

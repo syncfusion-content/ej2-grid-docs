@@ -26,7 +26,7 @@ To perform the multi-selection, press and hold CTRL key and click the desired ro
 {% include code-snippet/grid/grid-cs164/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs164/ts/index.html %}
+{% include code-snippet/grid/grid-cs164/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -34,11 +34,12 @@ To perform the multi-selection, press and hold CTRL key and click the desired ro
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs164/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs164/js/index.html %}
+{% include code-snippet/grid/grid-cs164/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -61,7 +62,7 @@ the [`selectionSettings.mode`](../../api/grid/selectionSettings/#mode). They are
 {% include code-snippet/grid/grid-cs165/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs165/ts/index.html %}
+{% include code-snippet/grid/grid-cs165/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -69,11 +70,12 @@ the [`selectionSettings.mode`](../../api/grid/selectionSettings/#mode). They are
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs165/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs165/js/index.html %}
+{% include code-snippet/grid/grid-cs165/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

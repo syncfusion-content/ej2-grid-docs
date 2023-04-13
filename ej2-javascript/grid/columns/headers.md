@@ -22,7 +22,7 @@ By default, column header title is displayed from column [`field`](../../api/gri
 {% include code-snippet/grid/grid-cs8/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs8/ts/index.html %}
+{% include code-snippet/grid/grid-cs8/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ By default, column header title is displayed from column [`field`](../../api/gri
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs8/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs8/js/index.html %}
+{% include code-snippet/grid/grid-cs8/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -55,7 +56,7 @@ You can customize the header element by using the [`headerTemplate`](../../api/g
 {% include code-snippet/grid/headertemplate-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/headertemplate-cs1/ts/index.html %}
+{% include code-snippet/grid/headertemplate-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -63,11 +64,12 @@ You can customize the header element by using the [`headerTemplate`](../../api/g
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/headertemplate-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/headertemplate-cs1/js/index.html %}
+{% include code-snippet/grid/headertemplate-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -106,7 +108,7 @@ grid.refreshHeader();
 {% include code-snippet/grid/change-header-text-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/change-header-text-cs1/ts/index.html %}
+{% include code-snippet/grid/change-header-text-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -114,11 +116,12 @@ grid.refreshHeader();
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/change-header-text-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/change-header-text-cs1/js/index.html %}
+{% include code-snippet/grid/change-header-text-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -173,7 +176,7 @@ function setHeaderHeight(args) {
 {% include code-snippet/grid/orientation-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/orientation-cs1/ts/index.html %}
+{% include code-snippet/grid/orientation-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -181,11 +184,12 @@ function setHeaderHeight(args) {
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/orientation-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/orientation-cs1/js/index.html %}
+{% include code-snippet/grid/orientation-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -20,7 +20,7 @@ Footer aggregate value is calculated for all the rows, and it is displayed in th
 {% include code-snippet/grid/aggregates-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/aggregates-cs2/ts/index.html %}
+{% include code-snippet/grid/aggregates-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -28,11 +28,12 @@ Footer aggregate value is calculated for all the rows, and it is displayed in th
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/aggregates-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/aggregates-cs2/js/index.html %}
+{% include code-snippet/grid/aggregates-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -52,7 +53,7 @@ You can format the aggregate value result by using the [`format`](../../api/grid
 {% include code-snippet/grid/aggregates-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/aggregates-cs3/ts/index.html %}
+{% include code-snippet/grid/aggregates-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -60,11 +61,12 @@ You can format the aggregate value result by using the [`format`](../../api/grid
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/aggregates-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/aggregates-cs3/js/index.html %}
+{% include code-snippet/grid/aggregates-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -84,7 +86,7 @@ In the following sample, the footer element is appended to the header element us
 {% include code-snippet/grid/aggregates-cs4/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/aggregates-cs4/ts/index.html %}
+{% include code-snippet/grid/aggregates-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -92,11 +94,12 @@ In the following sample, the footer element is appended to the header element us
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/aggregates-cs4/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/aggregates-cs4/js/index.html %}
+{% include code-snippet/grid/aggregates-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

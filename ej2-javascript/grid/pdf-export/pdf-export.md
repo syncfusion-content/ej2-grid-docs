@@ -22,7 +22,7 @@ To use PDF export, inject the `PdfExport` module in grid.
 {% include code-snippet/grid/grid-cs148/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs148/ts/index.html %}
+{% include code-snippet/grid/grid-cs148/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -30,11 +30,12 @@ To use PDF export, inject the `PdfExport` module in grid.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs148/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs148/js/index.html %}
+{% include code-snippet/grid/grid-cs148/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -58,7 +59,7 @@ In the below demo, we have rendered the default spinner component when exporting
 {% include code-snippet/grid/grid-cs149/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs149/ts/index.html %}
+{% include code-snippet/grid/grid-cs149/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -66,11 +67,12 @@ In the below demo, we have rendered the default spinner component when exporting
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs149/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs149/js/index.html %}
+{% include code-snippet/grid/grid-cs149/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -88,7 +90,7 @@ PDF export provides an option to define datasource dynamically before exporting.
 {% include code-snippet/grid/grid-cs150/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs150/ts/index.html %}
+{% include code-snippet/grid/grid-cs150/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -96,11 +98,12 @@ PDF export provides an option to define datasource dynamically before exporting.
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs150/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs150/js/index.html %}
+{% include code-snippet/grid/grid-cs150/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -120,7 +123,7 @@ In the below example, we have passed `recordcount` as `12` using `addParams` met
 {% include code-snippet/grid/grid-cs151/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs151/ts/index.html %}
+{% include code-snippet/grid/grid-cs151/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -128,11 +131,12 @@ In the below example, we have passed `recordcount` as `12` using `addParams` met
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/grid-cs151/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs151/js/index.html %}
+{% include code-snippet/grid/grid-cs151/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

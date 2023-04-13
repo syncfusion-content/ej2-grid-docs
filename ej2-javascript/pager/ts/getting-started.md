@@ -119,7 +119,7 @@ Now, add a HTML Div element to act as Pager element in `index.html` using follow
 {% include code-snippet/pager/pager-cs4/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pager/pager-cs4/ts/index.html %}
+{% include code-snippet/pager/pager-cs4/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
@@ -134,7 +134,7 @@ Now, add a HTML Div element to act as Pager element in `index.html` using follow
 {% include code-snippet/pager/pager-cs5/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pager/pager-cs5/ts/index.html %}
+{% include code-snippet/pager/pager-cs5/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
@@ -155,7 +155,7 @@ Output will be appears as follows.
 {% include code-snippet/pager/pager-cs6/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/pager/pager-cs6/ts/index.html %}
+{% include code-snippet/pager/pager-cs6/index.html %}
 {% endhighlight %}
 {% endtabs %}
           

@@ -20,7 +20,7 @@ You can add your title in the header through an [`beforePrint`](../../api/grid/#
 {% include code-snippet/grid/titleprint-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/titleprint-cs1/ts/index.html %}
+{% include code-snippet/grid/titleprint-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -28,11 +28,12 @@ You can add your title in the header through an [`beforePrint`](../../api/grid/#
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/titleprint-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/titleprint-cs1/js/index.html %}
+{% include code-snippet/grid/titleprint-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 

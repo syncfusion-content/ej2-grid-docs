@@ -26,7 +26,7 @@ There are three types of [`clipMode`](../../api/grid/column/#clipmode). They are
 {% include code-snippet/grid/clipmode-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/clipmode-cs1/ts/index.html %}
+{% include code-snippet/grid/clipmode-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -34,11 +34,12 @@ There are three types of [`clipMode`](../../api/grid/column/#clipmode). They are
 
 {% elsif page.publishingplatform == "javascript" %}
 
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/clipmode-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/clipmode-cs1/js/index.html %}
+{% include code-snippet/grid/clipmode-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
