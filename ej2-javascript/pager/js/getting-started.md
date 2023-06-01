@@ -61,7 +61,7 @@ Refer the below code to find location pager's script and style file.
 
 After copying the files, then you can refer the pager's scripts and styles into the `index.html` file.
 
-```
+```html
 <!DOCTYPE html>
   <html xmlns="http://www.w3.org/1999/xhtml">
        <head>
@@ -99,7 +99,7 @@ Refer the pager's CDN links as below
 >
 > Styles: [`http://cdn.syncfusion.com/ej2/ej2-grids/styles/material.css`](http://cdn.syncfusion.com/ej2/ej2-grids/styles/material.css)
 
-```
+```html
 <!DOCTYPE html>
   <html xmlns="http://www.w3.org/1999/xhtml">
        <head>
@@ -124,7 +124,7 @@ Refer the pager's CDN links as below
 
 Now, you can start adding Pager control in the application. For getting started, add a `div` element for Pager control in `index.html`. Then refer the `index.js` file into the `index.html` file.
 
-```
+```html
 <!DOCTYPE html>
   <html xmlns="http://www.w3.org/1999/xhtml">
        <head>

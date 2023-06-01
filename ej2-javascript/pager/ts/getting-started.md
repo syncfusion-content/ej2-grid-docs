@@ -81,7 +81,7 @@ pager.appendTo('#Pager');
 
 Now, add a HTML Div element to act as Pager element in `index.html` using following code.
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 

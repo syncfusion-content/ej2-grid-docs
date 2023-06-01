@@ -116,7 +116,7 @@ grid.appendTo('#Grid');
 
 Now, add an HTML div element to act as the grid element in **index.html** using the following code.
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 

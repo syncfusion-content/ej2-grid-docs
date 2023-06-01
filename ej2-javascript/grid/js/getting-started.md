@@ -121,7 +121,7 @@ Refer the grid's CDN links as below
 
 The below html code example shows the minimal dependency of grid.
 
-```
+```html
 <!DOCTYPE html>
   <html xmlns="http://www.w3.org/1999/xhtml">
        <head>
@@ -151,7 +151,7 @@ Now, you can start adding Grid control in the application. For getting started, 
 
 In this document context we are going to use **ej2.min.js** which includes all the Essential JS 2 components and its dependent scripts.
 
-```
+```html
 <!DOCTYPE html>
   <html xmlns="http://www.w3.org/1999/xhtml">
        <head>
@@ -187,7 +187,7 @@ grid.appendTo('#Grid');
 
 Data for the Grid control is bind by using [`dataSource`](../api/grid/#datasource) property. It accepts either array of JavaScript object or [`DataManager`](../grid/data-binding/) instance.
 
-```
+```html
 <!DOCTYPE html>
   <html xmlns="http://www.w3.org/1999/xhtml">
        <head>
