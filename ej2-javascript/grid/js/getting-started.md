@@ -76,9 +76,9 @@ Refer the below code to find location grid's script and style file.
 After copying the files, then you can refer the grid's scripts and styles into the `index.html` file.
 The below html code example shows the minimal dependency of grid.
 
-```
+```html
 
-<!DOCTYPE html>
+  <!DOCTYPE html>
   <html xmlns="http://www.w3.org/1999/xhtml">
        <head>
             <title>Essential JS 2 Grid</title>
