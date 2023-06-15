@@ -239,7 +239,7 @@ Let's see the step by step procedure for how we can overcome the limitation in t
         }
     ```
 
- You can view the hosted link for this sample [here](https://ej2.syncfusion.com/aspnetcore/Load_millions_of_records).
+ You can view the hosted link for this sample [here](https://ej2.syncfusion.com/aspnetcore/Grid/GridOverview#/fluent).
 
 ![Prevent browser height limitation](images/external-button.png)
 
