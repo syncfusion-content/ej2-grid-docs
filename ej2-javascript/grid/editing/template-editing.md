@@ -150,7 +150,7 @@ If you have used additional fields that are not present in the column model, the
 
 ## Render tab component inside the dialog template
 
-You can use the [`tab`](../../../tab/) component inside the dialog edit UI using the dialog template feature. The dialog template feature can be enabled by defining the [`editSettings.mode`](../../api/grid/editSettings/#mode) as `Dialog` and [`editSetting.template`](../../api/grid/editSettings/#template) as SCRIPT element ID or HTML string which holds the template.
+You can use the [`tab`](../../tab/) component inside the dialog edit UI using the dialog template feature. The dialog template feature can be enabled by defining the [`editSettings.mode`](../../api/grid/editSettings/#mode) as `Dialog` and [`editSetting.template`](../../api/grid/editSettings/#template) as SCRIPT element ID or HTML string which holds the template.
 
 To include the tab components in the dialog, follow the given steps:
 

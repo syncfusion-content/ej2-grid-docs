@@ -21,7 +21,7 @@ The most important features available in the grid component are paging, sorting,
 * [**Sorting**](./sorting/) and [**grouping**](./grouping/): Supports **n** level of sorting and grouping.
 * [**Filtering**](./filtering/): Offers filter bar in each column to filter data.
 * [**Paging**](./paging/): Allows easy switching between pages using the pager bar.
-* [**Editing**](./edit/):provides the options for create, read, update, and delete operations.
+* [**Editing**](./editing/):provides the options for create, read, update, and delete operations.
 * [**Columns**](./columns/):The column definitions are used as the dataSource schema in the Grid. This plays a vital role in rendering column values in the required format.
     * [**Reordering**](./columns/#reorder): Allows drag and drop of any column anywhere in the grid’s column header row, thus allowing repositioning of columns.
     * [**Column Chooser**](./columns/#column-chooser):The column chooser provides a list of column names paired with check boxes that allow the visibility to be toggled on the fly.

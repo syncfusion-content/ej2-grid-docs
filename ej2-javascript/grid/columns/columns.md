@@ -20,7 +20,7 @@ The column definitions are used as the [`dataSource`](../../api/grid/#datasource
 
 Column type can be specified using the [`columns.type`](../../api/grid/column/#type) property. It specifies the type of data the column binds.
 
-If the [`format`](../api/grid/column/#format)  is defined for a column, the column uses [`type`](../../api/grid/column/#type) to select the appropriate format option ([number](../../common/internationalization/#number-formatting)
+If the [`format`](../../api/grid/column/#format)  is defined for a column, the column uses [`type`](../../api/grid/column/#type) to select the appropriate format option ([number](../../common/internationalization/#number-formatting)
  or [date](../../common/internationalization/#manipulating-datetime)).
 
 Grid column supports the following types:
@@ -128,7 +128,7 @@ You can achieve the expression column by using the [`valueAccessor`](../../api/g
 
 ## Format
 
-To format cell values based on specific culture, use the [`columns.format`](../../api/grid/column/#format) property. The grid uses [Internalization](../common/internationalization/) library to format [`number`](../../common/internationalization/#number-formatting) and [`date`](../../common/internationalization/#date-formatting)
+To format cell values based on specific culture, use the [`columns.format`](../../api/grid/column/#format) property. The grid uses [Internalization](../../common/internationalization/) library to format [`number`](../../common/internationalization/#number-formatting) and [`date`](../../common/internationalization/#date-formatting)
 values.
 
 {% if page.publishingplatform == "typescript" %}
@@ -438,7 +438,7 @@ Add the custom CSS class to the specified column by using the [`customAttributes
 
 ## Display custom tooltip for columns
 
-To display a custom ToolTip ([`EJ2 Tooltip`](../../../tooltip/getting-started)), you can render the Grid control inside the Tooltip component and set the target as “.e-rowcell”. The tooltip is displayed when hovering the grid cells.
+To display a custom ToolTip ([`EJ2 Tooltip`](../../tooltip/getting-started)), you can render the Grid control inside the Tooltip component and set the target as “.e-rowcell”. The tooltip is displayed when hovering the grid cells.
 
 Change the tooltip content for the grid cells by using the following code in the [`beforeRender`](../../../api/tooltip/#beforerender) event.
 
