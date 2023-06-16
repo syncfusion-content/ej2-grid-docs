@@ -20,7 +20,7 @@ The column definitions are used as the [`dataSource`](../../api/grid/#datasource
 
 Column type can be specified using the [`columns.type`](../../api/grid/column/#type) property. It specifies the type of data the column binds.
 
-If the [`format`](../api/grid/column/#format)  is defined for a column, the column uses [`type`](../../api/grid/column/#type) to select the appropriate format option ([number](../../common/internationalization/#number-formatting)
+If the [`format`](../../api/grid/column/#format)  is defined for a column, the column uses [`type`](../../api/grid/column/#type) to select the appropriate format option ([number](../../common/internationalization/#number-formatting)
  or [date](../../common/internationalization/#manipulating-datetime)).
 
 Grid column supports the following types:
