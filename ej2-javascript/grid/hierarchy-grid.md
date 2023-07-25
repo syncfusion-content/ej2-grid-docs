@@ -206,7 +206,7 @@ In the below demo, `EmployeeID` field relates the parent and child grids. To add
 
 ## Dynamically bind data to child grid based on parent row Data
 
-By default, the [childGrid.queryString](../api/grid/#querystring) describes the relationship between parent and child grids and visualizes the data in a hierarchical structure. Instead of the `queryString` property, we can dynamically bind the datasource to the `childGrid` based on the parent row data using the [detailDataBound](../../api/grid/#detaildatabound) event of the grid.
+By default, the [childGrid.queryString](../api/grid/#querystring) describes the relationship between parent and child grids and visualizes the data in a hierarchical structure. Instead of the `queryString` property, we can dynamically bind the datasource to the `childGrid` based on the parent row data using the [detailDataBound](../api/grid/#detaildatabound) event of the grid.
 
 While expanding the child Grid, the `detailDataBound` event will be triggered. In this event, based on the EmployeeID column value of parent row data, filter the equally matched data from the `childGrid` datasource using the `DataManager` plugin and bind the filtered data as a datasource to the `childGrid`. This can be demonstrated by the following sample.
 

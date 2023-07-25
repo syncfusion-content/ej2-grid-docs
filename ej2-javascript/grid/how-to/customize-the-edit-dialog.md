@@ -17,7 +17,7 @@ In the following example, the dialog's properties like header text, showCloseIco
 
 Also the locale text for the `Save` and `Cancel` buttons has been changed by overriding the default locale strings.
 
-You can refer the Grid [`Default text`](../grid/global-local/) list for more localization.
+You can refer the Grid [`Default text`](../global-local) list for more localization.
 
 {% if page.publishingplatform == "typescript" %}
 

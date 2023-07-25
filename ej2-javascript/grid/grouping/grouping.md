@@ -211,7 +211,7 @@ You can collapse the selected group from an external button by invoking the [`ex
 
 ## Sort grouped columns in descending order during initial grouping
 
-By default, grouped columns are sorted in ascending order. To sort grouped columns in descending order during initial grouping, you can set the [field](../api/grid/sortDescriptorModel/#field) and [direction](../api/grid/sortDescriptorModel/#direction-string) in the `sortSettings.columns` property.
+By default, grouped columns are sorted in ascending order. To sort grouped columns in descending order during initial grouping, you can set the [field](../../api/grid/sortDescriptorModel/#field) and [direction](../../api/grid/sortDescriptorModel/#direction-string) in the `sortSettings.columns` property.
 
 The `CustomerID` column will be sorted in descending order when the grid is initially grouped, as shown in the following example.
 
