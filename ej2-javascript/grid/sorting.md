@@ -278,7 +278,7 @@ In the following example, custom sort comparer function was defined in the `Cust
 
 When you tap the grid header on touchscreen devices, the selected column header is sorted. A popup ![Multi column sorting](images/sorting.jpg) is displayed for multi-column sorting. To sort multiple columns, tap the popup![Multi sorting](images/msorting.jpg), and then tap the desired grid headers.
 
-> The [`allowMultiSorting`](../api/grid/#allowmultisorting) and [`allowSorting`](api/grid/#allowsorting) should be `true` then only the popup will be shown.
+> The [`allowMultiSorting`](../api/grid/#allowmultisorting) and [`allowSorting`](../api/grid/#allowsorting) should be `true` then only the popup will be shown.
 
 The following screenshot shows grid touch sorting.
 
