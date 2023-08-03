@@ -62,7 +62,7 @@ Combined CSS files are available in the Essential JS 2 package root folder. This
 @import '../../node_modules/@syncfusion/ej2/material.css';
 ```
 
-> To refer individual component CSS, please refer to [Individual Component theme files](../../appearance/theme/#referring-individual-control-theme) section.
+> To refer individual component CSS, please refer to [Individual Component theme files](../appearance/theme/#referring-individual-control-theme) section.
 
 ## Adding Pager component
 
