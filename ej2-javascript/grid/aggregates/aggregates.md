@@ -18,7 +18,6 @@ By default, the aggregate value can be displayed in the footer, group, and capti
 
 ## Built-in aggregate types
 
-The aggregate type should be specified in the [`type`](../../api/grid/aggregateColumn/#type) property to configure an aggregate column.
 
 The built-in aggregates are,
 * Sum
