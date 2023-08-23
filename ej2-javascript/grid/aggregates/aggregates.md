@@ -12,9 +12,7 @@ domainurl: ##DomainURL##
 # Aggregates in ##Platform_Name## Grid control
 
 Aggregate values are displayed in the footer, group footer, or group caption of the Grid. It can be configured through `aggregates` property.
-[`Field`](../../api/grid/aggregateColumn/#field) and [`type`](../../api/grid/aggregateColumn/#type) are the minimum properties required to represent an aggregate column.
-
-To use the aggregate feature, you have to inject the `Aggregate` module.
+[`Field`](../../api/grid/aggregateColumn/#field) and [`type`](../../api/grid/aggregateColumn/#type) are the minimum properties required to represent an aggregate column. It is the demo.
 
 By default, the aggregate value can be displayed in the footer, group, and caption cells. To show the aggregate value in one of the cells, use the [`footerTemplate`](../../api/grid/aggregateColumn/#footertemplate), [`groupFooterTemplate`](../../api/grid/aggregateColumn#groupfootertemplate), or [`groupCaptionTemplate`](../../api/grid/aggregateColumn/#groupcaptiontemplate) property.
 
