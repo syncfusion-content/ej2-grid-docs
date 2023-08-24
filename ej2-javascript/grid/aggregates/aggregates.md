@@ -11,6 +11,8 @@ domainurl: ##DomainURL##
 
 # Aggregates in ##Platform_Name## Grid control
 
+Hello demo
+
 Aggregate values are displayed in the footer, group footer, or group caption of the Grid. It can be configured through `aggregates` property.
 [`Field`](../../api/grid/aggregateColumn/#field) and [`type`](../../api/grid/aggregateColumn/#type) are the minimum properties required to represent an aggregate column.
 
