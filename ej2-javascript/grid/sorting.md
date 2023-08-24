@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Sorting in ##Platform_Name## Grid control
 
-hi demo
+hi demo hemanth
 
 {% if page.publishingplatform == "typescript" %}
 
