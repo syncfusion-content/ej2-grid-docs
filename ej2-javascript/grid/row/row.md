@@ -11,14 +11,17 @@ domainurl: ##DomainURL##
 
 # Row in ##Platform_Name## Grid control
 
-The row represents record details fetched from data source.
+Each row typically represents a single record or item from a data source. Rows in a grid are used to present data in a tabular format. Each row displays a set of values representing the fields of an individual data record. Rows allow users to interact with the data in the grid. Users can select rows, edit cell values, perform sorting or filtering operations, and trigger events based on actions.
 
-## Row customization
+## Customize row styles 
+
+Customizing the styles of rows in a Syncfusion Grid allows you to modify the appearance of rows to meet your design requirements. This feature is useful when you want to highlight certain rows or change the font style, background color, and other properties of the row to enhance the visual appeal of the grid. To customize the row styles in the grid, you can use CSS, properties, methods, or event support provided by the Syncfusion Angular Grid component.
 
 ### Using event
 
-You can customize the appearance of a row by using the [`rowDataBound`](../../api/grid/#rowdatabound) event. The [`rowDataBound`](../../api/grid/#rowdatabound) event triggers for every row. In the event handler, you can get the
-[`RowDataBoundEventArgs`](../../api/grid/rowDataBoundEventArgs) that contains details of the row.
+You can customize the appearance of the rows by using the [rowDataBound](../../api/grid/#rowdatabound) event. This event triggers for every row when it is bound to the data source. In the event handler, you can get the [RowDataBoundEventArgs](../../api/grid/rowDataBoundEventArgs) object, which contains details of the row. You can use this object to modify the row's appearance, add custom elements, or perform any other customization.
+
+Here's an example of how you can use the `rowDataBound` event to customize the styles of rows based on the value of the **Freight** column. This example involves checking the value of the Freight column for each row and adding a CSS class to the row based on the value. The CSS classes **below-30**, **below-80**, and **above-80** can then be defined in your stylesheet to apply the desired styles to the rows.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -47,17 +50,24 @@ You can customize the appearance of a row by using the [`rowDataBound`](../../ap
 {% previewsample "page.domainurl/code-snippet/grid/custom-row-cs3" %}
 {% endif %}
 
-### Using CSS customize alternate rows
+### Using CSS
 
- You can change the grid's alternative rows' background color by overriding the **.e-altrow** class.
+You can apply styles to the rows using CSS selectors. The Grid provides a class name for each row element, which you can use to apply styles to that specific row. 
 
-```
+**Customize alternate rows**
+
+You can customize the appearance of the alternate rows using CSS. This can be useful for improving the readability of the data and making it easier to distinguish between rows. By default, Syncfusion Grid provides the CSS class **.e-altrow** to style the alternate rows. You can customize this default style by overriding the **.e-altrow** class with your custom CSS styles. 
+
+To change the background color of the alternate rows, you can add the following CSS code to your application's stylesheet:
+
+```css
 .e-grid .e-altrow {
     background-color: #fafafa;
 }
 ```
 
-Please refer to the following example.
+Here's an example of how to use the **.e-altrow** class to style alternate rows:
+
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -86,9 +96,19 @@ Please refer to the following example.
 {% previewsample "page.domainurl/code-snippet/grid/how-to-alt-row-cs1" %}
 {% endif %}
 
-### Using CSS customize selected row
+**Customize selected row**
 
-The background color of the selected row can be changed by overriding the following CSS style.
+You can customize the appearance of the selected row using CSS. This is useful when you want to highlight the currently selected row for improve the visual appeal of the Grid. By default, the Grid provides the CSS class **.e-selectionbackground** to style the selected row. You can customize this default style by overriding the **.e-selectionbackground** class with your own custom CSS styles.
+
+To change the background color of the selected row, you can add the following CSS code to your application:
+
+```css
+.e-grid .e-selectionbackground {
+    background-color: #f9920b;
+}
+```
+
+Here's an example of how to use the **.e-selectionbackground** class to style the selected row:
 
 ```
 .e-grid td.e-active {
