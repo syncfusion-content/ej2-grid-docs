@@ -18,20 +18,160 @@ The column definitions are used as the [`dataSource`](../../api/grid/#datasource
 
 ## Column types
 
-Column type can be specified using the [`columns.type`](../../api/grid/column/#type) property. It specifies the type of data the column binds.
+The Syncfusion Grid component allows you to specify the type of data that a column binds using the [`columns.type`](../../api/grid/column/#type) property. The type property is used to determine the appropriate [`format`](../../api/grid/column/#format), such as [number](../../common/internationalization/#number-formatting)
+ or [date](../../common/internationalization/#manipulating-datetime), for displaying the column data.
 
-If the [`format`](../../api/grid/column/#format)  is defined for a column, the column uses [`type`](../../api/grid/column/#type) to select the appropriate format option ([number](../../common/internationalization/#number-formatting)
- or [date](../../common/internationalization/#manipulating-datetime)).
+Grid supports the following column types:
+* **string**: Represents a column that binds to string data. This is the default type if the type property is not defined.
+* **number**: Represents a column that binds to numeric data. It supports formatting options for displaying numbers.
+* **boolean**: Represents a column that binds to boolean data. It displays checkboxes for boolean values.
+* **date**: Represents a column that binds to date data. It supports formatting options for displaying dates.
+* **datetime**: Represents a column that binds to date and time data. It supports formatting options for displaying date and time values.
+* **checkbox**: Represents a column that displays checkboxes.
 
-Grid column supports the following types:
-* string
-* number
-* boolean
-* date
-* datetime
+Here is an example of how to specify column types in a grid using the types mentioned above.
 
-> If the [`type`](../../api/grid/column/#type) is not defined, it will be determined from the first record of the [`dataSource`](../../api/grid/#datasource).
-> Incase if the first record of the [`dataSource`](../../api/grid/#datasource) is null/blank value for a column then it is necessary to define the [`type`](../../api/grid/column/#type) for that column.
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/column-types-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-types-cs1/index.html%}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column-types-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/column-types-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-types-cs1/index.html%}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/column-types-cs1" %}
+{% endif %}
+
+>* If the [type](../../api/grid/column/#type) is not defined, then it will be determined from the first record of the [dataSource](../../api/grid/#datasource).
+>* Incase if the first record of the [dataSource](../../api/grid/#datasource) is null/blank value for a column then it is necessary to define the [type](../../api/grid/column/#type) for that column. This is because the grid uses the column type to determine which filter dialog to display for that column
+
+### Difference between boolean type and checkbox type column 
+
+1. Use the **boolean** column type when you want to bind boolean values from your datasource and/or edit boolean property values from your type.
+2. Use the **checkbox** column type when you want to enable selection/deselection of the whole row.
+3. When the grid column `type` is a **checkbox**, the selection type of the grid `selectionSettings` will be multiple. This is the default behavior.
+4. If you have more than one column with the column type as a **checkbox**, the grid will automatically enable the other column's checkbox when selecting one column checkbox.
+
+> To learn more about how to render boolean values as checkboxes in a Syncfusion GridColumn, please refer to the [Render Boolean Values as Checkbox](https://ej2.syncfusion.com/documentation/grid/columns/columns#render-boolean-value-as-checkbox) section.
+
+## Column Width
+
+To adjust the column width in a Grid, you can use the [width](https://ej2.syncfusion.com/documentation/api/grid/#width) property within the [columns](https://ej2.syncfusion.com/documentation/api/grid/#columns) property of the Grid configuration. This property enables you to define the column width in pixels or as a percentage. You can set the width to a specific value, like **100** for 100 pixels, or as a percentage value, such as **25%** for 25% of the available width.
+
+1. Grid column width is calculated based on the sum of column widths. For example, a grid container with 4 columns and a width of 800 pixels will have columns with a default width of 200 pixels each.
+2. If you specify widths for some columns but not others, the Grid will distribute the available width equally among the columns without explicit widths. For example, if you have 3 columns with widths of 100px, 200px, and no width specified for the third column, the third column will occupy the remaining width after accounting for the first two columns.
+3. Columns with percentage widths are responsive and adjust their width based on the size of the grid container. For example, a column with a width of 50% will occupy 50% of the grid width and will adjust proportionally when the grid container is resized to a smaller size.
+4. When you manually resize columns in Syncfusion Grid, a minimum width is set to ensure that the content within the cells remains readable. By default, the minimum width is set to 10 pixels if not explicitly specified for a column.
+5. If the total width of all columns exceeds the width of the grid container, a horizontal scrollbar will automatically appear to allow horizontal scrolling within the grid.
+6. When the columns is hide using the column chooser, the width of the hidden columns is removed from the total grid width, and the remaining columns will be resized to fill the available space.
+7. If the parent element has a fixed width, the grid component will inherit that width and occupy the available space. However, if the parent element does not have a fixed width, the grid component will adjust its width dynamically based on the available space.
+
+**Supported types for column width**
+
+Syncfusion Grid supports the following three types of column width:
+
+**1. Auto**
+
+The column width is automatically calculated based on the content within the column cells. If the content exceeds the width of the column, it will be truncated with an ellipsis (...) at the end. You can set the width for columns as **auto** in your Grid configuration as shown below:
+
+```ts
+{ field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 'auto' }
+```
+
+**2. Percentage**
+
+The column width is specified as a percentage value relative to the width of the grid container. For example, a column width of 25% will occupy 25% of the total grid width. You can set the width for columns as **percentage** in your Grid configuration as shown below:
+
+```ts
+  { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: '25%' }
+```
+
+**3. Pixel**
+
+The column width is specified as an absolute pixel value. For example, a column width of 100px will have a fixed width of 100 pixels regardless of the grid container size. You can set the width for columns as **pixel** in your Grid configuration as shown below:
+
+```ts
+  { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: '100' }
+```
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/column-width-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-width-cs1/index.html%}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column-width-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/column-width-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-width-cs1/index.html%}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/column-width-cs1" %}
+{% endif %}
+
+## Render boolean value as checkbox
+
+The Grid component allows you to render boolean values as checkboxes in columns. This can be achieved by using the [displayAsCheckBox](../../api/grid/column/#displayascheckbox) property, which is available in the [columns](https://helpej2.syncfusion.com/angular/documentation/api/grid/column/). This property is useful when you have a boolean column in your Grid and you want to display the values as checkboxes instead of the default text representation of **true** or **false**.
+
+To enable the rendering of boolean values as checkboxes, you need to set the `displayAsCheckBox` property of the `columns` to **true**.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/bool-checkbox-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/bool-checkbox-cs1/index.html%}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/bool-checkbox-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/bool-checkbox-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/bool-checkbox-cs1/index.html%}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/bool-checkbox-cs1" %}
+{% endif %}
+
+>* The `displayAsCheckBox` property is only applicable to boolean values in Grid columns.
+>* When `displayAsCheckBox` is set to **true**, the boolean values will be rendered as checkboxes in the Grid column, with checked state indicating **true** and unchecked state indicating **false**.
 
 ## ValueAccessor
 
