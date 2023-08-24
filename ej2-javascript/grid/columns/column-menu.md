@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Column menu in ##Platform_Name## Grid control
 
-The column menu has options to integrate features like sorting, grouping, filtering, column chooser, and autofit. It will show a menu with the integrated feature when users click on multiple icon of the column. To enable column menu, you need to define the [`showColumnMenu`](../../api/grid/#showcolumnmenu) property as true.
+The column menu in the Syncfusion Javascript Grid component provides options to enable features such as sorting, grouping, filtering, column chooser, and autofit. When users click on the column header’s menu icon, a menu will be displayed with these integrated features. To enable the column menu, you need to set the [`showColumnMenu`](https://ej2.syncfusion.com/javascript/documentation/api/grid/#showcolumnmenu) property to **true** in the Grid configuration.
 
 To use the column menu, inject the **ColumnMenu** module in the grid.
 
@@ -26,7 +26,7 @@ The default items are displayed in following table.
 | **AutoFit** | Auto fit the current column. |
 | **AutoFitAll** | Auto fit all columns. |
 | **ColumnChooser** | Choose the column visibility. |
-| **Filter** | Show the filter option as given in [`filterSettings.type`](../../api/grid/filterSettings/#type) |
+| **Filter** | Show the filter option as given in [`filterSettings.type`](https://ej2.syncfusion.com/javascript/documentation/api/grid/filterSettings/#type) |
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -39,7 +39,7 @@ The default items are displayed in following table.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/row-template-cs4" %}
+{% previewsample "page.domainurl/ej2-javascript/code-snippet/grid/row-template-cs4" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
@@ -55,8 +55,74 @@ The default items are displayed in following table.
 {% previewsample "page.domainurl/code-snippet/grid/row-template-cs4" %}
 {% endif %}
 
-> * You can disable column menu for a particular column by defining the [`columns.showColumnMenu`](../../api/grid/column/#showcolumnmenu) as false.
-> * You can customize the default items by defining the [`columnMenuItems`](../../api/grid/#columnmenuitems) with required items.
+> * You can disable column menu for a particular column by defining the [`columns.showColumnMenu`](https://ej2.syncfusion.com/javascript/documentation/api/grid/column/#showcolumnmenu) as false.
+> * You can customize the default items by defining the [`columnMenuItems`](https://ej2.syncfusion.com/javascript/documentation/api/grid/#columnmenuitems) with required items.
+
+## Add Custom column menu item
+
+The custom column menu item feature allows you to add additional menu items to the column menu in the Syncfusion Grid. These custom menu items can be defined using the [`columnMenuItems`](https://ej2.syncfusion.com/javascript/documentation/api/grid/#columnmenuitems) property, which accepts a collection of [`columnMenuItemModel`](https://helpej2.syncfusion.com/javascript/documentation/api/grid/columnMenuItemModel/) objects. You can define the actions for these custom items in the [`columnMenuClick`](https://ej2.syncfusion.com/javascript/documentation/api/grid/#columnmenuclick) event.
+
+Consider the following example, which demonstrates how to add a custom column menu item to clear the sorting of the Grid:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/row-template-cs6/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/row-template-cs6/js/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/ej2-javascript/code-snippet/grid/row-template-cs6" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/row-template-cs6/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/row-template-cs6/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/ej2-javascript/code-snippet/grid/row-template-cs6" %}
+{% endif %}
+
+## Customize menu items for particular columns
+
+Sometimes, you have a scenario that to hide an item from column menu for particular columns. In that case, you need to define the [`columnMenuOpenEventArgs.hide`](https://helpej2.syncfusion.com/javascript/documentation/api/grid/columnMenuOpenEventArgs/) as true in the [`columnMenuOpen`](https://ej2.syncfusion.com/javascript/documentation/api/grid/#columnmenuopen) event.
+
+The following sample, **Filter** item was hidden in column menu when opens for the **OrderID** column.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/row-template-cs7/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/row-template-cs7/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/row-template-cs7" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/row-template-cs7/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/row-template-cs7/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/row-template-cs7" %}
+{% endif %}
 
 ## Column menu events
 
@@ -90,70 +156,6 @@ During the resizing action, the grid component triggers the below two events.
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/grid/row-template-cs5" %}
-{% endif %}
-
-## Custom column menu item
-
-Custom column menu items can be added by defining the [`columnMenuItems`](../../api/grid/#columnmenuitems) as collection of the[`columnMenuItemModel`](../../api/grid/columnMenuItemModel). Actions for this customized items can be defined in the [`columnMenuClick`](../../api/grid/#columnmenuclick) event.
-
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/row-template-cs6/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs6/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/grid/row-template-cs6" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/row-template-cs6/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs6/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/grid/row-template-cs6" %}
-{% endif %}
-
-## Customize menu items for particular columns
-
-Sometimes, you have a scenario that to hide an item from column menu for particular columns. In that case, you need to define the [`columnMenuOpenEventArgs.hide`](../../api/grid/columnMenuOpenEventArgs) as true in the [`columnMenuOpen`](../../api/grid/#columnmenuopen) event.
-
-The following sample, **Filter** item was hidden in column menu when opens for the **OrderID** column.
-
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/row-template-cs7/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs7/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/grid/row-template-cs7" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/row-template-cs7/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs7/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/grid/row-template-cs7" %}
 {% endif %}
 
 ## Customize the icon of column menu
