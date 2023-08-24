@@ -9,19 +9,17 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sorting in ##Platform_Name## Grid control
+# Sorting in ##Platform_Name## Grid component
 
-Sorting enables you to sort data in the `Ascending` or `Descending` order. To sort a column, click the column header.
+The Grid component provides built-in support for sorting data-bound columns in ascending or descending order. To enable sorting in the grid, set the [allowSorting](https://ej2.syncfusion.com/typescript/documentation/api/grid/#allowsorting) property to **true**.
 
-To sort multiple columns, press and hold the CTRL key and click the column header.  You can clear sorting of any one of the multi-sorted columns by pressing and holding the SHIFT key and clicking the specific column header.
+To sort a particular column in the grid, click on its column header. Each time you click the header, the order of the column will switch between **Ascending** and **Descending**.
 
-To enable sorting in the Grid, set the [`allowSorting`](../api/grid/#allowsorting) to true. Sorting options can be configured through the [`sortSettings`](../api/grid/#sortsettings).
-
-To sort, inject the [`Sort`](../api/grid/sort) module in the grid.
+To use the sorting feature, you need to inject the **Sort** module in the grid.
 
 {% if page.publishingplatform == "typescript" %}
 
- {% tabs %}
+{% tabs %}
 {% highlight ts tabtitle="index.ts" %}
 {% include code-snippet/grid/grid-cs166/index.ts %}
 {% endhighlight %}
@@ -46,13 +44,15 @@ To sort, inject the [`Sort`](../api/grid/sort) module in the grid.
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs166" %}
 {% endif %}
 
-> * Grid columns are sorted in the `Ascending` order. If you click the already sorted column, the sort direction toggles.
-> * You can apply and clear sorting by invoking [`sortColumn`](../api/grid/#sortcolumn) and [`clearSorting`](../api/grid/#clearsorting) methods.
-> * To disable sorting for a particular column, set the [`columns.allowSorting`](../api/grid/column/#allowsorting) to false.
+> * Grid column sorted in **Ascending** order. If you click on an already sorted column, then toggles the sort direction.
+> * You can apply and clear sorting by using the [sortColumn](https://ej2.syncfusion.com/typescript/documentation/api/grid/#sortcolumn) and [clearSorting](https://ej2.syncfusion.com/typescript/documentation/api/grid/#clearsorting) methods.
+> * To disable sorting for a specific column, set the [columns.allowSorting](https://ej2.syncfusion.com/typescript/documentation/api/grid/column/#allowsorting) property to **false**.
 
-## Initial sort
+## Initial sorting
 
-To sort at initial rendering, set the [`field`](../api/grid/sortDescriptorModel/#field) and [`direction`](../api/grid/sortDescriptorModel/#direction-string) in the `sortSettings.columns`.
+By default, the grid component does not apply any sorting to its records at initial rendering. However, you can apply initial sorting by setting the [sortSettings.columns](https://ej2.syncfusion.com/typescript/documentation/api/grid/sortSettings/#columns) property to the desired [field](https://ej2.syncfusion.com/typescript/documentation/api/grid/sortDescriptorModel/#field) and sort [direction](https://ej2.syncfusion.com/typescript/documentation/api/grid/sortDescriptorModel/#direction). This feature is helpful when you want to display your data in a specific order when the grid is first loaded.
+
+The following example demonstrates how to set [sortSettings.columns](https://ej2.syncfusion.com/typescript/documentation/api/grid/sortSettings/#columns) for **OrderID** and **ShipCity** columns with a specified [direction](https://ej2.syncfusion.com/typescript/documentation/api/grid/sortDescriptorModel/#direction).
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -80,6 +80,8 @@ To sort at initial rendering, set the [`field`](../api/grid/sortDescriptorModel/
 
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs167" %}
 {% endif %}
+
+> The initial sorting defined in [sortSettings.columns](https://ej2.syncfusion.com/typescript/documentation/api/grid/sortSettings/#columns) will override any sorting applied through user interaction.
 
 ## Multi-column sorting
 
