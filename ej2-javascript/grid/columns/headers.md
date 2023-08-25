@@ -13,7 +13,9 @@ domainurl: ##DomainURL##
 
 ## Header text
 
-By default, column header title is displayed from column [`field`](../../api/grid/column/#field) value. To override the default header title, you have to define the [`headerText`](../../api/grid/column/#headertext) value.
+By default, column header title is displayed from column [field](https://ej2.syncfusion.com/javascript/documentation/api/grid/column/#field) value. To override the default header title, you have to define the [headerText](https://ej2.syncfusion.com/javascript/documentation/api/grid/column/#headertext) value.
+
+To enable the `headerText` property, you simply need to define it in the e-column element. The following example demonstrates how to enable header text for a Grid column.
 
 {% if page.publishingplatform == "typescript" %}
 
