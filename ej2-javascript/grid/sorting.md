@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Sorting in ##Platform_Name## Grid component
 
-The Grid component provides built-in support for sorting data-bound columns in ascending or descending order. To enable sorting in the grid, set the [allowSorting](https://ej2.syncfusion.com/typescript/documentation/api/grid/#allowsorting) property to **true**.
+The Grid component provides built-in support for sorting data-bound columns in ascending or descending order. To enable sorting in the grid, set the [allowSorting](../api/grid/#allowsorting) property to **true**.
 
 To sort a particular column in the grid, click on its column header. Each time you click the header, the order of the column will switch between **Ascending** and **Descending**.
 
@@ -45,14 +45,14 @@ To use the sorting feature, you need to inject the **Sort** module in the grid.
 {% endif %}
 
 > * Grid column sorted in **Ascending** order. If you click on an already sorted column, then toggles the sort direction.
-> * You can apply and clear sorting by using the [sortColumn](https://ej2.syncfusion.com/typescript/documentation/api/grid/#sortcolumn) and [clearSorting](https://ej2.syncfusion.com/typescript/documentation/api/grid/#clearsorting) methods.
-> * To disable sorting for a specific column, set the [columns.allowSorting](https://ej2.syncfusion.com/typescript/documentation/api/grid/column/#allowsorting) property to **false**.
+> * You can apply and clear sorting by using the [sortColumn](../api/grid/#sortcolumn) and [clearSorting](../api/grid/#clearsorting) methods.
+> * To disable sorting for a specific column, set the [columns.allowSorting](../api/grid/column/#allowsorting) property to **false**.
 
 ## Initial sorting
 
-By default, the grid component does not apply any sorting to its records at initial rendering. However, you can apply initial sorting by setting the [sortSettings.columns](https://ej2.syncfusion.com/typescript/documentation/api/grid/sortSettings/#columns) property to the desired [field](https://ej2.syncfusion.com/typescript/documentation/api/grid/sortDescriptorModel/#field) and sort [direction](https://ej2.syncfusion.com/typescript/documentation/api/grid/sortDescriptorModel/#direction). This feature is helpful when you want to display your data in a specific order when the grid is first loaded.
+By default, the grid component does not apply any sorting to its records at initial rendering. However, you can apply initial sorting by setting the [sortSettings.columns](../api/grid/sortSettings/#columns) property to the desired [field](../api/grid/sortDescriptorModel/#field) and sort [direction](../api/grid/sortDescriptorModel/#direction-string). This feature is helpful when you want to display your data in a specific order when the grid is first loaded.
 
-The following example demonstrates how to set [sortSettings.columns](https://ej2.syncfusion.com/typescript/documentation/api/grid/sortSettings/#columns) for **OrderID** and **ShipCity** columns with a specified [direction](https://ej2.syncfusion.com/typescript/documentation/api/grid/sortDescriptorModel/#direction).
+The following example demonstrates how to set [sortSettings.columns](../api/grid/sortSettings/#columns) for **OrderID** and **ShipCity** columns with a specified [direction](../api/grid/sortDescriptorModel/#direction-string).
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -81,7 +81,7 @@ The following example demonstrates how to set [sortSettings.columns](https://ej2
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs167" %}
 {% endif %}
 
-> The initial sorting defined in [sortSettings.columns](https://ej2.syncfusion.com/typescript/documentation/api/grid/sortSettings/#columns) will override any sorting applied through user interaction.
+> The initial sorting defined in [sortSettings.columns](../api/grid/sortSettings/#columns) will override any sorting applied through user interaction.
 
 ## Multi-column sorting
 
