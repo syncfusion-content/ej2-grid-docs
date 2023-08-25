@@ -39,7 +39,7 @@ The default items are displayed in following table.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/ej2-javascript/code-snippet/grid/row-template-cs4" %}
+{% previewsample "page.domainurl/code-snippet/grid/row-template-cs4" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
@@ -71,11 +71,11 @@ Consider the following example, which demonstrates how to add a custom column me
 {% include code-snippet/grid/row-template-cs6/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs6/js/index.html %}
+{% include code-snippet/grid/row-template-cs6/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/ej2-javascript/code-snippet/grid/row-template-cs6" %}
+{% previewsample "page.domainurl/code-snippet/grid/row-template-cs6" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
@@ -88,7 +88,7 @@ Consider the following example, which demonstrates how to add a custom column me
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/ej2-javascript/code-snippet/grid/row-template-cs6" %}
+{% previewsample "page.domainurl/code-snippet/grid/row-template-cs6" %}
 {% endif %}
 
 ## Customize menu items for particular columns
