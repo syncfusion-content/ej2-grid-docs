@@ -11,7 +11,9 @@ domainurl: ##DomainURL##
 
 # Column resizing in ##Platform_Name## Grid control
 
-Column width can be resized by clicking and dragging the right edge of the column header. While dragging, the width of the respective column will be resized immediately. Each column can be auto resized by double-clicking the right edge of the column header to fit the width of that column based on the widest cell content. To enable column resize, set the [`allowResizing`](../../api/grid/#allowresizing) property to true.
+Grid component provides an intuitive user interface for resizing columns to fit their content. This feature allows users to easily adjust the width of the columns to improve readability and aesthetics of the data presented. To enable column resizing, set the [`allowResizing`](https://ej2.syncfusion.com/documentation/api/grid/#allowresizing) property of the grid to true.
+
+Once column resizing is enabled, columns width can be resized by clicking and dragging at the right edge of the column header. While dragging the column, the width of the respective column will be resized immediately.
 
 To use the column resize, inject **Resize** module in the grid.
 
@@ -42,8 +44,9 @@ To use the column resize, inject **Resize** module in the grid.
 {% previewsample "page.domainurl/code-snippet/grid/row-template-cs10" %}
 {% endif %}
 
-> * You can disable resizing for a particular column by setting the [`columns.allowResizing`](../../api/grid/column/#allowresizing) to false.
+> * You can disable resizing for a particular column by setting the [`columns.allowResizing`](https://ej2.syncfusion.com/documentation/api/grid/#allowresizing) to false.
 > * In RTL mode, you can click and drag the left edge of the header cell to resize the column.
+> * The `width` property of the column can be set initially to define the default width of the column. However, when column resizing is enabled, you can override the default width by manually resizing the columns.
 
 ## Column resizing externally
 
@@ -61,11 +64,13 @@ grid.refreshHeader();
 
 ```
 
-## Min and max width
+## Restrict the resizing based on minimum and maximum width
 
-Column resize can be restricted between minimum and maximum width by defining the [`columns->minWidth`](../../api/grid/column/#minwidth) and [`columns->maxWidth`](../../api/grid/column/#maxwidth).
+The Grid component allows you to restrict the column width resizing between a minimum and maximum width. This can be useful when you want to ensure that your grid’s columns stay within a certain range of sizes.
 
-In the following sample, minimum and maximum width are defined for **OrderID**, **Ship Name**, and **Ship Country** columns.
+To enable this feature, you can define the [`columns.minWidth`](https://helpej2.syncfusion.com/javascript/documentation/api/grid/column/#minwidth) and [`columns.maxWidth`](https://helpej2.syncfusion.com/javascript/documentation/api/grid/column/#maxwidth) properties of the columns directive for the respective column.
+
+In the below code, **OrderID**, **Ship Name** and **Ship Country** columns are defined with minimum and maximum width. The **OrderID** column is set to have a minimum width of 100 pixels and a maximum width of 200 pixels. Similarly, the **ShipName** column is set to have a minimum width of 150 pixels and a maximum width of 300 pixels. The **ShipCountry** column is set to have a minimum width of 120 pixels and a maximum width of 280 pixels.
 
 {% if page.publishingplatform == "typescript" %}
 
