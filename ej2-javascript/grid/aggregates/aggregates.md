@@ -36,7 +36,7 @@ By default, the aggregate values are displayed in the footer, group, and caption
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/grid/aggregates-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/aggregates-cs1" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
@@ -49,7 +49,7 @@ By default, the aggregate values are displayed in the footer, group, and caption
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/grid/aggregates-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/aggregates-cs1" %}
 {% endif %}
 
 > * When using local data, the total summary is calculated based on the entire dataset available in the grid. The aggregate values will reflect calculations across all the rows in the grid.
@@ -83,7 +83,7 @@ Here is an example that demonstrates how to use built-in aggregates types in the
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/grid/aggregates-cs2" %}
+{% previewsample "page.domainurl/code-snippet/grid/aggregates-cs2" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
@@ -96,7 +96,7 @@ Here is an example that demonstrates how to use built-in aggregates types in the
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/grid/aggregates-cs2" %}
+{% previewsample "page.domainurl/code-snippet/grid/aggregates-cs2" %}
 {% endif %}
 
 ## Multiple aggregates for a column
@@ -120,7 +120,7 @@ Here's an example of how to use multiple aggregates in the Syncfusion JavaScript
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/grid/aggregates-cs3" %}
+{% previewsample "page.domainurl/code-snippet/grid/aggregates-cs3" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
@@ -133,5 +133,5 @@ Here's an example of how to use multiple aggregates in the Syncfusion JavaScript
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/grid/aggregates-cs3" %}
+{% previewsample "page.domainurl/code-snippet/grid/aggregates-cs3" %}
 {% endif %}
