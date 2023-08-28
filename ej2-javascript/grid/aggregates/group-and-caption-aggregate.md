@@ -49,11 +49,11 @@ Here's an example that demonstrates how to use group footer aggregates in the Sy
 {% previewsample "page.domainurl/code-snippet/grid/aggregates-group-cs1" %}
 {% endif %}
 
-> The aggregate values must be accessed inside the template using their corresponding [type](../../api/grid/aggregateColumnDirective/#type) name.
+> The aggregate values must be accessed inside the template using their corresponding [type](../../api/grid/aggregateColumn/#type) name.
 
 ## Group caption aggregates
 
-Group caption aggregates are displayed in the caption cells of each group. These cells appear at the top of each group and provide a summary of the grouped data. To display group caption aggregates, you can use the [groupCaptionTemplate](../../api/grid/aggregateColumnDirective/#groupcaptiontemplate) property. This property allows you to define a template that will be used to display the aggregate values in the group caption cells.
+Group caption aggregates are displayed in the caption cells of each group. These cells appear at the top of each group and provide a summary of the grouped data. To display group caption aggregates, you can use the [groupCaptionTemplate](../../api/grid/aggregateColumn/#groupcaptiontemplate) property. This property allows you to define a template that will be used to display the aggregate values in the group caption cells.
 
 Here's an example that demonstrates how to use group and caption aggregates in the Syncfusion JavaScript Grid control:
 
