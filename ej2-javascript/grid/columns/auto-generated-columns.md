@@ -55,7 +55,7 @@ import { Grid, Edit } from '@syncfusion/ej2-grids';
 Grid.Inject(Edit);
 
 let data: Object[] = [
-    { OrderID: 10248, CustomerID: 'VINET', EmployeeID: 5 },
+    { OrderID: 10248, CustomerID: 'VINET', EmployeeID: 3 },
     { OrderID: 10249, CustomerID: 'TOMSP', EmployeeID: 6 },
     { OrderID: 10250, CustomerID: 'HANAR', EmployeeID: 4 }];
 
