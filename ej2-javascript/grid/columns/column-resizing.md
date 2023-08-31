@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Column resizing in ##Platform_Name## Grid control
 
-Grid component provides an intuitive user interface for resizing columns to fit their content. This feature allows users to easily adjust the width of the columns to improve readability and aesthetics of the data presented. To enable column resizing, set the [`allowResizing`](https://ej2.syncfusion.com/documentation/api/grid/#allowresizing) property of the grid to true.
+Grid component provides an intuitive user interface for resizing columns to fit their content. This feature allows users to easily adjust the width of the columns to improve readability and aesthetics of the data presented. To enable column resizing, set the [`allowResizing`](../../api/grid/#allowresizing) property of the grid to true.
 
 Once column resizing is enabled, columns width can be resized by clicking and dragging at the right edge of the column header. While dragging the column, the width of the respective column will be resized immediately.
 
@@ -68,7 +68,7 @@ grid.refreshHeader();
 
 The Grid component allows you to restrict the column width resizing between a minimum and maximum width. This can be useful when you want to ensure that your grid’s columns stay within a certain range of sizes.
 
-To enable this feature, you can define the [`columns.minWidth`](https://helpej2.syncfusion.com/javascript/documentation/api/grid/column/#minwidth) and [`columns.maxWidth`](https://helpej2.syncfusion.com/javascript/documentation/api/grid/column/#maxwidth) properties of the columns directive for the respective column.
+To enable this feature, you can define the [`columns.minWidth`](../../api/grid/column/#minwidth) and [`columns.maxWidth`](../../api/grid/column/#maxwidth) properties of the columns directive for the respective column.
 
 In the below code, **OrderID**, **Ship Name** and **Ship Country** columns are defined with minimum and maximum width. The **OrderID** column is set to have a minimum width of 100 pixels and a maximum width of 200 pixels. Similarly, the **ShipName** column is set to have a minimum width of 150 pixels and a maximum width of 300 pixels. The **ShipCountry** column is set to have a minimum width of 120 pixels and a maximum width of 280 pixels.
 
@@ -103,9 +103,9 @@ In the below code, **OrderID**, **Ship Name** and **Ship Country** columns are d
 
 ## Resize stacked column
 
-Stacked columns can be resized by clicking and dragging the right edge of the stacked column header. While dragging, the width of the respective child columns will be resized at the same time. You can disable resize for any particular stacked column by setting [`allowResizing`](../../api/grid/#allowresizing) as **false** to its columns.
+Grid component allows to resize stacked columns by clicking and dragging the right edge of the stacked column header. During the resizing action, the width of the child columns is resized at the same time. You can disable resize for any particular stacked column by setting [`allowResizing`](../../api/grid/#allowresizing) as **false** to its columns.
 
-In this example, we have disabled resize for **Ship City** column.
+In this below code, we have disabled resize for **Ship City** column.
 
 {% if page.publishingplatform == "typescript" %}
 
