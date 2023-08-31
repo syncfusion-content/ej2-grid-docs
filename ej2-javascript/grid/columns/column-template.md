@@ -9,11 +9,17 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column template in ##Platform_Name## Grid control
+# Column template in JavaScript Grid component
+
+Grid component provides a [`template`](../../api/grid/column/#template) option that allows you to display custom elements in a column instead of the field value. This can be useful when you need to display images, buttons, or other custom content within a column.
+
+> When using template columns, they are primarily meant for rendering custom content and may not provide built-in support for grid actions like sorting, filtering, editing. It is must to define the `field` property of the column to perform any grid actions.
 
 ## Render image in a column
 
-The column [`template`](../../api/grid/column/#template) has options to display custom element instead of a field value in the column.
+To render an image in a grid column, you need to define a [`template`](../../api/grid/column/#template) for the column using the template property. The `template` property expects an HTML string or a function that returns an HTML string.
+
+The following example demonstrates how to define a [`template`](../../api/grid/column/#template) for the **Employee Image** field that displays an image element. The `template` property is set to an HTML string that contains an image tag. You have utilized the `src` and `alt` attributes to the image tag.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -41,7 +47,42 @@ The column [`template`](../../api/grid/column/#template) has options to display 
 
 {% previewsample "page.domainurl/code-snippet/grid/column-template-cs1" %}
 {% endif %}
-> Grid actions such as editing, grouping, filtering and sorting etc. will depend upon the column [`field`](../../api/grid/column/#field). If the [`field`](../../api/grid/column/#field) is not specified in the template column, the grid actions cannot be performed.
+> The [`template`](../../api/grid/column/#template) option allows to define any HTML content within a column.
+
+## Render hyperlink in a column
+
+The Grid component provides support for rendering hyperlink columns and performing routing on click using the [`template`](../../api/grid/column/#template) property. This feature is useful when displaying data that requires a link to another page or website.
+
+The following example demonstrates, hot to render hyperlink column in the Grid using the [`template`](../../api/grid/column/#template) property in a column. To define a template for the column, you can use an `template` with an `a` tag to create the hyperlink. The onClick function is triggered when the hyperlink is clicked.
+
+{% if page.publishingplatform == "typescript" %}
+
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/column-template-hyperlink-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-template-hyperlink-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/grid/column-template-hyperlink-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/column-template-hyperlink-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-template-hyperlink-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/grid/column-template-hyperlink-cs1" %}
+{% endif %}
+
+>The window.open() method is a built-in JavaScript function that opens a new browser window or tab with the specified URL.
 
 ## Render other components in a column
 
