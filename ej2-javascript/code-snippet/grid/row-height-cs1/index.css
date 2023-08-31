@@ -13,10 +13,12 @@
   width: 30%;
 }
 
-.e-grid .e-altrow {
-    background-color: #aaf1eb;
+.e-small {
+  background-color: rgb(209, 194, 241);
 }
-
-.e-grid td.e-active {
-    background-color: #f9920b;
+#small {
+  margin-right: 30px;
+}
+#medium {
+  margin-right: 30px;
 }

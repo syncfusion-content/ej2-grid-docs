@@ -12,11 +12,3 @@
   top: 45%;
   width: 30%;
 }
-
-.e-grid .e-altrow {
-    background-color: #aaf1eb;
-}
-
-.e-grid td.e-active {
-    background-color: #f9920b;
-}
