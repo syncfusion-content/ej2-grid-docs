@@ -11,37 +11,39 @@ domainurl: ##DomainURL##
 
 # Reactive aggregate in ##Platform_Name## Grid control
 
+The Syncfusion JavaScript Grid control provides support for reactive aggregates, which allow you to update the aggregate values dynamically as the data changes. Reactive aggregates automatically recalculate their values when there are changes in the underlying data, providing real-time updates to the aggregate values in the grid.
+
 ## Auto update aggregate value in batch editing
 
-When using batch editing, the aggregate values will be refreshed on every cell save. The footer, group footer, and group caption aggregate values will be refreshed.
+When the grid is in batch editing mode, the aggregate values in the footer, group footer, and group caption are automatically refreshed every time a cell is saved. This ensures that the aggregate values accurately reflect the edited data.
 
-> Adding a new record to the grouped grid will not refresh the aggregate values.
+Here's an example code snippet demonstrating how to auto update aggregate value in batch editing:
 
 {% if page.publishingplatform == "typescript" %}
 
- {% tabs %}
+{% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/aggregates-cs6/index.ts %}
+{% include code-snippet/grid/aggregates-reactive-batchedit-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/aggregates-cs6/index.html %}
+{% include code-snippet/grid/aggregates-reactive-batchedit-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/aggregates-cs6" %}
+{% previewsample "page.domainurl/code-snippet/grid/aggregates-reactive-batchedit-cs1" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/aggregates-cs6/index.js %}
+{% include code-snippet/grid/aggregates-reactive-batchedit-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/aggregates-cs6/index.html %}
+{% include code-snippet/grid/aggregates-reactive-batchedit-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/aggregates-cs6" %}
+{% previewsample "page.domainurl/code-snippet/grid/aggregates-reactive-batchedit-cs1" %}
 {% endif %}
 
 ## Refresh aggregate values in inline editing
@@ -52,27 +54,27 @@ In the following code, the input event for the Freight column editor has been re
 
 {% if page.publishingplatform == "typescript" %}
 
- {% tabs %}
+{% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/aggregates-cs7/index.ts %}
+{% include code-snippet/grid/aggregates-reactive-inlineedit-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/aggregates-cs7/index.html %}
+{% include code-snippet/grid/aggregates-reactive-inlineedit-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/aggregates-cs7" %}
+{% previewsample "page.domainurl/code-snippet/grid/aggregates-reactive-inlineedit-cs1" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/aggregates-cs7/index.js %}
+{% include code-snippet/grid/aggregates-reactive-inlineedit-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/aggregates-cs7/index.html %}
+{% include code-snippet/grid/aggregates-reactive-inlineedit-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/aggregates-cs7" %}
+{% previewsample "page.domainurl/code-snippet/grid/aggregates-reactive-inlineedit-cs1" %}
 {% endif %}
