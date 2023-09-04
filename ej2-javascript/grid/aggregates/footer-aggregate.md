@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Footer aggregate in ##Platform_Name## Grid control
 
-The Syncfusion JavaScript Grid control allows you to calculate and display aggregate values in the footer cells. The footer aggregate value is calculated from all the rows in the grid. You can use the [footerTemplate](../../api/grid/aggregateColumn/#footertemplate) property to render the aggregate value in the footer cells.
+The Syncfusion ##Platform_Name## Grid control allows you to calculate and display aggregate values in the footer cells. The footer aggregate value is calculated from all the rows in the grid. You can use the [footerTemplate](../../api/grid/aggregateColumn/#footertemplate) property to render the aggregate value in the footer cells.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -44,7 +44,7 @@ The Syncfusion JavaScript Grid control allows you to calculate and display aggre
 
 ## Format the aggregate value
 
-To format the aggregate value result in the Syncfusion JavaScript Grid control, you can use the [format](../../api/grid/aggregateColumn/#format) property of the [AggregateColumn](../../api/grid/aggregateColumn/). The `format` property allows you to specify a format string that determines how the aggregate value will be displayed.
+To format the aggregate value result in the Syncfusion ##Platform_Name## Grid control, you can use the [format](../../api/grid/aggregateColumn/#format) property of the [AggregateColumn](../../api/grid/aggregateColumn/). The `format` property allows you to specify a format string that determines how the aggregate value will be displayed.
 
 {% if page.publishingplatform == "typescript" %}
 
