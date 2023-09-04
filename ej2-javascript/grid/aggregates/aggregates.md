@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Aggregates in ##Platform_Name## Grid control
 
-The Aggregates feature in the Syncfusion JavaScript Grid control allows you to display aggregate values in the footer, group footer, and group caption of the grid. With this feature, you can easily perform calculations on specific columns and show summary information. This feature can be configured using the `aggregates` property. To represent an aggregate column, you need to specify the minimum required properties, such as [field](../../api/grid/aggregateColumn/#field) and [type](../../api/grid/aggregateColumn/#type).
+The Aggregates feature in the Syncfusion ##Platform_Name## Grid control allows you to display aggregate values in the footer, group footer, and group caption of the grid. With this feature, you can easily perform calculations on specific columns and show summary information. This feature can be configured using the `aggregates` property. To represent an aggregate column, you need to specify the minimum required properties, such as [field](../../api/grid/aggregateColumn/#field) and [type](../../api/grid/aggregateColumn/#type).
 
 To use aggregate feature, you need to inject the `Aggregate` module.
 
@@ -58,7 +58,7 @@ By default, the aggregate values are displayed in the footer, group, and caption
 
 ## Built-in aggregate types
 
-The Syncfusion JavaScript Grid control provides several built-in aggregate types that can be specified in the [type](../../api/grid/aggregateColumn/#type) property to configure an aggregate column.
+The Syncfusion ##Platform_Name## Grid control provides several built-in aggregate types that can be specified in the [type](../../api/grid/aggregateColumn/#type) property to configure an aggregate column.
 
 The available built-in aggregate types are:
 
@@ -105,9 +105,9 @@ Multiple aggregates for a column allows you to calculate and display different s
 
 However, in scenarios where you need to display multiple summary values for the same column, multiple aggregates come into play. This feature enables you to calculate and display various aggregate values, such as sum, average, minimum, maximum, or custom calculations, concurrently for a specific column.
 
-You can use multiple aggregates for a single column in the Syncfusion JavaScript Grid by specifying the aggregate [type](../../api/grid/aggregateColumn/#type) as an array.
+You can use multiple aggregates for a single column in the Syncfusion ##Platform_Name## Grid by specifying the aggregate [type](../../api/grid/aggregateColumn/#type) as an array.
 
-Here's an example of how to use multiple aggregates in the Syncfusion JavaScript Grid:
+Here's an example of how to use multiple aggregates in the Syncfusion ##Platform_Name## Grid:
 
 {% if page.publishingplatform == "typescript" %}
 
