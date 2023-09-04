@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Custom aggregate in ##Platform_Name## Grid control
 
-The custom aggregate feature in Syncfusion's JavaScript Grid control allows you to calculate aggregate values using your own aggregate function. This feature can be useful in scenarios where the built-in aggregate functions do not meet your specific requirements. To use the custom aggregate option, follow the steps below:
+The custom aggregate feature in Syncfusion's ##Platform_Name## Grid control allows you to calculate aggregate values using your own aggregate function. This feature can be useful in scenarios where the built-in aggregate functions do not meet your specific requirements. To use the custom aggregate option, follow the steps below:
 
 * Set the [type](../../api/grid/aggregateColumn/#type) property to **Custom**.
 
@@ -23,7 +23,7 @@ The custom aggregate function will be invoked differently for total and group ag
 
 **Group Aggregation:** The custom aggregate function will be called with the current group details and the aggregate column object as arguments.
 
-Here's an example that demonstrates how to use the custom aggregate feature in the JavaScript Grid control:
+Here's an example that demonstrates how to use the custom aggregate feature in the ##Platform_Name## Grid control:
 
 {% if page.publishingplatform == "typescript" %}
 

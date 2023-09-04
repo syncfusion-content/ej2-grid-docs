@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Reactive aggregate in ##Platform_Name## Grid control
 
-The Syncfusion JavaScript Grid control provides support for reactive aggregates, which allow you to update the aggregate values dynamically as the data changes. Reactive aggregates automatically recalculate their values when there are changes in the underlying data, providing real-time updates to the aggregate values in the grid.
+The Syncfusion ##Platform_Name## Grid control provides support for reactive aggregates, which allow you to update the aggregate values dynamically as the data changes. Reactive aggregates automatically recalculate their values when there are changes in the underlying data, providing real-time updates to the aggregate values in the grid.
 
 ## Auto update aggregate value in batch editing
 
