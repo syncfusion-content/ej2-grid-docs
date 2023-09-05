@@ -58,40 +58,6 @@ The default items are displayed in following table.
 > * You can disable column menu for a particular column by defining the [`columns.showColumnMenu`](../../api/grid/column/#showcolumnmenu) as false.
 > * You can customize the default items by defining the [`columnMenuItems`](../../api/grid/#columnmenuitems) with required items.
 
-## Column menu events
-
-During the resizing action, the grid component triggers the below two events.
-
-1. The [`columnMenuOpen`](../../api/grid/#columnmenuopen) event triggers before the column menu opens.
-2. The [`columnMenuClick`](../../api/grid/#columnmenuclick) event triggers when the user clicks the column menu of the grid.
-
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/row-template-cs5/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs5/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/grid/row-template-cs5" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/row-template-cs5/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs5/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/grid/row-template-cs5" %}
-{% endif %}
-
 ## Custom column menu item
 
 Custom column menu items can be added by defining the [`columnMenuItems`](../../api/grid/#columnmenuitems) as collection of the[`columnMenuItemModel`](../../api/grid/columnMenuItemModel). Actions for this customized items can be defined in the [`columnMenuClick`](../../api/grid/#columnmenuclick) event.
@@ -156,17 +122,63 @@ The following sample, **Filter** item was hidden in column menu when opens for t
 {% previewsample "page.domainurl/code-snippet/grid/row-template-cs7" %}
 {% endif %}
 
+## Render nested column menu
+
+The nested column menu feature provides an extended menu option in the grid column headers, allows you to access additional actions and options related to the columns.
+
+To enable the nested column menu feature, you need to define the [columnMenuItems](https://ej2.syncfusion.com/angular/documentation/api/grid/#columnmenuitems) property in your component. The `columnMenuItems` property is an array that contains the items for the column menu. Each item can be a string representing a built-in menu item or an object defining a custom menu item.
+
+Here is an example of how to configure the `columnMenuItems` property to include a nested menu:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/column-columnmenu-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-columnmenu-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column-columnmenu-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/column-columnmenu-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-columnmenu-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/column-columnmenu-cs1" %}
+{% endif %}
+
 ## Customize the icon of column menu
 
-You can customize the column menu icon by overriding the default grid class `.e-icons.e-columnmenu` with a custom property `content` as mentioned below.
+To customize the column menu icon, you need to override the default grid class **.e-icons.e-columnmenu** with a custom CSS property called **content**. By specifying a Unicode character or an icon font's CSS class, you can change the icon displayed in the column menu.
 
-```
+To customize the column menu icon, follow these steps:
+
+1.Add the necessary CSS code to override the default grid class:
+
+```css
 .e-grid .e-columnheader .e-icons.e-columnmenu::before {
-              content: "\e941";
-      }
+    content: "\e99a";
+}
 ```
 
-In the below sample, grid is rendered with a customized column menu icon.
+2.Import the required icon stylesheets. You can use either the material or bootstrap5 style, depending on your preference. Add the following code to import the stylesheets:
+
+```html
+<link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/material.css" rel="stylesheet" />
+<link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/bootstrap5.css" rel="stylesheet" />
+```
+
+Here is an example that demonstrates how to customize the column menu icon in the Syncfusion Grid:
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -193,4 +205,38 @@ In the below sample, grid is rendered with a customized column menu icon.
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/grid/custom-column-menu-icon-cs1" %}
+{% endif %}
+
+## Column menu events
+
+The column menu in Syncfusion JavaScript Grid provides a set of events that allow customization of behavior and performing actions when the column menu is opened or clicked. The below events are helpful for adding additional functionality or implementing specific actions based on user interactions with the column menu.
+
+1. The [columnMenuOpen](../../api/grid/#columnmenuopen) event triggers before the column menu opens.
+2. The [columnMenuClick](../../api/grid/#columnmenuclick) event triggers when the user clicks the column menu of the grid.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/row-template-cs5/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/row-template-cs5/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/row-template-cs5" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/row-template-cs5/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/row-template-cs5/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/row-template-cs5" %}
 {% endif %}
