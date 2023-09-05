@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Column menu in ##Platform_Name## Grid control
 
-The column menu in the Syncfusion Grid component provides options to enable features such as sorting, grouping, filtering, column chooser, and autofit. When users click on the column header’s menu icon, a menu will be displayed with these integrated features. To enable the column menu, you need to set the [`showColumnMenu`](../../api/grid/#showcolumnmenu) property to **true** in the Grid configuration.
+The column menu in the Syncfusion Grid component provides options to enable features such as sorting, grouping, filtering, column chooser, and autofit. When users click on the column header’s menu icon, a menu will be displayed with these integrated features. To enable the column menu, you need to set the [showColumnMenu](../../api/grid/#showcolumnmenu) property to **true** in the Grid configuration.
 
 To use the column menu, inject the **ColumnMenu** module in the grid.
 
@@ -26,7 +26,7 @@ The default items are displayed in following table.
 | **AutoFit** | Auto fit the current column. |
 | **AutoFitAll** | Auto fit all columns. |
 | **ColumnChooser** | Choose the column visibility. |
-| **Filter** | Show the filter option as given in [`filterSettings.type`](../../api/grid/filterSettings/#type) |
+| **Filter** | Show the filter option as given in [filterSettings.type](../../api/grid/filterSettings/#type) |
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -55,12 +55,12 @@ The default items are displayed in following table.
 {% previewsample "page.domainurl/code-snippet/grid/row-template-cs4" %}
 {% endif %}
 
-> * You can disable column menu for a particular column by defining the [`columns.showColumnMenu`](../../api/grid/column/#showcolumnmenu) as false.
-> * You can customize the default items by defining the [`columnMenuItems`](../../api/grid/#columnmenuitems) with required items.
+> * You can disable column menu for a particular column by defining the [columns.showColumnMenu](../../api/grid/column/#showcolumnmenu) as false.
+> * You can customize the default items by defining the [columnMenuItems](../../api/grid/#columnmenuitems) with required items.
 
 ## Add Custom column menu item
 
-The custom column menu item feature allows you to add additional menu items to the column menu in the Syncfusion Grid. These custom menu items can be defined using the [`columnMenuItems`](../../api/grid/#columnmenuitems) property, which accepts a collection of [`columnMenuItemModel`](../../api/grid/columnMenuItemModel) objects. You can define the actions for these custom items in the [`columnMenuClick`](../../api/grid/#columnmenuclick) event.
+The custom column menu item feature allows you to add additional menu items to the column menu in the Syncfusion Grid. These custom menu items can be defined using the [columnMenuItems](../../api/grid/#columnmenuitems) property, which accepts a collection of [columnMenuItemModel](../../api/grid/columnMenuItemModel) objects. You can define the actions for these custom items in the [columnMenuClick](../../api/grid/#columnmenuclick) event.
 
 Consider the following example, which demonstrates how to add a custom column menu item to clear the sorting of the Grid:
 
