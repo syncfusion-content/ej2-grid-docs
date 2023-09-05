@@ -72,7 +72,7 @@ Here is an example of how to specify column types in a grid using the types ment
 
 ## Column Width
 
-To adjust the column width in a Grid, you can use the [width](https://ej2.syncfusion.com/documentation/api/grid/#width) property within the [columns](https://ej2.syncfusion.com/documentation/api/grid/#columns) property of the Grid configuration. This property enables you to define the column width in pixels or as a percentage. You can set the width to a specific value, like **100** for 100 pixels, or as a percentage value, such as **25%** for 25% of the available width.
+To adjust the column width in a Grid, you can use the [width](../../api/grid/#width) property within the [columns](../../api/grid/#columns) property of the Grid configuration. This property enables you to define the column width in pixels or as a percentage. You can set the width to a specific value, like **100** for 100 pixels, or as a percentage value, such as **25%** for 25% of the available width.
 
 1. Grid column width is calculated based on the sum of column widths. For example, a grid container with 4 columns and a width of 800 pixels will have columns with a default width of 200 pixels each.
 2. If you specify widths for some columns but not others, the Grid will distribute the available width equally among the columns without explicit widths. For example, if you have 3 columns with widths of 100px, 200px, and no width specified for the third column, the third column will occupy the remaining width after accounting for the first two columns.
@@ -136,42 +136,6 @@ The column width is specified as an absolute pixel value. For example, a column 
 
 {% previewsample "page.domainurl/code-snippet/grid/column-width-cs1" %}
 {% endif %}
-
-## Render boolean value as checkbox
-
-The Grid component allows you to render boolean values as checkboxes in columns. This can be achieved by using the [displayAsCheckBox](../../api/grid/column/#displayascheckbox) property, which is available in the [columns](https://helpej2.syncfusion.com/angular/documentation/api/grid/column/). This property is useful when you have a boolean column in your Grid and you want to display the values as checkboxes instead of the default text representation of **true** or **false**.
-
-To enable the rendering of boolean values as checkboxes, you need to set the `displayAsCheckBox` property of the `columns` to **true**.
-
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/bool-checkbox-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/bool-checkbox-cs1/index.html%}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/grid/bool-checkbox-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/bool-checkbox-cs1/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/bool-checkbox-cs1/index.html%}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/grid/bool-checkbox-cs1" %}
-{% endif %}
-
->* The `displayAsCheckBox` property is only applicable to boolean values in Grid columns.
->* When `displayAsCheckBox` is set to **true**, the boolean values will be rendered as checkboxes in the Grid column, with checked state indicating **true** and unchecked state indicating **false**.
 
 ## ValueAccessor
 
@@ -355,36 +319,41 @@ Format | Formatted value
 {% previewsample "page.domainurl/code-snippet/grid/pagerdropdown-cs1" %}
 {% endif %}
 
-## Render boolean values as checkbox
+## Render boolean value as checkbox
 
-To render boolean values as checkbox in columns, you need to set [`displayAsCheckBox`](../../api/grid/column/#displayascheckbox) property as **true**.
+The Grid component allows you to render boolean values as checkboxes in columns. This can be achieved by using the [displayAsCheckBox](../../api/grid/column/#displayascheckbox) property, which is available in the [columns](../../api/grid/#columns). This property is useful when you have a boolean column in your Grid and you want to display the values as checkboxes instead of the default text representation of **true** or **false**.
+
+To enable the rendering of boolean values as checkboxes, you need to set the `displayAsCheckBox` property of the `columns` to **true**.
 
 {% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/grid-cs5/index.ts %}
+{% include code-snippet/grid/bool-checkbox-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs5/index.html %}
+{% include code-snippet/grid/bool-checkbox-cs1/index.html%}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/grid-cs5" %}
+{% previewsample "page.domainurl/code-snippet/grid/bool-checkbox-cs1" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/grid-cs5/index.js %}
+{% include code-snippet/grid/bool-checkbox-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs5/index.html %}
+{% include code-snippet/grid/bool-checkbox-cs1/index.html%}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/grid-cs5" %}
+{% previewsample "page.domainurl/code-snippet/grid/bool-checkbox-cs1" %}
 {% endif %}
+
+>* The `displayAsCheckBox` property is only applicable to boolean values in Grid columns.
+>* When `displayAsCheckBox` is set to **true**, the boolean values will be rendered as checkboxes in the Grid column, with checked state indicating **true** and unchecked state indicating **false**.
 
 ## Visibility
 
