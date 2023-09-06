@@ -11,7 +11,11 @@ domainurl: ##DomainURL##
 
 # Row template in ##Platform_Name## Grid control
 
-The [`rowTemplate`](../../api/grid/#rowtemplate) has an option to customise the look and behavior of the grid rows. The [`rowTemplate`](../../api/grid/#rowtemplate) property accepts either the [template string](../../common/template-engine) or HTML element ID.
+The row template feature in Grid allows you to customize the appearance and layout of rows in the grid. This feature is useful when you want to display custom content, such as images, buttons, or other controls, within the rows.
+
+To enable the row template feature, you need to set the [rowTemplate](../../api/grid/#rowtemplate) property of the Grid component. This property accepts a custom HTML template that defines the layout for each row. 
+
+In the following example, Employee Information with Employee Photo is presented in the first column and employee details like Name, Address, etc., are presented in the second column.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -40,11 +44,15 @@ The [`rowTemplate`](../../api/grid/#rowtemplate) has an option to customise the 
 {% previewsample "page.domainurl/code-snippet/grid/row-template-cs30" %}
 {% endif %}
 
->The [`rowTemplate`](../../api/grid/#rowtemplate) property accepts only the TR element.
-
 ## Row template with formatting
 
-If the [`rowTemplate`](../../api/grid/#rowtemplate) is used, the value cannot be  formatted  inside the template using the [`columns.format`](../../api/grid/column/#format) property. In that case, a function should be defined globally to format the value and invoke it inside the template.
+The row template feature in Syncfusion Grid allows you to customize the layout of rows in the grid. This is useful when you want to display images, buttons, or other custom content within the rows of a grid.
+
+By default, Syncfusion Grid provides the [columns.format](../../api/grid/column/#format) property to format the values displayed in each column. However, when using the [rowtemplate](../../api/grid/#rowtemplate), the `columns.format` property cannot be directly applied to format the values inside the template.
+
+To format the values within the row template, you can define a global function that handles the formatting logic. This function can be invoked inside the template to format the corresponding values.
+
+Here is an example of how to define a global formatting function for a date column and use it inside a `rowTemplate`:
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -72,6 +80,8 @@ If the [`rowTemplate`](../../api/grid/#rowtemplate) is used, the value cannot be
 
 {% previewsample "page.domainurl/code-snippet/grid/row-template-format-cs1" %}
 {% endif %}
+
+>When using the `rowTemplate` feature in Syncfusion Grid, keep in mind that any formatting applied to columns using the `columns.format` property will not work inside the template.
 
 ## Limitations
 
