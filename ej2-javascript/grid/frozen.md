@@ -143,31 +143,4 @@ Deprecated Methods | Previous | Current | Suggested Alternative Methods | Exampl
 `getMovableDataRows()` <br> `getFrozenRightDataRows()` <br> `getFrozenDataRows()` | These methods returns the viewport data rows for the freeze, movable, and right tables separately. | In the new approach, when calling the `getMovableDataRows`, `getFrozenRightDataRows`, and `getFrozenDataRows` methods, returns the entire viewport data rows. You can then select specific cells within these rows using the following selectors <br> * Left-Freeze : `e-leftfreeze` <br> * Movable : `e-unfreeze` <br> * Right-Freeze : `e-rightfreeze`.| `getDataRows()` | **To get the movable data cells:** <br> gridInstance.getDataRows()[0].querySelectorAll('.e-unfreeze') <br><br> **To get the right freeze data cells:** <br> gridInstance.getDataRows()[0].querySelectorAll('.e-rightfreeze') <br><br> **To get the left freeze data cells:** <br> gridInstance.getDataRows()[0].querySelectorAll('.e-leftfreeze')
 `getMovableColumnHeaderByIndex()` <br> `getFrozenRightColumnHeaderByIndex()` <br> `getFrozenLeftColumnHeaderByIndex()` | In the previous architecture, these methods selects the movable, right freeze, and left freeze headers from the table separately. | In the new approach, when calling the `getMovableColumnHeaderByIndex`, `getFrozenRightColumnHeaderByIndex`, and `getFrozenLeftColumnHeaderByIndex` methods, you will still receive the same results as before. | `getColumnHeaderByIndex`() | gridInstance.getColumnHeaderByIndex(1)
 
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/scroller-cs4/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/scroller-cs4/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/grid/scroller-cs4" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/scroller-cs4/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/scroller-cs4/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/grid/scroller-cs4" %}
-{% endif %}
-
-> This is applicable when a frozen column is enabled and the edit mode is set as "**Normal**" in the Grid.
+> When a validation message is displayed in the frozen part (Left, Right, Fixed) of the table, scrolling is prevented until the validation message is cleared.
