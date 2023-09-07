@@ -1,4 +1,4 @@
-![image](https://github.com/syncfusion-content/ej2-grid-docs/assets/140058419/a494f992-e533-46bd-a84a-befcea5de165)---
+---
 layout: post
 title: Column menu in ##Platform_Name## Grid control | Syncfusion
 description: Learn here all about Column menu in Syncfusion ##Platform_Name## Grid control of Syncfusion Essential JS 2 and more.
