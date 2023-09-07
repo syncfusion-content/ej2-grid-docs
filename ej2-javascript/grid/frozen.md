@@ -130,8 +130,6 @@ In this demo, the **ShipCountry** column is frozen at the left and the **Custome
 
 > * Freeze Direction is not compatible with the [`isFrozen`](../api/grid/column/#isfrozen) and [`frozenColumns`](../api/grid/#frozencolumns) properties.
 
-> Note: When a validation message is displayed in the frozen part (Left, Right, Fixed) of the table, scrolling is prevented until the validation message is cleared.
-
 ## Deprecated Methods
 
 Deprecated Methods | Previous | Current | Suggested Alternative Methods | Example for achieving the same results
