@@ -1,4 +1,4 @@
----
+![image](https://github.com/syncfusion-content/ej2-grid-docs/assets/140058419/a494f992-e533-46bd-a84a-befcea5de165)---
 layout: post
 title: Column menu in ##Platform_Name## Grid control | Syncfusion
 description: Learn here all about Column menu in Syncfusion ##Platform_Name## Grid control of Syncfusion Essential JS 2 and more.
@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Column menu in ##Platform_Name## Grid control
 
-The column menu in the Syncfusion Grid component provides options to enable features such as sorting, grouping, filtering, column chooser, and autofit. When users click on the column header’s menu icon, a menu will be displayed with these integrated features. To enable the column menu, you need to set the [showColumnMenu](../../api/grid/#showcolumnmenu) property to **true** in the Grid configuration.
+The column menu in the Syncfusion ##Platform_Name## Grid component provides options to enable features such as sorting, grouping, filtering, column chooser, and autofit. When users click on the column header’s menu icon, a menu will be displayed with these integrated features. To enable the column menu, you need to set the [showColumnMenu](../../api/grid/#showcolumnmenu) property to **true** in the Grid configuration.
 
 To use the column menu, inject the **ColumnMenu** module in the grid.
 
