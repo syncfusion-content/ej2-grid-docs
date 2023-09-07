@@ -13,8 +13,6 @@ domainurl: ##DomainURL##
 
 Frozen rows and columns provides an option to make rows and columns always visible in the top and left side of the grid while scrolling.
 
-To use frozen rows and columns support, inject the `Freeze` module in the grid.
-
 In this demo, the [`frozenColumns`](../api/grid/#frozencolumns) is set as '2' and the [`frozenRows`](../api/grid/#frozenrows) is set as '3'. Hence, the left two columns and top three rows are frozen.
 
 {% if page.publishingplatform == "typescript" %}
@@ -129,8 +127,6 @@ In this demo, the **ShipCountry** column is frozen at the left and the **Custome
 {% endif %}
 
 > * Freeze Direction is not compatible with the [`isFrozen`](../api/grid/column/#isfrozen) and [`frozenColumns`](../api/grid/#frozencolumns) properties.
-
-> Note: When a validation message is displayed in the frozen part (Left, Right, Fixed) of the table, scrolling is prevented until the validation message is cleared.
 
 ## Deprecated Methods
 
