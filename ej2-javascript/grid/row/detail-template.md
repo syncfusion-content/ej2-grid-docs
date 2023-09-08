@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Detail template in ##Platform_Name## Grid control
+# Detail template in ##Platform_Name## Grid component
 
 The detail template in the Grid component allows you to display additional information about a specific row in the grid by expanding or collapsing detail content. This feature is useful when you need to show additional data or custom content that is specific to each row in the grid. You can use the [detailTemplate](../../api/grid/#detailtemplate) property to define an HTML template for the detail row. This template can include any HTML element or ##Platform_Name## component that you want to display as detail content.
 
