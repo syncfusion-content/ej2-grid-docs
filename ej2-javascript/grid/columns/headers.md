@@ -13,9 +13,9 @@ domainurl: ##DomainURL##
 
 ## Header text
 
-By default, column header title is displayed from column [field](https://ej2.syncfusion.com/javascript/documentation/api/grid/column/#field) value. To override the default header title, you have to define the [headerText](https://ej2.syncfusion.com/javascript/documentation/api/grid/column/#headertext) value.
+By default, the header text of a column in Grid is displayed from the column’s [field](../../api/grid/column/#field) value. However, you can easily override the default header title and provide a custom header text for the column using the [headerText](../../api/grid/column/#headertext) property.
 
-To enable the `headerText` property, you simply need to define it in the e-column element. The following example demonstrates how to enable header text for a Grid column.
+To enable the `headerText` property, you simply need to define it in the  [columns](../../api/grid/column/#columns) property. The following example demonstrates how to enable header text for a Grid column.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -49,151 +49,108 @@ are not defined in the column, the column renders with “empty” header text.
 
 ## Header template
 
-You can customize the header element by using the [`headerTemplate`](../../api/grid/column/#headerTemplate) property. In this demo, the custom element is rendered for both EmployeeID and BirthDate column headers.
+The [headerTemplate](../../api/grid/column/#headertemplate) property is used to customize the header element of a Grid column. With this property, you can render custom HTML elements or ##Platform_Name## components to the header element. This feature allows you to add more functionality to the header, such as sorting or filtering.
+
+In this demo, the custom element is rendered for both **CustomerID** and **OrderDate** column headers.
 
 {% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/headertemplate-cs1/index.ts %}
+{% include code-snippet/grid/headertemplate-cs-c/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/headertemplate-cs1/index.html %}
+{% include code-snippet/grid/headertemplate-cs-c/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/headertemplate-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/headertemplate-cs-c1" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/headertemplate-cs1/index.js %}
+{% include code-snippet/grid/headertemplate-cs-c/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/headertemplate-cs1/index.html %}
+{% include code-snippet/grid/headertemplate-cs-c/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/headertemplate-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/headertemplate-cs-c" %}
 {% endif %}
 
-## Change header text dynamically
+## Stacked header 
 
-You can change the column [`headerText`](../../api/grid/column/#headertext) dynamically through an external button.
+In Grid, you can group multiple levels of column headers by stacking the Grid columns. This feature allows you to organize the Grid columns in a more structured and understandable way. This can be achieved by setting the [columns->columns](../../api/grid/column/#columns) property. Within this property, you can define an array of column objects to group together as sub-headers under a main header. You can define the [headerText](../../api/grid/column/#headertext) property of each sub-header column to set the text for that sub-header.
 
-Follow the given steps to change the header text dynamically:
-
-**Step 1**:
-
-Get the column object corresponding to the field name by using the [`getColumnByField`](../../api/grid/#getcolumnbyfield) method. Then, change the header text value.
-
-```ts
-let column = grid.getColumnByField("ShipCity"); // Get column object.
-column.headerText = 'Changed Text';
-
-```
-
-**Step 2**:
-
-To reflect the changes in the grid header, invoke the [`refreshHeader`](../../api/grid/#refreshheader) method.
-
-```ts
-grid.refreshHeader();
-
-```
+You can customize the appearance of the stacked header elements by using the [headerTemplate](../../api/grid/column/#headertemplate) property. This property accepts an id reference, which allows you to define custom HTML elements or ##Platform_Name## components to the header element. Here's an example of how to use stacked headers with a custom `headerTemplate` in Syncfusion Grid.
 
 {% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/change-header-text-cs1/index.ts %}
+{% include code-snippet/grid/stackedheader-cs1-c/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/change-header-text-cs1/index.html %}
+{% include code-snippet/grid/stackedheader-cs1-c/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/change-header-text-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/stackedheader-cs1-c" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/change-header-text-cs1/index.js %}
+{% include code-snippet/grid/stackedheader-cs1-c/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/change-header-text-cs1/index.html %}
+{% include code-snippet/grid/stackedheader-cs1-c/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/change-header-text-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/stackedheader-cs1-c" %}
 {% endif %}
 
-## Change the orientation of header text
+## Align the text of header text
 
-You can change the orientation of the header text by using the [`customAttributes`](../../api/grid/column/#customattributes) property.
+You can horizontally align the text in column headers of the Grid component using the [headerTextAlign](../../api/grid/column/#headertextalign) property. By default, the text is aligned to the left, but you can change the alignment by setting the value of the `headerTextAlign` property to one of the following options:
 
-Ensure the following steps:
+* **Left**: Aligns the text to the left (default).
+* **Center**: Aligns the text to the center.
+* **Right**: Aligns the text to the right.
+* **Justify**: Header text is justified.
 
-**Step 1**:
-
-Create a CSS class with orientation style for the grid header cell.
-
-```
-.orientationcss .e-headercelldiv {
-    transform: rotate(90deg);
-}
-
-```
-
-**Step 2**:
-
-Add the custom CSS class to a particular column by using the [`customAttributes`](../../api/grid/column/#customattributes) property.
-
-```ts
-    { field: 'ShipCity', headerText: 'Ship City', textAlign: 'Center', customAttributes: {class: 'orientationcss'}, width: 80 },
-
-```
-
-**Step 3**:
-
-Resize the header cell height by using the following code.
-
-```ts
-function setHeaderHeight(args) {
-    let textWidth: number = document.querySelector(".orientationcss > div").scrollWidth;//Obtain the width of the headerText content.
-    let headerCell: NodeList = document.querySelectorAll(".e-headercell");
-    for(let i: number = 0; i < headerCell.length; i++) {
-        (<HTMLElement>headerCell.item(i)).style.height = textWidth + 'px'; //Assign the obtained textWidth as the height of the headerCell.
-    }
-}
-
-```
+Here is an example of using the `headerTextAlign` property to align the text of a Grid column header:
 
 {% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/orientation-cs1/index.ts %}
+{% include code-snippet/grid/AlignText-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/orientation-cs1/index.html %}
+{% include code-snippet/grid/AlignText-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/orientation-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/AlignText-cs1" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/orientation-cs1/index.js %}
+{% include code-snippet/grid/AlignText-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/orientation-cs1/index.html %}
+{% include code-snippet/grid/AlignText-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/orientation-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/AlignText-cs1" %}
 {% endif %}
+
+>* The `headerTextAlign` property only changes the alignment of the text in the column header, and not the content of the column. If you want to align both the column header and content, you can use the [textAlign](../../api/grid/column/#textalign) property.
+>* You can also use the `headerTextAlign` property with the stacked header feature in Syncfusion Grid. The property will align the header text in the sub-headers as well.
+
