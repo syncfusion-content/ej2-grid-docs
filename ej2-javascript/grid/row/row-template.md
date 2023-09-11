@@ -83,6 +83,41 @@ Here is an example of how to define a global formatting function for a date colu
 
 >When using the `rowTemplate` feature in Syncfusion Grid, keep in mind that any formatting applied to columns using the `columns.format` property will not work inside the template.
 
+## Render syncfusion control in row template
+
+The Grid allows you to render custom Syncfusion controls within the rows of the grid. This feature is helpful as it enables you to display interactive Syncfusion controls instead of field values in the grid.
+
+To enable a Syncfusion control in a row template, you need to set the [rowTemplate](../../api/grid/#rowtemplate) property of the Grid component. This property accepts a custom HTML template that defines the layout for each row. 
+
+Here is an example that demonstrates rendering Syncfusion controls within a row template :
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/row-template-component-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/row-template-component-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/row-template-component-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/row-template-component-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/row-template-component-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/row-template-component-cs1" %}
+{% endif %}
+
 ## Limitations
 
 Row template feature is not compatible with all the features which are available in grid and it has limited features support. Here we have listed out the features which are not compatible with row template feature.
