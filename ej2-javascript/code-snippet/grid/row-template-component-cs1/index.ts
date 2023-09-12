@@ -22,8 +22,8 @@ let grid: Grid = new Grid({
 
         var chipList = gridInstance.getContentTable().querySelectorAll('.chipList');
         for (var i = 0; i < chipList.length; i++) {
-            var innerText = chipList[i].innerText;
-            new ChipList({ chips: [innerText] }, chipList[i]);
+            var chipValue  = chipList[i].innerText;
+            new ChipList({ chips: [chipValue] }, chipList[i]);
         }
 
         var NumericList = gridInstance.getContentTable().querySelectorAll('.numeric');
@@ -45,14 +45,14 @@ let grid: Grid = new Grid({
         
         var dropdownList = gridInstance.getContentTable().querySelectorAll('.dropdownlist-input');
         for (var i = 0; i < dropdownList.length; i++) {
-            var dropdownValueInput = dropdownList[i];
+            var dropdownInputValue = dropdownList[i];
             var dropData = ['Processing', 'Order Placed'];
-            var listObj = new DropDownList({
+            var dropdown = new DropDownList({
                 dataSource: dropData,
                 value: dropdownList[i].value,
             });
 
-            listObj.appendTo(dropdownValueInput);
+            dropdown.appendTo(dropdownInputValue);
         }
     },
 });

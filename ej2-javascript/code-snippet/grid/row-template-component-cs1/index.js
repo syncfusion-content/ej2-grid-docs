@@ -16,14 +16,14 @@ var grid = new ej.grids.Grid({
 
         var chipList = gridInstance.getContentTable().querySelectorAll('.chipList');
         for (var i = 0; i < chipList.length; i++) {
-            var innerText = chipList[i].innerText;
-            new ej.buttons.ChipList({ chips: [innerText] }, chipList[i]);
+            var chipValue = chipList[i].innerText;
+            new ej.buttons.ChipList({ chips: [chipValue] }, chipList[i]);
         }
 
         var NumericList = gridInstance.getContentTable().querySelectorAll('.numeric');
         for (var i = 0; i < NumericList.length; i++) {
-            var currency = new ej.inputs.NumericTextBox({});
-            currency.appendTo(NumericList[i]);
+            var numberValue = new ej.inputs.NumericTextBox({});
+            numberValue.appendTo(NumericList[i]);
         }
 
         var dateList = gridInstance.getContentTable().querySelectorAll('.date-input');
@@ -39,13 +39,13 @@ var grid = new ej.grids.Grid({
 
         var dropdownList = gridInstance.getContentTable().querySelectorAll('.dropdownlist-input');
         for (var i = 0; i < dropdownList.length; i++) {
-            var dropdownValueInput = dropdownList[i];
+            var dropdownInputValue = dropdownList[i];
             var dropData = ['Processing', 'Order Placed'];
-            var listObj = new ej.dropdowns.DropDownList({
+            var dropdown = new ej.dropdowns.DropDownList({
                 dataSource: dropData,
                 value: dropdownList[i].value,
             });
-            listObj.appendTo(dropdownValueInput);
+            dropdown.appendTo(dropdownInputValue);
         }
     },
 });
