@@ -11,7 +11,11 @@ domainurl: ##DomainURL##
 
 # Export multiple grids in ##Platform_Name## Grid control
 
-PDF export provides an option for exporting multiple grids to same file. In this exported document, each grid will be exported to new page of document in same file.
+PDF export provides an option for exporting multiple grids to same file. Multiple grids can be exported by providing their `IDs` in the `exportGrids` property of grid.
+
+## Same page
+
+To export the grids in same page, define `multipleExport.type` as `AppendToPage` in `exportProperties`. It also have an option to provide blank space between the grids. These blank space can be defined by using  `multipleExport.blankSpace`.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -39,3 +43,37 @@ PDF export provides an option for exporting multiple grids to same file. In this
 
 {% previewsample "page.domainurl/code-snippet/grid/export-mutiple-grid-cs3" %}
 {% endif %}
+
+
+## New page
+
+Pdf exporting provides support to export multiple grids in new page. To export in new page, define  `multipleExport.type` as `NewSheet` in `exportProperties`.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/export-mutiple-grid-cs4/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/export-mutiple-grid-cs4/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/export-mutiple-grid-cs4" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/export-mutiple-grid-cs4/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/export-mutiple-grid-cs4/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/export-mutiple-grid-cs4" %}
+{% endif %}
+
+>By default, `multipleExport.blankRows` value is 5.
