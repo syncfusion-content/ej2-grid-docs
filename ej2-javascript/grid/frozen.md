@@ -97,7 +97,7 @@ Types of the [`column.freeze`](../api/grid/column/#freeze) directions:
 * **`Right`**: Allows you to freeze the columns at the right.
 * **`Fixed`**: Allows you to lock the column at a fixed position by ensuring its visibility during horizontal scroll.
 
-In this demo, the **ShipCountry** column is frozen at the left and the **CustomerID** column is frozen at the right side of the content table.
+In this demo, the **ShipCountry** column is frozen at the left and the **CustomerID** column is frozen at the right  and the **ShipName** column at a fixed position using [`column.freeze`](../api/grid/column/#freeze) property.
 
 {% if page.publishingplatform == "typescript" %}
 
