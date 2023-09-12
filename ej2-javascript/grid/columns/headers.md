@@ -154,3 +154,47 @@ Here is an example of using the `headerTextAlign` property to align the text of 
 >* The `headerTextAlign` property only changes the alignment of the text in the column header, and not the content of the column. If you want to align both the column header and content, you can use the [textAlign](../../api/grid/column/#textalign) property.
 >* You can also use the `headerTextAlign` property with the stacked header feature in Syncfusion Grid. The property will align the header text in the sub-headers as well.
 
+## Autowrap the Header Text
+
+The autowrap allows the cell content of the grid to wrap to the next line when it exceeds the boundary of the specified cell width. The cell content wrapping works based on the position of white space between words. To support the Autowrap functionality in Syncfusion Grid, you should set the appropriate [width](../../api/grid/column/#width) for the columns. The column width defines the maximum width of a column and helps to wrap the content automatically.
+
+To enable autowrap, set the [allowTextWrap](../../api/grid#allowtextwrap) property to **true**. You can also configure the auto wrap mode by setting the [textWrapSettings.wrapMode](../../api/grid/textWrapSettings/#wrapmode)property.
+
+Grid provides the below three options for configuring:
+
+* **Both**: This is the default value for wrapMode. With this option, both the grid header text and content is wrapped.
+* **Header**: With this option, only the grid header text is wrapped.
+* **Content**: With this option, only the grid content is wrapped.
+
+>* If a column width is not specified, then the Autowrap of columns will be adjusted with respect to the grid's width.
+>* If a column's header text contains no white space, the text may not be wrapped.
+>* If the content of a cell contains HTML tags, the Autowrap functionality may not work as expected. In such cases, you can use the [headerTemplate](../../api/grid/column/#headertemplate) and [template](../../api/grid/column/#template) properties of the column to customize the appearance of the header and cell content.
+
+In the example below, the  `textWrapSettings.wrapMode` property is set to **Header** only the grid header text is wrap to the next line.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/column-header-autowrap/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-header-autowrap/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column-header-autowrap" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/column-header-autowrap/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-header-autowrap/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/column-header-autowrap" %}
+{% endif %}
