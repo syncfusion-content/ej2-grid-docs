@@ -1,3 +1,4 @@
+
 var grid = new ej.grids.Grid({
     dataSource: data,
     allowPaging: true,
@@ -10,7 +11,8 @@ var grid = new ej.grids.Grid({
             textAlign: 'Right', 
             width: 120, 
             minWidth: 10, 
-            headerTemplate: '#orderID' },
+            headerTemplate: '#orderID' 
+        },
         {
             headerText: 'Order Details', 
             headerTemplate: '#orderDate', 
@@ -21,7 +23,8 @@ var grid = new ej.grids.Grid({
                     textAlign: 'Right', 
                     width: 135, 
                     format: 'yMd', 
-                    minWidth: 10 },
+                    minWidth: 10 
+                },
                 { 
                     field: 'Freight', 
                     headerText: 'Freight($)', 

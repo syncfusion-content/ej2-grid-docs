@@ -25,9 +25,11 @@ var grid = new ej.grids.Grid({
     {
       field: 'OrderDate',
       headerText: 'Order Date',
-      width: 140,
+      width: 240,
       format: 'yMd',
-      headerTemplate: `<div id='OrderDate'></div>`,
+      headerTemplate: `<div><span id='OrderDate'></span>
+      <label id='headerText' style='margin-left:8px'>Order Date</label>
+      </div>`,
     },
   ],
 });
@@ -42,16 +44,14 @@ let dropDown = new ej.dropdowns.DropDownList({
 });
 dropDown.appendTo('#Freight');
 
+
 var switchObj = new ej.buttons.Switch({
   headerText: 'Order Date',
-  value: 'OrderDate',
   change: change,
 });
-// Render initialized Switch.
 switchObj.appendTo('#OrderDate');
 
 function change(args) {
-  grid.getColumnByField('OrderDate').headerText = args.checked ? 'Purchase Date' : 'Order Date'
+  headerText = args.checked ? 'Purchase Date' : 'Order Date';
+  document.getElementById('headerText').innerHTML = headerText;
 }
-
-

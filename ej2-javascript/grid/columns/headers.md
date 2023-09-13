@@ -198,3 +198,119 @@ In the example below, the  `textWrapSettings.wrapMode` property is set to **Head
 
 {% previewsample "page.domainurl/code-snippet/grid/column-header-autowrap" %}
 {% endif %}
+
+## Change the height of header
+
+Changing the height of the header can be useful in cases where the default height is not sufficient to display the header content cell. For example, if you have a header with a lot of text or if you want to add an image to the header, you may need to increase the height of the header to accommodate the content. This can be easily achieved by changing the height of the header using CSS or by dynamically adjusting the height using a methods.
+
+**Using css**
+
+You can use CSS to override the default height of the **.e-grid .e-headercell** class to change the height of the header. Here is an example code snippet:
+
+```css
+.e-grid .e-headercell {
+  height: 130px;
+}  
+```
+
+**Using methods**
+
+To change the height of the header dynamically, you can use the [getHeaderContent](../../api/grid#getheadercontent) method to get the header content element of the Syncfusion Grid. Then, you can use the **querySelectorAll** method to get all the header cell elements with the class **e-headercell**. Finally, you can loop through each header cell element and set its style property to adjust the height.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/column-header-autowrap/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-header-autowrap/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column-header-autowrap" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/column-header-autowrap/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-header-autowrap/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/column-header-autowrap" %}
+{% endif %}
+
+>* You can also use the [getHeaderTable](../../api/grid/#getheadertable) method to get the table element of the header, and then adjust the height.
+>* You cannot change the height of row below the default height of 42px using the **e-columnheader** class.
+
+## Change the header text dynamically
+
+The Syncfusion Grid component provides a way to modify the header text of a corresponding column in real-time based on events or other events. This feature can be useful in various scenarios, such as displaying a custom header text for a specific column or updating the header text dynamically based on input. By allowing for dynamic changes to the header text, the Grid provides a more flexible and customizable experience.
+
+**Using Event**
+
+To modify the header text of a corresponding column dynamically, you can use the [headerCellInfo](../../api/grid/#headercellinfo) event provided by the Syncfusion Grid. This event is triggered for each header cell element rendered in the Grid.
+
+When the `headerCellInfo` event is triggered, it provides a **HeaderCellInfoEventArgs** object as a parameter. This object contains the following properties:
+
+* **cell**: Defines the header cell that is being modified.
+* **node**: Defines the DOM element of the header cell that is being modified.
+
+You can use these properties to access and modify the header text of the corresponding column. Once the header text is modified, you can refresh the Grid to reflect the changes by calling the [refreshHeader](../../api/grid#refreshheader) method of the Grid.
+
+**Using method**
+
+The Grid component provides several methods that allow you to change the column header text dynamically. Here are some of the methods you can use:
+
+ 1.[getColumnByField](../../api/grid/#getcolumnbyfield): This method takes a field name as a parameter and returns the entire column object that corresponds to that field name, including properties such as headerText, width, and alignment. You can use this method to modify any aspect of the column.
+
+ 2.[getColumnHeaderByField](../../api/grid/#getcolumnheaderbyfield): Retrieves the header element of a column based on its field name. You can modify the **textContent** property of the header element to change the header text. This method does not return a reference to the column object itself, only to the header element.
+
+ 3.[getColumnIndexByField](../../api/grid/#getcolumnindexbyfield): Retrieves the index of a column based on its field name. You can then use the `getColumnByIndex` method to retrieve the column object and modify its `headerText` property to change the header text.
+    
+ 4.[getColumnByUid](../../api/grid/#getcolumnbyuid): Retrieves the column object based on its unique identifier (UID). You can modify the `headerText` property of the column object to change the header text.
+
+ 5.[getColumnHeaderByIndex](../../api/grid/#getcolumnheaderbyindex): Retrieves the header element of a column based on its zero-based index. You can modify the **textContent** property of the header element to change the header text. This method does not return a reference to the column object itself, only to the header element.
+
+ 6.[getColumnIndexByUid](../../api/grid/#getcolumnindexbyuid): Retrieves the index of a column based on its unique identifier (UID). You can then use the `getColumnByIndex` method to retrieve the column object and modify its `headerText` property to change the header text.
+
+ 7.[getColumnHeaderByUid](../../api/grid/#getcolumnheaderbyuid): Retrieves the header element of a column based on its unique identifier (UID). You can modify the **textContent** property of the  header element to change the header text. This method does not return a reference to the column object itself, only to the header element. If you only have an [template](../../api/grid/column/#template) for the column header, and the column itself is not defined with a `field` , then you can use the `getColumnHeaderByUid` method to get a reference to the header element and modify its text content to change the header text.
+	
+>* When you change the header text dynamically, make sure to **refresh** the Grid to reflect the changes by calling the [refreshHeader](../../api/grid/#refreshheader) method.
+>* The UID is automatically generated by the Grid component and may change whenever the grid is refreshed or updated.
+
+Here is an example of how to change the header text of a column using the `getColumnByField` method:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/column-header-dynamically/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-header-dynamically/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column-header-dynamically" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/column-header-dynamically/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-header-dynamically/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/column-header-dynamically" %}
+{% endif %}
+
+>* You can also use the [getHeaderTable](../../api/grid/#getheadertable) method to get the table element of the header, and then adjust the height.
+>* You cannot change the height of row below the default height of 42px using the **e-columnheader** class.
