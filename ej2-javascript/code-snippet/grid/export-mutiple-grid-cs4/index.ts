@@ -36,7 +36,7 @@ secondGrid.appendTo('#SecondGrid');
 firstGrid.toolbarClick = (args: Object) => {
     if (args['item'].id === 'FirstGrid_pdfexport') {
         let appendPdfExportProperties: PdfExportProperties = {
-            multipleExport: { type: "AppendToPage", blankSpace: 5 }
+            multipleExport: { type: "AppendToPage", blankSpace: 10 }
         };
         firstGrid.pdfExport(appendPdfExportProperties, true);
     }

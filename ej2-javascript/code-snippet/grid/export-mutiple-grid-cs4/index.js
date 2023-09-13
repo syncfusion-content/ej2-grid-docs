@@ -29,9 +29,8 @@ secondGrid.appendTo('#SecondGrid');
 firstGrid.toolbarClick = function (args) {
     if (args['item'].id === 'FirstGrid_pdfexport') {
         var appendPdfExportProperties = {
-            multipleExport: { type: "AppendToPage", blankSpace: 5 }
+            multipleExport: { type: "AppendToPage", blankSpace: 10 }
         };
         firstGrid.pdfExport(appendPdfExportProperties, true);
     }
 }
-

@@ -75,5 +75,3 @@ Pdf exporting provides support to export multiple grids in new page. To export i
 
 {% previewsample "page.domainurl/code-snippet/grid/export-mutiple-grid-cs4" %}
 {% endif %}
-
->By default, `multipleExport.blankRows` value is 5.
