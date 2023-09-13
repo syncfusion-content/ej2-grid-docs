@@ -305,3 +305,138 @@ Here is an example code snippet that demonstrates how to display serial numbers 
 {% previewsample "page.domainurl/code-snippet/grid/column-dynamic-generation-cs1" %}
 {% endif %}
 
+## Complex data binding
+
+The Syncfusion Grid component allows you to achieve complex data binding by using the dot (.) operator in the [column.field](../../api/grid/column/#field). This feature is particularly useful when dealing with nested or complex data structures.
+
+### Using local data
+
+To enable complex data binding in the Grid component using local data, use the dot (.) operator in the [field](../../api/grid/column/#field) property of the column. Here is an example of how to achieve complex data binding using local data:
+
+In the below example, we have bound the nested **Employee** object's **FirstName** and **LastName** properties using the dot (.) operator.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/complex-binding-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/complex-binding-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/complex-binding-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/complex-binding-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/complex-binding-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/complex-binding-cs1" %}
+{% endif %}
+
+### Using remote data
+
+To enable complex data binding in the Grid component using remote data, add the [expand](../../api/data/query/#expand) query to the [query](../../api/grid/#query) property of the Grid, to eager load the complex data. Here is an example of how to achieve complex data binding using remote data:
+
+In the below example, we have used the `expand` query to load the nested Employee object's **City** property using the dot (.) operator.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/complex-binding-remoteData-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/complex-binding-remoteData-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/complex-binding-remoteData-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/complex-binding-remoteData-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/complex-binding-remoteData-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/complex-binding-remoteData-cs1" %}
+{% endif %}
+
+### Complex data binding with list of array of objects
+
+The Syncfusion Grid supports complex data binding with lists of arrays of objects. This feature allows you to bind complex data with multiple levels of nested objects and arrays to the Grid.
+
+The following example shows how to set complex field for datasource having array Of objects.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/complexBinding-ArrayOfObject-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/complexBinding-ArrayOfObject-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/complexBinding-ArrayOfObject-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/complexBinding-ArrayOfObject-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/complexBinding-ArrayOfObject-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/complexBinding-ArrayOfObject-cs1" %}
+{% endif %}
+
+### How to set complex column as foreign key column
+
+The Syncfusion Grid component provides the ability to set complex columns as foreign key columns. This allows you to display related data from a foreign data source based on the complex column value.
+
+The following example demonstrates how to set the **Employee.EmployeeID** column as a foreign key column, and display the **FirstName** column from the foreign data.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/complexBinding-foreignKey-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/complexBinding-foreignKey-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/complexBinding-foreignKey-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/complexBinding-foreignKey-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/complexBinding-foreignKey-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/complexBinding-foreignKey-cs1" %}
+{% endif %}
