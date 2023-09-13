@@ -11,7 +11,6 @@ var grid = new ej.grids.Grid({
 grid.appendTo('#Grid');
 grid.dataBound = () => {
     var column = grid.columns[0];
-    debugger;
     column.isPrimaryKey = 'true';
   };
 
