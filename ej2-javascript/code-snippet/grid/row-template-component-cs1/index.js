@@ -1,8 +1,6 @@
 var grid = new ej.grids.Grid({
     dataSource: data,
     rowTemplate: '#rowtemplate',
-    height: 335,
-    width: 'auto',
     columns: [
         { field: 'OrderID', headerText: 'Order ID', width: 100 },
         { field: 'Quantity', headerText: 'Quantity', width: 100 },
