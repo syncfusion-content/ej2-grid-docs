@@ -16,15 +16,15 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 
-let show: Button = new Button({ cssClass: 'e-flat' }, '#show');
-let hide: Button = new Button({ cssClass: 'e-flat' }, '#hide');
+let show: Button = new Button({ cssClass: 'e-info' }, '#show');
+let hide: Button = new Button({ cssClass: 'e-info' }, '#hide');
 
 document.getElementById('show').onclick = () => {
-    grid.showColumns(['Customer ID', 'Ship Name']); //show by HeaderText
+    grid.showColumns('Customer ID', 'headerText'); //show by HeaderText
 };
 
 document.getElementById('hide').onclick = () => {
-    grid.hideColumns(['Customer ID', 'Ship Name']); //hide by HeaderText
+    grid.hideColumns('Customer ID', 'headerText'); //hide by HeaderText
 };
 
 

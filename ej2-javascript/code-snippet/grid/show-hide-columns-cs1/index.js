@@ -10,14 +10,14 @@ var grid = new ej.grids.Grid({
 });
 grid.appendTo('#Grid');
 
-var show = new ej.buttons.Button({ cssClass: 'e-flat' }, '#show');
-var hide = new ej.buttons.Button({ cssClass: 'e-flat' }, '#hide');
+var show = new ej.buttons.Button({ cssClass: 'e-info' }, '#show');
+var hide = new ej.buttons.Button({ cssClass: 'e-info' }, '#hide');
 
 document.getElementById('show').onclick = function() {
-    grid.showColumns(['Customer ID', 'Ship Name']); //show by HeaderText
+    grid.showColumns('Customer ID', 'headerText'); //show by HeaderText
 };
 
 document.getElementById('hide').onclick = function() {
-    grid.hideColumns(['Customer ID', 'Ship Name']); //hide by HeaderText
+    grid.hideColumns('Customer ID', 'headerText'); //hide by HeaderText
 };
 

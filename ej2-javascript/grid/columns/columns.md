@@ -246,9 +246,48 @@ To render boolean values as checkbox in columns, you need to set [`displayAsChec
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs5" %}
 {% endif %}
 
-## Visibility
+## Locked columns
 
-You can hide any particular column in Grid before rendering by defining [`visible`](../../api/grid/column/#visible) property as false. In the below sample **ShipCity** column is defined as visible false.
+The Syncfusion Grid allows you to lock columns, which prevents them from being reordered and moves them to the first position. This functionality can be achieved by setting the [column.lockColumn](../../api/grid/column/#lockcolumn) property to **true**, which locks the column and moves it to the first position in the grid.
+
+Here's an example of how you can use the `lockColumn` property to lock a column in the Syncfusion Grid:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/lock-column-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/lock-column-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/lock-column-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/lock-column-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/lock-column-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/lock-column-cs1" %}
+{% endif %}
+
+## Show or hide columns
+
+The Syncfusion Grid control allows you to show or hide columns dynamically by using property or methods available in the grid. This feature can be useful when you want to customize the visibility of columns in the Grid based on the requirements.
+
+### Using property
+
+You can show or hide columns in the ##Platform_Name## Grid using the [visible](../../api/grid/column/#visible) property of each column. By setting the `visible` property to **true** or **false**, you can control whether the column should be visible or hidden in the grid. Here's an example of how to show or hide a column in the ##Platform_Name## Grid using the visible property:
+
+In the below example, the **ShipCity** column is defined with `visible` property set to **false**, which will hide the column in the rendered grid.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -277,37 +316,78 @@ You can hide any particular column in Grid before rendering by defining [`visibl
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs6" %}
 {% endif %}
 
-## Lock columns
+>* Hiding a column using the `visible` property only affects the UI representation of the grid. The data for the hidden column will still be available in the underlying data source, and can be accessed or modified programmatically.
+>* When a column is hidden, its width is not included in the calculation of the total grid width.
+>* To hide a column permanently, you can set its visible property to false in the column definition, or remove the column definition altogether.
 
-You can lock columns by using [`column.lockColumn`](../../api/grid/column/#lockColumn) property. The locked columns will be moved to the first position. Also you can’t reorder its position.
+### Using methods
 
-In the below example, **Ship City** column is locked and its reordering functionality is disabled.
+You can also show or hide columns in the ##Platform_Name## Grid using the [showColumns](../../api/grid/#showcolumns) and [hideColumns](../../api/grid/#hidecolumns) methods of the grid component. These methods allow you to show or hide columns based on either the [headerText](../../api/grid/column/#headertext) or the [field](../../api/grid/column/#field) of the column.
+
+**Based on header text**
+
+You can dynamically show or hide columns in the Grid based on the header text by invoking the `showColumns` or `hideColumns` methods. These methods take an array of column header texts as the first parameter, and the value `headerText` as the second parameter to specify that you are showing or hiding columns based on the header text.
+
+Here's an example of how to show or hide a column based on the HeaderText in the ##Platform_Name## Grid:
 
 {% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/lock-column-cs1/index.ts %}
+{% include code-snippet/grid/show-hide-columns-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/lock-column-cs1/index.html %}
+{% include code-snippet/grid/show-hide-columns-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/lock-column-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/show-hide-columns-cs1" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/lock-column-cs1/index.js %}
+{% include code-snippet/grid/show-hide-columns-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/lock-column-cs1/index.html %}
+{% include code-snippet/grid/show-hide-columns-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/lock-column-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/show-hide-columns-cs1" %}
+{% endif %}
+
+**Based on field**
+
+You can dynamically show or hide columns in the Grid using external buttons based on the field by invoking the `showColumns` or `hideColumns` methods. These methods take an array of column fields as the first parameter, and the value `field` as the second parameter to specify that you are showing or hiding columns based on the field.
+
+Here's an example of how to show or hide a column based on the field in the ##Platform_Name## Grid:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/show-hide-columns-field-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/show-hide-columns-field-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/show-hide-columns-field-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/show-hide-columns-field-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/show-hide-columns-field-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/show-hide-columns-field-cs1" %}
 {% endif %}
 
 ## Controlling Grid actions
@@ -342,36 +422,6 @@ You can enable or disable grid action for a particular column by setting the [`a
 {% previewsample "page.domainurl/code-snippet/grid/grouping-cs1" %}
 {% endif %}
 
-## Show or hide columns by external button
-
-You can show or hide grid columns dynamically using external buttons by invoking the [`showColumns`](../../api/grid/#showcolumns) or [`hideColumns`](../../api/grid/#hidecolumns) method.
-
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/show-hide-columns-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/show-hide-columns-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/grid/show-hide-columns-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/show-hide-columns-cs1/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/show-hide-columns-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/grid/show-hide-columns-cs1" %}
-{% endif %}
 
 ## Customize column styles
 
