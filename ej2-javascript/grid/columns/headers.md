@@ -314,3 +314,71 @@ Here is an example of how to change the header text of a column using the `getCo
 
 >* You can also use the [getHeaderTable](../../api/grid/#getheadertable) method to get the table element of the header, and then adjust the height.
 >* You cannot change the height of row below the default height of 42px using the **e-columnheader** class.
+
+**Changing header text using headerValueAccessor property**
+
+The `headerValueAccessor` property in Syncfusion Grid allows you to customize the text of a column header cell, which can be useful in scenarios where you want to change the text to display it in a different language, format or add additional information to the header. This property is triggered every time the header cell is rendered.
+
+To enable the `headerValueAccessor` property, you need to set the [headerValueAccessor](../../api/grid/headervalueaccessor/) property of the corresponding column. This property accepts a callback function that takes two arguments:
+
+  * **field**: Represents the current field of the column.
+  * **column**: Represents the current column object.
+
+>* The `headerValueAccessor` property should only be used to change the text of the header and not to perform any DOM-oriented operations such as adding or manipulating DOM elements in the header. In such cases, you should use the [headerCellInfo](../../api/grid/#headercellinfo) event instead.
+>* The `headerValueAccessor` property is triggered every time the header cell is rendered or refreshed.
+>* The callback function defined for the `headerValueAccessor` property should return a string that represents the new text of the column header.
+>* If you only need to refresh the column header, you can dynamically change the header content using the [refreshHeader](../../api/grid/#refreshheader) method.
+>* You can use this property for individual columns or for all columns by adding it to the grid's properties.
+  
+Here's an example of how to use the `headerValueAccessor` property to change the header text of a column:
+
+{% if page.publishingplatform == "typescript" %}
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/column-header-property/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-header-property/js/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/grid/column-header-property" %}
+{% elsif page.publishingplatform == "javascript" %}
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/column-header-property/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-header-property/index.html %}
+{% endhighlight %}
+{% endtabs %}
+{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/grid/column-header-property" %}
+{% endif %}
+
+**Changing the header text of all columns**
+
+If you want to change the header text of all columns in the grid, you can loop through the Columns collection of the grid and set the `headerText` property for each column. Here is an example:
+
+{% if page.publishingplatform == "typescript" %}
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/column-header-property/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-header-property/js/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/grid/column-header-property" %}
+{% elsif page.publishingplatform == "javascript" %}
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/column-header-property/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-header-property/index.html %}
+{% endhighlight %}
+{% endtabs %}
+{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/grid/column-header-property" %}
+{% endif %}
+

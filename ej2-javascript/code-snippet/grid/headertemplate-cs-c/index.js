@@ -44,7 +44,6 @@ let dropDown = new ej.dropdowns.DropDownList({
 });
 dropDown.appendTo('#Freight');
 
-
 var switchObj = new ej.buttons.Switch({
   headerText: 'Order Date',
   change: change,

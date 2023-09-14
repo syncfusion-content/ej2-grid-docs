@@ -37,6 +37,7 @@ var grid = new ej.grids.Grid({
         },
         {
             headerText: 'Ship Details', 
+            headerTemplate: '<div> <span>Ship Details</span><span>(<i class="fa fa-truck"></i>)</span></div>',
             columns: [
                 { 
                     field: 'ShippedDate', 
@@ -63,4 +64,4 @@ let dropdownList = new ej.dropdowns.DropDownList({
     popupHeight: '200px',
     dataSource: dropdownData,
 });
-dropdownList.appendTo('#orderDt');
+dropdownList.appendTo('#orderdate');
