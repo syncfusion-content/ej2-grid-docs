@@ -15,6 +15,7 @@ The Excel export provides an option to export multiple grid data in the same Exc
 
 ## Same sheet
 
+Excel exporting provides support for exporting multiple grids on the same sheet.
 To export the grids in the same sheet, define `multipleExport.type` as `AppendToSheet` in `exportProperties`. It also has an option to provide blank rows between the grids. These blank rows count can be defined by using `multipleExport.blankRows`.
 
 {% if page.publishingplatform == "typescript" %}
