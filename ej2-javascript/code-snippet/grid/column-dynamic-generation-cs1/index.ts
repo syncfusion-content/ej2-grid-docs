@@ -18,7 +18,6 @@ let grid: Grid = new Grid({
     var rowIndex: number = parseInt(args.row.getAttribute('aria-rowIndex'));
     var currentPageNumber: number = grid.pageSettings.currentPage;
     var pageSize: number = grid.pageSettings.pageSize;
-    debugger;
     var startIndex: number = (currentPageNumber - 1) * pageSize;
     args.row.querySelector('.e-rowcell').innerHTML = (
       startIndex + rowIndex

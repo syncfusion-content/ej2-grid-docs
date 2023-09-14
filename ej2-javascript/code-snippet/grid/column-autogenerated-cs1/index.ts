@@ -1,4 +1,4 @@
-import { Grid, Toolbar } from '@syncfusion/ej2-grids';
+import { Grid, ColumnModel } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
 let grid: Grid = new Grid({
@@ -13,8 +13,8 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 grid.dataBound = () => {
-    const column = grid.columns[0];
-    (column as any).isPrimaryKey = 'true';
+    var column = grid.columns[0];
+    (column as ColumnModel).isPrimaryKey = true;
   };
 
 
