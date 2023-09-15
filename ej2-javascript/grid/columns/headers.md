@@ -664,31 +664,31 @@ The following example demonstrates how to add a `headerCellInfo` event handler t
 
 To get the header element in a Syncfusion Grid, you can use one of the following methods:
 
- 1.[getHeaderContent](https://helpej2.syncfusion.com/javascript/documentation/api/grid/#getheadercontent): This method returns the header div element of the Grid. You can use this method to access the entire header content of the Grid.
+ 1.[getHeaderContent](../../api/grid/#getheadercontent): This method returns the header div element of the Grid. You can use this method to access the entire header content of the Grid.
 
     ```ts
     const headerElement = this.grid.getHeaderContent();    
     ```
 
- 2.[getHeaderTable](https://helpej2.syncfusion.com/javascript/documentation/api/grid/#getheadertable): This method returns the header table element of the Grid. You can use this method to access only the header table of the Grid.
+ 2.[getHeaderTable](../../api/grid/#getheadertable): This method returns the header table element of the Grid. You can use this method to access only the header table of the Grid.
 
    ```ts
     const headerTableElement = grid.getHeaderTable();
    ```
 
- 3.[getColumnHeaderByUid](https://ej2.syncfusion.com/javascript/documentation/api/grid/#getcolumnindexbyuid): This method returns the column header element by its unique identifier.
+ 3.[getColumnHeaderByUid](../../api/grid/#getcolumnindexbyuid): This method returns the column header element by its unique identifier.
 
    ```ts
     const columnHeaderElement = grid.getColumnHeaderByUid("e-grid2");
    ```
 
- 4.[getColumnHeaderByIndex](https://ej2.syncfusion.com/javascript/documentation/api/grid/#getcolumnheaderbyindex): This method returns the column header element by its index.
+ 4.[getColumnHeaderByIndex](../../api/grid/#getcolumnheaderbyindex): This method returns the column header element by its index.
 
    ```ts
     const columnHeaderElement = grid.getColumnHeaderByIndex(0);
    ```
 
- 5.[getColumnHeaderByField](https://ej2.syncfusion.com/javascript/documentation/api/grid/#getcolumnheaderbyfield): This method returns the column header element by its field name.
+ 5.[getColumnHeaderByField](../../api/grid/#getcolumnheaderbyfield): This method returns the column header element by its field name.
 
    ```ts
     const columnHeaderElement = grid.getColumnHeaderByField("OrderID"); 
