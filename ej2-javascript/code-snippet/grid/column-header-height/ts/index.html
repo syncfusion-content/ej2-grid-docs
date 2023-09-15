@@ -30,23 +30,25 @@
              width:15px !important;
              content:'\e7d4';
           }
-         .e-grid .e-icon-calender::before{
-              width:15px !important;
-              content:'\e7b5';
-          }
       </style>
 </head>
-<script id="datetemplate" type="text/x-template">
-    <span class="e-icon-calender e-icons headericon"></span>
-    Order Date
-</script>
-<script id="employeetemplate" type="text/x-template">
-    <span class="e-icon-userlogin e-icons employee"></span>
-    Emp ID
-</script>
+
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
+        <div id="changeHeight">
+            <button ejs-button id="small" cssClass="e-small">
+              Change height to 20px
+            </button>
+            <button ejs-button id="medium" cssClass="e-small">
+              Default height to 40px
+            </button>
+            <button ejs-button id="big" cssClass="e-small">
+              Change height to 60px
+            </button>
+            <br>
+            <br>
+        </div>
         <div id='Grid'></div>
     </div>
 </body>

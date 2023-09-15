@@ -44,8 +44,7 @@ To enable the `headerText` property, you simply need to define it in the  [colum
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs8" %}
 {% endif %}
 
-> * If both the [`field`](../../api/grid/column/#field) and [`headerText`](../../api/grid/column/#headertext)
-are not defined in the column, the column renders with “empty” header text.
+> * If both the [`field`](../../api/grid/column/#field) and [`headerText`](../../api/grid/column/#headertext) are not defined in the column, the column renders with “empty” header text.
 
 ## Header template
 
@@ -152,6 +151,7 @@ Here is an example of using the `headerTextAlign` property to align the text of 
 {% endif %}
 
 >* The `headerTextAlign` property only changes the alignment of the text in the column header, and not the content of the column. If you want to align both the column header and content, you can use the [textAlign](../../api/grid/column/#textalign) property.
+
 >* You can also use the `headerTextAlign` property with the stacked header feature in Syncfusion Grid. The property will align the header text in the sub-headers as well.
 
 ## Autowrap the Header Text
@@ -221,27 +221,27 @@ To change the height of the header dynamically, you can use the [getHeaderConten
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/column-header-autowrap/index.ts %}
+{% include code-snippet/grid/column-header-height/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-header-autowrap/index.html %}
+{% include code-snippet/grid/column-header-height/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/column-header-autowrap" %}
+{% previewsample "page.domainurl/code-snippet/grid/column-header-height" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/column-header-autowrap/index.js %}
+{% include code-snippet/grid/column-header-height/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-header-autowrap/index.html %}
+{% include code-snippet/grid/column-header-height/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/column-header-autowrap" %}
+{% previewsample "page.domainurl/code-snippet/grid/column-header-height" %}
 {% endif %}
 
 >* You can also use the [getHeaderTable](../../api/grid/#getheadertable) method to get the table element of the header, and then adjust the height.
@@ -333,17 +333,20 @@ To enable the `headerValueAccessor` property, you need to set the [headerValueAc
 Here's an example of how to use the `headerValueAccessor` property to change the header text of a column:
 
 {% if page.publishingplatform == "typescript" %}
+
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
 {% include code-snippet/grid/column-header-property/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-header-property/js/index.html %}
+{% include code-snippet/grid/column-header-property/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/grid/column-header-property" %}
+{% previewsample "page.domainurl/code-snippet/grid/column-header-property" %}
+
 {% elsif page.publishingplatform == "javascript" %}
+
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% include code-snippet/grid/column-header-property/index.js %}
@@ -352,7 +355,8 @@ Here's an example of how to use the `headerValueAccessor` property to change the
 {% include code-snippet/grid/column-header-property/index.html %}
 {% endhighlight %}
 {% endtabs %}
-{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/grid/column-header-property" %}
+
+{% previewsample "page.domainurl/code-snippet/grid/column-header-property" %}
 {% endif %}
 
 **Changing the header text of all columns**
@@ -360,25 +364,298 @@ Here's an example of how to use the `headerValueAccessor` property to change the
 If you want to change the header text of all columns in the grid, you can loop through the Columns collection of the grid and set the `headerText` property for each column. Here is an example:
 
 {% if page.publishingplatform == "typescript" %}
+
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/column-header-property/index.ts %}
+{% include code-snippet/grid/column-header-allcolumn/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-header-property/js/index.html %}
+{% include code-snippet/grid/column-header-allcolumn/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/grid/column-header-property" %}
+{% previewsample "page.domainurl/code-snippet/grid/ccolumn-header-allcolumn" %}
+
 {% elsif page.publishingplatform == "javascript" %}
+
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/column-header-property/index.js %}
+{% include code-snippet/grid/column-header-allcolumn/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-header-property/index.html %}
+{% include code-snippet/grid/column-header-allcolumn/index.html %}
 {% endhighlight %}
 {% endtabs %}
-{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/grid/column-header-property" %}
+
+{% previewsample "page.domainurl/code-snippet/grid/column-header-allcolumn" %}
 {% endif %}
+
+## Change the orientation of header text
+
+By default, the text in the column headers of the Syncfusion Grid control is oriented horizontally. However, in some cases, you may want to change the orientation of the header text to vertical, diagonal, or at a custom angle. This can be achieved by adding a custom CSS class to the column header cell using the [customAttributes](../../api/grid/column/#customattributes) property of the Grid columns.
+
+Follow the below steps to change the orientation of the header text in Grid:
+
+**Step 1**: **Create a CSS class with orientation style for grid header cell**
+
+To `rotate` the header text, you can create a CSS class with the `transform` property that rotates the header text 90 degrees. This class will be added to the header cell using the `customAttributes` property.
+
+```css
+.orientationcss .e-headercelldiv {
+    transform: rotate(90deg);
+}
+```
+
+**Step 2**: **Add the custom CSS class to the grid column**
+
+Once you have created the CSS class, you can add it to the particular column by using the `customAttributes` property. This property allows you to add any custom  attribute to the grid column.
+
+For example, to add the orientationcss class to the Freight column, you can use the following code:
+
+```typescript
+<e-column field='Freight' headerText='Freight' textAlign='Center' format='C2' [customAttributes]='customAttributes' width=80></e-column>
+```
+
+**Step 3**: **Resize the header cell height**
+
+After adding the custom CSS class to a column, you need to resize the header cell height so that the rotated header text is fully visible. You can do this by using the following code:
+
+```typescript
+setHeaderHeight(args) {
+    let textWidth: number = document.querySelector('.orientationcss > div').scrollWidth;//Obtain the width of the headerText content.
+    let headerCell: NodeList = document.querySelectorAll('.e-headercell');
+    for(let i: number = 0; i < headerCell.length; i++) {
+        (<HTMLElement>headerCell.item(i)).style.height = textWidth + 'px'; //Assign the obtained textWidth as the height of the headerCell.
+    }
+}
+```
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/column-header-orientation/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-header-orientation/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column-header-orientation" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/column-header-orientation/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-header-orientation/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/column-header-orientation" %}
+{% endif %}
+
+## Customize header text styles 
+
+Customizing the grid header styles allows you to modify the appearance of the column header in the Grid control to meet your design requirements. You can customize the font, background color, and other styles of the header cells. To customize the header styles in the grid, you can use CSS, properties, methods, or event support provided by the Syncfusion ##Platform_Name## Grid component.
+
+### Using CSS
+
+You can apply styles to the header cells using CSS selectors. The Grid provides a class name for each header cell element, which you can use to apply styles to that specific header cell. The **.e-headercell** class can be used to change the background color and text color of the column header.
+
+```CSS
+  .e-grid .e-headercell {
+    background-color: #a2d6f4;
+    color:rgb(3, 2, 2);
+  }
+```
+
+Here's an example that demonstrates how to customize the appearance of a specific column header in the Grid using **className**.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/column-header-stylescss/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-header-stylescss/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column-header-stylescss" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/column-header-stylescss/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-header-stylescss/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/column-header-stylescss" %}
+{% endif %}
+
+### Using property 
+
+You can customize the appearance of the column headers in Grid using the [customAttributes](../../api/grid/column/#customattributes) property. The `customAttributes` property takes an object with the name-value pair to customize the CSS properties for grid header cells. You can also set multiple CSS properties to the custom class using the customAttributes property.
+
+To customize the header of a column, you can follow the steps below:
+
+Step 1: Define a CSS class that specifies the styles you want to apply to the header cell of the column. For example, to change the background color and text color of the header cell, define a CSS class like this:
+
+  ```CSS
+    .e-grid .e-headercell.customcss {
+       background-color: rgb(43, 205, 226);
+      color: black;
+    }
+  ```
+
+Step 2: Set the **customAttributes** property of the desired column to an object that contains the CSS class **customcss**. This CSS class will be applied to the header cell of the specified column in the Grid.
+
+  ```ts
+    {field="Freight" headerText="Freight" [customAttributes]="{class: '.customcss'} }
+  ```
+
+The following example demonstrates how to customize the appearance of the **OrderID** and **OrderDate** columns using custom attributes.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/column-header-stylesproperty/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-header-stylesproperty/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column-header-stylesproperty" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/column-header-stylesproperty/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-header-stylesproperty/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/column-header-stylesproperty" %}
+{% endif %}
+
+### Using method 
+
+The Syncfusion Grid provides methods to customize the appearance of the grid columns header.
+
+ 1. [getColumnHeaderByIndex](../../api/grid/#getcolumnheaderbyindex): The method is used to customize the appearance of a specific column header in the grid by specifying the index of the column for which you want to customize the header.
+
+ 2. [getColumnHeaderByField](../../api/grid/#getcolumnheaderbyfield): This method is used to retrieve the header element of a specific column by its field name. You can use the retrieved element to customize the appearance of the header element.
+
+ 4. [getColumnIndexByField](../../api/grid/#getcolumnindexbyfield):This method is used to retrieve the index of a specific column by its field name. You can use the retrieved index to access the header element and customize its appearance.
+
+Here's an example of how to use these methods to change the style of a specific column header:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/column-header-stylesmethods/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-header-stylesmethods/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column-header-stylesmethods" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/column-header-stylesmethods/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-header-stylesmethods/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/column-header-stylesmethods" %}
+{% endif %}
+
+### Using event
+
+To customize the appearance of the grid header, you can handle the [headerCellInfo](../../api/grid/#querycellinfo) event of the grid. This event is triggered when each header cell is rendered in the grid, and provides an object that contains information about the header cell. You can use this object to modify the styles of the header column.
+
+The following example demonstrates how to add a `headerCellInfo` event handler to the grid. In the event handler, checked whether the current header column is **Order Date** field and then applied the appropriate CSS class to the cell based on its value.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/column-header-stylesevents/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-header-stylesevents/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column-header-stylesevents" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/column-header-stylesevents/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-header-stylesevents/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/column-header-stylesevents" %}
+{% endif %}
+
+## How to get header element 
+
+To get the header element in a Syncfusion Grid, you can use one of the following methods:
+
+ 1.[getHeaderContent](https://helpej2.syncfusion.com/javascript/documentation/api/grid/#getheadercontent): This method returns the header div element of the Grid. You can use this method to access the entire header content of the Grid.
+
+    ```ts
+    const headerElement = this.grid.getHeaderContent();    
+    ```
+
+ 2.[getHeaderTable](https://helpej2.syncfusion.com/javascript/documentation/api/grid/#getheadertable): This method returns the header table element of the Grid. You can use this method to access only the header table of the Grid.
+
+   ```ts
+    const headerTableElement = grid.getHeaderTable();
+   ```
+
+ 3.[getColumnHeaderByUid](https://ej2.syncfusion.com/javascript/documentation/api/grid/#getcolumnindexbyuid): This method returns the column header element by its unique identifier.
+
+   ```ts
+    const columnHeaderElement = grid.getColumnHeaderByUid("e-grid2");
+   ```
+
+ 4.[getColumnHeaderByIndex](https://ej2.syncfusion.com/javascript/documentation/api/grid/#getcolumnheaderbyindex): This method returns the column header element by its index.
+
+   ```ts
+    const columnHeaderElement = grid.getColumnHeaderByIndex(0);
+   ```
+
+ 5.[getColumnHeaderByField](https://ej2.syncfusion.com/javascript/documentation/api/grid/#getcolumnheaderbyfield): This method returns the column header element by its field name.
+
+   ```ts
+    const columnHeaderElement = grid.getColumnHeaderByField("OrderID"); 
+   ```
+
+>* The UID is automatically generated by the Grid component and may change whenever the grid is refreshed or updated.
 

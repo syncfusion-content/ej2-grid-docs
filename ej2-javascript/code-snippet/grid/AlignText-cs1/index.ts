@@ -1,23 +1,34 @@
+import { Grid, Page, Selection } from '@syncfusion/ej2-grids';
+import { DropDownList } from '@syncfusion/ej2-dropdowns';
+import { data } from './datasource.ts';
 
-
-import { Grid } from '@syncfusion/ej2-grids';
-import { employeeData } from './datasource.ts';
+Grid.Inject(Page, Selection);
 
 let grid: Grid = new Grid({
-    dataSource: employeeData,
-    columns: [
-         { field: 'EmployeeID', headerText: 'Employee ID', width: 120, textAlign: 'Right', headerTemplate: '#employeetemplate' },
-                { field: 'FirstName', headerText: 'First Name', width: 140 },
-                {
-                    field: 'BirthDate', headerText: 'Birth Date', width: 130, format: 'yMd',
-                    textAlign: 'Right', headerTemplate: '#datetemplate'
-                },
-                { field: 'City', width: 120 },
-                { field: 'Country', headerText: 'Country', width: 140, format: 'yMd', textAlign: 'Right' },
-    ],
-    height: 315
+  dataSource: data,
+  allowPaging: true,
+
+  columns: [
+    { field: 'OrderID', headerText: 'Order ID', width: 120 },
+    { field: 'CustomerID', headerText: 'Customer Name', width: 150, showInColumnChooser: false },
+    { field: 'Freight', width: 120, format: 'C2' },
+    { field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd' },
+  ]
 });
 grid.appendTo('#Grid');
 
-
-
+let dropdownData = ['Left', 'Right', 'Center', 'Justify'];
+let dropDownColumn: DropDownList = new DropDownList({
+  value: 'Left',
+  popupHeight: '240px',
+  width: 100,
+  dataSource: dropdownData,
+  change: change,
+});
+dropDownColumn.appendTo('#dropdown');
+function change(args) {
+  grid.columns.forEach((column) => {
+    column.headerTextAlign = args.value
+  })
+  grid.refreshHeader();
+}

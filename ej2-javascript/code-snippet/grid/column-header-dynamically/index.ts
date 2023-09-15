@@ -1,23 +1,53 @@
+import { Grid, Page, Selection } from '@syncfusion/ej2-grids';
+import { DropDownList } from '@syncfusion/ej2-dropdowns';
+import { data } from './datasource.ts';
+import { Button } from '@syncfusion/ej2-buttons';
+import { TextBox } from '@syncfusion/ej2-inputs';
 
-
-import { Grid } from '@syncfusion/ej2-grids';
-import { employeeData } from './datasource.ts';
+Grid.Inject(Page, Selection);
 
 let grid: Grid = new Grid({
-    dataSource: employeeData,
-    columns: [
-         { field: 'EmployeeID', headerText: 'Employee ID', width: 120, textAlign: 'Right', headerTemplate: '#employeetemplate' },
-                { field: 'FirstName', headerText: 'First Name', width: 140 },
-                {
-                    field: 'BirthDate', headerText: 'Birth Date', width: 130, format: 'yMd',
-                    textAlign: 'Right', headerTemplate: '#datetemplate'
-                },
-                { field: 'City', width: 120 },
-                { field: 'Country', headerText: 'Country', width: 140, format: 'yMd', textAlign: 'Right' },
-    ],
-    height: 315
+  dataSource: data,
+  allowPaging: true,
+
+  columns: [
+    { field: 'OrderID', headerText: 'Order ID', width: 120 },
+    { field: 'CustomerID', headerText: 'Customer ID', width: 150},
+    { field: 'Freight', width: 120, format: 'C2'},
+    { field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd' },
+  ]
 });
 grid.appendTo('#Grid');
+var dropDownColumn: DropDownList = new DropDownList({
+  dataSource: [
+    { text: 'OrderID', value: 'OrderID' },
+    { text: 'CustomerID', value: 'CustomerID' },
+    { text: 'Freight', value: 'Freight' },
+    { text: 'OrderDate', value: 'OrderDate' },
+  ],
+  value: 'OrderID',
+  popupHeight: '240px',
+  width: '120px',
+});
+dropDownColumn.appendTo('#dropdownlist');
 
+var textbox: TextBox = new TextBox({
+  placeholder: 'Enter new header text',
+  width: 140,
+});
+textbox.appendTo('#textboxvalue');
 
+var button: Button = new Button({
+  content: 'Click',
+});
+button.appendTo('#buttons');
+
+(document.getElementById('buttons') as HTMLElement).onclick = function () {
+  if (textbox.value.trim() !== '') {
+    let column = grid.getColumnByField((dropDownColumn as any).value);
+
+    column.headerText = textbox.value;
+    grid.refreshHeader();
+  }
+};
 

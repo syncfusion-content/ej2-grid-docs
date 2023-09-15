@@ -30,24 +30,26 @@
              width:15px !important;
              content:'\e7d4';
           }
-         .e-grid .e-icon-calender::before{
-              width:15px !important;
-              content:'\e7b5';
-          }
+         
       </style>
 </head>
-<script id="datetemplate" type="text/x-template">
-    <span class="e-icon-calender e-icons headericon"></span>
-    Order Date
-</script>
-<script id="employeetemplate" type="text/x-template">
-    <span class="e-icon-userlogin e-icons employee"></span>
-    Emp ID
-</script>
+
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
+        div style="padding-bottom: 10px">
+        <label padding: 30px 17px 0 0>Select a column Name : </label>
+        <input type="text" tabindex="2" id="dropdownlist" />
+      </div>
+      <div style="padding-bottom: 10px">
+        <label padding: 30px 17px 0 0>Enter New Header Text : </label>
+        <input type="text" tabindex="2" id="textboxvalue"/>
+      </div>
+      <div style="padding-bottom: 10px">
+        <label padding: 30px 17px 0 0>Enter New Header Text : </label>
+        <div id='buttons'></div>
         <div id='Grid'></div>
+      </div>
     </div>
 </body>
 

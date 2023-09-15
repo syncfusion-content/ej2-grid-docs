@@ -2,12 +2,8 @@ import { Grid, Page, Selection } from '@syncfusion/ej2-grids';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
 import { data } from './datasource.ts';
 
-
 Grid.Inject(Page, Selection);
 
-/**
- * Local Data sample
- */
 let grid: Grid = new Grid({
   dataSource: data,
   allowPaging: true,
