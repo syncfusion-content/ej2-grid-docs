@@ -16,7 +16,7 @@ PDF export provides an option for exporting multiple grids to the same file. Mul
 ## Same page
 
 PDF exporting provides support to export multiple grids on the same page.
-To export the grids on the same page, define `multipleExport.type` as `AppendToPage` in `exportProperties`. It also has an option to provide blank space between the grids. This blank space can be defined by using `multipleExport.blankSpace`.
+To export the grids on the same page, define `multipleExport.type` as **AppendToPage** in `exportProperties`. It also has an option to provide blank space between the grids. This blank space can be defined by using `multipleExport.blankSpace`.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -47,7 +47,7 @@ To export the grids on the same page, define `multipleExport.type` as `AppendToP
 
 ## New page
 
-PDF exporting provides support to export multiple grids on a new page. To export on a new page, define `multipleExport.type` as `NewPage` in `exportProperties`.
+PDF exporting provides support to export multiple grids on a new page. To export on a new page, define `multipleExport.type` as **NewPage** in `exportProperties`.
 
 {% if page.publishingplatform == "typescript" %}
 
