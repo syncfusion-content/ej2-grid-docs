@@ -1,12 +1,5 @@
-
-
-
-import { Grid, Page, Toolbar, PdfExport, PdfExportProperties } from '@syncfusion/ej2-grids';
-import { data, employeeData } from './datasource.ts';
-
-Grid.Inject(Page, Toolbar, PdfExport);
-
-let firstGrid: Grid = new Grid({
+ej.grids.Grid.Inject(ej.grids.PdfExport, ej.grids.Page, ej.grids.Toolbar);
+var firstGrid = new ej.grids.Grid({
     dataSource: data.slice(0, 5),
     allowPaging: true,
     allowPdfExport: true,
@@ -20,7 +13,7 @@ let firstGrid: Grid = new Grid({
     ],
 });
 firstGrid.appendTo('#FirstGrid');
-let secondGrid: Grid = new Grid({
+var secondGrid = new ej.grids.Grid({
     dataSource: employeeData.slice(0, 5),
     allowPaging: true,
     allowPdfExport: true,
@@ -33,10 +26,10 @@ let secondGrid: Grid = new Grid({
     ],
 });
 secondGrid.appendTo('#SecondGrid');
-firstGrid.toolbarClick = (args: Object) => {
+firstGrid.toolbarClick = function (args) {
     if (args['item'].id === 'FirstGrid_pdfexport') {
-        let appendPdfExportProperties: PdfExportProperties = {
-            multipleExport: { type: 'NewPage' }
+        var appendPdfExportProperties = {
+            multipleExport: { type: "AppendToPage", blankSpace: 10 }
         };
         firstGrid.pdfExport(appendPdfExportProperties, true);
     }

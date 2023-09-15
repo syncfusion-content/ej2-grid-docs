@@ -3,6 +3,7 @@ var firstGrid = new ej.grids.Grid({
     dataSource: data.slice(0, 5),
     allowPaging: true,
     allowExcelExport: true,
+    exportGrids: ['FirstGrid', 'SecondGrid'],
     toolbar: ['ExcelExport'],
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
@@ -28,15 +29,10 @@ var secondGrid = new ej.grids.Grid({
 
 firstGrid.toolbarClick = function(args) {
     if (args['item'].id === 'FirstGrid_excelexport') {
-
         var appendExcelExportProperties = {
             multipleExport: { type: 'NewSheet' }
         };
-
-        var firstGridExport= firstGrid.excelExport(appendExcelExportProperties, true);
-        firstGridExport.then(function(fData){
-            secondGrid.excelExport(appendExcelExportProperties, false, fData);
-        });
+        firstGrid.excelExport(appendExcelExportProperties, true);
     }
 }
 

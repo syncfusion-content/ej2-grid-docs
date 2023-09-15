@@ -9,6 +9,7 @@ Grid.Inject(Toolbar, ExcelExport, Page);
 let firstGrid: Grid = new Grid({
     dataSource: data.slice(0, 5),
     allowPaging: true,
+    exportGrids: ['FirstGrid', 'SecondGrid'],
     allowExcelExport: true,
     toolbar: ['ExcelExport'],
     columns: [
@@ -36,13 +37,8 @@ firstGrid.toolbarClick = (args: Object) => {
         let appendExcelExportProperties: ExcelExportProperties = {
             multipleExport: { type: 'AppendToSheet', blankRows: 2 }
         };
-
-        let firstGridExport: Promise<any> = firstGrid.excelExport(appendExcelExportProperties, true);
-        firstGridExport.then((fData: any) => {
-            secondGrid.excelExport(appendExcelExportProperties, false, fData);
-        });
+        firstGrid.excelExport(appendExcelExportProperties, true);
     }
-
 }
 firstGrid.appendTo('#FirstGrid');
 secondGrid.appendTo('#SecondGrid');

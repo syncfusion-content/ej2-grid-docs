@@ -10,6 +10,7 @@ let firstGrid: Grid = new Grid({
     dataSource: data.slice(0, 5),
     allowPaging: true,
     allowExcelExport: true,
+    exportGrids: ['FirstGrid', 'SecondGrid'],
     toolbar: ['ExcelExport'],
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
@@ -33,15 +34,10 @@ let secondGrid: Grid = new Grid({
 
 firstGrid.toolbarClick = (args: Object) => {
     if (args['item'].id === 'FirstGrid_excelexport') {
-
         let appendExcelExportProperties: ExcelExportProperties = {
             multipleExport: { type: 'NewSheet' }
         };
-
-        let firstGridExport: Promise<any> = firstGrid.excelExport(appendExcelExportProperties, true);
-        firstGridExport.then((fData: any) => {
-            secondGrid.excelExport(appendExcelExportProperties, false, fData);
-        });
+        firstGrid.excelExport(appendExcelExportProperties, true);;
     }
 }
 
