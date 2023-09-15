@@ -22,38 +22,6 @@ To export the grids on the same page, define `multipleExport.type` as `AppendToP
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/export-mutiple-grid-cs3/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/export-mutiple-grid-cs3/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/grid/export-mutiple-grid-cs3" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/export-mutiple-grid-cs3/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/export-mutiple-grid-cs3/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/grid/export-mutiple-grid-cs3" %}
-{% endif %}
-
-
-## New page
-
-PDF exporting provides support to export multiple grids on a new page. To export on a new page, define `multipleExport.type` as `NewSheet` in `exportProperties`.
-
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
 {% include code-snippet/grid/export-mutiple-grid-cs4/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
@@ -75,4 +43,35 @@ PDF exporting provides support to export multiple grids on a new page. To export
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/grid/export-mutiple-grid-cs4" %}
+{% endif %}
+
+## New page
+
+PDF exporting provides support to export multiple grids on a new page. To export on a new page, define `multipleExport.type` as `NewPage` in `exportProperties`.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/export-mutiple-grid-cs3/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/export-mutiple-grid-cs3/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/export-mutiple-grid-cs3" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/export-mutiple-grid-cs3/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/export-mutiple-grid-cs3/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/export-mutiple-grid-cs3" %}
 {% endif %}
