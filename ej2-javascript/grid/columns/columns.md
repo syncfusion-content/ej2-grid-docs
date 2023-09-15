@@ -392,8 +392,17 @@ Here's an example of how to show or hide a column based on the field in the ##Pl
 
 ## Controlling Grid actions
 
-You can enable or disable grid action for a particular column by setting the [`allowFiltering`](../../api/grid/#allowfiltering),
-[`allowGrouping`](../../api/grid/#allowgrouping), [`allowSorting`](../../api/grid/#allowsorting), [`allowReordering`](../../api/grid/#allowreordering), and [`allowEditing`](../../api/grid/#editsettings) properties.
+You can control various actions such as filtering, grouping, sorting, resizing, reordering, editing, and searching for specific columns in the Syncfusion ##Platform_Name## Grid using the following properties:
+
+* [allowEditing](../../api/grid/columnModel/#allowediting): Enables or disables editing for a column.
+* [allowFiltering](../../api/grid/columnModel/#allowfiltering): Enables or disables filtering for a column.
+* [allowGrouping](../../api/grid/columnModel/#allowgrouping): Enables or disables grouping for a column.
+* [allowSorting](../../api/grid/columnModel/#allowsorting): Enables or disables sorting for a column.
+* [allowReordering](../../api/grid/columnModel/#allowreordering): Enables or disables reordering for a column.
+* [allowResizing](../../api/grid/columnModel/#allowresizing): Enables or disables resizing for a column
+* [allowSearching](../../api/grid/columnModel/#allowsearching): Enables or disables searching for a column
+
+Here is an example code that demonstrates how to control grid actions for specific columns:
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -422,68 +431,175 @@ You can enable or disable grid action for a particular column by setting the [`a
 {% previewsample "page.domainurl/code-snippet/grid/grouping-cs1" %}
 {% endif %}
 
-
 ## Customize column styles
 
-You can customize the appearance of the header and content of a particular column using the [`customAttributes`](../../api/grid/column/#customattributes) property.
+Customizing the grid column styles allows you to modify the appearance of columns in the Grid control to meet your design requirements. You can customize the font, background color, and other styles of the columns. To customize the columns styles in the grid, you can use grid event, css, property or method support.
 
-To customize the grid column, follow the given steps:
+For more information check on this [documentation](../../grid/cell#customize-cell-styles).
 
-**Step 1**:
+## Manipulating columns
 
-Create a CSS class with custom style to override the default style for rowcell and headercell.
+The Syncfusion Grid for ##Platform_Name## provides powerful features for manipulating columns in a grid. This section explains how to access columns, update column definitions, and add/remove columns using Syncfusion Grid properties, methods, and events.
 
-```
-.e-grid .e-rowcell.customcss{
-    background-color: #ecedee;
-    color: 'red';
-    font-family: 'Bell MT';
-    font-size: 20px;
-}
+### Accessing Columns
 
-.e-grid .e-headercell.customcss{
-    background-color: #2382c3;
-    color: white;
-    font-family: 'Bell MT';
-    font-size: 20px;
-}
+To access columns in the Syncfusion Grid, you can use the following methods in the grid.
 
-```
+* **[getColumns](../../api/grid/#getcolumns)**:
 
-**Step 2**:
-
-Add the custom CSS class to the specified column by using the [`customAttributes`](../../api/grid/column/#customattributes) property.
+This method returns the array of columns defined in the grid.
 
 ```ts
-{ field: 'ShipCity', headerText: 'Ship City', customAttributes: {class: 'customcss'}, width: 100 },
-
+let columns = grid.getColumns();
 ```
+
+* **[getColumnByField](../../api/grid/#getcolumnbyfield)**:
+
+This method returns the column object that matches the specified field name.
+
+```ts
+let column = grid.getColumnByField('ProductName');
+```
+
+* **[getColumnByUid](../../api/grid/#getcolumnbyuid)**:
+
+This method returns the column object that matches the specified UID.
+
+```ts
+let column = grid.getColumnByUid();
+```
+
+* **[getVisibleColumns](../../api/grid/#getvisiblecolumns)**:
+
+This method returns the array of visible columns.
+
+```ts
+let visibleColumns = grid.getVisibleColumns();
+```
+
+* **[getForeignKeyColumns](../../api/grid/#getforeignkeycolumns)**:
+
+This method returns the array of foreignkey columns.
+
+```ts
+let foreignKeyColumns = grid.getForeignKeyColumns();
+```
+
+* **[getColumnFieldNames](../../api/grid/#getcolumnfieldnames)**
+
+This method returns an array of field names of all the columns in the Grid.
+
+```ts
+let fieldNames = grid.getColumnFieldNames()
+```
+
+> For a complete list of column methods and properties, refer to this [section](../../api/grid/column/).
+
+### Updating column definitions
+
+You can update the column definitions in the Grid using the [columns](../../api/grid/column) property. You can modify the properties of the column objects in the columns array to update the columns dynamically. For example, you can change the headerText, width, visible, and other properties of a column to update its appearance and behavior in the grid and then call the [refreshColumns](../../api/grid/#refreshcolumns) method to apply the changes to the grid.
 
 {% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/custom-column-cs1/index.ts %}
+{% include code-snippet/grid/columns-updateColumn-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-column-cs1/index.html %}
+{% include code-snippet/grid/columns-updateColumn-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/custom-column-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/columns-updateColumn-cs1" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/custom-column-cs1/index.js %}
+{% include code-snippet/grid/columns-updateColumn-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/custom-column-cs1/index.html %}
+{% include code-snippet/grid/columns-updateColumn-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/custom-column-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/columns-updateColumn-cs1" %}
+{% endif %}
+
+### Adding/Removing Columns
+
+The Grid component allows you to dynamically add or remove columns to and from the grid using the [columns](../../api/grid/column) property, which can be accessed through the instance of the Grid.
+
+To add a new column to the Grid, you can directly **push** the new column object to the columns property.To remove a column from the Grid, you can use the **pop** method, which removes the last element from the columns array of the Grid. Alternatively, you can use the splice method to remove a specific column from the columns array.
+
+Here's an example of how you can add and remove a column from the grid:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/column-addRemove-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-addRemove-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/columns-column-addRemove-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/column-addRemove-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-addRemove-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/column-addRemove-cs1" %}
+{% endif %} 
+
+### How to refresh columns
+
+You can use the [refreshColumns](../../api/grid/#refreshcolumns) method of the Syncfusion Grid to refresh the columns in the grid. This method can be used when you need to update the grid columns dynamically based on user actions or data changes.
+
+```ts
+grid.refreshColumns();
+```
+
+## Responsive columns
+
+The Syncfusion ##Platform_Name## Grid provides a built-in feature to toggle the visibility of columns based on media queries using the [hideAtMedia](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#hideatmedia) property of the column object. The `hideAtMedia` accepts valid [Media Queries](http://cssmediaqueries.com/what-are-css-media-queries.html). 
+
+In this example, we have a Grid that displays data with three columns: **Order ID, Customer ID, and Freight**. We have set the `hideAtMedia` property of the **OrderID** column to (min-width: 700px) which means that this column will be hidden when the browser screen width is less than or equal to 700px.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/hide-media-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/hide-media-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/hide-media-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/hide-media-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/hide-media-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/hide-media-cs1" %}
 {% endif %}
 
 ## Display custom tooltip for columns

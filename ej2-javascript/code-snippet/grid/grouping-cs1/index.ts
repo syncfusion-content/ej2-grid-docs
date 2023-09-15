@@ -1,9 +1,9 @@
 
 
-import { Grid, Group, Sort, Filter, Edit, Reorder } from '@syncfusion/ej2-grids';
+import { Grid, Group, Sort, Filter, Reorder,Resize, Toolbar } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
-Grid.Inject(Group, Sort, Filter, Edit, Reorder);
+Grid.Inject(Group, Sort, Filter, Reorder, Resize, Toolbar );
 
 let grid: Grid = new Grid({
     dataSource: data,
@@ -11,13 +11,15 @@ let grid: Grid = new Grid({
     allowGrouping: true,
     allowSorting: true,
     allowReordering: true,
-    editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' },
+    allowResizing: true,
+    toolbar: ['Search'],
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', allowGrouping: false, textAlign: 'Right', width: 100 },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
-        { field: 'ShipCity', headerText: 'Ship City', allowFiltering: false, allowReordering: false, allowEditing: false, width: 100 },
-        { field: 'ShipName', headerText: 'Ship Name', allowSorting: false, width: 100 }
-    ],
+        { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right', allowGrouping: false, allowResizing: false },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 150, textAlign: 'Left', allowSorting: false },
+        { field: 'ShipCity', headerText: 'Ship City', width: 150, textAlign: 'Left', allowReordering: false },
+        { field: 'ShipCountry', headerText: 'Ship Country', width: 150, textAlign: 'Left', allowSearching: false },
+        { field: 'Freight', headerText: 'Freight', width: 120, format: 'C2', textAlign: 'Right', allowFiltering: false },
+      ],
     height: 220
 });
 grid.appendTo('#Grid');
