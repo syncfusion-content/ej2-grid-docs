@@ -10,7 +10,6 @@ var grid = new ej.grids.Grid({
             headerText: 'Order ID', 
             textAlign: 'Right', 
             width: 120, 
-            minWidth: 10, 
             headerTemplate: '#orderID' 
         },
         {
@@ -23,7 +22,6 @@ var grid = new ej.grids.Grid({
                     textAlign: 'Right', 
                     width: 135, 
                     format: 'yMd', 
-                    minWidth: 10 
                 },
                 { 
                     field: 'Freight', 
@@ -31,7 +29,6 @@ var grid = new ej.grids.Grid({
                     textAlign: 'Right', 
                     width: 120, 
                     format: 'C2', 
-                    minWidth: 10 
                 },
             ]
         },
@@ -44,14 +41,12 @@ var grid = new ej.grids.Grid({
                     headerText: 'Shipped Date', 
                     textAlign: 'Right', 
                     width: 145, 
-                    format: 'yMd', 
-                    minWidth: 10 
+                    format: 'yMd',
                 },
                 { 
                     field: 'ShipCountry', 
                     headerText: 'Ship Country', 
                     width: 140, 
-                    minWidth: 10 
                 },
             ]
         }
