@@ -11,9 +11,9 @@ domainurl: ##DomainURL##
 
 # Column reorder in ##Platform_Name## Grid control
 
-Reordering can be done by drag and drop of a particular column header from one index to another index within the grid. To enable reordering, set the [`allowReordering`](../../api/grid/#allowreordering) to true.
+The Syncfusion ##Platform_Name## Grid component allows to reorder columns by drag and drop of a particular column header from one index to another index within the grid. This feature can be enabled by injecting the [`Reorder`](../../api/grid/reorder) module in the grid..
 
-To use reordering, inject the [`Reorder`](../../api/grid/reorder) module in the grid.
+To reorder the columns, set the [allowReordering](../../api/grid/#allowreordering) property to **true** in the grid.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -42,70 +42,84 @@ To use reordering, inject the [`Reorder`](../../api/grid/reorder) module in the 
 {% previewsample "page.domainurl/code-snippet/grid/row-template-cs8" %}
 {% endif %}
 
-> You can disable reordering a particular column by setting the [`columns.allowReordering`](../../api/grid/column/#allowreordering) to **false**.
+>* You can customize the appearance of the column headers during drag and drop by using the [columnDrag](../../api/grid/#columndrag) and [columnDrop](../../api/grid/#columndrop) events.
+>* When columns are reordered, the position of the corresponding column data will also be changed. As a result, you should ensure that any additional code or logic that relies on the order of the column data is updated accordingly.
 
-## Reorder single column
+## Prevent reordering for particular column
 
-Grid have option to reorder Columns either by Interaction or by using the [`reorderColumns`](../../api/grid/reorder/#reordercolumns)method. In the below sample, **ShipCity** column is reordered to last column position by using the method.
+By default, all columns in the Syncfusion ##Platform_Name## Grid can be reordered by dragging and dropping their headers to another location within the grid. However, there may be certain columns that you do not want to be reordered. In such cases, you can set the [allowReordering](../../api/grid/column/#allowreordering) property of that particular column to **false**. Here is an example that demonstrates how to prevent reordering for a specific column:
+
+In this example, the **ShipCity** column is prevented from being reordered by setting the `allowReordering` property to **false**.
 
 {% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/reorder-single-column-cs1/index.ts %}
+{% include code-snippet/grid/column-preventReordering-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/reorder-single-column-cs1/index.html %}
+{% include code-snippet/grid/column-preventReordering-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/reorder-single-column-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/column-preventReordering-cs1" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/reorder-single-column-cs1/index.js %}
+{% include code-snippet/grid/column-preventReordering-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/reorder-single-column-cs1/index.html %}
+{% include code-snippet/grid/column-preventReordering-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/reorder-single-column-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/column-preventReordering-cs1" %}
 {% endif %}
 
-## Reorder multiple columns
+## Reorder columns externally
 
-User can reorder a single column at a time by Interaction. Sometimes we need to have reorder multiple columns at the same time, It can be achieved through programmatically by using [`reorderColumns`](../../api/grid/reorder/#reordercolumns) method.
+The Syncfusion Grid ##Platform_Name## allows you to reorder columns externally, which means that using methods you can programmatically move columns around within the grid, based on their index or target index, or by using their field name.
 
-In the below sample, **Ship City** and **Ship Region** column is reordered to last column position.
+> When reordering columns externally, you must set the [allowReordering](../../api/grid/column/#allowreordering) property of the grid to **true**.
+
+### Reorder column based on index
+
+You can use the [reorderColumnByIndex](../../api/grid/#reordercolumnbyindex) method to reorder columns based on their current index. This method takes two arguments:
+
+* **fromIndex** : Current index of the column to be reordered
+* **toIndex** : New index of the column after the reordering
+
+Here is an example of how to use the `reorderColumnByIndex` method:
+
+In this example, we are moving the column at index **1** to index **3**.
 
 {% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/reorder-column-cs1/index.ts %}
+{% include code-snippet/grid/reorderColumnByIndex-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/reorder-column-cs1/index.html %}
+{% include code-snippet/grid/reorderColumnByIndex-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/reorder-column-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/reorderColumnByIndex-cs1" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/reorder-column-cs1/index.js %}
+{% include code-snippet/grid/reorderColumnByIndex-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/reorder-column-cs1/index.html %}
+{% include code-snippet/grid/reorderColumnByIndex-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/reorder-column-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/reorderColumnByIndex-cs1" %}
 {% endif %}
 
 ## Reorder events
