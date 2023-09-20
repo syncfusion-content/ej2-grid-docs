@@ -183,9 +183,9 @@ In this example, an [AutoComplete](https://ej2.syncfusion.com/javascript/demos/#
 
 ## Customize filter UI in foreignkey column
 
-You can create your own filtering UI by using [`column.filter`](../../api/grid/column/#filter) property. The following example demonstrates the way to create a custom filtering UI in the foreign column.
+The Syncfusion Grid allows you to customize the filtering user interface (UI) for foreign key columns by using the [column.filter](../../api/grid/column/#filter) property. By default, a dropdown component is used for filtering foreign key columns. However, you can create your own custom filtering UI by specifying a template function for the `column.filter` property. Here's an example that demonstrates how to create a custom filtering UI in a foreign key column:
 
-In the following example, The `Employee Name` is a foreign key column. DropDownList is rendered using Filter UI.
+In this example, a [DropDownList](https://ej2.syncfusion.com/javascript/demos/#/bootstrap5/drop-down-list/default.html) component is rendered as the filter UI for the **"EmployeeID"** foreign key column. The [dataSource](../../api/drop-down-list#datasource) property of the DropDownList component is set to the employees data, and the fields property is configured to display the **FirstName** field as the [text](../../api/drop-down-list#text) and **EmployeeID** field as the [value](../../api/drop-down-list#value). The `value` property is set to the current filter value of the column.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -216,9 +216,9 @@ In the following example, The `Employee Name` is a foreign key column. DropDownL
 
 ## Use filter bar template in foreignkey column
 
-You can use the filter bar template in foreign key column by defining the [`column.filterBarTemplate`](../../api/grid/column/#filterbartemplate) property. The following example demonstrates the way to use filter bar template in foreign column.
+You can use the filter bar template in a foreign key column in Grid by defining the [column.filterBarTemplate](../../api/grid/column/#filterbartemplate) property. This allows you to customize the filter bar for the foreign key column with a custom component or HTML template. Here's an example that demonstrates how to use a filter bar template in a foreign key column:
 
-In the following example, The `Employee Name` is a foreign key column. This column header shows the custom filter bar template and you can select filter value by using the `DropDown` options.
+In this example, the **"EmployeeID"** column is a foreign key column, and the **filter** function is used as the filter bar template for this column. The `filter` function can be defined in your component code and should return the desired component or HTML template for the filter bar. The column header shows the custom filter bar template and you can select filter value by using the **DropDown** options.
 
 {% if page.publishingplatform == "typescript" %}
 
