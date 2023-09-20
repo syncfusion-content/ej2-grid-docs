@@ -17,7 +17,7 @@ The grid has an option to export the column template, detail template and captio
 
 Excel export allows exporting Grid column with Image, Hyperlink and customized data to an excel document.
 
-In the below sample, the hyperlinks and images are exported to Excel by using [hyperlink] and [image] properties in the [excelQueryCellInfo] event.
+In the below sample, the hyperlinks and images are exported to Excel by using [hyperlink](../../api/grid/excelQueryCellInfoEventArgs/#hyperlink) and [image](../../api/grid/excelQueryCellInfoEventArgs/#image) properties in the [excelQueryCellInfo](../../api/grid/#excelquerycellinfo) event.
 
 > Excel Export supports base 64 string to export the images.
 
@@ -60,7 +60,7 @@ In the below sample, the hyperlinks and images are exported to Excel by using [h
 
 Detail rows in the exported Excel can be customized or formatted using the [exportDetailTemplate](../../api/grid/#exportdetailtemplate) event. In this event, the detail rows of the Excel document are formatted with respect to their parent row details.
 
-In the following sample, the detail template value has been structured with rows and cells format by specifying the [columnHeader](../../api/grid/detailTemplateProperties/#columnheader) and [rows](../../api/grid/detailTemplateProperties/#rows) parameters using its [parentRow](../../api/grid/exportDetailTemplateEventArgs/#parentrow) details. This allows us to create detail rows in the Excel document. Additionally, apply custom styles to specific cells using the [style](../../api/grid/detailTemplateCell/#style) property.
+In the following sample, the detail row content formatted by specifying the [columnHeader](../../api/grid/detailTemplateProperties/#columnheader) and [rows](../../api/grid/detailTemplateProperties/#rows) properties using its [parentRow](../../api/grid/exportDetailTemplateEventArgs/#parentrow) details. This allows to create detail rows in the Excel document. Additionally, apply custom styles to specific cells using the [style](../../api/grid/detailTemplateCell/#style) property.
 
 > When using [rowSpan](../../api/grid/detailTemplateCell/#rowspan), it's essential to provide the cell's [index](../../api/grid/detailTemplateCell/#index) for proper functionality.
 
