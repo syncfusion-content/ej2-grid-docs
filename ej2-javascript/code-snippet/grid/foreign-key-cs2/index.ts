@@ -25,7 +25,7 @@ let grid: Grid = new Grid(
                                 return createElement('input');
                             },
                             read: () => { // return edited value to update data source
-                                let value: Object[] = new DataManager(employeeData).executeLocal(new Query().where('LastName', 'equal', autoComplete.value));
+                                let value: Object[] = new DataManager(employeeData).executeLocal(new Query().where('FirstName', 'equal', autoComplete.value));
                                 return value.length && value[0]['EmployeeID']; // to convert foreign key value to local value.
                             },
                             destroy: () => { // to destroy the custom component.
