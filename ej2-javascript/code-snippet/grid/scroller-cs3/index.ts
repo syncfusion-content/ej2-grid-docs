@@ -16,7 +16,7 @@ let grid: Grid = new Grid({
         { field: 'Freight', headerText: 'Freight', format: 'C2', width: 120 }
         { field: 'CustomerID', headerText: 'Customer ID', width: 150, freeze: 'Right' },
         { field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd', textAlign: 'Right' },
-        { field: 'ShipName', headerText: 'Ship Name', width: 150 },
+        { field: 'ShipName', headerText: 'Ship Name', width: 150, freeze: 'Fixed' },
         { field: 'ShipAddress', headerText: 'Ship Address', width: 170 },
         { field: 'ShipCity', headerText: 'Ship City', width: 150 },
         { field: 'ShipCountry', headerText: 'Ship Country', width: 150, freeze: 'Left' }
