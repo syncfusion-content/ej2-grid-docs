@@ -51,3 +51,7 @@ In the sample below, the detail template value has been structured with rows and
 
 {% previewsample "page.domainurl/code-snippet/grid/detail-template-export-cs1" %}
 {% endif %}
+
+## Limitations
+
+* The export feature for detail templates is not supported with server-side exporting.
