@@ -95,7 +95,7 @@ In the following sample, the detail row content formatted by specifying the [col
 
 Excel export allows exporting Grid with caption template to an excel document.
 
-In the below sample, the customized caption text is exported to Excel by using [captionText] property in the [exportGroupCaption] event.
+In the below sample, the customized caption text is exported to Excel by using [captionText](../../api/grid/exportGroupCaptionEventArgs/#captiontext) property in the [exportGroupCaption](../../api/grid/#exportgroupcaption) event.
 
 {% if page.publishingplatform == "typescript" %}
 
