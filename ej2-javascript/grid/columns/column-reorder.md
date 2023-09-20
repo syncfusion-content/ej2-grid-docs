@@ -122,13 +122,89 @@ In this example, we are moving the column at index **1** to index **3**.
 {% previewsample "page.domainurl/code-snippet/grid/reorderColumnByIndex-cs1" %}
 {% endif %}
 
+### Reorder column based on target index
+
+You can also use the [reorderColumnByTargetIndex](../../api/grid/#reordercolumnbytargetindex) method to reorder single column or multiple columns based on the target index. This method takes two arguments:
+
+* **fieldName**: Field name of the column to be reordered
+* **toIndex**: New index of the column after the reordering
+
+Here is an example of how to use the `reorderColumnByTargetIndex` method to reorder single column and multiple columns based on target index:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/reorder-SingleColumn-ByTargetIndex-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/reorder-SingleColumn-ByTargetIndex-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/reorder-SingleColumn-ByTargetIndex-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/reorder-SingleColumn-ByTargetIndex-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/reorder-SingleColumn-ByTargetIndex-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/reorder-SingleColumn-ByTargetIndex-cs1" %}
+{% endif %}
+
+### Reorder column based on field names
+
+The [reorderColumns](../../api/grid/#reordercolumns) method of the Grid allows you to reorder single column or list of columns based on their field names. This method takes two arguments: 
+
+* **fromFName**: The field name of the column you want to move.
+* **toFName**: The field name of the column you want to move the column to.
+
+Here is an example of how to use the `reorderColumns` method to reorder single column and multiple columns based on field names:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/reorder-column-ByFieldName-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/reorder-column-ByFieldName-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/reorder-column-ByFieldName-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/reorder-column-ByFieldName-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/reorder-column-ByFieldName-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/reorder-column-ByFieldName-cs1" %}
+{% endif %}
+
 ## Reorder events
 
-During the reorder action, the grid component triggers the below three events.
+When reordering columns in the Syncfusion ##Platform_Name## Grid component, you may want to take some specific action in response to the drag and drop events. To handle these events, you can define event handlers for the following events:
 
-1. The [`columnDragStart`](../../api/grid/#columndragstart) event triggers when column header element drag (move) starts.
-2. The [`columnDrag`](../../api/grid/#columndrag) event triggers when column header element is dragged (moved) continuously.
-3. The [`columnDrop`](../../api/grid/#columndrop) event triggers when a column header element is dropped on the target column.
+1.The [columnDragStart](../../api/grid/#columndragstart) event triggers when column header element drag (move) starts.
+
+2.The [columnDrag](../../api/grid/#columndrag) event triggers when column header element is dragged (moved) continuously.
+
+3.The [columnDrop](../../api/grid/#columndrop) event triggers when a column header element is dropped on the target column.
+
+In the following example, we have implemented the `columnDragStart`, `columnDrag`, and `columnDrop` events in the Syncfusion Grid component.
 
 {% if page.publishingplatform == "typescript" %}
 
