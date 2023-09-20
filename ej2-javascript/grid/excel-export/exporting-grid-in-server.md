@@ -189,3 +189,7 @@ private void ExcelHeaderQueryCellInfo(object excel)
 }
 
 ```
+
+## Limitations
+
+* The export feature for detail templates is not supported with server-side exporting.
