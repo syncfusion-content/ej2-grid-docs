@@ -23,7 +23,8 @@ Detail rows in the exported PDF can be customized or formatted using [`exportDet
 
 In the sample below, the detail template value has been structured with rows and cells format by specifying the [`columnCount`](../../api/grid/detailTemplateProperties/#columncount), [`columnHeader`](../../api/grid/detailTemplateProperties/#columnheader), and [`rows`](../../api/grid/detailTemplateProperties/#rows) parameters using its [`parentRow`](../../api/grid/exportDetailTemplateEventArgs/#parentrow) details. This allows us to create a PDF grid inside the detail row. Additionally, you can apply custom styles to specific cells using the [`style`](../../api/grid/detailTemplateCell/#style) property.
 
->Note: If a value for `columnCount` is not provided, the PDF grid's columns in the detail row will be generated based on the count of `columnHeader`/`rows` first row's [`cells`](../../api/grid/detailTemplateRow/#cells).
+> Note: If a value for `columnCount` is not provided, the PDF grid's columns in the detail row will be generated based on the count of `columnHeader`/`rows` first row's [`cells`](../../api/grid/detailTemplateRow/#cells).
+> When using [`rowSpan`](../../api/grid/detailTemplateCell/#rowspan), it's essential to provide the cell's [`index`](../../api/grid/detailTemplateCell/#index) for proper functionality.
 
 {% if page.publishingplatform == "typescript" %}
 

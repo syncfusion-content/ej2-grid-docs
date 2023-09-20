@@ -23,6 +23,8 @@ Detail rows in the exported Excel can be customized or formatted using [`exportD
 
 In the sample below, the detail template value has been structured with rows and cells format by specifying the [`columnHeader`](../../api/grid/detailTemplateProperties/#columnheader), and [`rows`](../../api/grid/detailTemplateProperties/#rows) parameters using its [`parentRow`](../../api/grid/exportDetailTemplateEventArgs/#parentrow) details. This allows us to create the detail rows in the Excel document. Additionally, you can apply custom styles to specific cells using the [`style`](../../api/grid/detailTemplateCell/#style) property.
 
+> Note: When using [`rowSpan`](../../api/grid/detailTemplateCell/#rowspan), it's essential to provide the cell's [`index`](../../api/grid/detailTemplateCell/#index) for proper functionality.
+
 {% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
