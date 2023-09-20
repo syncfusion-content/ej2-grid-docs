@@ -11,19 +11,19 @@ domainurl: ##DomainURL##
 
 # Exporting detail template grid in ##Platform_Name## Grid control
 
-The grid has an option to export the detail template grid to excel document. By default, it will use `Expanded` as hierarchyExportMode. you can change the exporting option by using the `ExcelExportProperties.hierarchyExportMode` property. The available options are,
+The grid has the option to export the detail template grid to an Excel document. By default, it will use the `Expanded` as hierarchyExportMode. Change the exporting option by using the `ExcelExportProperties.hierarchyExportMode` property. The available options are:
 
 | Mode     | Behavior    |
 |----------|-------------|
-| Expanded | Exports the visible detail rows in expanded state. |
-| All      | Exports the all the detail rows in expanded state. |
-| None     | Exports all detail rows in collapsed state. |
+| Expanded | Exports the visible detail rows in the expanded state. |
+| All      | Exports all the detail rows in the expanded state. |
+| None     | Exports all detail rows in a collapsed state. |
 
-Detail rows in the exported Excel can be customized or formatted using [`exportDetailTemplate`](../../api/grid/#exportdetailtemplate) event. In this event, the detail rows of Excel document formatted with respect to its parent row details.
+Detail rows in the exported Excel can be customized or formatted using the [`exportDetailTemplate`](../../api/grid/#exportdetailtemplate) event. In this event, the detail rows of the Excel document are formatted with respect to their parent row details.
 
-In the sample below, the detail template value has been structured with rows and cells format by specifying the [`columnHeader`](../../api/grid/detailTemplateProperties/#columnheader), and [`rows`](../../api/grid/detailTemplateProperties/#rows) parameters using its [`parentRow`](../../api/grid/exportDetailTemplateEventArgs/#parentrow) details. This allows us to create the detail rows in the Excel document. Additionally, you can apply custom styles to specific cells using the [`style`](../../api/grid/detailTemplateCell/#style) property.
+In the following sample, the detail template value has been structured with rows and cells format by specifying the [`columnHeader`](../../api/grid/detailTemplateProperties/#columnheader) and [`rows`](../../api/grid/detailTemplateProperties/#rows) parameters using its [`parentRow`](../../api/grid/exportDetailTemplateEventArgs/#parentrow) details. This allows us to create detail rows in the Excel document. Additionally, apply custom styles to specific cells using the [`style`](../../api/grid/detailTemplateCell/#style) property.
 
-> Note: When using [`rowSpan`](../../api/grid/detailTemplateCell/#rowspan), it's essential to provide the cell's [`index`](../../api/grid/detailTemplateCell/#index) for proper functionality.
+> When using [`rowSpan`](../../api/grid/detailTemplateCell/#rowspan), it's essential to provide the cell's [`index`](../../api/grid/detailTemplateCell/#index) for proper functionality.
 
 {% if page.publishingplatform == "typescript" %}
 
