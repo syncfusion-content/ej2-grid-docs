@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Exporting grid with templates in ##Platform_Name## Grid control | Syncfusion
-description: Learn here all about Exporting grid with templates in Syncfusion ##Platform_Name## Grid control of Syncfusion Essential JS 2 and more.
+title: Exporting Grid with Templates in ##Platform_Name## Grid control | Syncfusion
+description: Learn here all about Exporting grids with templates in Syncfusion ##Platform_Name## Grid control of Syncfusion Essential JS 2 and more.
 platform: ej2-javascript
 control: Exporting grid with templates
 publishingplatform: ##Platform_Name##
@@ -11,13 +11,13 @@ domainurl: ##DomainURL##
 
 # Exporting grid with templates in ##Platform_Name## Grid control
 
-The grid has an option to export the column template, detail template and caption template to an Excel document.
+The grid offers the option to export the column, detail, and caption templates to an Excel document.
 
 ## Exporting with column template
 
-Excel export allows exporting Grid column with Image, Hyperlink and customized data to an excel document.
+The Excel export feature enables the exporting of Grid columns containing images, hyperlinks, and customized data to an Excel document.
 
-In the below sample, the hyperlinks and images are exported to Excel by using [hyperlink](../../api/grid/excelQueryCellInfoEventArgs/#hyperlink) and [image](../../api/grid/excelQueryCellInfoEventArgs/#image) properties in the [excelQueryCellInfo](../../api/grid/#excelquerycellinfo) event.
+In the following sample, the hyperlinks and images are exported to Excel using [hyperlink](../../api/grid/excelQueryCellInfoEventArgs/#hyperlink) and [image](../../api/grid/excelQueryCellInfoEventArgs/#image) properties in the [excelQueryCellInfo](../../api/grid/#excelquerycellinfo) event.
 
 > Excel Export supports base 64 string to export the images.
 
@@ -50,7 +50,7 @@ In the below sample, the hyperlinks and images are exported to Excel by using [h
 
 ## Exporting with detail template
 
- By default, the grid will export the parent grid with expanded detail rows alone. Change the exporting option by using the `ExcelExportProperties.hierarchyExportMode` property. The available options are:
+By default, the grid will export the parent grid with expanded detail rows alone. Change the exporting option by using the `ExcelExportProperties.hierarchyExportMode` property. The available options are:
 
 | Mode     | Behavior    |
 |----------|-------------|
@@ -58,11 +58,11 @@ In the below sample, the hyperlinks and images are exported to Excel by using [h
 | All      | Exports the parent grid with all the detail rows. |
 | None     | Exports the parent grid alone. |
 
-Detail rows in the exported Excel can be customized or formatted using the [exportDetailTemplate](../../api/grid/#exportdetailtemplate) event. In this event, the detail rows of the Excel document are formatted with respect to their parent row details.
+The detail rows in the exported Excel can be customized or formatted using the [exportDetailTemplate](../../api/grid/#exportdetailtemplate) event. In this event, the detail rows of the Excel document are formatted in accordance with their parent row details.
 
-In the following sample, the detail row content formatted by specifying the [columnHeader](../../api/grid/detailTemplateProperties/#columnheader) and [rows](../../api/grid/detailTemplateProperties/#rows) properties using its [parentRow](../../api/grid/exportDetailTemplateEventArgs/#parentrow) details. This allows to create detail rows in the Excel document. Additionally, apply custom styles to specific cells using the [style](../../api/grid/detailTemplateCell/#style) property.
+In the following sample, the detail row content is formatted by specifying the [columnHeader](../../api/grid/detailTemplateProperties/#columnheader) and [rows](../../api/grid/detailTemplateProperties/#rows) properties using its [parentRow](../../api/grid/exportDetailTemplateEventArgs/#parentrow) details. This allows for the creation of detail rows in the Excel document. Additionally, custom styles can be applied to specific cells using the [style](../../api/grid/detailTemplateCell/#style) property.
 
-> When using [rowSpan](../../api/grid/detailTemplateCell/#rowspan), it's essential to provide the cell's [index](../../api/grid/detailTemplateCell/#index) for proper functionality.
+> When using [rowSpan](../../api/grid/detailTemplateCell/#rowspan), it is essential to provide the cell's [index](../../api/grid/detailTemplateCell/#index) for proper functionality.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -93,9 +93,9 @@ In the following sample, the detail row content formatted by specifying the [col
 
 ## Exporting with caption template
 
-Excel export allows exporting Grid with caption template to an excel document.
+The Excel export feature enables exporting of Grid with a caption template to an Excel document.
 
-In the below sample, the customized caption text is exported to Excel by using [captionText](../../api/grid/exportGroupCaptionEventArgs/#captiontext) property in the [exportGroupCaption](../../api/grid/#exportgroupcaption) event.
+In the following sample, the customized caption text is exported to Excel using [captionText](../../api/grid/exportGroupCaptionEventArgs/#captiontext) property in the [exportGroupCaption](../../api/grid/#exportgroupcaption) event.
 
 {% if page.publishingplatform == "typescript" %}
 

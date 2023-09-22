@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Exporting grid with templates in ##Platform_Name## Grid control | Syncfusion
-description: Learn here all about Exporting grid with templates in Syncfusion ##Platform_Name## Grid control of Syncfusion Essential JS 2 and more.
+title: Exporting Grid with Templates in ##Platform_Name## Grid control | Syncfusion
+description: Learn here all about Exporting grids with templates in Syncfusion ##Platform_Name## Grid control of Syncfusion Essential JS 2 and more.
 platform: ej2-javascript
 control: Exporting grid with templates
 publishingplatform: ##Platform_Name##
@@ -11,13 +11,13 @@ domainurl: ##DomainURL##
 
 # Exporting grid with templates in ##Platform_Name## Grid control
 
-The grid has an option to export the column template, detail template and caption template to a PDF document.
+The grid offers the option to export the column, detail, and caption templates to a PDF document.
 
 ## Exporting with column template
 
-PDF export allows exporting Grid column with Image, Hyperlink and customized data to a PDF document.
+The PDF export feature enables the exporting of Grid columns containing images, hyperlinks, and customized data to a PDF document.
 
-In the below sample, the hyperlinks and images are exported to PDF by using [hyperlink](../../api/grid/pdfQueryCellInfoEventArgs/#hyperlink) and [image](../../api/grid/pdfQueryCellInfoEventArgs/#image) properties in the [pdfQueryCellInfo](../../api/grid/#pdfquerycellinfo) event.
+In the following sample, the hyperlinks and images are exported to PDF using [hyperlink](../../api/grid/pdfQueryCellInfoEventArgs/#hyperlink) and [image](../../api/grid/pdfQueryCellInfoEventArgs/#image) properties in the [pdfQueryCellInfo](../../api/grid/#pdfquerycellinfo) event.
 
 > PDF Export supports base 64 string to export the images.
 
@@ -58,12 +58,12 @@ By default, the grid will export the parent grid with expanded detail rows alone
 | All      | Exports the parent grid with all the detail rows. |
 | None     | Exports the parent grid alone. |
 
-Detail rows in the exported PDF can be customized or formatted using the [exportDetailTemplate](../../api/grid/#exportdetailtemplate) event. In this event, format the detail row of the exported PDF document based on its parent row details.
+The detail rows in the exported PDF can be customized or formatted using the [exportDetailTemplate](../../api/grid/#exportdetailtemplate) event. In this event, the detail rows of the PDF document are formatted in accordance with their parent row details.
 
-In the following sample, the detail row content formatted by specifying the [columnCount](../../api/grid/detailTemplateProperties/#columncount), [columnHeader](../../api/grid/detailTemplateProperties/#columnheader), and [rows](../../api/grid/detailTemplateProperties/#rows) properties using its [parentRow](../../api/grid/exportDetailTemplateEventArgs/#parentrow) details. This allows to create a PDF grid inside the detail row. Additionally, apply custom styles to specific cells using the [style](../../api/grid/detailTemplateCell/#style) property.
+In the following sample, the detail row content is formatted by specifying the [columnCount](../../api/grid/detailTemplateProperties/#columncount), [columnHeader](../../api/grid/detailTemplateProperties/#columnheader), and [rows](../../api/grid/detailTemplateProperties/#rows) properties using its [parentRow](../../api/grid/exportDetailTemplateEventArgs/#parentrow) details. This allows for the creation of detail rows in the PDF document. Additionally, custom styles can be applied to specific cells using the [style](../../api/grid/detailTemplateCell/#style) property.
 
-> If `columnCount` is not provided, the PDF grid's columns in the detail row will be generated based on the count of the `columnHeader`/`rows` first row's [cells](../../api/grid/detailTemplateRow/#cells).
-> When using [rowSpan](../../api/grid/detailTemplateCell/#rowspan), it's essential to provide the cell's [index](../../api/grid/detailTemplateCell/#index) for proper functionality.
+> If `columnCount` is not provided, the columns in the detail row of the PDF grid will be generated based on the count of the `columnHeader`/`rows` first row's [cells](../../api/grid/detailTemplateRow/#cells).
+> When using [rowSpan](../../api/grid/detailTemplateCell/#rowspan), it is essential to provide the cell's [index](../../api/grid/detailTemplateCell/#index) for proper functionality.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -94,9 +94,9 @@ In the following sample, the detail row content formatted by specifying the [col
 
 ## Exporting with caption template
 
-PDF export allows exporting Grid with caption template to a PDF document.
+The PDF export feature enables exporting of Grid with a caption template to an PDF document.
 
-In the below sample, the customized caption text is exported to PDF by using [captionText](../../api/grid/exportGroupCaptionEventArgs/#captiontext) property in the [exportGroupCaption](../../api/grid/#exportgroupcaption) event.
+In the following sample, the customized caption text is exported to PDF using [captionText](../../api/grid/exportGroupCaptionEventArgs/#captiontext) property in the [exportGroupCaption](../../api/grid/#exportgroupcaption) event.
 
 {% if page.publishingplatform == "typescript" %}
 
