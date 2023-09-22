@@ -15,7 +15,7 @@ The grid offers the option to export the column, detail, and caption templates t
 
 ## Exporting with column template
 
-The PDF export feature enables the exporting of Grid columns containing images, hyperlinks, and customized text to a PDF document.
+The PDF export functionality allows you to export Grid columns that include images, hyperlinks, and custom text to an PDF document.
 
 In the following sample, the hyperlinks and images are exported to PDF using [hyperlink](../../api/grid/pdfQueryCellInfoEventArgs/#hyperlink) and [image](../../api/grid/pdfQueryCellInfoEventArgs/#image) properties in the [pdfQueryCellInfo](../../api/grid/#pdfquerycellinfo) event.
 
