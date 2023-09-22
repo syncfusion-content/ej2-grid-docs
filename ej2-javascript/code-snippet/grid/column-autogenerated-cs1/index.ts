@@ -1,21 +1,14 @@
-import { Grid, ColumnModel } from '@syncfusion/ej2-grids';
+import { Grid, ColumnModel, Edit} from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
+
+Grid.Inject(Edit);
 
 let grid: Grid = new Grid({
     dataSource: data,
-    columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100 },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
-        { field: 'Freight', headerText: 'Freight', width: 100 ,format:'C2'},
-        { field: 'OrderDate', headerText: 'OrderDate', width: 100, format:'yMd'}
-    ],
-    height: 270
+    editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true },
 });
 grid.appendTo('#Grid');
 grid.dataBound = () => {
     var column = grid.columns[0];
     (column as ColumnModel).isPrimaryKey = true;
   };
-
-
-

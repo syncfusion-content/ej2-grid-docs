@@ -7,12 +7,12 @@ let grid: Grid = new Grid({
     dataSource: data,
     allowPaging:true,
     columns: [
-        { field: 'S.No', headerText: 'S.No', textAlign: 'Center', width: 120 },
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100 },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
-        { field: 'Freight', headerText: 'Freight', width: 100 ,format:'C2'},
-        { field: 'OrderDate', headerText: 'OrderDate', width: 100, format:'yMd'}
-    ],
+      { field: 'S.No', headerText: 'S.No', textAlign: 'Center', width: 120 },
+      { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
+      { field: 'CustomerID', headerText: 'Customer ID', width: 140 },
+      { field: 'Freight', headerText: 'Freight', textAlign: 'Right' ,format:'C', width: 120},
+      { field: 'OrderDate', headerText: 'OrderDate', textAlign: 'Right', format:'yMd', width: 140}
+  ],
     pageSettings: { pageSize: 8 },
   rowDataBound: (args: RowDataBoundEventArgs) => {
     var rowIndex: number = parseInt(args.row.getAttribute('aria-rowIndex'));
