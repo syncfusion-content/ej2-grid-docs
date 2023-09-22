@@ -31,11 +31,11 @@ function toolbarClick(args: ClickEventArgs) {
 
 function pdfQueryCellInfo(args: PdfQueryCellInfoEventArgs): any {
     if (args.column.headerText === 'Employee Image') {
-        args.image = {
+        args.image = ({
             base64: args.data['EmployeeImage'],
             height: 50,
             width: 50,
-        };
+        } as any);
     }
     if (args.column.headerText === 'Email ID') {
         args.hyperLink = {

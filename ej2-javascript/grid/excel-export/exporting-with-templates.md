@@ -48,6 +48,8 @@ In the following sample, the hyperlinks and images are exported to Excel using [
 {% previewsample "page.domainurl/code-snippet/grid/column-template-export-cs2" %}
 {% endif %}
 
+![ColumnTemplateExport](../images/colTemp_excel_expt.gif)
+
 ## Exporting with detail template
 
 By default, the grid will export the parent grid with expanded detail rows alone. Change the exporting option by using the `ExcelExportProperties.hierarchyExportMode` property. The available options are:
@@ -91,6 +93,8 @@ In the following sample, the detail row content is formatted by specifying the [
 {% previewsample "page.domainurl/code-snippet/grid/detail-template-export-cs2" %}
 {% endif %}
 
+![DetailTemplateExport](../images/detailTemp_excel_expt.gif)
+
 ## Exporting with caption template
 
 The Excel export feature enables exporting of Grid with a caption template to an Excel document.
@@ -123,3 +127,5 @@ In the following sample, the customized caption text is exported to Excel using 
 
 {% previewsample "page.domainurl/code-snippet/grid/caption-template-export-cs2" %}
 {% endif %}
+
+![CaptionTemplateExport](../images/captionTemp_excel_expt.gif)

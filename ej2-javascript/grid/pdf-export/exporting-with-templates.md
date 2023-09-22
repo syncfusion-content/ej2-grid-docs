@@ -11,11 +11,11 @@ domainurl: ##DomainURL##
 
 # Exporting grid with templates in ##Platform_Name## Grid control
 
-The grid offers the option to export the column, detail, and caption templates to a PDF document.
+The grid offers the option to export the column, detail, and caption templates to a PDF document. The template contains images, hyperlinks, and customized text.
 
 ## Exporting with column template
 
-The PDF export feature enables the exporting of Grid columns containing images, hyperlinks, and customized data to a PDF document.
+The PDF export feature enables the exporting of Grid columns containing images, hyperlinks, and customized text to a PDF document.
 
 In the following sample, the hyperlinks and images are exported to PDF using [hyperlink](../../api/grid/pdfQueryCellInfoEventArgs/#hyperlink) and [image](../../api/grid/pdfQueryCellInfoEventArgs/#image) properties in the [pdfQueryCellInfo](../../api/grid/#pdfquerycellinfo) event.
 
@@ -47,6 +47,8 @@ In the following sample, the hyperlinks and images are exported to PDF using [hy
 
 {% previewsample "page.domainurl/code-snippet/grid/column-template-export-cs1" %}
 {% endif %}
+
+![ColumnTemplateExport](../images/colTemp_pdf_expt.gif)
 
 ## Exporting with detail template
 
@@ -92,6 +94,8 @@ In the following sample, the detail row content is formatted by specifying the [
 {% previewsample "page.domainurl/code-snippet/grid/detail-template-export-cs1" %}
 {% endif %}
 
+![DetailTemplateExport](../images/detailTemp_pdf_expt.gif)
+
 ## Exporting with caption template
 
 The PDF export feature enables exporting of Grid with a caption template to an PDF document.
@@ -124,3 +128,5 @@ In the following sample, the customized caption text is exported to PDF using [c
 
 {% previewsample "page.domainurl/code-snippet/grid/caption-template-export-cs1" %}
 {% endif %}
+
+![CaptionTemplateExport](../images/captionTemp_pdf_expt.gif)
