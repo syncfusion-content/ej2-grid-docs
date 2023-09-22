@@ -11,11 +11,11 @@ domainurl: ##DomainURL##
 
 # Exporting grid with templates in ##Platform_Name## Grid control
 
-The grid offers the option to export the column, detail, and caption templates to an Excel document.
+The grid offers the option to export the column, detail, and caption templates to an Excel document. The template contains images, hyperlinks, and customized text.
 
 ## Exporting with column template
 
-The Excel export feature enables the exporting of Grid columns containing images, hyperlinks, and customized data to an Excel document.
+The Excel export feature enables the exporting of Grid columns containing images, hyperlinks, and customized text to an Excel document.
 
 In the following sample, the hyperlinks and images are exported to Excel using [hyperlink](../../api/grid/excelQueryCellInfoEventArgs/#hyperlink) and [image](../../api/grid/excelQueryCellInfoEventArgs/#image) properties in the [excelQueryCellInfo](../../api/grid/#excelquerycellinfo) event.
 
