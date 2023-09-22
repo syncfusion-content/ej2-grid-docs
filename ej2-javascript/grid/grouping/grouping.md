@@ -11,9 +11,9 @@ domainurl: ##DomainURL##
 
 # Grouping in ##Platform_Name## Grid control
 
-The Grid has options to group records by dragging and dropping the column header to the group drop area. When grouping is applied, grid records are organized into a hierarchical structure to facilitate easier expansion and collapse of records.
+The grouping feature in the Syncfusion ##Platform_Name## Grid allows you to organize data into a hierarchical structure, making it easier to expand and collapse records. You can group the columns by simply dragging and dropping the column header to the group drop area. To enable grouping in the grid, you need to set the [allowGrouping](../../api/grid/#allowgrouping) property to **true**. Additionally, you can customize the grouping options using the [groupSettings](../../api/grid/groupSettings) property.
 
-To enable grouping in the grid, set the [`allowGrouping`](../../api/grid/#allowgrouping) as true. Grouping options can be configured through the [`groupSettings`](../../api/grid/groupSettings). To group, inject the [`Group`](../../api/grid/group) module in the grid.
+To use the Grouping feature, need to inject [Group](../../api/grid/group) module in the grid.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -42,10 +42,14 @@ To enable grouping in the grid, set the [`allowGrouping`](../../api/grid/#allowg
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs80" %}
 {% endif %}
 
-> * You can group and ungroup columns by using the [`groupColumn`](../../api/grid/group/#groupcolumn) and [`ungroupColumn`](../../api/grid/group/#ungroupcolumn) methods.
-> * To disable grouping for a particular column, set the [`columns.allowGrouping`](../../api/grid/column/#allowgrouping) to false.
+> * You can group and ungroup columns in the Grid by using the [groupColumn](../../api/grid/group/#groupcolumn) and [ungroupColumn](../../api/grid/group/#ungroupcolumn) methods respectively.
+> * To disable grouping for a specific column, set the [columns.allowGrouping](../../api/grid/column/#allowgrouping) to **false**.
 
 ## Initial group
+
+To enable initial grouping in the Grid, you can use the [groupSettings](../../api/grid/groupSettings) property and set the [groupSettings.columns](../../api/grid/groupSettings/#columns) property to an array of column names(`field` of the column) that you want to group by. This feature is particularly useful when working with large datasets, as it allows you to quickly organize and analyze the data based on specific criteria.
+
+The following example demonstrates how to set an initial grouping for the **CustomerID** and **ShipCity** columns during the initial rendering grid, by using the `groupSettings.columns` property.
 
 To apply group at initial rendering, set the column field name in the `groupSettings.columns`.
 
@@ -76,9 +80,44 @@ To apply group at initial rendering, set the column field name in the `groupSett
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs81" %}
 {% endif %}
 
+## Prevent grouping for particular column
+
+The Grid component provides the ability to prevent grouping for a particular column. This can be useful when you have certain columns that you do not want to be included in the grouping process. It can be achieved by setting the [allowGrouping](../../api/grid/column/#allowgrouping) property of the particular `column` to **false**. The following example demonstrates, how to disable grouping for **CustomerID** column.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-grouping-prevent/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-grouping-prevent/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-grouping-prevent" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-grouping-prevent/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-grouping-prevent/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-grouping-prevent" %}
+{% endif %}
+
 ## Hide drop area
 
-To avoid ungrouping or further grouping of a column after initial column grouping, define the [`groupSettings.showDropArea`](../../api/grid/groupSettings/#showdroparea) as false.
+By default, the Grid provides a drop area for grouping columns. This drop area allows you to drag and drop columns to group and ungroup them. However, in some cases, you may want to prevent ungrouping or further grouping a column after initial grouping.
+
+To hide the drop area in the Syncfusion Angular Grid, you can set the [groupSettings.showDropArea](../../api/grid/groupSettings#showdroparea) property to **false**. 
+
+In the following example, the [EJ2 Toggle Switch Button](../../switch/getting-started) component is added to hide or show the drop area. When the switch is toggled, the [change](../../api/switch/#change) event is triggered and the `groupSettings.showDropArea` property of the grid is updated accordingly. 
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -105,6 +144,39 @@ To avoid ungrouping or further grouping of a column after initial column groupin
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs82" %}
+{% endif %}
+
+## Show the grouped column
+
+The Syncfusion Angular Grid has a default behavior where the grouped column is hidden, to provide a cleaner and more focused view of your data. However, if you prefer to show the grouped column in the grid, you can achieve this by setting the [groupSettings.showGroupedColumn](../../api/grid/groupSettings/#showgroupedcolumn) property to **true**.
+
+In the following example, the [EJ2 Toggle Switch Button](../../switch/getting-started) component is added to hide or show the grouped columns. When the switch is toggled, the [change](../../documentation/api/switch/#change) event is triggered and the `groupSettings.showGroupedColumn` property of the grid is updated accordingly.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-grouping-grouped/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-grouping-grouped/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-grouping-grouped" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-grouping-grouped/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-grouping-grouped/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-grouping-grouped" %}
 {% endif %}
 
 ## Group with paging
