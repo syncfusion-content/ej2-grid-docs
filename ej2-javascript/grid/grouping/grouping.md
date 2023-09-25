@@ -115,7 +115,7 @@ The Grid component provides the ability to prevent grouping for a particular col
 
 By default, the Grid provides a drop area for grouping columns. This drop area allows you to drag and drop columns to group and ungroup them. However, in some cases, you may want to prevent ungrouping or further grouping a column after initial grouping.
 
-To hide the drop area in the Syncfusion Angular Grid, you can set the [groupSettings.showDropArea](../../api/grid/groupSettings#showdroparea) property to **false**. 
+To hide the drop area in the Syncfusion ##Platform_Name## Grid, you can set the [groupSettings.showDropArea](../../api/grid/groupSettings#showdroparea) property to **false**. 
 
 In the following example, the [EJ2 Toggle Switch Button](../../switch/getting-started) component is added to hide or show the drop area. When the switch is toggled, the [change](../../api/switch/#change) event is triggered and the `groupSettings.showDropArea` property of the grid is updated accordingly. 
 
@@ -148,7 +148,7 @@ In the following example, the [EJ2 Toggle Switch Button](../../switch/getting-st
 
 ## Show the grouped column
 
-The Syncfusion Angular Grid has a default behavior where the grouped column is hidden, to provide a cleaner and more focused view of your data. However, if you prefer to show the grouped column in the grid, you can achieve this by setting the [groupSettings.showGroupedColumn](../../api/grid/groupSettings/#showgroupedcolumn) property to **true**.
+The Syncfusion ##Platform_Name## Grid has a default behavior where the grouped column is hidden, to provide a cleaner and more focused view of your data. However, if you prefer to show the grouped column in the grid, you can achieve this by setting the [groupSettings.showGroupedColumn](../../api/grid/groupSettings/#showgroupedcolumn) property to **true**.
 
 In the following example, the [EJ2 Toggle Switch Button](../../switch/getting-started) component is added to hide or show the grouped columns. When the switch is toggled, the [change](../../documentation/api/switch/#change) event is triggered and the `groupSettings.showGroupedColumn` property of the grid is updated accordingly.
 
@@ -179,16 +179,83 @@ In the following example, the [EJ2 Toggle Switch Button](../../switch/getting-st
 {% previewsample "page.domainurl/code-snippet/grid/grid-grouping-grouped" %}
 {% endif %}
 
+## Reordering on grouped columns 
+
+The Syncfusion Angular Grid allows you to easily reorder the grouped columns by dragging and dropping the grouped header cells in the group drag area. By changing the order of the grouped columns, the corresponding changes are automatically reflected in the grouping hierarchy of the grid. The grid dynamically adjusts the grouping based on the reordered columns in the group drag area. Additionally, you can also drop new columns into specific positions within the group drag area.
+
+To enable this feature, you have to set the [groupSettings.allowReordering](../../api/grid/groupSettings/#allowReordering) property as **true**. This is demonstrated in the sample below.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-grouping-reordering/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-grouping-reordering/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-grouping-reordering" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-grouping-reordering/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-grouping-reordering/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-grouping-reordering" %}
+{% endif %}
+
+## Sort grouped columns in descending order during initial grouping
+
+By default, grouped columns are sorted in ascending order. However, you can sort them in descending order during initial grouping by setting the [field](../../api/grid/sortDescriptorModel/#field) and [direction](../../api/grid/sortDescriptorModel/#direction-string) in the [sortSettings.columns](../../api/grid/sortSettings/#columns) property.
+
+The following example demonstrates how to sort the **CustomerID** column by setting the `sortSettings.columns` property to **Descending** during the initial grouping of the grid.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-grouping-sorting/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-grouping-sorting/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-grouping-sorting" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-grouping-sorting/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-grouping-sorting/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-grouping-sorting" %}
+{% endif %}
+
 ## Group with paging
 
-On grouping columns with paging feature, the aggregated information and total items are displayed based on the current page. The grid does not consider aggregated information and total items from other pages. To get additional details (aggregated information and total items) from other pages, set the [`groupSettings.disablePageWiseAggregates`](../../api/grid/groupSettings/#disablePageWiseAggregates) to false.
+The Grid component supports grouping columns with paging feature. When grouping is applied, the grid displays aggregated information and total items based on the current page. However, by default, the group footer and group caption footer does not consider the aggregated information and total items from other pages. To get additional details from other pages, set the [groupSettings.disablePageWiseAggregates](../../api/grid/groupSettings#disablePageWiseAggregates) property to **false**.
 
-> If remote data is bound to grid dataSource, two requests will be sent when performing grouping action; one for getting the grouped data and another for getting aggregate details and total items count.
+> If remote data is bound to grid dataSource, two requests will be sent when performing grouping action one for getting the grouped data and another for getting aggregate details and total items count.
 
 ## Group by format
 
-By default, a column will be grouped by the data or value present for the particular row. To group the numeric or datetime column based on the mentioned format, you have to enable the [`enableGroupByFormat`](../../api/grid/column/#enablegroupbyformat) property of the corresponding
-grid columns.
+By default, columns are grouped by the data or value present for the particular row. However, you can also group numeric or datetime columns based on the specified format. To enable this feature, you need to set the [enableGroupByFormat](../../api/grid/column/#enablegroupbyformat) property of the corresponding grid column. This feature allows you to group numeric or datetime columns based on a specific format.
+
+The following example demonstrates how to perform a group action using the `enableGroupByFormat` property for the  **OrderDate** and **Freight** columns of the grid. 
 
 {% if page.publishingplatform == "typescript" %}
 
