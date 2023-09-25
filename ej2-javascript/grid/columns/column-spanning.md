@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column spanning in ##Platform_Name## Grid control
+# Column spanning in ##Platform_Name## Grid component
 
 The column spanning feature in the Syncfusion Grid allows you to merge adjacent cells horizontally, creating a visually appealing and informative layout. By defining the [colSpan](../../api/grid/queryCellInfoEventArgs/#colspan) attribute in the [QueryCellInfo](../../api/grid/queryCellInfoEventArgs) event, you can easily span cells and customize the appearance of the grid.
 
