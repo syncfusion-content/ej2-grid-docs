@@ -7,9 +7,9 @@ var grid = new ej.grids.Grid({
     allowFiltering: true,
     allowGrouping: true,
     allowSorting: true,
-    columnMenuOpen: function (args) {
-        for (var item of args.items) {
-            if (item.text === 'Filter' && args.column.field === 'OrderID') {
+    columnMenuOpen: function (ColumnMenuOpenEventArgs) {
+        for (var item of ColumnMenuOpenEventArgs.items) {
+            if (item.text === 'Filter' && ColumnMenuOpenEventArgs.column.field === 'OrderID') {
                 item.hide = true;
             } else {
                 item.hide = false;
@@ -17,12 +17,11 @@ var grid = new ej.grids.Grid({
         }
     },
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', width: 200, textAlign: 'Right', showInColumnChooser: false },
-        { field: 'Freight', width: 150, format: 'C2', textAlign: 'Right', editType: 'numericedit' },
-        { field: 'ShipName', headerText: 'Ship Name', width: 300 },
-        { field: 'ShipCountry', headerText: 'Ship Country', visible: false, width: 200 },
-        { field: 'ShipCity', headerText: 'Ship City', width: 200 }
+        { field: 'OrderID', headerText: 'Order ID', width: 140, textAlign: 'Right'},
+        { field: 'CustomerID', headerText: 'Customer Name', width: 140, showInColumnChooser: false },
+        { field: 'Freight',headerText: 'Freight', width: 150, format: 'C2', textAlign: 'Right' },
+        { field: 'ShipCountry', headerText: 'Ship Country', visible: false, width: 150 },
+        { field: 'ShipCity', headerText: 'Ship City', width: 150 }
     ]
 });
 grid.appendTo('#Grid');
-
