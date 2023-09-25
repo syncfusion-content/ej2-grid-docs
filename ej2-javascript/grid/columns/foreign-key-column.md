@@ -25,13 +25,13 @@ ej.grids.Grid.Inject(ej.grids.ForeignKey);
 
 2.Define the foreign key column in the grid using the following properties:
 
-Foreign key column can be enabled by using [`column.dataSource`](../../api/grid/column/#datasource), [`column.foreignKeyField`](../api/grid/column/#foreignkeyfield) and [`column.foreignKeyValue`](../../api/grid/column/#foreignkeyvalue) properties.
+Foreign key column can be enabled by using [column.dataSource](../../api/grid/column/#datasource), [column.foreignKeyField](../api/grid/column/#foreignkeyfield) and [column.foreignKeyValue](../../api/grid/column/#foreignkeyvalue) properties.
 
-* [`column.dataSource`](../../api/grid/column/#datasource): Specifies the foreign data source that  contains the related data.
+* [column.dataSource](../../api/grid/column/#datasource): Specifies the foreign data source that  contains the related data.
 
-* [`column.foreignKeyField`](../../api/grid/column/#foreignkeyfield): Specifies the field from the foreign data source that should be displayed in the grid as the related data.
+* [column.foreignKeyField](../../api/grid/column/#foreignkeyfield): Specifies the field from the foreign data source that should be displayed in the grid as the related data.
 
-* [`column.foreignKeyValue`](../../api/grid/column/#foreignkeyvalue): Specifies the field from the foreign data source that should be displayed in the grid as the related data.
+* [column.foreignKeyValue](../../api/grid/column/#foreignkeyvalue): Specifies the field from the foreign data source that should be displayed in the grid as the related data.
 
 ```html
 
@@ -45,7 +45,7 @@ field: 'EmployeeID', headerText: 'Employee Name', width: 150, foreignKeyValue: '
 
 The Syncfusion Grid component provides a convenient way to bind local data to a foreign key column. This allows you to display related data from a local data source within the grid. Here's an example of how to bind local data to a Foreign Key column in Syncfusion Grid:
 
-In this example, **data** is the local data source for the Grid, and **employeeData** is the local data source for the foreign key column. The `field` property of the column is set to **EmployeeID** which represents the foreign key value in the **data**. The `foreignKeyValue` property is set to **FirstName** which represents the field name in the **employeeData** that you want to display in the foreign key column.
+In this example, **data** is the local data source for the Grid, and **employeeData** is the local data source for the foreign key column. The `field` property of the column is set to **EmployeeID** which represents the foreign key value in the **data**. The [foreignKeyValue](../../api/grid/column/#foreignkeyvalue) property is set to **FirstName** which represents the field name in the **employeeData** that you want to display in the foreign key column.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -74,13 +74,13 @@ In this example, **data** is the local data source for the Grid, and **employeeD
 {% previewsample "page.domainurl/code-snippet/grid/foreign-key-cs1" %}
 {% endif %}
 
-> * If [`column.foreignKeyField`](../../api/grid/column/#foreignkeyfield) is not defined, then the column uses [`column.field`](../../api/grid/column/#field).
+> * If [column.foreignKeyField](../../api/grid/column/#foreignkeyfield) is not defined, then the column uses [column.field](../../api/grid/column/#field).
 
 ## Binding remote data
 
 The Foreign key column in Syncfusion Grid allows you to bind remote data for a foreign key column. You can assign the service data as an instance of `DataManager` to the `dataSource` property, and provide the endpoint `URL` as the data source URL.
 
-This example demonstrates how to use the foreign key column with remote data binding using the [ODataV4Adaptor](https://ej2.syncfusion.com/javascript/documentation/grid/data-binding/remote-data#odata-v4-adaptor---binding-odata-v4-service) in the grid:
+This example demonstrates how to use the foreign key column with remote data binding using the [ODataV4Adaptor](../../grid/data-binding/remote-data#odata-v4-adaptor---binding-odata-v4-service) in the grid:
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -109,48 +109,11 @@ This example demonstrates how to use the foreign key column with remote data bin
 {% previewsample "page.domainurl/code-snippet/grid/foreign-key-cs1remote" %}
 {% endif %}
 
-
-
-Foreign key column can be enabled by using [`column.dataSource`](../../api/grid/column/#datasource), [`column.foreignKeyField`](../api/grid/column/#foreignkeyfield) and [`column.foreignKeyValue`](../../api/grid/column/#foreignkeyvalue) properties.
-
-* [`column.dataSource`](../../api/grid/column/#datasource) - Defines the foreign data.
-* [`column.foreignKeyField`](../../api/grid/column/#foreignkeyfield) - Defines the mapping column name to the foreign data.
-* [`column.foreignKeyValue`](../../api/grid/column/#foreignkeyvalue) - Defines the display field from the foreign data.
-
-In the following example, **Employee Name** is a foreign column which shows **FirstName** column from foreign data.
-
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/foreign-key-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/grid/foreign-key-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/foreign-key-cs1/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/grid/foreign-key-cs1" %}
-{% endif %}
-
-> * For remote data, the sorting and grouping is done based on [`column.foreignKeyField`](../../api/grid/column/#foreignkeyfield) instead of [`column.foreignKeyValue`](../../api/grid/column/#foreignkeyvalue).
+> * For remote data, the sorting and grouping is done based on [column.foreignKeyField](../../api/grid/column/#foreignkeyfield) instead of [column.foreignKeyValue](../../api/grid/column/#foreignkeyvalue).
 
 ## Use edit template in foreignkey column
 
-BThe Syncfusion Grid provides support for using an edit template in a foreign key column. By default, a dropdown component is used for editing foreign key column. However, you can render a different component for editing by using the [column.edit](https://ej2.syncfusion.com/javascript/documentation/api/grid/column/#edit) property. Here's an example that demonstrates how to use an edit template in a foreign key column:
+The Syncfusion Grid provides support for using an edit template in a foreign key column. By default, a dropdown component is used for editing foreign key column. However, you can render a different component for editing by using the [column.edit](https://ej2.syncfusion.com/javascript/documentation/api/grid/column/#edit) property. Here's an example that demonstrates how to use an edit template in a foreign key column:
 
 In this example, an [AutoComplete](https://ej2.syncfusion.com/javascript/demos/#/bootstrap5/auto-complete/default) component is rendered as the edit template for the **"EmployeeID"** foreign key column. The [dataSource](../../api/auto-complete/#datasource) property of the AutoComplete component is set to the employees data, and the fields property is configured to display the **"FirstName"** field as the value.
 
@@ -249,9 +212,16 @@ In this example, the **"EmployeeID"** column is a foreign key column, and the **
 
 ## Perform aggregation in foreignkey column
 
-Default aggregations are not supported in a foreign key column. You can achieve aggregation for the foreign key column by using the custom aggregates. The following example demonstrates the way to achieve aggregation in foreign key column.
+By default, aggregations are not supported in a foreign key column in the Syncfusion Grid. However, you can achieve aggregation for a foreign key column by using [customAggregate](../../api/grid/aggregateColumnDirective/#customaggregate).
 
-In the following example, The `Employee Name` is a foreign key column and the aggregation for the foreign column was calculated in customAggregateFn.
+To perform aggregation in a foreign key column, follow these steps:
+
+1.Define a foreign key column in the Grid.
+2.Implement a custom aggregate function to calculate the aggregation for the foreign key column.
+3.Set the [customAggregate](../../api/grid/aggregateColumnDirective/#customaggregate) property of the column to the custom aggregate function.
+
+Here's an example that demonstrates how to perform aggregation in a foreign key column:
+In the provided example, the `customAggregateFn` function is used to filter the data based on the **FirstName** field of the foreign key column, using the `getForeignData` internal function. The function then counts the occurrences of **Janet**. The result is displayed in the grid's footer template using the [footerTemplate](../../api/grid/aggregateTemplateType).
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -282,7 +252,7 @@ In the following example, The `Employee Name` is a foreign key column and the ag
 
 ## Enable multiple foreign key columns
 
-Multiple foreign key columns with editing options are enabled for the JavaScript(ES5) Grid component.
+The Syncfusion Grid component supports the feature of enabling multiple foreign key columns with editing options. This allows users to display columns from foreign data sources in the Grid component.
 
 In the following example, **Customer Name** and **Ship City** are foreign key columns that display the **ContactName** and **City** columns from foreign data.
 

@@ -16,7 +16,7 @@ let grid: Grid = new Grid(
             { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100 },
             // Foreign column
             {
-                field: 'EmployeeID', headerText: 'Employee Name', width: 150, foreignKeyValue: 'FirstName', dataSource: fEmployeeData,
+                field: 'EmployeeID', headerText: 'Employee Name', width: 120, foreignKeyValue: 'FirstName', dataSource: fEmployeeData,
                 filterBarTemplate: {
                     create: (args: { element: Element, column: Column }) =>
                         return createElement('input', { className: 'flm-input' });;
@@ -42,8 +42,7 @@ let grid: Grid = new Grid(
                     }
                 }
             },
-            { field: 'Freight', headerText: 'Freight', width: 100, textAlign: 'Right'},
-            { field: 'ShipName', headerText: 'Ship Name', width: 180 }
+            { field: 'ShipCity', headerText: 'Ship City', width: 180 },
         ],
         height: 260
     });

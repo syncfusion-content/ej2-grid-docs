@@ -9,7 +9,7 @@ Grid.Inject(ForeignKey, Aggregate);
 // Custom Aggregate function for foreign column
 let customAggregateFn: CustomSummaryType = (data: Object, column: AggregateColumnModel) => {
     return data.result.filter((dObj: Object) => {
-        return getValue('FirstName' , getForeignData(grid.getColumnByField(column.columnName), dObj)[0]) === 'Margaret';
+        return getValue('FirstName' , getForeignData(grid.getColumnByField(column.columnName), dObj)[0]) === 'Janet';
     }).length;
 };
 
@@ -33,7 +33,7 @@ let grid: Grid = new Grid(
                         type: 'Custom',
                         customAggregate: customAggregateFn,
                         field: 'EmployeeID',
-                        footerTemplate: 'Count of Margaret: ${Custom}'
+                        footerTemplate: 'Count of Janet: ${Custom}'
                     }
                 ]
             }

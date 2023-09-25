@@ -13,7 +13,6 @@ let employeeData: DataManager = new DataManager({
     adaptor: new ODataV4Adaptor
 });
 
-
 Grid.Inject(ForeignKey);
 
 let grid: Grid = new Grid(
@@ -21,11 +20,9 @@ let grid: Grid = new Grid(
         dataSource: data,
         columns: [
             { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100 },
-            {
-                field: 'EmployeeID', headerText: 'Employee Name', width: 150, foreignKeyValue: 'FirstName', dataSource: employeeData
-            },
-            { field: 'Freight', headerText: 'Freight', width: 100, textAlign: 'Right'},
-            { field: 'ShipName', headerText: 'Ship Name', width: 180 }
+            {field: 'EmployeeID', headerText: 'Employee Name', width: 120, foreignKeyValue: 'FirstName', dataSource: employeeData},
+            { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 80},
+            { field: 'ShipCity', headerText: 'Ship City', width: 130 },
         ],
         height: 315
     });
