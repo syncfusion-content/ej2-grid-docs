@@ -8,8 +8,8 @@ var firstGrid = new ej.grids.Grid({
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
         { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C' },
-        { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', width: 140, format: 'yMd' }
+        { field: 'ShipName', headerText: 'Ship Name', width: 150 },
+        { field: 'ShipCountry', headerText: 'Ship Country', width: 150 },
     ],
 });
 firstGrid.appendTo('#FirstGrid');
