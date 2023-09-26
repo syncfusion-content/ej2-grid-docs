@@ -8,8 +8,8 @@ var firstGrid = new ej.grids.Grid({
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
         { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C' },
-        { field: 'OrderDate', headerText: 'Order Date', width: 140, format: 'yMd', textAlign: 'Right' }
+        { field: 'ShipName', headerText: 'Ship Name', width: 150 },
+        { field: 'ShipCountry', headerText: 'Ship Country', width: 150 },
     ],
     height: 315
 });
@@ -21,8 +21,7 @@ var secondGrid = new ej.grids.Grid({
         { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 120, type: 'number' },
         { field: 'FirstName', width: 140, headerText: 'First Name', type: 'string' },
         { field: 'LastName', width: 140, headerText: 'Last Name', type: 'string' },
-        { field: 'City', headerText: 'City', textAlign: 'Right', width: 120 },
-        { field: 'BirthDate', headerText: 'Birth Date', textAlign: 'Right', width: 140, format: 'yMd' }
+        { field: 'City', headerText: 'City', width: 120 },
     ],
     height: 315
 });
