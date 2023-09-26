@@ -9,15 +9,15 @@ let grid: Grid = new Grid({
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100 },
         { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
-        { field: 'ShipCity', headerText: 'Ship City', width: 100 },
-        { field: 'ShipName', headerText: 'Ship Name', width: 100 }
+        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', format:'C2', width: 90 },
+        { field: 'ShipCity', headerText: 'Ship City', width: 120 }
     ],
     height: 280
 });
 grid.appendTo('#Grid');
 
-let addColumn: Button = new Button({ cssClass: 'e-info' }, '#add');
-let deleteColumn: Button = new Button({ cssClass: 'e-info' }, '#delete');
+let addColumns: Button = new Button({ cssClass: 'e-info' }, '#add');
+let deleteColumns: Button = new Button({ cssClass: 'e-info' }, '#delete');
 
 document.getElementById('add').onclick = () => {
     var newColumns = [

@@ -1,6 +1,6 @@
 
 
-import { Grid,ColumnModel } from '@syncfusion/ej2-grids';
+import { Grid, ColumnModel } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 import { Button } from '@syncfusion/ej2-buttons';
 
@@ -8,10 +8,10 @@ import { Button } from '@syncfusion/ej2-buttons';
 let grid: Grid = new Grid({
     dataSource: data,
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100 },
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
         { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
-        { field: 'Freight', width: 120, format: 'C2', textAlign: 'Right' },
-        { field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd', textAlign: 'Right' }
+        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', format: 'C2', width: 90 },
+        { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', format: 'yMd', width: 120 }
     ],
     height: 280
 });

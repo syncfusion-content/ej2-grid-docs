@@ -1,17 +1,17 @@
 var grid = new ej.grids.Grid({
     dataSource: data,
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100 },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
-        { field: 'ShipCity', headerText: 'Ship City', width: 100 },
-        { field: 'ShipName', headerText: 'Ship Name', width: 100 }
+      { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100 },
+      { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
+      { field: 'Freight', headerText: 'Freight', textAlign: 'Right', format:'C2', width: 90 },
+      { field: 'ShipCity', headerText: 'Ship City', width: 120 }
     ],
     height: 280
 });
 grid.appendTo('#Grid');
 
-var addColumn = new ej.buttons.Button({ cssClass: 'e-info' }, '#add');
-var deleteColumn = new ej.buttons.Button({ cssClass: 'e-info' }, '#delete');
+var addColumns = new ej.buttons.Button({ cssClass: 'e-info' }, '#add');
+var deleteColumns = new ej.buttons.Button({ cssClass: 'e-info' }, '#delete');
 
 document.getElementById('add').onclick = function () {
     var newColumns = [

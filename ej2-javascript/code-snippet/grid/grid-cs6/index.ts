@@ -6,11 +6,10 @@ import { data } from './datasource.ts';
 let grid: Grid = new Grid({
     dataSource: data,
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
-        { field: 'CustomerID', width: 140, headerText: 'Customer ID' },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right',  width: 120, format: 'C' },
-        { field: 'ShipCity', headerText: 'Ship City', width: 120 ,visible: false},
-        { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', width: 140, format: 'yMd' }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
+        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', format: 'C2', width: 90 },
+        { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', format: 'yMd',width: 120 }
     ],
     height: 315
 });

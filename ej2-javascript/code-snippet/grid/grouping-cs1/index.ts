@@ -14,11 +14,11 @@ let grid: Grid = new Grid({
     allowResizing: true,
     toolbar: ['Search'],
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right', allowGrouping: false, allowResizing: false },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 150, textAlign: 'Left', allowSorting: false },
-        { field: 'ShipCity', headerText: 'Ship City', width: 150, textAlign: 'Left', allowReordering: false },
-        { field: 'ShipCountry', headerText: 'Ship Country', width: 150, textAlign: 'Left', allowSearching: false },
-        { field: 'Freight', headerText: 'Freight', width: 120, format: 'C2', textAlign: 'Right', allowFiltering: false },
+      { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, allowGrouping: false, allowResizing: false },
+      { field: 'CustomerID', headerText: 'Customer ID', textAlign: 'Left', width: 150, allowSorting: false },
+      { field: 'ShipCity', headerText: 'Ship City', textAlign: 'Left', width: 150, allowReordering: false },
+      { field: 'ShipCountry', headerText: 'Ship Country', textAlign: 'Left', width: 150, allowSearching: false },
+      { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 150, format: 'C2', allowFiltering: false }
       ],
     height: 220
 });
