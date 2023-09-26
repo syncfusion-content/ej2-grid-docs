@@ -1,12 +1,9 @@
 import { Grid, Page, Selection } from '@syncfusion/ej2-grids';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
 import { Switch } from '@syncfusion/ej2-buttons';
-import {data} from "./datasource.ts"
-Grid.Inject(Page, Selection);
+import { data } from "./datasource.ts"
 
-/**
- * Local Data sample
- */
+Grid.Inject(Page, Selection);
 
 let dropdownData = ['Freight', 'Shipment', 'Cargo'];
 let grid: Grid = new Grid({
@@ -34,11 +31,13 @@ let grid: Grid = new Grid({
       width: 120,
       headerTemplate: ` <div id='Freight'></div>`,
     },
-    { field: 'OrderDate', headerText: 'Order Date', format: 'yMd', width: 240,
-    headerTemplate: 
-    `<div><span id='OrderDate'></span>
+    {
+      field: 'OrderDate', headerText: 'Order Date', format: 'yMd', width: 200,
+      headerTemplate:
+        `<div><span id='OrderDate'></span>
     <label id='headerText' style='margin-left:8px'>Order Date</label>
-    </div>`, },
+    </div>`,
+    },
   ],
   pageSettings: { pageCount: 5 },
 });
@@ -51,12 +50,12 @@ let dropDownColumn: DropDownList = new DropDownList({
 dropDownColumn.appendTo('#Freight');
 
 let headerText = 'order date';
-let switchObj: Switch = new Switch({
-  change: change,
+let toggleButton: Switch = new Switch({
+  change: onSwitchToggle,
 });
-switchObj.appendTo('#OrderDate');
+toggleButton.appendTo('#OrderDate');
 
-function change(args) {
+function onSwitchToggle(args) {
   headerText = args.checked ? 'Purchase Date' : 'Order Date';
   (document.getElementById('headerText') as HTMLElement).innerHTML = headerText;
 }

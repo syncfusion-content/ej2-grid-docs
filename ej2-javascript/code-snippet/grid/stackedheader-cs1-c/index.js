@@ -1,52 +1,53 @@
-
 var grid = new ej.grids.Grid({
     dataSource: data,
     allowPaging: true,
-    allowResizing: true,
-    pageSettings: { pageCount: 5 },
     columns: [
-        { 
-            field: 'OrderID', 
-            headerText: 'Order ID', 
-            textAlign: 'Right', 
-            width: 120, 
-            headerTemplate: '#orderID' 
+        {
+            field: 'OrderID',
+            headerText: 'Order ID',
+            width: 120,
+            textAlign: 'Center',
+            headerTemplate: '#orderID'
         },
         {
-            headerText: 'Order Details', 
-            headerTemplate: '#orderDate', 
+            headerText: 'Order Details',
+            headerTemplate: '#orderDate',
             columns: [
-                { 
-                    field: 'OrderDate', 
-                    headerText: 'Order Date', 
-                    textAlign: 'Right', 
-                    width: 135, 
-                    format: 'yMd', 
+                {
+                    field: 'OrderDate',
+                    headerText: 'Order Date',
+                    format: 'yMd',
+                    width: 130,
+                    textAlign: 'Right',
+                    minWidth: 10,
                 },
-                { 
-                    field: 'Freight', 
-                    headerText: 'Freight($)', 
-                    textAlign: 'Right', 
-                    width: 120, 
-                    format: 'C2', 
+                {
+                    field: 'Freight',
+                    headerText: 'Freight($)',
+                    width: 120,
+                    format: 'C1',
+                    textAlign: 'Right',
+                    minWidth: 10,
                 },
             ]
         },
         {
-            headerText: 'Ship Details', 
+            headerText: 'Ship Details',
             headerTemplate: '<div> <span>Ship Details</span><span>(<i class="fa fa-truck"></i>)</span></div>',
             columns: [
-                { 
-                    field: 'ShippedDate', 
-                    headerText: 'Shipped Date', 
-                    textAlign: 'Right', 
-                    width: 145, 
+                {
+                    field: 'ShippedDate',
+                    headerText: 'Shipped Date',
                     format: 'yMd',
+                    textAlign: 'Right',
+                    width: 150,
+                    minWidth: 10,
                 },
-                { 
-                    field: 'ShipCountry', 
-                    headerText: 'Ship Country', 
-                    width: 140, 
+                {
+                    field: 'ShipCountry',
+                    headerText: 'Ship Country',
+                    width: 150,
+                    minWidth: 10,
                 },
             ]
         }

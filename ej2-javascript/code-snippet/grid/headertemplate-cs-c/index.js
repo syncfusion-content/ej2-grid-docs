@@ -4,28 +4,31 @@ var grid = new ej.grids.Grid({
     {
       field: 'OrderID',
       headerText: 'Order ID',
-      width: 120,
       textAlign: 'Right',
+      width: 120,
     },
     {
       field: 'CustomerID',
       headerText: 'Customer ID',
+      width: 140,
       headerTemplate: ` <div>
           <span class="e-icon-userlogin"></span> 
           Customer ID
           </div>`,
-      width: 140,
+      
     },
     {
       field: 'Freight',
       headerText: 'Freight',
+      format: "C",
       width: 120,
       headerTemplate: ` <div id='Freight'></div>`,
     },
     {
       field: 'OrderDate',
       headerText: 'Order Date',
-      width: 240,
+      textAlign: "Right",
+      width: 120,
       format: 'yMd',
       headerTemplate: `<div><span id='OrderDate'></span>
       <label id='headerText' style='margin-left:8px'>Order Date</label>
@@ -35,22 +38,23 @@ var grid = new ej.grids.Grid({
 });
 grid.appendTo('#Grid');
 
-var dropdownData = ['Freight', 'Shipment', 'Cargo'];
+let dropdownData = ['Freight', 'Shipment', 'Cargo'];
 
-let dropDown = new ej.dropdowns.DropDownList({
+let dropDownColumn = new ej.dropdowns.DropDownList({
   value: 'Freight',
   popupHeight: '200px',
   dataSource: dropdownData,
 });
-dropDown.appendTo('#Freight');
+dropDownColumn.appendTo('#Freight');
 
-var switchObj = new ej.buttons.Switch({
+
+let toggleButton = new ej.buttons.Switch({
   headerText: 'Order Date',
-  change: change,
+  change: onSwitchToggle,
 });
-switchObj.appendTo('#OrderDate');
+toggleButton.appendTo('#OrderDate');
 
-function change(args) {
+function onSwitchToggle(args) {
   headerText = args.checked ? 'Purchase Date' : 'Order Date';
   document.getElementById('headerText').innerHTML = headerText;
 }

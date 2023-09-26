@@ -1,9 +1,10 @@
 var grid = new ej.grids.Grid({
+
   dataSource: data,
-  gridLines: 'Default',
-  allowTextWrap: true,
-  textWrapSettings: { wrapMode: 'Header' },
   allowPaging: true,
+  allowTextWrap: true,
+  textWrapSettings: 'wrapSettings',
+  height: 400,
 
   columns: [
     {
@@ -16,6 +17,7 @@ var grid = new ej.grids.Grid({
       field: 'NumberofPatentFamilies',
       headerText: 'Number of Patent Families',
       width: 180,
+      textAlign: "Right",
     },
     {
       field: 'Country',
@@ -30,21 +32,26 @@ var grid = new ej.grids.Grid({
       width: 200,
     },
   ],
-  pageSettings: { pageCount: 5 },
 });
 grid.appendTo('#Grid');
+
+let wrapSettings = {wrapMode: 'Header' }
+
+let dropdownData = [
+  { text: 'Header', value: 'Header' },
+  { text: 'Both', value: 'Both' },
+]
+
 var dropdown = new ej.dropdowns.DropDownList({
-  dataSource: [
-    { text: 'Header', value: 'Header' },
-    { text: 'Both', value: 'Both' },
-  ],
+  dataSource: dropdownData,
   popupHeight: '240px',
-  width: '120px',
+  width: '100px',
   value: 'Header',
-  change: change,
+  change: valueChange,
 });
 dropdown.appendTo('#dropdownlist');
-function change(args) {
+
+function valueChange(args) {
   grid.textWrapSettings.wrapMode = args.value;
 }
 

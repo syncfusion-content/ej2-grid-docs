@@ -44,7 +44,8 @@ To enable the `headerText` property, you simply need to define it in the  [colum
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs8" %}
 {% endif %}
 
-> * If both the [`field`](../../api/grid/column/#field) and [`headerText`](../../api/grid/column/#headertext) are not defined in the column, the column renders with “empty” header text.
+> * The `headerText` property is optional, and if it is not defined, then the corresponding column’s `field` value is set as header text for that column.
+> * You can also use the [headerTemplate](../../api/grid/column/#headertemplate) property to apply custom HTML content to the header cell.
 
 ## Header template
 
@@ -79,11 +80,14 @@ In this demo, the custom element is rendered for both **CustomerID** and **Order
 {% previewsample "page.domainurl/code-snippet/grid/headertemplate-cs-c" %}
 {% endif %}
 
+>* The `headerTemplate` property is only applicable to Grid columns that have a header element.
+>* You can use any HTML or javascript component in the header template to add additional functionality to the header element.
+
 ## Stacked header 
 
-In Grid, you can group multiple levels of column headers by stacking the Grid columns. This feature allows you to organize the Grid columns in a more structured and understandable way. This can be achieved by setting the [columns->columns](../../api/grid/column/#columns) property. Within this property, you can define an array of column objects to group together as sub-headers under a main header. You can define the [headerText](../../api/grid/column/#headertext) property of each sub-header column to set the text for that sub-header.
+In Grid, you can group multiple levels of column headers by stacking the Grid columns. This feature allows you to organize the Grid columns in a more structured and understandable way. This can be achieved by setting the [columns->columns](../../api/grid/column/#columns) property. Within this property, you can define an array of column objects to group together as sub-headers under a main header. You can define the `headerText` property of each sub-header column to set the text for that sub-header.
 
-You can customize the appearance of the stacked header elements by using the [headerTemplate](../../api/grid/column/#headertemplate) property. This property accepts an id reference, which allows you to define custom HTML elements or ##Platform_Name## components to the header element. Here's an example of how to use stacked headers with a custom `headerTemplate` in Syncfusion Grid.
+You can customize the appearance of the stacked header elements by using the `headerTemplate` property. This property accepts an id reference, which allows you to define custom HTML elements or ##Platform_Name## components to the header element. Here's an example of how to use stacked headers with a custom `headerTemplate` in Syncfusion Grid.
 
 {% if page.publishingplatform == "typescript" %}
 
