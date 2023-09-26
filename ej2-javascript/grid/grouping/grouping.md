@@ -181,7 +181,7 @@ In the following example, the [EJ2 Toggle Switch Button](../../switch/getting-st
 
 ## Reordering on grouped columns 
 
-The Syncfusion Angular Grid allows you to easily reorder the grouped columns by dragging and dropping the grouped header cells in the group drag area. By changing the order of the grouped columns, the corresponding changes are automatically reflected in the grouping hierarchy of the grid. The grid dynamically adjusts the grouping based on the reordered columns in the group drag area. Additionally, you can also drop new columns into specific positions within the group drag area.
+The Syncfusion ##Platform_Name## Grid allows you to easily reorder the grouped columns by dragging and dropping the grouped header cells in the group drag area. By changing the order of the grouped columns, the corresponding changes are automatically reflected in the grouping hierarchy of the grid. The grid dynamically adjusts the grouping based on the reordered columns in the group drag area. Additionally, you can also drop new columns into specific positions within the group drag area.
 
 To enable this feature, you have to set the [groupSettings.allowReordering](../../api/grid/groupSettings/#allowReordering) property as **true**. This is demonstrated in the sample below.
 
@@ -289,6 +289,90 @@ The following example demonstrates how to perform a group action using the `enab
 By default, the Syncfusion Grid supports interaction-oriented column grouping, where users manually group columns by dragging and dropping them into the grouping area of the grid. Grid provides an ability to group and ungroup a column using [groupColumn](../../api/grid/#groupcolumn) and [ungroupColumn](../../api/grid/#ungroupcolumn) methods. These methods provide a programmatic approach to perform column grouping and ungrouping.
 
 The following example demonstrates how to group and upgroup the columns in a grid. It utilizes the [DropDownList](../../drop-down-list/getting-started) component to select the column. When an external button is clicked, the `groupColumn` and `ungroupColumn` methods are called to group or ungroup the selected column.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs84/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs84/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs84" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs84/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs84/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs84" %}
+{% endif %}
+
+## Expand or collapse externally
+
+The Syncfusion ##Platform_Name## Grid offers a convenient feature to expand or collapse grouped rows, allowing you to control the visibility of grouped data. This section will provide guidance on enabling this functionality and integrating it into your application using the Grid properties and methods.
+
+### Expand or collapse all grouped rows
+
+Grid provides an ability to expand or collapse grouped rows using [groupExpandAll](../../api/grid/#groupexpandall) and [groupCollapseAll](../../api/grid/#groupcollapseall) methods respectively.
+
+In the following example, the [EJ2 Toggle Switch Button](../../switch/getting-started) component is added to expand or collapse grouped rows. When the switch is toggled, the [change](../../api/switch/#change) event is triggered and the `groupExpandAll` and `groupCollapseAll` methods are called to expand or collapse grouped rows.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs82-expandall/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs82-expandall/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs82-expandall" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs82-expandall/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs82-expandall/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs82-expandall" %}
+{% endif %}
+
+### Expand or collapse selected grouped row
+
+Expanding or collapsing selected grouped rows in a Syncfusion javascript Grid involves implementing the functionality to expand or collapse grouped records programatically.
+
+To enable the expand and collapse functionality for grouped rows in a grid, you can utilize the [expandCollapseRows](../..api/grid/group/#expandcollapserows) method. This method is designed to handle two scenarios such as expanding collapsed grouped records and collapsing expanded grouped records.
+
+To implement this functionality, follow these steps:
+
+1. Include an `input` element to capture the grouped row index.
+2. Add a `button` element with a **click** event binding to trigger the **onExpandCollapseButtonClick** method. This method retrieve the grouped rows from the grid's content table using the `querySelectorAll` method.
+3. Check if there are any grouped rows available.
+4. If grouped rows exist, locate the group caption element based on the entered row index.
+5. Call the `expandCollapseRows` method of the grid's group module, passing the group caption element to toggle its expand/collapse state.
+
+The following example demonstrates the function that collapses the selected row using an external button click. 
+
+## Expand or collapse externally
+
+The Syncfusion ##Platform_Name## Grid offers a convenient feature to expand or collapse grouped rows, allowing you to control the visibility of grouped data. This section will provide guidance on enabling this functionality and integrating it into your application using the Grid properties and methods.
 
 {% if page.publishingplatform == "typescript" %}
 
