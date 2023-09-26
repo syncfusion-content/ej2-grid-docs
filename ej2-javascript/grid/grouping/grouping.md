@@ -284,6 +284,39 @@ The following example demonstrates how to perform a group action using the `enab
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs83" %}
 {% endif %}
 
+## Group or ungroup column externally
+
+By default, the Syncfusion Grid supports interaction-oriented column grouping, where users manually group columns by dragging and dropping them into the grouping area of the grid. Grid provides an ability to group and ungroup a column using [groupColumn](../../api/grid/#groupcolumn) and [ungroupColumn](../../api/grid/#ungroupcolumn) methods. These methods provide a programmatic approach to perform column grouping and ungrouping.
+
+The following example demonstrates how to group and upgroup the columns in a grid. It utilizes the [DropDownList](../../drop-down-list/getting-started) component to select the column. When an external button is clicked, the `groupColumn` and `ungroupColumn` methods are called to group or ungroup the selected column.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs84/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs84/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs84" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs84/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs84/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs84" %}
+{% endif %}
+
 ## Grouping events
 
 During the group action, the grid component triggers two events. The [`actionBegin`](../../api/grid/#actionbegin) event triggers before the group action starts and the [`actionComplete`](../../api/grid/#actioncomplete) event triggers after the group action is completed. Using these events you can perform any action.

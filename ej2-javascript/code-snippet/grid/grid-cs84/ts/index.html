@@ -44,6 +44,17 @@
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
+        <div style="padding-bottom: 10px">
+            <label padding: 30px 20px 0 0>Column Name :</label>
+            <input type="text" tabindex="1" id="dropdowns" />
+            <div id="dropdowns"></div>
+        </div>
+        <button ejs-button style="margin-top: 10px " id="group" cssClass="e-outline"  (click)="groupColumn()">
+     
+          </button>
+          <button ejs-button style="margin-top: 10px " id="ungroup" cssClass="e-outline"  (click)="groupColumn()">
+     
+        </button>
         <div id='Grid'></div>
     </div>
 </body>
