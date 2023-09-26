@@ -150,3 +150,4 @@ private void PdfHeaderQueryCellInfo(object pdf)
 ## Limitations
 
 * The export feature for detail templates is not supported in server-side exporting.
+* Multiple grids exporting feature is not supported with server side exporting.
