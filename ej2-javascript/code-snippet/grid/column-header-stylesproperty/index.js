@@ -1,28 +1,25 @@
 var grid = new ej.grids.Grid({
   dataSource: data,
+  allowPaging: true,
   columns: [
     {
       field: 'OrderID',
-      customAttributes: { class: 'customcss' },
       headerText: 'Order ID',
-      width: 120,
-      textAlign: 'Right',
+      customAttributes: { class: 'customcss' },
+      textAlign: 'Center',
     },
-    { field: 'CustomerID', headerText: 'Customer ID', width: 140 },
+    { field: 'CustomerName', headerText: 'Customer Name', textAlign: 'Center' },
+    {
+      field: 'Freight',
+      headerText: 'Freight',
+      customAttributes: { class: 'customcss' },
+      textAlign: 'Center',
+    },
     {
       field: 'OrderDate',
-      customAttributes: { class: 'customcss' },
       headerText: 'Order Date',
-      width: 130,
       format: 'yMd',
-      textAlign: 'Right',
-    },
-    {
-      field: 'ShippedDate',
-      headerText: 'Shipped Date',
-      width: 130,
-      format: 'yMd',
-      textAlign: 'Right',
+      textAlign: 'Center',
     },
   ],
 });

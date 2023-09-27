@@ -316,9 +316,6 @@ Here is an example of how to change the header text of a column using the `getCo
 {% previewsample "page.domainurl/code-snippet/grid/column-header-dynamically" %}
 {% endif %}
 
->* You can also use the [getHeaderTable](../../api/grid/#getheadertable) method to get the table element of the header, and then adjust the height.
->* You cannot change the height of row below the default height of 42px using the **e-columnheader** class.
-
 **Changing header text using headerValueAccessor property**
 
 The `headerValueAccessor` property in Syncfusion Grid allows you to customize the text of a column header cell, which can be useful in scenarios where you want to change the text to display it in a different language, format or add additional information to the header. This property is triggered every time the header cell is rendered.
@@ -417,7 +414,8 @@ Once you have created the CSS class, you can add it to the particular column by 
 For example, to add the orientationcss class to the Freight column, you can use the following code:
 
 ```typescript
-<e-column field='Freight' headerText='Freight' textAlign='Center' format='C2' [customAttributes]='customAttributes' width=80></e-column>
+field: 'Freight',headerText: 'Freight',textAlign: 'center',format: 'C2',
+customAttributes: customAttributes,width: 80
 ```
 
 **Step 3**: **Resize the header cell height**
@@ -465,7 +463,7 @@ setHeaderHeight(args) {
 
 Custom tooltips for headers provide additional information when hovering over a column header in the Syncfusion Grid. This can be useful in situations where there is not enough space to display all of the information related to a column, or when there is additional context that may be helpful.
 
-To enable custom tooltips for headers, you can use the [beforeRender](../../api/grid/#beforeRender) event of the Grid component. This event is triggered for each header cell before it is rendered, allowing you to add a custom tooltip to the header cell using [tooltip](https://ej2.syncfusion.com/javascript/documentation/tooltip/content) component.
+To enable custom tooltips for headers, you can use the [beforeRender](../../api/grid/#beforeRender) event of the Grid component. This event is triggered for each header cell before it is rendered, allowing you to add a custom tooltip to the header cell using [tooltip](../../tooltip/content) component.
 
 Here's an example of how to use the `beforeRender` event to add a custom tooltip to a header cell:
 
@@ -495,6 +493,8 @@ Here's an example of how to use the `beforeRender` event to add a custom tooltip
 
 {% previewsample "page.domainurl/code-snippet/grid/column-header-tooltip" %}
 {% endif %}
+
+> * The [headerCellInfo](../../api/grid/#querycellinfo) event can also be used to customize the header tooltip. This event is triggered for each header cell after it is rendered.
 
 ## Customize header text styles 
 
@@ -558,10 +558,10 @@ Step 1: Define a CSS class that specifies the styles you want to apply to the he
 Step 2: Set the **customAttributes** property of the desired column to an object that contains the CSS class **customcss**. This CSS class will be applied to the header cell of the specified column in the Grid.
 
   ```ts
-    {field="Freight" headerText="Freight" [customAttributes]="{class: '.customcss'} }
+  {field="Freight" headerText="Freight" [customAttributes]="{class: '.customcss'} }
   ```
 
-The following example demonstrates how to customize the appearance of the **OrderID** and **OrderDate** columns using custom attributes.
+The following example demonstrates how to customize the appearance of the **OrderID** and **Freight** columns using custom attributes.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -664,12 +664,47 @@ The following example demonstrates how to add a `headerCellInfo` event handler t
 {% previewsample "page.domainurl/code-snippet/grid/column-header-stylesevents" %}
 {% endif %}
 
+## How to refresh header 
+
+The refresh header feature in the Syncfusion Angular Grid allows you to update the header section of the grid whenever changes are made to the grid's columns. This feature is useful when you want to reflect changes in the header immediately, such as modifying the column header text, width, or alignment.
+
+To use the refresh header feature, you can call the [refreshHeader](../../api/grid/#refreshheader) method of the Grid component. This method updates the grid header with the latest changes made to the columns.
+
+The following example demonstrates how to use the `refreshHeader` method to update the grid header:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/column-header-refreshHeader/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-header-refreshHeader/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column-header-refreshHeader" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/column-header-refreshHeader/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-header-refreshHeader/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/column-header-refreshHeader" %}
+{% endif %}
+
 ## How to get header element 
 
 To get the header element in a Syncfusion Grid, you can use one of the following methods:
 
  1.[getHeaderContent](../../api/grid/#getheadercontent): This method returns the header div element of the Grid. You can use this method to access the entire header content of the Grid.
-
+  
     ```ts
     const headerElement = this.grid.getHeaderContent();    
     ```

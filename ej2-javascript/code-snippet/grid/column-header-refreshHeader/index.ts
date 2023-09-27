@@ -1,0 +1,47 @@
+import { Button } from '@syncfusion/ej2-buttons';
+import { Grid, Page, Selection} from '@syncfusion/ej2-grids';
+import { data } from './datasource.ts';
+
+Grid.Inject(Page, Selection);
+
+let grid: Grid = new Grid({
+  dataSource: data,
+  allowPaging: true,
+  pageSettings: { pageCount: 5 },
+  columns: [
+    {
+      field: 'OrderID',
+      headerText: 'Order ID',
+      textAlign: 'Right',
+      width: 120,
+    },
+
+    {
+      field: 'OrderDate',
+      headerText: 'Order Date',
+      textAlign: 'Right',
+      width: 135,
+      format: 'yMd',
+    },
+    {
+      field: 'Freight',
+      headerText: 'Freight($)',
+      textAlign: 'Right',
+      width: 120,
+      format: 'C2',
+    },
+    { field: 'ShipCity', headerText: 'Ship City',textAlign: 'Right',width: 100 },
+  ],
+});
+grid.appendTo('#Grid');
+
+let button = new Button({
+  content: 'Refresh Header',
+});
+button.appendTo('#buttons');
+
+(<HTMLElement>document.getElementById('buttons')).onclick = function () {
+  const column = grid.getColumnByIndex(1);
+  column.headerText = 'New Header Text'; // update the header text of the column object
+  grid.refreshHeader();
+};

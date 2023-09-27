@@ -2,12 +2,13 @@ let customAttributes = { class: 'orientationcss' };
 var grid = new ej.grids.Grid({
   dataSource: data,
   allowPaging: true,
+  created: setHeaderHeight,
   columns: [
     {
       field: 'OrderID',
       headerText: 'Order ID',
-      width: 100,
       textAlign: 'Right',
+      width: 100,
     },
     {
       field: 'CustomerID',
@@ -16,10 +17,10 @@ var grid = new ej.grids.Grid({
     },
     {
       field: 'Freight',
+      textAlign: 'center',
+      format: 'C2',
       customAttributes: customAttributes,
       width: 80,
-      format: 'C2',
-      textAlign: 'center',
     },
     {
       field: 'ShipCity',
@@ -28,11 +29,10 @@ var grid = new ej.grids.Grid({
       format: 'yMd',
     },
   ],
-  pageSettings: { pageCount: 5 },
-  created: setHeaderHeight,
+  height: 240, 
 });
-customAttributes = { class: 'orientationcss' };
 grid.appendTo('#Grid');
+
 function setHeaderHeight() {
   var textWidth = document.querySelector('.orientationcss > div').scrollWidth;
   var  headerCell = document.querySelectorAll('.e-headercell');

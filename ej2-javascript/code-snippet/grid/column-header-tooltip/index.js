@@ -3,20 +3,20 @@ var grid = new ej.grids.Grid({
   allowPaging: true,
   columns: [
     { field: 'OrderID', headerText: 'Order ID', width: 120 },
-    { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C2'},
+    { field: 'Freight', headerText: 'Freight',  width: 120, format: 'C2'},
     { field: 'ShipName', headerText: 'Ship Name', width: 150 },
     { field: 'ShipCountry', headerText: 'Ship Country', width: 120 },
     {
       field: 'OrderDate',
       headerText: 'Order Date',
-      width: 120,
       type: 'date',
       format: 'yMd',
+      width: 120
     },
   ],
-  pageSettings: { pageCount: 5 },
 });
 grid.appendTo('#Grid');
+
 let columnDescriptions = {
   'Order ID': 'A unique number assigned to each order.',
   'Freight': 'The cost of shipping the order.',

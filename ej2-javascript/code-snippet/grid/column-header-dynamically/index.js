@@ -1,33 +1,41 @@
 var grid = new ej.grids.Grid({
   dataSource: data,
+  allowPaging: true,
   columns: [
     {
       field: 'OrderID',
       headerText: 'Order ID',
-      width: 100,
+      width: 120,
     },
-    { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
-    { field: 'Freight', headerText: 'Freight', width: 120 },
-    { field: 'OrderDate', headerText: 'Order Date', format: 'yMd', width: 100 },
+    { field: 'CustomerID', headerText: 'Customer ID', width: 140 },
+    { field: 'Freight', headerText: 'Freight', format: 'C', width: 120 },
+    { field: 'OrderDate', headerText: 'Order Date', format: 'yMd', width: 140 },
   ],
-  height: 280,
 });
 grid.appendTo('#Grid');
-var dropdown = new ej.dropdowns.DropDownList({
-  dataSource: [
+
+let columns =
+  [
     { text: 'OrderID', value: 'OrderID' },
     { text: 'CustomerID', value: 'CustomerID' },
     { text: 'Freight', value: 'Freight' },
     { text: 'OrderDate', value: 'OrderDate' },
-  ],
+  ]
+
+let feild = { text: 'text', value: 'value' };
+
+var dropdown = new ej.dropdowns.DropDownList({
+  dataSource: columns,
+  feilds: feild,
   value: 'OrderID',
   popupHeight: '240px',
-  width: '120px',
+  width: 220,
 });
 dropdown.appendTo('#dropdownlist');
+
 var textbox = new ej.inputs.TextBox({
   placeholder: 'Enter new header text',
-  width: 140,
+  width: 220,
 });
 textbox.appendTo('#textboxvalue');
 
