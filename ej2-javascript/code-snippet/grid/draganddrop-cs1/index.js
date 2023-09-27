@@ -1,6 +1,6 @@
 ej.grids.Grid.Inject(ej.grids.RowDD);
 var grid = new ej.grids.Grid({
-    dataSource: data.slice(0, 5),
+    dataSource: data ,
     allowRowDragAndDrop: true,
     rowDropSettings: { targetID: 'DestGrid' },
     selectionSettings: { type: 'Multiple' },
