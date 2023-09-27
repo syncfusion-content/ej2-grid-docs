@@ -370,6 +370,41 @@ To implement this functionality, follow these steps:
 
 The following example demonstrates the function that collapses the selected row using an external button click. 
 
+## Clear grouping 
+
+The clear grouping feature in the Syncfusion javascript Grid allows you to removing all the grouped columns from the grid. This feature provides a convenient way to clear the grouping of columns in your application.
+
+To clear all the grouped columns in the Grid, you can utilize the [clearGrouping](../../api/grid/#cleargrouping) method of the grid.
+
+The following example demonstrates how to clear the grouping using `clearGrouping` method in the external button click.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs82-expandall/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs82-expandall/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs82-expandall" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs82-expandall/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs82-expandall/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs82-expandall" %}
+{% endif %}
+
 ## Expand or collapse externally
 
 The Syncfusion ##Platform_Name## Grid offers a convenient feature to expand or collapse grouped rows, allowing you to control the visibility of grouped data. This section will provide guidance on enabling this functionality and integrating it into your application using the Grid properties and methods.
@@ -433,70 +468,6 @@ During the group action, the grid component triggers two events. The [`actionBeg
 {% endif %}
 
 > The [`args.requestType`](../../api/grid/sortEventArgs/#requesttype) is based on the current action name. For example, when grouping, the [`args.requestType`](../../api/grid/sortEventArgs/#requesttype) value will be 'grouping'.
-
-## Collapse by external button
-
-You can collapse the selected group from an external button by invoking the [`expandCollapseRows`](../../api/grid/group/#expandcollapserows) method.
-
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/grouping-collapse-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grouping-collapse-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/grid/grouping-collapse-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/grouping-collapse-cs1/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grouping-collapse-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/grid/grouping-collapse-cs1" %}
-{% endif %}
-
-## Sort grouped columns in descending order during initial grouping
-
-By default, grouped columns are sorted in ascending order. To sort grouped columns in descending order during initial grouping, you can set the [field](../../api/grid/sortDescriptorModel/#field) and [direction](../../api/grid/sortDescriptorModel/#direction-string) in the `sortSettings.columns` property.
-
-The `CustomerID` column will be sorted in descending order when the grid is initially grouped, as shown in the following example.
-
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/grid-cs84/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs84/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/grid/grid-cs84" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/grid-cs84/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs84/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/grid/grid-cs84" %}
-{% endif %}
 
 ## See Also
 
