@@ -70,7 +70,7 @@ The following example demonstrates how to add a custom text to the group caption
 {% include code-snippet/grid/customText-captiontemplate-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/customText-captiontemplate-cs1/index.html %}
+{% include code-snippet/grid/customText-captiontemplate-cs1/js/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
