@@ -1,12 +1,12 @@
 
 
-import { Grid, Group, LazyLoadGroup, InfiniteScroll } from '@syncfusion/ej2-grids';
+import { Grid, Group, LazyLoadGroup, VirtualScroll } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
-Grid.Inject(Group, LazyLoadGroup, InfiniteScroll);
+Grid.Inject(Group, LazyLoadGroup, VirtualScroll);
 let grid: Grid = new Grid({
     dataSource: data,
     allowGrouping: true,
-    enableInfiniteScrolling: true,
+    enableVirtualization: true,
     groupSettings: { enableLazyLoading: true, columns: ['ProductName', 'CustomerName'] },
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },

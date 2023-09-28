@@ -1,5 +1,3 @@
-
-
 import { Grid, Page, Group, LazyLoadGroup } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
@@ -16,10 +14,7 @@ let grid: Grid = new Grid({
         { field: 'ProductID', headerText: 'Product ID', textAlign: 'Right', width: 120 },
         { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
         { field: 'CustomerName', headerText: 'Customer Name', width: 160 }
-    ]
+    ],
     height: 240
 });
 grid.appendTo('#Grid');
-
-
-
