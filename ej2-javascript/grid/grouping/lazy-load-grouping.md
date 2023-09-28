@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Lazy load grouping in ##Platform_Name## Grid control
 
-In javascript, lazy loading refers to the technique of loading data dynamically when they are needed, instead of loading everything upfront. Lazy loading can significantly improve the performance of your application by reducing the initial load time.
+In ##Platform_Name##, lazy loading refers to the technique of loading data dynamically when they are needed, instead of loading everything upfront. Lazy loading can significantly improve the performance of your application by reducing the initial load time.
 
 Lazy load grouping in Syncfusion Grid allows you to load and display grouped data efficiently by fetching only the required data on demand. This feature is useful when dealing with large datasets where loading all the data at once might affect performance. The Grid will render only the initial level caption rows in the collapsed state at grouping. The child rows of each caption will be fetched in on demand and render in the Grid when you expand the caption row.
 
@@ -159,7 +159,7 @@ The following example demonstrates how to enable the lazy load grouping with inf
 
 ## Lazy load grouping with virtual scrolling
 
-The lazy load grouping with virtual scrolling feature in the Syncfusion javascript Grid allows you to efficiently present and analyze large grouped datasets. This feature optimizes performance, reduces initial load time, and provides smooth scrolling through the dataset. 
+The lazy load grouping with virtual scrolling feature in the Syncfusion ##Platform_Name## Grid allows you to efficiently present and analyze large grouped datasets. This feature optimizes performance, reduces initial load time, and provides smooth scrolling through the dataset. 
 
 **How lazy load grouping with virtual scrolling works**
 
