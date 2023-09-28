@@ -14,7 +14,7 @@ var grid = new ej.grids.Grid({
     ],
     toolbarClick: toolbarClick,
     pdfQueryCellInfo: pdfQueryCellInfo,
-    height: 315
+    height: 273
 });
 grid.appendTo('#Grid');
 

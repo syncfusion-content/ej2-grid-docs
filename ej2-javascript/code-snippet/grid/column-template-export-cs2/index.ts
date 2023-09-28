@@ -19,7 +19,7 @@ let grid: Grid = new Grid({
     ],
     toolbarClick: toolbarClick,
     excelQueryCellInfo: excelQueryCellInfo,
-    height: 315
+    height: 273
 });
 grid.appendTo('#Grid');
 

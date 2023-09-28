@@ -19,7 +19,7 @@ The PDF export functionality allows you to export Grid columns that include imag
 
 In the following sample, the hyperlinks and images are exported to PDF using [hyperlink](../../api/grid/pdfQueryCellInfoEventArgs/#hyperlink) and [image](../../api/grid/pdfQueryCellInfoEventArgs/#image) properties in the [pdfQueryCellInfo](../../api/grid/#pdfquerycellinfo) event.
 
-> PDF Export supports base 64 string to export the images.
+> PDF Export supports base64 string to export the images.
 
 {% if page.publishingplatform == "typescript" %}
 
