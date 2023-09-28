@@ -13,7 +13,7 @@ var grid = new ej.grids.Grid({
     ],
     toolbarClick: toolbarClick,
     exportGroupCaption: exportGroupCaption,
-    height: 315
+    height: 273
 });
 grid.appendTo('#Grid');
 
