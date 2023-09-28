@@ -2,12 +2,12 @@ ej.grids.Grid.Inject(ej.grids.Toolbar);
 var grid = new ej.grids.Grid({
     dataSource: data,
     toolbar: ['Search'],
-    searchSettings: { fields: ['CustomerID'], operator: 'contains', key: 'Ha', ignoreCase: true },
+    searchSettings: { fields: ['CustomerID'], operator: 'contains', key: 'Ha', ignoreCase: true, ignoreAccent: true },
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
-        { field: 'ShipCity', headerText: 'Ship City', width: 150 },
-        { field: 'ShipName', headerText: 'Ship Name', width: 150 }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', format: 'C', width: 80 },
+        { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', format: 'yMd', width: 100 }
     ],
     height: 272
 });

@@ -8,13 +8,13 @@ Grid.Inject(Search, Toolbar);
 let grid: Grid = new Grid({
     dataSource: data,
     toolbar: ['Search'],
+    height: 272,
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
-        { field: 'CustomerID', width: 150, headerText: 'Customer ID', type: 'string' },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C' },
-        { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', width: 140, format: 'yMd' }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', format: 'C', width: 90 },
+        { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', format: 'yMd', width: 100 }
     ],
-    height: 272
 });
 grid.appendTo('#Grid');
 
