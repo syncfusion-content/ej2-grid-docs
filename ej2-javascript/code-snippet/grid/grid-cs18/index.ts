@@ -18,10 +18,8 @@ let grid: Grid = new Grid({
     allowAdding: true,
     allowDeleting: true,
     mode: 'Batch',
-    newRowPosition: 'Top'
   },
-  allowPaging: true,
-  pageSettings: { pageCount: 5 },
+  height: 273,
   toolbar: ['Add', 'Delete', 'Update', 'Cancel'],
   columns: [
     {

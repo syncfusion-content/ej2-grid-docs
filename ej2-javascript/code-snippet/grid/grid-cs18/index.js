@@ -11,11 +11,9 @@ var grid = new ej.grids.Grid({
     allowAdding: true,
     allowDeleting: true,
     mode: 'Batch',
-    newRowPosition: 'Top'
   },
-  allowPaging: true,
-  pageSettings: { pageCount: 5 },
   toolbar: ['Add', 'Delete', 'Update', 'Cancel'],
+  height: 273,
   columns: [
     {
       field: 'ProductID',
