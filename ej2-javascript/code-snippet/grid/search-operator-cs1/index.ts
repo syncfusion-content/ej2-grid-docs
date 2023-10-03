@@ -27,7 +27,7 @@ let dropDownColumn: DropDownList = new DropDownList({
         { text: 'not equal', value: 'notequal' },
     ],
     index: 0,
-    width: '100',
+    width: 100,
     change: valueChange,
 });
 dropDownColumn.appendTo('#dropdownlist');

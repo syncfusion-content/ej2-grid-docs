@@ -22,8 +22,8 @@ var dropdown = new ej.dropdowns.DropDownList({
         { text: 'equal', value: 'equal' },
         { text: 'not equal', value: 'notequal' },
     ],
-    index: '0',
-    width: '100',
+    index: 0,
+    width: 100,
     change: valueChange,
 });
 dropdown.appendTo('#dropdownlist');

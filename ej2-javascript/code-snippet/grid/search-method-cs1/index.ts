@@ -19,7 +19,7 @@ grid.appendTo('#Grid');
 let searchBtn: Button = new Button();
 searchBtn.appendTo('#search');
 
-document.getElementById('search').addEventListener('click', () => {
+((document.getElementById('search'))as HTMLElement).addEventListener('click', () => {
     let searchText: string = (<HTMLInputElement>document.getElementsByClassName('searchtext')[0]).value;
     grid.search(searchText);
 });

@@ -252,6 +252,39 @@ In the following example, the `created` event is bound to the grid component, an
 
 > Search on each key stroke approach may affect the performance of the application when dealing with a large number of records.
 
+## Perform search based on column formatting
+
+By default, the search operation considers the underlying raw data of each cell for searching. However, in some cases, you may want to search based on the formatted data visible to the users. To search data based on column formatting, you can utilize the `grid.valueFormatterService.fromView` method within the [actionBegin](../../api/grid/#actionbegin) event. This method allows you to retrieve the formatted value of a cell and perform searching on each column using the **OR** predicate.
+
+The following example demonstrates how to implement searching based on column formatting in the Grid. In the `actionBegin` event, retrieve the search value from the [getColumns](../../api/grid/#getcolumns) method. Iterate through the columns and check whether the column has a format specified. If the column has a format specified, use the `grid.valueFormatterService.fromView` method to get the formatted value of the cell. If the formatted value matches the search value, set the **OR** predicate that includes the current column filter and the new filter based on the formatted value.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/search-formatting-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/search-formatting-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/search-formatting-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/search-formatting-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/search-formatting-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/search-formatting-cs1" %}
+{% endif %}
+
 ## Perform search operation in Grid using multiple keywords
 
 In addition to searching with a single keyword, the Grid component offers the capability to perform a search operation using multiple keywords. This feature enables you to narrow down your search results by simultaneously matching multiple keywords. It can be particularly useful when you need to find records that meet multiple search conditions simultaneously. This can be achieved by the [actionBegin](../../api/grid/#actionbegin) event of the Grid.
@@ -322,6 +355,10 @@ The following example demonstrates how to define the `ignoreAccent` property wit
 {% previewsample "page.domainurl/code-snippet/grid/search-ignoreAccent-cs1" %}
 {% endif %}
 
+> * You can set [searchSettings.ignoreAccent](../../api/grid/searchSettings/#ignoreaccent) property along with other search settings such as [fields](../../api/grid/searchSettings/#fields), [operator](../../api/grid/searchSettings/#operator), and [ignoreCase](../../api/grid/searchSettings/#ignoreaccent) to achieve the desired search behavior.
+> * This feature works only for the characters that are not in the ASCII range.
+> * This feature may have a slight impact on search performance.
+
 ## Highlight the search text
 
 The Syncfusion Grid component allows you to visually highlight search results within the displayed data. This feature helps you to quickly identify where the search items are found within the displayed data. By adding a style to the matched text, you can quickly identify where the search items are present in the grid.
@@ -359,7 +396,11 @@ The following example demonstrates how to highlight search text in grid using th
 
 ## Clear search by external button
 
-To clear the searched grid records from the external button, set [`searchSettings.key`](../api/grid/searchSettings/#key) property as `empty` string.
+The Syncfusion Grid component provides a capability to clear searched data in the grid. This functionality offers the ability to reset or clear any active search filters that have been applied to the grid's data.
+
+To clear the searched grid records from an external button, you can set the [searchSettings.key](../../api/grid/searchSettings/#key) property to an `empty` string to clear the search text. This property represents the current search text in the search box.
+
+The following example demonstrates how to clear the searched records using an external button.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -388,8 +429,8 @@ To clear the searched grid records from the external button, set [`searchSetting
 {% previewsample "page.domainurl/code-snippet/grid/clear-search-cs1" %}
 {% endif %}
 
+> You can also clear the searched records by using the clear icon within the search input field.
+
 ## See Also
 
-* [How to perform searching in Date type column](https://www.syncfusion.com/kb/11251/how-to-perform-searching-in-date-type-column)
-* [How to search the records in grid on each keystroke](https://www.syncfusion.com/kb/11248/how-to-search-the-records-in-grid-on-each-keystroke)
 * [How to perform search by using Wildcard and LIKE operator filter](./filtering/filtering/#wildcard-and-like-operator-filter)
