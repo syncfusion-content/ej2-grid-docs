@@ -4,7 +4,7 @@ import { Grid, ForeignKey } from '@syncfusion/ej2-grids';
 import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
 
 let data: DataManager = new DataManager({
-    url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/?$top=7',
+    url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/',
     adaptor: new ODataV4Adaptor
 });
 

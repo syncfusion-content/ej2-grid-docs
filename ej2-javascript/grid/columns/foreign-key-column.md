@@ -25,15 +25,13 @@ ej.grids.Grid.Inject(ej.grids.ForeignKey);
 
 2.Define the foreign key column in the grid using the following properties:
 
-Foreign key column can be enabled by using [column.dataSource](../../api/grid/column/#datasource), [column.foreignKeyField](../api/grid/column/#foreignkeyfield) and [column.foreignKeyValue](../../api/grid/column/#foreignkeyvalue) properties.
+* [dataSource](../../api/grid/column/#datasource): Specifies the foreign data source that  contains the related data.
 
-* [column.dataSource](../../api/grid/column/#datasource): Specifies the foreign data source that  contains the related data.
+* [foreignKeyField](../../api/grid/column/#foreignkeyfield): Maps the column name in the grid to the field in the foreign data source that represents the foreign key relationship.
 
-* [column.foreignKeyField](../../api/grid/column/#foreignkeyfield): Specifies the field from the foreign data source that should be displayed in the grid as the related data.
+* [foreignKeyValue](../../api/grid/column/#foreignkeyvalue): Specifies the field from the foreign data source that should be displayed in the grid as the related data.
 
-* [column.foreignKeyValue](../../api/grid/column/#foreignkeyvalue): Specifies the field from the foreign data source that should be displayed in the grid as the related data.
-
-```html
+```typescript
 
 field: 'EmployeeID', headerText: 'Employee Name', width: 150, foreignKeyValue: 'FirstName', dataSource: employeeData
                 
@@ -110,12 +108,13 @@ This example demonstrates how to use the foreign key column with remote data bin
 {% endif %}
 
 > * For remote data, the sorting and grouping is done based on [column.foreignKeyField](../../api/grid/column/#foreignkeyfield) instead of [column.foreignKeyValue](../../api/grid/column/#foreignkeyvalue).
+> * If [column.foreignKeyField](../../api/grid/column/#foreignkeyfield) is not defined, then the column uses [column.field](../../api/grid/column/#field).
 
 ## Use edit template in foreignkey column
 
-The Syncfusion Grid provides support for using an edit template in a foreign key column. By default, a dropdown component is used for editing foreign key column. However, you can render a different component for editing by using the [column.edit](https://ej2.syncfusion.com/javascript/documentation/api/grid/column/#edit) property. Here's an example that demonstrates how to use an edit template in a foreign key column:
+The Syncfusion Grid provides support for using an edit template in a foreign key column. By default, a dropdown component is used for editing foreign key column. However, you can render a different component for editing by using the [column.edit](../../api/grid/column/#edit) property. Here's an example that demonstrates how to use an edit template in a foreign key column:
 
-In this example, an [AutoComplete](https://ej2.syncfusion.com/javascript/demos/#/bootstrap5/auto-complete/default) component is rendered as the edit template for the **"EmployeeID"** foreign key column. The [dataSource](../../api/auto-complete/#datasource) property of the AutoComplete component is set to the employees data, and the fields property is configured to display the **"FirstName"** field as the value.
+In this example, an [AutoComplete](../../auto-complete/default) component is rendered as the edit template for the **"EmployeeID"** foreign key column. The [dataSource](../../api/auto-complete/#datasource) property of the AutoComplete component is set to the employees data, and the fields property is configured to display the **"FirstName"** field as the value.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -148,7 +147,7 @@ In this example, an [AutoComplete](https://ej2.syncfusion.com/javascript/demos/#
 
 The Syncfusion Grid allows you to customize the filtering user interface (UI) for foreign key columns by using the [column.filter](../../api/grid/column/#filter) property. By default, a dropdown component is used for filtering foreign key columns. However, you can create your own custom filtering UI by specifying a template function for the `column.filter` property. Here's an example that demonstrates how to create a custom filtering UI in a foreign key column:
 
-In this example, a [DropDownList](https://ej2.syncfusion.com/javascript/demos/#/bootstrap5/drop-down-list/default.html) component is rendered as the filter UI for the **"EmployeeID"** foreign key column. The [dataSource](../../api/drop-down-list#datasource) property of the DropDownList component is set to the employees data, and the fields property is configured to display the **FirstName** field as the [text](../../api/drop-down-list#text) and **EmployeeID** field as the [value](../../api/drop-down-list#value). The `value` property is set to the current filter value of the column.
+In this example, a [DropDownList](../../drop-down-list/default.html) component is rendered as the filter UI for the **"EmployeeID"** foreign key column. The [dataSource](../../api/drop-down-list#datasource) property of the DropDownList component is set to the employees data, and the fields property is configured to display the **FirstName** field as the [text](../../api/drop-down-list#text) and **EmployeeID** field as the [value](../../api/drop-down-list#value). The `value` property is set to the current filter value of the column.
 
 {% if page.publishingplatform == "typescript" %}
 
