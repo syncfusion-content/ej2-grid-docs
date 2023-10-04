@@ -34,13 +34,15 @@ function beforeBatchDelete(args) {
   }
 }
 
-var button = document.createElement('button');
-button.innerText = 'Grid is Addable';
-document.body.insertBefore(button, document.body.children[0]);
-button.addEventListener('click', btnClick.bind(this));
+button = new ej.buttons.Button({
+  content: 'Grid is Addable',
+});
+button.appendTo('#Add');
 
-function btnClick(args) {
-  args.target.innerText == 'Grid is Addable' ? (args.target.innerText = 'Grid is Not Addable') : (args.target.innerText = 'Grid is Addable');
+document.getElementById('Add').onclick = () => {
+  button.content == 'Grid is Addable'
+    ? (button.content = 'Grid is Not Addable')
+    : (button.content = 'Grid is Addable');
   isAddable = !isAddable;
-}
+};
 

@@ -1,5 +1,3 @@
-
-
 import { Grid, Page, Toolbar, Edit } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
@@ -18,10 +16,10 @@ let grid: Grid = new Grid({
         allowDeleting: true,
         mode: 'Batch',
     },
-    toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
+    toolbar: ['Add','Delete', 'Update', 'Cancel'],
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100, isPrimaryKey: true,
-          visible: false, validationRules: { required: true, number: true } },
+           validationRules: { required: true, number: true } },
         { field: 'CustomerID', headerText: 'Customer ID', width: 120, validationRules: { required: true }
         },
         { field: 'Freight', headerText: 'Freight', format: 'C2', width: 100, textAlign: 'Right' },
@@ -70,5 +68,3 @@ function editACell(args) {
         parseInt(args.getAttribute('index')),
         grid.getColumnByIndex(parseInt(args.getAttribute('data-colindex'))).field);
 }
-
-
