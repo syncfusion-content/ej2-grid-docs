@@ -11,7 +11,11 @@ domainurl: ##DomainURL##
 
 # Dialog editing in ##Platform_Name## Grid control
 
-In Dialog edit mode, when you start editing the currently selected row data will be shown on a dialog. You can change the cell values and save edited data to the data source. To enable Dialog edit, set the [`editSettings.mode`](../../api/grid/editSettings/#mode) as `Dialog`.
+Dialog editing is a feature in the Grid component that allows you to edit the data of the currently selected row using a dialog window. With dialog editing, you can easily modify cell values and save the changes back to the data source.This feature is particularly beneficial in scenarios where you need to quickly modify data without navigating to a separate page or view, and it streamlines the process of editing multiple cells.
+
+To enable dialog editing in grid component, you need to set the [editSettings.mode](../../api/grid/editSettings/#mode) property to **Dialog**. This property determines the editing mode for the grid, and when set to **Dialog**, it enables the dialog editing feature.
+
+Here's an example how to enable dialog editing in the javascript grid component:
 
 {% if page.publishingplatform == "typescript" %}
 
