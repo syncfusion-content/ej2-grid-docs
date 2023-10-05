@@ -40,8 +40,6 @@ In Batch edit mode, when you double-click on the grid cell, then the target cell
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs17" %}
 {% endif %}
 
-> If a column's [allowEditing](../../api/grid/column/#allowediting) property is set to false, then the focus can be skipped in that non-editable column by clicking the tab or shift-tab key while in batch edit mode.
-
 ## Automatically update the column based on another column edited value in batch mode
 
 You can update the column value based on another column edited value in Batch mode by using the Cell Edit Template feature.
@@ -74,6 +72,8 @@ In the below demo, we have update the `TotalCost` column value based on the `Uni
 
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs18" %}
 {% endif %}
+
+> * You can utilize the [updateCell](../../api/grid/#updatecell) property to update cells in batch mode.
 
 ## Cancel edit based on condition 
 
@@ -227,4 +227,80 @@ Here's an example that demonstrates how to achieve both single-click editing and
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs21" %}
+{% endif %}
+
+## Disable editing for a particular cell
+
+You can prevent editing of specific cells based on certain conditions in the Grid component. This feature is useful when you want to restrict editing for certain cells, such as read-only data, calculated values, or protected information. It helps maintain data integrity and ensures that only authorized changes can be made in the grid.
+
+To disable editing for a particular cell in batch mode, use the [cellEdit](../../api/grid/#celledit) event of the grid. You can then use the **args.cancel** property and set it to **true**  to prevent editing for that cell.
+
+Here's an example demonstrating how you can disable editing for cells containing the value **France** using the `cellEdit` event:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs21-PreventEdit/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs21-PreventEdit/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs21-PreventEdit" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs21-PreventEdit/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs21-PreventEdit/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs21-PreventEdit" %}
+{% endif %}
+
+## Save or update the changes immediately
+
+The Grid component provides a convenient way to save or update changes immediately in batch mode without the need for a separate Save button. This feature is particularly useful when you want to allow you to edit data efficiently without having to manually trigger a save action. You can achieve this by utilizing the [cellSaved](../../api/grid/#cellsaved) event and the [batchSave](../../api/grid/edit/#batchsave) method. 
+
+By default, when you use the `batchSave` method to save or update data, a confirmation dialog is displayed. This dialog prompts for confirmation before proceeding with the save or cancel action, ensuring that accidental or undesired changes are avoided.
+
+The `cellSaved` event is triggered when a cell is saved in the Grid. It provides a way to perform custom logic when a cell is saved or updated.
+
+The `batchSave` method is a built-in function provided by the Grid's edit service. It is used to save multiple changes made to added, edited, and deleted records in the batch mode.
+
+> * To avoid the confirmation dialog when using the `batchSave` method, you can set `editSettings.showConfirmDialog` to **false**. However, please note that to use this property, the `editSettings.mode` must be set to **Batch**. This combination of properties allows you to save or update changes immediately without the need for a confirmation dialog.
+
+Here's an example that demonstrates how to achieve immediate saving or updating of changes using the `cellSaved` event and the `batchSave` method:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs21-SaveUpdate/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs21-SaveUpdate/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs21-SaveUpdate" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs21-SaveUpdate/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs21-SaveUpdate/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs21-SaveUpdate" %}
 {% endif %}
