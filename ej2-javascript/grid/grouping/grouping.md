@@ -382,27 +382,27 @@ The following example demonstrates how to clear the grouping using `clearGroupin
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/grid-cs82-expandall/index.ts %}
+{% include code-snippet/grid/grid-grouping-clear/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs82-expandall/index.html %}
+{% include code-snippet/grid/grid-grouping-clear/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/grid-cs82-expandall" %}
+{% previewsample "page.domainurl/code-snippet/grid/grid-grouping-clear" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/grid-cs82-expandall/index.js %}
+{% include code-snippet/grid/grid-grouping-clear/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs82-expandall/index.html %}
+{% include code-snippet/grid/grid-grouping-clear/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/grid-cs82-expandall" %}
+{% previewsample "page.domainurl/code-snippet/grid/grid-grouping-clear" %}
 {% endif %}
 
 ## Expand or collapse externally

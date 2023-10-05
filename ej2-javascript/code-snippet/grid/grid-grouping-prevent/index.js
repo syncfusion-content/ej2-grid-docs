@@ -1,7 +1,7 @@
 ej.grids.Grid.Inject(ej.grids.Sort, ej.grids.Group);
 
 var grid = new ej.grids.Grid({
-    dataSource: data.slice(0,10),
+    dataSource: data,
     allowGrouping: true,
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
