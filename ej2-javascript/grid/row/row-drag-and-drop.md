@@ -15,7 +15,7 @@ The Syncfusion ##Platform_Name## Grid component provides built-in support for ro
 
 To use the row drag and drop feature in Grid component, you need to inject the **RowDD** module in the grid. The **RowDD** is responsible for handling the row drag and drop functionality in the grid component. Once you have injected the **RowDD**, you can then use the [allowRowDragAndDrop](../../api/grid/#allowrowdraganddrop) and [targetID](../../api/grid/rowDropSettings/#targetid) properties to enable and configure the row drag and drop feature in the Grid.
 
-## Drag and drop within Grid
+## Drag and drop within grid
 
 The drag and drop feature allows you to rearrange rows within the grid by dragging them using a drag icon. This feature can be enabled by setting the [allowRowDragAndDrop](../../api/grid/#allowrowdraganddrop) property to **true**. This property is a boolean value that determines whether row drag and drop is enabled or not. By default, it is set to **false**, which means that row drag and drop is disabled.
 
@@ -170,6 +170,33 @@ The Grid component provides a set of events that are triggered during drag and d
 3. [rowDrag](../../api/grid/#rowdrag): This event is triggered continuously while the grid row is being dragged.
 
 4. [rowDrop](../../api/grid/#rowdrop): This event is triggered when a drag element is dropped onto a target element.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/draganddrop-event-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/draganddrop-event-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/draganddrop-event-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/draganddrop-event-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/draganddrop-event-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/draganddrop-event-cs1" %}
+{% endif %}
 
 ## Limitations
 
