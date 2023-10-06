@@ -1,17 +1,17 @@
 ej.grids.Grid.Inject(ej.grids.Toolbar, ej.grids.Edit);
 var grid = new ej.grids.Grid({
     dataSource: data,
-    toolbar: ['Add', 'Edit', 'Delete'],
+    toolbar: ['Add', 'Edit', 'Delete','Update','Cancel'],
     editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Dialog' },
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100, isPrimaryKey: true },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 120, visible: false },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', editType: 'numericedit', width: 120, format: 'C2' },
-        { field: 'ShipCountry', headerText: 'Ship Country', width: 150 }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right',validationRules: { required: true, number: true }, isPrimaryKey: true, width: 100 },
+        { field: 'CustomerID', headerText: 'Customer ID', validationRules: { required: true },visible: false, width: 120 },
+        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', editType: 'numericedit', validationRules: { min:1, max:1000 }, format: 'C2', width: 120 },
+        { field: 'ShipCountry', headerText: 'Ship Country', editType: 'dropdownedit', width: 150 }
     ],
-    height: 265,
+    height: 273,
     actionBegin: function (args) {
-        if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
+        if (args.requestType === 'beginEdit' ) {
             for (var i = 0; i < this.columns.length; i++) {
                 if (this.columns[i].field == "CustomerID") {
                     this.columns[i].visible = true;
@@ -21,7 +21,17 @@ var grid = new ej.grids.Grid({
                 }
             }
         }
-        if (args.requestType === 'save') {
+        else if(args.requestType === 'add')
+        {
+            for (var i = 0; i < this.columns.length; i++) {
+                if (this.columns[i].field == "CustomerID") {
+                    this.columns[i].visible = true;
+                }
+               
+            }
+        }
+        else if (args.requestType === 'save') {
+            debugger;
             for (var i = 0; i < this.columns.length; i++) {
                 if (this.columns[i].field == "CustomerID") {
                     this.columns[i].visible = false;
@@ -34,4 +44,3 @@ var grid = new ej.grids.Grid({
     }
 });
 grid.appendTo('#Grid');
-

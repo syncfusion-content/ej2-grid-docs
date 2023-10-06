@@ -46,9 +46,13 @@ Here's an example how to enable dialog editing in the javascript grid component:
 
 ## Customize edit dialog
 
-You can customize the Header and Footer appearance of the edit dialog in the [`actionComplete`](../../api/grid/#actioncomplete) event based on `requestType` as `beginEdit` or `add`.
+The edit dialog in the Grid component allows you to customize its appearance and behavior based on the type of action being performed, such as editing or adding a record. You can modify properties like header text, showCloseIcon, and height to tailor the edit dialog to your specific requirements. Additionally, you can override default localization strings to provide custom text for buttons or other elements within the dialog.
 
-In the following example, We have customized the dialog's height and title of the dialog's header and also we have changed the button content name in the dialog's footer.
+To customize the edit dialog, you need to handle the [actionComplete](../../api/grid/#actioncomplete) event of the Grid component and perform the necessary modifications based on the **requestType** parameter. The **requestType** parameter identifies the type of action being performed, such as **beginEdit** for editing a record or **add** for adding a new record.
+
+>You can refer the Grid [Default text](../global-local/) list for more localization.
+
+The following example that demonstrates how to customize the edit dialog using the `actionComplete` event:
 
 {% if page.publishingplatform == "typescript" %}
 
