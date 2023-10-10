@@ -199,9 +199,118 @@ In the `detailDataBound` event handler, you can filter the child grid's dataSour
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs90" %}
 {% endif %}
 
+## Adding Record in child grid
+
+Adding a record in a child grid within the Syncfusion ##Platform_Name## Grid component is useful when you want to provide the ability to add new records to the child grid. This feature allows you to input and save additional data specific to each parent row.
+
+To maintain the parent-child relationship in the Grid when adding a record to the child grid, you need to set the value for the `queryString` in the added data. This can be done using the [actionBegin](../../api/grid/#actionbegin) event.
+
+In the following example, the parent and child grids are related by the **EmployeeID** field. To add a new record in the child grid, the **EmployeeID** field needs to be set with the value of the parent record's `queryString` in the `actionBegin` event.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs89/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs89/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs89" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs89/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs89/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs89" %}
+{% endif %}
+
+## Template column in child grid
+
+A template column in a child grid within the Syncfusion ##Platform_Name## Grid component is valuable when you want to customize the appearance and functionality of specific columns in the child grid. It is useful for incorporating interactive elements, custom formatting, or complex data representation within specific columns of the child grid.
+
+To achieve this, you can utilize the [template](../../api/grid/column/#template) property of a column to display a custom element instead of a field value in the Grid. 
+
+The following example demonstrates, how to show a custom image in the **Employee Image** column of the child grid by utilizing the `template` property of the column.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/hierarchygrid-templatecolumn-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/hierarchygrid-templatecolumn-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/hierarchygrid-templatecolumn-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/hierarchygrid-templatecolumn-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/hierarchygrid-templatecolumn-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/hierarchygrid-templatecolumn-cs1" %}
+{% endif %}
+
+## How to get parent detail in child grid
+
+Getting parent details in a child grid in an ##Platform_Name## Grid component is useful when you want to display and utilize information from the parent row within the child grid. This can be beneficial in scenarios where you need to provide additional context or perform calculations based on the parent row's data
+
+To achieve this, you can utilize the [created](../../api/grid/#created) event. This event is triggered when the child grid is created and can be used to handle the child grid.
+
+The following example demonstrates how to obtain parent details in a child grid using the `created` event. Within the `created` event, you can access the parent row data using `this.parentDetails.parentRowData` and display the desired details in the message.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/hierarchygrid-templatecolumn-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/hierarchygrid-templatecolumn-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/hierarchygrid-templatecolumn-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/hierarchygrid-templatecolumn-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/hierarchygrid-templatecolumn-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/hierarchygrid-templatecolumn-cs1" %}
+{% endif %}
+
 ## ExpandAll by external button
 
-By default, grid renders in collapsed state. You can expand all child grid rows by invoking the [`expandAll`](../api/grid/detailRow/#expandall) method, and collapse all grid rows by invoking the [`collapseAll`](../api/grid/detailRow/#collapseall) through an external button.
+The Hierarchy Grid in the Syncfusion ##Platform_Name## Grid component allows you to expand all child grid rows using an external button. This feature provides you with a convenient overview of all the hierarchical data within the grid, eliminating the need to manually expand each row individually.
+
+By default, Grid renders all child grid rows in collapsed state. To expand all child grid rows in the Grid using an external button, you can utilize the [expandAll](../../api/grid/detailRow/#expandall) method provided by the DetailRow module. Similarly, to collapse all grid rows, you can use the [collapseAll](../../api/grid/detailRow/#collapseall) method. 
+
+The following example demonstrates how to expand and collapse the hierarchy grid using an external button click function.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -230,36 +339,5 @@ By default, grid renders in collapsed state. You can expand all child grid rows 
 {% previewsample "page.domainurl/code-snippet/grid/hierarchy-method-cs1" %}
 {% endif %}
 
-## Adding Record in ChildGrid
-
-Parent and child grid are related by [`queryString`](../api/grid/#querystring) field value. To maintain this relation in newly added record, You need to set value for [`queryString`](../api/grid/#querystring) field in the added data by the [`actionBegin`](../api/grid/#actionbegin) event.
-
-In the below demo, `EmployeeID` field relates the parent and child grids. To add a new record in child grid, We have to set the `EmployeeID` field with parent record's [`queryString`](../api/grid/#querystring) field value in the [`actionBegin`](../api/grid/#actionbegin) event.
-
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/grid-cs89/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs89/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/grid/grid-cs89" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/grid-cs89/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs89/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/grid/grid-cs89" %}
-{% endif %}
+> The `expandAll` and `collapseAll` methods are not recommended for large datasets due to the considerable time it takes to update the changes in the UI.
 
