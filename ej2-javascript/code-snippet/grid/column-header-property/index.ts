@@ -51,7 +51,6 @@ function headerValueAccessor(field,columns)
 }
 
 (<HTMLElement>document.getElementById('buttons')).onclick = function () {
-  console.log(grid)
   grid.refreshHeader();
 };
 

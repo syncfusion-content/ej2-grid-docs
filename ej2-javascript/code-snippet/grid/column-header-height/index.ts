@@ -25,7 +25,7 @@ let button: Button = new Button(
 button.appendTo('#small');
 let button1: Button = new Button(
     {
-        content: 'DEFAULT HEIGHT TO 40PX',
+        content: 'DEFAULT HEIGHT TO 42PX',
     }
 );
 button1.appendTo('#medium');
