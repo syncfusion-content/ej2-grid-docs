@@ -1,3 +1,5 @@
+
+
 var grid = new ej.grids.Grid({
     dataSource: data,
     selectionSettings: { mode: 'Both' },
@@ -8,6 +10,26 @@ var grid = new ej.grids.Grid({
         { field: 'ShipName', headerText: 'Ship Name', width: 150 }
     ],
     height: 315
-});
-grid.appendTo('#Grid');
-
+  });
+  grid.appendTo('#Grid');
+  
+  let dropdownData = [
+    { text: 'Row', value: 'Row' },
+    { text: 'Cell', value: 'Cell' },
+    { text: 'Both', value: 'Both' }
+  ];
+  
+  let ddlObject = new ej.dropdowns.DropDownList({
+    value: grid.selectionSettings.mode,
+    popupHeight: '240px',
+    width: 100,
+    dataSource: dropdownData,
+    change: valueChange,
+  });
+  ddlObject.appendTo('#dropdown');
+  
+  function valueChange(args) {
+    grid.selectionSettings.mode = args.value;
+  }
+  
+  
