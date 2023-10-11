@@ -1,5 +1,3 @@
-
-
 import { Grid } from '@syncfusion/ej2-grids';
 import { DataManager } from '@syncfusion/ej2-data';
 
@@ -23,7 +21,7 @@ let grid: Grid = new Grid({
     }
 });
 
-grid.appendTo('#Grid');
+grid.appendTo('#Grid'); 
 
 
 
