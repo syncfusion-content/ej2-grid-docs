@@ -120,7 +120,7 @@ Here is an example that demonstrates rendering Syncfusion controls within a row 
 
 ## Limitations
 
-Row template feature is not compatible with all the features which are available in grid and it has limited features support. Here we have listed out the features which are not compatible with row template feature.
+Row template feature is not compatible with all the features which are available in the grid, and it has limited features support. The features that are incompatible with the row template feature are listed below.
 
 * Filtering
 * Paging
