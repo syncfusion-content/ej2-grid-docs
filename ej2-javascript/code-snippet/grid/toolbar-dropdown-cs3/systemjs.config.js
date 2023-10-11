@@ -29,6 +29,7 @@ System.config({
         "@syncfusion/ej2-compression": "syncfusion:ej2-compression/dist/ej2-compression.umd.min.js", 
         "@syncfusion/ej2-lists":"syncfusion:ej2-lists/dist/ej2-lists.umd.min.js",
         "@syncfusion/ej2-dropdowns":"syncfusion:ej2-dropdowns/dist/ej2-dropdowns.umd.min.js",
+        "@syncfusion/ej2-notifications": "syncfusion:ej2-notifications/dist/ej2-notifications.umd.min.js",
         "@syncfusion/ej2-splitbuttons": "syncfusion:ej2-splitbuttons/dist/ej2-splitbuttons.umd.min.js"
     }
 });
