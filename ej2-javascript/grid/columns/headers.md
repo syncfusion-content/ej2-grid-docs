@@ -414,7 +414,7 @@ Once you have created the CSS class, you can add it to the particular column by 
 For example, to add the orientationcss class to the Freight column, you can use the following code:
 
 ```typescript
- { field: 'Freight', headerText: 'Freight', textAlign: 'Center', format='C2', customAttributes: {class: 'orientationcss'}, width: 80 },
+ { field: 'Freight', headerText: 'Freight', textAlign: 'Center', format='C2', customAttributes: {class: 'orientationcss'}, width: 80 }
 ```
 
 **Step 3**: **Resize the header cell height**
