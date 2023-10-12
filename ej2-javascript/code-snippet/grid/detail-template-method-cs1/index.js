@@ -1,5 +1,4 @@
-var expandBtn = new ej.buttons.Button();
-expandBtn.appendTo('#expand');
+
 ej.grids.Grid.Inject(ej.grids.DetailRow);
 var grid = new ej.grids.Grid({
     dataSource: employeeData,
@@ -14,9 +13,17 @@ var grid = new ej.grids.Grid({
 });
 grid.appendTo('#Grid');
 
-document.getElementById('expand').addEventListener('click', function(){
-    var inputElem = document.getElementsByClassName('rowindex')[0];
-    var rowIndex = parseInt(inputElem.value, 10);
-    grid.detailRowModule.expand(rowIndex);
+var expandBtn = new ej.buttons.Button();
+expandBtn.appendTo('#expand');
+
+var textbox = new ej.inputs.TextBox({
+    placeholder: 'Enter the Row Index',
+    floatLabelType: 'Auto',
+    width: 250
+});
+textbox.appendTo('#rowindex');
+
+document.getElementById('expand').addEventListener('click', function(args){
+    grid.detailRowModule.expand(textbox.value); 
 });
 

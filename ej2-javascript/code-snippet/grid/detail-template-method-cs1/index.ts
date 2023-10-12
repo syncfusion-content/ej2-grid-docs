@@ -3,11 +3,9 @@
 import { Grid, DetailRow } from '@syncfusion/ej2-grids';
 import { Button } from '@syncfusion/ej2-buttons';
 import { employeeData } from './datasource.ts';
+import { TextBox } from '@syncfusion/ej2-inputs';
 
 Grid.Inject(DetailRow);
-
-let expandBtn: Button = new Button();
-expandBtn.appendTo('#expand');
 
 let grid: Grid = new Grid({
     dataSource: employeeData,
@@ -22,10 +20,18 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 
-document.getElementById('expand').addEventListener('click', () => {
-    let inputElem: HTMLInputElement = (document.getElementsByClassName('rowindex')[0] as HTMLInputElement);
-    let rowIndex: number = parseInt(inputElem.value, 10);
-    grid.detailRowModule.expand(rowIndex);
+let expandBtn: Button = new Button();
+expandBtn.appendTo('#expand');
+
+let textbox: TextBox = new TextBox({
+    placeholder: 'Enter the Row Index',
+    floatLabelType: 'Auto',
+    width: 250
+});
+textbox.appendTo('#rowindex');
+
+(document.getElementById('expand')as HTMLElement).addEventListener('click', () => {
+    grid.detailRowModule.expand(textbox.value); 
 });
 
 
