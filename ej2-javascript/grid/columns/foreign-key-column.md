@@ -31,7 +31,7 @@ To enable and integrate the foreign key column in the ##Platform_Name## Grid com
 
 ```typescript
 
-{field: 'EmployeeID', headerText: 'Employee Name', width: 150, foreignKeyValue: 'FirstName', dataSource: employeeData}
+{field: 'EmployeeID', headerText: 'Employee Name', width: 150, foreignKeyValue: 'FirstName', foreignKeyField: 'EmployeeID', dataSource: employeeData}
                 
 ```
 
