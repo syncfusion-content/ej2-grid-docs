@@ -4,8 +4,8 @@ var grid = new ej.grids.Grid({
     allowReordering: true,
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100 },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
-        { field: 'ShipCity', headerText: 'Ship City', width: 100 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+        { field: 'ShipCity', headerText: 'Ship City', width: 100,allowReordering: false },
         { field: 'ShipName', headerText: 'Ship Name', width: 100 }
     ],
     height: 315
