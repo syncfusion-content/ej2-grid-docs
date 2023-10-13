@@ -1,5 +1,3 @@
-
-
 import { Grid, Page, Edit, Toolbar, ForeignKey } from '@syncfusion/ej2-grids';
 import { orderDetails, customerData, employeeData } from './datasource.ts';
 
@@ -15,19 +13,16 @@ let grid: Grid = new Grid(
             { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', isPrimaryKey: true, width: 100 },
             {
                 field: 'CustomerID', foreignKeyField: 'CustomerID', foreignKeyValue: 'ContactName', dataSource: customerData,
-                width: 150, headerText: 'Customer Name', validationRules: { required: true }
+                width: 170, headerText: 'Customer Name', validationRules: { required: true }
             },
-            { field: 'Freight', headerText: 'Freight', editType: 'numericedit', width: 100, textAlign: 'Right', format: 'C2' },
+            { field: 'Freight', headerText: 'Freight', editType: 'numericedit', width: 130, textAlign: 'Right', format: 'C2' },
             {
                 field: 'EmployeeID', foreignKeyField: 'EmployeeID', foreignKeyValue: 'City', dataSource: employeeData,
                 width: 150, headerText: 'Ship City', validationRules: { required: true }
             },
 
-            { field: 'ShipName', headerText: 'Ship Name', editType: 'dropdownedit', width: 180 }
+            { field: 'ShipCountry', headerText: 'Ship Country', editType: 'dropdownedit', width: 150 }
         ],
         height: 315
     });
 grid.appendTo('#Grid');
-
-
-

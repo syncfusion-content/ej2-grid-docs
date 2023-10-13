@@ -217,7 +217,7 @@ To perform aggregation in a foreign key column, follow these steps:
 
 Here's an example that demonstrates how to perform aggregation in a foreign key column:
 
-In the provided example, the `customAggregateFn` function is used to filter the data based on the **FirstName** field of the foreign key column, using the `getForeignData` internal function. The function then counts the occurrences of **Janet**. The result is displayed in the grid's footer template using the `footerTemplate`.
+In the provided example, the `customAggregateFn` function is used to filter the data based on the **FirstName** field of the foreign key column, using the `getForeignData` internal function. The function then counts the occurrences of **Margaret**. The result is displayed in the grid's footer template using the `footerTemplate`.
 
 {% if page.publishingplatform == "typescript" %}
 

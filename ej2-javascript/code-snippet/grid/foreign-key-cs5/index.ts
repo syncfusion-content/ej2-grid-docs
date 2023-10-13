@@ -1,5 +1,3 @@
-
-
 import { Grid, ForeignKey, Aggregate, getForeignData, CustomSummaryType, AggregateColumnModel } from '@syncfusion/ej2-grids';
 import { data, employeeData } from './datasource.ts';
 import { getValue } from '@syncfusion/ej2-base';
@@ -40,6 +38,3 @@ let grid: Grid = new Grid(
         ]
     });
     grid.appendTo('#Grid');
-
-
-
