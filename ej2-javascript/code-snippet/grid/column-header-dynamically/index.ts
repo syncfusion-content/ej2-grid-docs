@@ -18,7 +18,7 @@ let grid: Grid = new Grid({
   ]
 });
 grid.appendTo('#Grid');
-var dropDownColumn: DropDownList = new DropDownList({
+let dropDownColumn: DropDownList = new DropDownList({
   dataSource: [
     { text: 'OrderID', value: 'OrderID' },
     { text: 'CustomerID', value: 'CustomerID' },
@@ -31,13 +31,13 @@ var dropDownColumn: DropDownList = new DropDownList({
 });
 dropDownColumn.appendTo('#dropdownlist');
 
-var textbox: TextBox = new TextBox({
+let textbox: TextBox = new TextBox({
   placeholder: 'Enter new header text',
   width: 140,
 });
 textbox.appendTo('#textboxvalue');
 
-var button: Button = new Button({
+let button: Button = new Button({
   content: 'Click',
 });
 button.appendTo('#buttons');

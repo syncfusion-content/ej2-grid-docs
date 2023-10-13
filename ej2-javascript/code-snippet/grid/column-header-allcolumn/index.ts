@@ -25,7 +25,7 @@ let   headerTextMap = {
   'ShipCity': 'Ship To City',
 }
 
-var button: Button = new Button({
+let button: Button = new Button({
   content: 'Change Header Text',
   cssClass: "e-success",
 });

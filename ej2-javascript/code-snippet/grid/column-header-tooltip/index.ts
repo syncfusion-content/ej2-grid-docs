@@ -48,7 +48,7 @@ let columnDescriptions: Object = {
   'Order Date': 'The date when the order was placed.',
 };
 
-var tooltip = new Tooltip({
+let tooltip = new Tooltip({
   beforeRender: beforeRender,
   target: '.e-headertext',
 });
