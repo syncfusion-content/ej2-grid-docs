@@ -57,6 +57,6 @@ function beforeRender(args: TooltipEventArgs) {
   const description = (columnDescriptions as Object)[args.target.innerText];
   if (description) {
     (tooltip as Tooltip).content =
-      (args as any).target.innerText + ': ' + description;
+      args.target.innerText + ': ' + description;
   }
 }
