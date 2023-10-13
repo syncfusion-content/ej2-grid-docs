@@ -1,7 +1,9 @@
-ej.grids.Grid.Inject(ej.grids.ColumnChooser);
+ej.grids.Grid.Inject(ej.grids.Toolbar, ej.grids.ColumnChooser);
+
 var grid = new ej.grids.Grid({
     dataSource: data,
     showColumnChooser: true,
+    toolbar: ['ColumnChooser'],
     columns: [
         { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right', showInColumnChooser: false },
         { field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd', textAlign: 'Right' },
@@ -12,10 +14,5 @@ var grid = new ej.grids.Grid({
     height: 235
 });
 grid.appendTo('#Grid');
-var show = new ej.buttons.Button({ cssClass: 'e-primary' }, '#show');
-
-document.getElementById('show').onclick = function() {
-    grid.columnChooserModule.openColumnChooser(100, 40); // give X and Y axis
-};
 
 

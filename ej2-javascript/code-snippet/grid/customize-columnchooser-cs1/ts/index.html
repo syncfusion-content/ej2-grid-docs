@@ -19,11 +19,20 @@
     <link href="https://cdn.syncfusion.com/ej2/23.1.36/ej2-grids/styles/material.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
+    <style>
+        .e-grid .e-dialog.e-ccdlg {
+          height: 500px;
+          width: 200px;
+        }
+        .e-grid .e-ccdlg .e-cc-contentdiv {
+          height: 200px;
+          width: 230px;
+        }
+    </style>
 </head>
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
-        <button id='show'>Open Column Chooser</button>
         <div id='Grid'></div>        
     </div>
 </body>

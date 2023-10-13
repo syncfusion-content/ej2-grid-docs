@@ -1,9 +1,15 @@
-ej.grids.Grid.Inject(ej.grids.Toolbar, ej.grids.ColumnChooser);
 
-var grid = new ej.grids.Grid({
+
+import { Grid, Toolbar, ColumnChooser } from '@syncfusion/ej2-grids';
+import { data } from './datasource.ts';
+
+Grid.Inject( Toolbar, ColumnChooser);
+
+let grid: Grid = new Grid({
     dataSource: data,
     showColumnChooser: true,
     toolbar: ['ColumnChooser'],
+    columnChooserSettings : { ignoreAccent: true },
     columns: [
         { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right'},
         { field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd', textAlign: 'Right' },
@@ -13,7 +19,7 @@ var grid = new ej.grids.Grid({
     ],
     height: 235
 });
-
 grid.appendTo('#Grid');
+
 
 

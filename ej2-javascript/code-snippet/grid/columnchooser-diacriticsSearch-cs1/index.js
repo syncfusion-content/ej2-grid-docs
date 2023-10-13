@@ -4,6 +4,7 @@ var grid = new ej.grids.Grid({
     dataSource: data,
     showColumnChooser: true,
     toolbar: ['ColumnChooser'],
+    columnChooserSettings : { ignoreAccent: true },
     columns: [
         { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right'},
         { field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd', textAlign: 'Right' },
@@ -11,9 +12,8 @@ var grid = new ej.grids.Grid({
         { field: 'ShipCountry', headerText: 'Ship Country', width: 150 },
         { field: 'ShipCity', headerText: 'Ship City', visible: false, width: 150 }
     ],
-    height: 235
+    height: 235   
 });
-
 grid.appendTo('#Grid');
 
 
