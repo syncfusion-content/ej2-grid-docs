@@ -1,5 +1,3 @@
-
-
 import { Grid, DetailRow } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 import { employeeData } from './employeeData.ts';
@@ -18,10 +16,10 @@ let grid: Grid = new Grid({
         dataSource: data,
         queryString: 'EmployeeID',
         columns: [
-            { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
-            { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
-            { field: 'ShipCity', headerText: 'Ship City', width: 150 },
-            { field: 'ShipName', headerText: 'Ship Name', width: 150 }
+            { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+            { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+            { field: 'ShipCity', headerText: 'Ship City', width: 100 },
+            { field: 'ShipName', headerText: 'Ship Name', width: 100 }
         ],
     },
     height: 315,
@@ -30,8 +28,5 @@ let grid: Grid = new Grid({
 grid.appendTo('#Grid');
 
 function onDataBound(): void {
-    this.detailRowModule.expand(1); // initial expand 1 chid Grid.
+    this.detailRowModule.expand(2); // initial expand 2 chid Grid.
 }
-
-
-
