@@ -1,5 +1,4 @@
-
-
+import { Button } from '@syncfusion/ej2-buttons';
 import { Grid, Edit, Toolbar } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
@@ -39,15 +38,15 @@ function beforeBatchDelete(args) {
   }
 }
 
-var button = document.createElement('button');
-button.innerText = 'Grid is Addable';
-document.body.insertBefore(button, document.body.children[0]);
-button.addEventListener('click', btnClick.bind(this));
-
-function btnClick(args) {
-  args.target.innerText == 'Grid is Addable' ? (args.target.innerText = 'Grid is Not Addable') : (args.target.innerText = 'Grid is Addable');
-  isAddable = !isAddable;
-}
-
-
-
+let button: Button = new Button({
+    content: 'Grid is Addable',
+  });
+  button.appendTo('#Add');
+  
+  (document.getElementById('Add') as HTMLElement).onclick = () => {
+    console.log(button);
+    button.content == 'Grid is Addable'
+      ? (button.content = 'Grid is Not Addable')
+      : (button.content = 'Grid is Addable');
+    isAddable = !isAddable;
+  };

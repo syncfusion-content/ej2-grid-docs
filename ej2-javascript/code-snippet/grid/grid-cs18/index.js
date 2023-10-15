@@ -11,11 +11,9 @@ var grid = new ej.grids.Grid({
     allowAdding: true,
     allowDeleting: true,
     mode: 'Batch',
-    newRowPosition: 'Top'
   },
-  allowPaging: true,
-  pageSettings: { pageCount: 5 },
   toolbar: ['Add', 'Delete', 'Update', 'Cancel'],
+  height: 273,
   columns: [
     {
       field: 'ProductID',
@@ -36,22 +34,22 @@ var grid = new ej.grids.Grid({
       headerText: 'UnitPrice',
       textAlign: 'Right',
       edit: {
-        create: function() {
+        create: function () {
           priceElem = document.createElement('input');
           return priceElem;
         },
-        read: function() {
+        read: function () {
           return priceObj.value;
         },
-        destroy: function() {
+        destroy: function () {
           priceObj.destroy();
         },
-        write: function(args) {
+        write: function (args) {
           var rowData = args.rowData;
           var rowIndex = grid.getRowInfo(args.row).rowIndex;
           priceObj = new ej.inputs.NumericTextBox({
             value: args.rowData[args.column.field],
-            change: function(args) {
+            change: function (args) {
               var totalCostValue = args.value * rowData['UnitsInStock'];
               grid.updateCell(rowIndex, 'TotalCost', totalCostValue);
             }
@@ -68,22 +66,22 @@ var grid = new ej.grids.Grid({
       headerText: 'Units In Stock',
       textAlign: 'Right',
       edit: {
-        create: function() {
+        create: function () {
           stockElem = document.createElement('input');
           return stockElem;
         },
-        read: function() {
+        read: function () {
           return stockObj.value;
         },
-        destroy: function() {
+        destroy: function () {
           stockObj.destroy();
         },
-        write: function(args) {
+        write: function (args) {
           var rowData = args.rowData;
           var rowIndex = grid.getRowInfo(args.row).rowIndex;
           stockObj = new ej.inputs.NumericTextBox({
             value: args.rowData[args.column.field],
-            change: function(args) {
+            change: function (args) {
               var totalCostValue = args.value * rowData['UnitPrice'];
               grid.updateCell(rowIndex, 'TotalCost', totalCostValue);
             }
@@ -105,9 +103,8 @@ var grid = new ej.grids.Grid({
 });
 grid.appendTo('#Grid');
 
-grid.cellEdit= function(args){
-  if(args.columnName == "TotalCost"){
-    args.cancel= true;
+grid.cellEdit = function (args) {
+  if (args.columnName == "TotalCost") {
+    args.cancel = true;
   }
 }
-

@@ -6,10 +6,10 @@ import { NumericTextBox } from '@syncfusion/ej2-inputs';
 
 Grid.Inject(Edit, Toolbar);
 
-var priceElem: HTMLElement;;
-var priceObj: NumericTextBox;
-var stockElem: HTMLElement;;
-var stockObj: NumericTextBox;
+let priceElem: HTMLElement;;
+let priceObj: NumericTextBox;
+let stockElem: HTMLElement;;
+let stockObj: NumericTextBox;
 
 let grid: Grid = new Grid({
   dataSource: productData,
@@ -18,10 +18,8 @@ let grid: Grid = new Grid({
     allowAdding: true,
     allowDeleting: true,
     mode: 'Batch',
-    newRowPosition: 'Top'
   },
-  allowPaging: true,
-  pageSettings: { pageCount: 5 },
+  height: 273,
   toolbar: ['Add', 'Delete', 'Update', 'Cancel'],
   columns: [
     {
@@ -43,23 +41,23 @@ let grid: Grid = new Grid({
       headerText: 'UnitPrice',
       textAlign: 'Right',
       edit: {
-        create: function() {
+        create: function () {
           priceElem = document.createElement('input');
           return priceElem;
         },
-        read: function() {
+        read: function () {
           return priceObj.value;
         },
-        destroy: function() {
+        destroy: function () {
           priceObj.destroy();
         },
-        write: function(args) {
-          var rowData = args.rowData;
-          var rowIndex = grid.getRowInfo(args.row).rowIndex;
+        write: function (args) {
+          let rowData = args.rowData;
+          let rowIndex = grid.getRowInfo(args.row).rowIndex;
           priceObj = new NumericTextBox({
             value: args.rowData[args.column.field],
-            change: function(args) {
-              var totalCostValue = args.value * rowData['UnitsInStock'];
+            change: function (args) {
+              let totalCostValue = args.value * rowData['UnitsInStock'];
               grid.updateCell(rowIndex, 'TotalCost', totalCostValue);
             }
           });
@@ -75,23 +73,23 @@ let grid: Grid = new Grid({
       headerText: 'Units In Stock',
       textAlign: 'Right',
       edit: {
-        create: function() {
+        create: function () {
           stockElem = document.createElement('input');
           return stockElem;
         },
-        read: function() {
+        read: function () {
           return stockObj.value;
         },
-        destroy: function() {
+        destroy: function () {
           stockObj.destroy();
         },
-        write: function(args) {
-          var rowData = args.rowData;
-          var rowIndex = grid.getRowInfo(args.row).rowIndex;
+        write: function (args) {
+          let rowData = args.rowData;
+          let rowIndex = grid.getRowInfo(args.row).rowIndex;
           stockObj = new NumericTextBox({
             value: args.rowData[args.column.field],
-            change: function(args) {
-              var totalCostValue = args.value * rowData['UnitPrice'];
+            change: function (args) {
+              let totalCostValue = args.value * rowData['UnitPrice'];
               grid.updateCell(rowIndex, 'TotalCost', totalCostValue);
             }
           });
@@ -112,11 +110,8 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 
-grid.cellEdit= function(args){
-  if(args.columnName == "TotalCost"){
-    args.cancel= true;
+grid.cellEdit = function (args) {
+  if (args.columnName == "TotalCost") {
+    args.cancel = true;
   }
 }
-
-
-
