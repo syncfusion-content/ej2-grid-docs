@@ -27,4 +27,3 @@ document.getElementById('reordersingle').onclick = function () {
 document.getElementById('reordermultiple').onclick = function () {
   grid.reorderColumns(['ShipCity', 'ShipRegion', 'ShipName'], 'OrderID');
 };
-

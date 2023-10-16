@@ -17,4 +17,3 @@ var reorderByIndex = new ej.buttons.Button({ cssClass: 'e-info' }, '#reorderByIn
 document.getElementById('reorderByIndex').onclick = function () {
   grid.reorderColumnByIndex(1, 3); // move column at index 1 to index 3
 };
-

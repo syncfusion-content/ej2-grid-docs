@@ -1,5 +1,3 @@
-
-
 import { Grid, Reorder } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 import { Button } from '@syncfusion/ej2-buttons';
@@ -35,4 +33,3 @@ let reorderMultipleColumnsUsingFieldName: Button = new Button(
 (document.getElementById('reordermultiple') as HTMLElement).onclick = function () {
   grid.reorderColumns(['ShipCity', 'ShipRegion', 'ShipName'], 'OrderID');
 };
-

@@ -1,5 +1,3 @@
-
-
 import { Grid, Reorder } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 import { Button } from '@syncfusion/ej2-buttons';
@@ -24,5 +22,3 @@ let reorderByIndex: Button = new Button({ cssClass: 'e-info' }, '#reorderByIndex
 (document.getElementById('reorderByIndex') as HTMLElement).onclick = function () {
   grid.reorderColumnByIndex(1, 3); // move column at index 1 to index 3
 };
-
-

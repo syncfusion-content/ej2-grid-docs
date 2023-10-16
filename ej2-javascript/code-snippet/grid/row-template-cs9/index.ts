@@ -1,5 +1,3 @@
-
-
 import { Grid, Reorder, ColumnDragEventArgs } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
@@ -16,7 +14,7 @@ let grid: Grid = new Grid({
         { field: 'ShipCity', headerText: 'Ship City', width: 100 },
         { field: 'ShipName', headerText: 'Ship Name', width: 100 }
     ],
-    columnDrop: (args: ColumnDragEventArgs) => {
+      columnDrop: (args: ColumnDragEventArgs) => {
         (document.getElementById('message') as HTMLElement).innerText = 'columnDrop event triggered';
     
         if (args.column.allowReordering == true) {
@@ -42,6 +40,3 @@ let grid: Grid = new Grid({
     height: 315
 });
 grid.appendTo('#Grid');
-
-
-

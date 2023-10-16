@@ -27,4 +27,3 @@ document.getElementById('reordersingle').onclick = function () {
 document.getElementById('reordermultiple').onclick = function () {
   grid.reorderColumnByTargetIndex(['OrderID', 'CustomerID'], 3); // move columns with field name "OrderID" and "CustomerID" to index 3
 };
-

@@ -1,5 +1,3 @@
-
-
 import { Grid, Reorder } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 import { Button } from '@syncfusion/ej2-buttons';
@@ -35,5 +33,3 @@ let reorderMultipleColumnByTargetIndex: Button = new Button(
 (document.getElementById('reordermultiple') as HTMLElement).onclick = function () {
   grid.reorderColumnByTargetIndex(['OrderID', 'CustomerID'], 3); // move columns with field name "OrderID" and "CustomerID" to index 3
 };
-
-

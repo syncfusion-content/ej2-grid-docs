@@ -1,5 +1,3 @@
-
-
 import { Grid, Reorder } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
@@ -17,6 +15,3 @@ let grid: Grid = new Grid({
     height: 315
 });
 grid.appendTo('#Grid');
-
-
-
