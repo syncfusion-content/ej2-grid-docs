@@ -1,5 +1,3 @@
-
-
 import { Grid, QueryCellInfoEventArgs } from '@syncfusion/ej2-grids';
 import { columnSpanData, ColumnSpanDataType  } from './datasource.ts';
 
@@ -164,6 +162,3 @@ function QueryCellEvent(args: QueryCellInfoEventArgs): void {
         break;
     }
   }
-
-
-

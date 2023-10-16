@@ -109,4 +109,3 @@ function QueryCellEvent(args) {
             break;
     }
 }
-
