@@ -1,7 +1,7 @@
-ej.grids.Grid.Inject(ej.grids.Page, ej.grids.Group, ej.grids.LazyLoadGroup);
+ej.grids.Grid.Inject(ej.grids.Page, ej.grids.Group, ej.grids.LazyLoadGroup, ej.grids.VirtualScroll);
 var grid = new ej.grids.Grid({
     dataSource: data,
-    allowPaging: true,
+    enableVirtualization: true,
     allowGrouping: true,
     groupSettings: { enableLazyLoading: true, columns: ['ProductName', 'CustomerName'] },
     columns: [
@@ -10,6 +10,6 @@ var grid = new ej.grids.Grid({
         { field: 'ProductID', headerText: 'Product ID', textAlign: 'Right', width: 80 },
         { field: 'CustomerName', headerText: 'Customer Name', width: 120 }
     ],
-    height: 220
+    height: 315,
 });
 grid.appendTo('#Grid');
