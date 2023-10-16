@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 The grouping feature in the Syncfusion ##Platform_Name## Grid allows you to organize data into a hierarchical structure, making it easier to expand and collapse records. You can group the columns by simply dragging and dropping the column header to the group drop area. To enable grouping in the grid, you need to set the [allowGrouping](../../api/grid/#allowgrouping) property to **true**. Additionally, you can customize the grouping options using the [groupSettings](../../api/grid/groupSettings) property.
 
-To use the Grouping feature, need to inject [Group](../../api/grid/group) module in the grid.
+To use the Grouping feature, need to inject **Group** in the grid.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -50,8 +50,6 @@ To use the Grouping feature, need to inject [Group](../../api/grid/group) module
 To enable initial grouping in the Grid, you can use the [groupSettings](../../api/grid/groupSettings) property and set the [groupSettings.columns](../../api/grid/groupSettings/#columns) property to an array of column names(`field` of the column) that you want to group by. This feature is particularly useful when working with large datasets, as it allows you to quickly organize and analyze the data based on specific criteria.
 
 The following example demonstrates how to set an initial grouping for the **CustomerID** and **ShipCity** columns during the initial rendering grid, by using the `groupSettings.columns` property.
-
-To apply group at initial rendering, set the column field name in the `groupSettings.columns`.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -145,6 +143,8 @@ In the following example, the [EJ2 Toggle Switch Button](../../switch/getting-st
 
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs82" %}
 {% endif %}
+
+> By default, the group drop area will be shown only if there is at least one column available to group.
 
 ## Show the grouped column
 
