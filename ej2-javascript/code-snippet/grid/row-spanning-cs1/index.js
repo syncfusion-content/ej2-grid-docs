@@ -3,7 +3,7 @@ var grid = new ej.grids.Grid({
             queryCellInfo: QueryCellEvent,
             gridLines: 'Both',
             columns: [
-{ field: 'EmployeeID', headerText: 'Employee ID', isPrimaryKey: true, textAlign: 'Right', width: 120 },
+                { field: 'EmployeeID', headerText: 'Employee ID', isPrimaryKey: true, textAlign: 'Right', width: 120 },
                 { field: 'EmployeeName', headerText: 'Employee Name', width: 200 },
                 { field: '9:00', headerText: '9.00 AM', width: 100 },
                 { field: '9:30', headerText: '9.30 AM', width: 100 },
@@ -117,4 +117,3 @@ function QueryCellEvent(args) {
             break;
     }
 }
-
