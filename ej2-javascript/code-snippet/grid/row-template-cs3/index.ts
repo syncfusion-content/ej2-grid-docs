@@ -1,5 +1,3 @@
-
-
 import { Grid } from '@syncfusion/ej2-grids';
 import { data  } from './datasource.ts';
 

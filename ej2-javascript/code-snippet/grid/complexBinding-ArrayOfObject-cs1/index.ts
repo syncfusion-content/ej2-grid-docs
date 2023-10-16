@@ -1,5 +1,3 @@
-
-
 import { Grid } from '@syncfusion/ej2-grids';
 import { complexData } from './datasource.ts';
 
@@ -15,6 +13,3 @@ import { complexData } from './datasource.ts';
             height: 315
         });
     grid.appendTo('#Grid');
-
-
-

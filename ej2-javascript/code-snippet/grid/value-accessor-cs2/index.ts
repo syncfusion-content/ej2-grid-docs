@@ -1,5 +1,3 @@
-
-
 import { Grid } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
@@ -22,6 +20,3 @@ function currencyFormatter(field: string, data: Object, column: Object): string 
 function concatenateFields(field: string, data: Object, column: Object): string {
     return data[field] + ' - ' + data['ShipRegion'];
 }
-
-
-

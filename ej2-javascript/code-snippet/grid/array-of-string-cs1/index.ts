@@ -1,5 +1,3 @@
-
-
 import { Grid } from '@syncfusion/ej2-grids';
 import { stringData } from './datasource.ts';
 
@@ -18,6 +16,3 @@ function getConcatenatedNames(field: string, data: Object, column: Object): stri
     return data[field].map(function (s: {LastName: string, FirstName: string}): string {
         return s.LastName || s.FirstName }).join(' ');
 }
-
-
-

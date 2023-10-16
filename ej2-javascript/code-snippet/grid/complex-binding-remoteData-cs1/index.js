@@ -3,7 +3,7 @@ var data = new ej.data.DataManager({
     crossDomain: true,
     url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders'
 });
-let query = new ej.data.Query().expand('Employee');
+var query = new ej.data.Query().expand('Employee');
 var grid = new ej.grids.Grid({
     dataSource: data,
         allowPaging: true,
@@ -17,4 +17,3 @@ var grid = new ej.grids.Grid({
         height: 315
 });
 grid.appendTo('#Grid');
-

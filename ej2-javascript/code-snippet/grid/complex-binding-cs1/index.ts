@@ -1,5 +1,3 @@
-
-
 import { Grid } from '@syncfusion/ej2-grids';
 import { complexData } from './datasource.ts';
 
@@ -14,6 +12,3 @@ let grid: Grid = new Grid({
     height: 315
 });
 grid.appendTo('#Grid');
-
-
-

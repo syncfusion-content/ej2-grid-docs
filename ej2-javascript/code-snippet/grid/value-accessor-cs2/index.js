@@ -17,4 +17,3 @@ function currencyFormatter(field, data, column) {
 function concatenateFields(field, data, column) {
     return data[field] + ' - ' + data['ShipRegion'];
 }
-

@@ -1,4 +1,3 @@
-
 var grid = new ej.grids.Grid ({
     dataSource: data,
     dataBound: dataBound

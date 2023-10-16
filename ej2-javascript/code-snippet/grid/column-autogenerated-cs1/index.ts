@@ -12,6 +12,3 @@ grid.dataBound = () => {
     let column = grid.columns[0];
     (column as ColumnModel).isPrimaryKey = true;
   };
-
-
-

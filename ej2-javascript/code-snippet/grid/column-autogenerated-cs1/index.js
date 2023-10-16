@@ -7,5 +7,3 @@ grid.dataBound = () => {
     var column = grid.columns[0];
     column.isPrimaryKey = 'true';
   };
-
-

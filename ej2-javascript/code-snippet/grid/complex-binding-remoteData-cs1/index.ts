@@ -1,5 +1,3 @@
-
-
 import { Grid } from '@syncfusion/ej2-grids';
 import { DataManager, ODataAdaptor, Query } from '@syncfusion/ej2-data';
 
@@ -22,5 +20,3 @@ import { DataManager, ODataAdaptor, Query } from '@syncfusion/ej2-data';
     height: 315
 });
 grid.appendTo('#Grid');
-
-

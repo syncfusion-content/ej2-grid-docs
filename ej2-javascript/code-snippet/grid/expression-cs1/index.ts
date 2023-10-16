@@ -1,5 +1,3 @@
-
-
 import { Grid } from '@syncfusion/ej2-grids';
 import { foodInformation } from './datasource.ts';
 
@@ -19,6 +17,3 @@ grid.appendTo('#Grid');
 function totalCalories(field: string, data: { Protein: number, Fat: number, Carbohydrate: number }, column: Object): number {
     return data.Protein * 4 + data.Fat * 9 + data.Carbohydrate * 4;
 };
-
-
-

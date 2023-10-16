@@ -13,4 +13,3 @@ function getConcatenatedNames(field, data, column){
     return data[field].map(function (s) {
         return s.LastName || s.FirstName }).join(' ');
 }
-
