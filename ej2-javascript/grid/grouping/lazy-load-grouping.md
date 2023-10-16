@@ -200,6 +200,7 @@ The following example demonstrates how to enable the lazy load grouping with vir
 {% previewsample "page.domainurl/code-snippet/grid/lazy-load-group-virtualscroll" %}
 {% endif %}
 
+> When using the `enableVirtualization` feature, it is necessary to define the [height](../../documentation/api/grid/#height) property.
 
 ## Limitations for lazy load grouping
 
