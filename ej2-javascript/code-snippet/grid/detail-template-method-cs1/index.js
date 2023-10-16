@@ -1,4 +1,3 @@
-
 ej.grids.Grid.Inject(ej.grids.DetailRow);
 var grid = new ej.grids.Grid({
     dataSource: employeeData,
@@ -26,4 +25,3 @@ textbox.appendTo('#rowindex');
 document.getElementById('expand').addEventListener('click', function(args){
     grid.detailRowModule.expand(textbox.value); 
 });
-

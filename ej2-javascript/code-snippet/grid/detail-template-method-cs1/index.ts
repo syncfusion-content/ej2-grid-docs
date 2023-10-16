@@ -1,5 +1,3 @@
-
-
 import { Grid, DetailRow } from '@syncfusion/ej2-grids';
 import { Button } from '@syncfusion/ej2-buttons';
 import { employeeData } from './datasource.ts';
@@ -33,6 +31,3 @@ textbox.appendTo('#rowindex');
 (document.getElementById('expand')as HTMLElement).addEventListener('click', () => {
     grid.detailRowModule.expand(textbox.value); 
 });
-
-
-
