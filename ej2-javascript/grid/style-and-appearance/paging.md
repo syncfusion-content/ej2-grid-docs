@@ -9,39 +9,44 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Paging in ##Platform_Name## Grid control
+# Paging in ##Platform_Name## Grid component
+
+You can customize the appearance of the paging elements in the Syncfusion ##Platform_Name## Grid component using CSS. Here are examples of how to customize the pager root element, pager container element, pager navigation elements, pager page numeric link elements, and pager current page numeric element.
 
 ## Customizing the Grid pager root element
 
-Using this CSS, you can customize the Grid pager root element.
+To customize the appearance of the grid pager root element, you can use the following CSS code:
 
-```
-
+```css
 .e-grid .e-gridpager {
     font-family: cursive;
     background-color: #deecf9;
 }
-
 ```
+In this example, the **.e-gridpager** class targets the pager root element. You can modify the `font-family` to change the font family and `background-color` property to change the background color of the pager.
+
+![Grid pager root element](../images/grid-pager-root-element.png)
 
 ## Customizing the Grid pager container element
 
-Use the below CSS to customize the Grid pager container element.
+To customize the appearance of the grid pager container element, you can use the following CSS code:
 
-```
-
+```css
 .e-grid .e-pagercontainer {
-    background-color: #deecf9;
+    border: 2px solid #00b5ff;
+    font-family: cursive;
 }
-
 ```
+
+In this example, the **.e-pagercontainer** class targets the pager container element. You can modify the `border` property and `font-family` property to change the border color and font family of the pager container.
+
+![Grid pager container element](../images/grid-pager-container-element.png)
 
 ## Customizing the Grid pager navigation elements
 
-Customize the Grid pager navigation elements, using the below selector.
+To customize the appearance of the grid pager navigation elements, you can use the following CSS code:
 
-```
-
+```css
 .e-grid .e-gridpager .e-prevpagedisabled,
 .e-grid .e-gridpager .e-prevpage,
 .e-grid .e-gridpager .e-nextpage,
@@ -52,29 +57,44 @@ Customize the Grid pager navigation elements, using the below selector.
 .e-grid .e-gridpager .e-firstpagedisabled {
     background-color: #deecf9;
 }
-
 ```
+
+In this example, the classes **.e-prevpagedisabled, .e-prevpage, .e-nextpage, .e-nextpagedisabled, .e-lastpagedisabled, .e-lastpage, .e-firstpage,** and **.e-firstpagedisabled** target the various pager navigation elements. You can modify the `background-color` property to change the background color of these elements.
+
+![Grid pager navigation elements](../images/grid-pager-navigation-element.png)
 
 ## Customizing the Grid pager page numeric link elements
 
-Use the below CSS to customize the Grid pager current page numeric link elements.
+To customize the appearance of the grid pager current page numeric link elements, you can use the following CSS code:
 
-```
-
+```css
 .e-grid .e-gridpager .e-numericitem {
-    border-radius: initial;
+    background-color: #5290cb;
+    color: #ffffff;
+    cursor: pointer;
+    }
+    
+    .e-grid .e-gridpager .e-numericitem:hover {
+    background-color: white;
+    color:  #007bff;
 }
-
 ```
+
+In this example, the **.e-numericitem** class targets the page numeric link elements. You can modify the `background-color`, `color` properties to change the background color and text color of these elements.
+
+![Grid pager page numeric link elements](../images/pager-page-numeric-link-elements.png)
 
 ## Customizing the Grid pager current page numeric element
 
-Using this CSS, you can customize the Grid pager current page numeric item.
+To customize the appearance of the grid pager current page numeric element, you can use the following CSS code:
 
-```
-
+```css
 .e-grid .e-gridpager .e-currentitem {
     background-color: #0078d7;
+    color: #fff;
 }
-
 ```
+
+In this example, the **.e-currentitem** class targets the current page numeric item. You can modify the `background-color` property to change the background color of this element and `color` property to change the text color.
+
+![Grid pager current page numeric element](../images/grid-pager-current-page-numeric-element.png)
