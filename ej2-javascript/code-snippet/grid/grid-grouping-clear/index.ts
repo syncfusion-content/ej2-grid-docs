@@ -1,6 +1,7 @@
 import { Button } from '@syncfusion/ej2-buttons';
 import { Grid, Group, Sort } from '@syncfusion/ej2-grids';
-import { data } from './data-source.ts';
+import { data } from './datasource.ts';
+
 
 Grid.Inject(Group, Sort);
 

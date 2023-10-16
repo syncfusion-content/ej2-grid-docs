@@ -48,10 +48,10 @@ button.appendTo('#group');
     grid.groupColumn((dropdown as DropDownList).value);
 }
 
-let button1: Button = new Button({
+let buttonUngroup: Button = new Button({
     content: 'Ungroup Column',
 })
-button1.appendTo('#ungroup')
+buttonUngroup.appendTo('#ungroup');
 
 
 (document.getElementById('ungroup')  as HTMLElement).onclick=function()

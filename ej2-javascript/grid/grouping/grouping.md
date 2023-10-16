@@ -374,6 +374,33 @@ To implement this functionality, follow these steps:
 
 The following example demonstrates the function that collapses the selected row using an external button click. 
 
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs82-grouped/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs82-grouped/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/grid/grid-cs82-grouped" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs82-grouped/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs82-grouped/js/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/grid/grid-cs82-grouped" %}
+{% endif %}
+
 ## Clear grouping 
 
 The clear grouping feature in the Syncfusion ##Platform_Name## Grid allows you to removing all the grouped columns from the grid. This feature provides a convenient way to clear the grouping of columns in your application.
