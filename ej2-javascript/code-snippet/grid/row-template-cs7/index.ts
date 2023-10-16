@@ -1,5 +1,3 @@
-
-
 import { Grid, ColumnMenu, Sort, Page, Resize, Group, Filter, ColumnMenuOpenEventArgs, ColumnMenuItemModel } from '@syncfusion/ej2-grids';
 import { data  } from './datasource.ts';
 
@@ -31,7 +29,3 @@ let grid: Grid = new Grid({
     ]
 });
 grid.appendTo('#Grid');
-
-
-
-

@@ -1,5 +1,3 @@
-
-
 import { Grid, Resize, Sort, Group, Filter, ColumnMenu, Page } from '@syncfusion/ej2-grids';
 import { data  } from './datasource.ts';
 
@@ -23,7 +21,3 @@ let grid: Grid = new Grid({
     ]
 });
 grid.appendTo('#Grid');
-
-
-
-

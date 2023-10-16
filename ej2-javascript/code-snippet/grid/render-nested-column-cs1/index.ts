@@ -50,7 +50,3 @@ let grid: Grid = new Grid({
     ]
 });
 grid.appendTo('#Grid');
-
-
-
-

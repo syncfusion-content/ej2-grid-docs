@@ -1,4 +1,3 @@
-
 ej.grids.Grid.Inject(ej.grids.Page, ej.grids.Group, ej.grids.Sort, ej.grids.Filter, ej.grids.ColumnMenu);
 var grid = new ej.grids.Grid({
   dataSource: data,
@@ -25,4 +24,3 @@ var grid = new ej.grids.Grid({
   height: 315,
 });
 grid.appendTo('#Grid');
-

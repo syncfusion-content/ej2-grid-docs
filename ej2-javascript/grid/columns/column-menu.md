@@ -243,6 +243,3 @@ The column menu in Syncfusion ##Platform_Name## Grid provides a set of events th
 
 {% previewsample "page.domainurl/code-snippet/grid/row-template-cs5" %}
 {% endif %}
-
-
-
