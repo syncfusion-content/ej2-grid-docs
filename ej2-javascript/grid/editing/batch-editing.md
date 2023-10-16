@@ -11,7 +11,13 @@ domainurl: ##DomainURL##
 
 # Batch editing in ##Platform_Name## Grid control
 
-In Batch edit mode, when you double-click on the grid cell, then the target cell changed to edit state. You can bulk save (added, changed and deleted data in the single request) to data source by click on the toolbar's `Update` button or by externally invoking the [`batchSave`]../api/grid/edit/#batchsave) method. To enable Batch edit, set the [`editSettings.mode`](../../api/grid/editSettings/#mode) as `Batch`.
+Batch editing is a powerful feature in the Grid component that allows you to edit multiple cells simultaneously. It provides a convenient way to make changes to multiple cells and save them in a single request to the data source. This feature is particularly useful when dealing with large datasets or when you need to update multiple cells at once.
+
+In batch edit mode, when you double-click on a grid cell, the target cell changes to an editable state. You can perform bulk update of the added, changed, and deleted data by either clicking on the toolbar's **Update** button or by externally invoking the [batchSave](../../api/grid/edit/#batchsave) method.
+
+To enable batch editing mode, you need to set the [editSettings.mode](../../api/grid/editSettings/#mode) property to **Batch**. This property determines the editing mode of the Grid and allows you to activate the batch editing feature.
+
+Here's an example how to enable batch editing in the javascript grid component:
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -42,9 +48,9 @@ In Batch edit mode, when you double-click on the grid cell, then the target cell
 
 ## Automatically update the column based on another column edited value in batch mode
 
-You can update the column value based on another column edited value in Batch mode by using the Cell Edit Template feature.
+You can automatically update the value of a column based on the edited value of another column in batch mode. This feature is useful when you want to dynamically calculate and update a column's value in real-time based on the changes made in another related column. This can be achieved using the [Cell Edit Template](../../editing/edit-types#custom-editors-using-template) feature in the Grid component.
 
-In the below demo, we have update the `TotalCost` column value based on the `UnitPrice` and `UnitInStock` column value while editing.
+In the following example, the **TotalCost** column value is updated based on changes to the **UnitPrice** and **UnitInStock** columns during batch editing.
 
 {% if page.publishingplatform == "typescript" %}
 

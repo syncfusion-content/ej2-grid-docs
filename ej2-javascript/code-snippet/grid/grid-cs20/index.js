@@ -2,7 +2,7 @@ ej.grids.Grid.Inject(ej.grids.Edit, ej.grids.Toolbar);
 var grid = new ej.grids.Grid({
     dataSource: data,
     toolbar: ['Add','Delete', 'Update', 'Cancel'],
-    editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Batch' ,showConfirmDialog:false, showDeleteConfirmDialog:false},
+    editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Batch' ,showConfirmDialog:true, showDeleteConfirmDialog:false},
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100, isPrimaryKey: true },
         { field: 'CustomerID', headerText: 'Customer ID', width: 120, },
@@ -15,6 +15,7 @@ grid.appendTo('#Grid');
 
 let toggle = new ej.buttons.Switch({
     change: toggleShowConfirmDialog,
+    checked: true,
 });
 toggle.appendTo('#switch');
 

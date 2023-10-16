@@ -7,7 +7,7 @@ Grid.Inject(Edit, Toolbar);
 let grid: Grid = new Grid({
     dataSource: data,
     toolbar: ['Add', 'Delete', 'Update', 'Cancel'],
-    editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Batch',showConfirmDialog:false, showDeleteConfirmDialog:false },
+    editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Batch',showConfirmDialog:true, showDeleteConfirmDialog:false },
     pageSettings: { pageSizes: true,pageCount: 5},
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', validationRules: { required: true, number: true }, isPrimaryKey: true, width: 100 },
@@ -21,6 +21,7 @@ grid.appendTo('#Grid');
 
 let toggle: Switch = new Switch({
   change: toggleShowConfirmDialog,
+  checked: true,
 });
 toggle.appendTo('#switch');
 
