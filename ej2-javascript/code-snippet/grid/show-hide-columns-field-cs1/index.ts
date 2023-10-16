@@ -18,9 +18,9 @@ let show: Button = new Button({ cssClass: 'e-info' }, '#show');
 let hide: Button = new Button({ cssClass: 'e-info' }, '#hide');
 
 (document.getElementById('show') as HTMLElement).onclick = () => {
-    grid.showColumns('Customer ID', 'headerText'); //show by HeaderText
+    grid.showColumns('CustomerID', 'field'); //show by field
 };
 
 (document.getElementById('hide') as HTMLElement).onclick = () => {
-    grid.hideColumns('Customer ID', 'headerText'); //hide by HeaderText
+    grid.hideColumns('CustomerID', 'field'); //hide by field
 };

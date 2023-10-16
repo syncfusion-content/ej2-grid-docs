@@ -14,9 +14,9 @@ var show = new ej.buttons.Button({ cssClass: 'e-info' }, '#show');
 var hide = new ej.buttons.Button({ cssClass: 'e-info' }, '#hide');
 
 document.getElementById('show').onclick = function() {
-    grid.showColumns('Customer ID', 'headerText'); //show by HeaderText
+    grid.showColumns('CustomerID', 'field'); //show by field
 };
 
 document.getElementById('hide').onclick = function() {
-    grid.hideColumns('Customer ID', 'headerText'); //hide by HeaderText
+    grid.hideColumns('CustomerID', 'field'); //hide by field
 };
