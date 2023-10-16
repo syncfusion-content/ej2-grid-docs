@@ -79,9 +79,11 @@ The following example demonstrates how to add a custom text to the group caption
 
 ## Render custom component in group caption
 
-We can render custom components in the group caption by using the [`groupSettings.captionTemplate`](../../api/grid/column/#captionTemplate) property.
+The Syncfusion ##Platform_Name## Grid offers the flexibility to render a custom component in the group caption, providing advanced or interactive functionality within the group caption row. This feature allows you to display custom UI elements, like buttons, icons, or dropdowns, and handle user interactions directly within the group caption. 
 
-In the below demo, we have rendered the EJ2 [`ButtonComponent`](../../button/getting-started/) in the group caption.
+To render custom component in the group caption, you can utilize the [captionTemplate](../../api/grid/groupSettings/#captiontemplate) property. This feature enables you to replace plain text with a custom component in the group caption, enhancing customization and interactivity.
+
+The following example demonstrates how to add a custom component to the group caption using the `captionTemplate` property. In the template, the [Chips](../../chips/getting-started) component is utilized, with the text content set as the group key.
 
 {% if page.publishingplatform == "typescript" %}
 
