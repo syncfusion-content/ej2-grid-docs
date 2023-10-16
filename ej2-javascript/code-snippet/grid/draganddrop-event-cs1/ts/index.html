@@ -19,11 +19,23 @@
     <link href="https://cdn.syncfusion.com/ej2/23.1.36/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
+    <style>
+        .event-message {
+            text-align: center;
+            color: red;
+            font-size: 16px;
+          }
+          .e-grid .e-rowcell.customcss {
+              background-color: #2382c3;
+              color: white;
+            }
+     </style>
 </head>
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
         <div style="display: inline-block">
+            <p class="event-message" id="message"></p>
             <div id="Grid"></div> 
         </div>  
     </div>
