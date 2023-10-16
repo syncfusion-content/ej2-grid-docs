@@ -1,4 +1,4 @@
----
+---##Platform_Name##
 layout: post
 title: Grouping in ##Platform_Name## Grid control | Syncfusion
 description: Learn here all about Grouping in Syncfusion ##Platform_Name## Grid control of Syncfusion Essential JS 2 and more.
@@ -77,6 +77,8 @@ The following example demonstrates how to set an initial grouping for the **Cust
 
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs81" %}
 {% endif %}
+
+> You can group by multiple columns by specifying an array of column names in the columns property of the `groupSettings`.
 
 ## Prevent grouping for particular column
 
@@ -358,7 +360,7 @@ In the following example, the [EJ2 Toggle Switch Button](../../switch/getting-st
 
 ### Expand or collapse selected grouped row
 
-Expanding or collapsing selected grouped rows in a Syncfusion javascript Grid involves implementing the functionality to expand or collapse grouped records programatically.
+Expanding or collapsing selected grouped rows in a Syncfusion ##Platform_Name## Grid involves implementing the functionality to expand or collapse grouped records programatically.
 
 To enable the expand and collapse functionality for grouped rows in a grid, you can utilize the [expandCollapseRows](../..api/grid/group/#expandcollapserows) method. This method is designed to handle two scenarios such as expanding collapsed grouped records and collapsing expanded grouped records.
 
@@ -374,7 +376,7 @@ The following example demonstrates the function that collapses the selected row 
 
 ## Clear grouping 
 
-The clear grouping feature in the Syncfusion javascript Grid allows you to removing all the grouped columns from the grid. This feature provides a convenient way to clear the grouping of columns in your application.
+The clear grouping feature in the Syncfusion ##Platform_Name## Grid allows you to removing all the grouped columns from the grid. This feature provides a convenient way to clear the grouping of columns in your application.
 
 To clear all the grouped columns in the Grid, you can utilize the [clearGrouping](../../api/grid/#cleargrouping) method of the grid.
 
@@ -407,40 +409,15 @@ The following example demonstrates how to clear the grouping using `clearGroupin
 {% previewsample "page.domainurl/code-snippet/grid/grid-grouping-clear" %}
 {% endif %}
 
-## Expand or collapse externally
-
-The Syncfusion ##Platform_Name## Grid offers a convenient feature to expand or collapse grouped rows, allowing you to control the visibility of grouped data. This section will provide guidance on enabling this functionality and integrating it into your application using the Grid properties and methods.
-
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/grid-cs84/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs84/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/grid/grid-cs84" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/grid-cs84/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs84/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/grid/grid-cs84" %}
-{% endif %}
-
 ## Grouping events
 
-During the group action, the grid component triggers two events. The [`actionBegin`](../../api/grid/#actionbegin) event triggers before the group action starts and the [`actionComplete`](../../api/grid/#actioncomplete) event triggers after the group action is completed. Using these events you can perform any action.
+The Grid component provides two events that are triggered during the group action such as [actionBegin](../../api/grid/#actionbegin) and [actionComplete](../../api/grid/#actioncomplete). The `actionBegin` event is triggered before the group action starts, and the `actionComplete` event is triggered after the group action is completed. You can use these events to perform any custom action based on the grouping.
+
+1. **actionBegin event**: `actionBegin` event is triggered before the group action begins. It provides a way to perform any necessary operations before the group action takes place. This event provides a parameter that contains the current grid state, including the current group field name, requestType information and etc.
+
+2. **actionComplete event**: `actionComplete` event is triggered after the group action is completed. It provides a way to perform any necessary operations after the group action has taken place. This event provides a parameter that contains the current grid state, including the grouped data and column information and etc.
+
+The following example demonstrates how the `actionBegin` and `actionComplete` events work when grouping is performed. The `actionBegin` event is used to cancel the grouping of the **OrderID** column. The `actionComplete` event is used to display a message.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -469,10 +446,9 @@ During the group action, the grid component triggers two events. The [`actionBeg
 {% previewsample "page.domainurl/code-snippet/grid/grouping-event-cs1" %}
 {% endif %}
 
-> The [`args.requestType`](../../api/grid/sortEventArgs/#requesttype) is based on the current action name. For example, when grouping, the [`args.requestType`](../../api/grid/sortEventArgs/#requesttype) value will be 'grouping'.
+> The [args.requestType](../../api/grid/sortEventArgs/#requesttype) property represents the name of the current action being performed. For instance, during grouping, the `args.requestType` value will be **grouping**.
 
 ## See Also
 
 * [Exporting grouped records](../excel-export/excel-export-options/#exporting-grouped-records)
-* [How to apply formatting for the group caption template](https://www.syncfusion.com/kb/11253/how-to-apply-formatting-for-the-group-caption-template)
-* [How to hide expand/collapse icon for groups with single item](https://www.syncfusion.com/kb/11023/how-to-hide-expand-collapse-icon-for-groups-with-single-item)
+* [How to enable lazy load grouping in Grid](../../grid/grouping/lazy-load-grouping)
