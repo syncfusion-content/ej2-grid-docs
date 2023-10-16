@@ -284,6 +284,8 @@ The following example demonstrates how to perform a group action using the `enab
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs83" %}
 {% endif %}
 
+> Numeric columns can be grouped based on formats such as currency or percentage, while datetime columns can be grouped based on specific date or time formats.
+
 ## Group or ungroup column externally
 
 By default, the Syncfusion Grid supports interaction-oriented column grouping, where users manually group columns by dragging and dropping them into the grouping area of the grid. Grid provides an ability to group and ungroup a column using [groupColumn](../../api/grid/#groupcolumn) and [ungroupColumn](../../api/grid/#ungroupcolumn) methods. These methods provide a programmatic approach to perform column grouping and ungrouping.
