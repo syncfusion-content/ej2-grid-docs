@@ -38,5 +38,3 @@ var grid = new ej.grids.Grid({
   }
 });
 grid.appendTo('#Grid');
-
-

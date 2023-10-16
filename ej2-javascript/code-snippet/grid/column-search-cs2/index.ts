@@ -1,5 +1,3 @@
-
-
 import { Grid, Search, Toolbar } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
@@ -24,6 +22,3 @@ let grid: Grid = new Grid({
     }
 });
 grid.appendTo('#Grid');
-
-
-

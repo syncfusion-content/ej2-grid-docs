@@ -17,4 +17,3 @@ document.getElementById('search').addEventListener('click', function() {
     var searchText = document.getElementsByClassName('searchtext')[0].value;
     grid.search(searchText);
 });
-

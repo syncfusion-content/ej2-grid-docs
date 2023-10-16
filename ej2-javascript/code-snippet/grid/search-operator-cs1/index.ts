@@ -34,5 +34,3 @@ dropDown.appendTo('#dropdownlist');
 function valueChange(args) {
     grid.searchSettings.operator = args.value;
 }
-
-

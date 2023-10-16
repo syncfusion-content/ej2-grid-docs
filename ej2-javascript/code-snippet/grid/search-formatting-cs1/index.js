@@ -1,4 +1,3 @@
-
 ej.grids.Grid.Inject(ej.grids.Toolbar);
 var grid = new ej.grids.Grid({
     dataSource: data,

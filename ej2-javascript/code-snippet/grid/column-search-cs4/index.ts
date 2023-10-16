@@ -1,5 +1,3 @@
-
-
 import { Grid, Search, Toolbar } from '@syncfusion/ej2-grids';
 import { Predicate, Query } from '@syncfusion/ej2-data';
 import { data } from './datasource.ts';
@@ -76,6 +74,3 @@ let grid: Grid = new Grid({
     },
 });
 grid.appendTo('#Grid');
-
-
-

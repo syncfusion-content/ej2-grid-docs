@@ -1,5 +1,3 @@
-
-
 import { Grid } from '@syncfusion/ej2-grids';
 import { Button } from '@syncfusion/ej2-buttons';
 import { data } from './datasource.ts';
@@ -23,6 +21,3 @@ searchBtn.appendTo('#search');
     let searchText: string = (<HTMLInputElement>document.getElementsByClassName('searchtext')[0]).value;
     grid.search(searchText);
 });
-
-
-

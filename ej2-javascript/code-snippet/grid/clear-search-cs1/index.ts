@@ -1,5 +1,3 @@
-
-
 import { Grid, Search, Toolbar } from '@syncfusion/ej2-grids';
 import { Button } from '@syncfusion/ej2-buttons';
 import { data } from './datasource.ts';
@@ -26,6 +24,3 @@ clearBtn.appendTo('#clear');
 (document.getElementById('clear') as HTMLElement).addEventListener('click', () => {
     grid.searchSettings.key='';
 });
-
-
-

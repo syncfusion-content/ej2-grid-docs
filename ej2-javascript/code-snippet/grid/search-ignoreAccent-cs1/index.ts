@@ -28,4 +28,3 @@ function onSwitchChange(args) {
         grid.searchSettings.ignoreAccent = false;
     }
 }
-
