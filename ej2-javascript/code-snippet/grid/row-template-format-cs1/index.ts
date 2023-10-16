@@ -1,5 +1,3 @@
-
-
 import { Grid } from '@syncfusion/ej2-grids';
 import { employeeData } from './datasource.ts';
 import { Internationalization } from '@syncfusion/ej2-base';
@@ -24,6 +22,3 @@ grid.appendTo('#Grid');
 interface IWindow extends Window {
     formatDate?: Function;
 }
-
-
-
