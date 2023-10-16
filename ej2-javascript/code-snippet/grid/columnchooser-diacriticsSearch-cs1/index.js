@@ -1,5 +1,4 @@
 ej.grids.Grid.Inject(ej.grids.Toolbar, ej.grids.ColumnChooser);
-
 var grid = new ej.grids.Grid({
     dataSource: data,
     showColumnChooser: true,
@@ -15,5 +14,3 @@ var grid = new ej.grids.Grid({
     height: 235   
 });
 grid.appendTo('#Grid');
-
-

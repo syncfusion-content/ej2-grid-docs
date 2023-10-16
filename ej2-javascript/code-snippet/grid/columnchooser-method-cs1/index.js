@@ -12,10 +12,8 @@ var grid = new ej.grids.Grid({
     height: 235
 });
 grid.appendTo('#Grid');
-var show = new ej.buttons.Button({ cssClass: 'e-primary' }, '#show');
 
+var show = new ej.buttons.Button({ cssClass: 'e-primary' }, '#show');
 document.getElementById('show').onclick = function() {
     grid.columnChooserModule.openColumnChooser(100, 40); // give X and Y axis
 };
-
-

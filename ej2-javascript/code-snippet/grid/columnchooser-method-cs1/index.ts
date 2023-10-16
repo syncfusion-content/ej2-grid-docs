@@ -1,5 +1,3 @@
-
-
 import { Grid, ColumnChooser } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 import { Button } from '@syncfusion/ej2-buttons';
@@ -18,14 +16,9 @@ let grid: Grid = new Grid({
     ],
     height: 235
 });
-
 grid.appendTo('#Grid');
 
 let show: Button = new Button({ cssClass: 'e-primary' }, '#show');
-
 (document.getElementById('show') as HTMLElement).onclick = () => {
     grid.columnChooserModule.openColumnChooser(100, 40); // give X and Y axis
 };
-
-
-

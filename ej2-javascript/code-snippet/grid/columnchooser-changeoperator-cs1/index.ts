@@ -1,5 +1,3 @@
-
-
 import { Grid, Toolbar, ColumnChooser } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
@@ -20,6 +18,3 @@ let grid: Grid = new Grid({
     height: 235
 });
 grid.appendTo('#Grid');
-
-
-

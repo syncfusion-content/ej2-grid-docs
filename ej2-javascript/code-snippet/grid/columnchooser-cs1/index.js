@@ -13,7 +13,4 @@ var grid = new ej.grids.Grid({
     ],
     height: 235
 });
-
 grid.appendTo('#Grid');
-
-
