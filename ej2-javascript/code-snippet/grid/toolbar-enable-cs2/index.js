@@ -5,26 +5,15 @@ var grid = new ej.grids.Grid({
     allowGrouping: true,
     groupSettings: { columns: ['CustomerID'] },
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
-        { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C' },
-        { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', width: 140, format: 'yMd' }
+      { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+      { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+      { field: 'ShipCity', headerText: 'ShipCity', width: 100 },
+      { field: 'ShipName', headerText: 'ShipName', width: 120 }
     ],
     height: 220,
     toolbarClick: clickHandler
 });
 grid.appendTo('#Grid');
-
-var enable = new ej.buttons.Button({}, '#enable');
-var disable = new ej.buttons.Button({}, '#disable');
-
-enable.element.onclick = function(){
-    grid.toolbarModule.enableItems(['Grid_Collapse', 'Grid_Expand'], true);// enable toolbar items.
-};
-
-disable.element.onclick = function(){
-    grid.toolbarModule.enableItems(['Grid_Collapse', 'Grid_Expand'], false);// disable toolbar items.
-};
 
 function clickHandler(args) {
     if (args.item.id === 'Grid_Collapse') { // grid_Collapse is component id + '_' + toolbar item name.
@@ -35,3 +24,16 @@ function clickHandler(args) {
     }
 }
 
+var toggle = new ej.buttons.Switch({
+  change: onSwitchChange,
+});
+toggle.appendTo('#switch');
+
+function onSwitchChange(args)
+{
+  if (args.checked) {
+    grid.toolbarModule.enableItems(['Grid_Collapse', 'Grid_Expand'], false); // Disable toolbar items.
+} else {
+   grid.toolbarModule.enableItems(['Grid_Collapse', 'Grid_Expand'], true); //  // Enable toolbar items.
+}
+}
