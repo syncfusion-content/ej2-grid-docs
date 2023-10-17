@@ -1,11 +1,10 @@
-
-
+import { DropDownList } from '@syncfusion/ej2-dropdowns';
 import { Grid, Selection } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
 let grid: Grid = new Grid({
     dataSource: data,
-    selectionSettings: { type: 'Multiple' },
+    selectionSettings: { type: 'Single' },
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
         { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
@@ -16,5 +15,20 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 
+let dropdownData = [
+  { text: 'Single', value: 'Single' },
+  { text: 'Multiple', value: 'Multiple' }];
 
+  let dropDownColumn: DropDownList = new DropDownList({
+    value: 'Single',
+    popupHeight: '240px',
+    width: 100,
+    dataSource: dropdownData,
+    change: valueChange,
+  });
+  dropDownColumn.appendTo('#dropdown');
 
+function valueChange(args)
+{
+  grid.selectionSettings.type = args.value;
+}

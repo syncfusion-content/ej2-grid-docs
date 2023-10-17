@@ -1,10 +1,12 @@
+
+import { Switch } from '@syncfusion/ej2-buttons';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
 import { Grid, Selection } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
 let grid: Grid = new Grid({
     dataSource: data,
-    selectionSettings: { mode: 'Both' },
+    selectionSettings: { type: 'Multiple' },
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
         { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
@@ -14,6 +16,19 @@ let grid: Grid = new Grid({
     height: 315
 });
 grid.appendTo('#Grid');
+
+let enableToggleSelection = true;
+
+let toggle: Switch = new Switch({
+  change: toggleColumnSelection,
+  checked: enableToggleSelection,
+});
+toggle.appendTo('#switch');
+
+function toggleColumnSelection()
+{
+  grid.selectionSettings.enableToggle = toggle.checked;
+}
 
 let dropdownData = [
   { text: 'Row', value: 'Row' },
