@@ -5,10 +5,10 @@ var grid = new ej.grids.Grid({
     toolbarClick: clickHandler,
     editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true },
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100, isPrimaryKey: true },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C2' },
-        { field: 'ShipCountry', headerText: 'Ship Country', width: 150 }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+        { field: 'ShipCity', headerText: 'ShipCity', width: 100 },
+        { field: 'ShipName', headerText: 'ShipName', width: 120 }
     ],
     height: 273
 });
@@ -16,7 +16,6 @@ grid.appendTo('#Grid');
 
 function clickHandler(args){
     if (args.item.id === 'Click') {
-        alert("Cutom toolbar click...");
+        document.getElementById('message').innerText = `Custom Toolbar Clicked`;
     }
 };
-

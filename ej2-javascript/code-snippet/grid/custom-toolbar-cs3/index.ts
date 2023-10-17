@@ -1,5 +1,3 @@
-
-
 import { Grid, Toolbar, Group } from '@syncfusion/ej2-grids';
 import { EmitType } from '@syncfusion/ej2-base';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
@@ -30,6 +28,3 @@ let grid: Grid = new Grid({
     height: 200,
 });
 grid.appendTo('#Grid');
-
-
-
