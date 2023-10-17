@@ -1,7 +1,5 @@
-
-
 import { Grid, Edit, Toolbar, DialogEditEventArgs } from '@syncfusion/ej2-grids';
-import { data } from './datasource.ts';
+import { data } from './datasource';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
 import { DataUtil } from '@syncfusion/ej2-data';
 import { CheckBox } from '@syncfusion/ej2-buttons';
@@ -13,75 +11,119 @@ let countryData: {}[] = DataUtil.distinct(data, 'ShipCountry', true);
 let grid: Grid = new Grid({
     dataSource: data,
     toolbar: ['Add', 'Edit', 'Delete'],
-    editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Dialog', template: '#dialogtemplate' },
+    editSettings: {
+        allowEditing: true,
+        allowAdding: true,
+        allowDeleting: true,
+        mode: 'Dialog',
+        template: '#dialogtemplate',
+    },
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100, isPrimaryKey: true, validationRules: { required: true }},
-        { field: 'CustomerID', headerText: 'Customer ID', width: 120, validationRules: { required: true }},
-        { field: 'ShipCountry', headerText: 'Ship Country', width: 150 }
+        {
+            field: 'OrderID',
+            headerText: 'Order ID',
+            textAlign: 'Right',
+            width: 100,
+            isPrimaryKey: true,
+            validationRules: { required: true },
+        },
+        {
+            field: 'CustomerID',
+            headerText: 'Customer ID',
+            width: 120,
+            validationRules: { required: true },
+        },
+        { field: 'ShipCountry', headerText: 'Ship Country', width: 150 },
+        {
+            field: 'Verified',
+            headerText: 'Verified',
+            type: 'boolean',
+            displayAsCheckBox: true,
+            width: 150,
+        },
     ],
     height: 265,
     actionComplete: (args: DialogEditEventArgs) => {
-        if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
-            new DropDownList({value: args.rowData.ShipCountry, popupHeight: '300px', floatLabelType: 'Always',
-                dataSource: countryData, fields: {text: 'ShipCountry', value: 'ShipCountry'}, placeholder: 'Ship Country'}, args.form.elements.namedItem('ShipCountry') as HTMLInputElement);
-            new CheckBox({ label: 'Verified', checked: args.rowData.Verified }, args.form.elements.namedItem('Verified'));
+        if (args.requestType === 'beginEdit' || args.requestType === 'add') {
+            args.dialog.element
+                .querySelector('.e-footer-content')
+                .classList.add('e-hide');
+            new DropDownList(
+                {
+                    value: args.rowData.ShipCountry,
+                    popupHeight: '300px',
+                    floatLabelType: 'Always',
+                    dataSource: countryData,
+                    fields: { text: 'ShipCountry', value: 'ShipCountry' },
+                    placeholder: 'Ship Country',
+                },
+                args.form.elements.namedItem('ShipCountry') as HTMLInputElement
+            );
+            new CheckBox(
+                { label: 'Verified', checked: args.rowData.Verified },
+                args.form.elements.namedItem('Verified')
+            );
             // Set initail Focus
             if (args.requestType === 'beginEdit') {
-                (args.form.elements.namedItem('CustomerID')as HTMLInputElement).focus();
+                (
+                    args.form.elements.namedItem('CustomerID') as HTMLInputElement
+                ).focus();
             }
             initializeWizard();
         }
-    }
+    },
 });
 grid.appendTo('#Grid');
 
 function initializeWizard() {
     let currentTab = 0;
 
-    document.getElementById('nextBtn').onclick = function () {
+    (document.getElementById('nextBtn') as HTMLElement).onclick = function () {
         if (validate()) {
-            if (this.innerHTML !== 'SUBMIT'){
-                currentTab++;
-                nextpre(currentTab);
-            } else {
-                grid.endEdit();
-            }
+            currentTab++;
+            nextpre(currentTab);
         }
-    }
-    function validate(tab) {
+    };
+    function validate() {
         let valid: boolean = true;
-            [].slice.call(document.getElementById('tab' + currentTab).querySelectorAll('[name]')).forEach(element => {
-            element.form.ej2_instances[0].validate(element.name);
-            if (element.getAttribute('aria-invalid') === 'true'){
-                valid = false;
-            }
-        });
+        [].slice
+            .call(
+                (document.getElementById('tab' + currentTab) as HTMLElement).querySelectorAll('[name]')
+            )
+            .forEach((element) => {
+                element.form.ej2_instances[0].validate(element.name);
+                if (element.getAttribute('aria-invalid') === 'true') {
+                    valid = false;
+                }
+            });
         if (!valid) {
-        return false;
+            return false;
         }
         return true;
     }
-    document.getElementById('prevBtn').onclick = function () {
+    (document.getElementById('prevBtn')as HTMLElement).onclick = function () {
         if (validate()) {
             currentTab--;
             nextpre(currentTab);
         }
-    }
+    };
+    (document.getElementById('saveButton')as HTMLElement).onclick = function () {
+        grid.endEdit();
+    };
 }
-
 
 function nextpre(current) {
-    let tabs: HTMLElement[] = [].slice.call(document.getElementsByClassName('tab'))
-    tabs.forEach(element => element.style.display = 'none');
+    let tabs = [].slice.call(document.getElementsByClassName('tab'));
+    tabs.forEach((element) => (element.style.display = 'none'));
     tabs[current].style.display = '';
-    if(current) {
-        document.getElementById('prevBtn').style.display = '';
-        document.getElementById('nextBtn').innerHTML = 'SUBMIT';
+    if (current === 2) {
+        (document.getElementById('prevBtn')as HTMLElement).style.display = '';
+        (document.getElementById('nextBtn')as HTMLElement).style.display = 'none';
+    }
+    if (!current) {
+        (document.getElementById('prevBtn')as HTMLElement).style.display = 'none';
+        (document.getElementById('nextBtn')as HTMLElement).style.display = '';
     } else {
-        document.getElementById('prevBtn').style.display = 'none';
-        document.getElementById('nextBtn').innerHTML = 'NEXT';
+        (document.getElementById('prevBtn')as HTMLElement).style.display = '';
     }
 }
-
-
-
