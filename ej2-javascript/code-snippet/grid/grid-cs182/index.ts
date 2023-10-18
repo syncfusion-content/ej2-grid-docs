@@ -1,0 +1,20 @@
+import { Grid, Selection } from '@syncfusion/ej2-grids';
+import { data } from './datasource.ts';
+
+let grid: Grid = new Grid({
+    dataSource: data,
+    selectionSettings: { mode: 'Row', type: 'Single' },
+    columns: [
+        {
+            field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120,
+        },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 150, textAlign: 'Right' },
+        {
+            field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd', textAlign: 'Right'
+        },
+        { field: 'Freight', width: 120, format: 'C2', textAlign: 'Right' },
+        { field: 'ShipCountry', headerText: 'Ship Country', width: 150 },
+    ],
+    height: 315
+});
+grid.appendTo('#Grid');

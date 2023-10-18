@@ -11,9 +11,85 @@ domainurl: ##DomainURL##
 
 # Row selection in ##Platform_Name## Grid control
 
+Row selection in the Grid component allows you to interactively select specific rows or ranges of rows within the grid. This selection can be done effortlessly through mouse clicks or arrow keys (up, down, left, and right). This feature is useful when you want to highlight, manipulate, or perform actions on specific row within the Grid.
+
+> To enable row selection, you should set the [selectionSettings.mode](../../api/grid/selectionSettings/#mode) property to either **Row** or **Both**. This property determines the selection mode of the grid.
+
+## Single row selection 
+
+Single row selection allows you to select a single row at a time within the Grid. This feature is useful when you want to focus on specific rows or perform actions on the data within a particular row.
+
+To enable single row selection, set the [selectionSettings.mode](../../api/grid/selectionSettings/#mode) property to **Row** and the [selectionSettings.type](../../api/grid/selectionSettings/#type) property to **Single**. This configuration allows you to select a only one row at a time within the grid.
+
+Here's an example of how to enable single row selection using properties:
+
+ {% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs182/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs182/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs182" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs182/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs182/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs182" %}
+{% endif %}
+
+## Multiple row selection 
+
+Multiple row selection allows you to select multiple rows within the Grid. This feature is valuable when you need to perform actions on several rows simultaneously or focus on specific data areas.
+
+To enable multiple row selection, set the [selectionSettings.mode](../../api/grid/selectionSettings/#mode) property to **Row** and the [selectionSettings.type](../../api/grid/selectionSettings/#type) property to **Multiple**. This configuration allows you to select a multiple rows at a time within the grid.
+
+Here's an example of how to enable multiple rows selection using properties:
+
+ {% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs183/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs183/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs183" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs183/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs183/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs183" %}
+{% endif %}
+
 ## Select row at initial rendering
 
-To select a row at initial rendering, set the [`selectedRowIndex`](../../api/grid/#selectedrowindex) value.
+You have the ability to select a specific row during the initial rendering of the Grid component. This feature is particularly useful when you want to highlight or pre-select a specific row in the grid. To achieve this, you can utilize the [selectedRowIndex](../../api/grid/#selectedrowindex) property provided by the Grid component.
+
+In the following example, it demonstrates how to select a row at initial rendering:
 
  {% if page.publishingplatform == "typescript" %}
 
