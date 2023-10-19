@@ -118,6 +118,43 @@ In the following example, it demonstrates how to select a row at initial renderi
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs162" %}
 {% endif %}
 
+## Select rows in any page based on index value 
+
+The Grid allows you to select rows in any page based on their index value. This feature is useful when you want to perform specific actions on rows, such as highlighting, applying styles, or executing operations, regardless of their location across multiple pages within the grid.
+
+To achieve this, you can utilize the [selectRow](../../api/grid/#selectrow) method and the [goToPage](../../api/grid/#gotopage) method of the Grid control. By handling the [change](../../api/drop-down-list#change) event of `DropDownList` component, you can implement the logic to navigate to the desired page and select the row based on the index value. 
+
+Additionally, by handling the [actionComplete](../../api/grid/#actioncomplete) event of the Grid, you can maintain the selection of the desired row after completing the paging action.
+
+The following example demonstrates how to select rows in any page based on index value using `actionComplete` and `change` event:
+
+ {% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs184/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs184/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs184" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs184/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs184/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs184" %}
+{% endif %}
+
 ## Get selected row indexes
 
 You can get the selected row indexes by using the [`getSelectedRowIndexes`](../../api/grid/#getselectedrowindexes) method.
