@@ -1,5 +1,3 @@
-
-
 import { Grid, Toolbar, Group } from '@syncfusion/ej2-grids';
 import { EmitType } from '@syncfusion/ej2-base';
 import { data } from './datasource.ts';
@@ -12,6 +10,9 @@ let clickHandler: EmitType<ClickEventArgs> = (args: ClickEventArgs) => {
     if (target.id === 'collapse') {
         grid.groupModule.collapseAll();
     }
+    if (target.id === 'expand') {
+        grid.groupModule.expandAll();
+    }
 };
 
 let grid: Grid = new Grid({
@@ -21,14 +22,11 @@ let grid: Grid = new Grid({
     allowGrouping: true,
     groupSettings: { columns: ['CustomerID'] },
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
-        { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C2' },
-        { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', width: 140, format: 'yMd' }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+        { field: 'ShipCity', headerText: 'ShipCity', width: 100 },
+        { field: 'ShipName', headerText: 'ShipName', width: 120 }
     ],
     height: 200
 });
 grid.appendTo('#Grid');
-
-
-

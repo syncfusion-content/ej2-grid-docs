@@ -3,8 +3,11 @@ var clickHandler = function(args){
     if (target.id === 'collapse') {
         grid.groupModule.collapseAll();
     }
+    if (target.id === 'expand') {
+        grid.groupModule.expandAll();
+    }
 };
-ej.grids.Grid.Inject(ej.grids.Toolbar, ej.grids.Group, ej.grids.Sort);
+ej.grids.Grid.Inject(ej.grids.Toolbar, ej.grids.Group);
 var grid = new ej.grids.Grid({
     dataSource: data,
     toolbarTemplate: '#toolbar-template',
@@ -12,12 +15,11 @@ var grid = new ej.grids.Grid({
     allowGrouping: true,
     groupSettings: { columns: ['CustomerID'] },
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
-        { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C2' },
-        { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', width: 140, format: 'yMd' }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+        { field: 'ShipCity', headerText: 'ShipCity', width: 100 },
+        { field: 'ShipName', headerText: 'ShipName', width: 120 }
     ],
     height: 200
 });
 grid.appendTo('#Grid');
-
