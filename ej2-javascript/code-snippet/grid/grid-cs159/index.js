@@ -1,7 +1,7 @@
 var grid = new ej.grids.Grid({
     dataSource: data,
     columns: [
-        { type: 'checkbox' },
+        { type: 'checkbox', width:50 },
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
         { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
         { field: 'ShipCity', headerText: 'Ship City', width: 150 },
@@ -10,4 +10,3 @@ var grid = new ej.grids.Grid({
     height: 315
 });
 grid.appendTo('#Grid');
-

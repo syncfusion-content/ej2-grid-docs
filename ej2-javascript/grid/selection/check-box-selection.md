@@ -9,11 +9,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Check box selection in ##Platform_Name## Grid control
+# Check box selection in ##Platform_Name## Grid component
 
-Checkbox selection provides an option to select multiple grid records with help of checkbox in each row.
+Checkbox selection in the Grid component allows you to provide an option to select multiple records by using a checkbox in each row. This feature is particularly useful when you need to perform bulk actions or operations on selected records within the Grid.
 
-To render the checkbox in each grid row, you need to use checkbox column with type as `checkbox` using the  column [`type`](../../api/grid/column/#type) property.
+To render checkbox in each grid row, you need to use checkbox column with type as **checkbox** using column [type](../../api/grid/column/#type) property.
+
+Here's an example of how to enable check box selection using `type` property in the Grid component:
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -42,17 +44,17 @@ To render the checkbox in each grid row, you need to use checkbox column with ty
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs159" %}
 {% endif %}
 
-> * By default, selection is allowed by clicking a grid row or checkbox in that row. To allow selection only through checkbox, you can set the
-[`selectionSettings.checkboxOnly`](../../api/grid/selectionSettings/#checkboxonly) property to true.
-> * Selection can be persisted in all the operations using the [`selectionSettings.persistSelection`](../../api/grid/selectionSettings/#persistselection) property. For persisting selection on the grid, any one of the columns should be defined as a primary key using the [`columns.isPrimaryKey`](../../api/grid/column/#isprimarykey) property.
+> * By default selection is allowed by clicking a grid row or checkbox in that row. To allow selection only through checkbox, you can set [selectionSettings.checkboxOnly](../../api/grid/selectionSettings/#checkboxonly) property to **true**.
+> * Selection can be persisted on all the operations using [selectionSettings.persistSelection](../../api/grid/selectionSettings/#persistselection) property. For persisting selection on the Grid, any one of the column should be defined as a primary key using [columns.isPrimaryKey](../../api/grid/column/#isprimarykey) property.
 
 ## Checkbox selection mode
 
-In checkbox selection, selection can also be done by clicking on rows. This selection provides two types of Checkbox Selection mode which can be set by using the following API, [`selectionSettings.checkboxMode`](../../api/grid/selectionSettings/#checkboxmode). The modes are;
+The checkbox selection mode in the Grid allows you to select rows either by clicking on checkboxes or by clicking on the rows themselves. This feature provides two types of checkbox selection modes that can be set using the [selectionSettings.checkboxMode](../../api/grid/selectionSettings/#checkboxmode) property. The available modes are:
 
-* **`Default`**: This is the default value of the checkboxMode. In this mode, user can select multiple rows by clicking rows one by one.
-* **`ResetOnRowClick`**: In ResetOnRowClick mode, when user clicks on a row it will reset previously selected row. Also you can perform multiple-selection in this mode by press
-and hold CTRL key and click the desired rows. To select range of rows, press and hold the SHIFT key and click the rows.
+* **Default**: This is the default value of the `checkboxMode`. In this mode, you can select multiple rows by clicking rows one by one. When you click on a row, the checkbox associated with that row also switches to the 'checked' state.
+* **ResetOnRowClick**: In `ResetOnRowClick` mode, when clicking on row it will reset previously selected row. Also you can perform multiple-selection in this mode by press and hold CTRL key and click the desired rows. To select range of rows, press and hold the SHIFT key and click the rows.
+
+In the following example, it demonstrates how to dynamically enable and change the `checkboxMode` using the `DropDownList` component:
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -79,6 +81,41 @@ and hold CTRL key and click the desired rows. To select range of rows, press and
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs160" %}
+{% endif %}
+
+## Hide selectall checkbox in column header 
+
+You can hide the select all checkbox in the column header of the Syncfusion Grid. This is a useful feature in various scenarios where you want to customize the appearance and behavior of the checkboxes within the grid.
+
+By default, when you set the column type as [checkbox](../../api/grid/column/#type), it renders a column with checkboxes for selection purposes. However, if you want to hide the header checkbox, you can achieve this by defining an empty [HeaderTemplate](../../api/grid/column/#headertemplate) directive in the grid Column.
+
+Here's an example of how to hide selectall checkbox in column header using empty `HeaderTemplate` directive in the Grid component:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/hide-checkbox-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/hide-checkbox-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/hide-checkbox-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/hide-checkbox-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/hide-checkbox-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/hide-checkbox-cs1" %}
 {% endif %}
 
 ## Prevent specific rows from being selected in checkbox selection
