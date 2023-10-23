@@ -159,7 +159,7 @@ The following example demonstrates how to select rows in any page based on index
 
 The Grid component allows you to perform multiple row selection by simply clicking on rows one by one without pressing CTRL or SHIFT keys. This means that when you click on a row, it will be selected, and clicking on another row will add it to the selection without deselecting the previously selected rows. To deselect a previously selected row, you can click on the row again, and it will be unselected.
 
-To enable the simple multiple row selection, you need to set the [selectionSettings.enableSimpleMultiRowSelection](https://ej2.syncfusion.com/angular/documentation/api/grid/selectionSettings/#enablesimplemultirowselection) property to **true**. 
+To enable the simple multiple row selection, you need to set the [selectionSettings.enableSimpleMultiRowSelection](../../api/grid/selectionSettings/#enablesimplemultirowselection) property to **true**. 
 
 The following example demonstrates how to enable multiple row selection with a single click on the Grid row using `enableSimpleMultiRowSelection` property:
 
@@ -167,27 +167,66 @@ The following example demonstrates how to enable multiple row selection with a s
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/grid-cs184/index.ts %}
+{% include code-snippet/grid/grid-cs185/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs184/js/index.html %}
+{% include code-snippet/grid/grid-cs185/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/grid/grid-cs184" %}
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs185" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/grid-cs184/index.js %}
+{% include code-snippet/grid/grid-cs185/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs184/index.html %}
+{% include code-snippet/grid/grid-cs185/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/grid/grid-cs184" %}
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs185" %}
+{% endif %}
+
+## Select rows externally 
+
+You can perform single row selection, multiple row selection, and range of row selection externally in a Grid using built-in methods. This feature allows you to interact with specific rows within the Grid. The following topic demonstrates how you can achieve these selections using methods.
+
+### Single row selection
+
+Single row selection allows you to select a single row at a time within the Grid. This feature is useful when you want to focus on specific rows or perform actions on the data within a particular row.
+
+To achieve single row selection, you can use the [selectRow](../../api/grid/selection/#selectcolumns) method. This method allows you to programmatically select a specific row within the Grid by specifying its index.
+
+The following example demonstrates how to select a single row within the Grid by obtaining the selected row index through a textbox component and passing these row index as argument to the `selectRow` method. When the button event is triggered by clicking the **Select Row** button, a single row is selected within the Grid:
+
+ {% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs186/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs186/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs186" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs186/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs186/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs186" %}
 {% endif %}
 
 ## Get selected row indexes
