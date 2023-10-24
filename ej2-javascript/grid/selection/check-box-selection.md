@@ -120,7 +120,9 @@ Here's an example of how to hide selectall checkbox in column header using empty
 
 ## Prevent specific rows from being selected in checkbox selection
 
-You can prevent specific rows from being selected in the checkbox selection mode by hiding the checkboxes using the [rowDataBound](../../api/grid/#rowdatabound) event. You achieve this by setting the [isSelectable](../../api/grid/rowDataBoundEventArgs/#isselectable) argument as false in the `rowDataBound` event based on certain conditions as per the needs of the application.
+The checkbox selection mode allows you to select rows either by clicking on checkboxes or by clicking on the rows themselves. However, there might be scenarios where you want to prevent specific rows from being selected based on certain conditions or business requirements.
+
+To achieve this, you can use the [rowDataBound](../../api/grid/#rowdatabound) event of the Grid. The `rowDataBound` event is triggered for each row after it is bound to the data source. In this event, you can check the row data and determine whether the row should be selectable or not. If you want to prevent the row from being selected, you can set the [isSelectable](../../api/grid/rowDataBoundEventArgs/#isselectable) argument of the event to **false**.
 
 In the following sample, the selection of specific rows has been prevented based on the `isSelectable` argument in the `rowDataBound` event.
 
@@ -149,4 +151,74 @@ In the following sample, the selection of specific rows has been prevented based
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs161" %}
+{% endif %}
+
+## How to select single row in checkbox selection mode
+
+The ##Platform_Name## Grid allows you to select only one row at a time within the Grid. This feature is particularly useful when you want to ensure that only a single row is selected, and any previous selections are cleared when a new row is selected.
+
+To achieve single-row selection in checkbox selection mode within the Grid, you can handle the [rowSelecting](../../api/grid/#rowselecting) event and use the [clearSelection](../../api/grid/#clearselection) method to clear any previous selections before selecting a new row. This ensures that only one row is selected at a time, and any prior selections are deselected when a new row is chosen.
+
+> When you set the [checkboxMode](../../api/grid/selectionSettings/#checkboxmode) property to **ResetOnRowClick**, it will reset the previously selected row when you click on a new row. Please note that this behavior applies to rows and not checkboxes, and it is the default behavior of the grid.
+
+Here's an example of how to select a single row in checkbox selection mode using the `clearSelection` method along with the `rowSelecting` event:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/checkbox-single-row-selection-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/checkbox-single-row-selection-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/checkbox-single-row-selection-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/checkbox-single-row-selection-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/checkbox-single-row-selection-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/checkbox-single-row-selection-cs1" %}
+{% endif %}
+
+## Allow selection only through checkbox click
+
+By default, the Grid component allows selection by clicking either a grid row or the checkbox within that row. If you want to restrict selection so that it can only be done by clicking the checkboxes, you can set the [selectionSettings.checkboxOnly](../../api/grid/selectionSettings/#checkboxonly) property to **true**.
+
+Here's an example of how to enable selection only through checkbox click using `checkboxOnly` property:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/checkbox-single-selectionmode-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/checkbox-single-selectionmode-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/checkbox-single-selectionmode-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/checkbox-single-selectionmode-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/checkbox-single-selectionmode-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/checkbox-single-selectionmode-cs1" %}
 {% endif %}

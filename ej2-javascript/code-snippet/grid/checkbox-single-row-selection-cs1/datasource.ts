@@ -1,4 +1,4 @@
-var data = [
+export let data: Object[] = [
     {
         OrderID: 10248, CustomerID: 'VINET', Role: 'Admin', EmployeeID: 5, OrderDate: new Date(8364186e5),
         ShipName: 'Vins et alcools Chevalier', ShipCity: 'Reims', ShipAddress: '59 rue de l Abbaye',
@@ -74,3 +74,4 @@ var data = [
         ShipName: 'Rattlesnake Canyon Grocery', ShipCity: 'Albuquerque', ShipAddress: '2817 Milton Dr.',
         ShipRegion: 'NM', Mask: '6789', ShipPostalCode: '87110', ShipCountry: 'USA', Freight: 48.29, Verified: !0
     }];
+

@@ -1,5 +1,3 @@
-
-
 import { Grid, Edit, Page, Filter, Toolbar } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
@@ -7,10 +5,12 @@ Grid.Inject(Edit, Page, Filter, Toolbar);
 
 let grid: Grid = new Grid({
     dataSource: data,
-    selectionSettings: { persistSelection: true },
-    allowFiltering: true,
+    allowSelection:true,
+    selectionSettings: { type: 'Multiple', persistSelection: true },
+    allowFiltering:true,
     filterSettings: { type: 'CheckBox' },
-    pageSettings: { pageSize: 20 },
+    allowPaging:true,
+    pageSettings: { pageSize: 5 },
     editSettings: {
         allowEditing: true,
         allowAdding: true,
@@ -36,6 +36,3 @@ for (let i = 0; i < data.length; i++) {
 function rowDataBound(args): void {
     args.isSelectable = args.data.List % 5 === 0;
 }
-
-
-
