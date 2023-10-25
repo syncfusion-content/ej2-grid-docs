@@ -11,12 +11,17 @@ domainurl: ##DomainURL##
 
 # Cell selection in ##Platform_Name## Grid control
 
-Cell selection can be done through simple mouse down or arrow keys (up, down, left, and right).
+Cell selection in the Grid component allows you to interactively select specific cells or ranges of cells within the grid. This selection can be done effortlessly through mouse clicks or arrow keys (up, down, left, and right). This feature is useful when you want to highlight, manipulate, or perform actions on specific cell within the Grid.
 
-The grid supports two types of cell selection mode that can be set by using the [`selectionSettings.cellSelectionMode`](../../api/grid/selectionSettings/#cellselectionmode). They are:
+> To enable cell selection, you should set the [selectionSettings.mode](../../api/grid/selectionSettings/#mode) property to either **Cell** or **Both**. This property determines the selection mode of the grid.
 
-* **`Flow`**: The `Flow` value is set by default. The range of cells are selected between the start index and end index that includes in between cells of rows.
-* **`Box`**: Range of cells are selected from the start and end column indexes that includes in between cells of rows within the range.
+## Single cell selection 
+
+Single cell selection allows you to select a single cell within a Grid. This feature is useful when you want to focus on a specific cell or perform actions on individual cells within the grid.
+
+To enable single cell selection, set the [selectionSettings.mode](../../api/grid/selectionSettings/#mode) property to **Cell** and the [selectionSettings.type](../../api/grid/selectionSettings/#type) property to **Single**. This configuration allows you to select a single cell at a time within the grid.
+
+In the following example demonstrates how to enable single cell selection using property:
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -44,8 +49,6 @@ The grid supports two types of cell selection mode that can be set by using the 
 
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs157" %}
 {% endif %}
-
-> Cell selection requires the [`selectionSettings.mode`](../../api/grid/selectionSettings/#mode) to be `Cell` or  `Both`, and [`type`](../../api/grid/selectionSettings/#type) should be `Multiple`.
 
 ## Toggle selection
 
