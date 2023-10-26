@@ -154,3 +154,40 @@ The following example, demonstrates how to select a single column within the Gri
 
 {% previewsample "page.domainurl/code-snippet/grid/column-external-cs1" %}
 {% endif %}
+
+### Multiple column selection
+
+The ##Platform_Name## Grid allows you to select multiple columns within the Grid. This feature is particularly useful when you need to focus on or perform actions on several columns simultaneously.
+
+To achieve multiple column selection, you can use the [selectColumns](../../api/grid/selection/#selectcolumns) method. This method selects the columns by passing an array of column indexes as a parameter.
+
+> Column selection requires the [selectionSettings.allowColumnSelection](../../api/grid/selectionSettings/#allowcolumnselection) property to **true** and [type](../../api/grid/selectionSettings/#type) should be **Multiple**.
+
+The following example demonstrates how to select multiple columns in the Grid by calling the `selectColumns` method within the button click event and passing an array of column indexes as arguments.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/column-external-cs2/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-external-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column-external-cs2" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/column-external-cs2/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-external-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/column-external-cs2" %}
+{% endif %}
