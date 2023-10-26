@@ -68,7 +68,7 @@ The quickstart application is preconfigured to use the `Material` theme in the `
 {% tabs %}
 {% highlight css tabtitle="style.css" %}
 
-@import "../../node_modules/@syncfusion/ej2/material.css";
+@import '../../node_modules/@syncfusion/ej2/material.css';
 
 {% endhighlight %}
 {% endtabs %}
