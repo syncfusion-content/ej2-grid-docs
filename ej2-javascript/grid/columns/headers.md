@@ -162,7 +162,7 @@ Here is an example of using the `headerTextAlign` property to align the text of 
 
 The autowrap allows the cell content of the grid to wrap to the next line when it exceeds the boundary of the specified cell width. The cell content wrapping works based on the position of white space between words. To support the Autowrap functionality in Syncfusion Grid, you should set the appropriate [width](../../api/grid/column/#width) for the columns. The column width defines the maximum width of a column and helps to wrap the content automatically.
 
-To enable autowrap, set the [allowTextWrap](../../api/grid#allowtextwrap) property to **true**. You can also configure the auto wrap mode by setting the [textWrapSettings.wrapMode](../../api/grid/textWrapSettings/#wrapmode)property.
+To enable autowrap, set the `allowTextWrap` property to **true**. You can also configure the auto wrap mode by setting the [textWrapSettings.wrapMode](../../api/grid/textWrapSettings/#wrapmode)property.
 
 Grid provides the below three options for configuring:
 
@@ -414,7 +414,7 @@ Once you have created the CSS class, you can add it to the particular column by 
 For example, to add the orientationcss class to the Freight column, you can use the following code:
 
 ```typescript
- { field: 'Freight', headerText: 'Freight', textAlign: 'Center', format='C2', customAttributes: {class: 'orientationcss'}, width: 80}
+ { field: 'Freight', headerText: 'Freight', textAlign: 'Center', format: 'C2', customAttributes: {class: 'orientationcss'}, width: 80}
 ```
 
 **Step 3**: **Resize the header cell height**
