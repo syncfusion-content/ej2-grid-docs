@@ -19,24 +19,45 @@
     <link href="https://cdn.syncfusion.com/ej2/23.1.36/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
+    <style>
+        .image img {
+            border-radius: 50px;
+            box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0, 0, 0, 0.2);
+            height: 35px;
+            width: 55px;
+        }
+        .e-toolbar .e-toolbar-item>* {
+            text-overflow: ellipsis;
+            height: 35px;
+        }
+    </style>
 </head>
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
         <div id='Grid'></div>
         <div id="toolbar-template">
-            <div>
-              <div id="excelButton" >
-                <button class="e-btn e-flat">Excel Export</button>
+          <div>
+              <div class="image">
+                  <img src="add.jpg" />
               </div>
-              <div id="pdfButton" >
-                <button class="e-btn e-flat">Pdf Export</button>
+              <div id="addRecords" title="AddRecord">
+                  <button class="e-btn e-flat">
+                      Add
+                  </button>
               </div>
-              <div id="printButton" >
-                <button class="e-btn e-flat">Print</button>
+              <div>
+                  <div class="image">
+                      <img src="delete.jpg" />
+                  </div>
               </div>
-            </div>
+              <div id="deleteRecords" title="DeleteRecord">
+                  <button class="e-btn e-flat">
+                      Delete
+                  </button>
+              </div>
           </div>
+      </div>
     </div>
 </body>
 </html>
