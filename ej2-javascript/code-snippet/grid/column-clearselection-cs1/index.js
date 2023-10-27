@@ -19,4 +19,4 @@ button.appendTo('#buttons');
 
 document.getElementById('buttons').onclick = function (args) {
     grid.selectionModule.clearColumnSelection()
-  };
+};
