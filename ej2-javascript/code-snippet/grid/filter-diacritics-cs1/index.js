@@ -8,8 +8,6 @@ var grid = new ej.grids.Grid({
         { field: 'Name', headerText: 'Name', width: 170 },
         { field: 'ShipName', headerText: 'Ship Name', width: 170 },
         { field: 'CustomerID', headerText: 'Supplier Name', width: 140 }
-    ],
-    allowPaging: true,
+    ]
 });
 grid.appendTo('#Grid');
-

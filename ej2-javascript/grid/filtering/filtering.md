@@ -9,11 +9,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering in ##Platform_Name## Grid control
+# Filtering in ##Platform_Name## Grid component
 
-Filtering allows you to view particular records based on filter criteria. To enable filtering in the Grid, set the [`allowFiltering`](../../api/grid/#allowfiltering) to true. Filtering options can be configured through [`filterSettings`](../../api/grid/filterSettings).
+Filtering is a powerful feature in the Syncfusion Grid component that enables you to selectively view data based on specific criteria. It allows you to narrow down large datasets and focus on the information you need, thereby enhancing data analysis and decision-making.
 
-To use filter, inject the [`Filter`](../../api/grid/filter) module in the grid.
+To use filter, inject the [Filter](../../api/grid/filter) module in the grid.
+
+To enable filtering in the Grid, you need to set the [allowFiltering](../../api/grid/#allowfiltering) property of the Grid component to true. Once filtering is enabled, you can configure various filtering options through the [filterSettings](../../api/grid/filterSettings) property of the Grid component. This property allows you to define the behavior and appearance of the filter.
+
+Here is an example that demonstrates the default filtering feature of the grid:
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -42,12 +46,14 @@ To use filter, inject the [`Filter`](../../api/grid/filter) module in the grid.
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs70" %}
 {% endif %}
 
-> * You can apply and clear filtering by using [`filterByColumn`](../../api/grid/filter/#filterbycolumn) and [`clearFiltering`](../../api/grid/filter/#clearfiltering) methods.
-> * To disable filtering for a particular column, set [`columns.allowFiltering`](../../api/grid/column/#allowfiltering) to false.
+> * You can apply and clear filtering, by using [filterByColumn](../../api/grid/filter/#filterbycolumn) and [clearFiltering](../../api/grid/filter/#clearfiltering) methods.
+> * To disable Filtering for a particular column, by specifying [columns.allowFiltering](../../api/grid/column/#allowfiltering) to false.
 
 ## Initial filter
 
-To apply the filter at initial rendering, set the filter [`predicate`](../../api/grid/predicate) object in [`filterSettings.columns`](../../api/grid/filterSettingsModel#columns).
+To apply an initial filter, you need to specify the filter criteria using the [predicate](../../api/grid/predicate) object in [filterSettings.columns](../../api/grid/filterSettingsModel/#columns). The `predicate` object represents the filtering condition and contains properties such as field, operator, and value.
+
+Here is an example of how to configure the initial filter using the `predicate` object:
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -78,29 +84,29 @@ To apply the filter at initial rendering, set the filter [`predicate`](../../api
 
 ## Filter operators
 
-The filter operator for a column can be defined in the [`filterSettings.columns.operator`](../../api/grid/predicateModel/#operator) property.
+The Syncfusion Grid component provides various filter operators that can be used to define filter conditions for columns. The filter operator for a column can be defined using the [operator](../../api/grid/predicateModel/#operator) property in the [filterSettings.columns](../../api/grid/filterSettings/#columns) object.
 
-The available operators and its supported data types are:
+The available operators and its supported data types are,
 
 Operator |Description |Supported Types
 -----|-----|-----
-startswith |Checks whether the value begins with the specified value. |String
-endswith |Checks whether the value ends with the specified value. |String
-contains |Checks whether the value contains the specified value. |String
+startsWith |Checks whether a value begins with the specified value. |String
+endsWith |Checks whether a value ends with specified value. |String
+contains |Checks whether a value contains with specified value. |String
 doesnotstartwith |Checks whether the value does not begin with the specified value. |String
 doesnotendwith |Checks whether the value does not end with the specified value. |String
 doesnotcontain |Checks whether the value does not contain the specified value. |String
-equal |Checks whether the value is equal to the specified value. |String &#124; Number &#124; Boolean &#124; Date
-notequal |Checks for values not equal to the specified value. |String &#124; Number &#124; Boolean &#124; Date
-greaterthan |Checks whether the value is greater than the specified value. |Number &#124; Date
-greaterthanorequal|Checks whether a value is greater than or equal to the specified value. |Number &#124; Date
-lessthan |Checks whether the value is less than the specified value. |Number &#124; Date
-lessthanorequal |Checks whether the value is less than or equal to the specified value. |Number &#124; Date
+equal |Checks whether a value equal to specified value. |String &#124; Number &#124; Boolean &#124; Date
+notEqual |Checks whether a value not equal to specified value. |String &#124; Number &#124; Boolean &#124; Date
+greaterThan |Checks whether a value is greater than with specified value. |Number &#124; Date
+greaterThanOrEqual|Checks whether a value is greater than or equal to specified value. |Number &#124; Date
+lessThan |Checks whether a value is less than with specified value. |Number &#124; Date
+lessThanOrEqual |Checks whether a value is less than or equal to specified value. |Number &#124; Date
 isnull |Returns the values that are null. |String &#124; Number &#124; Date
 isnotnull |Returns the values that are not null. |String &#124; Number &#124; Date
 isempty |Returns the values that are empty. |String
 isnotempty |Returns the values that are not empty. |String
-between|Filter the values based on the range between the start and end specified values. |Number &#124; Date
+between|Filter the values based on the range between the start and end specified values. |Number &#124; Date
 
 ## Wildcard and LIKE operator filter
 
@@ -129,7 +135,7 @@ a* |Everything that starts with "a".
 The **LIKE** filter can process single search patterns using the "%" symbol, retrieving values matching the specified patterns. The following Grid features support LIKE filtering on string-type columns:
 
 * Filter Menu
-* Filter Bar with the [`filterSettings.showFilterBarOperator`](../../api/grid/filter/#showFilterBarOperator-boolean) property enabled on the Grid [`filterSettings`](../../api/grid/filterSettings).
+* Filter Bar with the [filterSettings.showFilterBarOperator](../../api/grid/filter/#showFilterBarOperator) property enabled on the Grid [filterSettings](../../api/grid/filterSettings).
 * Custom Filter of Excel filter type.
 
 **For example:**
@@ -142,14 +148,13 @@ ab% |Returns all the value that are ends with "ab" character.
 
 ![LIKEFilter](../images/like_filter.gif)
 
-> By default, the [`filterSettings.columns.operator`](../../api/grid/predicateModel/#operator) value is `equal`.
+>By default, the Syncfusion ##Platform_Name## Grid uses different filter operators for different column types. The default filter operator for string type columns is **startsWith**, for numerical type columns is **equal**, and for boolean type columns is also **equal**.
 
 ## Diacritics filter
 
-By default, grid ignores diacritic characters while filtering. To include diacritic characters, set the
-[`filterSettings.ignoreAccent`](../../api/grid/filter/#ignoreAccent-boolean) as `true`.
+The diacritics filter feature in the Syncfusion ##Platform_Name## Grid is useful when working with text data that includes accented characters (diacritic characters). By default, the grid ignores these characters during filtering. However, if you need to consider diacritic characters in your filtering process, you can enable this feature by setting the [filterSettings.ignoreAccent](../../api/grid/filter/#filterbycolumn) property to true using the [filterSettings](../../api/grid/filterSettings/).
 
-In the following sample, type **aero** in `Name` column to filter diacritic characters.
+Consider the following sample where the `ignoreAccent` property is set to true in order to include diacritic characters in the filtering process:
 
 {% if page.publishingplatform == "typescript" %}
 

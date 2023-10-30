@@ -1,5 +1,3 @@
-
-
 import { Grid, Filter } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
@@ -21,6 +19,3 @@ let grid: Grid = new Grid({
     height: 273
 });
 grid.appendTo('#Grid');
-
-
-

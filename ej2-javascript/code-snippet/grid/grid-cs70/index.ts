@@ -1,22 +1,19 @@
-
-
-import { Grid, Filter } from '@syncfusion/ej2-grids';
+import { Grid, Filter, Sort, Page } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
-Grid.Inject(Filter);
+Grid.Inject(Filter, Sort, Page);
 
 let grid: Grid = new Grid({
     dataSource: data,
     allowFiltering: true,
+    allowPaging: true,
+    pageSettings: { pageSize: 6 },
+    allowSorting: true,
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100 },
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
         { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
-        { field: 'ShipCity', headerText: 'Ship City', width: 100 },
-        { field: 'ShipName', headerText: 'Ship Name', width: 100 }
+        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', format: 'C2', width: 90 },
+        { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', format: 'yMd', width: 120 }
     ],
-    height: 273
 });
 grid.appendTo('#Grid');
-
-
-
