@@ -229,6 +229,41 @@ The following example demonstrates how to select a single row within the Grid by
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs186" %}
 {% endif %}
 
+### Multiple rows selection
+
+The ##Platform_Name## Grid allows you to select multiple rows within the grid simultaneously. This feature is valuable when you need to perform actions or operations on several rows at once or focus on specific areas of your data.
+
+To achieve multiple row selection, you can use the [selectRows](../../api/grid/selection/#selectrows) method. This method allows you to select a collection of rows by specifying their indexes, giving you the ability to interact with multiple rows together.
+
+The following example, demonstrates how to select multiple rows in the Grid by calling the `selectRows` method within the button click event and passing an array of row indexes as arguments.
+
+ {% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs187/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs187/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs187" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs187/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs187/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs187" %}
+{% endif %}
+
 ### Range of rows selection 
 
 Range of row selection in the Grid enables you to select a continuous range of rows within the grid. This feature is particularly useful when you want to perform actions on multiple rows simultaneously or focus on a specific range of data.
@@ -297,6 +332,43 @@ The following example demonstrates how to get selected row indexes using  `getSe
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs189" %}
+{% endif %}
+
+## How to get selected records on various pages 
+
+The Grid component allows you to retrieve the selected records even when navigating to different pages. This feature is useful when working with large data sets and allows you to perform actions on the selected records across multiple pages. 
+
+To persist the selection across pages, you need to enable the [persistselection](../../api/grid/selectionSettings/#persistselection) property. By default, this property is set to **false**. To enable it, set the value to **true** in the `selectionSettings` property of the Grid component.
+
+To retrieve the selected records from different pages, you can use the  [getSelectedRecords](../../documentation/api-grid.html#getSelectedRecords) method. This method returns an array of the selected records.
+
+The following example demonstrates how to retrieve selected records from various pages using the `getSelectedRecords` method and display **OrderID** in a dialog when a button is clicked:
+
+ {% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs163/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs163/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs163" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/ggrid-cs163/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs163/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs163" %}
 {% endif %}
 
 ## How to get selected records  
@@ -409,4 +481,3 @@ In the following example, row selection is canceled when the value of **Customer
 
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs192" %}
 {% endif %}
-
