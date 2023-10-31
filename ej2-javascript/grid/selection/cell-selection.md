@@ -200,6 +200,8 @@ In the following example, it demonstrates how to select multiple cells in the Gr
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs196" %}
 {% endif %}
 
+> Cell Selection requires the `selectionSettings.mode` to be **Cell** or  **Both** and [type](../../api/grid/selectionSettings/#type) should be **Multiple**.
+
 ### Range of cell selection 
 
 Range of cell selection in the Grid allows you to select multiple cells in a continuous range. This capability is particularly useful when you need to perform actions on multiple cells simultaneously or focus on specific areas of your data.
