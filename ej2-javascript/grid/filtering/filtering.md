@@ -183,6 +183,39 @@ Consider the following sample where the `ignoreAccent` property is set to true i
 {% previewsample "page.domainurl/code-snippet/grid/filter-diacritics-cs1" %}
 {% endif %}
 
+## Filtering with case sensitivity
+
+The Syncfusion ##Platform_Name## Grid provides the flexibility to enable or disable case sensitivity during filtering. This feature is useful when you want to control whether filtering operations should consider the case of characters. It can be achieved by using the  [enableCaseSensitivity](../../api/grid/filterSettings/#enablecasesensitivity) property within the [filterSettings](../../api/grid/filterSettings) of the grid.
+
+Below is an example code demonstrating how to enable or disable case sensitivity while filtering:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/filtering-caseSensitivity-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/filtering-caseSensitivity-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/filtering-caseSensitivity-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/filtering-caseSensitivity-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/filtering-caseSensitivity-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/filtering-caseSensitivity-cs1" %}
+{% endif %}
+
 ## See Also
 
 * [Customizing Filter Dialog by using an additional parameter](../how-to/add-params-for-filtering)
