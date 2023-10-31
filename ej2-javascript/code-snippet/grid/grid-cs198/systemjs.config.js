@@ -10,7 +10,7 @@ System.config({
         }
     },
     paths: {
-        "syncfusion:": "https://cdn.syncfusion.com/ej2/21.1.36/"
+        "syncfusion:": "https://cdn.syncfusion.com/ej2/23.1.36/"
     },
     map: {
         main: "index.ts",
