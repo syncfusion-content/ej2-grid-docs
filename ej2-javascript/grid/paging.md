@@ -9,13 +9,27 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Paging in ##Platform_Name## Grid control
+# Paging in ##Platform_Name## Grid component
 
-Paging provides an option to display Grid data in page segments. To enable paging, set the [`allowPaging`](../api/grid/#allowpaging-boolean) to true. When paging is enabled, pager component renders at the bottom of the grid. Paging options can be configured through the [`pageSettings`](../api/grid/pageSettings).
+Paging provides an option to display grid data in segmented pages, making it easier to navigate through large datasets. This feature is particularly useful when dealing with extensive data sets. 
 
-In the below sample, `pageSize` is calculated based on the grid height by using the `load` event.
+To enable paging, you need to set the [allowPaging](../../api/grid/#allowpaging) property to **true**. This property determines whether paging is enabled or disabled for the grid. When paging is enabled, a pager component rendered at the bottom of the grid, allowing you to navigate through different pages of data.
 
-To use paging, inject the [`Page`](../api/grid/page) module in the grid.
+To use paging, you need to inject the **PageService** into the provider section of your **AppModule**. This service provides the necessary methods and events to handle paging functionality.
+
+Paging options can be configured through the [pageSettings](../../api/grid/pageSettings) property. The `pageSettings` object allows you to control various aspects of paging, such as the page size, current page, and total number of records.
+
+> You can achieve better performance by using grid paging to fetch only a pre-defined number of records from the data source.
+
+## Customize the pager options 
+
+Customizing the pager options in the Syncfusion Grid allows you to tailor the pagination control according to your specific requirements. You can customize the pager to display the number of pages using the `pageCount` property, change the current page using `currentPage` property, display the number of records in the grid using the `pageSize` property, and even adjust the page sizes in a dropdown using the `pageSizes` property. Additionally, you can include the current page as a query string in the URL for convenient navigation. 
+
+### Change the page size 
+
+The Syncfusion Grid allows you to control the number of records displayed per page, providing you with flexibility in managing your data. This feature is particularly useful when you want to adjust the amount of data visible to you at any given time. To achieve this, you can utilize the [pageSettings.pageSize](../../api/grid/pageSettings/#pagesize) property. This property is used to specify the initial number of records to display on each page. The default value of `pageSize` property is **12**.
+
+The following example demonstrates how to change the page size of a Grid using an external button click based on **TextBox** input.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -44,7 +58,41 @@ To use paging, inject the [`Page`](../api/grid/page) module in the grid.
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs134" %}
 {% endif %}
 
-> You can achieve better performance by using grid paging to fetch only a pre-defined number of records from the data source.
+### Change the page count 
+
+The Syncfusion Grid allows you to adjust the number of pages displayed in the pager container. This is useful when you want to manage the number of pages you see while navigating through extensive datasets. The default value of `pageCount` property is **8**.
+
+To change the page count in the Syncfusion Grid, you can utilize the [pageSettings.pageCount](../../api/grid/pageSettings/#pagecount) property, which defines the number of pages displayed in the pager container.
+
+The following example demonstrates how to change the page count of a Grid using an external button click based on **TextBox** input.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs135/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs135/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs135" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs135/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs135/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs135" %}
+{% endif %}
+
 
 ## Template
 
