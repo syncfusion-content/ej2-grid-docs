@@ -12,7 +12,9 @@ domainurl: ##DomainURL##
 # Getting started in ##Platform_Name## Grid control
 
 This section explains the steps to create a simple Grid and demonstrates the basic usage of the grid component using the Essential JS 2
-[quickstart](https://github.com/syncfusion/ej2-quickstart.git) seed repository. This seed repository is pre-configured with the Essential JS 2 package.
+[quickstart](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-) seed repository. This seed repository is pre-configured with the Essential JS 2 package.
+
+> This application is integrated with the `webpack.config.js` configuration and uses the latest version of the [webpack-cli](https://webpack.js.org/api/cli/#commands). It requires node `v14.15.0` or higher. For more information about webpack and its features, refer to the [webpack documentation](https://webpack.js.org/guides/getting-started/).
 
 ## Dependencies
 
@@ -31,67 +33,57 @@ Following is the list of minimum dependencies required to use the grid.
     |-- @syncfusion/ej2-notifications
 ```
 
-## Setup for local development
+## Set up development environment
 
-Clone the Essential JS 2 quickstart application project from [GitHub](https://github.com/syncfusion/ej2-quickstart.git), and install the necessary npm packages using the following command line scripts.
+Open the command prompt from the required directory, and run the following command to clone the Syncfusion JavaScript (Essential JS 2) quickstart project from [GitHub](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-).
 
-```
-git clone https://github.com/syncfusion/ej2-quickstart.git quickstart
-cd quickstart
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+
+git clone https://github.com/SyncfusionExamples/ej2-quickstart-webpack- ej2-quickstart
+
+{% endhighlight %}
+{% endtabs %}
+
+After cloning the application in the `ej2-quickstart` folder, run the following command line to navigate to the `ej2-quickstart` folder.
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+
+cd ej2-quickstart
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add Syncfusion JavaScript packages
+
+Syncfusion JavaScript (Essential JS 2) packages are available on the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. You can install all Syncfusion JavaScript (Essential JS 2) controls in a single [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package or individual packages for each control.
+
+The quickstart application is preconfigured with the dependent [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in the `~/package.json` file. Use the following command to install the dependent npm packages from the command prompt.
+
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
+
 npm install
-```
 
-## Configuring system JS
+{% endhighlight %}
+{% endtabs %}
 
-**Syncfusion Grid packages** have to be mapped in the **system.config.js** configuration file.
+## Import the Syncfusion CSS styles
 
-```javascript
-System.config({
-    paths: {
-         'npm:': './node_modules/',
-         'syncfusion:': 'npm:@syncfusion/'
-    },
-    map: {
-        app: 'app',
+Syncfusion JavaScript controls come with [built-in themes](https://ej2.syncfusion.com/documentation/appearance/theme/), which are available in the installed packages. It's easy to adapt the Syncfusion JavaScript controls to match the style of your application by referring to one of the built-in themes.
 
-        //Syncfusion packages mapping
-        "@syncfusion/ej2-base": "syncfusion:ej2-base/dist/ej2-base.umd.min.js",
-        "@syncfusion/ej2-data": "syncfusion:ej2-data/dist/ej2-data.umd.min.js",
-        "@syncfusion/ej2-buttons": "syncfusion:ej2-buttons/dist/ej2-buttons.umd.min.js",
-        "@syncfusion/ej2-splitbuttons": "syncfusion:ej2-splitbuttons/dist/ej2-splitbuttons.umd.min.js",
-        "@syncfusion/ej2-popups": "syncfusion:ej2-popups/dist/ej2-popups.umd.min.js",
-        "@syncfusion/ej2-navigations": "syncfusion:ej2-navigations/dist/ej2-navigations.umd.min.js",
-        "@syncfusion/ej2-inputs": "syncfusion:ej2-inputs/dist/ej2-inputs.umd.min.js",
-        "@syncfusion/ej2-dropdowns": "syncfusion:ej2-dropdowns/dist/ej2-dropdowns.umd.min.js",
-        "@syncfusion/ej2-notifications":"syncfusion:ej2-notifications/dist/ej2-notifications.umd.min.js",
-        "@syncfusion/ej2-calendars": "syncfusion:ej2-calendars/dist/ej2-calendars.umd.min.js",
-        "@syncfusion/ej2-lists": "syncfusion:ej2-lists/dist/ej2-lists.umd.min.js",
-        "@syncfusion/ej2-grids": "syncfusion:ej2-grids/dist/ej2-grids.umd.min.js",
-        "@syncfusion/ej2-excel-export": "syncfusion:ej2-excel-export/dist/ej2-excel-export.umd.min.js",
-        "@syncfusion/ej2-pdf-export": "syncfusion:ej2-pdf-export/dist/ej2-pdf-export.umd.min.js",
-        "@syncfusion/ej2-file-utils": "syncfusion:ej2-file-utils/dist/ej2-file-utils.umd.min.js",
-         "@syncfusion/ej2-querybuilder": "syncfusion:ej2-querybuilder/dist/ej2-querybuilder.umd.min.js",
-        "@syncfusion/ej2-compression": "syncfusion:ej2-compression/dist/ej2-compression.umd.min.js"
-    },
-    packages: {
-        'app': { main: 'app', defaultExtension: 'js' }
-    }
-});
+The quickstart application is preconfigured to use the `Material` theme in the `~/src/styles/styles.css` file, as shown below: 
 
-System.import('app');
-```
+{% tabs %}
+{% highlight css tabtitle="style.css" %}
 
-## Adding CSS reference
-
-Combined CSS files are available in the Essential JS 2 package root folder.
-
-This can be referenced in your `[src/styles/styles.css]` using the following code.
-
-```
 @import '../../node_modules/@syncfusion/ej2/material.css';
-```
 
-> To know about individual component CSS, please refer to [Individual Component theme files](https://ej2.syncfusion.com/documentation/appearance/theme#referring-individual-control-theme) section.
+{% endhighlight %}
+{% endtabs %}
+
+> You can check out the [themes](https://ej2.syncfusion.com/documentation/appearance/theme/) section to know more about built-in themes and CSS reference for individual controls.
 
 ## Adding Grid component
 
@@ -99,7 +91,9 @@ You can start adding Essential JS 2 grid component to the application. To get st
 
 Place the following grid code in the **app.ts**.
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
+
 import { Grid } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
@@ -116,11 +110,14 @@ let grid: Grid = new Grid({
 
 grid.appendTo('#Grid');
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 Place the following grid data source code in the **dataSource.ts**.
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="datasource.ts" %}
+
 export let data: Object[] = [
     {
         OrderID: 10248, CustomerID: 'VINET', EmployeeID: 5, OrderDate: new Date(8364186e5),
@@ -198,11 +195,14 @@ export let data: Object[] = [
         ShipRegion: 'NM', ShipPostalCode: '87110', ShipCountry: 'USA', Freight: 48.29, Verified: !0
     }];
 
-```
+{% endhighlight %}
+{% endtabs %}
 
-Now, add an HTML div element to act as the grid element in **index.html** using the following code.
+Now, add an HTML div element with its `ID` attribute set to `Grid` in your **index.html** using the following code.
 
-```html
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -214,22 +214,21 @@ Now, add an HTML div element to act as the grid element in **index.html** using 
     <meta name="author" content="Syncfusion" />
     <link rel="shortcut icon" href="resources/favicon.ico" />
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!--style reference from app-->
-    <link href="/styles/styles.css" rel="stylesheet" />
-
-    <!--system js reference and configuration-->
-    <script src="node_modules/systemjs/dist/system.src.js" type="text/javascript"></script>
-    <script src="system.config.js" type="text/javascript"></script>
+    ....
+    ....
 </head>
 
 <body>
-    <!--Element which will render as Grid-->
-    <div id="Grid"></div>
+    <div>
+        <!--HTML grid element, which is going to render as Essential JS 2 Grid-->
+        <div id="Grid"></div>
+    </div>
 </body>
 
 </html>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Module injection
 
@@ -311,9 +310,13 @@ The grouping feature enables users to view the grid record in a grouped view. It
 
 The quickstart project is configured to compile and run the application in the browser. Use the following command to run the application.
 
-```
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
+
 npm start
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Output will be displayed as follows.
 
