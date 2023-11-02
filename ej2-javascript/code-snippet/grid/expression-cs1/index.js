@@ -14,4 +14,3 @@ grid.appendTo('#Grid');
 function totalCalories(field, data, column){
     return data.Protein * 4 + data.Fat * 9 + data.Carbohydrate * 4;
 };
-
