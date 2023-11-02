@@ -1,39 +1,35 @@
-
-
-import { Grid, Search, Toolbar, QueryCellInfoEventArgs, SearchEventArgs } from '@syncfusion/ej2-grids';
-import { data } from './datasource.ts';
-
-Grid.Inject(Search, Toolbar);
-
-let key: string = '';
-let grid: Grid = new Grid({
+ej.grids.Grid.Inject(ej.grids.Toolbar);
+var key = "";
+var grid = new ej.grids.Grid({
     dataSource: data,
     toolbar: ['Search'],
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
-        { field: 'ShipCity', headerText: 'Ship City', width: 150 },
-        { field: 'ShipName', headerText: 'Ship Name', width: 150 }
+      { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+      { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+      { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 80 },
+      { field: 'ShipCity', headerText: 'Ship City', width: 100 },
+      { field: 'ShipCountry', headerText: 'ShipCountry', width: 100 },
+      { field: 'ShipName', headerText: 'Ship Name', width: 120 },
     ],
-    height: 272,
-    actionBegin: (args: SearchEventArgs) => {
+    height: 400,
+    actionBegin: args => {
     if (args.requestType === 'searching') {
       key = args.searchString.toLowerCase();
     }
   },
-  queryCellInfo: (args: QueryCellInfoEventArgs) => {
+  queryCellInfo: args => {
     if (key != '') {
-      let cellContent: string = args.data[args.column.field];
-      let parsedContent: string = cellContent.toString().toLowerCase();
+      var cellContent = args.data[args.column.field];
+      var parsedContent = cellContent.toString().toLowerCase();
       if (parsedContent.includes(key.toLowerCase())) {
-        let i: number = 0;
-        let searchStr: string = '';
+        var i = 0;
+        var searchStr = '';
         while (i < key.length) {
-          let index: number = parsedContent.indexOf(key[i]);
+          var index = parsedContent.indexOf(key[i]);
           searchStr = searchStr + cellContent.toString()[index];
           i++;
         }
-        args.cell.innerHTML = (args.cell as any).innerText.replaceAll(
+        args.cell.innerHTML = args.cell.innerText.replaceAll(
           searchStr,
           "<span class='customcss'>" + searchStr + '</span>'
         );
@@ -42,6 +38,3 @@ let grid: Grid = new Grid({
   }
 });
 grid.appendTo('#Grid');
-
-
-
