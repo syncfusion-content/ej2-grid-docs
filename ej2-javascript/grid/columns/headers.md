@@ -87,7 +87,7 @@ In this demo, the custom element is rendered for both **CustomerID** and **Order
 
 In Grid, you can group multiple levels of column headers by stacking the Grid columns. This feature allows you to organize the Grid columns in a more structured and understandable way. This can be achieved by setting the [columns->columns](../../api/grid/column/#columns) property. Within this property, you can define an array of column objects to group together as sub-headers under a main header. You can define the `headerText` property of each sub-header column to set the text for that sub-header.
 
-You can customize the appearance of the stacked header elements by using the `headerTemplate` property. This property accepts an id reference, which allows you to define custom HTML elements or ##Platform_Name## components to the header element. Here's an example of how to use stacked headers with a custom `headerTemplate` in Syncfusion Grid.
+You can customize the appearance of the stacked header elements by using the headerTemplate property. This property accepts an id reference, which allows you to define custom HTML elements or ##Platform_Name## components to the header element. Here's an example of how to use stacked headers with a custom `headerTemplate` in Syncfusion Grid.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -316,7 +316,7 @@ Here is an example of how to change the header text of a column using the `getCo
 {% previewsample "page.domainurl/code-snippet/grid/column-header-dynamically" %}
 {% endif %}
 
-### Changing header text using headerValueAccessor property
+**Changing header text using headerValueAccessor property**
 
 The `headerValueAccessor` property in Syncfusion Grid allows you to customize the text of a column header cell, which can be useful in scenarios where you want to change the text to display it in a different language, format or add additional information to the header. This property is triggered every time the header cell is rendered.
 
@@ -360,7 +360,7 @@ Here's an example of how to use the `headerValueAccessor` property to change the
 {% previewsample "page.domainurl/code-snippet/grid/column-header-property" %}
 {% endif %}
 
-### Changing the header text of all columns
+**Changing the header text of all columns**
 
 If you want to change the header text of all columns in the grid, you can loop through the Columns collection of the grid and set the `headerText` property for each column. Here is an example:
 
