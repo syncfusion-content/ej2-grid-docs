@@ -11,7 +11,7 @@ let grid: Grid = new Grid({
     columns: [
         { field: 'OrderID', headerText: 'Order ID', width: 120 },
         { field: 'CustomerID', headerText: 'Customer ID', width: 140 },
-        { field: 'Freight', format: 'C2', width: 120 },
+        { field: 'Freight',headerText:'Freight', format: 'C2', width: 120 },
         { field: 'OrderDate', headerText: 'Order Date', format: 'yMd', width: 140 },
     ]
 });

@@ -16,7 +16,7 @@ let grid: Grid = new Grid(
             { field: 'Inventor', headerText: 'Inventor Name', width: 180, textAlign: 'Right' },
             { field: 'NumberofPatentFamilies', headerText: 'Number of Patent Families', width: 180 },
             { field: 'Country', headerText: 'Country', width: 140 },
-            { field: 'Active', width: 120 },
+            { field: 'Active',headerText:'Active', width: 120 },
             { field: 'Mainfieldsofinvention', headerText: 'Main Feilds Of Invention', width: 200 },
         ],
         pageSettings: { pageCount: 5 }

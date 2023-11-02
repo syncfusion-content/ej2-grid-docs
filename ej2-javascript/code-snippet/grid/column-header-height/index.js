@@ -11,7 +11,7 @@ var grid = new ej.grids.Grid({
       headerText: 'Customer ID',
       width: 140,
     },
-    { field: 'Freight', format: 'C', width: 120 },
+    { field: 'Freight',headerText:'Freight', format: 'C', width: 120 },
     {
       field: 'OrderDate',
       headerText: 'Order Date',
