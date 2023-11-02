@@ -1,7 +1,7 @@
 var data = new ej.data.DataManager({
-    adaptor: new ej.data.ODataAdaptor(),
+    adaptor: new ej.data.ODataV4Adaptor(),
     crossDomain: true,
-    url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders'
+    url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/',
 });
 var query = new ej.data.Query().expand('Employee');
 var grid = new ej.grids.Grid({
