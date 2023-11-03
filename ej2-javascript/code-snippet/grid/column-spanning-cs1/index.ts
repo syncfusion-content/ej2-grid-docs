@@ -1,33 +1,31 @@
-
-
-import { Grid } from '@syncfusion/ej2-grids';
+import { Grid,  QueryCellInfoEventArgs } from '@syncfusion/ej2-grids';
 import { columnSpanData, ColumnSpanDataType  } from './datasource.ts';
 
 let grid: Grid = new Grid({
-            dataSource: columnSpanData,
-            queryCellInfo: QueryCellEvent,
-            gridLines: 'Both',
-            columns: [
-                { field: 'EmployeeID', headerText: 'Employee ID', isPrimaryKey: true, textAlign: 'Right', width: 120 },
-                { field: 'EmployeeName', headerText: 'Employee Name', width: 200 },
-                { field: '9:00', headerText: '9.00 AM', width: 100 },
-                { field: '9:30', headerText: '9.30 AM', width: 100 },
-                { field: '10:00', headerText: '10.00 AM', width: 100 },
-                { field: '10:30', headerText: '10.30 AM', width: 100 },
-                { field: '11:00', headerText: '11.00 AM', width: 100 },
-                { field: '11:30', headerText: '11.30 AM', width: 100 },
-                { field: '12:00', headerText: '12.00 PM', width: 100 },
-                { field: '12:30', headerText: '12.30 PM', width: 100 },
-                { field: '2:30', headerText: '2.30 PM', width: 120 },
-                { field: '3:00', headerText: '3.00 PM', width: 120 },
-                { field: '3:30', headerText: '3.30 PM', width: 120 },
-                { field: '4:00', headerText: '4.00 PM', width: 100 },
-                { field: '4:30', headerText: '4.30 PM', width: 100 },
-                { field: '5:00', headerText: '5.00 PM', width: 100 }
-            ],
-            width: 'auto',
-            height: 'auto',
-            allowTextWrap: true
+    dataSource: columnSpanData,
+    queryCellInfo: QueryCellEvent,
+    gridLines: 'Both',
+    columns: [
+        { field: 'EmployeeID', headerText: 'Employee ID', isPrimaryKey: true, textAlign: 'Right', width: 120 },
+        { field: 'EmployeeName', headerText: 'Employee Name', width: 200 },
+        { field: '9:00', headerText: '9.00 AM', width: 100 },
+        { field: '9:30', headerText: '9.30 AM', width: 100 },
+        { field: '10:00', headerText: '10.00 AM', width: 100 },
+        { field: '10:30', headerText: '10.30 AM', width: 100 },
+        { field: '11:00', headerText: '11.00 AM', width: 100 },
+        { field: '11:30', headerText: '11.30 AM', width: 100 },
+        { field: '12:00', headerText: '12.00 PM', width: 100 },
+        { field: '12:30', headerText: '12.30 PM', width: 100 },
+        { field: '2:30', headerText: '2.30 PM', width: 120 },
+        { field: '3:00', headerText: '3.00 PM', width: 120 },
+        { field: '3:30', headerText: '3.30 PM', width: 120 },
+        { field: '4:00', headerText: '4.00 PM', width: 100 },
+        { field: '4:30', headerText: '4.30 PM', width: 100 },
+        { field: '5:00', headerText: '5.00 PM', width: 100 }
+    ],
+    width: 'auto',
+    height: 'auto',
+    allowTextWrap: true
 });
 grid.appendTo('#Grid');
 
@@ -114,6 +112,3 @@ function QueryCellEvent(args: QueryCellInfoEventArgs): void {
             break;
     }
 }
-
-
-
