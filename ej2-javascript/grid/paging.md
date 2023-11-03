@@ -93,10 +93,50 @@ The following example demonstrates how to change the page count of a Grid using 
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs135" %}
 {% endif %}
 
+### Add current page in URL as a query string 
 
-## Template
+The Syncfusion Grid allows you to include the current page information as a query string in the URL. This feature is particularly useful for scenarios where you need to maintain and share the state of the grid's pagination.
 
-You can use custom elements inside the pager instead of default elements. The custom elements can be defined by using the [`template`](../api/grid/pageSettings/#template) property. Inside this template, you can access the [`CurrentPage`](../api/grid/pageSettings/#currentpage), [`pageSize`](../api/grid/pageSettings/#pagesize), [`pageCount`](../api/grid/pageSettings/#pagecount), `totalPage` and `totalRecordCount` values.
+To add the current page detail to the URL as a query string in the Syncfusion Grid, you can enable the [enableQueryString](../../api/grid/pageSettings/#enablequerystring) property. When this property is set to **true**, it will automatically pass the current page information as a query string parameter along with the URL when navigating to other pages within the grid. 
+
+> By enabling the `enableQueryString` property, you can easily copy the URL of the current page and share it with others. When the shared URL is opened, it will load the grid with the exact page that was originally shared.
+
+In the following example, the [EJ2 Toggle Switch Button](../../switch/getting-started) component is added to enable or disable the addition of the current page to the URL as a query string. When the switch is toggled, the [change](../../api/switch/#change) event is triggered and the `enableQueryString` property of the grid is updated accordingly.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs200/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs200/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs200" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs200/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs200/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs200" %}
+{% endif %}
+
+## Pager template
+
+The pager template in Syncfusion Grid allows you to customize the appearance and behavior of the pager element, which is used for navigation through different pages of grid data. This feature is particularly useful when you want to use custom elements inside the pager instead of the default elements.
+
+To use the pager template, you need to specify the [pagerTemplate](../../api/grid/pageSettings/#template) property in your Syncfusion Grid configuration. The `pagerTemplate` property allows you to define a custom template for the pager. Within the template, you can access the [currentPage](../../api/grid/pageSettings/#currentpage), [pageSize](../../api/grid/pageSettings/#pagesize), [pageCount](../../api/grid/pageSettings/#pagecount), **totalPage** and **totalRecordCount** values.
+
+The following example demonstrates how to render a **NumericTextBox** component in the pager using the `pagerTemplate` property:
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -125,36 +165,111 @@ You can use custom elements inside the pager instead of default elements. The cu
 {% previewsample "page.domainurl/code-snippet/grid/pager-template-cs1" %}
 {% endif %}
 
-## Pager with Page Size Dropdown
+## Pager with page size dropdown
 
-The pager Dropdown allows you to change the number of records in the Grid dynamically. It can be enabled by defining the `pageSettings.pageSizes` property as true.
+The pager with a page size dropdown in Syncfusion Grid allows you to dynamically change the number of records displayed in the grid. This feature is useful when you want to easily customize the number of records to be shown per page.
+
+To enable the page size Dropdown feature in the Syncfusion Grid, you need to set the [pageSettings.pageSizes](../../api/grid/pageSettings/#pagesizes) property to **true** in the grid configuration. This property configuration triggers the rendering of a dropdown list within the pager, allowing you to select the desired page size. The selected page size determines the number of records displayed on each page of the grid.
+
+The following example that demonstrates how to integrate the page size Dropdown feature by configuring the `pageSizes` property:
 
 {% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/grid-cs135/index.ts %}
+{% include code-snippet/grid/grid-cs201/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs135/index.html %}
+{% include code-snippet/grid/grid-cs201/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/grid-cs135" %}
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs201" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/grid-cs135/index.js %}
+{% include code-snippet/grid/grid-cs201/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs135/index.html %}
+{% include code-snippet/grid/grid-cs201/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/grid-cs135" %}
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs201" %}
 {% endif %}
+
+> If the pageSizes property is set to a boolean value like 'true' or 'false,' the page size dropdown defaults to an array of strings containing options such as ['All', '5', '10', '15', '20'].
+
+### Customize page size dropdown 
+
+The Syncfusion Grid allows you to customize the default values of the page size dropdown in the pager, allowing you to change the number of records displayed per page. To achieve this, you can define the [pageSizes](../../api/grid/pageSettings/#pagesizes) property as an array of string instead of boolean value.
+
+The following example demonstrate how to customize the default values of the pager dropdown using the `pageSizes` property:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs202/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs202/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs202" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs202/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs202/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs202" %}
+{% endif %}
+
+## How to navigate to particular page 
+
+Navigating to a particular page in the Syncfusion Grid is particularly useful when dealing with large datasets. It provides a quick and efficient way to jump to a specific page within the grid.
+
+To achieve page navigation, you can use the [goToPage](../../api/grid#gotopage) method provided by Syncfusion Grid. This method allows you to programmatically navigate to a specific page within the grid.
+
+The following example demonstrates how to dynamically navigate to a particular page using the `goToPage` method triggered by an external button click based on **TextBox** input:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs203/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs203/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs203" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs203/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs203/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs203" %}
+{% endif %}
+
 
 ## How to render Pager at the Top of the Grid
 

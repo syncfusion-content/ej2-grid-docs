@@ -9,30 +9,38 @@
     <link href="https://cdn.syncfusion.com/ej2/21.1.36/ej2-grids/styles/material.css" rel="stylesheet">
     <link href="https://cdn.syncfusion.com/ej2/21.1.36/ej2-buttons/styles/material.css" rel="stylesheet">
     <link href="https://cdn.syncfusion.com/ej2/21.1.36/ej2-popups/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/21.1.36/ej2-richtexteditor/styles/material.css" rel="stylesheet">
     <link href="https://cdn.syncfusion.com/ej2/21.1.36/ej2-navigations/styles/material.css" rel="stylesheet">
     <link href="https://cdn.syncfusion.com/ej2/21.1.36/ej2-dropdowns/styles/material.css" rel="stylesheet">
     <link href="https://cdn.syncfusion.com/ej2/21.1.36/ej2-lists/styles/material.css" rel="stylesheet">
     <link href="https://cdn.syncfusion.com/ej2/21.1.36/ej2-inputs/styles/material.css" rel="stylesheet">
     <link href="https://cdn.syncfusion.com/ej2/21.1.36/ej2-calendars/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/21.1.36/ej2-notifications/styles/material.css" rel="stylesheet">
     <link href="https://cdn.syncfusion.com/ej2/21.1.36/ej2-splitbuttons/styles/material.css" rel="stylesheet">
-    <script id="template" type="text/x-template">
-        <div class="e-pagertemplate">
-        <div class="col-lg-12 control-section">
-            <div class="content-wrapper">
-        <input id="currentPage" type="text" value=${currentPage}>
-            </div>                                   
-        </div>
-        <div id="totalPages" class="e-pagertemplatemessage" style="margin-top:5px;margin-left:30px;border: none; display: inline-block ">
-            <span class ="e-pagenomsg">${currentPage} of ${totalPages} pages (${totalRecordsCount} items)</span>
-        </div>
-    </div>
-    </script>
-<script src="https://cdn.syncfusion.com/ej2/20.4.38/dist/ej2.min.js" type="text/javascript"></script>
+    <style>
+        .e-row[aria-selected="true"] .e-customizedExpandcell {
+            background-color: #e0e0e0;
+        }
+        .e-grid.e-gridhover tr[role='row']:hover {
+            background-color: #eee;
+        }
+        .e-expand::before {
+        content: '\e5b8';
+    }
+    .empImage {
+        margin: 6px 16px;
+        float: left;
+        width: 50px;
+        height: 50px;
+    }
+    </style>
+<script src="https://cdn.syncfusion.com/ej2/21.1.36/dist/ej2.min.js" type="text/javascript"></script>
 <script src="es5-datasource.js" type="text/javascript"></script>
 </head>
-<body>   
+<body>
+    
     <div id="container">
-        <div id="Grid"></div>        
+        <div id="Grid"></div>
     </div>
 
 <script>
