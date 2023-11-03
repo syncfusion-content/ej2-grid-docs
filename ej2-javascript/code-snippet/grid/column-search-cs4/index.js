@@ -1,29 +1,24 @@
 ej.grids.Grid.Inject(ej.grids.Toolbar);
 var values;
 var key = '';
-var refresh = false;
 var removeQuery = false;
 var valueAssign = false;
 var grid = new ej.grids.Grid({
     dataSource: data,
     toolbar: ['Search'],
     columns: [
-        {
-            field: 'OrderID',headerText: 'Order ID',textAlign: 'Center',width: 120,
-        },
-        {
-            field: 'CustomerID',headerText: 'Customer ID',textAlign: 'Center',width: 150,
-        },
-        {
-            field: 'ShipCity',headerText: 'Ship City',textAlign: 'Center',width: 150,
-        },
-        {
-            field: 'ShipName',headerText: 'Ship Name',textAlign: 'Center',width: 150,
-        },
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+        { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 80 },
+        { field: 'ShipCity', headerText: 'Ship City', width: 100 },
+        { field: 'ShipCountry', headerText: 'ShipCountry', width: 100 },
+        { field: 'ShipName', headerText: 'Ship Name', width: 120 },
     ],
     searchSettings: {
-        fields: ['CustomerID', 'OrderID', 'ShipCity', 'ShipName'],
+        fields: [ 'OrderID', 'CustomerID', 'EmployeeID', 'ShipCity', 'ShipCountry', 'ShipName'],
         key: '',
+        operator: 'contains',
+        ignoreCase: true
     },
     height: 272,
 
@@ -49,7 +44,6 @@ var grid = new ej.grids.Grid({
                     });
                     grid.query = new ej.data.Query().where(predicate);
                     grid.searchSettings.key = '';
-                    refresh = true;
                     valueAssign = true;
                     removeQuery = true;
                     grid.refresh();
@@ -75,5 +69,3 @@ var grid = new ej.grids.Grid({
     },
 });
 grid.appendTo('#Grid');
-
-
