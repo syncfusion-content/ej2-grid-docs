@@ -1,11 +1,9 @@
-
-
 import { Grid } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
+import { DropDownList } from '@syncfusion/ej2-dropdowns';
 
 let grid: Grid = new Grid({
     dataSource: data,
-    selectionSettings: {checkboxMode: 'ResetOnRowClick'},
     columns: [
         { type: 'checkbox', width: 50 },
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
@@ -16,5 +14,20 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 
-
-
+let dropdownData = [
+    { text: 'Default', value: 'Default' },
+    { text: 'ResetOnRowClick', value: 'ResetOnRowClick' }
+  ];
+  
+let dropDownColumn: DropDownList = new DropDownList({
+  index:0,
+  width: 150,
+  dataSource: dropdownData,
+  change: valueChange,
+});
+dropDownColumn.appendTo('#dropdown');
+  
+function valueChange(args)
+{
+   grid.selectionSettings.checkboxMode = args.value;
+}
