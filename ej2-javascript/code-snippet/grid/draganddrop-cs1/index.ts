@@ -1,12 +1,10 @@
-
-
-import { Grid, Page, RowDD, Selection } from '@syncfusion/ej2-grids';
+import { Grid, RowDD, Selection } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
-Grid.Inject(Page, RowDD, Selection);
+Grid.Inject( RowDD, Selection);
 
 let grid: Grid = new Grid({
-    dataSource: data.slice(0, 5),
+    dataSource: data,
     allowRowDragAndDrop: true,
     rowDropSettings: { targetID: 'DestGrid' },
     selectionSettings: { type: 'Multiple' },
@@ -32,6 +30,3 @@ let destGrid: Grid = new Grid({
     ]
 });
 destGrid.appendTo('#DestGrid');
-
-
-
