@@ -1,5 +1,3 @@
-
-
 import { Grid, Toolbar, Edit } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
@@ -10,14 +8,11 @@ let grid: Grid = new Grid({
     toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
     editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true },
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number', isPrimaryKey: true },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 140, type: 'string' },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C' },
-        { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', width: 140, format: 'yMd' }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90, isPrimaryKey:true },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+        { field: 'ShipCity', headerText: 'ShipCity', width: 100 },
+        { field: 'ShipName', headerText: 'ShipName', width: 120 }
     ],
     height: 270
 });
 grid.appendTo('#Grid');
-
-
-
