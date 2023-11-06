@@ -270,42 +270,115 @@ The following example demonstrates how to dynamically navigate to a particular p
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs203" %}
 {% endif %}
 
+## Dynamically calculate page size based on element height
 
-## How to render Pager at the Top of the Grid
+You have an option to dynamically calculate the page size of a grid by considering the height of its parent element. This functionality proves invaluable in ensuring that the grid's content remains within the available space, preventing the need for excessive scrolling. It primarily serves the purpose of automatically adjusting the `pageSize` when the height of the grid's parent element changes dynamically. Upon each alteration in the parent element's height, invoking this method will compute the grid's `pageSize` and present the current page records accordingly. This feature effectively addresses situations where a static `pageSize` value does not cater to the varying heights of different parent elements, preventing any unwanted empty spaces within the grid.
 
-By default, Pager will be rendered at the bottom of the Grid. You can also render the Pager at the top of the Grid by using the `dataBound` event.
+To achieve page size calculation based on an element's height in the Grid, you can utilize the [calculatePageSizeByParentHeight](../../api/grid/#calculatepagesizebyparentheight) method. This method calculates the page size based on the height of the parent element.
+
+The following example demonstrates how to calculate the page size based on element height using the `calculatePageSizeByParentHeight` method triggered by a change event based on the **NumericTextBox** input:
 
 {% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/grid-cs136/index.ts %}
+{% include code-snippet/grid/grid-cs204/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs136/index.html %}
+{% include code-snippet/grid/grid-cs204/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/grid-cs136" %}
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs204" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/grid-cs136/index.js %}
+{% include code-snippet/grid/grid-cs204/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs136/index.html %}
+{% include code-snippet/grid/grid-cs204/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/grid-cs136" %}
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs204" %}
+{% endif %}
+
+## Render pager at the top of the grid 
+
+The Grid component provides built-in support for rendering a pager at the bottom of the grid by default. However, in certain scenarios, you might want to display the pager at the top of the grid. This can be achieved by utilizing the [dataBound](../../api/grid/#databound) event. This event is triggered when the Grid completes rendering its data. By handling this event, you can customize the rendering of the pager and move it to the top of the Grid.
+
+Here's an example that demonstrates how to render the pager at the top of the grid using the `dataBound` event:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs205/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs205/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs205" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs205/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs205/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs205" %}
 {% endif %}
 
 > During the paging action, the pager component triggers the below three events.
-> * The `created` event triggers when Pager is created.
-> * The `click` event triggers when the numeric items in the pager is clicked.
-> * The `dropDownChanged` event triggers when pageSize DropDownList value is selected.
+> * The [created](../../api/pager/pagerModel/#created) event triggers when Pager is created.
+> * The [click](../../api/pager/pagerModel/#click) event triggers when the numeric items in the pager is clicked.
+> * The [dropDownChanged](../../api/pager/pagerModel/#dropdownchanged) event triggers when pageSize DropDownList value is selected.
+
+## Pager events 
+
+The Syncfusion Grid component triggers two pager events during paging actions:
+
+[actionBegin](../../api/grid/#actionbegin)-  This event triggered before any paging action (such as changing the page, changing the page size and etc) is initiated. You can use this event to customize or control the behavior of paging actions.
+
+[actionComplete](../../api/grid/#actioncomplete)- This event triggered after a pager action is completed. It provides information about the action, such as the new page number, page size, and the total number of records. You can use this event to perform actions or update the UI after the operation has been executed.
+
+The following example that example demonstrates how to use these events to display notification messages to indicate the current and next page during paging actions in the Syncfusion ##Platform_Name## Grid:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs206/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs206/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs206" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs206/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs206/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs206" %}
+{% endif %}
 
 ## See Also
 
