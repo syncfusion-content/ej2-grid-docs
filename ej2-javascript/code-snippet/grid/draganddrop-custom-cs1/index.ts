@@ -1,5 +1,5 @@
-import { Grid, Page, RowDD, Selection, Edit, RowDragEventArgs, GridComponent } from '@syncfusion/ej2-grids';
-import { TreeGrid, Edit as TreeEdit, TreeGridComponent } from '@syncfusion/ej2-treegrid';
+import { Grid, Page, RowDD, Selection, Edit, RowDragEventArgs } from '@syncfusion/ej2-grids';
+import { TreeGrid, Edit as TreeEdit } from '@syncfusion/ej2-treegrid';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
 import { sampleGridData } from './datasource.ts';
 
@@ -23,8 +23,8 @@ let grid: Grid = new Grid({
     { field: 'duration', headerText: 'duration', textAlign: 'Right', width: 80 }
   ],
   rowDrop: function (args: RowDragEventArgs) {
-    let grid = (document.getElementById('Grid') as GridComponent).ej2_instances[0];
-    let tree = (document.getElementById('TreeGrid') as TreeGridComponent).ej2_instances[0];
+    let grid = (document.getElementById('Grid') as Grid).ej2_instances[0];
+    let tree = (document.getElementById('TreeGrid') as TreeGrid).ej2_instances[0];
     if (args.target.closest('.e-treegrid')) {
       args.cancel = true;
       let rowIndex = !isNullOrUndefined(args.target.closest('.e-row'))

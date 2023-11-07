@@ -8,9 +8,7 @@ var grid = new ej.grids.Grid({
       { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right' },
       { field: 'CustomerID', headerText: 'Customer ID', width: 130 },
       { field: 'OrderDate', headerText: 'Order Date', width: 120, format: 'yMd', textAlign: 'Right' },
-      { field: 'Freight', headerText: 'Freight', width: 120, format: 'C2', textAlign: 'Right' },
-      { field: 'ShipCity', headerText: 'Ship City', width: 120 },
-      { field: 'ShipCountry', headerText: 'Ship Country', width: 120 }
+      { field: 'Freight', headerText: 'Freight', width: 120, format: 'C2', textAlign: 'Right' }
     ],
     rowDragStartHelper: function (args) {
       document.getElementById('message').innerText = `rowDragStartHelper event triggered`;
@@ -30,6 +28,11 @@ var grid = new ej.grids.Grid({
     },
     rowDrop: function (args) {
       document.getElementById('message').innerText = `rowDrop event triggered`;
+      var value = [];
+      for (var r = 0; r < args.rows.length; r++) {
+        value.push(args.fromIndex + r);
+      }
+      grid.reorderRows(value, args.dropIndex);
     },
   });
 grid.appendTo('#Grid'); 

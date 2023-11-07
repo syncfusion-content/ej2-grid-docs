@@ -12,15 +12,13 @@ let grid: Grid = new Grid({
       { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right' },
       { field: 'CustomerID', headerText: 'Customer ID', width: 130 },
       { field: 'OrderDate', headerText: 'Order Date', width: 120, format: 'yMd', textAlign: 'Right' },
-      { field: 'Freight', headerText: 'Freight', width: 120, format: 'C2', textAlign: 'Right' },
-      { field: 'ShipCity', headerText: 'Ship City', width: 120 },
-      { field: 'ShipCountry', headerText: 'Ship Country', width: 120 },
+      { field: 'Freight', headerText: 'Freight', width: 120, format: 'C2', textAlign: 'Right' }
     ],
-    rowDragStart: function (args: any) {
+    rowDragStart: function (args: RowDragEventArgs) {
       (document.getElementById('message') as HTMLElement).innerText = `rowDragStart event triggered`;
       args.cancel = true;
     },
-    rowDragStartHelper: function (args: any) {
+    rowDragStartHelper: function (args: RowDragEventArgs) {
       (document.getElementById('message') as HTMLElement).innerText = `rowDragStartHelper event triggered`;
       if (args.data[0].OrderID === 10248) {
         args.cancel = true;
@@ -32,8 +30,13 @@ let grid: Grid = new Grid({
         row.classList.add('drag-limit');
       });
     },
-    rowDrop: function (args: any) {
+    rowDrop: function (args: RowDragEventArgs) {
       (document.getElementById('message') as HTMLElement).innerText = `rowDrop event triggered`;
+      let value = [];
+      for (let r = 0; r < args.rows.length; r++) {
+        value.push(args.fromIndex + r);
+      }
+      grid.reorderRows(value, args.dropIndex);
     },
   });
 grid.appendTo('#Grid');
