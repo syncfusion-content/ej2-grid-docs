@@ -1,25 +1,21 @@
-ej.grids.Grid.Inject(ej.grids.Toolbar, ej.grids.PdfExport, ej.grids.Page);
+ej.grids.Grid.Inject(ej.grids.Toolbar, ej.grids.PdfExport);
 var grid = new ej.grids.Grid({
     dataSource: data,
-    allowPaging: true,
-    pageSettings: { pageSize: 6 },
     allowPdfExport: true,
     toolbar: ['PdfExport'],
+    toolbarClick: toolbarClick,
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
-        { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C' },
-        { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', width: 140, format: 'yMd' }
+        { field: 'CustomerID', width: 150, headerText: 'Customer ID', type: 'string' },
+        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 150, format: 'C' },
+        { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', width: 150, format: 'yMd' }
     ],
-    height: 260
+    height: 272
 });
 grid.appendTo('#Grid');
-grid.toolbarClick = function(args){
-    if (args['item'].id === 'Grid_pdfexport') {
-        let exportProperties = {
-           fileName:"new.pdf"
-        };
-        grid.pdfExport(exportProperties);
+
+function toolbarClick(args){
+    if (args.item.id === 'Grid_pdfexport') { 
+        grid.pdfExport();
     }
 }
-

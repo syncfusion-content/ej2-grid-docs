@@ -11,9 +11,11 @@ domainurl: ##DomainURL##
 
 # Pdf export in ##Platform_Name## Grid control
 
-PDF export allows exporting Grid data to PDF document. You need to use the [`pdfExport`](../../api/grid/#pdfexport) method for exporting. To enable PDF export in the grid, set the [`allowPdfExport`](../../api/grid/#allowpdfexport) as true.
+The PDF export feature in the Syncfusion javascript Grid allows you to export grid data to a PDF document, providing the ability to generate printable reports or share data in a standardized format.
 
-To use PDF export, inject the `PdfExport` module in grid.
+To enable PDF export in the grid, you need to set the [allowPdfExport](../../api/grid/#allowpdfexport) property to **true** and use the [pdfExport](../../api/grid/#pdfexport) method for exporting. 
+
+To use PDF export, inject the **PdfExportService** in the provider section of the **AppModule**.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -44,13 +46,15 @@ To use PDF export, inject the `PdfExport` module in grid.
 
 ## Show spinner while exporting
 
-You can show/ hide spinner component while exporting the grid using `showSpinner`/ `hideSpinner` methods. You can use `toolbarClick` event to show spinner before exporting and hide a spinner in the `pdfExportComplete` or `excelExportComplete` event after the exporting.
+Showing a spinner while exporting in the Syncfusion ##Platform_Name## Grid enhances the experience by displaying a spinner during the export process. This feature provides a visual indication of the export progress, improving the understanding of the exporting process.
 
-In the `toolbarClick` event, based on the parameter `args.item.id` as `Grid_pdfexport` or `Grid_excelexport` we can call the `showSpinner` method from grid instance.
+To show or hide a spinner while exporting the grid, you can utilize the [showSpinner](../../documentation/api/grid/#showspinner) and [hideSpinner](../../documentation/api/grid/#hidespinner) methods provided by the Grid within the [toolbarClick](../../documentation/api/grid/#toolbarclick) event.
 
-In the `pdfExportComplete` or `excelExportComplete` event, We can call the `hideSpinner` method.
+The `toolbarClick` event is triggered when a toolbar item in the Grid is clicked. Within the event handler, the code checks if the clicked **item** is related with PDF export, specifically the **Grid_pdfexport** item. If a match is found, the `showSpinner` method is used on the Grid instance to display the spinner. 
 
-In the below demo, we have rendered the default spinner component when exporting the grid.
+To hide the spinner after the exporting is completed, bind the [pdfExportComplete](../../api/grid/#pdfexportcomplete) event and use the `hideSpinner` method on the Grid instance to hide the spinner.
+
+The following example demonstrates how to show and hide the spinner during PDF export in a grid.
 
 {% if page.publishingplatform == "typescript" %}
 
