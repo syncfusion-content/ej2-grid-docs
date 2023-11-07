@@ -55,7 +55,6 @@ The `toolbarClick` event is triggered when a toolbar item in the Grid is clicked
 To hide the spinner after the exporting is completed, bind the [pdfExportComplete](../../api/grid/#pdfexportcomplete) event and use the `hideSpinner` method on the Grid instance to hide the spinner.
 
 The following example demonstrates how to show and hide the spinner during PDF export in a grid.
-
 {% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
