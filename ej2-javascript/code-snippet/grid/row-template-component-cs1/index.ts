@@ -18,7 +18,7 @@ let grid: Grid = new Grid({
 
     dataBound: (args) => {
 
-        let gridInstance = (document.getElementById('Grid') as any).ej2_instances[0];
+        let gridInstance = (document.getElementById('Grid') as Grid).ej2_instances[0];
 
         let chipList = gridInstance.getContentTable().querySelectorAll('.chipList');
         for (let i = 0; i < chipList.length; i++) {
@@ -46,7 +46,7 @@ let grid: Grid = new Grid({
         for (let i = 0; i < dropdownList.length; i++) {
             let dropdownInputValue = dropdownList[i];
             let dropData = ['Processing', 'Order Placed', 'Delivered'];
-            let dropdown = new DropDownList({
+            let dropdown:DropDownList = new DropDownList({
                 dataSource: dropData,
                 value: dropdownList[i].value,
                 popupHeight: 150,
