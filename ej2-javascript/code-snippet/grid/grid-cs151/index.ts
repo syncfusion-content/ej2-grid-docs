@@ -1,46 +1,41 @@
-
-
-
-import { Grid, Page, Toolbar, PdfExport, ExcelExport } from '@syncfusion/ej2-grids';
+import { Grid, Toolbar, PdfExport } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
-import { Query } from '@syncfusion/ej2-data';
 
-Grid.Inject(Page, Toolbar, PdfExport, ExcelExport);
+Grid.Inject(Toolbar, PdfExport);
 
-let queryClone: Object;
 let grid: Grid = new Grid({
     dataSource: data,
-    allowPaging: true,
     allowPdfExport: true,
-    allowExcelExport: true,
-    toolbar: ['PdfExport', 'ExcelExport'],
+    toolbar: ['PdfExport'],
+    toolbarClick: toolbarClick,
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
-        { field: 'CustomerID', width: 140, headerText: 'Customer ID', visible: false },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C' },
-        { field: 'ShipCity', headerText: 'ShipCity', textAlign: 'Right', width: 140 }
+        { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
+        { field: 'ShipCity', headerText: 'Ship City', textAlign: 'Right', width: 120},
+        { field: 'ShipCountry', headerText: 'Ship Country', textAlign: 'Right', width: 140}
     ],
-    height: 230
+    height: 220,
+    aggregates: [{
+                    columns: [{
+                        type: 'Custom',
+                        customAggregate: customAggregateFn,
+                        columnName: 'ShipCountry',
+                        footerTemplate: 'Brazil Count: ${Custom}'
+                    }]
+                }]
 });
 grid.appendTo('#Grid');
-grid.toolbarClick = (args: Object) => {
-    if (args['item'].id === 'Grid_pdfexport') {
-        queryClone = grid.query;
-        grid.query = new Query().addParams("recordcount", "12");
+
+function toolbarClick(args){
+    if (args.item.id === 'Grid_pdfexport') {
         grid.pdfExport();
     }
-    if (args['item'].id === 'Grid_excelexport') {
-        queryClone = grid.query;
-        grid.query = new Query().addParams("recordcount", "12");
-        grid.excelExport();
-    }
 }
-grid.pdfExportComplete = () => {
-        grid.query = queryClone;
-    }
-grid.excelExportComplete = () => {
-        grid.query = queryClone;
-    }
 
+function customAggregateFn(data) {
+    const brazilCount = data.result
+        ? data.result.filter((item) => item['ShipCountry'] === 'Brazil').length
+        : data.filter((item) => item['ShipCountry'] === 'Brazil').length;
 
-
+    return ` ${brazilCount}`;
+}

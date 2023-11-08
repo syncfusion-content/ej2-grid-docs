@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Pdf export in ##Platform_Name## Grid control
 
-The PDF export feature in the Syncfusion javascript Grid allows you to export grid data to a PDF document, providing the ability to generate printable reports or share data in a standardized format.
+The PDF export feature in the Syncfusion ##Platform_Name## Grid allows you to export grid data to a PDF document, providing the ability to generate printable reports or share data in a standardized format.
 
 To enable PDF export in the grid, you need to set the [allowPdfExport](../../api/grid/#allowpdfexport) property to **true** and use the [pdfExport](../../api/grid/#pdfexport) method for exporting. 
 
@@ -82,9 +82,13 @@ The following example demonstrates how to show and hide the spinner during PDF e
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs149" %}
 {% endif %}
 
-## Custom data source
+## Binding custom data source while exporting
 
-PDF export provides an option to define datasource dynamically before exporting. To export data dynamically, define the `dataSource` in `exportProperties`
+The Syncfusion ##Platform_Name## Grid component provides a convenient way to export data to a PDF format. With the PDF export feature, you can define a custom data source while exporting. This allows you to export data that is not necessarily bind to the grid, which can be generated or retrieved based on your application logic.
+
+To export data, you need to define the [dataSource](../../api/grid/pdfExportProperties/#datasource) property within the [pdfExportProperties](../../documentation/api/grid/pdfExportProperties/) object. This property represents the data source that will be used for the PDF export.
+
+The following example demonstrates how to render custom data source during PDF export. By utilizing the [pdfExport](../../documentation/api/grid/#pdfexport) method and passing the `pdfExportProperties` object through the grid instance, the grid data will be exported to a PDF using the dynamically defined data source.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -111,6 +115,45 @@ PDF export provides an option to define datasource dynamically before exporting.
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs150" %}
+{% endif %}
+
+> Make sure to utilize the [field](../../api/grid/column/#field) property that you have declared in the grid columns when modifying the data source for exporting.
+
+## Exporting with custom aggregate
+
+Custom aggregates in the Syncfusion javascript Grid involves exporting grid data that includes additional calculated values based on specific requirements. This feature enables you to show the comprehensive view of the data in the exported file by incorporating the specific aggregated information you need for analysis or reporting purposes.
+
+In order to utilize custom aggregation, you need to specify the [type](../../api/grid/aggregateColumnDirective/#type) property as **Custom** and provide the custom aggregate function in the [customAggregate](../../documentation/api/grid/aggregateColumnDirective/#customaggregate) property. 
+
+Within the **customAggregateFn** function, it takes an input data that contains a result property. The function calculates the count of objects in this data where the **ShipCountry** field value is equal to **Brazil** and returns the count with a descriptive label.
+
+The following example shows how to export the grid with a custom aggregate that shows the calculation of the **Brazil** count of the **ShipCountry** column.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs151/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs151/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs151" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs151/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs151/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs151" %}
 {% endif %}
 
 ## Passing additional parameters to the server when exporting
