@@ -1,4 +1,4 @@
-import { Grid, Toolbar } from '@syncfusion/ej2-grids';
+import { Grid } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
 let grid: Grid = new Grid({
