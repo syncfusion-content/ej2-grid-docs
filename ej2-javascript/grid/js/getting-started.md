@@ -115,9 +115,9 @@ Refer the grid's CDN links as below
 
 **Example:**
 
-> Script: [`http://cdn.syncfusion.com/ej2/ej2-grids/dist/global/ej2-grids.min.js`](http://cdn.syncfusion.com/ej2/ej2-grids/dist/global/ej2-grids.min.js)
+> Script: [http://cdn.syncfusion.com/ej2/ej2-grids/dist/global/ej2-grids.min.js](http://cdn.syncfusion.com/ej2/ej2-grids/dist/global/ej2-grids.min.js)
 >
-> Styles: [`http://cdn.syncfusion.com/ej2/ej2-grids/styles/material.css`](http://cdn.syncfusion.com/ej2/ej2-grids/styles/material.css)
+> Styles: [http://cdn.syncfusion.com/ej2/ej2-grids/styles/material.css](http://cdn.syncfusion.com/ej2/ej2-grids/styles/material.css)
 
 The below html code example shows the minimal dependency of grid.
 
@@ -185,7 +185,7 @@ grid.appendTo('#Grid');
 
 ## Defining Row Data
 
-Data for the Grid control is bind by using [`dataSource`](https://ej2.syncfusion.com/javascript/documentation/api/grid/#datasource) property. It accepts either array of JavaScript object or [`DataManager`](https://ej2.syncfusion.com/javascript/documentation/grid/data-binding/data-binding) instance.
+Data for the Grid control is bind by using [dataSource](https://ej2.syncfusion.com/javascript/documentation/api/grid/#datasource) property. It accepts either array of JavaScript object or [DataManager](https://ej2.syncfusion.com/javascript/documentation/grid/data-binding/data-binding) instance.
 
 ```html
 <!DOCTYPE html>
@@ -231,10 +231,10 @@ grid.appendTo('#Grid');
 
 The Grid has an option to define columns as array. In these columns, we have properties to customize columns. Let’s check the properties used here:
 
-* We have added [`field`](https://ej2.syncfusion.com/javascript/documentation/api/grid/column/#field) to map with a property name an array of JavaScript objects.
-* We have added [`headerText`](https://ej2.syncfusion.com/javascript/documentation/api/grid/column/#headertext) to change the title of columns.
-* We have used [`textAlign`](https://ej2.syncfusion.com/javascript/documentation/api/grid/column/#textalign) to change the alignment of columns. By default, columns will be left aligned. To change columns to right align, we need to define [`textAlign`](https://ej2.syncfusion.com/javascript/documentation/api/grid/column/#textalign) as **Right**.
-* Also, we have used another useful property, [`format`](https://ej2.syncfusion.com/javascript/documentation/api/grid/column/#format). Using this, we can format number and date values to standard or custom formats. Here, we have defined it for the conversion of numeric values to currency.
+* We have added [field](https://ej2.syncfusion.com/javascript/documentation/api/grid/column/#field) to map with a property name an array of JavaScript objects.
+* We have added [headerText](https://ej2.syncfusion.com/javascript/documentation/api/grid/column/#headertext) to change the title of columns.
+* We have used [textAlign](https://ej2.syncfusion.com/javascript/documentation/api/grid/column/#textalign) to change the alignment of columns. By default, columns will be left aligned. To change columns to right align, we need to define [textAlign](https://ej2.syncfusion.com/javascript/documentation/api/grid/column/#textalign) as **Right**.
+* Also, we have used another useful property, [format](https://ej2.syncfusion.com/javascript/documentation/api/grid/column/#format). Using this, we can format number and date values to standard or custom formats. Here, we have defined it for the conversion of numeric values to currency.
 
 ```javascript
 var grid = new ej.grids.Grid({
@@ -254,21 +254,22 @@ grid.appendTo('#Grid');
 
 To create grids with additional features, inject the required modules. The following modules are used to extend grid's basic functionality.
 
-* [`Page`](https://helpej2.syncfusion.com/javascript/documentation/api/grid/page/) - Inject this module to use paging feature.
-* [`Sort`](https://helpej2.syncfusion.com/javascript/documentation/api/grid/sort/) - Inject this module to use sorting feature.
-* [`Filter`](https://helpej2.syncfusion.com/javascript/documentation/api/grid/filter/) - Inject this module to use filtering feature.
-* [`Group`](https://helpej2.syncfusion.com/javascript/documentation/api/grid/group/) - Inject this module to use grouping feature.
+* [Page](https://helpej2.syncfusion.com/javascript/documentation/api/grid/page/) - Inject this module to use paging feature.
+* [Sort](https://helpej2.syncfusion.com/javascript/documentation/api/grid/sort/) - Inject this module to use sorting feature.
+* [Filter](https://helpej2.syncfusion.com/javascript/documentation/api/grid/filter/) - Inject this module to use filtering feature.
+* [Group](https://helpej2.syncfusion.com/javascript/documentation/api/grid/group/) - Inject this module to use grouping feature.
 * **ExcelExport** - Inject this module to use Excel export feature.
 * **PdfExport** - Inject this module to use PDF export feature.
 
 These modules should be injected into the grid using the **ej.grids.Grid.Inject** method.
 
-> Additional feature modules are available [`here`](https://helpej2.syncfusion.com/javascript/documentation/api/grid/overview/).
+> Additional feature modules are available [here](https://helpej2.syncfusion.com/javascript/documentation/api/grid/overview/).
 
 ## Enable paging
 
-The paging feature enables users to view the grid record in a paged view. It can be enabled by setting the  [`allowPaging`](https://ej2.syncfusion.com/javascript/documentation/api/grid/#allowpaging) property to true. Inject the [`Page`](https://ej2.syncfusion.com/javascript/documentation/api/grid/#pagermodule)
- module as follows. If the [`Page`](https://ej2.syncfusion.com/javascript/documentation/api/grid/#pagermodule) module is not injected, the pager will not be rendered in the grid. Pager can be customized using the [`pageSettings`](https://ej2.syncfusion.com/javascript/documentation/api/grid/#pagesettings) property.
+The paging feature enables users to view the grid record in a paged view. It can be enabled by setting the  [allowPaging](https://ej2.syncfusion.com/javascript/documentation/api/grid/#allowpaging) property to true. Inject the [Page](https://ej2.syncfusion.com/javascript/documentation/api/grid/#pagermodule) module as follows. If the [Page](https://ej2.syncfusion.com/javascript/documentation/api/grid/#pagermodule) module is not injected, the pager will not be rendered in the grid. Pager can be customized using the [pageSettings](https://ej2.syncfusion.com/javascript/documentation/api/grid/#pagesettings) property.
+
+Create `my-app/es5-datasource.js` file to bind JSON data.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -277,13 +278,16 @@ The paging feature enables users to view the grid record in a paged view. It can
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/grid/grid-cs128/index.html %}
 {% endhighlight %}
+{% highlight html tabtitle="es5-datasource.js" %}
+{% include code-snippet/grid/grid-cs128/es5-datasource.js %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs128" %}
 
 ## Enable sorting
 
-The sorting feature enables you to order the records. It can be enabled by setting the  [`allowSorting`](https://ej2.syncfusion.com/javascript/documentation/api/grid/#allowsorting) property as true. Inject the [`Sort`](https://ej2.syncfusion.com/javascript/documentation/api/grid/#sortmodule) module as follows. If [`Sort`](https://ej2.syncfusion.com/javascript/documentation/api/grid/#sortmodule) module is not injected, you cannot sort when a header is clicked. Sorting feature can be customized using the  [`sortSettings`](https://ej2.syncfusion.com/javascript/documentation/api/grid/#sortsettings) property.
+The sorting feature enables you to order the records. It can be enabled by setting the  [allowSorting](https://ej2.syncfusion.com/javascript/documentation/api/grid/#allowsorting) property as true. Inject the [Sort](https://ej2.syncfusion.com/javascript/documentation/api/grid/#sortmodule) module as follows. If [Sort](https://ej2.syncfusion.com/javascript/documentation/api/grid/#sortmodule) module is not injected, you cannot sort when a header is clicked. Sorting feature can be customized using the  [sortSettings](https://ej2.syncfusion.com/javascript/documentation/api/grid/#sortsettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -292,13 +296,16 @@ The sorting feature enables you to order the records. It can be enabled by setti
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/grid/grid-cs129/index.html %}
 {% endhighlight %}
+{% highlight html tabtitle="es5-datasource.js" %}
+{% include code-snippet/grid/grid-cs129/es5-datasource.js %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs129" %}
 
 ## Enable filtering
 
-The filtering feature enables you to view reduced amount of records based on filter criteria. It can be enabled by setting the [`allowFiltering`](https://ej2.syncfusion.com/javascript/documentation/api/grid/#allowfiltering) property as true.  The [`Filter`](https://ej2.syncfusion.com/javascript/documentation/api/grid/#filtermodule) module has to be injected as follows. If [`Filter`](https://ej2.syncfusion.com/javascript/documentation/api/grid/#filtermodule) module is not injected,  filter bar will not be rendered in the grid. Filtering feature can be customized using the [`filterSettings`](https://ej2.syncfusion.com/javascript/documentation/api/grid/#filtersettings) property.
+The filtering feature enables you to view reduced amount of records based on filter criteria. It can be enabled by setting the [allowFiltering](https://ej2.syncfusion.com/javascript/documentation/api/grid/#allowfiltering) property as true.  The [Filter](https://ej2.syncfusion.com/javascript/documentation/api/grid/#filtermodule) module has to be injected as follows. If [Filter](https://ej2.syncfusion.com/javascript/documentation/api/grid/#filtermodule) module is not injected,  filter bar will not be rendered in the grid. Filtering feature can be customized using the [filterSettings](https://ej2.syncfusion.com/javascript/documentation/api/grid/#filtersettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -307,13 +314,16 @@ The filtering feature enables you to view reduced amount of records based on fil
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/grid/grid-cs130/index.html %}
 {% endhighlight %}
+{% highlight html tabtitle="es5-datasource.js" %}
+{% include code-snippet/grid/grid-cs130/es5-datasource.js %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs130" %}
 
 ## Enable grouping
 
-The grouping feature enables users to view the grid record in a grouped view. It can be enabled by setting the [`allowGrouping`](https://ej2.syncfusion.com/javascript/documentation/api/grid/#allowgrouping) property to true. The [`Group`](https://ej2.syncfusion.com/javascript/documentation/api/grid/#groupmodule) module has to be injected as follows. If [`Group`](https://ej2.syncfusion.com/javascript/documentation/api/grid/#groupmodule) module is not injected, the group drop area will not be rendered in the grid.Grouping feature can be customized using the [`groupSettings`](https://ej2.syncfusion.com/javascript/documentation/api/grid/#groupsettings) property.
+The grouping feature enables users to view the grid record in a grouped view. It can be enabled by setting the [allowGrouping](https://ej2.syncfusion.com/javascript/documentation/api/grid/#allowgrouping) property to true. The [Group](https://ej2.syncfusion.com/javascript/documentation/api/grid/#groupmodule) module has to be injected as follows. If [Group](https://ej2.syncfusion.com/javascript/documentation/api/grid/#groupmodule) module is not injected, the group drop area will not be rendered in the grid.Grouping feature can be customized using the [groupSettings](https://ej2.syncfusion.com/javascript/documentation/api/grid/#groupsettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -321,6 +331,9 @@ The grouping feature enables users to view the grid record in a grouped view. It
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/grid/grid-cs131/index.html %}
+{% endhighlight %}
+{% highlight html tabtitle="es5-datasource.js" %}
+{% include code-snippet/grid/grid-cs131/es5-datasource.js %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -339,13 +352,16 @@ Output will be displayed as follows.
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/grid/grid-cs132/index.html %}
 {% endhighlight %}
+{% highlight html tabtitle="es5-datasource.js" %}
+{% include code-snippet/grid/grid-cs132/es5-datasource.js %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs132" %}
 
 ## Deploy the Application
 
-The Essential JS 2 Grid control features are segregated into individual feature-wise modules. The [Essential Studio JavaScript (Essential JS 2)](https://www.syncfusion.com/downloads/essential-js2) build and **CDN** scripts contains code for all features used in grid and hence we suggest to not to use them in production. We strongly recommend you to generate script files to use in production using our **Custom Resource Generator**[`(CRG)`](https://crg.syncfusion.com) for Essential JS 2. CRG will allow you to generate the bundled script for the currently enabled features in grid.
+The Essential JS 2 Grid control features are segregated into individual feature-wise modules. The [Essential Studio JavaScript (Essential JS 2)](https://www.syncfusion.com/downloads/essential-js2) build and **CDN** scripts contains code for all features used in grid and hence we suggest to not to use them in production. We strongly recommend you to generate script files to use in production using our **Custom Resource Generator**[(CRG)](https://crg.syncfusion.com) for Essential JS 2. CRG will allow you to generate the bundled script for the currently enabled features in grid.
 
 ## See Also
 
