@@ -1,7 +1,6 @@
-
-
 import { Grid, DetailRow, Toolbar } from '@syncfusion/ej2-grids';
 import { data, employeeData } from './datasource.ts';
+import { DropDownList } from '@syncfusion/ej2-dropdowns';
 
 Grid.Inject(DetailRow, Toolbar);
 
@@ -28,4 +27,14 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 
-
+let dropdownList = ['All', 'Expanded', 'None'];
+let dropdownObject: DropDownList = new DropDownList({
+    index: "0",
+    width: "120",
+    dataSource: dropdownList,
+    change: onModeChange,
+});
+dropdownObject.appendTo('#dropdown');
+function onModeChange(args) {
+    grid.hierarchyPrintMode = args.value;
+}

@@ -1,5 +1,5 @@
 ej.grids.Grid.Inject(ej.grids.DetailRow, ej.grids.Toolbar);
-var grid= new ej.grids.Grid({
+var grid = new ej.grids.Grid({
     dataSource: employeeData,
     toolbar: ["Print"],
     hierarchyPrintMode: 'All',
@@ -21,4 +21,15 @@ var grid= new ej.grids.Grid({
     }
 });
 grid.appendTo('#Grid');
+var dropdownList = ['All', 'Expanded', 'None'];
+var dropdownObject = new ej.dropdowns.DropDownList({
+    index: "0",
+    width: "120",
+    dataSource: dropdownList,
+    change: onModeChange,
+});
+dropdownObject.appendTo('#dropdown');
+function onModeChange(args) {
+    grid.hierarchyPrintMode = args.value;
+}
 

@@ -9,9 +9,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print in ##Platform_Name## Grid control
+# Print in ##Platform_Name## Grid component
 
-To print the Grid, use the [`print`](../api/grid/print/#print) method from grid instance. The print option can be displayed on the [`toolbar`](../api/grid/#toolbar) by adding the `print` toolbar item.
+The printing feature in Syncfusion Grid allows you to easily generate and print a representation of the grid's content for better offline accessibility and documentation. You can enable this feature using either the grid's toolbar or the programmatically available `print` method.
+
+To add the printing option to the grid's toolbar, simply include the [toolbar](../../api/grid/#toolbar) property in your grid configuration and add the **Print** as toolbar item. This will allow you to directly initiate the printing process while click on the Print item from the toolbar.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -42,16 +44,16 @@ To print the Grid, use the [`print`](../api/grid/print/#print) method from grid 
 
 ## Page setup
 
-Some of the print options cannot be configured through JavaScript code. So, you have to customize the layout, paper size, and margin options using the browser page setup dialog. Please refer to the following links to know more about the browser page setup:
+When printing a webpage, some print options, such as layout, paper size, and margin settings, cannot be configured through JavaScript code. Instead, you need to customize these settings using the browser's page setup dialog. Below are links to the page setup guides for popular web browsers:
 
-* [`Chrome`](https://support.google.com/chrome/answer/1069693?hl=en&visit_id=1-636335333734668335-3165046395&rd=1)
-* [`Firefox`](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)
-* [`Safari`](http://www.mintprintables.com/print-tips/adjust-margins-osx/)
-* [`IE`](http://www.helpteaching.com/help/print/index.htm)
+* [Chrome](https://support.google.com/chrome/answer/1069693?hl=en&visit_id=1-636335333734668335-3165046395&rd=1)
+* [Firefox](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)
+* [Safari](http://www.mintprintables.com/print-tips/adjust-margins-osx/)
+* [IE](http://www.helpteaching.com/help/print/index.htm)
 
-## Print using an external button
+## Print by external button
 
-To print the grid from an external button, invoke the [`print`](../api/grid/print/#print) method.
+You can print the grid's content using an external button by utilizing the [print](../../api/grid/#print) method. This method allows you to trigger the printing process programmatically.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -80,9 +82,9 @@ To print the grid from an external button, invoke the [`print`](../api/grid/prin
 {% previewsample "page.domainurl/code-snippet/grid/print-method-cs1" %}
 {% endif %}
 
-## Print the visible page
+## Print visible Page
 
-By default, the grid prints all the pages. To print the current page alone, set the [`printMode`](../api/grid/#printmode) to `CurrentPage`.
+By default, the Syncfusion ##Platform_Name## Grid prints all the pages of the grid. The [printMode](../../api/grid/#printmode) property within the grid grants you control over the printing process. However, if you want to print only the current visible page, you can achieve this by setting the [printMode](../../api/grid/#printmode) property to **CurrentPage**.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -113,13 +115,15 @@ By default, the grid prints all the pages. To print the current page alone, set 
 
 ## Print the hierarchy grid
 
-By default, the grid will be print the master and expanded child grids alone. you can change the print option by using the [`hierarchyPrintMode`](../api/grid/#hierarchyprintmode) property. The available options are,
+The Syncfusion ##Platform_Name## Grid allows you to print hierarchy grids, which consist of a parent grid and its child grids. By default, when you print a hierarchy grid, it includes the parent grid and expanded child grids only. However, you can customize the print behavior using the [hierarchyPrintMode](../../api/grid/#hierarchyprintmode) property.
 
-| Mode     | Behavior    |
-|----------|-------------|
-| Expanded | Prints the master grid with expanded child grids. |
-| All      | Prints the master grid with all the child grids. |
-| None     | Prints the master grid alone. |
+The `hierarchyPrintMode` property in the ##Platform_Name## Grid lets you control the printing behavior for hierarchy grids. You can choose from three options:
+
+| Mode     | Behavior                                                                         |
+| -------- | -------------------------------------------------------------------------------  |
+| Expanded | Prints the parent grid with expanded child grids.                                |
+| All      | Prints the parent grid with all the child grids, whether expanded or collapsed.  |
+| None     | Prints the parent grid alone.                                                    |
 
 {% if page.publishingplatform == "typescript" %}
 

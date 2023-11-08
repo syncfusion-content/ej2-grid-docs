@@ -14,3 +14,14 @@ var grid = new ej.grids.Grid({
 });
 grid.appendTo('#Grid');
 
+var dropdownList = ['CurrentPage', 'AllPages'];
+var dropdownObject = new ej.dropdowns.DropDownList({
+    index: "0",
+    width: "120",
+    dataSource: dropdownList,
+    change: onChange,
+});
+dropdownObject.appendTo('#dropdown');
+function onChange(args) {
+    grid.printMode = args.value;
+}
