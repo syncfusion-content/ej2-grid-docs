@@ -293,27 +293,27 @@ Here is an example of how to change the header text of a column using the `getCo
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/column-header-dynamically/index.ts %}
+{% include code-snippet/grid/change-header-text-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-header-dynamically/index.html %}
+{% include code-snippet/grid/change-header-text-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/column-header-dynamically" %}
+{% previewsample "page.domainurl/code-snippet/grid/change-header-text-cs1" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/column-header-dynamically/index.js %}
+{% include code-snippet/grid/change-header-text-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-header-dynamically/index.html %}
+{% include code-snippet/grid/change-header-text-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/column-header-dynamically" %}
+{% previewsample "page.domainurl/code-snippet/grid/change-header-text-cs1" %}
 {% endif %}
 
 **Changing header text using headerValueAccessor property**
@@ -435,27 +435,27 @@ setHeaderHeight(args) {
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/column-header-orientation/index.ts %}
+{% include code-snippet/grid/orientation-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-header-orientation/index.html %}
+{% include code-snippet/grid/orientation-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/column-header-orientation" %}
+{% previewsample "page.domainurl/code-snippet/grid/orientation-cs1" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/column-header-orientation/index.js %}
+{% include code-snippet/grid/orientation-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-header-orientation/index.html %}
+{% include code-snippet/grid/orientation-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/column-header-orientation" %}
+{% previewsample "page.domainurl/code-snippet/grid/orientation-cs1" %}
 {% endif %}
 
 ## Custom tooltip for header 
