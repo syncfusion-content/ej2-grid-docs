@@ -15,8 +15,8 @@ var grid = new ej.grids.Grid({
     rowDrop: (args) => {
         args.cancel = true;
         var value = [];
-        for (var r = 0; r < args.rows.length; r++) {
-            value.push(args.fromIndex + r);
+        for (var index = 0; index < args.rows.length; index++) {
+            value.push(args.fromIndex + index);
         }
         grid.reorderRows(value, args.dropIndex);
     },

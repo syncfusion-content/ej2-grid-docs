@@ -29,8 +29,8 @@ var grid = new ej.grids.Grid({
     rowDrop: function (args) {
       document.getElementById('message').innerText = `rowDrop event triggered`;
       var value = [];
-      for (var r = 0; r < args.rows.length; r++) {
-        value.push(args.fromIndex + r);
+      for (var index = 0; index < args.rows.length; index++) {
+        value.push(args.fromIndex + index);
       }
       grid.reorderRows(value, args.dropIndex);
     },

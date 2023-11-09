@@ -90,7 +90,7 @@ Here's an example code snippet that demonstrates how to enable Row drag and drop
 
 The Grid provides the feature to drag and drop grid rows to any custom component. This feature allows you to easily move rows from one component to another without having to manually copy and paste data. To enable row drag and drop, you need to set the [allowRowDragAndDrop](../../api/grid/#allowrowdraganddrop) property to **true** and defining the custom component ID in the [targetID](../../api/grid/rowDropSettings/#targetid) property of the `rowDropSettings` object. The ID provided in `targetID` should correspond to the ID of the target component where the rows are to be dropped.
 
-In the below example, the selected grid row is dragged and dropped in to the TreeView component by using [rowDrop](../../api/grid/#rowdrop) event. Once the row is dropped into the TreeView component, we have removed the corresponding grid row from grid and its data inserted in custom component.
+In the below example, the selected grid row is dragged and dropped in to the TreeGrid component by using [rowDrop](../../api/grid/#rowdrop) event. Once the row is dropped into the TreeGrid component, we have removed the corresponding grid row from grid and its data inserted in custom component.
 
 {% if page.publishingplatform == "typescript" %}
 

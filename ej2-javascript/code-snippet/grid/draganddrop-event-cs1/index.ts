@@ -33,8 +33,8 @@ let grid: Grid = new Grid({
     rowDrop: function (args: RowDragEventArgs) {
       (document.getElementById('message') as HTMLElement).innerText = `rowDrop event triggered`;
       let value = [];
-      for (let r = 0; r < args.rows.length; r++) {
-        value.push(args.fromIndex + r);
+      for (let index = 0; index < args.rows.length; index++) {
+        value.push(args.fromIndex + index);
       }
       grid.reorderRows(value, args.dropIndex);
     },
