@@ -1,13 +1,12 @@
-import { Grid, Page, Selection} from '@syncfusion/ej2-grids';
+import { Grid, Page} from '@syncfusion/ej2-grids';
 import { Tooltip, TooltipEventArgs } from '@syncfusion/ej2-popups';
 import { data } from './datasource.ts';
 
-Grid.Inject(Page, Selection);
+Grid.Inject(Page);
 
 let grid: Grid = new Grid({
   dataSource: data,
   allowPaging: true,
-  pageSettings: { pageCount: 5 },
   columns: [
     {
       field: 'OrderID',
@@ -53,6 +52,7 @@ let tooltip = new Tooltip({
   target: '.e-headertext',
 });
 tooltip.appendTo('#tooltip');
+
 function beforeRender(args: TooltipEventArgs) {
   const description = (columnDescriptions as Object)[args.target.innerText];
   if (description) {

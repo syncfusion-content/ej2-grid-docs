@@ -1,13 +1,9 @@
-import { Grid, Page, Selection } from '@syncfusion/ej2-grids';
+import { Grid } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 import { Button } from '@syncfusion/ej2-buttons';
 
-Grid.Inject(Page, Selection);
-
 let grid: Grid = new Grid({
     dataSource: data,
-    allowPaging: true,
-
     columns: [
         { field: 'OrderID', headerText: 'Order ID', width: 120 },
         { field: 'CustomerID', headerText: 'Customer ID', width: 140 },

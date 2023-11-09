@@ -1,10 +1,10 @@
-import { Grid, Page, Selection } from '@syncfusion/ej2-grids';
+import { Grid, Page } from '@syncfusion/ej2-grids';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
 import { data } from './datasource.ts';
 import { Button } from '@syncfusion/ej2-buttons';
 import { TextBox } from '@syncfusion/ej2-inputs';
 
-Grid.Inject(Page, Selection);
+Grid.Inject(Page);
 
 let grid: Grid = new Grid({
   dataSource: data,
@@ -18,6 +18,7 @@ let grid: Grid = new Grid({
   ]
 });
 grid.appendTo('#Grid');
+
 let dropDownColumn: DropDownList = new DropDownList({
   dataSource: [
     { text: 'OrderID', value: 'OrderID'},

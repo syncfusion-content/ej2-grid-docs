@@ -1,15 +1,13 @@
-import { Grid, Page,HeaderCellInfoEventArgs, Selection} from '@syncfusion/ej2-grids';
+import { Grid, Page,HeaderCellInfoEventArgs} from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
-Grid.Inject(Page, Selection);
+Grid.Inject(Page);
 
-    
-    let grid: Grid = new Grid(
+let grid: Grid = new Grid(
         {
             dataSource: data,
             allowPaging: true,
-            headerCellInfo:headerCellInfo,
-            pageSettings: { pageCount: 5 },
+            headerCellInfo:onHeaderCellInfo,
             columns: [
                 { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120},
                 { field: 'CustomerID', headerText: 'Customer ID', textAlign: 'Right', width: 120},
@@ -21,7 +19,7 @@ Grid.Inject(Page, Selection);
         });
     grid.appendTo('#Grid');
 
-    function headerCellInfo(args: HeaderCellInfoEventArgs)
+    function onHeaderCellInfo(args: HeaderCellInfoEventArgs)
     {
         if (args.cell.column.field == 'OrderDate') {
             args.node.classList.add('customcss');

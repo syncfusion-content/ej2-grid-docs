@@ -1,9 +1,9 @@
 
-import { Grid, Page, Selection } from '@syncfusion/ej2-grids';
+import { Grid, Page} from '@syncfusion/ej2-grids';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
 import { inventoryData } from './datasource.ts';
 
-Grid.Inject(Page, Selection);
+Grid.Inject(Page);
 
 let grid: Grid = new Grid(
     {
@@ -11,7 +11,6 @@ let grid: Grid = new Grid(
         allowPaging: true,
         allowTextWrap: true,
         textWrapSettings: { wrapMode: 'Header' },
-
         columns: [
             { field: 'Inventor', headerText: 'Inventor Name', width: 180, textAlign: 'Right' },
             { field: 'NumberofPatentFamilies', headerText: 'Number of Patent Families', width: 180 },
@@ -19,9 +18,9 @@ let grid: Grid = new Grid(
             { field: 'Active',headerText:'Active', width: 120 },
             { field: 'Mainfieldsofinvention', headerText: 'Main Feilds Of Invention', width: 200 },
         ],
-        pageSettings: { pageCount: 5 }
     });
 grid.appendTo('#Grid');
+
 let dropDownColumn: DropDownList = new DropDownList({
     dataSource: [
         { text: 'Header', value: 'Header' },
@@ -33,6 +32,7 @@ let dropDownColumn: DropDownList = new DropDownList({
     change: change,
 });
 dropDownColumn.appendTo('#dropdownlist');
+
 function change(args) {
     grid.textWrapSettings.wrapMode = args.value;
 }

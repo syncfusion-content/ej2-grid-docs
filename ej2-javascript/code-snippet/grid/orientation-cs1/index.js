@@ -28,7 +28,7 @@ var grid = new ej.grids.Grid({
       format: 'yMd',
     },
   ],
-  height: 200, 
+  height: 240, 
 });
 grid.appendTo('#Grid');
 

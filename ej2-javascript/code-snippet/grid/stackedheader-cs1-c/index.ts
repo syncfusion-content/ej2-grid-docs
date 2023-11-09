@@ -1,14 +1,13 @@
-import { Grid, Page, Selection } from '@syncfusion/ej2-grids';
+import { Grid, Page} from '@syncfusion/ej2-grids';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
 import { data } from './datasource.ts';
 
-Grid.Inject(Page, Selection);
+Grid.Inject(Page);
 
 let grid: Grid = new Grid({
   dataSource: data,
   allowPaging: true,
-  allowResizing: true,
-
+  
   columns: [
     {
       field: 'OrderID',
@@ -60,7 +59,6 @@ let grid: Grid = new Grid({
       ],
     },
   ],
-  pageSettings: { pageCount: 5 },
 });
 grid.appendTo('#Grid');
 
