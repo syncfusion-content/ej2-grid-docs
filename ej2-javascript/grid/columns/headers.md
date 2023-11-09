@@ -57,27 +57,27 @@ In this demo, the custom element is rendered for both **CustomerID** and **Order
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/headertemplate-cs-c/index.ts %}
+{% include code-snippet/grid/headertemplate-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/headertemplate-cs-c/index.html %}
+{% include code-snippet/grid/headertemplate-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/headertemplate-cs-c1" %}
+{% previewsample "page.domainurl/code-snippet/grid/headertemplate-cs1" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/headertemplate-cs-c/index.js %}
+{% include code-snippet/grid/headertemplate-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/headertemplate-cs-c/index.html %}
+{% include code-snippet/grid/headertemplate-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/headertemplate-cs-c" %}
+{% previewsample "page.domainurl/code-snippet/grid/headertemplate-cs1" %}
 {% endif %}
 
 >* The `headerTemplate` property is only applicable to Grid columns that have a header element.
