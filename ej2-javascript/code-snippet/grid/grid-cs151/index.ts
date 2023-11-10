@@ -1,7 +1,7 @@
-import { Grid, Toolbar, PdfExport } from '@syncfusion/ej2-grids';
+import { Grid, Toolbar, PdfExport,  Aggregate} from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
-Grid.Inject(Toolbar, PdfExport);
+Grid.Inject(Toolbar, PdfExport,Aggregate);
 
 let grid: Grid = new Grid({
     dataSource: data,
@@ -14,15 +14,15 @@ let grid: Grid = new Grid({
         { field: 'ShipCity', headerText: 'Ship City', textAlign: 'Right', width: 120},
         { field: 'ShipCountry', headerText: 'Ship Country', textAlign: 'Right', width: 140}
     ],
-    height: 220,
+    height: 272,
     aggregates: [{
-                    columns: [{
-                        type: 'Custom',
-                        customAggregate: customAggregateFn,
-                        columnName: 'ShipCountry',
-                        footerTemplate: 'Brazil Count: ${Custom}'
-                    }]
-                }]
+        columns: [{
+            type: 'Custom',
+            customAggregate: customAggregateFn,
+            columnName: 'ShipCountry',
+            footerTemplate: 'Brazil Count: ${Custom}'
+        }]
+    }]
 });
 grid.appendTo('#Grid');
 

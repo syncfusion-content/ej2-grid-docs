@@ -11,7 +11,7 @@ var grid = new ej.grids.Grid({
         { field: 'ShipCity', headerText: 'Ship City', textAlign: 'Right', width: 120},
         { field: 'ShipCountry', headerText: 'Ship Country', textAlign: 'Right', width: 140}
     ],
-    height: 220,
+    height: 272,
     aggregates: [{
                     columns: [{
                         type: 'Custom',

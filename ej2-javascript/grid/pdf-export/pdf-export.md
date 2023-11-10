@@ -121,7 +121,7 @@ The following example demonstrates how to render custom data source during PDF e
 
 ## Exporting with custom aggregate
 
-Custom aggregates in the Syncfusion javascript Grid involves exporting grid data that includes additional calculated values based on specific requirements. This feature enables you to show the comprehensive view of the data in the exported file by incorporating the specific aggregated information you need for analysis or reporting purposes.
+Custom aggregates in the Syncfusion ##Platform_Name## Grid involves exporting grid data that includes additional calculated values based on specific requirements. This feature enables you to show the comprehensive view of the data in the exported file by incorporating the specific aggregated information you need for analysis or reporting purposes.
 
 In order to utilize custom aggregation, you need to specify the [type](../../api/grid/aggregateColumnDirective/#type) property as **Custom** and provide the custom aggregate function in the [customAggregate](../../documentation/api/grid/aggregateColumnDirective/#customaggregate) property. 
 
@@ -155,6 +155,14 @@ The following example shows how to export the grid with a custom aggregate that 
 
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs151" %}
 {% endif %}
+
+## Exporting with custom date format
+
+The exporting functionality in the Syncfusion javascript Grid allows you to export grid data, including custom date format. This feature is useful when you need to export grid data with customized date values. 
+
+To apply a custom date format to grid columns during the export, you can utilize the [columns.format](../../api/grid/column/#format) property. This property allows you to define a custom format using format options.
+
+The following example demonstrates how to export the grid data with custom date format. In this example, the formatOptions object is used as the `columns.format` property for the **OrderDate** column. This custom date format displays the date in the format of day-of-the-week, month abbreviation, day, and 2-digit year (e.g., Thu, Jul 4, '96).
 
 ## Passing additional parameters to the server when exporting
 
