@@ -25,21 +25,20 @@ function rowSelected(args){
 }
 
 function beforePrint(args) {
-    let customEle = document.createElement('div');
-    customEle.innerHTML = document.getElementsByClassName('e-statustext')[0].innerHTML + grid.element.innerHTML;
-    customEle.appendChild(document.createElement('br'));
-    args.element.append(customEle);
+    let customElement = document.createElement('div');
+    customElement.innerHTML = document.getElementsByClassName('e-statustext')[0].innerHTML + grid.element.innerHTML;
+    customElement.appendChild(document.createElement('br'));
+    args.element.append(customElement);
 }
 
 var grid = new ej.grids.Grid({
     allowSelection: false,
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', width: 100, textAlign: 'Right' },
+        { field: 'OrderID', headerText: 'Order ID', width: 100 },
         { field: 'Freight', headerText: 'Freight', width: 100, format: 'C2', type: 'number' },
-        { field: 'ShipName', headerText: 'Ship Name', width: 200 },
+        { field: 'ShipName', headerText: 'Ship Name', width: 150 },
         { field: 'ShipCountry', headerText: 'Ship Country', width: 150 },
-        { field: 'ShipAddress', headerText: 'Ship Address', width: 200 },
+        { field: 'ShipAddress', headerText: 'Ship Address', width: 150 },
     ],
 });
 grid.appendTo('#DetailGrid');
-

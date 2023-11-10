@@ -154,9 +154,9 @@ The `hierarchyPrintMode` property in the ##Platform_Name## Grid lets you control
 
 ## Print the master detail grid
 
-The Grid has the option to visualize details of a record in another Grid in a master and detailed manner. By default, Grid will print the master grid alone. Instead of this, it is possible to print both the master and detail grids by using the [beforePrint](../../api/grid/#beforeprint) event of the Grid.
+The Syncfusion ##Platform_Name## Grid provides the option to visualize details of a record in another grid in a master-detail manner. By default, when you print a master-detail grid, only the master grid is included in the print output. However, you can customize the print behavior to include both the master and detail grids using the `beforePrint` event of the grid.
 
-In the following sample, the detail grid is added to the `element` argument of the `beforePrint` event, resulting in both the master and detail grids being printed on the page.
+The [beforePrint](../../api/grid/#beforeprint) event in the ##Platform_Name## Grid is triggered before the actual printing process begins. You can handle this event to customize the print output. By adding the detail grid to the `element` argument of the `beforePrint` event, you can ensure that both the master and detail grids are printed on the page.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -187,21 +187,21 @@ In the following sample, the detail grid is added to the `element` argument of t
 
 ## Print large number of columns
 
-By default, the browser uses A4 as page size option to print pages and to adapt the size of the page the browser print preview will auto-hide the overflowed contents. Hence grid with large number of columns will cut off to adapt the print page.
+When printing a grid with a large number of columns, the browser's default page size (usually A4) might not be sufficient to display all the columns properly. As a result, the browser's print preview may automatically hide the overflowed content, leading to a cut-off appearance.
 
-To show large number of columns when printing, adjust the scale option from print option panel based on your content size.
+To show a large number of columns when printing, you can adjust the scale option from the print option panel based on your content size. This will allow you to fit the entire grid content within the printable area.
 
 ![Scale Option Setting](./images/print-preview.png)
 
-## Show or Hide columns while Printing
+## Show or hide columns while printing
 
-You can show a hidden column or hide a visible column while printing the grid using [`toolbarClick`](../api/grid/#toolbarclick) and [`printComplete`](../api/grid/#printcomplete) events.
+In the Syncfusion ##Platform_Name## Grid, you have the flexibility to control the visibility of columns during the printing process. You can dynamically show or hide specific columns using the [toolbarClick](../../api/grid#toolbarclick) and [printComplete](../../api/grid#printcomplete) events while printing. This capability enhances your control over which columns are included in the printed output, allowing you to tailor the printed grid to your specific needs.
 
-In the `toolbarClick` event, based on `args.item.id` as `grid_print`. We can show or hide columns by setting `column.visible` property to `true` or `false` respectively.
+In the [toolbarClick](../../api/grid#toolbarclick) event, you can show or hide columns by setting [column.visible](../../api/grid/column/#visible) property to **true** or **false** respectively.
 
-In the printComplete event, We have reversed the state back to the previous state.
+In the `printComplete` event, the column visibility state is reset back to its original configuration.
 
-In the below example, we have `CustomerID` as a hidden column in the grid. While printing, we have changed `CustomerID` to visible column and `ShipCity` as hidden column.
+Here's a code example that demonstrates how to show a hidden column (CustomerID) and hide a visible column (ShipCity) during printing and then reset their visibility after printing:
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -230,11 +230,42 @@ In the below example, we have `CustomerID` as a hidden column in the grid. While
 {% previewsample "page.domainurl/code-snippet/grid/showhideColumns-print-cs1" %}
 {% endif %}
 
-## Limitations of Printing Large Data
+## Limitations of printing large data
 
-When grid contains large number of data, printing all the data at once is not a best option for the browser performance. Because to render all the DOM elements in one page will produce performance issues in the browser. It leads to browser slow down or browser hang. Grid have option to handle large number of data by Virtualization. However while printing, it is not possible to use virtualization for rows and columns.
+Printing a large volume of data all at once in the grid can have certain limitations due to potential browser performance issues. Rendering numerous DOM elements on a single page can lead to browser slowdowns or even hang the browser. The grid offers a solution to manage extensive datasets through virtualization. However, it's important to note that virtualization for both rows and columns is not feasible during the printing process.
 
-If printing of all the data is still needed, we suggest to Export the grid to `Excel` or `CSV` or `Pdf` and then print it from another non-web based application.
+If printing all the data remains a requirement, an alternative approach is recommended. Exporting the grid data to formats like [Excel](../../grid/excel-exporting/) or [CSV](../../grid/excel-exporting/) or [Pdf](../../grid/pdf-export/) is advised. This exported data can then be printed using non-web-based applications, mitigating the potential performance challenges associated with printing large datasets directly from the browser.
+
+## Retain grid styles while printing
+
+The Syncfusion ##Platform_Name## Grid provides a [beforePrint](../../api/grid/#beforeprint) event that allows you to customize the appearance and styles of the grid before it is sent to the printer. By handling this event, you can ensure that the grid retains its styles and appearance while printing.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/print-style-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/print-style-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/print-style-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/print-style-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/print-style-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/print-style-cs1" %}
+{% endif %}
 
 ## See Also
 
