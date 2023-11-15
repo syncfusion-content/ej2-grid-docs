@@ -164,6 +164,16 @@ To apply a custom date format to grid columns during the export, you can utilize
 
 The following example demonstrates how to export the grid data with custom date format. In this example, the formatOptions object is used as the `columns.format` property for the **OrderDate** column. This custom date format displays the date in the format of day-of-the-week, month abbreviation, day, and 2-digit year (e.g., Thu, Jul 4, '96).
 
+## Exporting multiple grids
+
+Exporting multiple grids in the Syncfusion javascript Grid component allows you to export different grids to compare them side by side in external applications on the same or different pages of a PDF file.  Each grid is identified by its unique ID. You can specify which grid to export by listing their **IDs** in the [exportGrids](../../api/grid/#exportgrids) property.
+
+### Same page
+
+PDF exporting provides support for exporting multiple grids on the same page. To export the grids on the same page, define [multipleExport.type](../../api/grid/multiplePdfExport/#type) as **AppendToPage** in [pdfExportProperties](../../api/grid/pdfExportProperties/#multipleexport). It also has an option to provide blank space between the grids. This blank space can be defined by using [multipleExport.blankSpace](../../api/grid/multiplePdfExport/#blankspace) property. 
+
+The following example demonstrates how to export multiple grids to the same page in a PDF file when a toolbar item is clicked.
+
 ## Passing additional parameters to the server when exporting
 
 You can pass the additional parameter in the `query` property by invoking `addParams` method. In the `toolbarClick` event, you can define params as key and value pair so it will receive at the server side when exporting.
