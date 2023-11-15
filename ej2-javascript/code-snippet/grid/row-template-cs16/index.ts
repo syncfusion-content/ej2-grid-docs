@@ -1,39 +1,21 @@
+import { Grid, Page, ContextMenu, ExcelExport, PdfExport, Sort} from '@syncfusion/ej2-grids';
+import { data } from './datasource.ts';
 
-
-import { Grid, Edit, Page, ContextMenu } from '@syncfusion/ej2-grids';
-import { data  } from './datasource.ts';
-
-Grid.Inject(Edit, Page, ContextMenu);
+Grid.Inject( Page, ContextMenu, ExcelExport, PdfExport, Sort);
 
 let values: any;
 let grid: Grid = new Grid({
   dataSource: data,
-  editSettings: { allowAdding: true, allowDeleting: true, allowEditing: true },
   allowPaging: true,
-  contextMenuItems: ['Copy', 'Edit', 'Delete'],
+  allowPdfExport: true,
+  allowExcelExport: true,
+  allowSorting: true,
+  contextMenuItems: ['SortAscending', 'SortDescending', 'PdfExport', 'ExcelExport', 'FirstPage', 'PrevPage', 'LastPage', 'NextPage'],
   columns: [
-    {
-      field: 'OrderID',
-      headerText: 'Order ID',
-      width: 120,
-      textAlign: 'Right',
-      isPrimaryKey: true,
-    },
-    { field: 'CustomerName', headerText: 'Customer Name' },
-    {
-      field: 'Freight',
-      format: 'C2',
-      textAlign: 'Right',
-      editType: 'numericedit',
-    },
-    { field: 'ShipName', headerText: 'Ship Name', width: 200 },
-    {
-      field: 'ShipCountry',
-      headerText: 'Ship Country',
-      width: 150,
-      editType: 'dropdownedit',
-    },
-    { field: 'ShipCity', headerText: 'Ship City', width: 150 },
+    { field: 'OrderID', headerText: 'Order ID', width: '90', textAlign: 'Right', isPrimaryKey: true },
+    { field: 'CustomerID', headerText: 'Customer Name', width: '100' },
+    { field: 'ShipCountry', headerText: 'Ship Country', width: '100' },
+    { field: 'ShipCity', headerText: 'Ship City', width: '100' },
   ],
   created: () => {
     grid.contextMenuModule.contextMenu.beforeOpen = (args) => {
@@ -45,13 +27,10 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 
-document.getElementById('Grid').onclick = (event) => {
+(document.getElementById('Grid') as HTMLElement).onclick = (event) => {
   values = event;
   grid.contextMenuModule.contextMenu.open(
     values.pageY + pageYOffset,
     values.pageX + pageXOffset
   );
 };
-
-
-
