@@ -1,4 +1,4 @@
-import { Grid, ForeignKey, Filter } from '@syncfusion/ej2-grids';
+import { Grid, ForeignKey, Filter ,  Column} from '@syncfusion/ej2-grids';
 import { data, fEmployeeData } from './datasource.ts';
 import { createElement } from '@syncfusion/ej2-base';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
@@ -17,6 +17,7 @@ let grid: Grid = new Grid(
                 field: 'EmployeeID', headerText: 'Employee Name', width: 120, foreignKeyValue: 'FirstName', dataSource: fEmployeeData,
                 filterBarTemplate: {
                     create: (args: { element: Element, column: Column }) =>
+                    {
                         return createElement('input', { className: 'flm-input' });;
                     },
                     write: (args: { element: Element, column: Column }) => {
@@ -27,7 +28,7 @@ let grid: Grid = new Grid(
                             placeholder: 'Select a value',
                             popupHeight: '200px',
                             index: 0,
-                            change: (args) => {
+                            change: (args: { value: string }) => {
                                 if (args.value !== 'All') {
                                     grid.filterByColumn('EmployeeID', 'equal', args.value);
                                 }

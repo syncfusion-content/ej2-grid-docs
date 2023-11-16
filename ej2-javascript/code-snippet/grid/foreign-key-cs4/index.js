@@ -7,10 +7,10 @@ var grid = new ej.grids.Grid({
         {
             field: 'EmployeeID', headerText: 'Employee Name', width: 120, foreignKeyValue: 'FirstName', dataSource: fEmployeeData,
             filterBarTemplate: {
-                create: function () {
+                create: function() {
                     return ej.base.createElement('input', { className: 'flm-input' });
                 },
-                write: function (args) {
+                write: function(args) {
                     fEmployeeData.splice(0, 0, { 'FirstName': 'All' }); // for clear filtering
                     var dropInstance = new ej.dropdowns.DropDownList({
                         dataSource: new ej.data.DataManager(fEmployeeData),
@@ -18,7 +18,7 @@ var grid = new ej.grids.Grid({
                         placeholder: 'Select a value',
                         popupHeight: '200px',
                         index: 0,
-                        change: function (e) {
+                        change: function(e) {
                             if (e.value !== 'All') {
                                 grid.filterByColumn('EmployeeID', 'equal', e.value);
                             }
