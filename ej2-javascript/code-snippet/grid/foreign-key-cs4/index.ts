@@ -16,7 +16,7 @@ let grid: Grid = new Grid(
             {
                 field: 'EmployeeID', headerText: 'Employee Name', width: 120, foreignKeyValue: 'FirstName', dataSource: fEmployeeData,
                 filterBarTemplate: {
-                    create: (args: { element: Element, column: Column }) =>
+                    create: () =>
                     {
                         return createElement('input', { className: 'flm-input' });;
                     },
