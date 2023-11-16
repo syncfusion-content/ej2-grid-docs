@@ -11,19 +11,26 @@ let grid: Grid = new Grid({
   allowPaging: true,
   columns: [
     { field: 'OrderID', headerText: 'Order ID', width: 120 },
-    { field: 'CustomerID', headerText: 'Customer ID', width: 150},
-    { field: 'Freight', width: 120, format: 'C2'},
+    { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
+    { field: 'Freight', width: 120, format: 'C2' },
     { field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd' },
   ]
 });
 grid.appendTo('#Grid');
-let dropDownColumn: DropDownList = new DropDownList({
-  dataSource: [
+
+let columns =
+  [
     { text: 'OrderID', value: 'OrderID' },
     { text: 'CustomerID', value: 'CustomerID' },
     { text: 'Freight', value: 'Freight' },
     { text: 'OrderDate', value: 'OrderDate' },
-  ],
+  ]
+
+let field = { text: 'text', value: 'value' };
+
+let dropDownColumn: DropDownList = new DropDownList({
+  dataSource: columns,
+  fields: field,
   value: 'OrderID',
   popupHeight: '240px',
   width: '120px',

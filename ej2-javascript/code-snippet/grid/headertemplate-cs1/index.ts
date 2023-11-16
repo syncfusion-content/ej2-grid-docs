@@ -1,4 +1,4 @@
-import { Grid } from '@syncfusion/ej2-grids';
+import { Grid,ChangeEventArgs } from '@syncfusion/ej2-grids';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
 import { Switch } from '@syncfusion/ej2-buttons';
 import { data } from "./datasource.ts"
@@ -7,24 +7,12 @@ let dropdownData = ['Freight', 'Shipment', 'Cargo'];
 let grid: Grid = new Grid({
   dataSource: data,
   columns: [
+    { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
     {
-      field: 'OrderID',
-      headerText: 'Order ID',
-      textAlign: 'Right',
-      width: 120,
-    },
-    {
-      field: 'CustomerID',
-      headerText: 'Customer ID',
+      field: 'CustomerID', headerText: 'Customer ID', width: 140,
       headerTemplate: ` <div> <span class="e-icon-userlogin e-icons employee"></span> Customer ID</div>`,
-      width: 140,
     },
-    {
-      field: 'Freight',
-      headerText: 'Freight',
-      headerTemplate: ` <div id='Freight'></div>`,
-      width: 120,
-    },
+    { field: 'Freight', headerText: 'Freight', headerTemplate: ` <div id='Freight'></div>`, width: 120 },
     {
       field: 'OrderDate', headerText: 'Order Date', format: 'yMd',
       headerTemplate:
@@ -50,7 +38,7 @@ let toggleButton: Switch = new Switch({
 });
 toggleButton.appendTo('#OrderDate');
 
-function onSwitchToggle(args) {
+function onSwitchToggle(args: ChangeEventArgs) {
   headerText = args.checked ? 'Purchase Date' : 'Order Date';
   (document.getElementById('headerText') as HTMLElement).innerHTML = headerText;
 }

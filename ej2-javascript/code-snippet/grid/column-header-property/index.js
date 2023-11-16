@@ -2,12 +2,7 @@ var grid = new ej.grids.Grid({
   dataSource: data,
   allowPaging: true,
   columns: [
-    {
-      field: 'OrderID',
-      headerText: 'Order ID',
-      headerValueAccessor: headerValueAccessor,
-      width: 120,
-    },
+    { field: 'OrderID', headerText: 'Order ID', headerValueAccessor: headerValueAccessor, width: 120 },
     { field: 'CustomerID', headerText: 'Customer ID', headerValueAccessor: headerValueAccessor, width: 140 },
     { field: 'Freight', headerText: 'Freight', headerValueAccessor: headerValueAccessor, format: 'C', width: 120 },
     { field: 'OrderDate', headerText: 'Order Date', headerValueAccessor: headerValueAccessor, format: 'yMd', width: 140 },
@@ -15,18 +10,18 @@ var grid = new ej.grids.Grid({
 });
 grid.appendTo('#Grid');
 
-let columns = [
+var columns = [
   { text: 'OrderID', value: 'OrderID' },
   { text: 'CustomerID', value: 'CustomerID' },
   { text: 'Freight', value: 'Freight' },
   { text: 'OrderDate', value: 'OrderDate' },
 ];
 
-let field = { text: 'text', value: 'value' };
+var field = { text: 'text', value: 'value' };
 
 var dropdown = new ej.dropdowns.DropDownList({
   dataSource: columns,
-  feilds: field,
+  fields: field,
   value: 'OrderID',
   popupHeight: '240px',
   width: 220,
@@ -49,6 +44,7 @@ function headerValueAccessor(field, columns) {
     columns.headerText = textbox.value;
   }
 }
+
 document.getElementById('buttons').onclick = function () {
   grid.refreshHeader();
 };

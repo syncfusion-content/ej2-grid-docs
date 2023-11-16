@@ -6,18 +6,12 @@ var grid = new ej.grids.Grid({
     { field: 'Freight', headerText: 'Freight', width: 120, format: 'C2' },
     { field: 'ShipName', headerText: 'Ship Name', width: 150 },
     { field: 'ShipCountry', headerText: 'Ship Country', width: 120 },
-    {
-      field: 'OrderDate',
-      headerText: 'Order Date',
-      type: 'date',
-      format: 'yMd',
-      width: 120
-    },
+    { field: 'OrderDate', headerText: 'Order Date', type: 'date', format: 'yMd', width: 120 },
   ],
 });
 grid.appendTo('#Grid');
 
-let columnDescriptions = {
+var columnDescriptions = {
   'Order ID': 'A unique number assigned to each order.',
   'Freight': 'The cost of shipping the order.',
   'Ship Name':
@@ -33,7 +27,7 @@ var tooltip = new ej.popups.Tooltip({
 tooltip.appendTo('#tooltip');
 
 function beforeRender(args) {
-  const description = columnDescriptions[args.target.innerText];
+  var description = columnDescriptions[args.target.innerText];
   if (description) {
     tooltip.content = args.target.innerText + ': ' + description;
   }

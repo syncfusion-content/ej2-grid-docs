@@ -11,10 +11,9 @@ let grid: Grid = new Grid(
             columns: [
                 { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120},
                 { field: 'CustomerID', headerText: 'Customer ID', textAlign: 'Right', width: 120},
-                        { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', width: 135, format: 'yMd' },
-                        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C2'},
-            
-                        { field: 'ShippedDate', headerText: 'Shipped Date', textAlign: 'Right', width: 145, format: 'yMd'},
+                { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', width: 135, format: 'yMd' },
+                { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C2'},
+                { field: 'ShippedDate', headerText: 'Shipped Date', textAlign: 'Right', width: 145, format: 'yMd'},
             ]
         });
     grid.appendTo('#Grid');
@@ -25,4 +24,3 @@ let grid: Grid = new Grid(
             args.node.classList.add('customcss');
           }
     }
-    

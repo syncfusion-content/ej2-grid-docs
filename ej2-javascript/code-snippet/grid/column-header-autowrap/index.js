@@ -7,38 +7,16 @@ var grid = new ej.grids.Grid({
   height: 400,
 
   columns: [
-    {
-      field: 'Inventor',
-      headerText: 'Inventor Name',
-      width: 180,
-      textAlign: 'Right',
-    },
-    {
-      field: 'NumberofPatentFamilies',
-      headerText: 'Number of Patent Families',
-      width: 180,
-      textAlign: "Right",
-    },
-    {
-      field: 'Country',
-      headerText: 'Country',
-      width: 140,
-      textAlign: 'Right',
-    },
-    { 
-      field: 'Active', 
-      headerText:'Active',
-      width: 120 },
-    {
-      field: 'Mainfieldsofinvention',
-      headerText: 'Main Feilds Of Invention',
-      width: 200,
-    },
+    { field: 'Inventor', headerText: 'Inventor Name', width: 180, textAlign: 'Right' },
+    { field: 'NumberofPatentFamilies', headerText: 'Number of Patent Families', width: 180, textAlign: "Right" },
+    { field: 'Country', headerText: 'Country', width: 140, textAlign: 'Right', },
+    { field: 'Active', headerText: 'Active', width: 120 },
+    { field: 'Mainfieldsofinvention', headerText: 'Main Feilds Of Invention', width: 200 },
   ],
 });
 grid.appendTo('#Grid');
 
-let dropdownData = [
+var dropdownData = [
   { text: 'Header', value: 'Header' },
   { text: 'Both', value: 'Both' },
 ]

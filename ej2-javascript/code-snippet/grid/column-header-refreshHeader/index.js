@@ -1,20 +1,11 @@
 var grid = new ej.grids.Grid({
   dataSource: data,
   columns: [
-    {
-      field: 'OrderID',
-      headerText: 'Order ID',
-      width: 100,
-    },
+    { field: 'OrderID', headerText: 'Order ID', width: 100, },
     { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
-    {
-      field: 'OrderDate',
-      headerText: 'Order Date',
-      format: 'yMd',
-    },
+    { field: 'OrderDate', headerText: 'Order Date', format: 'yMd' },
     { field: 'Freight', headerText: 'Freight', width: 120 }
   ],
-
   height: 280,
 });
 grid.appendTo('#Grid');

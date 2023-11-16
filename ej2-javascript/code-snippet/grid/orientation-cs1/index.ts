@@ -8,8 +8,8 @@ let grid: Grid = new Grid({
   height: 240,
   columns: [
     { field: 'OrderID', headerText: 'Order ID', width: 100 },
-    { field: 'CustomerID', headerText: 'Customer Name', width: 120},
-    { field: 'Freight', width: 80,customAttributes: customAttributes, format: 'C2',textAlign: 'Center'},
+    { field: 'CustomerID', headerText: 'Customer Name', width: 120 },
+    { field: 'Freight', width: 80, customAttributes: customAttributes, format: 'C2', textAlign: 'Center' },
     { field: 'ShipCity', headerText: 'Order Date', width: 100, format: 'yMd' },
   ]
 });
@@ -18,9 +18,9 @@ grid.appendTo('#Grid');
 
 function setHeaderHeight() {
   let textWidth = (<HTMLElement>document.querySelector('.orientationcss > div')).scrollWidth;
-//Obtain the width of the headerText content.
+  //Obtain the width of the headerText content.
   let headerCell = document.querySelectorAll('.e-headercell');
-  for(let i = 0; i < headerCell.length; i++) {
-      (<HTMLElement>headerCell.item(i)).style.height = textWidth + 'px'; //Assign the obtained textWidth as the height of the headerCell.
+  for (let i = 0; i < headerCell.length; i++) {
+    (<HTMLElement>headerCell.item(i)).style.height = textWidth + 'px'; //Assign the obtained textWidth as the height of the headerCell.
   }
 }

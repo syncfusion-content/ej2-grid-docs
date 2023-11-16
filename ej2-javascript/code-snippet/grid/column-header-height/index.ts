@@ -37,7 +37,7 @@ button3.appendTo('#big');
 (<HTMLElement>document.getElementById('changeHeight')).onclick = function (event) {
     const heightMap = { small: '20px', medium: '42px', big: '60px' };
     const headerCells = (grid).getHeaderContent().querySelectorAll('.e-headercell');
-    headerCells.forEach((headerCell) => {
+    headerCells.forEach((headerCell: HTMLElement) => {
         (headerCell as HTMLElement).style.height = (heightMap)[
             (event.target as HTMLButtonElement).id
         ];

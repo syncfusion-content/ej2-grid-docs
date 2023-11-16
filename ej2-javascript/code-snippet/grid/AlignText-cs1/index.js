@@ -3,21 +3,21 @@ var grid = new ej.grids.Grid({
   columns: [
     { field: 'OrderID', headerText: 'Order ID', width: 120 },
     { field: 'CustomerID', headerText: 'Customer ID', width: 140 },
-    { field: 'Freight', format: 'C', width: 120 },
+    { field: 'Freight', headerText: 'Freight', format: 'C', width: 120 },
     { field: 'OrderDate', headerText: 'Order Date', format: 'yMd', width: 140 },
   ],
   height: 315,
 });
 grid.appendTo('#Grid');
 
-let alignmentData = [
+var alignmentData = [
   { text: 'Left', value: 'Left' },
   { text: 'Right', value: 'Right' },
   { text: 'Center', value: 'Center' },
   { text: 'Justify', value: 'Justify' }
 ]
 
-let dropdownList = new ej.dropdowns.DropDownList({
+var dropdownList = new ej.dropdowns.DropDownList({
   value: 'Left',
   popupHeight: '240px',
   width: 100,
@@ -25,6 +25,7 @@ let dropdownList = new ej.dropdowns.DropDownList({
   change: changeAlignment,
 });
 dropdownList.appendTo('#dropdown');
+
 function changeAlignment(args) {
   grid.columns.forEach((column) => {
     column.headerTextAlign = args.value
