@@ -38,9 +38,9 @@ Syncfusion's Theme Studio tool allows you to create custom themes for all their 
 3. Customize various aspects of the control's appearance, such as colors, typography, and spacing.
 4. Once done, you can download the generated CSS file and include it in your ##Platform_Name## project.
 
-## Customizing the Grid root element
+## Customizing the grid root element
 
-To customize the appearance of the root element of the Syncfusion Angular Grid component, you can use CSS. Here's an example of how to modify the font family and row colors using CSS:
+To customize the appearance of the root element of the Syncfusion ##Platform_Name## Grid component, you can use CSS. Here's an example of how to modify the font family and row colors using CSS:
 
 ```css
 .e-grid {

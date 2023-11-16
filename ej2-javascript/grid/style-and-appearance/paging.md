@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 You can customize the appearance of the paging elements in the Syncfusion ##Platform_Name## Grid component using CSS. Here are examples of how to customize the pager root element, pager container element, pager navigation elements, pager page numeric link elements, and pager current page numeric element.
 
-## Customizing the Grid pager root element
+## Customizing the grid pager root element
 
 To customize the appearance of the grid pager root element, you can use the following CSS code:
 
@@ -27,7 +27,7 @@ In this example, the **.e-gridpager** class targets the pager root element. You 
 
 ![Grid pager root element](../images/grid-pager-root-element.png)
 
-## Customizing the Grid pager container element
+## Customizing the grid pager container element
 
 To customize the appearance of the grid pager container element, you can use the following CSS code:
 
@@ -42,7 +42,7 @@ In this example, the **.e-pagercontainer** class targets the pager container ele
 
 ![Grid pager container element](../images/grid-pager-container-element.png)
 
-## Customizing the Grid pager navigation elements
+## Customizing the grid pager navigation elements
 
 To customize the appearance of the grid pager navigation elements, you can use the following CSS code:
 
@@ -63,7 +63,7 @@ In this example, the classes **.e-prevpagedisabled, .e-prevpage, .e-nextpage, .e
 
 ![Grid pager navigation elements](../images/grid-pager-navigation-element.png)
 
-## Customizing the Grid pager page numeric link elements
+## Customizing the grid pager page numeric link elements
 
 To customize the appearance of the grid pager current page numeric link elements, you can use the following CSS code:
 
@@ -84,7 +84,7 @@ In this example, the **.e-numericitem** class targets the page numeric link elem
 
 ![Grid pager page numeric link elements](../images/pager-page-numeric-link-elements.png)
 
-## Customizing the Grid pager current page numeric element
+## Customizing the grid pager current page numeric element
 
 To customize the appearance of the grid pager current page numeric element, you can use the following CSS code:
 

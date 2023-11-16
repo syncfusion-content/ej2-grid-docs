@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 You can customize the appearance of the header elements in the Syncfusion ##Platform_Name## Grid component using CSS. Here are examples of how to customize the Grid header, header cell, and header cell div element.
 
-## Customizing the Grid header
+## Customizing the grid header
 
 To customize the appearance of the Grid header root element, you can use the following CSS code:
 
@@ -27,7 +27,7 @@ In this example, the **.e-gridheader** class targets the Grid header root elemen
 
 ![Grid header](../images/grid-header.png)
 
-## Customizing the Grid header cell
+## Customizing the grid header cell
 
 To customize the appearance of the grid header cell elements, you can use the following CSS code:
 
@@ -43,7 +43,7 @@ In this example, the **.e-headercell** class targets the header cell elements. Y
 
 ![Grid header cell](../images/grid-header-cell.png)
 
-## Customizing the Grid header cell div element
+## Customizing the grid header cell div element
 
 To customize the appearance of the grid header cell div element, you can use the following CSS code:
 

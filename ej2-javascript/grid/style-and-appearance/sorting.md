@@ -11,9 +11,9 @@ domainurl: ##DomainURL##
 
 # Sorting in ##Platform_Name## Grid component
 
-You can customize the appearance of the sorting icons and multi sorting icons in the Syncfusion ##Platform_Name## Grid component using CSS.You can use the available Syncfusion [icons](../../appearance/icons/#material) based on your theme. Here's how to do it:
+You can customize the appearance of the sorting icons and multi sorting icons in the Syncfusion ##Platform_Name## Grid component using CSS. You can use the available Syncfusion [icons](../../appearance/icons/#material) based on your theme. Here's how to do it:
 
-## Customizing the Grid sorting icon
+## Customizing the grid sorting icon
 
 To customize the sorting icon that appears in the Grid header when sorting is applied, you can use the following CSS code:
 
@@ -29,7 +29,7 @@ In this example, the **.e-icon-ascending::before** class targets the sorting ico
 
 ![Grid sorting icon](../images/grid-sorting-icons.png)
 
-## Customizing the Grid multi sorting icon
+## Customizing the grid multi sorting icon
 
 To customize the multi sorting icon that appears in the grid header when multiple columns are sorted, you can use the following CSS code:
 
