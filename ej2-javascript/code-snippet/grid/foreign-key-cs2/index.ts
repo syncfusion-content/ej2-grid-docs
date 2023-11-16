@@ -1,5 +1,5 @@
 import { createElement } from '@syncfusion/ej2-base';
-import { Grid, ForeignKey, Edit, Toolbar } from '@syncfusion/ej2-grids';
+import { Grid, ForeignKey, Edit, Toolbar, ColumnModel } from '@syncfusion/ej2-grids';
 import { AutoComplete } from '@syncfusion/ej2-dropdowns';
 import { DataManager, Query } from '@syncfusion/ej2-data';
 import { data, employeeData } from './datasource.ts';
@@ -29,7 +29,7 @@ let grid: Grid = new Grid(
                             destroy: () => { // to destroy the custom component.
                                 autoComplete.destroy();
                             },
-                            write: (args: { rowData: Object, column: Column, foreignKeyData: Object }) => { // to show the value for custom component
+                            write: (args: { rowData: Object, column: ColumnModel, foreignKeyData: Object , element: HTMLElement}) => { // to show the value for custom component
                                 autoComplete = new AutoComplete({
                                     dataSource: employeeData,
                                     fields: { value: args.column.foreignKeyValue },

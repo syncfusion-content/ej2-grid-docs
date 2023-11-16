@@ -6,18 +6,8 @@ var grid = new ej.grids.Grid({
     editSettings: { allowEditing: true },
     columns: [
         {
-            field: 'OrderID',
-            headerText: 'Order ID',
-            isPrimaryKey: true,
-            textAlign: 'Right',
-            width: 100,
-        },
-        {
-            field: 'EmployeeID',
-            headerText: 'Employee Name',
-            width: 150,
-            foreignKeyValue: 'FirstName',
-            dataSource: employeeData,
+          field: 'OrderID',headerText: 'Order ID',isPrimaryKey: true,textAlign: 'Right',width: 100,},
+          {field: 'EmployeeID',headerText: 'Employee Name',width: 150,foreignKeyValue: 'FirstName',dataSource: employeeData,
             edit: {
                 create: function(){
                   // to create input element

@@ -5,18 +5,8 @@ var grid = new ej.grids.Grid({
   allowFiltering: true,
   filterSettings: { type: 'Menu' },
   columns: [
-    {
-      field: 'OrderID',
-      headerText: 'Order ID',
-      textAlign: 'Right',
-      width: 100,
-    },
-    {
-      field: 'EmployeeID',
-      headerText: 'Employee Name',
-      width: 150,
-      foreignKeyValue: 'FirstName',
-      dataSource: fEmployeeData,
+    {field: 'OrderID',headerText: 'Order ID',textAlign: 'Right',width: 100,},
+    {field: 'EmployeeID',headerText: 'Employee Name',width: 150,foreignKeyValue: 'FirstName',dataSource: fEmployeeData,
       filter: {
         ui: {
           create: function (args) {
