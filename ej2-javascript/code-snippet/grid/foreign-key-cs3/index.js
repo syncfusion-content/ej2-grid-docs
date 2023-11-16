@@ -14,44 +14,40 @@ var grid = new ej.grids.Grid({
     {
       field: 'EmployeeID',
       headerText: 'Employee Name',
-      width: 120,
+      width: 150,
       foreignKeyValue: 'FirstName',
       dataSource: fEmployeeData,
-      filter: filter,
+      filter: {
+        ui: {
+          create: function (args) {
+            var flValInput = new ej.base.createElement('input', {
+              className: 'flm-input',
+            });
+            args.target.appendChild(flValInput);
+            this.dropInstance = new ej.dropdowns.DropDownList({
+              dataSource: new ej.data.DataManager(fEmployeeData),
+              fields: { text: 'FirstName', value: 'FirstName' },
+              placeholder: 'Select a value',
+              popupHeight: '200px',
+            });
+            this.dropInstance.appendTo(flValInput);
+          },
+          write: function (args) {
+            this.dropInstance.value = args.filteredValue;
+          },
+          read: function (args) {
+            args.fltrObj.filterByColumn(
+              args.column.field,
+              args.operator,
+              this.dropInstance.value
+            );
+          },
+        },
+      },
     },
-    { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 80 },
-    { field: 'ShipCity', headerText: 'Ship City', width: 130 },
+    { field: 'Freight', headerText: 'Freight', width: 100, textAlign: 'Right' },
+    { field: 'ShipCity', headerText: 'Ship City', width: 180 },
   ],
   height: 315,
 });
 grid.appendTo('#Grid');
-
-function filter() 
-{
-      create = () => 
-      {
-        let flValInput = ej.base.createElement('input', {
-          className: 'flm-input',
-        });
-          args.target.appendChild(flValInput);
-          dropInstance = new ej.dropdowns.DropDownList({
-            dataSource: new ej.data.DataManager(fEmployeeData),
-            fields: { text: 'FirstName', value: 'EmployeeID' },
-            placeholder: 'Select a value',
-            popupHeight: '200px',
-          });
-          dropInstance.appendTo(flValInput);
-      },
-      write = (args) =>
-      {
-        dropInstance.text = args.filteredValue || '';
-      },
-      read = (args) =>
-      {
-        args.fltrObj.filterByColumn(
-          args.column.field,
-          args.operator,
-          dropInstance.text
-        );
-      }     
-}

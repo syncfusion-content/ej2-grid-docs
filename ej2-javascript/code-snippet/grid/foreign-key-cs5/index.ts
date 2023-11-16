@@ -6,8 +6,8 @@ Grid.Inject(ForeignKey, Aggregate);
 
 // Custom Aggregate function for foreign column
 let customAggregateFn: CustomSummaryType = (data: Object, column: AggregateColumnModel) => {
-    return data.result.filter((dObj: Object) => {
-        return getValue('FirstName' , getForeignData(grid.getColumnByField(column.columnName), dObj)[0]) === 'Margaret';
+    return data.result.filter((count: Object) => {
+        return getValue('FirstName' , getForeignData(grid.getColumnByField(column.columnName), count)[0]) === 'Margaret';
     }).length;
 };
 

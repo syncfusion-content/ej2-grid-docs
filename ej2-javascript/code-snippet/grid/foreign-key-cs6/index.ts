@@ -21,7 +21,7 @@ let grid: Grid = new Grid(
                 width: 150, headerText: 'Ship City', validationRules: { required: true }
             },
 
-            { field: 'ShipCountry', headerText: 'Ship Country', editType: 'dropdownedit', width: 150 }
+            { field: 'ShipCountry', headerText: 'Ship Country', width: 150 }
         ],
         height: 315
     });

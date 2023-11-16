@@ -1,4 +1,3 @@
-var datePickerObj;
 ej.grids.Grid.Inject(ej.grids.ForeignKey, ej.grids.Aggregate);
 
 var grid = new ej.grids.Grid({
@@ -37,11 +36,11 @@ var grid = new ej.grids.Grid({
 grid.appendTo('#Grid');
 
 function customAggregateFn(data1, column) {
-    return data1.result.filter((dObj) => {
+    return data1.result.filter((count) => {
         return (
             ej.base.getValue(
                 'FirstName',
-                ej.grids.getForeignData(grid.getColumnByField(column.field), dObj)[0]
+                ej.grids.getForeignData(grid.getColumnByField(column.field), count)[0]
             ) === 'Margaret'
         );
     }).length;

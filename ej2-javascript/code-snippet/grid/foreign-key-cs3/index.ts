@@ -43,7 +43,7 @@ let grid: Grid = new Grid(
                     }
             },
             { field: 'Freight', headerText: 'Freight', width: 100, textAlign: 'Right'},
-            { field: 'ShipName', headerText: 'Ship Name', width: 180 }
+            { field: 'ShipCity', headerText: 'Ship City', width: 180 }
         ],
         height: 315
     });

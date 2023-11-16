@@ -18,7 +18,33 @@ var grid = new ej.grids.Grid({
             width: 150,
             foreignKeyValue: 'FirstName',
             dataSource: employeeData,
-            edit: edit,
+            edit: {
+                create: function(){
+                  // to create input element
+                
+                  return ej.base.createElement('input');
+                },
+                read: function(){
+                  // return edited value to update data source
+                  var value = new ej.data.DataManager(employeeData).executeLocal(
+                    new ej.data.Query().where('FirstName', 'equal', autoCompleteObj.value)
+                  );
+                  return value.length && value[0]['EmployeeID']; // to convert foreign key value to local value.
+                },
+                destroy: function(){
+                  // to destroy the custom component.
+                  autoCompleteObj.destroy();
+                },
+                write: function(args) {
+                  // to show the value for date picker
+                    autoCompleteObj = new ej.dropdowns.AutoComplete({
+                    dataSource: employeeData,
+                    fields: { value: args.column.foreignKeyValue },
+                    value: args.foreignKeyData[0][args.column.foreignKeyValue],
+                  });
+                  autoCompleteObj.appendTo(args.element);
+                }
+              },
         },
         { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 80 },
         { field: 'ShipCity', headerText: 'Ship City', width: 130 },
@@ -26,29 +52,3 @@ var grid = new ej.grids.Grid({
     height: 270,
 });
 grid.appendTo('#Grid');
-function edit() {
-    (create = () => {
-        // to create input element
-        return ej.base.createElement('input');
-    }),
-        (read = () => {
-            // return edited value to update data source
-            var value = new ej.data.DataManager(employeeData).executeLocal(
-                new ej.data.Query().where('FirstName', 'equal', autoCompleteObj.value)
-            );
-            return value.length && value[0]['EmployeeID']; // to convert foreign key value to local value.
-        }),
-        (destroy = () => {
-            // to destroy the custom component.
-            autoCompleteObj.destroy();
-        }),
-        (write = (args) => {
-            // to show the value for date picker
-            autoCompleteObj = new ej.dropdowns.AutoComplete({
-                dataSource: employeeData,
-                fields: { value: args.column.foreignKeyValue },
-                value: args.foreignKeyData[0][args.column.foreignKeyValue],
-            });
-            autoCompleteObj.appendTo(args.element);
-        });
-}
