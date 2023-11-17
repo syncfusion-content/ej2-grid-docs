@@ -10,7 +10,7 @@ var grid = new ej.grids.Grid({
 });
 grid.appendTo('#Grid');
 
-button = new ej.buttons.Button({
+var button = new ej.buttons.Button({
   content: 'Refresh Header',
 });
 button.appendTo('#buttons');
