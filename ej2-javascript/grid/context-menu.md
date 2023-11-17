@@ -170,9 +170,13 @@ The following example demonstrates how to show context menu on left click using 
 
 ## Enable or disable context menu items
 
-It is possible to enable or disable the default and custom context menu items in the Grid component. This is achieved by using the [enableItems](../api/context-menu/#enableitems) method of the ContextMenu. To enable or disable menu items, set the `enable` parameter in the `enableItems` method to true, and vice versa.
+With the Syncfusion ##Platform_Name## Grid, you have the ability to manage the activation or deactivation of both default and custom context menu items. This feature provides you with the flexibility to tailor the behavior of context menu items to suit specific conditions or individual interactions within your application.
 
-In the following sample, the Copy item is enabled or disabled based on some condition (as per the needs of the application) in the [rowSelected](../api/grid#rowselected) event of the Grid.
+By enabling or disabling context menu items, you can ensure that certain options are available or restricted based on the context of the data or the needs of your users. This level of control allows you to create a more dynamic and user-centric experience with the grid, aligning it with your application's requirements and enhancing usability.
+
+This can be achieved using the [enableItems](../../api/context-menu/#enableitems) method of the context menu. By setting the enable parameter in the enableItems method to **true**, you can enable context menu items, and by setting it to **false**, you can disable them. Based on your specific condition or requirements, you can enable or disable the context menu item using the `enableItems` method.
+
+In the following example, the [EJ2 Toggle Switch Button](../../switch/getting-started) component is added to enable and disable the context menu items using `enableItems` method. When the switch is toggled, the [change](../../api/switch/#change) event is triggered, and the **Copy** items is updated accordingly. 
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -199,4 +203,39 @@ In the following sample, the Copy item is enabled or disabled based on some cond
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/grid/row-template-cs17" %}
+{% endif %}
+
+## Show or hide context menu items
+
+The Syncfusion ##Platform_Name## Grid provides the flexibility to show or hide both default and custom context menu items. This feature allows you to customize the context menu items based on various conditions or individuals interactions.
+
+This can be achieved using the [showItems](../../api/context-menu/#showitems) and [hideItems](../../api/context-menu/#hideitems) methods of the context menu by specifying the item you want to show or hide as an argument. 
+
+In the following example, the [EJ2 Toggle Switch Button](../../switch/getting-started) component is added to show or hide the context menu items using `showItems` and `hideItems` methods. When the switch is toggled, the [change](../../api/switch/#change) event is triggered, and the **Copy** items is updated accordingly. 
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/show-or-hide-menu-item-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/show-or-hide-menu-item-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/show-or-hide-menu-item-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/show-or-hide-menu-item-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/show-or-hide-menu-item-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/show-or-hide-menu-item-cs1" %}
 {% endif %}

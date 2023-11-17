@@ -4,7 +4,7 @@ var grid = new ej.grids.Grid({
     allowSorting: true,
     allowPaging: true,
     allowGrouping:true,
-    editSettings: {allowEditing: true, allowAdding: true},
+    editSettings: {allowEditing: true, allowDeleting: true},
     allowPdfExport: true,
     allowExcelExport: true,
     contextMenuItems: ['AutoFit', 'AutoFitAll', 'SortAscending', 'SortDescending', 'Copy', 'Edit', 'Delete', 'Save', 'Cancel','PdfExport', 'ExcelExport', 'CsvExport', 'FirstPage', 'PrevPage', 'LastPage', 'NextPage', 'Group', 'Ungroup'],

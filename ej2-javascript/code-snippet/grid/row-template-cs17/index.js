@@ -3,25 +3,24 @@ var grid = new ej.grids.Grid({
     editSettings: { allowAdding: true, allowDeleting: true, allowEditing: true },
     allowPaging: true,
     contextMenuItems: ['Copy', 'Edit', 'Delete'],
-    rowSelected: rowSelected,
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right', isPrimaryKey: true },
-        { field: 'CustomerName', headerText: 'Customer Name' },
-        { field: 'Freight', format: 'C2', textAlign: 'Right', editType: 'numericedit' },
-        { field: 'ShipName', headerText: 'Ship Name', width: 200 },
-        { field: 'ShipCountry', headerText: 'Ship Country', width: 150, editType: 'dropdownedit' },
+        { field: 'OrderID', headerText: 'Order ID', width: 90, textAlign: 'Right', isPrimaryKey: true },
+        { field: 'CustomerID', headerText: 'Customer Name', width: 100 },
+        { field: 'Freight', format: 'C2', textAlign: 'Right', editType: 'numericedit', width: 90 },
         { field: 'ShipCity', headerText: 'Ship City', width: 150 }
     ]
 });
 grid.appendTo('#Grid');
 
-function rowSelected(args) {
-    var contextMenuObj = grid.contextMenuModule.contextMenu;
-    if (args.data.OrderID % 2 === 0) {
-        contextMenuObj.enableItems(['Copy'], false);
+var toggle = new ej.buttons.Switch({
+    change: onSwitchChange,
+});
+toggle.appendTo('#switch');
+
+function onSwitchChange(args) {
+    if (args.checked) {
+        grid.contextMenuModule.contextMenu.enableItems(['Copy'], false);
     } else {
-        contextMenuObj.enableItems(['Copy'], true);
+        grid.contextMenuModule.contextMenu.enableItems(['Copy'], true);
     }
 }
-
-
