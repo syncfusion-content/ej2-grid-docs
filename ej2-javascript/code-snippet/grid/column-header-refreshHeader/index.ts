@@ -19,7 +19,7 @@ let button = new Button({
 button.appendTo('#buttons');
 
 (<HTMLElement>document.getElementById('buttons')).onclick = function () {
-  const column = grid.getColumnByIndex(1);
+  let column = grid.getColumnByIndex(1);
   column.headerText = 'New Header Text'; // update the header text of the column object
   grid.refreshHeader();
 };

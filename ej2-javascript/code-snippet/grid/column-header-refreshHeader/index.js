@@ -16,7 +16,7 @@ var button = new ej.buttons.Button({
 button.appendTo('#buttons');
 
 document.getElementById('buttons').onclick = function () {
-  let column = grid.getColumnByIndex(1);
+  var column = grid.getColumnByIndex(1);
   column.headerText = 'New Header Text'; // update the header text of the column object
   grid.refreshHeader();
 };
