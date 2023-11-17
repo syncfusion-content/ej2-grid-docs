@@ -11,7 +11,7 @@ var grid = new ej.grids.Grid({
     },
     { field: 'Freight', headerText: 'Freight', format: "C", width: 120, headerTemplate: ` <div id='Freight'></div>`, },
     {
-      field: 'OrderDate', headerText: 'Order Date', textAlign: "Right", width: 120, format: 'yMd',
+      field: 'OrderDate', headerText: 'Order Date', textAlign: "Right", width: 200, format: 'yMd',
       headerTemplate: `<div><span id='OrderDate'></span>
         <label id='headerText' style='margin-left:8px'>Order Date</label>
         </div>`

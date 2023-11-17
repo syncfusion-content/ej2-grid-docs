@@ -7,10 +7,10 @@ let grid: Grid = new Grid({
   dataSource: data,
   allowPaging: true,
   columns: [
-    {field: 'OrderID',customAttributes: { class: 'customcss' },headerText: 'Order ID',textAlign: 'Right',width: 120,minWidth: 10},
-    { field: 'CustomerID', headerText: 'Customer Name', width: 140 },
-    {field: 'OrderDate',customAttributes: { class: 'customcss' },headerText: 'Order Date',textAlign: 'Right',width: 135,format: 'yMd',minWidth: 10},
-    {field: 'ShippedDate',headerText: 'Shipped Date',textAlign: 'Right',width: 145,format: 'yMd',minWidth: 10},
+    {field: 'OrderID',headerText: 'Order ID',customAttributes: { class: 'customcss' },textAlign: 'Center'},
+    { field: 'CustomerName', headerText: 'Customer Name', textAlign: 'Center'},
+    {field: 'Freight',headerText: 'Freight',customAttributes: { class: 'customcss' },textAlign: 'Center'},
+    {field: 'OrderDate',headerText: 'Order Date',format: 'yMd',textAlign: 'Center'}
   ],
 });
 grid.appendTo('#Grid');
