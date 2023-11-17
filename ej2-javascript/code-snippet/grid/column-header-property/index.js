@@ -34,7 +34,7 @@ var textbox = new ej.inputs.TextBox({
 });
 textbox.appendTo('#textboxvalue');
 
-button = new ej.buttons.Button({
+var button = new ej.buttons.Button({
   content: 'Change',
 });
 button.appendTo('#buttons');
