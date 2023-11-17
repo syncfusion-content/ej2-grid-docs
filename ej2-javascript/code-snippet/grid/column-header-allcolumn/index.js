@@ -1,8 +1,8 @@
 var grid = new ej.grids.Grid({
   dataSource: data,
   columns: [
-    { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
-    { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
+    { field: 'OrderID', headerText: 'OrderID', textAlign: 'Right', width: 90 },
+    { field: 'CustomerID', headerText: 'CustomerID', width: 120 },
     { field: 'Freight', headerText: 'Freight', textAlign: 'Right', format: 'C2', width: 90 },
     { field: 'ShipCity', headerText: 'Ship City', format: 'yMd', width: 120 },
   ],
@@ -16,7 +16,7 @@ var headerTextMap =
   'CustomerID': 'Customer ID',
   'Freight': 'Freight Charge',
   'ShipCity': 'Ship To City'
-},
+}
 
 var button = new ej.buttons.Button({
   content: 'Change Header Text',

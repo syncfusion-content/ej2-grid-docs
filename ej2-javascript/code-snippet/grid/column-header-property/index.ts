@@ -44,7 +44,7 @@ let textbox: TextBox = new TextBox({
 textbox.appendTo('#textboxvalue');
 
 let button: Button = new Button({
-  content: 'Click',
+  content: 'Change',
 });
 button.appendTo('#buttons');
 

@@ -6,8 +6,8 @@ let grid: Grid = new Grid({
   dataSource: data,
   height: 280,
   columns: [
-    { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100 },
-    { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
+    { field: 'OrderID', headerText: 'OrderID', textAlign: 'Right', width: 100 },
+    { field: 'CustomerID', headerText: 'CustomerID', width: 120 },
     { field: 'Freight', headerText: 'Freight', width: 120 },
     { field: 'ShipCity', headerText: 'Ship City', format: 'yMd', width: 100 },
   ],
