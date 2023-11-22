@@ -9,26 +9,26 @@ let grid: Grid = new Grid({
     allowSelection: true,
     selectionSettings: { type: 'Multiple' },
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
-        { field: 'ShipCity', headerText: 'Ship City', width: 150 },
-        { field: 'ShipName', headerText: 'Ship Name', width: 150 }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+        { field: 'ShipCity', headerText: 'Ship City', width: 100 },
+        { field: 'ShipName', headerText: 'Ship Name', width: 120 }
     ],
     height: 280
 });
 grid.appendTo('#Grid');
 
-let copyBtn: Button = new Button();
-copyBtn.appendTo('#copy');
+let copyButton: Button = new Button({ cssClass: "e-outline"});
+copyButton.appendTo('#copy');
 
-document.getElementById('copy').addEventListener('click', () => {
+(document.getElementById('copy')as HTMLElement).addEventListener('click', () => {
     grid.copy();
 });
 
-let copyHeaderBtn: Button = new Button();
-copyHeaderBtn.appendTo('#copyHeader');
+let copyHeaderButton: Button = new Button({ cssClass: "e-outline"});
+copyHeaderButton.appendTo('#copyHeader');
 
-document.getElementById('copyHeader').addEventListener('click', () => {
+(document.getElementById('copyHeader')as HTMLElement).addEventListener('click', () => {
     grid.copy(true);
 });
 
