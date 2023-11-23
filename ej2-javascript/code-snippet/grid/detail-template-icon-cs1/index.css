@@ -1,0 +1,34 @@
+#container {
+    visibility: hidden;
+}
+
+#loader {
+  color: #008cff;
+  font-family: 'Helvetica Neue','calibiri';
+  font-size: 14px;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+
+.detailtable td{
+  font-size: 13px;
+  padding: 4px;                      
+  white-space: nowrap;
+}
+
+.photo {     
+  border-radius: 50px;
+  box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0,0,0,0.2);
+  height: 100px;
+  width: 100px;
+}
+    
+@media screen and (max-width: 800px) and (min-width: 320px) {
+  .photo {
+    height: 70px;
+    width: 70px;
+  }       
+}
