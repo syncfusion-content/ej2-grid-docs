@@ -156,23 +156,157 @@ The following example shows how to export the grid with a custom aggregate that 
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs151" %}
 {% endif %}
 
+## Exporting with cell and row spanning
+
+Exporting data from the Syncfusion ##Platform_Name## Grid with cell and row spanning enables you to maintain cell and row layout in the exported data. This feature is useful when you have merged cells or rows in the Grid and you want to maintain the same structure in the exported file.
+
+To achieve this, you can utilize the [rowSpan](../../api/grid/querycellinfoeventargs/#rowspan) and [colSpan](../../api/grid/queryCellInfoEventArgs/#colspan) properties in the [queryCellInfo](../../api/grid/#querycellinfo) event of the Grid. This event allows you to define the span values for specific cells. Additionally, you can customize the appearance of the grid cells during the export using the [pdfQueryCellInfo](../../api/grid/#pdfquerycellinfo) event of the Grid.
+
+The following example demonstrates how to perform export with cell and row spanning using `queryCellInfo` and `pdfQueryCellInfo` events of the Grid.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs207/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs207/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs207" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs207/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs207/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs207" %}
+{% endif %}
+
 ## Exporting with custom date format
 
-The exporting functionality in the Syncfusion javascript Grid allows you to export grid data, including custom date format. This feature is useful when you need to export grid data with customized date values. 
+The exporting functionality in the Syncfusion ##Platform_Name## Grid allows you to export grid data, including custom date format. This feature is useful when you need to export grid data with customized date values. 
 
 To apply a custom date format to grid columns during the export, you can utilize the [columns.format](../../api/grid/column/#format) property. This property allows you to define a custom format using format options.
 
 The following example demonstrates how to export the grid data with custom date format. In this example, the formatOptions object is used as the `columns.format` property for the **OrderDate** column. This custom date format displays the date in the format of day-of-the-week, month abbreviation, day, and 2-digit year (e.g., Thu, Jul 4, '96).
 
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs208/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs208/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs208" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs208/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs208/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs208" %}
+{% endif %}
+
 ## Exporting multiple grids
 
-Exporting multiple grids in the Syncfusion javascript Grid component allows you to export different grids to compare them side by side in external applications on the same or different pages of a PDF file.  Each grid is identified by its unique ID. You can specify which grid to export by listing their **IDs** in the [exportGrids](../../api/grid/#exportgrids) property.
+Exporting multiple grids in the Syncfusion ##Platform_Name## Grid component allows you to export different grids to compare them side by side in external applications on the same or different pages of a PDF file.  Each grid is identified by its unique ID. You can specify which grid to export by listing their **IDs** in the [exportGrids](../../api/grid/#exportgrids) property.
 
 ### Same page
 
 PDF exporting provides support for exporting multiple grids on the same page. To export the grids on the same page, define [multipleExport.type](../../api/grid/multiplePdfExport/#type) as **AppendToPage** in [pdfExportProperties](../../api/grid/pdfExportProperties/#multipleexport). It also has an option to provide blank space between the grids. This blank space can be defined by using [multipleExport.blankSpace](../../api/grid/multiplePdfExport/#blankspace) property. 
 
 The following example demonstrates how to export multiple grids to the same page in a PDF file when a toolbar item is clicked.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs209/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs209/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs209" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs209/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs209/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs209" %}
+{% endif %}
+
+### New page
+
+PDF export functionality enables the exporting of multiple grids into separate pages (each grid on a new page) within the PDF file.
+
+To achieve this, you can follow these steps:
+
+1. Access the [pdfExportProperties](../../api/grid/pdfExportProperties/#multipleexport) of the Grid component.
+
+2. Set the [multipleExport.type](../../api/grid/multiplePdfExport/#type) property to **NewPage**.
+
+3. Trigger the PDF export operation.
+
+The following example demonstrates how to export multiple grids to a PDF file when a toolbar item is clicked.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs210/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs210/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs210" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs210/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs210/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs210" %}
+{% endif %}
+
+### Limitations
+
+* Multiple grids exporting feature is not supported with server side exporting.
 
 ## Passing additional parameters to the server when exporting
 
