@@ -1,4 +1,4 @@
-import { Grid,ChangeEventArgs } from '@syncfusion/ej2-grids';
+import { Grid,ChangeEventArgs, ColumnModel } from '@syncfusion/ej2-grids';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
 import { data } from './datasource.ts';
 
@@ -24,7 +24,7 @@ let dropDownColumn: DropDownList = new DropDownList({
 });
 dropDownColumn.appendTo('#dropdown');
 function changeAlignment(args: ChangeEventArgs) {
-  grid.columns.forEach((column) => {
+  grid.columns.forEach((column: ColumnModel) => {
     column.headerTextAlign = args.value
   })
   grid.refreshHeader();
