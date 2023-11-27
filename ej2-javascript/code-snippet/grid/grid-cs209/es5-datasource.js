@@ -25,7 +25,7 @@ var data = [
         ShipRegion: 'CJ', Mask: '5555', ShipPostalCode: 'B-6000', ShipCountry: 'Belgium', Freight: 51.3, Verified: !0
     }];
 
-    var employeeData = [{
+var employeeData = [{
         'EmployeeID': 1,
         'LastName': 'Davolio',
         'FirstName': 'Nancy',

@@ -308,83 +308,83 @@ The following example demonstrates how to export multiple grids to a PDF file wh
 
 * Multiple grids exporting feature is not supported with server side exporting.
 
-## Passing additional parameters to the server when exporting
+## Exporting hierarchy grid
 
-You can pass the additional parameter in the `query` property by invoking `addParams` method. In the `toolbarClick` event, you can define params as key and value pair so it will receive at the server side when exporting.
+Exporting a hierarchy grid in the Syncfusion javascript Grid component allows you to generate a PDF document that includes the master grid along with its child grids. This feature is useful when you need to export hierarchical data with its related details.
 
-In the below example, we have passed `recordcount` as `12` using `addParams` method.
+To achieve this, you can customize the exporting behavior by using the `pdfExportProperties.hierarchyExportMode` property of the Grid.
+
+The `hierarchyExportMode` property allows you to specify the exporting behavior for the hierarchy grid. The following options are available:
+
+| Mode     | Behavior    |
+|----------|-------------|
+| Expanded | Exports the master grid with expanded child grids. |
+| All      | Exports the master grid with all child grids, expanded or not. |
+| None     | Exports only the master grid without any child grids. |
+
+The following example demonstrates how to export hierarchical grid to PDF document. Also change the `pdfExportProperties.hierarchyExportMode` property by using [value](../../api/drop-down-list#value) property of the `DropDownList` component.
 
 {% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/grid-cs151/index.ts %}
+{% include code-snippet/grid/grid-cs211/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs151/index.html %}
+{% include code-snippet/grid/grid-cs211/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/grid-cs151" %}
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs211" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/grid-cs151/index.js %}
+{% include code-snippet/grid/grid-cs211/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs151/index.html %}
+{% include code-snippet/grid/grid-cs211/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/grid-cs151" %}
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs211" %}
 {% endif %}
 
-## Passing the selected records to the server using ajax request via custom toolbar button click
+## Remove header row while exporting
 
-You can pass the selected records to the server with the help of an ajax request. In the `toolbarClick` event, you can get the selected records using the [`getSelectedRecords`](../../api/grid/#getselectedrecords) method and pass the selected records to the server using the **data** property of the ajax.
+When exporting data from the Syncfusion javascript Grid, you have an option to remove the header row from the exported file. This can be useful when you want to export grid data without including the header values in the exported document.
 
-```ts
-import { Grid, Page,Toolbar } from '@syncfusion/ej2-grids';
-import { Ajax } from '@syncfusion/ej2-base';
+To achieve this, you can utilize the [pdfHeaderQueryCellInfo](../../api/grid/#pdfheaderquerycellinfo) event of the Grid. This event allows you to customize the header cells during the PDF export process. By handling this event, you can remove the header row from the exported file by not providing any content and height for the header cells. This ensures that the exported file contains only the data rows without including the header information.
 
-Grid.Inject(Page,Toolbar);
-let grid: Grid = new Grid({
-    dataSource: data,
-    allowSelection: true,
-    toolbar: ['Selected'],
-    columns: [
-        { type: 'checkbox', width: 50, },
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120},
-        { field: 'CustomerID', width: 140, headerText: 'CustomerID'},
-        { field: 'ShipCity', headerText: 'Ship Country', width: 140 }
-    ],
-    toolbarClick: function (args) {
-        if (args.item.text === 'Selected') {
-            var selectedRecord = this.getSelectedRecords();
-            var ajax = new Ajax({
-                url: "/Home/SelectRecord",
-                type: "POST",
-                contentType: "application/json",
-                data: JSON.stringify(selectedRecord),
-                successHandler: function (response) {
-                    console.log(JSON.parse(response));
-                },
-                failure: function (response) {
-                    alert(response);
-                }
-            });
-            ajax.send();
-        }
-    },
-});
-grid.appendTo('#Grid');
-```
+The following example demonstrates how to perform export without header using `pdfHeaderQueryCellInfo` event of the Grid.
 
-The selected record details are bound to the `row` parameter. Please refer to the following screenshot.
+{% if page.publishingplatform == "typescript" %}
 
-![Selected record](../images/selected.jpg)
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs212/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs212/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs212" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs212/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs212/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs212" %}
+{% endif %}
 
 ## See Also
 

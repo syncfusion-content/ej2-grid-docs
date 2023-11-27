@@ -1,25 +1,41 @@
-import { Grid, Toolbar, PdfExport} from '@syncfusion/ej2-grids';
-import { data } from './datasource.ts';
+import { Grid, Toolbar, PdfExport, ClickEventArgs} from '@syncfusion/ej2-grids';
+import { data,employeeData } from './datasource.ts';
 
 Grid.Inject(Toolbar, PdfExport);
 
-let grid: Grid = new Grid({
-    dataSource: data,
+let firstGrid: Grid = new Grid({
+    dataSource: data.slice(0,5),
     allowPdfExport: true,
+    exportGrids: ['FirstGrid', 'SecondGrid'],
     toolbar: ['PdfExport'],
-    toolbarClick: toolbarClick,
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
-        { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
-        { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', width: 140, format:  { type: 'date', format: "EEE, MMM d, ''yy" } },
-        {field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C2'},
+      {field: 'OrderID',headerText: 'Order ID',textAlign: 'Right',width: 120,type: 'number'},
+      {field: 'CustomerID',width: 140,headerText: 'Customer ID',type: 'string'},
+      {field: 'ShipCity',headerText: 'Ship City',textAlign: 'Right',width: 120},
+      {field: 'ShipName',headerText: 'Ship Name',textAlign: 'Right',width: 120},
     ],
-    height: 220,
 });
-grid.appendTo('#Grid');
+firstGrid.appendTo('#FirstGrid');
 
-function toolbarClick(args){
-    if (args.item.id === 'Grid_pdfexport') {
-        grid.pdfExport();
+let SecondGrid: Grid = new Grid({
+    dataSource: employeeData,
+    allowPdfExport: true,
+    columns: [
+      {field: 'EmployeeID',headerText: 'Employee ID',textAlign: 'Right',width: 120,type: 'number'},
+      {field: 'FirstName',width: 140,headerText: 'First Name',type: 'string'},
+      {field: 'LastName',headerText: 'Last Name',textAlign: 'Right',width: 120},
+      {field: 'City', headerText: 'City', textAlign: 'Right', width: 120 },
+    ],
+    height: 272,
+});
+SecondGrid.appendTo('#SecondGrid');
+
+let sameSheetPdfProperties = {
+    multipleExport: { type: 'AppendToPage', blankSpace: 10 },
+  }; 
+
+firstGrid.toolbarClick = function (args: ClickEventArgs) {
+    if (args.item.text === 'PDF Export') {
+      firstGrid.pdfExport(sameSheetPdfProperties, true);
     }
-}
+  };
