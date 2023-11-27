@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 This section explains the steps to create a simple Grid and demonstrates the basic usage of the grid component using the Essential JS 2
 [quickstart](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-) seed repository. This seed repository is pre-configured with the Essential JS 2 package.
 
-> This application is integrated with the `webpack.config.js` configuration and uses the latest version of the [webpack-cli](https://webpack.js.org/api/cli/#commands). It requires node `v14.15.0` or higher. For more information about webpack and its features, refer to the [webpack documentation](https://webpack.js.org/guides/getting-started/).
+> This application is integrated with the **webpack.config.js** configuration and uses the latest version of the [webpack-cli](https://webpack.js.org/api/cli/#commands). It requires node **v14.15.0** or higher. For more information about webpack and its features, refer to the [webpack documentation](https://webpack.js.org/guides/getting-started/).
 
 ## Dependencies
 
@@ -45,7 +45,7 @@ git clone https://github.com/SyncfusionExamples/ej2-quickstart-webpack- ej2-quic
 {% endhighlight %}
 {% endtabs %}
 
-After cloning the application in the `ej2-quickstart` folder, run the following command line to navigate to the `ej2-quickstart` folder.
+After cloning the application in the **ej2-quickstart** folder, run the following command line to navigate to the ej2-quickstart folder.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -59,7 +59,7 @@ cd ej2-quickstart
 
 Syncfusion JavaScript (Essential JS 2) packages are available on the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. You can install all Syncfusion JavaScript (Essential JS 2) controls in a single [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package or individual packages for each control.
 
-The quickstart application is preconfigured with the dependent [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in the `~/package.json` file. Use the following command to install the dependent npm packages from the command prompt.
+The quickstart application is preconfigured with the dependent **@syncfusion/ej2** package in the **~/package.json** file. Use the following command to install the dependent npm packages from the command prompt.
 
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
@@ -73,7 +73,7 @@ npm install
 
 Syncfusion JavaScript controls come with [built-in themes](https://ej2.syncfusion.com/documentation/appearance/theme/), which are available in the installed packages. It's easy to adapt the Syncfusion JavaScript controls to match the style of your application by referring to one of the built-in themes.
 
-The quickstart application is preconfigured to use the `Material` theme in the `~/src/styles/styles.css` file, as shown below: 
+The quickstart application is preconfigured to use the **Material** theme in the **~/src/styles/styles.css** file, as shown below: 
 
 {% tabs %}
 {% highlight css tabtitle="style.css" %}
@@ -95,15 +95,15 @@ Place the following grid code in the **app.ts**.
 {% highlight ts tabtitle="app.ts" %}
 
 import { Grid } from '@syncfusion/ej2-grids';
-import { data } from './datasource.ts';
+import { data } from './datasource';
 
 let grid: Grid = new Grid({
     dataSource: data,
     columns: [
-                { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
-                { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
-                { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C' },
-                { field: 'OrderDate', headerText: 'Order Date', width: 140, format: 'yMd' }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
+        { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
+        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C' },
+        { field: 'OrderDate', headerText: 'Order Date', width: 140, format: 'yMd' }
     ],
     height: 315
 });
@@ -113,7 +113,7 @@ grid.appendTo('#Grid');
 {% endhighlight %}
 {% endtabs %}
 
-Place the following grid data source code in the **dataSource.ts**.
+Place the following grid data source code in the **datasource.ts**.
 
 {% tabs %}
 {% highlight ts tabtitle="datasource.ts" %}
@@ -234,24 +234,42 @@ Now, add an HTML div element with its `ID` attribute set to `Grid` in your **ind
 
 To create grids with additional features, inject the required modules. The following modules are used to extend grid's basic functionality.
 
-* [`Page`](https://ej2.syncfusion.com/documentation/api/grid/page/) - Inject this module to use paging feature.
-* [`Sort`](https://ej2.syncfusion.com/documentation/api/grid/sort/) - Inject this module to use sorting feature.
-* [`Filter`](https://ej2.syncfusion.com/documentation/api/grid/filter/) - Inject this module to use filtering feature.
-* [`Group`](https://ej2.syncfusion.com/documentation/api/grid/group/) - Inject this module to use grouping feature.
+* [Page](https://ej2.syncfusion.com/documentation/api/grid/page/) - Inject this module to use paging feature.
+* [Sort](https://ej2.syncfusion.com/documentation/api/grid/sort/) - Inject this module to use sorting feature.
+* [Filter](https://ej2.syncfusion.com/documentation/api/grid/filter/) - Inject this module to use filtering feature.
+* [Group](https://ej2.syncfusion.com/documentation/api/grid/group/) - Inject this module to use grouping feature.
 * **ExcelExport** - Inject this module to use Excel export feature.
 * **PdfExport** - Inject this module to use PDF export feature.
 
 These modules should be injected into the grid using the **Grid.Inject** method.
 
-> Additional feature modules are available [`here`](https://ej2.syncfusion.com/documentation/grid/module).
+> Additional feature modules are available [here](https://ej2.syncfusion.com/documentation/grid/module).
 
 ## Enable paging
 
-The paging feature enables users to view the grid record in a paged view. It can be enabled by setting the  [`allowPaging`](https://ej2.syncfusion.com/documentation/api/grid/#allowpaging) property to true. Inject the [`Page`](https://ej2.syncfusion.com/documentation/api/grid/page/) module as follows. If the [`Page`](https://ej2.syncfusion.com/documentation/api/grid/page/) module is not injected, the pager will not be rendered in the grid. Pager can be customized using the [`pageSettings`](https://ej2.syncfusion.com/documentation/api/grid/pageSettings/) property.
+The paging feature enables users to view the grid record in a paged view. It can be enabled by setting the  [allowPaging](https://ej2.syncfusion.com/documentation/api/grid/#allowpaging) property to true. Inject the [Page](https://ej2.syncfusion.com/documentation/api/grid/page/) module as follows. If the **Page** module is not injected, the pager will not be rendered in the grid. Pager can be customized using the [pageSettings](https://ej2.syncfusion.com/documentation/api/grid/pageSettings/) property.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/grid-cs173/index.ts %}
+{% raw %}
+import { Grid, Page } from '@syncfusion/ej2-grids';
+import { data } from './datasource';
+Grid.Inject(Page);
+
+let grid: Grid = new Grid({
+    dataSource: data,
+    columns: [
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
+        { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
+        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C' },
+        { field: 'OrderDate', headerText: 'Order Date', width: 140, format: 'yMd' }
+    ],
+    allowPaging: true,
+    pageSettings: { pageSize: 7 }
+});
+
+grid.appendTo('#Grid');
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/grid/grid-cs173/index.html %}
@@ -262,11 +280,31 @@ The paging feature enables users to view the grid record in a paged view. It can
 
 ## Enable sorting
 
-The sorting feature enables you to order the records. It can be enabled by setting the  [`allowSorting`](https://ej2.syncfusion.com/documentation/api/grid/#allowsorting) property as true. Inject the [`Sort`](https://ej2.syncfusion.com/documentation/api/grid/sort/) module as follows. If [`Sort`](https://ej2.syncfusion.com/documentation/api/grid/sort/) module is not injected, you cannot sort when a header is clicked. Sorting feature can be customized using the  [`sortSettings`](https://ej2.syncfusion.com/documentation/api/grid/sortSettings/) property.
+The sorting feature enables you to order the records. It can be enabled by setting the [allowSorting](https://ej2.syncfusion.com/documentation/api/grid/#allowsorting) property as **true**. Inject the [Sort](https://ej2.syncfusion.com/documentation/api/grid/sort/) module as follows. If **Sort** module is not injected, you cannot sort when a header is clicked. Sorting feature can be customized using the [sortSettings](https://ej2.syncfusion.com/documentation/api/grid/sortSettings/) property.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/grid-cs174/index.ts %}
+{% raw %}
+import { Grid, Sort, Page } from '@syncfusion/ej2-grids';
+import { data } from './datasource';
+
+Grid.Inject(Sort, Page);
+
+let grid: Grid = new Grid({
+    dataSource: data,
+    columns: [
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
+        { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
+        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C' },
+        { field: 'OrderDate', headerText: 'Order Date', width: 140, format: 'yMd' }
+    ],
+    allowSorting: true,
+    allowPaging: true,
+    pageSettings: { pageSize: 7 }
+});
+
+grid.appendTo('#Grid');
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/grid/grid-cs174/index.html %}
@@ -277,12 +315,33 @@ The sorting feature enables you to order the records. It can be enabled by setti
 
 ## Enable filtering
 
-The filtering feature enables you to view reduced amount of records based on filter criteria. It can be enabled by setting the [`allowFiltering`](https://ej2.syncfusion.com/documentation/api/grid/#allowfiltering) property as true.  The [`Filter`](https://ej2.syncfusion.com/documentation/api/grid/filter/) module has to be injected as follows.
-If [`Filter`](https://ej2.syncfusion.com/documentation/api/grid/filter/) module is not injected,  filter bar will not be rendered in the grid. Filtering feature can be customized using the [`filterSettings`](https://ej2.syncfusion.com/documentation/api/grid/filterSettings/) property.
+The filtering feature enables you to view reduced amount of records based on filter criteria. It can be enabled by setting the [allowFiltering](https://ej2.syncfusion.com/documentation/api/grid/#allowfiltering) property as **true**. The [Filter](https://ej2.syncfusion.com/documentation/api/grid/filter/) module has to be injected as follows.
+If **Filter** module is not injected,  filter bar will not be rendered in the grid. Filtering feature can be customized using the [filterSettings](https://ej2.syncfusion.com/documentation/api/grid/filterSettings/) property.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/grid-cs175/index.ts %}
+{% raw %}
+import { Grid, Filter, Page, Sort } from '@syncfusion/ej2-grids';
+import { data } from './datasource';
+
+Grid.Inject(Filter, Page, Sort);
+
+let grid: Grid = new Grid({
+    dataSource: data,
+    columns: [
+       { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
+       { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
+       { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C' },
+       { field: 'OrderDate', headerText: 'Order Date', width: 140, format: 'yMd' }
+    ],
+    allowFiltering: true,
+    allowPaging: true,
+    pageSettings: { pageSize: 6 },
+    allowSorting: true
+});
+
+grid.appendTo('#Grid');
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/grid/grid-cs175/index.html %}
@@ -293,11 +352,33 @@ If [`Filter`](https://ej2.syncfusion.com/documentation/api/grid/filter/) module 
 
 ## Enable grouping
 
-The grouping feature enables users to view the grid record in a grouped view. It can be enabled by setting the [`allowGrouping`](https://ej2.syncfusion.com/documentation/api/grid/#allowgrouping) property to true. The [`Group`](https://ej2.syncfusion.com/documentation/api/grid/group/) module has to be injected as follows. If [`Group`](https://ej2.syncfusion.com/documentation/api/grid/group/) module is not injected, the group drop area will not be rendered in the grid. Grouping feature can be customized using the [`groupSettings`](https://ej2.syncfusion.com/documentation/api/grid/groupSettings/) property.
+The grouping feature enables users to view the grid record in a grouped view. It can be enabled by setting the [allowGrouping](https://ej2.syncfusion.com/documentation/api/grid/#allowgrouping) property to true. The [Group](https://ej2.syncfusion.com/documentation/api/grid/group/) module has to be injected as follows. If **Group** module is not injected, the group drop area will not be rendered in the grid. Grouping feature can be customized using the [groupSettings](https://ej2.syncfusion.com/documentation/api/grid/groupSettings/) property.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/grid-cs176/index.ts %}
+{% raw %}
+import { Grid, Group, Filter, Page, Sort } from '@syncfusion/ej2-grids';
+import { data } from './datasource';
+
+Grid.Inject(Group, Filter, Page, Sort);
+
+let grid: Grid = new Grid({
+    dataSource: data,
+    columns: [
+                { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
+                { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
+                { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C' },
+                { field: 'OrderDate', headerText: 'Order Date', width: 140, format: 'yMd' }
+    ],
+    height: 175,
+    allowGrouping: true,
+    allowPaging: true,
+    allowSorting: true,
+    allowFiltering: true
+});
+
+grid.appendTo('#Grid');
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/grid/grid-cs176/index.html %}
@@ -322,7 +403,29 @@ Output will be displayed as follows.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/grid-cs177/index.ts %}
+{% raw %}
+import { Grid, Group, Filter, Page, Sort } from '@syncfusion/ej2-grids';
+import { data } from './datasource';
+
+Grid.Inject(Group, Filter, Page, Sort);
+
+let grid: Grid = new Grid({
+    dataSource: data,
+    columns: [
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
+        { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
+        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C' },
+        { field: 'OrderDate', headerText: 'Order Date', width: 140, format: 'yMd' }
+    ],
+    height: 175,
+    allowGrouping: true,
+    allowPaging: true,
+    allowSorting: true,
+    allowFiltering: true
+});
+
+grid.appendTo('#Grid');
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/grid/grid-cs177/index.html %}
@@ -333,4 +436,4 @@ Output will be displayed as follows.
 
 ## See Also
 
-* [How to open pdf document on button click inside a Grid](https://support.syncfusion.com/kb/article/10246/how-to-open-pdf-document-on-button-click-inside-a-grid)
+* [How to open PDF document on button click inside a Grid](https://support.syncfusion.com/kb/article/10246/how-to-open-pdf-document-on-button-click-inside-a-grid)
