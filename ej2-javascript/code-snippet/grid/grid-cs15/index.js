@@ -10,7 +10,7 @@ class SerialNoAdaptor extends ej.data.ODataV4Adaptor {
 }
 
 var data = new ej.data.DataManager({
-    url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/?$top=7',
+    url: 'https://services.syncfusion.com/js/production/api/Orders',
     adaptor: new SerialNoAdaptor()
 });
 

@@ -1,5 +1,5 @@
 var data = new ej.data.DataManager({
-    url: 'https://js.syncfusion.com/ejServices/Wcf/Northwind.svc/Orders/?$top=7',
+    url: 'https://services.syncfusion.com/js/production/api/Orders',
     adaptor: new ej.data.ODataAdaptor(),
     crossDomain: true
 });

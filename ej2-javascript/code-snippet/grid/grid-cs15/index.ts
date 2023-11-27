@@ -15,7 +15,7 @@ class SerialNoAdaptor extends ODataAdaptor {
 }
 
 let data: DataManager = new DataManager({
-    url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders/?$top=7',
+    url: 'https://services.syncfusion.com/js/production/api/Orders',
     adaptor: new SerialNoAdaptor
 });
 

@@ -4,7 +4,7 @@ import { Grid, Page, Sort, Filter } from '@syncfusion/ej2-grids';
 import { DataManager, ODataAdaptor } from '@syncfusion/ej2-data';
 Grid.Inject(Page, Sort, Filter);
 let data: DataManager = new DataManager({
-    url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders/',
+    url: 'https://services.syncfusion.com/js/production/api/Orders',
     adaptor: new ODataAdaptor
 });
 let grid: Grid = new Grid({
@@ -12,7 +12,7 @@ let grid: Grid = new Grid({
     allowPaging: true,
     allowSorting: true,
     allowFiltering: true,
-    pageSettings: { pageCount: 3 }
+    pageSettings: { pageCount: 3 },
     loadingIndicator: { indicatorType: 'Shimmer' },
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
