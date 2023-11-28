@@ -20,8 +20,7 @@ let grid: Grid = new Grid({
       dataSource: data,
       queryString: 'EmployeeID',
       columns: [
-          {
-              field: 'OrderID',headerText: 'Order ID',textAlign: 'Right',width: 90},
+          {field: 'OrderID',headerText: 'Order ID',textAlign: 'Right',width: 90},
           { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
           { field: 'ShipCity', headerText: 'Ship City', width: 100 },
           { field: 'ShipName', headerText: 'Ship Name', width: 110 },
@@ -36,7 +35,6 @@ grid.toolbarClick = function (args: ClickEventArgs) {
     // 'Grid_pdfexport' -> Grid component id + _ + toolbar item name
     let exportProperties = {
         hierarchyExportMode: dropDownColumn.value,
-        // Assuming you have a dropdown list with id 'dropdownlist'
     };
     grid.pdfExport(exportProperties);
 }

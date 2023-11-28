@@ -3,7 +3,6 @@ var grid = new ej.grids.Grid({
     dataSource: data,
     allowPaging: true,
     allowPdfExport: true,
-    toolbarClick: toolbarClick,
     pdfExportComplete: pdfExportComplete,
     toolbar: ['PdfExport'],
     columns: [
@@ -15,12 +14,14 @@ var grid = new ej.grids.Grid({
     height: 260
 });
 grid.appendTo('#Grid');
-function toolbarClick(args){
+
+grid.toolbarClick = function (args) {
     if (args['item'].id === 'Grid_pdfexport') {
         grid.showSpinner();
         grid.pdfExport();
     }
 }
+
 function pdfExportComplete()
 {
         grid.hideSpinner();

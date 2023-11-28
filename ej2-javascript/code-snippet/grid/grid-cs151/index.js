@@ -4,7 +4,6 @@ var grid = new ej.grids.Grid({
     dataSource: data,
     allowPdfExport: true,
     toolbar: ['PdfExport'],
-    toolbarClick: toolbarClick,
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
         { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
@@ -23,7 +22,7 @@ var grid = new ej.grids.Grid({
 });
 grid.appendTo('#Grid');
 
-function toolbarClick(args){
+grid.toolbarClick = function (args) {
     if (args.item.id === 'Grid_pdfexport') {
         grid.pdfExport();
     }

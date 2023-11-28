@@ -2,7 +2,6 @@ ej.grids.Grid.Inject(ej.grids.Toolbar, ej.grids.PdfExport, ej.grids.Page,ej.grid
 var grid = new ej.grids.Grid({
     dataSource: data,
     pdfHeaderQueryCellInfo: pdfHeaderQueryCellInfo,
-    toolbarClick: toolbarClick,
     allowPdfExport: true,
     toolbar: ['PdfExport'],
     columns: [
@@ -15,7 +14,7 @@ var grid = new ej.grids.Grid({
 });
 grid.appendTo('#Grid');
 
-function toolbarClick(args){
+grid.toolbarClick = function(args){
     if (args.item.id === 'Grid_pdfexport') {
         grid.pdfExport();
     }

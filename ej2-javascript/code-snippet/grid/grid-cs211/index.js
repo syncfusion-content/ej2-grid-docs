@@ -29,7 +29,6 @@ grid.toolbarClick = function(args){
         // 'Grid_pdfexport' -> Grid component id + _ + toolbar item name
         var exportProperties = {
             hierarchyExportMode: dropdown.value,
-            // Assuming you have a dropdown list with id 'dropdownlist'
         };
         grid.pdfExport(exportProperties);
     }

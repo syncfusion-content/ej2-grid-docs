@@ -1,13 +1,12 @@
-import { Grid, Toolbar, PdfExport,  Aggregate} from '@syncfusion/ej2-grids';
+import { Grid, Toolbar, PdfExport,  ClickEventArgs, PdfQueryCellInfoEventArgs, QueryCellInfoEventArgs} from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
-Grid.Inject(Toolbar, PdfExport,Aggregate);
+Grid.Inject(Toolbar, PdfExport);
 
 let grid: Grid = new Grid({
     dataSource: data,
     allowPdfExport: true,
     toolbar: ['PdfExport'],
-    toolbarClick: toolbarClick,
     pdfQueryCellInfo: pdfQueryCellInfo,
     queryCellInfo: queryCellInfo,
     columns: [
@@ -20,13 +19,13 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 
-function toolbarClick(args){
+grid.toolbarClick = function (args: ClickEventArgs) {
     if (args.item.id === 'Grid_pdfexport') {
         grid.pdfExport();
     }
 }
 
-function queryCellInfo(args) {
+function queryCellInfo(args: QueryCellInfoEventArgs) {
     let data = (args.data).OrderID;
     switch (data) {
         case 10248:
@@ -57,7 +56,7 @@ function queryCellInfo(args) {
     }
 }
 
-function pdfQueryCellInfo(args)
+function pdfQueryCellInfo(args: PdfQueryCellInfoEventArgs)
 {
     let data = (args.data).OrderID;
         switch (data) {

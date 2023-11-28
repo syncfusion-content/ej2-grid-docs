@@ -6,7 +6,6 @@ var grid = new ej.grids.Grid({
     allowPdfExport: true,
     allowPaging: true,
     toolbar: ['PdfExport'],
-    toolbarClick: toolbarClick,
     pdfQueryCellInfo: pdfQueryCellInfo,
     queryCellInfo: queryCellInfo,
     columns: [
@@ -20,7 +19,7 @@ var grid = new ej.grids.Grid({
 });
 grid.appendTo('#Grid');
 
-function toolbarClick(args){
+grid.toolbarClick = function (args) {
     if (args.item.id === 'Grid_pdfexport') {
         grid.pdfExport();
     }

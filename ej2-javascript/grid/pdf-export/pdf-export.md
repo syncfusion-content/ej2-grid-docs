@@ -15,7 +15,9 @@ The PDF export feature in the Syncfusion ##Platform_Name## Grid allows you to ex
 
 To enable PDF export in the grid, you need to set the [allowPdfExport](../../api/grid/#allowpdfexport) property to **true** and use the [pdfExport](../../api/grid/#pdfexport) method for exporting. 
 
-To use PDF export, inject the **PdfExportService** in the provider section of the **AppModule**.
+To use PDF export, inject the **PdfExportService** in the **Grid**.
+
+The following example demonstrates how to perform a PDF export action in the grid.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -310,7 +312,7 @@ The following example demonstrates how to export multiple grids to a PDF file wh
 
 ## Exporting hierarchy grid
 
-Exporting a hierarchy grid in the Syncfusion javascript Grid component allows you to generate a PDF document that includes the master grid along with its child grids. This feature is useful when you need to export hierarchical data with its related details.
+Exporting a hierarchy grid in the Syncfusion ##Platform_Name## Grid component allows you to generate a PDF document that includes the master grid along with its child grids. This feature is useful when you need to export hierarchical data with its related details.
 
 To achieve this, you can customize the exporting behavior by using the `pdfExportProperties.hierarchyExportMode` property of the Grid.
 
@@ -353,7 +355,7 @@ The following example demonstrates how to export hierarchical grid to PDF docume
 
 ## Remove header row while exporting
 
-When exporting data from the Syncfusion javascript Grid, you have an option to remove the header row from the exported file. This can be useful when you want to export grid data without including the header values in the exported document.
+When exporting data from the Syncfusion ##Platform_Name## Grid, you have an option to remove the header row from the exported file. This can be useful when you want to export grid data without including the header values in the exported document.
 
 To achieve this, you can utilize the [pdfHeaderQueryCellInfo](../../api/grid/#pdfheaderquerycellinfo) event of the Grid. This event allows you to customize the header cells during the PDF export process. By handling this event, you can remove the header row from the exported file by not providing any content and height for the header cells. This ensures that the exported file contains only the data rows without including the header information.
 

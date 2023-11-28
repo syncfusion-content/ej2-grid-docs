@@ -4,7 +4,6 @@ var FirstGrid = new ej.grids.Grid({
     dataSource: data,
     allowPdfExport: true,
     toolbar: ['PdfExport'],
-    toolbarClick: toolbarClick,
     exportGrids: ['FirstGrid', 'SecondGrid'],
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
@@ -30,11 +29,12 @@ var SecondGrid = new ej.grids.Grid({
 });
 SecondGrid.appendTo('#SecondGrid');
 
-function toolbarClick(args){
-    let appendPdfExportProperties = {
-        multipleExport: { type: 'NewPage' }
-    };
-    if (args.item.id === 'FirstGrid_pdfexport') { // 'Grid_pdfexport' -> Grid component id + _ + toolbar item name
-        FirstGrid.pdfExport(appendPdfExportProperties);
+var appendPdfExportProperties = {
+    multipleExport: { type: 'NewPage' },
+  };
+  
+  FirstGrid.toolbarClick = function (args) {
+    if (args.item.text === 'PDF Export') {
+      FirstGrid.pdfExport(appendPdfExportProperties, true);
     }
-}
+  };

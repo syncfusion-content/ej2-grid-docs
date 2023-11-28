@@ -1,25 +1,14 @@
 ej.base.enableRipple(true);
 
 var firstGrid = new ej.grids.Grid({
-  dataSource: data.slice(0, 5),
+  dataSource: data,
   allowExcelExport: true,
   allowPdfExport: true,
   exportGrids: ['FirstGrid', 'SecondGrid'],
   toolbar: ['PdfExport'],
   columns: [
-    {
-      field: 'OrderID',
-      headerText: 'Order ID',
-      textAlign: 'Right',
-      width: 120,
-      type: 'number',
-    },
-    {
-      field: 'CustomerID',
-      width: 140,
-      headerText: 'Customer ID',
-      type: 'string',
-    },
+    {field: 'OrderID',headerText: 'Order ID',textAlign: 'Right',width: 120,type: 'number'},
+    {field: 'CustomerID',width: 140,headerText: 'Customer ID',type: 'string'},
     {
       field: 'ShipCity',
       headerText: 'Ship City',
@@ -37,7 +26,7 @@ var firstGrid = new ej.grids.Grid({
 firstGrid.appendTo('#FirstGrid');
 
 var SecondGrid = new ej.grids.Grid({
-  dataSource: employeeData.slice(0, 5),
+  dataSource: employeeData,
   allowPdfExport: true,
   columns: [
     {
