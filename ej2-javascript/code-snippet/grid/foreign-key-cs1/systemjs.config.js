@@ -10,7 +10,7 @@ System.config({
         }
     },
     paths: {
-        "syncfusion:": "https://cdn.syncfusion.com/ej2/20.3.56/"
+        "syncfusion:": "https://cdn.syncfusion.com/ej2/23.2.4/"
     },
     map: {
         main: "index.ts",
@@ -32,6 +32,7 @@ System.config({
         "@syncfusion/ej2-file-utils": "syncfusion:ej2-file-utils/dist/ej2-file-utils.umd.min.js",
         "@syncfusion/ej2-compression": "syncfusion:ej2-compression/dist/ej2-compression.umd.min.js",
         "@syncfusion/ej2-splitbuttons": "syncfusion:ej2-splitbuttons/dist/ej2-splitbuttons.umd.min.js"
+        
     },
      meta: { 
        '*.json': { loader: 'plugin-json' }
