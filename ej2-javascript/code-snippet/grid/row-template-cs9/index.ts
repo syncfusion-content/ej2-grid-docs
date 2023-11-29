@@ -1,6 +1,4 @@
-
-
-import { Grid, Reorder } from '@syncfusion/ej2-grids';
+import { Grid, Reorder, ColumnDragEventArgs } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
 Grid.Inject(Reorder);
@@ -8,24 +6,34 @@ Grid.Inject(Reorder);
 let grid: Grid = new Grid({
     dataSource: data,
     allowReordering: true,
+    enableHover: false,
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100 },
         { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
+        { field: 'ShipRegion', headerText: 'Ship Region', width: 100 },
         { field: 'ShipCity', headerText: 'Ship City', width: 100 },
         { field: 'ShipName', headerText: 'Ship Name', width: 100 }
     ],
-    columnDragStart: () => {
-        alert('columnDragStart event is Triggered');
+    columnDrop: (args: ColumnDragEventArgs) => {
+        (document.getElementById('message') as HTMLElement).innerText = 'columnDrop event triggered';
+
+        if (args.column.allowReordering == true) {
+            grid.getColumnByField(args.column.field).customAttributes = { class: 'customcss' };
+        }
     },
-    columnDrag: () => {
-        alert('columnDrag event is Triggered');
+    columnDragStart: (args: ColumnDragEventArgs) => {
+        (document.getElementById('message') as HTMLElement).innerText = `columnDragStart event triggered`;
+
+        if (args.column.field == 'OrderID') {
+            grid.getColumnByField(args.column.field).allowReordering = false;
+        }
     },
-    columnDrop: () => {
-        alert('columnDrop event is Triggered');
-    }
+    columnDrag: (args: ColumnDragEventArgs) => {
+        let index = args.target.getAttribute('data-colIndex');
+        if (index) {
+            (document.getElementById('message') as HTMLElement).innerText = `columnDrag event is triggered. ` + args.column.headerText + ` column is dragged to index ` + index;
+        }
+    },
     height: 315
 });
 grid.appendTo('#Grid');
-
-
-
