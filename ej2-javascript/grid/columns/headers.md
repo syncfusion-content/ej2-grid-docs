@@ -557,7 +557,7 @@ Step 1: Define a CSS class that specifies the styles you want to apply to the he
 Step 2: Set the **customAttributes** property of the desired column to an object that contains the CSS class **customcss**. This CSS class will be applied to the header cell of the specified column in the Grid.
 
   ```ts
-  {field: "Freight" headerText: "Freight" customAttributes: {class: '.customcss'}
+  {field: "Freight" headerText: "Freight" customAttributes: {class: '.customcss'}}
   ```
 
 The following example demonstrates how to customize the appearance of the **OrderID** and **Freight** columns using custom attributes.
@@ -711,7 +711,7 @@ To get the header element in a Syncfusion Grid, you can use one of the following
  1.[getHeaderContent](../../api/grid/#getheadercontent): This method returns the header div element of the Grid. You can use this method to access the entire header content of the Grid.
   
     ```ts
-    const headerElement = this.grid.getHeaderContent();    
+    const headerElement = grid.getHeaderContent();    
     ```
 
  2.[getHeaderTable](../../api/grid/#getheadertable): This method returns the header table element of the Grid. You can use this method to access only the header table of the Grid.
