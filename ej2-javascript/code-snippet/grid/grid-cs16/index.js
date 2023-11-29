@@ -1,6 +1,6 @@
 var data = new ej.data.DataManager({
-    url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders',
-    adaptor: new ej.data.ODataV4Adaptor(),
+    url: 'https://services.syncfusion.com/js/production/api/Orders',
+    adaptor: new ej.data.ODataAdaptor(),
     offline: true
 });
 ej.grids.Grid.Inject(ej.grids.Page, ej.grids.Sort, ej.grids.Group);
