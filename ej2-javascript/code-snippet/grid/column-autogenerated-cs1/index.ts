@@ -9,6 +9,6 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 grid.dataBound = () => {
-    let column = grid.columns[0];
-    (column as ColumnModel).isPrimaryKey = true;
+    let column: ColumnModel = grid.columns[0];
+    column.isPrimaryKey = true;
   };

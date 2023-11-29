@@ -119,7 +119,7 @@ If the column [field](../../api/grid/column/#field) name is known, the [getColum
 
 ```typescript
 grid.dataBound = () => {
-    var column: Column = grid.getColumnByField('OrderID');
+    let column: ColumnModel = grid.getColumnByField('OrderID');
     column.isPrimaryKey = 'true';
 }
 ```
