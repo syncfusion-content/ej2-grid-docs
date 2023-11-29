@@ -1,6 +1,6 @@
 import { createElement } from '@syncfusion/ej2-base';
 import { DataManager } from '@syncfusion/ej2-data';
-import { Grid, ForeignKey, Filter } from '@syncfusion/ej2-grids';
+import { Grid, ForeignKey, Filter, ColumnModel } from '@syncfusion/ej2-grids';
 import { data, fEmployeeData } from './datasource.ts';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
 
@@ -31,12 +31,12 @@ let grid: Grid = new Grid(
                                 dropInstance.appendTo(flValInput);
                             },
                             write: (args: {
-                                column: Object, target: Element, parent: any,
+                                column: Object, target: Element, parent: Element,
                                 filteredValue: number | string
                             }) => {
                                 dropInstance.text = args.filteredValue || '';
                             },
-                            read: (args: { target: Element, column: any, operator: string, fltrObj: Filter }) => {
+                            read: (args: { target: Element, column: ColumnModel, operator: string, fltrObj: Filter }) => {
                                 args.fltrObj.filterByColumn(args.column.field, args.operator, dropInstance.text);
                             }
                         }

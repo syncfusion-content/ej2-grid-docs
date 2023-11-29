@@ -5,11 +5,11 @@ import { getValue } from '@syncfusion/ej2-base';
 Grid.Inject(ForeignKey, Aggregate);
 
 // Custom Aggregate function for foreign column
-let customAggregateFn: CustomSummaryType = (data1: Object, column: AggregateColumnModel) => {
-    return data1.result.filter((count: Object) => {
-        return getValue('FirstName' , getForeignData(grid.getColumnByField(column.columnName), count)[0]) === 'Margaret';
+let customAggregateFn: CustomSummaryType = (data1: { result: { OrderID: number, EmployeeID: number, Freight: number, ShipName: string }[] }, column: AggregateColumnModel) => {
+    return data1.result.filter((count: { OrderID: number, EmployeeID: number, Freight: number, ShipName: string }) => {
+        return getValue('FirstName', getForeignData(grid.getColumnByField(column.columnName), count)[0]) === 'Margaret';
     }).length;
-};
+  };
 
 let grid: Grid = new Grid(
     {

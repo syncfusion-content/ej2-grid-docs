@@ -1,5 +1,5 @@
-var autoCompleteObj;
 ej.grids.Grid.Inject(ej.grids.ForeignKey, ej.grids.Edit, ej.grids.Toolbar);
+var autoCompleteObj;
 var grid = new ej.grids.Grid({
   dataSource: data,
   toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],

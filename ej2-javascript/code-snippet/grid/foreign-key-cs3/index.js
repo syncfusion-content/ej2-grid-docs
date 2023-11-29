@@ -14,22 +14,22 @@ var grid = new ej.grids.Grid({
               className: 'flm-input',
             });
             args.target.appendChild(flValInput);
-            this.dropInstance = new ej.dropdowns.DropDownList({
+            dropInstance = new ej.dropdowns.DropDownList({
               dataSource: new ej.data.DataManager(fEmployeeData),
               fields: { text: 'FirstName', value: 'FirstName' },
               placeholder: 'Select a value',
               popupHeight: '200px',
             });
-            this.dropInstance.appendTo(flValInput);
+            dropInstance.appendTo(flValInput);
           },
           write: function (args) {
-            this.dropInstance.value = args.filteredValue;
+            dropInstance.value = args.filteredValue;
           },
           read: function (args) {
             args.fltrObj.filterByColumn(
               args.column.field,
               args.operator,
-              this.dropInstance.value
+              dropInstance.value
             );
           },
         },
