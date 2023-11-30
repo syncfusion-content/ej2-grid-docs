@@ -1,12 +1,10 @@
-
-
 import { Grid, DetailRow, DetailDataBoundEventArgs } from '@syncfusion/ej2-grids';
 import { employeeData, data } from './datasource.ts';
 
 Grid.Inject(DetailRow);
 
 let grid: Grid = new Grid({
-    dataSource: employeeData.slice(2, 5),
+    dataSource: employeeData,
     detailTemplate: '#detailtemplate',
     columns: [
         { field: 'FirstName', headerText: 'First Name', width: 140 },
@@ -16,7 +14,7 @@ let grid: Grid = new Grid({
     ],
     detailDataBound: (e: DetailDataBoundEventArgs) => {
         let detail = new Grid({
-            dataSource: data.filter((item: Object) => item['EmployeeID'] === e.data['EmployeeID']).slice(0, 3),
+            dataSource: data.filter((item: Object) => item['EmployeeID'] === e.data['EmployeeID']),
             columns: [
                 { field: 'OrderID', headerText: 'Order ID', width: 110 },
                 { field: 'CustomerID', headerText: 'Customer Name', width: 140 },
@@ -27,6 +25,3 @@ let grid: Grid = new Grid({
     }
 });
 grid.appendTo('#Grid');
-
-
-
