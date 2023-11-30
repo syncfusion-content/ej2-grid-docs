@@ -1,5 +1,3 @@
-
-
 import { Grid, Page, PageEventArgs } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 import { NumericTextBox } from '@syncfusion/ej2-inputs';
@@ -42,6 +40,3 @@ let grid: Grid = new Grid({
     }
 });
 grid.appendTo('#Grid');
-
-
-
