@@ -709,10 +709,10 @@ The following example demonstrates how to use the `refreshHeader` method to upda
 To get the header element in a Syncfusion Grid, you can use one of the following methods:
 
  1.[getHeaderContent](../../api/grid/#getheadercontent): This method returns the header div element of the Grid. You can use this method to access the entire header content of the Grid.
-  
-    ```ts
-    const headerElement = grid.getHeaderContent();    
-    ```
+
+   ```ts
+    const headerElement = grid.getHeaderContent();
+   ```
 
  2.[getHeaderTable](../../api/grid/#getheadertable): This method returns the header table element of the Grid. You can use this method to access only the header table of the Grid.
 
