@@ -9,11 +9,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Detail template in ##Platform_Name## Grid component
+# Detail template in ##Platform_Name## Grid control
 
-The detail template in the Grid component allows you to display additional information about a specific row in the grid by expanding or collapsing detail content. This feature is useful when you need to show additional data or custom content that is specific to each row in the grid. You can use the [detailTemplate](../../api/grid/#detailtemplate) property to define an HTML template for the detail row. This template can include any HTML element or ##Platform_Name## component that you want to display as detail content.
+The detail template in the Grid control allows you to display additional information about a specific row in the grid by expanding or collapsing detail content. This feature is useful when you need to show additional data or custom content that is specific to each row in the grid. You can use the [detailTemplate](../../api/grid/#detailtemplate) property to define an HTML template for the detail row. This template can include any HTML element or ##Platform_Name## control that you want to display as detail content.
 
-Here's an example of using the `detailTemplate` property in the grid component:
+Here's an example of using the `detailTemplate` property in the grid control:
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -42,15 +42,15 @@ Here's an example of using the `detailTemplate` property in the grid component:
 {% previewsample "page.domainurl/code-snippet/grid/detail-template-cs1" %}
 {% endif %}
 
-## Rendering custom component
+## Rendering custom control
 
-The Grid component provides a powerful feature that allows you to render custom components inside the detail row. This feature is helpful when you need to add additional information or functionality for a specific row in the grid.
+The Grid control provides a powerful feature that allows you to render custom controls inside the detail row. This feature is helpful when you need to add additional information or functionality for a specific row in the grid.
 
-To render a custom component inside the detail row, you need to define a template using the [detailTemplate](../../api/grid/#detailtemplate)  property and handle the [detailDataBound](,../../api/grid/#detaildatabound) event. This template can include any HTML element or ##Platform_Name## component that you want to display as the detail content.
+To render a custom control inside the detail row, you need to define a template using the [detailTemplate](../../api/grid/#detailtemplate)  property and handle the [detailDataBound](,../../api/grid/#detaildatabound) event. This template can include any HTML element or ##Platform_Name## control that you want to display as the detail content.
 
 The `detailDataBound` event is an event that is triggered after a detail row is bound to data. This event provides an object of type [DetailDataBoundEventArgs](../../api/grid/#detaildataboundeventargs) as a parameter.
 
-For example, to render grid inside the detail row, place an HTML div element as the `detailTemplate` and render the DIV element as grid component in the `detailDataBound` event.
+For example, to render grid inside the detail row, place an HTML div element as the `detailTemplate` and render the DIV element as grid control in the `detailDataBound` event.
 
 {% if page.publishingplatform == "typescript" %}
 
