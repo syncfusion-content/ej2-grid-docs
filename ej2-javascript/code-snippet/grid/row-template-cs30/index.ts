@@ -1,5 +1,3 @@
-
-
 import { Grid } from '@syncfusion/ej2-grids';
 import { employeeData } from './datasource.ts';
 
@@ -13,6 +11,3 @@ let grid: Grid = new Grid({
     height: 315
 });
 grid.appendTo('#Grid');
-
-
-

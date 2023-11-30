@@ -1,5 +1,3 @@
-
-
 import { Grid, RowDD, Selection } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
@@ -8,16 +6,15 @@ Grid.Inject(RowDD, Selection);
 let grid: Grid = new Grid({
     dataSource: data,
     allowRowDragAndDrop: true,
-    heigth:300,
     selectionSettings: { type: 'Multiple' },
+    height: 400,
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', isPrimaryKey: true, textAlign: 'Right', width: 120 },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
-        { field: 'ShipCity', headerText: 'Ship City', width: 150 },
-        { field: 'ShipName', headerText: 'Ship Name', width: 150 }
+        { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right'},
+        { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
+        { field: 'OrderDate', headerText: 'Order Date', width: 100, format:'yMd', textAlign: 'Right' },
+        { field: 'Freight', headerText: 'Freight', width: 120, format:'C2', textAlign: 'Right' },
+        { field: 'ShipCity', headerText: 'Ship City', width: 130 },
+        { field: 'ShipCountry', headerText: 'Ship Country', width: 130 }
     ]
 });
 grid.appendTo('#Grid');
-
-
-

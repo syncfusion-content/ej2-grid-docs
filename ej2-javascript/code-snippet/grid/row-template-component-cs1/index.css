@@ -1,0 +1,22 @@
+#container {
+  visibility: hidden;
+}
+
+#loader {
+color: #008cff;
+font-family: 'Helvetica Neue','calibiri';
+font-size: 14px;
+height: 40px;
+left: 45%;
+position: absolute;
+top: 45%;
+width: 30%;
+}
+
+td {
+border-color: #e0e0e0;
+border-style: solid;
+text-align: "Left";
+border-width: 1px 0px 0px 0px;
+padding: 0px 15px 0 0;
+}
