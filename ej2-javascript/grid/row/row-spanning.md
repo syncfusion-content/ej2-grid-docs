@@ -11,11 +11,13 @@ domainurl: ##DomainURL##
 
 # Row spanning in ##Platform_Name## Grid control
 
-The grid has option to span row cells. To achieve this, You need to define the [`rowSpan`](../../api/grid/queryCellInfoEventArgs/#rowspan) attribute to span cells in the [`QueryCellInfo`](../../api/grid/queryCellInfoEventArgs) event.
+The grid provides an option to span row cells, allowing you to merge two or more cells in a row into a single cell. This feature can be useful in scenarios where you want to display information that spans across multiple rows, but want to avoid repeating the same information in each row.
 
-In the following demo, **Davolio** cell is spanned to two rows in the **EmployeeName** column.
+To achieve this, You need to define the [rowSpan](../../api/grid/queryCellInfoEventArgs/#rowspan) attribute to span cells in the [queryCellInfo](../../api/grid/queryCellInfoEventArgs) event. The rowSpan attribute is used to specify the number of rows that the current cell should span.
 
-Also Grid supports the spanning of rows and columns for same cells. **Lunch Break** cell is spanned to two rows and three columns in the **1:00** column.
+The `queryCellInfo` event is triggered for each cell in the grid, and allows you to customize the cells in the grid. By handling this event, you can set the `rowSpan` attribute for a cell to achieve row spanning.
+
+In the following demo, **Davolio** cell is spanned to two rows in the **EmployeeName** column.Also Grid supports the spanning of rows and columns for same cells. **Lunch Break** cell is spanned to two rows and three columns in the **1:00** column.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -44,4 +46,5 @@ Also Grid supports the spanning of rows and columns for same cells. **Lunch Brea
 {% previewsample "page.domainurl/code-snippet/grid/row-spanning-cs1" %}
 {% endif %}
 
-> When paging is enabled in grid, you can disable the rows and columns spanning for any particular page. To achieve this, we need to check **requestType** as paging `<code class='language-text'> string</code>` in [`queryCellInfo`](../../api/grid/queryCellInfoEventArgs) event of grid.
+> To disable the spanning for particular grid page, you need to use **requestType** from `queryCellInfo` event argument.
+> The `rowSpan` and `colSpan` attributes can be used together to merge cells both vertically and horizontally.
