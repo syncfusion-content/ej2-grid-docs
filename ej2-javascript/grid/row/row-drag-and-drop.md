@@ -9,11 +9,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Row drag and drop in ##Platform_Name## Grid component
+# Row drag and drop in ##Platform_Name## Grid control
 
-The Syncfusion ##Platform_Name## Grid component provides built-in support for row drag and drop functionality. This feature allows you to easily rearrange rows within the grid by dragging and dropping them to new positions. Additionally, you can also drag and drop rows from one grid to another grid, as well as drag and drop rows to custom components.
+The Syncfusion ##Platform_Name## Grid control provides built-in support for row drag and drop functionality. This feature allows you to easily rearrange rows within the grid by dragging and dropping them to new positions. Additionally, you can also drag and drop rows from one grid to another grid, as well as drag and drop rows to custom controls.
 
-To use the row drag and drop feature in Grid component, you need to inject the **RowDD** module in the grid. The **RowDD** is responsible for handling the row drag and drop functionality in the grid component. Once you have injected the **RowDD**, you can then use the [allowRowDragAndDrop](../../api/grid/#allowrowdraganddrop) and [targetID](../../api/grid/rowDropSettings/#targetid) properties to enable and configure the row drag and drop feature in the Grid.
+To use the row drag and drop feature in Grid control, you need to inject the **RowDD** module in the grid. The **RowDD** is responsible for handling the row drag and drop functionality in the grid control. Once you have injected the **RowDD**, you can then use the [allowRowDragAndDrop](../../api/grid/#allowrowdraganddrop) and [targetID](../../api/grid/rowDropSettings/#targetid) properties to enable and configure the row drag and drop feature in the Grid.
 
 ## Drag and drop within grid
 
@@ -50,11 +50,11 @@ Here's an example of how to enable drag and drop within the Grid:
 
 ## Drag and drop to grid 
 
-The grid row drag and drop allows you to drag grid rows and drop to another grid. This feature can be enabled by setting the [allowRowDragAndDrop](../../api/grid/#allowrowdraganddrop) property to **true** in the Grid component. This property specifies whether to enable or disable the row drag and drop feature in the Grid. By default, this property is set to **false**, which means that row drag and drop functionality is not enabled.
+The grid row drag and drop allows you to drag grid rows and drop to another grid. This feature can be enabled by setting the [allowRowDragAndDrop](../../api/grid/#allowrowdraganddrop) property to **true** in the Grid control. This property specifies whether to enable or disable the row drag and drop feature in the Grid. By default, this property is set to **false**, which means that row drag and drop functionality is not enabled.
 
-To specify the target component where the grid rows should be dropped, use the [targetID](../../api/grid/rowDropSettings/#targetid) property of the [rowDropSettings](../../api/grid/rowDropSettings/) object. The `targetID` property takes the ID of the target component as its value.
+To specify the target control where the grid rows should be dropped, use the [targetID](../../api/grid/rowDropSettings/#targetid) property of the [rowDropSettings](../../api/grid/rowDropSettings/) object. The `targetID` property takes the ID of the target control as its value.
 
-Here's an example code snippet that demonstrates how to enable Row drag and drop another Grid component:
+Here's an example code snippet that demonstrates how to enable Row drag and drop another Grid control:
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -86,11 +86,11 @@ Here's an example code snippet that demonstrates how to enable Row drag and drop
 > * The row drag and drop feature is not supported in virtual scrolling and frozen rows and columns mode.
 > * In order to use row drag and drop, you need to inject the **RowDD** module in the grid.
 
-## Drag and drop to custom component
+## Drag and drop to custom control
 
-The Grid provides the feature to drag and drop grid rows to any custom component. This feature allows you to easily move rows from one component to another without having to manually copy and paste data. To enable row drag and drop, you need to set the [allowRowDragAndDrop](../../api/grid/#allowrowdraganddrop) property to **true** and defining the custom component ID in the [targetID](../../api/grid/rowDropSettings/#targetid) property of the `rowDropSettings` object. The ID provided in `targetID` should correspond to the ID of the target component where the rows are to be dropped.
+The Grid provides the feature to drag and drop grid rows to any custom control. This feature allows you to easily move rows from one control to another without having to manually copy and paste data. To enable row drag and drop, you need to set the [allowRowDragAndDrop](../../api/grid/#allowrowdraganddrop) property to **true** and defining the custom control ID in the [targetID](../../api/grid/rowDropSettings/#targetid) property of the `rowDropSettings` object. The ID provided in `targetID` should correspond to the ID of the target control where the rows are to be dropped.
 
-In the below example, the selected grid row is dragged and dropped in to the TreeGrid component by using [rowDrop](../../api/grid/#rowdrop) event. Once the row is dropped into the TreeGrid component, we have removed the corresponding grid row from grid and its data inserted in custom component.
+In the below example, the selected grid row is dragged and dropped in to the TreeGrid control by using [rowDrop](../../api/grid/#rowdrop) event. Once the row is dropped into the TreeGrid control, we have removed the corresponding grid row from grid and its data inserted in custom control.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -119,7 +119,7 @@ In the below example, the selected grid row is dragged and dropped in to the Tre
 {% previewsample "page.domainurl/code-snippet/grid/draganddrop-custom-cs1" %}
 {% endif %}
 
-> * The `rowDrop` event is fired when a row is dropped onto a custom component, regardless of whether the drop is successful or not. You can use the `args.cancel` property to prevent the default action.
+> * The `rowDrop` event is fired when a row is dropped onto a custom control, regardless of whether the drop is successful or not. You can use the `args.cancel` property to prevent the default action.
 
 ## Drag and drop rows without drag icon
 
@@ -161,7 +161,7 @@ Here's an example of how to hide the drag and drop icon in the Syncfusion Grid:
 
 ## Drag and drop events
 
-The Grid component provides a set of events that are triggered during drag and drop operations on grid rows. These events allow you to customize the drag element, track the progress of the dragging operation, and perform actions when a row is dropped on a target element. The following events are available:
+The Grid control provides a set of events that are triggered during drag and drop operations on grid rows. These events allow you to customize the drag element, track the progress of the dragging operation, and perform actions when a row is dropped on a target element. The following events are available:
 
 1. [rowDragStartHelper](../../api/grid/#rowdragstarthelper): This event is triggered when a click occurs on the drag icon or a grid row. It allows you to customize the drag element based on specific criteria.
 
