@@ -95,27 +95,27 @@ Here is an example that demonstrates rendering Syncfusion controls within a row 
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/row-template-control-cs1/index.ts %}
+{% include code-snippet/grid/row-template-component-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-control-cs1/index.html %}
+{% include code-snippet/grid/row-template-component-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/row-template-control-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/row-template-component-cs1" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/row-template-control-cs1/index.js %}
+{% include code-snippet/grid/row-template-component-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-control-cs1/index.html %}
+{% include code-snippet/grid/row-template-component-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/row-template-control-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/row-template-component-cs1" %}
 {% endif %}
 
 ## Limitations
