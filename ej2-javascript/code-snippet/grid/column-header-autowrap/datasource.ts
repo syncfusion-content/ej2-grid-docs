@@ -1,4 +1,4 @@
-export var inventoryData = [
+export let inventoryData: Object[] = [
 
     {
         'Inventor': 'Kia Silverbrook',
