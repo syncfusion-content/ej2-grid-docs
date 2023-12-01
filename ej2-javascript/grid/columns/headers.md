@@ -2,7 +2,7 @@
 layout: post
 title: Headers in ##Platform_Name## Grid control | Syncfusion
 description: Learn here all about Headers in Syncfusion ##Platform_Name## Grid control of Syncfusion Essential JS 2 and more.
-platform: ej2-##Platform_Name##
+platform: ej2-javascript
 control: Headers 
 publishingplatform: ##Platform_Name##
 documentation: ug
