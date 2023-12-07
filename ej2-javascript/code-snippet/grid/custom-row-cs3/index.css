@@ -14,14 +14,11 @@
 }
 
 .below-30 {
-  background-color: orangered;
+  background-color: rgb(211, 225, 248);
 }
-
 .below-80 {
-  background-color: yellow;
-} 
-
-.above-80 {
-  background-color: greenyellow
+  background-color: rgb(163, 236, 217);
 }
-
+.above-80 {
+  background-color: rgb(220, 248, 177);
+}
