@@ -126,7 +126,7 @@ grid.dataBound = () => {
 
 ### Set column options to auto generated columns
 
-To configure column options such as [type](../../api/grid/column/#type), [format](../../api/grid/column/#format) and [width](../../api/grid/column/#width) for auto-generated columns in Syncfusion Grid, you can use the [dataBound](../../api/grid/#databound) event of the Grid component. This event is triggered after the data has been bound to the Grid. By handling this event, you can specify the desired column options for the auto-generated columns.
+To configure column options such as [type](../../api/grid/column/#type), [format](../../api/grid/column/#format) and [width](../../api/grid/column/#width) for auto-generated columns in Syncfusion Grid, you can use the [dataBound](../../api/grid/#databound) event of the Grid control. This event is triggered after the data has been bound to the Grid. By handling this event, you can specify the desired column options for the auto-generated columns.
 
 Here's an example of how you can set column options for auto-generated columns using the `dataBound` event:
 
@@ -161,7 +161,7 @@ In the below example, `width` is set for **OrderID** column, **date** `type` is 
 
 ## Dynamic column generation 
 
-The Syncfusion Grid component allows you to dynamically generate columns at runtime, based on the data provided. This feature is useful when you need to display data with varying columns based on user requirements or dynamic data sources.
+The Syncfusion Grid control allows you to dynamically generate columns at runtime, based on the data provided. This feature is useful when you need to display data with varying columns based on user requirements or dynamic data sources.
 
 ### Using valueAccessor property
 
@@ -204,7 +204,7 @@ In the provided code, the **currencyFormatter** function takes the Freight value
 
 ### Display array type columns
 
-The Grid component allows you to easily bind an array of objects to a column using the [valueAccessor](../../api/grid/column/#valueaccessor) property. This property allows customization of how the data is displayed in the column.
+The Grid control allows you to easily bind an array of objects to a column using the [valueAccessor](../../api/grid/column/#valueaccessor) property. This property allows customization of how the data is displayed in the column.
 
 For example, consider a column named **Name** that contains an array of two objects, **FirstName** and **LastName**.  The `valueAccessor` property can be used to join these two objects and bind them to the column.
 
@@ -307,11 +307,11 @@ Here is an example code snippet that demonstrates how to display serial numbers 
 
 ## Complex data binding
 
-The Syncfusion Grid component allows you to achieve complex data binding by using the dot (.) operator in the [column.field](../../api/grid/column/#field). This feature is particularly useful when dealing with nested or complex data structures.
+The Syncfusion Grid control allows you to achieve complex data binding by using the dot (.) operator in the [column->field](../../api/grid/column/#field). This feature is particularly useful when dealing with nested or complex data structures.
 
 ### Using local data
 
-To enable complex data binding in the Grid component using local data, use the dot (.) operator in the [field](../../api/grid/column/#field) property of the column. Here is an example of how to achieve complex data binding using local data:
+To enable complex data binding in the Grid control using local data, use the dot (.) operator in the [field](../../api/grid/column/#field) property of the column. Here is an example of how to achieve complex data binding using local data:
 
 In the below example, we have bound the nested **Employee** object's **FirstName** and **LastName** properties using the dot (.) operator.
 
@@ -344,7 +344,7 @@ In the below example, we have bound the nested **Employee** object's **FirstName
 
 ### Using remote data
 
-To enable complex data binding in the Grid component using remote data, add the [expand](../../api/data/query/#expand) query to the [query](../../api/grid/#query) property of the Grid, to eager load the complex data. Here is an example of how to achieve complex data binding using remote data:
+To enable complex data binding in the Grid control using remote data, add the [expand](../../api/data/query/#expand) query to the [query](../../api/grid/#query) property of the Grid, to eager load the complex data. Here is an example of how to achieve complex data binding using remote data:
 
 In the below example, we have used the `expand` query to load the nested Employee object's **City** property using the dot (.) operator.
 
@@ -410,7 +410,7 @@ The following example shows how to set complex field for datasource having array
 
 ### How to set complex column as foreign key column
 
-The Syncfusion Grid component provides the ability to set complex columns as foreign key columns. This allows you to display related data from a foreign data source based on the complex column value.
+The Syncfusion Grid control provides the ability to set complex columns as foreign key columns. This allows you to display related data from a foreign data source based on the complex column value.
 
 The following example demonstrates how to set the **Employee.EmployeeID** column as a foreign key column, and display the **FirstName** column from the foreign data.
 
