@@ -60,28 +60,30 @@ The following example demonstrates, how to render hyperlink column in the Grid u
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/column-template-cs1/index.ts %}
+{% include code-snippet/grid/column-template-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-template-cs1/index.html %}
+{% include code-snippet/grid/column-template-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/column-template-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/column-template-cs3" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/column-template-cs1/index.js %}
+{% include code-snippet/grid/column-template-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/column-template-cs1/index.html %}
+{% include code-snippet/grid/column-template-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/column-template-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/column-template-cs3" %}
 {% endif %}
+
+>The window.open() method is a built-in JavaScript function that opens a new browser window or tab with the specified URL.
 
 ## Render other components in a column
 
@@ -93,7 +95,38 @@ The [LineChart](../../sparkline/getting-started) component of Syncfusion provide
 
 In the following example, we rendered the Sparkline Chart component in the Grid column by defining the [template](../../api/grid/column/#template) property.
 
+{% if page.publishingplatform == "typescript" %}
 
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/column-template-cs4/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-template-cs4/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column-template-cs4" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/column-template-cs4/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-template-cs4/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/column-template-cs4" %}
+{% endif %}
+
+### Render ColorPicker component in a column
+
+The [ColorPicker](../../color-picker/getting-started) component of Syncfusion provides a user-friendly way to select colors from a pre-defined color palette or custom colors. It can be used in a variety of scenarios such as picking a theme color or changing the color of an element on a page.
+
+In the following code, we rendered the ColorPicker component in the Grid column by defining the [template](../../api/grid/column/#template) property.
 
 You can render any component in a grid column using the [`template`](../../api/grid/column/#template) property.
 
