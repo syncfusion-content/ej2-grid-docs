@@ -361,3 +361,36 @@ In the following example, we have used Advent Pro font to export the grid with H
 {% endif %}
 
 > `PdfTrueTypeFont` accepts base 64 format of the Custom Font.
+
+## Export Grid as Blob
+
+To export the Grid as a blob pass the `isBlob` parameter as true in the [`pdfExport`](../../api/grid/#pdfexport) method.
+
+The Grid returns the promise of Blob in the [`pdfExportComplete`](../../api/grid/#pdfexportcomplete) event.
+
+{% if page.publishingplatform == "typescript" %}
+
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/export-grid-as-blob-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/export-grid-as-blob-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/export-grid-as-blob-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/export-grid-as-blob-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/export-grid-as-blob-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/export-grid-as-blob-cs1" %}
+{% endif %}
