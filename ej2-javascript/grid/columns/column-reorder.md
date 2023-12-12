@@ -9,13 +9,13 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column reorder in ##Platform_Name## Grid component
+# Column reorder in ##Platform_Name## Grid control
 
-The Syncfusion ##Platform_Name## Grid component allows to reorder columns by drag and drop of a particular column header from one index to another index within the grid. This feature can be enabled by injecting the [Reorder](../../api/grid/reorder) module in the grid..
+The Syncfusion ##Platform_Name## Grid control allows to reorder columns by drag and drop of a particular column header from one index to another index within the grid. This feature can be enabled by injecting the [Reorder](../../api/grid/reorder) module in the grid..
 
 To reorder the columns, set the [allowReordering](../../api/grid/#allowreordering) property to **true** in the grid.
 
-Here's an example for column reordering in your Grid component:
+Here's an example for column reordering in your Grid control:
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -198,7 +198,7 @@ Here is an example of how to use the `reorderColumns` method to reorder single c
 
 ## Reorder events
 
-When reordering columns in the Syncfusion ##Platform_Name## Grid component, you may want to take some specific action in response to the drag and drop events. To handle these events, you can define event handlers for the following events:
+When reordering columns in the Syncfusion ##Platform_Name## Grid control, you may want to take some specific action in response to the drag and drop events. To handle these events, you can define event handlers for the following events:
 
 1.The [columnDragStart](../../api/grid/#columndragstart) event triggers when column header element drag (move) starts.
 
@@ -206,7 +206,7 @@ When reordering columns in the Syncfusion ##Platform_Name## Grid component, you 
 
 3.The [columnDrop](../../api/grid/#columndrop) event triggers when a column header element is dropped on the target column.
 
-In the following example, we have implemented the `columnDragStart`, `columnDrag`, and `columnDrop` events in the Syncfusion Grid component.
+In the following example, we have implemented the `columnDragStart`, `columnDrag`, and `columnDrop` events in the Syncfusion Grid control.
 
 {% if page.publishingplatform == "typescript" %}
 

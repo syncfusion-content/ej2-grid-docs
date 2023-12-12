@@ -12,7 +12,7 @@ let grid: Grid = new Grid({
         { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
         { field: 'ShipRegion', headerText: 'Ship Region', width: 100 },
         { field: 'ShipCity', headerText: 'Ship City', width: 100 },
-        { field: 'ShipName', headerText: 'Ship Name', width: 100 }
+        { field: 'ShipName', headerText: 'Ship Name', width: 120 }
     ],
     columnDrop: (args: ColumnDragEventArgs) => {
         (document.getElementById('message') as HTMLElement).innerText = 'columnDrop event triggered';

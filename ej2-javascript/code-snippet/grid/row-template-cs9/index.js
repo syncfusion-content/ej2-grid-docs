@@ -8,7 +8,7 @@ var grid = new ej.grids.Grid({
         { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
         { field: 'ShipRegion', headerText: 'Ship Region', width: 100 },
         { field: 'ShipCity', headerText: 'Ship City', width: 100 },
-        { field: 'ShipName', headerText: 'Ship Name', width: 100 }
+        { field: 'ShipName', headerText: 'Ship Name', width: 120 }
     ],
     columnDrop: function (args) {
         document.getElementById('message').innerText = 'columnDrop event triggered';
