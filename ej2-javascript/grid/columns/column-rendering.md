@@ -379,7 +379,7 @@ In the below example, we have used the `expand` query to load the nested Employe
 
 The Syncfusion Grid supports complex data binding with lists of arrays of objects. This feature allows you to bind complex data with multiple levels of nested objects and arrays to the Grid.
 
-The following example shows how to set complex field for datasource having array Of objects.
+The following example shows how to set complex field for datasource having array of objects.
 
 {% if page.publishingplatform == "typescript" %}
 

@@ -8,7 +8,7 @@ let grid: Grid = new Grid ({
 grid.appendTo('#Grid');
 
 function dataBound() {
-    for (var i = 0; i < this.columns.length; i++) {
+    for (let i = 0; i < this.columns.length; i++) {
       if (this.columns[i].field === 'OrderID') {
         this.columns[i].width = 120;
       }

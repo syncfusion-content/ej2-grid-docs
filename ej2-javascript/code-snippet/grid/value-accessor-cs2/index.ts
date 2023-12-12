@@ -6,8 +6,8 @@ let grid: Grid = new Grid({
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100 },
         { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
-        { field: 'Freight', headerText: 'Freight', width: 100, valueAccessor: currencyFormatter },
-        { field: 'ShipCity', headerText: 'Ship City', width: 180, valueAccessor: concatenateFields }
+        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 80, valueAccessor: currencyFormatter },
+        { field: 'ShipCity', headerText: 'Ship City', width: 130, valueAccessor: concatenateFields }
     ],
     height: 315
 });
