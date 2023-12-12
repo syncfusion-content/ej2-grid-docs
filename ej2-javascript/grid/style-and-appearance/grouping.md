@@ -9,9 +9,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Grouping in ##Platform_Name## Grid component
+# Grouping in ##Platform_Name## Grid control
 
-You can customize the appearance of grouping elements in the Syncfusion ##Platform_Name## Grid component using CSS. Here are examples of how to customize the group header, group expand/collapse icons, group caption row, and grouping indent cell.
+You can customize the appearance of grouping elements in the Syncfusion ##Platform_Name## Grid control using CSS. Here are examples of how to customize the group header, group expand/collapse icons, group caption row, and grouping indent cell.
 
 ## Customizing the group header
 

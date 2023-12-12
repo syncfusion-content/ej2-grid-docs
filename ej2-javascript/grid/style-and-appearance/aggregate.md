@@ -9,9 +9,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Aggregate in ##Platform_Name## Grid component
+# Aggregate in ##Platform_Name## Grid control
 
-You can customize the appearance of aggregate elements in the Syncfusion ##Platform_Name## Grid component using CSS. Below are examples of how to customize the aggregate root element and the aggregate cell elements.
+You can customize the appearance of aggregate elements in the Syncfusion ##Platform_Name## Grid control using CSS. Below are examples of how to customize the aggregate root element and the aggregate cell elements.
 
 ## Customizing the aggregate root element
 

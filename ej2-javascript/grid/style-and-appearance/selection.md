@@ -9,9 +9,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Selection in ##Platform_Name## Grid component
+# Selection in ##Platform_Name## Grid control
 
-You can customize the appearance of the selection in the Syncfusion ##Platform_Name## Grid component using CSS. Here are examples of how to customize the row selection background, cell selection background, and column selection background.
+You can customize the appearance of the selection in the Syncfusion ##Platform_Name## Grid control using CSS. Here are examples of how to customize the row selection background, cell selection background, and column selection background.
 
 ## Customizing the row selection background
 
