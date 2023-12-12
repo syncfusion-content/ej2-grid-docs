@@ -25,6 +25,7 @@ let grid: Grid = new Grid({
   height: 315
 });
 grid.appendTo('#Grid');
+
 let dropDownColumn: DropDownList = new DropDownList({
   value: 'Freight',
   popupHeight: '200px',
@@ -33,6 +34,7 @@ let dropDownColumn: DropDownList = new DropDownList({
 dropDownColumn.appendTo('#Freight');
 
 let headerText = 'order date';
+
 let toggleButton: Switch = new Switch({
   change: onSwitchToggle,
 });

@@ -29,5 +29,4 @@ document.getElementById('buttons').onclick = function () {
     column.headerText = headerTextMap[column.field];
   });
   grid.refreshHeader();
-
 };

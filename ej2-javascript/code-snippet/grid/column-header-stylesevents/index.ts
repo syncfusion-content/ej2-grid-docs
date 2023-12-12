@@ -18,9 +18,9 @@ let grid: Grid = new Grid(
         });
     grid.appendTo('#Grid');
 
-    function onHeaderCellInfo(args: HeaderCellInfoEventArgs)
-    {
-        if (args.cell.column.field == 'OrderDate') {
-            args.node.classList.add('customcss');
-          }
-    }
+function onHeaderCellInfo(args: HeaderCellInfoEventArgs)
+{
+    if (args.cell.column.field == 'OrderDate') {
+        args.node.classList.add('customcss');
+        }
+}

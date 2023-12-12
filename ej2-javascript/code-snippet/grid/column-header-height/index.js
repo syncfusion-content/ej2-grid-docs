@@ -7,7 +7,6 @@ var grid = new ej.grids.Grid({
     {field: 'OrderDate',headerText: 'Order Date',format: 'yMd',width: 140},
   ],
 });
-
 grid.appendTo('#Grid');
 
 var button = new ej.buttons.Button({

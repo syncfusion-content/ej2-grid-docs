@@ -28,6 +28,7 @@ let grid: Grid = new Grid({
 grid.appendTo('#Grid');
 
 let dropdownData = ['Order Details', 'Order Information'];
+
 let dropDownColumn: DropDownList = new DropDownList({
   value: 'Order Details',
   popupHeight: '200px',

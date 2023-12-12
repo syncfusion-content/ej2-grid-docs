@@ -15,6 +15,7 @@ let grid: Grid = new Grid({
 grid.appendTo('#Grid');
 
 let dropdownData = ['Left', 'Right', 'Center', 'Justify'];
+
 let dropDownColumn: DropDownList = new DropDownList({
   value: 'Left',
   popupHeight: '240px',
@@ -23,6 +24,7 @@ let dropDownColumn: DropDownList = new DropDownList({
   change: changeAlignment,
 });
 dropDownColumn.appendTo('#dropdown');
+
 function changeAlignment(args: ChangeEventArgs) {
   grid.columns.forEach((column: ColumnModel) => {
     column.headerTextAlign = args.value

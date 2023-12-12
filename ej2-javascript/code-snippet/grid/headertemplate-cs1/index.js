@@ -30,7 +30,6 @@ var dropDownColumn = new ej.dropdowns.DropDownList({
 });
 dropDownColumn.appendTo('#Freight');
 
-
 var toggleButton = new ej.buttons.Switch({
   headerText: 'Order Date',
   change: onSwitchToggle,
