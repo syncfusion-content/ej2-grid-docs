@@ -274,9 +274,7 @@ To export the master-detail grid on the same sheet in the following sample, you 
 
 ## Export Grid as Blob
 
-To export the Grid as a blob pass the `isBlob` parameter as true in the [`excelExport`](../../api/grid/#excelexport) method.
-
-The Grid returns the promise of Blob in the [`excelExportComplete`](../../api/grid/#excelexportcomplete) event.
+To export the grid as a blob, set the `isBlob` parameter to true in the [excelExport](../../api/grid/#excelexport) method. The grid returns the promise of a blob in the [excelExportComplete](../../api/grid/#excelexportcomplete) event.
 
 {% if page.publishingplatform == "typescript" %}
 

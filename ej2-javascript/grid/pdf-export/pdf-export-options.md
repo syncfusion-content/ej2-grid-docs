@@ -364,9 +364,7 @@ In the following example, we have used Advent Pro font to export the grid with H
 
 ## Export Grid as Blob
 
-To export the Grid as a blob pass the `isBlob` parameter as true in the [`pdfExport`](../../api/grid/#pdfexport) method.
-
-The Grid returns the promise of Blob in the [`pdfExportComplete`](../../api/grid/#pdfexportcomplete) event.
+To export the grid as a blob, set the `isBlob` parameter to true in the [pdfExport](../../api/grid/#pdfexport) method. The grid returns the promise of a blob in the [pdfExportComplete](../../api/grid/#pdfexportcomplete) event.
 
 {% if page.publishingplatform == "typescript" %}
 

@@ -91,6 +91,21 @@ grid.toolbarClick = (args: Object) => {
 
 ```
 
+## Export Grid as Meomry Stream
+
+To obtain the Memory Stream of the exported grid, set the `IsMemoryStream` parameter to true in the [ExcelExport](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.GridExport.GridExcelExport.html#Syncfusion_EJ2_GridExport_GridExcelExport_ExcelExport__1_Syncfusion_EJ2_Grids_Grid_System_Collections_IEnumerable_Syncfusion_EJ2_GridExport_ExcelExportProperties_) method.
+
+```ts
+public object ExcelExport(string gridModel)
+{
+    GridExcelExport exp = new GridExcelExport();
+    Grid gridProperty = ConvertGridObject(gridModel);
+    // get the memory stream of exported data
+    return (MemoryStream)exp.ExcelExport<OrdersDetails>(gridProperty, OrderRepository.GetAllRecords(), true);
+}
+
+```
+
 >Note: Refer to the GitHub sample for quick implementation and testing from [here](https://github.com/SyncfusionExamples/TypeScript-EJ2-Grid-server-side-exporting).
 
 ## CSV export in server side
@@ -153,6 +168,50 @@ grid.toolbarClick = (args: Object) => {
     if (args['item'].id === 'Grid_csvexport') {
         grid.serverCsvExport("Home/CsvGridExport");
     }
+}
+
+```
+
+## Merge multiple Memory Streams
+
+The following code example illustrates how to copy a sheet with its entire contents to another workbook.
+
+Refer to this [`link`](https://help.syncfusion.com/file-formats/xlsio/working-with-excel-worksheet#move-or-copy-a-worksheet) for more information.
+
+```ts
+public ActionResult ExcelExport()
+{
+    //New instance of ExcelEngine is created equivalent to launching Microsoft Excel with no workbooks open
+    ExcelEngine excelEngine = new ExcelEngine();
+    //Instantiate the Excel application object
+    IApplication application = excelEngine.Excel;
+    //Assigns default application version
+    application.DefaultVersion = ExcelVersion.Xlsx;
+    //Loads or open an existing workbook through Open method of IWorkbooks
+    IWorkbook sourceWorkbook = application.Workbooks.Open(ms1);
+    IWorkbook destinationWorkbook = application.Workbooks.Open(ms2);
+
+    //Copy all the worksheet from the Source workbook to the destination workbook
+    for (int i = 0; i < sourceWorkbook.Worksheets.Count; i++)
+    {
+        destinationWorkbook.Worksheets.AddCopy(sourceWorkbook.Worksheets[i]);
+    }
+    destinationWorkbook.ActiveSheetIndex = 1;
+    //Saving the workbook as stream
+    MemoryStream ms3 = new MemoryStream();
+    destinationWorkbook.SaveAs(ms3);
+    ms3.Position = 0;
+    // Save the MemoryStream into FileStreamResult
+    FileStreamResult fileStreamResult = new FileStreamResult(ms3, "Application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+
+    fileStreamResult.FileDownloadName = "Export.xlsx";
+    //Dispose the instance of ExcelEngine
+    excelEngine.Dispose();
+    //Disposes the streams.
+    ms1.Dispose();
+    ms2.Dispose();
+    // return the file
+    return fileStreamResult;
 }
 
 ```
