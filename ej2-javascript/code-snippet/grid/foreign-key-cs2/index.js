@@ -11,7 +11,6 @@ var grid = new ej.grids.Grid({
       edit: {
         create: function () {
           // to create input element
-
           return ej.base.createElement('input');
         },
         read: function () {
@@ -26,7 +25,6 @@ var grid = new ej.grids.Grid({
           autoCompleteObj.destroy();
         },
         write: function (args) {
-          // to show the value for date picker
           autoCompleteObj = new ej.dropdowns.AutoComplete({
             dataSource: employeeData,
             fields: { value: args.column.foreignKeyValue },
