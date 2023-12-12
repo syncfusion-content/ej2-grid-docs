@@ -17,31 +17,31 @@ You can customize the on demand data rendering count of Excel/Checkbox filter by
 
 You can customize the on demand data loading effect of Excel/Checkbox filter by setting [`filterSettings.loadingIndicator`](../../api/grid/filterSettings#loadingIndicator) value. By default [`filterSettings.loadingIndicator`] value set as `Shimmer`.
 
-In the below sample, [`filterSettings.enableInfiniteScrolling`](../../api/grid/filterSettings#enableInfiniteScrolling) value set as `true`, [`filterSettings.itemsCount`] value set as `40` and [`filterSettings.loadingIndicator`] value set as `Spinner`. You can see, while open the filter dialog on demand data loading spinner effect with  as like mentioned above
+In the below sample, [`filterSettings.enableInfiniteScrolling`](../../api/grid/filterSettings#enableInfiniteScrolling) value set as `true`, [`filterSettings.itemsCount`] value set as `40` and [`filterSettings.loadingIndicator`] value set as `Spinner`.
 
 {% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/grid-cs63/index.ts %}
+{% include code-snippet/grid/checkbox-excel-filter/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs63/index.html %}
+{% include code-snippet/grid/checkbox-excel-filter/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/grid-cs63" %}
+{% previewsample "page.domainurl/code-snippet/grid/checkbox-excel-filter" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/grid-cs63/index.js %}
+{% include code-snippet/grid/checkbox-excel-filter/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs63/index.html %}
+{% include code-snippet/grid/checkbox-excel-filter/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/grid-cs63" %}
+{% previewsample "page.domainurl/code-snippet/grid/checkbox-excel-filter" %}
 {% endif %}
