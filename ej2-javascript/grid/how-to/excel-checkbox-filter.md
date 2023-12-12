@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Add params for filtering in ##Platform_Name## Grid control | Syncfusion
-description: Learn here all about to render on demand Excel/Checkbox type filter in Syncfusion ##Platform_Name## Grid control of Syncfusion Essential JS 2 and more.
+title: Render checkbox list data in on-demand for Excel/Checkbox filtering of ##Platform_Name## Grid control | Syncfusion
+description: Render checkbox list data in on-demand for Excel/Checkbox filtering in Syncfusion ##Platform_Name## Grid control of Syncfusion Essential JS 2 and more.
 platform: ej2-javascript
-control: Add params for filtering 
+control: Render checkbox list data in on-demand for Excel/Checkbox filtering
 publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
