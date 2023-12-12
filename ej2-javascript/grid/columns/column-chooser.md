@@ -9,9 +9,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Column chooser in ##Platform_Name## Grid component
+# Column chooser in ##Platform_Name## Grid control
 
-The column chooser feature in the Syncfusion ##Platform_Name## Grid component allows you to dynamically show or hide columns. This feature can be enabled by defining the [showColumnChooser](../../api/grid/#showcolumnchooser) property as **true**.
+The column chooser feature in the Syncfusion ##Platform_Name## Grid control allows you to dynamically show or hide columns. This feature can be enabled by defining the [showColumnChooser](../../api/grid/#showcolumnchooser) property as **true**.
 
 To use the column chooser, inject the **ColumnChooser** module in the grid.
 
@@ -81,7 +81,7 @@ In this example, the `columns.showInColumnChooser` property is set to false for 
 
 ## Open column chooser by external button
 
-The Syncfusion ##Platform_Name## Grid provides the flexibility to open the column chooser dialog on a web page using an external button. By default, the column chooser button is displayed in the right corner of the grid component, and clicking the button opens the column chooser dialog below it. However, you can programmatically open the column chooser dialog at specific **X** and **Y** axis positions by using the [openColumnChooser](../../api/grid/columnChooser/#opencolumnchooser) method.
+The Syncfusion ##Platform_Name## Grid provides the flexibility to open the column chooser dialog on a web page using an external button. By default, the column chooser button is displayed in the right corner of the grid control, and clicking the button opens the column chooser dialog below it. However, you can programmatically open the column chooser dialog at specific **X** and **Y** axis positions by using the [openColumnChooser](../../api/grid/columnChooser/#opencolumnchooser) method.
 
 Here's an example of how to open the column chooser in the Grid using an external button:
 

@@ -9,9 +9,9 @@ let grid: Grid = new Grid({
     toolbar: ['ColumnChooser'],
     columnChooserSettings : { ignoreAccent: true },
     columns: [
-        { field: 'ÒrderID̂', headerText: 'Òrder ID̂', width: 120, textAlign: 'Right'},
+        { field: 'ÒrderID̂', headerText: 'Òrder ID̂', width: 120, textAlign: 'Right' },
         { field: 'OrderDate', headerText: 'Order Date', width: 120, format: 'yMd', textAlign: 'Right' },
-        { field: 'Freight', headerText: 'Freight', width: 120, format: 'C2', textAlign: 'Right' },
+        { field: 'F̂reight', headerText: 'F̂reight', width: 120, format: 'C2', textAlign: 'Right' },
         { field: 'ShipCountry', headerText: 'Ship Country', width: 130 },
         { field: 'ShipCity', headerText: 'Ship City', visible: false, width: 130 }
     ],
