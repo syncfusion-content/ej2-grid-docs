@@ -11,9 +11,9 @@ domainurl: ##DomainURL##
 
 # Foreign key column in ##Platform_Name## Grid control
 
-The Foreign key column in the Syncfusion Grid component allows you to display related data from a foreign key data source in a column within the grid. This feature is particularly useful when you have a column in the grid that represents a foreign key relationship with another data source.
+The Foreign key column in the Syncfusion Grid control allows you to display related data from a foreign key data source in a column within the grid. This feature is particularly useful when you have a column in the grid that represents a foreign key relationship with another data source.
 
-To enable and integrate the foreign key column in the ##Platform_Name## Grid component, follow these steps:
+To enable and integrate the foreign key column in the ##Platform_Name## Grid control, follow these steps:
 
  1.Inject the ForeignKeyService in the Grid
 
@@ -39,7 +39,7 @@ To enable and integrate the foreign key column in the ##Platform_Name## Grid com
 
 ## Binding local data
 
-The Syncfusion Grid component provides a convenient way to bind local data to a foreign key column. This allows you to display related data from a local data source within the grid. Here's an example of how to bind local data to a Foreign Key column in Syncfusion Grid:
+The Syncfusion Grid control provides a convenient way to bind local data to a foreign key column. This allows you to display related data from a local data source within the grid. Here's an example of how to bind local data to a Foreign Key column in Syncfusion Grid:
 
 In this example, **data** is the local data source for the Grid, and **employeeData** is the local data source for the foreign key column. The `field` property of the column is set to **EmployeeID** which represents the foreign key value in the **data**. The `foreignKeyValue` property is set to **FirstName** which represents the field name in the **employeeData** that you want to display in the foreign key column.
 
@@ -108,9 +108,9 @@ This example demonstrates how to use the foreign key column with remote data bin
 
 ## Use edit template in foreignkey column
 
-The Syncfusion Grid provides support for using an edit template in a foreign key column. By default, a dropdown component is used for editing foreign key column. However, you can render a different component for editing by using the [column.edit](../../api/grid/column/#edit) property. Here's an example that demonstrates how to use an edit template in a foreign key column:
+The Syncfusion Grid provides support for using an edit template in a foreign key column. By default, a dropdown control is used for editing foreign key column. However, you can render a different control for editing by using the [column.edit](../../api/grid/column/#edit) property. Here's an example that demonstrates how to use an edit template in a foreign key column:
 
-In this example, an [AutoComplete](../../auto-complete/default) component is rendered as the edit template for the **"EmployeeID"** foreign key column. The [dataSource](../../api/auto-complete/#datasource) property of the AutoComplete component is set to the employees data, and the fields property is configured to display the **"FirstName"** field as the value.
+In this example, an [AutoComplete](../../auto-complete/default) control is rendered as the edit template for the **"EmployeeID"** foreign key column. The [dataSource](../../api/auto-complete/#datasource) property of the AutoComplete control is set to the employees data, and the fields property is configured to display the **"FirstName"** field as the value.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -141,9 +141,9 @@ In this example, an [AutoComplete](../../auto-complete/default) component is ren
 
 ## Customize filter UI in foreignkey column
 
-The Syncfusion Grid allows you to customize the filtering user interface (UI) for foreign key columns by using the [column.filter](../../api/grid/column/#filter) property. By default, a dropdown component is used for filtering foreign key columns. However, you can create your own custom filtering UI by specifying a template function for the `column.filter` property. Here's an example that demonstrates how to create a custom filtering UI in a foreign key column:
+The Syncfusion Grid allows you to customize the filtering user interface (UI) for foreign key columns by using the [column.filter](../../api/grid/column/#filter) property. By default, a dropdown control is used for filtering foreign key columns. However, you can create your own custom filtering UI by specifying a template function for the `column.filter` property. Here's an example that demonstrates how to create a custom filtering UI in a foreign key column:
 
-In this example, a [DropDownList](../../drop-down-list/default.html) component is rendered as the filter UI for the **"EmployeeID"** foreign key column. The [dataSource](../../api/drop-down-list#datasource) property of the DropDownList component is set to the employees data, and the fields property is configured to display the **FirstName** field as the [text](../../api/drop-down-list#text) and **EmployeeID** field as the [value](../../api/drop-down-list#value). The `value` property is set to the current filter value of the column.
+In this example, a [DropDownList](../../drop-down-list/default.html) control is rendered as the filter UI for the **"EmployeeID"** foreign key column. The [dataSource](../../api/drop-down-list#datasource) property of the DropDownList control is set to the employees data, and the fields property is configured to display the **FirstName** field as the [text](../../api/drop-down-list#text) and **EmployeeID** field as the [value](../../api/drop-down-list#value). The `value` property is set to the current filter value of the column.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -174,9 +174,9 @@ In this example, a [DropDownList](../../drop-down-list/default.html) component i
 
 ## Use filter bar template in foreignkey column
 
-You can use the filter bar template in a foreign key column in Grid by defining the [column.filterBarTemplate](../../api/grid/column/#filterbartemplate) property. This allows you to customize the filter bar for the foreign key column with a custom component or HTML template. Here's an example that demonstrates how to use a filter bar template in a foreign key column:
+You can use the filter bar template in a foreign key column in Grid by defining the [column.filterBarTemplate](../../api/grid/column/#filterbartemplate) property. This allows you to customize the filter bar for the foreign key column with a custom control or HTML template. Here's an example that demonstrates how to use a filter bar template in a foreign key column:
 
-In this example, the **"EmployeeID"** column is a foreign key column, and the **filter** function is used as the filter bar template for this column. The `filter` function can be defined in your component code and should return the desired component or HTML template for the filter bar. The column header shows the custom filter bar template and you can select filter value by using the **DropDown** options.
+In this example, the **"EmployeeID"** column is a foreign key column, and the **filter** function is used as the filter bar template for this column. The `filter` function can be defined in your control code and should return the desired control or HTML template for the filter bar. The column header shows the custom filter bar template and you can select filter value by using the **DropDown** options.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -248,7 +248,7 @@ In the provided example, the `customAggregateFn` function is used to filter the 
 
 ## Enable multiple foreign key columns
 
-The Syncfusion Grid component supports the feature of enabling multiple foreign key columns with editing options. This allows users to display columns from foreign data sources in the Grid component.
+The Syncfusion Grid control supports the feature of enabling multiple foreign key columns with editing options. This allows users to display columns from foreign data sources in the Grid control.
 
 In the following example, **Customer Name** and **Ship City** are foreign key columns that display the **ContactName** and **City** columns from foreign data.
 
