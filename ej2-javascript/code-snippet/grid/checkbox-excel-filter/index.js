@@ -9,7 +9,7 @@ var grid = new ej.grids.Grid({
     allowPaging: true,
     allowFiltering: true,
     allowSorting: true,
-    filterSettings: { type: 'Excel', enableInfiniteScrolling: true, itemsCount: 40 },
+    filterSettings: { type: 'Excel', enableInfiniteScrolling: true, itemsCount: 40, loadingIndicator: 'Spinner' },
     columns: [
         { field: 'EmployeeID', headerText: 'Employee ID', isPrimaryKey: true, width: '120' },
         { field: 'Employees', headerText: 'Employee Name', width: '150' },
