@@ -46,9 +46,9 @@ To use the column chooser, inject the **ColumnChooser** module in the grid.
 
 ## Hide column in column chooser dialog
 
-You can hide the column names in column chooser by defining the [columns.showInColumnChooser](../../api/grid/column/#showincolumnchooser) as **false**. This feature is useful when working with a large number of columns or when you want to limit the number of columns that are available for selection in the column chooser dialog.
+You can hide the column names in column chooser by defining the [columns->showInColumnChooser](../../api/grid/column/#showincolumnchooser) as **false**. This feature is useful when working with a large number of columns or when you want to limit the number of columns that are available for selection in the column chooser dialog.
 
-In this example, the `columns.showInColumnChooser` property is set to false for the **Order ID** column. As a result, the **Order ID** column will not be displayed in the column chooser dialog.
+In this example, the `columns->showInColumnChooser` property is set to false for the **Order ID** column. As a result, the **Order ID** column will not be displayed in the column chooser dialog.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -77,7 +77,7 @@ In this example, the `columns.showInColumnChooser` property is set to false for 
 {% previewsample "page.domainurl/code-snippet/grid/columnchooser-hide-column-cs1" %}
 {% endif %}
 
->The `columns.showInColumnChooser` property is applied to each column element individually. By setting it to false, you can hide specific columns from the column chooser dialog.
+>The `columns->showInColumnChooser` property is applied to each column element individually. By setting it to false, you can hide specific columns from the column chooser dialog.
 
 ## Open column chooser by external button
 
@@ -157,7 +157,7 @@ To customize the column chooser dialog size, you can use the following CSS style
 
 ## Change default search operator of the column chooser 
 
-The column chooser dialog in the Syncfusion ##Platform_Name## Grid provides a search box that allows you to search for column names. By default, the search functionality uses the "startsWith" operator to match columns and display the results in the column chooser dialog. However, there might be cases where you need to change the default search operator to achieve more precise data matching.
+The column chooser dialog in the Syncfusion ##Platform_Name## Grid provides a search box that allows you to search for column names. By default, the search functionality uses the "startswith" operator to match columns and display the results in the column chooser dialog. However, there might be cases where you need to change the default search operator to achieve more precise data matching.
 
 To change the default search operator of the column chooser in Syncfusion Grid, you need to use the [operator](../../api/grid/columnChooserSettings/#operator) property of the columnChooserSettings.
 
@@ -192,7 +192,7 @@ Here's an example of how to change the default search operator of the column cho
 
 ## Diacritics searching in column chooser
 
-By default, the grid ignores diacritic characters when performing a search in the column chooser. However, in some cases, you may want to include diacritic characters in the search. To enable this behavior, you can set the [columnchoosersettings.ignoreAccent](../../api/grid/columnChooserSettings/#ignoreaccent) property to **true**.
+By default, the grid ignores diacritic characters when performing a search in the column chooser. However, in some cases, you may want to include diacritic characters in the search. To enable this behavior, you can set the [columnchoosersettings->ignoreAccent](../../api/grid/columnChooserSettings/#ignoreaccent) property to **true**.
 
 Here is an example that demonstrates the usage of the `ignoreAccent` property to include diacritic characters for searching in the column chooser:
 
