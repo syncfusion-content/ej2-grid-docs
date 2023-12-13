@@ -1,5 +1,6 @@
 var grid = new ej.grids.Grid({
     dataSource: data,
+    allowPaging: true,
     editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true },
 });
 grid.appendTo('#Grid');

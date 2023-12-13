@@ -10,6 +10,7 @@ let query: Query = new Query().expand('Employee');
 let grid: Grid = new Grid({
     dataSource: data,
     query: query,
+    allowPaging: true,
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100 },
         { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
