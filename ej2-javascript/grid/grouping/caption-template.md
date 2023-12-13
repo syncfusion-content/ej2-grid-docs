@@ -24,7 +24,7 @@ The following example demonstrates how to customize the group header caption in 
 {% include code-snippet/grid/captiontemplate-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/captiontemplate-cs1/js/index.html %}
+{% include code-snippet/grid/captiontemplate-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -57,7 +57,7 @@ The following example demonstrates how to add a custom text to the group caption
 {% include code-snippet/grid/customText-captiontemplate-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/customText-captiontemplate-cs1/js/index.html %}
+{% include code-snippet/grid/customText-captiontemplate-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -70,7 +70,7 @@ The following example demonstrates how to add a custom text to the group caption
 {% include code-snippet/grid/customText-captiontemplate-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/customText-captiontemplate-cs1/js/index.html %}
+{% include code-snippet/grid/customText-captiontemplate-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -92,7 +92,7 @@ The following example demonstrates, how to customize group caption text based on
 {% include code-snippet/grid/captiontemplate-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/captiontemplate-cs2/js/index.html %}
+{% include code-snippet/grid/captiontemplate-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -127,7 +127,7 @@ The following example demonstrates how to add a custom control to the group capt
 {% include code-snippet/grid/customComponent-captiontemplate-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/customComponent-captiontemplate-cs1/js/index.html %}
+{% include code-snippet/grid/customComponent-captiontemplate-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -140,7 +140,7 @@ The following example demonstrates how to add a custom control to the group capt
 {% include code-snippet/grid/customComponent-captiontemplate-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/customComponent-captiontemplate-cs1/js/index.html %}
+{% include code-snippet/grid/customComponent-captiontemplate-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
