@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Render checkbox list data in on-demand for Excel/Checkbox filtering of ##Platform_Name## Grid control
 
-The On-Demand Excel/Checkbox filter rendering feature in the ##Platform_Name## Grid control allows you to efficiently load large datasets without compromising performance. This functionality is akin to the grid's infinite scroll with cache mode, ensuring that buffer data is loaded only when the scrollbar reaches the end of the scroller.
+The On-Demand Excel/Checkbox filter rendering feature in the ##Platform_Name## Grid control allows you to efficiently load large, ascending order distinct datasets without compromising performance. This functionality is akin to the grid's infinite scroll with cache mode, ensuring that buffer data is loaded only when the scrollbar reaches the end of the scroller.
 
 To enable On-Demand Excel/Checkbox filter, set the  [`filterSettings.enableInfiniteScrolling`](../../api/grid/filterSettings#enableInfiniteScrolling) property to `true`. By default, this property is set to `false`.
 
