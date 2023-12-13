@@ -3,6 +3,7 @@ ej.grids.Grid.Inject(ej.grids.Sort, ej.grids.Group);
 var grid = new ej.grids.Grid({
     dataSource: data,
     allowGrouping: true,
+    allowSorting: true,
     groupSettings: { columns:  ['CustomerID'] },
     sortSettings: { columns:  [{ field: 'CustomerID', direction: 'Descending' }] },
     columns: [

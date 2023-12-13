@@ -15,6 +15,11 @@ var grid = new ej.grids.Grid({
 });
 grid.appendTo('#Grid');
 
+var button = new ej.buttons.Button({
+  content: 'Collapse or Expand Row',
+});
+button.appendTo('#button');
+
 var message = document.getElementById('message');
 
 document.getElementById('button').onclick = () => {

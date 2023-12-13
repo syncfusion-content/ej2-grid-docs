@@ -6,6 +6,7 @@ Grid.Inject(Group,Sort);
 let grid: Grid = new Grid({
     dataSource: data,
     allowGrouping: true,
+    allowSorting: true,
     groupSettings: { columns:  ['CustomerID'] }, 
     sortSettings: { columns:  [{ field: 'CustomerID', direction: 'Descending' }] },
     columns: [

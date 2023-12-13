@@ -25,7 +25,7 @@ var columns = [
 var field = { text: 'text', value: 'value' };
 
 var dropdown = new ej.dropdowns.DropDownList({
-  value: 'OrderID',
+  value: 'CustomerID',
   popupHeight: '240px',
   width: 120,
   dataSource: columns,

@@ -1,4 +1,5 @@
 import { Grid, Group, Sort } from '@syncfusion/ej2-grids';
+import { Button } from '@syncfusion/ej2-buttons';
 import { data } from './datasource.ts';
 
 Grid.Inject(Group, Sort);
@@ -17,7 +18,13 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 
+let button: Button = new Button({
+  content: 'Collapse or Expand Row',
+})
+button.appendTo('#button');
+
 let message = document.getElementById('message');
+
 (document.getElementById('button') as HTMLElement).onclick = () => {
   let groupedRows = Array.from(grid.getContentTable().querySelectorAll('.e-recordplusexpand, .e-recordpluscollapse'));
   let groupedRowIndex = parseInt((document.getElementById('rowIndex') as HTMLInputElement).value);

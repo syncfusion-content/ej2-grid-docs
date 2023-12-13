@@ -30,7 +30,7 @@ let columns = [
 let fields:Object = { text: 'text', value: 'value' };
 
 let dropdown: DropDownList = new DropDownList({
-  value: 'OrderID',
+  value: 'CustomerID',
   popupHeight: '240px',
   width: 120,
   dataSource: columns,
