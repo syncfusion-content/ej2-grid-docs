@@ -35,7 +35,7 @@ To customize the appearance of the group expand/collapse icons in the grid, you 
 .e-grid .e-icon-gdownarrow::before{
     content:'\e7c9'
     }
-    .e-grid .e-icon-grightarrow::before{
+.e-grid .e-icon-grightarrow::before{
     content:'\e80f'
 }
 ```

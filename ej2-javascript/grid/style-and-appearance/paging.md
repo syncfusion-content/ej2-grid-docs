@@ -74,7 +74,7 @@ To customize the appearance of the grid pager current page numeric link elements
     cursor: pointer;
     }
     
-    .e-grid .e-gridpager .e-numericitem:hover {
+.e-grid .e-gridpager .e-numericitem:hover {
     background-color: white;
     color:  #007bff;
 }
