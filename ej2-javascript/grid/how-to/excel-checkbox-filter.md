@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Render checkbox list data in on-demand for Excel/Checkbox filtering of ##Platform_Name## Grid control | Syncfusion
-description: Render checkbox list data in on-demand for Excel/Checkbox filtering in Syncfusion ##Platform_Name## Grid control of Syncfusion Essential JS 2 and more.
+description: Learn to Render checkbox list data in on-demand for Excel/Checkbox filtering in Syncfusion ##Platform_Name## Grid control of Syncfusion Essential JS 2 and more.
 platform: ej2-javascript
 control: Render checkbox list data in on-demand for Excel/Checkbox filtering
 publishingplatform: ##Platform_Name##
