@@ -1,4 +1,4 @@
----##Platform_Name##
+---
 layout: post
 title: Grouping in ##Platform_Name## Grid control | Syncfusion
 description: Learn here all about Grouping in Syncfusion ##Platform_Name## Grid control of Syncfusion Essential JS 2 and more.
