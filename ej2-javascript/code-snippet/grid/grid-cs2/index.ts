@@ -1,5 +1,3 @@
-
-
 import { Grid, Selection, Edit, Toolbar } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
@@ -19,9 +17,7 @@ let grid: Grid = new Grid({
         { field: 'ShipCity', headerText: 'ShipCity', width: 150 },
         { field: 'ShipCountry', headerText: 'Ship Country', width: 150 },
         { field: 'ShipName', headerText: 'Ship Name', width: 150 }
-     ]
+     ],
+     height: 280
 });
 grid.appendTo('#Grid');
-
-
-
