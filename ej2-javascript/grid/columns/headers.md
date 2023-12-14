@@ -158,11 +158,11 @@ Here is an example of using the `headerTextAlign` property to align the text of 
 
 >* You can also use the `headerTextAlign` property with the stacked header feature in Syncfusion Grid. The property will align the header text in the sub-headers as well.
 
-## Autowrap the Header Text
+## Autowrap the header text
 
 The autowrap allows the cell content of the grid to wrap to the next line when it exceeds the boundary of the specified cell width. The cell content wrapping works based on the position of white space between words. To support the Autowrap functionality in Syncfusion Grid, you should set the appropriate [width](../../api/grid/column/#width) for the columns. The column width defines the maximum width of a column and helps to wrap the content automatically.
 
-To enable autowrap, set the `allowTextWrap` property to **true**. You can also configure the auto wrap mode by setting the [textWrapSettings.wrapMode](../../api/grid/textWrapSettings/#wrapmode)property.
+To enable autowrap, set the `allowTextWrap` property to **true**. You can also configure the auto wrap mode by setting the [textWrapSettings.wrapMode](../../api/grid/textWrapSettings/#wrapmode) property.
 
 Grid provides the below three options for configuring:
 
@@ -207,7 +207,7 @@ In the example below, the  `textWrapSettings.wrapMode` property is set to **Head
 
 Changing the height of the header can be useful in cases where the default height is not sufficient to display the header content cell. For example, if you have a header with a lot of text or if you want to add an image to the header, you may need to increase the height of the header to accommodate the content. This can be easily achieved by changing the height of the header using CSS or by dynamically adjusting the height using a methods.
 
-**Using css**
+**Using CSS**
 
 You can use CSS to override the default height of the **.e-grid .e-headercell** class to change the height of the header. Here is an example code snippet:
 
@@ -255,7 +255,7 @@ To change the height of the header dynamically, you can use the [getHeaderConten
 
 The Syncfusion Grid controls provides a way to modify the header text of a corresponding column in real-time based on events or other events. This feature can be useful in various scenarios, such as displaying a custom header text for a specific column or updating the header text dynamically based on input. By allowing for dynamic changes to the header text, the Grid provides a more flexible and customizable experience.
 
-**Using Event**
+**Using event**
 
 To modify the header text of a corresponding column dynamically, you can use the [headerCellInfo](../../api/grid/#headercellinfo) event provided by the Syncfusion Grid. This event is triggered for each header cell element rendered in the Grid.
 
@@ -318,9 +318,9 @@ Here is an example of how to change the header text of a column using the `getCo
 
 **Changing header text using headerValueAccessor property**
 
-The `headerValueAccessor` property in Syncfusion Grid allows you to customize the text of a column header cell, which can be useful in scenarios where you want to change the text to display it in a different language, format or add additional information to the header. This property is triggered every time the header cell is rendered.
+The [headerValueAccessor](../../api/grid/headervalueaccessor/) property in Syncfusion Grid allows you to customize the text of a column header cell, which can be useful in scenarios where you want to change the text to display it in a different language, format or add additional information to the header. This property is triggered every time the header cell is rendered.
 
-To enable the `headerValueAccessor` property, you need to set the [headerValueAccessor](../../api/grid/headervalueaccessor/) property of the corresponding column. This property accepts a callback function that takes two arguments:
+To enable the `headerValueAccessor` property, you need to set the `headerValueAccessor`vgfcccccccccccccccccccccccccccccccccccc property of the corresponding column. This property accepts a callback function that takes two arguments:
 
   * **field**: Represents the current field of the column.
   * **column**: Represents the current column object.
@@ -554,7 +554,7 @@ Step 1: Define a CSS class that specifies the styles you want to apply to the he
     }
   ```
 
-Step 2: Set the **customAttributes** property of the desired column to an object that contains the CSS class **customcss**. This CSS class will be applied to the header cell of the specified column in the Grid.
+Step 2: Set the `customAttributes` property of the desired column to an object that contains the CSS class **customcss**. This CSS class will be applied to the header cell of the specified column in the Grid.
 
   ```ts
   {field: "Freight" headerText: "Freight" customAttributes: {class: '.customcss'}}
@@ -720,7 +720,7 @@ To get the header element in a Syncfusion Grid, you can use one of the following
     const headerTableElement = grid.getHeaderTable();
    ```
 
- 3.[getColumnHeaderByUid](../../api/grid/#getcolumnindexbyuid): This method returns the column header element by its unique identifier.
+ 3.[getColumnHeaderByUid](../../api/grid/#getcolumnheaderbyuid): This method returns the column header element by its unique identifier.
 
    ```ts
     const columnHeaderElement = grid.getColumnHeaderByUid("e-grid2");
