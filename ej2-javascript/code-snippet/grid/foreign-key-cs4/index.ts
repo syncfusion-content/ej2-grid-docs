@@ -1,6 +1,4 @@
-
-
-import { Grid, ForeignKey, Filter } from '@syncfusion/ej2-grids';
+import { Grid, ForeignKey, Filter ,  Column} from '@syncfusion/ej2-grids';
 import { data, fEmployeeData } from './datasource.ts';
 import { createElement } from '@syncfusion/ej2-base';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
@@ -16,9 +14,10 @@ let grid: Grid = new Grid(
             { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100 },
             // Foreign column
             {
-                field: 'EmployeeID', headerText: 'Employee Name', width: 150, foreignKeyValue: 'FirstName', dataSource: fEmployeeData,
+                field: 'EmployeeID', headerText: 'Employee Name', width: 120, foreignKeyValue: 'FirstName', dataSource: fEmployeeData,
                 filterBarTemplate: {
-                    create: (args: { element: Element, column: Column }) =>
+                    create: () =>
+                    {
                         return createElement('input', { className: 'flm-input' });;
                     },
                     write: (args: { element: Element, column: Column }) => {
@@ -29,7 +28,7 @@ let grid: Grid = new Grid(
                             placeholder: 'Select a value',
                             popupHeight: '200px',
                             index: 0,
-                            change: (args) => {
+                            change: (args: { value: string }) => {
                                 if (args.value !== 'All') {
                                     grid.filterByColumn('EmployeeID', 'equal', args.value);
                                 }
@@ -42,12 +41,8 @@ let grid: Grid = new Grid(
                     }
                 }
             },
-            { field: 'Freight', headerText: 'Freight', width: 100, textAlign: 'Right'},
-            { field: 'ShipName', headerText: 'Ship Name', width: 180 }
+            { field: 'ShipCity', headerText: 'Ship City', width: 180 },
         ],
         height: 260
     });
     grid.appendTo('#Grid');
-
-
-
