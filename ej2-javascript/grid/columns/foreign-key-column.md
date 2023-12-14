@@ -110,7 +110,7 @@ This example demonstrates how to use the foreign key column with remote data bin
 
 The Syncfusion Grid provides support for using an edit template in a foreign key column. By default, a dropdown control is used for editing foreign key column. However, you can render a different control for editing by using the [column.edit](../../api/grid/column/#edit) property. Here's an example that demonstrates how to use an edit template in a foreign key column:
 
-In this example, an [AutoComplete](../../auto-complete/default) control is rendered as the edit template for the **"EmployeeID"** foreign key column. The [dataSource](../../api/auto-complete/#datasource) property of the AutoComplete control is set to the employees data, and the fields property is configured to display the **"FirstName"** field as the value.
+In this example, an [AutoComplete](../../auto-complete/default) control is rendered as the edit template for the **"EmployeeID"** foreign key column. The [dataSource](../../api/auto-complete/#datasource) property of the `AutoComplete` control is set to the employees data, and the fields property is configured to display the **"FirstName"** field as the value.
 
 {% if page.publishingplatform == "typescript" %}
 
