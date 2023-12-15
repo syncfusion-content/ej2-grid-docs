@@ -1,6 +1,4 @@
-
-
-import { Grid, Page, Toolbar, Edit } from '@syncfusion/ej2-grids';
+import { Grid, Page, Toolbar, Edit, ClickEventArgs, KeyboardEventArgs } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
 
@@ -12,18 +10,11 @@ let grid: Grid = new Grid({
     enableHover: false,
     created: created,
     load: load,
-    editSettings: {
-        allowEditing: true,
-        allowAdding: true,
-        allowDeleting: true,
-        mode: 'Batch',
-    },
-    toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
+    editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Batch'},
+    toolbar: ['Add','Delete', 'Update', 'Cancel'],
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100, isPrimaryKey: true,
-          visible: false, validationRules: { required: true, number: true } },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 120, validationRules: { required: true }
-        },
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100, isPrimaryKey: true,validationRules: { required: true, number: true } },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 120, validationRules: { required: true }},
         { field: 'Freight', headerText: 'Freight', format: 'C2', width: 100, textAlign: 'Right' },
         { field: 'OrderDate', headerText: 'Order Date', editType: 'datepickeredit', format: 'yMd', width: 100},
         { field: 'ShipCountry', headerText: 'Ship Country', width: 100 },
@@ -31,18 +22,18 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 
-function created(args) {
-    grid.getContentTable().addEventListener('click', function (args) {
-        if ((args.target as any).classList.contains('e-rowcell')) {
-            grid.editModule.editCell(parseInt((args.target as any).getAttribute('index')),
+function created() {
+    grid.getContentTable().addEventListener('click', function (args: ClickEventArgs) {
+        if ((args.target).classList.contains('e-rowcell')) {
+            grid.editModule.editCell(parseInt((args.target).getAttribute('index')),
               grid.getColumnByIndex(parseInt(args.target.getAttribute('data-colindex'))).field);
         }
     });
 }
 
 function load() {
-    grid.element.addEventListener('keydown', function (e) {
-        var closesttd = (e.target as any).closest('td');
+    grid.element.addEventListener('keydown', function (e: KeyboardEventArgs) {
+        let closesttd = (e.target).closest('td');
         if (e.keyCode === 39 && !isNullOrUndefined(closesttd.nextSibling)) {
             editACell(closesttd.nextSibling);
         }
@@ -65,10 +56,8 @@ function load() {
     });
 }
 
-function editACell(args) {
+function editACell(args: { getAttribute: (arg0: string) => string; }) {
     grid.editModule.editCell(
         parseInt(args.getAttribute('index')),
         grid.getColumnByIndex(parseInt(args.getAttribute('data-colindex'))).field);
 }
-
-
