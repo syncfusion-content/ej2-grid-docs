@@ -9,7 +9,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pdf export options in ##Platform_Name## Grid control
+# Pdf Export Options in javascript Grid Component
+
+The Syncfusion javascript Grid component allows you to customize the PDF export options functionality. This flexibility enables you to have greater control over the exported content and layout to meet your specific requirements.
+
+The PDF export action can be customized based on your requirements using the [pdfExportProperties](../../api/grid/pdfExportProperties) property. By using the `pdfExportProperties` property, you can export the current page records, selected records, or filtered records. Additionally, you can customize the page alignments using the `pdfExportProperties` property.
 
 ## Export current page
 
