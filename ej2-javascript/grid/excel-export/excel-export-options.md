@@ -271,3 +271,34 @@ To export the master-detail grid on the same sheet in the following sample, you 
 
 {% previewsample "page.domainurl/code-snippet/grid/exportmastergrid-cs1" %}
 {% endif %}
+
+## Export Grid as Blob
+
+To export the grid as a blob, set the `isBlob` parameter to true in the [excelExport](../../api/grid/#excelexport) method. The grid returns the promise of a blob in the [excelExportComplete](../../api/grid/#excelexportcomplete) event.
+
+{% if page.publishingplatform == "typescript" %}
+
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/export-grid-as-blob-cs2/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/export-grid-as-blob-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/export-grid-as-blob-cs2" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/export-grid-as-blob-cs2/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/export-grid-as-blob-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/export-grid-as-blob-cs2" %}
+{% endif %}

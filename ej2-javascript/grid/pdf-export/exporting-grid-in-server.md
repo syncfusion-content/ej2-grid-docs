@@ -90,7 +90,58 @@ grid.toolbarClick = (args: Object) => {
 
 ```
 
+## Export Grid as Meomry Stream
+
+To obtain the Memory Stream of the exported grid, set the `IsMemoryStream` parameter to true in the [PdfExport](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.GridExport.GridPdfExport.html#Syncfusion_EJ2_GridExport_GridPdfExport_PdfExport__1_Syncfusion_EJ2_Grids_Grid_System_Collections_IEnumerable_Syncfusion_EJ2_GridExport_PdfExportProperties_) method.
+
+```ts
+public object PdfExport(string gridModel)
+{
+    GridPdfExport exp = new GridPdfExport();
+    Grid gridProperty = ConvertGridObject(gridModel);
+    // get the memory stream of exported data
+    return (MemoryStream)exp.PdfExport<OrdersDetails>(gridProperty, OrdersDetails.GetAllRecords(), true);
+}
+
+```
+
 >Note: Refer to the GitHub sample for quick implementation and testing from [here](https://github.com/SyncfusionExamples/TypeScript-EJ2-Grid-server-side-exporting).
+
+## Merge multiple Memory Streams
+
+You can merge the multiple PDF document using [`Merge`](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Merge_Syncfusion_Pdf_PdfDocumentBase_Syncfusion_Pdf_Parsing_PdfLoadedDocument_) method of [`PdfDocumentBase`](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html) class.
+
+Refer to this [`doc`](https://help.syncfusion.com/file-formats/pdf/merge-documents) for more information.
+
+```ts
+using Syncfusion.Pdf;
+
+public ActionResult PdfExport()
+{
+    //Creates a PDF document.
+    PdfDocument finalDoc = new PdfDocument();
+
+    //Creates a PDF stream for merging. ms1 and ms2 represents the memory streams needs to merge.
+    Stream[] streams = { ms1, ms2 };
+    //Merges PDFDocument.
+    PdfDocumentBase.Merge(finalDoc, streams);
+    //Save the document into stream.
+    MemoryStream ms3 = new MemoryStream();
+    finalDoc.Save(ms3);    
+    ms3.Position = 0;
+    // Save the MemoryStream into FileStreamResult
+    FileStreamResult fileStreamResult = new FileStreamResult(ms3, "application/pdf");
+    fileStreamResult.FileDownloadName = "Export.pdf";
+    //Close the document.
+    finalDoc.Close(true);
+    //Disposes the streams.
+    ms1.Dispose();
+    ms2.Dispose();
+    // return the file
+    return fileStreamResult;
+}
+
+```
 
 ## Rotate a header text to a certain degree in the exported grid on the server side
 
