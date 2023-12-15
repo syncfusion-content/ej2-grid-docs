@@ -88,12 +88,12 @@ The following features are only supported in vertical row rendering:
 * Dialog Editing
 * Aggregate
 * Infinite scroll
-* Toolbar - Options like **Add**, **Filter**, **Sort**, **Edit**, **Delete**, **Search**, and **Toolbar template** are available when their respective features are enabled. The toolbar dynamically includes a three-dotted icon, containing additional features like **ColumnChooser**, **Print**, **PdfExport**, **ExcelExport**, or **CsvExport**, once these features are enabled. Please refer to the following screenshot.
-
-![Toolbar More Icon](./images/MoreIcon.png)
-
-In the following GIF image, explore the adaptive grid featuring column chooser in vertical row rendering mode and column menu in horizontal row rendering mode.
+* Toolbar - Options like **Add**, **Filter**, **Sort**, **Edit**, **Delete**, **Search**, and **Toolbar template** are available when their respective features are enabled. The toolbar dynamically includes a three-dotted icon, containing additional features like **ColumnChooser**, **Print**, **PdfExport**, **ExcelExport**, or **CsvExport**, once these features are enabled. Please refer to the following snapshot.
 
 ![VerticalmodeColumnMenu](./images/VerticalmodeColumnMenu.gif)
+
+A snapshot of the adaptive grid displaying enabled paging along with a pager dropdown.
+
+![AdaptivePagerDropdown](./images/PagerDropdown_Adaptive.gif)
 
 > The Column Menu feature, which includes grouping, sorting, autofit, filter, and column chooser, is exclusively supported for the Grid in **Horizontal** [`rowRenderingMode`](../api/grid/rowRenderingMode).
