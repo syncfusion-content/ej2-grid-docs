@@ -128,35 +128,51 @@ The [ColorPicker](../../color-picker/getting-started) component of Syncfusion pr
 
 In the following code, we rendered the ColorPicker component in the Grid column by defining the [template](../../api/grid/column/#template) property.
 
-You can render any component in a grid column using the [`template`](../../api/grid/column/#template) property.
-
-To render other components in the grid, ensure the following steps:
-
-**Step 1**:
-
-Initialize the column template for your custom component.
-
-```ts
-template:`<div>
-            <select class="e-control e-dropdownlist">
-                <option value="1" selected="selected">Order Placed</option>
-                <option value="2">Processing</option>
-                <option value="3">Delivered</option>
-            </select>
-        </div>`
+```
+<div class="wrap">
+            <script type="text/x-template" id="columnTemplate" >
+              <input id="element" type="color" />
+            </script>
+</div>
 
 ```
 
-**Step 2**:
+{% if page.publishingplatform == "typescript" %}
 
-Using the [`queryCellInfo`](../../api/grid/#querycellinfo) event, you can render the DropDown component with the following code.
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/column-template-cs5/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-template-cs5/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column-template-cs5" %}
 
-```ts
-    function dropdown(args: QueryCellInfoEventArgs) {
-        let ele=args.cell.querySelector('select');
-        let drop = new DropDownList({popupHeight: 150, popupWidth: 150});
-        drop.appendTo(ele);
-    }
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/column-template-cs5/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-template-cs5/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+### Render DropDownList component in a column
+
+To render a custom component in a grid column, you need to define a [template](../../api/grid/column/#template) for the column using the `template` property. In the following code, we rendered the [DropDownList](../../drop-down-list/getting-started) component in the **Order Status** column by defining the `template` property.
+
+```
+<div>
+        <select class="e-control e-dropdownlist">
+            <option value="1" selected="selected">Order Placed</option>
+            <option value="2">Processing</option>
+            <option value="3">Delivered</option>
+        </select>
+</div>
 
 ```
 
@@ -186,6 +202,14 @@ Using the [`queryCellInfo`](../../api/grid/#querycellinfo) event, you can render
 
 {% previewsample "page.domainurl/code-snippet/grid/column-sync-comp-cs1" %}
 {% endif %}
+
+### Render Chip component in a column
+
+The Grid component provides support for rendering [Chips](../../chips/getting-started) component in a column using the [template](../../api/grid/column/#template) property. This feature is useful when displaying data that requires a chip component to be rendered in a column.
+
+In the following code, we rendered the Chips component in the Grid **First Name** column by defining the [template](../../api/grid/column/#template) property.
+
+
 
 ## Using condition template
 

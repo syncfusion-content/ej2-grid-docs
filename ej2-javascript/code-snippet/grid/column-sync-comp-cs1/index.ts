@@ -7,9 +7,8 @@ import { DropDownList } from '@syncfusion/ej2-dropdowns';
 let grid: Grid = new Grid({
     dataSource: data,
     columns: [
-        {
-            headerText: 'Order Status',
-            template:
+        { headerText: 'Order Status',
+          template:
             `<div>
                 <select class="e-control e-dropdownlist">
                     <option value="1" selected="selected">Order Placed</option>
@@ -29,9 +28,13 @@ let grid: Grid = new Grid({
 grid.appendTo('#Grid');
 
 function dropdown(args: QueryCellInfoEventArgs): void {
-    let ele: HTMLSelectElement = args.cell.querySelector('select');
-    let drop: DropDownList = new DropDownList({ popupHeight: 150, popupWidth: 150 });
-    drop.appendTo(ele);
+    let dropdownElement: HTMLSelectElement = args.cell.querySelector('select');
+    let dropDrown: DropDownList = new DropDownList(
+        { 
+            popupHeight: 150, 
+            popupWidth: 150 
+        });
+        dropDrown.appendTo(dropdownElement);
 }
 
 

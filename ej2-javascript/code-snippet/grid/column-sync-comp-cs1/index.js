@@ -1,8 +1,7 @@
 var grid = new ej.grids.Grid({
     dataSource: data,
     columns: [
-        {
-            headerText: 'Order Status',
+        { headerText: 'Order Status',
             template:
             `<div>
                 <select class="e-control e-dropdownlist">
@@ -23,9 +22,12 @@ var grid = new ej.grids.Grid({
 grid.appendTo('#Grid');
 
 function dropdown(args) {
-    var ele = args.cell.querySelector('select');
-    var drop = new ej.dropdowns.DropDownList({ popupHeight: 150, popupWidth: 150 });
-    drop.appendTo(ele);
+    var dropdownElement = args.cell.querySelector('select');
+    var dropDrown = new ej.dropdowns.DropDownList({ 
+        popupHeight: 150, 
+        popupWidth: 150 
+    });
+    dropDrown.appendTo(dropdownElement);
 }
 
 
