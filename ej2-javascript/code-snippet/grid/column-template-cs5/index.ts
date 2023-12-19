@@ -24,7 +24,7 @@ function queryCellInfo(args: QueryCellInfoEventArgs) {
       mode: 'Palette',
       change: change,
     });
-    colorPicker.appendTo(args.cell.querySelector('input'));
+    colorPicker.appendTo(args.cell.querySelector('#colorPicker'));
   }
 }
 

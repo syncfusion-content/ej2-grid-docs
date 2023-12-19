@@ -17,9 +17,9 @@ Grid control provides a [template](../../api/grid/column/#template) option that 
 
 ## Render image in a column
 
-To render an image in a grid column, you need to define a [template](../../api/grid/column/#template) for the column using the template property. The `template` property expects an HTML string or a function that returns an HTML element.
+To render an image in a grid column, you need to define a [template](../../api/grid/column/#template) for the column using the template property. The `template` property expects an HTML element or a function that returns an HTML element.
 
-The following example demonstrates how to define a [template](../../api/grid/column/#template) for the **Employee Image** field that displays an image element. The `template` property is set to an HTML string that contains an image tag. You have utilized the `src` and `alt` attributes to the image tag. 
+The following example demonstrates how to define a [template](../../api/grid/column/#template) for the **Employee Image** field that displays an image element. The `template` property is set to an HTML element that contains an image tag. You have utilized the `src` and `alt` attributes to the image tag. 
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -85,15 +85,15 @@ The following example demonstrates, how to render hyperlink column in the Grid u
 
 >The window.open() method is a built-in JavaScript function that opens a new browser window or tab with the specified URL.
 
-## Render other components in a column
+## Render other controls in a column
 
-The column template has options to render a custom component in a grid column instead of a field value.
+The column template has options to render a custom control in a grid column instead of a field value.
 
-### Render LineChart component in a column
+### Render LineChart control in a column
 
-The [LineChart](../../sparkline/getting-started) component of Syncfusion provides an elegant way to represent and compare data over time. It displays data points connected by straight line segments to visualize trends in data.
+The [LineChart](../../sparkline/getting-started) control of Syncfusion provides an elegant way to represent and compare data over time. It displays data points connected by straight line segments to visualize trends in data.
 
-In the following example, we rendered the Sparkline Chart component in the Grid column by defining the [template](../../api/grid/column/#template) property.
+In the following example, we rendered the Sparkline Chart control in the Grid column by defining the [template](../../api/grid/column/#template) property.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -122,17 +122,17 @@ In the following example, we rendered the Sparkline Chart component in the Grid 
 {% previewsample "page.domainurl/code-snippet/grid/column-template-cs4" %}
 {% endif %}
 
-### Render ColorPicker component in a column
+### Render ColorPicker control in a column
 
-The [ColorPicker](../../color-picker/getting-started) component of Syncfusion provides a user-friendly way to select colors from a pre-defined color palette or custom colors. It can be used in a variety of scenarios such as picking a theme color or changing the color of an element on a page.
+The [ColorPicker](../../color-picker/getting-started) control of Syncfusion provides a user-friendly way to select colors from a pre-defined color palette or custom colors. It can be used in a variety of scenarios such as picking a theme color or changing the color of an element on a page.
 
-In the following code, we rendered the ColorPicker component in the Grid column by defining the [template](../../api/grid/column/#template) property.
+In the following code, we rendered the ColorPicker control in the Grid column by defining the [template](../../api/grid/column/#template) property.
 
 ```
 <div class="wrap">
-            <script type="text/x-template" id="columnTemplate" >
-              <input id="element" type="color" />
-            </script>
+    <script type="text/x-template" id="columnTemplate" >
+        <input id="colorPicker" type="color" />
+    </script>
 </div>
 
 ```
@@ -161,9 +161,9 @@ In the following code, we rendered the ColorPicker component in the Grid column 
 {% endhighlight %}
 {% endtabs %}
 
-### Render DropDownList component in a column
+### Render DropDownList control in a column
 
-To render a custom component in a grid column, you need to define a [template](../../api/grid/column/#template) for the column using the `template` property. In the following code, we rendered the [DropDownList](../../drop-down-list/getting-started) component in the **Order Status** column by defining the `template` property.
+To render a custom control in a grid column, you need to define a [template](../../api/grid/column/#template) for the column using the `template` property. In the following code, we rendered the [DropDownList](../../drop-down-list/getting-started) control in the **Order Status** column by defining the `template` property.
 
 ```
 <div>
@@ -203,19 +203,49 @@ To render a custom component in a grid column, you need to define a [template](.
 {% previewsample "page.domainurl/code-snippet/grid/column-sync-comp-cs1" %}
 {% endif %}
 
-### Render Chip component in a column
+### Render Chip control in a column
 
-The Grid component provides support for rendering [Chips](../../chips/getting-started) component in a column using the [template](../../api/grid/column/#template) property. This feature is useful when displaying data that requires a chip component to be rendered in a column.
+The Grid control provides support for rendering [Chips](../../chips/getting-started) control in a column using the [template](../../api/grid/column/#template) property. This feature is useful when displaying data that requires a chip control to be rendered in a column.
 
-In the following code, we rendered the Chips component in the Grid **First Name** column by defining the [template](../../api/grid/column/#template) property.
+In the following code, we rendered the Chips control in the Grid **First Name** column by defining the [template](../../api/grid/column/#template) property.
 
+```
+<div class="wrap">
+    <script type="text/x-template" id="columnTemplate" >
+        <div id="chip" ></div>
+    </script>
+</div>
 
+```
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/column-template-cs6/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-template-cs6/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column-template-cs6" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/column-template-cs6/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/column-template-cs6/index.html %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Using condition template
 
-You can render the template elements based on condition.
+<!-- The conditional column [template](../../api/grid/column/#template) allows you to display template elements based on specific conditions.
 
-In the following code, checkbox is rendered based on **Discontinued** field value.
+The following example demonstrates how to use the `template` property with an `ng-template` element and add an `*ngIf` directive to render the checkbox based on the value of the **Discontinued** field. The **Discontinued** field will render a checkbox in each row for which the value of the **Discontinued** field is **true**.  -->
 
 ```
   <script id="template" type="text/x-template">
@@ -256,9 +286,9 @@ In the following code, checkbox is rendered based on **Discontinued** field valu
 
 ## How to get the row object by clicking on the template element
 
-You can get the row object without selecting the row and achieve it using the column template feature and the `getRowObjectFromUID` method of the Grid.
+The Grid control allows you to retrieve the row object of the selected record when clicking on a [template](../../api/grid/column/#template) element. This feature can be useful when you need to perform custom actions based on the selected record.
 
-In the following sample, the button element is rendered in the Employee Data column. By clicking the button, you can get the row object using the `getRowObjectFromUID` method of the Grid and display it in the console.
+In the following code, the button element is rendered in the **Employee Data** column and `click` event binding is used to call the showDetails method when the template element is clicked. The showDetails method is passed the data object as an argument, which allows you to access the selected row object and display it in the dialog popup.
 
 {% if page.publishingplatform == "typescript" %}
 

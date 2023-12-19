@@ -14,12 +14,12 @@ grid.appendTo('#Grid');
 
 function queryCellInfo(args) {
   if (args.column.headerText === 'Change the color of row') {
-    var colorPicker = new ej.inputs.ColorPicker({
+    var colorPickerElement = new ej.inputs.ColorPicker({
       // To set color value.
       mode: 'Palette',
       change: change,
     });
-    colorPicker.appendTo(args.cell.querySelector('input'));
+    colorPickerElement.appendTo(args.cell.querySelector('#colorPicker'));
   }
 }
 
