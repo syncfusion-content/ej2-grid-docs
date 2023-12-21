@@ -124,7 +124,7 @@ In the following code, the [Merge](https://help.syncfusion.com/cr/file-formats/S
 ```ts
 using Syncfusion.Pdf;
 
-MemoryStream ms1; // defines existing memory stream
+public MemoryStream ms1; // defines existing memory stream
 
 public object PdfExport(string gridModel)
 {
@@ -159,7 +159,7 @@ If you already have a FileStream, you can directly use it to merge with the Grid
 ```ts
 using Syncfusion.Pdf;
 
-FileStream fs1; // defines existing file stream
+public FileStream fs1; // defines existing file stream
 
 public ActionResult PdfExport(string gridModel)
 {
@@ -186,7 +186,7 @@ To merge a local file with the Grid's MemoryStream, you need to convert it into 
 using Syncfusion.Pdf;
 
 // get the file stream of local file
-FileStream fs1 = new FileStream("D:/PdfDoc.pdf", FileMode.Open, FileAccess.Read); // PdfDoc.pdf is a local file which is located in local disk D.
+public FileStream fs1 = new FileStream("D:/PdfDoc.pdf", FileMode.Open, FileAccess.Read); // PdfDoc.pdf is a local file which is located in local disk D.
 
 public ActionResult PdfExport(string gridModel)
 {

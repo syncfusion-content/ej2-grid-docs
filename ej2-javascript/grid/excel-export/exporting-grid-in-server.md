@@ -196,7 +196,7 @@ In the following code, `ExcelEngine` and `AddCopy` method of Worksheets are used
 ```ts
 using Syncfusion.XlsIO;
 
-MemoryStream ms1; // defines existing memory stream
+public MemoryStream ms1; // defines existing memory stream
 
 public object ExcelExport(string gridModel)
 {
@@ -241,7 +241,7 @@ If you already have a FileStream, you can directly use it to merge with the Grid
 ```ts
 using Syncfusion.XlsIO;
 
-FileStream fs1; // defines existing file stream
+public FileStream fs1; // defines existing file stream
 
 public object ExcelExport(string gridModel)
 {
@@ -277,7 +277,7 @@ To merge a local file with the Grid's MemoryStream, you need to convert it into 
 using Syncfusion.XlsIO;
 
 // get the file stream of local file
-FileStream fs1 = new FileStream("D:/ExcelDoc.xlsx", FileMode.Open, FileAccess.Read); // ExcelDoc.xlsx is a local file which is located in local disk D.
+public FileStream fs1 = new FileStream("D:/ExcelDoc.xlsx", FileMode.Open, FileAccess.Read); // ExcelDoc.xlsx is a local file which is located in local disk D.
 
 public object ExcelExport(string gridModel)
 {
