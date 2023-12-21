@@ -51,6 +51,61 @@ function actionBegin(args: FilterSearchBeginEventArgs) {
 }
 ```
 
+## Render checkbox list data in on-demand for Excel/Checkbox filtering of ##Platform_Name## Grid control
+
+In the Excel/Checkbox filter type of Grid, only 1000 unique sorted items are accessible to view in the filter dialog checkbox list content by scrolling. This limitation is in place to prevent rendering delays when opening the filter dialog. However, the searching and filtering processes consider all unique items in that particular column.
+
+The Excel/Checkbox filter in the Grid provides an option to load large data sets on-demand during scrolling to improve scrolling limitation functionality. This is achieved by setting the [`filterSettings.enableInfiniteScrolling`](../../api/grid/filterSettings#enableInfiniteScrolling) property to **true**. This feature proves especially beneficial for managing extensive datasets, enhancing data loading performance in the checkbox list, and allowing interactive checkbox selection with persistence for the selection based on filtering criteria.
+
+The Excel/Checkbox filter retrieves distinct data in ascending order, governed by its [`filterSettings.itemsCount`](../../api/grid/filterSettings#itemsCount) property, with a default value of **50**. As the checkbox list data scroller reaches its end, the next dataset is fetched and displayed, with the notable advantage that this process only requests new checkbox list data without redundantly fetching the existing loaded dataset.
+
+### Customize the filter choice count for initial rendering
+
+You can customize the count of on-demand data rendering for Excel/Checkbox filter by adjusting the [`filterSettings.itemsCount`](../../api/grid/filterSettings#itemsCount) property. The default value is `50`
+
+```ts
+grid.filterSettings = { enableInfiniteScrolling = true, itemsCount = 40 };
+```
+
+> It is recommended to keep the itemsCount below **300**. Higher values will result in unwanted whitespace because of dom maintenance performance degradation.
+
+### Customize the loading animation effect:
+
+The loading effect during on-demand data retrieval for Excel/Checkbox filter can be customized using the [`filterSettings.loadingIndicator`](../../api/grid/filterSettings#loadingIndicator) property. The default value is `Shimmer`.
+
+```ts
+grid.filterSettings = { enableInfiniteScrolling = true, loadingIndicator = 'Spinner' };
+```
+
+In the following sample, we have enabled On-Demand Excel filter of ##Platform_Name## Grid:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/checkbox-excel-filter/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/checkbox-excel-filter/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/checkbox-excel-filter" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/checkbox-excel-filter/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/checkbox-excel-filter/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/checkbox-excel-filter" %}
+{% endif %}
+
 ## See also
 
 * [How to perform filter by using Wildcard and LIKE operator filter](./filtering/#wildcard-and-like-operator-filter)
