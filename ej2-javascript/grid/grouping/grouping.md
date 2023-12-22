@@ -82,7 +82,7 @@ The following example demonstrates how to set an initial grouping for the **Cust
 
 ## Prevent grouping for particular column
 
-The Grid component provides the ability to prevent grouping for a particular column. This can be useful when you have certain columns that you do not want to be included in the grouping process. It can be achieved by setting the [allowGrouping](../../api/grid/column/#allowgrouping) property of the particular `column` to **false**. The following example demonstrates, how to disable grouping for **CustomerID** column.
+The Grid control provides the ability to prevent grouping for a particular column. This can be useful when you have certain columns that you do not want to be included in the grouping process. It can be achieved by setting the [allowGrouping](../../api/grid/column/#allowgrouping) property of the particular `column` to **false**. The following example demonstrates, how to disable grouping for **CustomerID** column.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -117,7 +117,7 @@ By default, the Grid provides a drop area for grouping columns. This drop area a
 
 To hide the drop area in the Syncfusion ##Platform_Name## Grid, you can set the [groupSettings.showDropArea](../../api/grid/groupSettings#showdroparea) property to **false**. 
 
-In the following example, the [EJ2 Toggle Switch Button](../../switch/getting-started) component is added to hide or show the drop area. When the switch is toggled, the [change](../../api/switch/#change) event is triggered and the `groupSettings.showDropArea` property of the grid is updated accordingly. 
+In the following example, the [EJ2 Toggle Switch Button](../../switch/getting-started) control is added to hide or show the drop area. When the switch is toggled, the [change](../../api/switch/#change) event is triggered and the `groupSettings.showDropArea` property of the grid is updated accordingly. 
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -517,7 +517,7 @@ The following example demonstrates how to clear the grouping using `clearGroupin
 {% previewsample "page.domainurl/code-snippet/grid/grid-grouping-clear" %}
 {% endif %}
 
-## Grouping events
+## Grouping Events
 
 The Grid control provides two events that are triggered during the group action such as [actionBegin](../../api/grid/#actionbegin) and [actionComplete](../../api/grid/#actioncomplete). The `actionBegin` event is triggered before the group action starts, and the `actionComplete` event is triggered after the group action is completed. You can use these events to perform any custom action based on the grouping.
 

@@ -1,4 +1,4 @@
-ej.grids.Grid.Inject(ej.grids.Sort, ej.grids.Group);
+ej.grids.Grid.Inject(ej.grids.Group);
 
 var initial = true;
 

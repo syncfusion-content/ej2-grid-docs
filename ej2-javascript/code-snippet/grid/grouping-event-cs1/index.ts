@@ -1,4 +1,4 @@
-import { Grid, Group, Sort, GroupEventArgs } from '@syncfusion/ej2-grids';
+import { Grid, Group,GroupEventArgs } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
 Grid.Inject(Group, Sort);
