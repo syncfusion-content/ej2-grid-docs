@@ -94,7 +94,7 @@ grid.toolbarClick = (args: Object) => {
 
 ## Export grid as memory stream
 
-The Grid offers an option to export the data as a `MemoryStream` instead of downloading it as a file in the browser. To obtain the memory stream of the exported grid, set the `AsMemoryStream` parameter to **true** in the [PdfExport](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.GridExport.GridPdfExport.html#Syncfusion_EJ2_GridExport_GridPdfExport_PdfExport__1_Syncfusion_EJ2_Grids_Grid_System_Collections_IEnumerable_System_Boolean_Syncfusion_EJ2_GridExport_PdfExportProperties_) method.
+The Grid offers an option to export the data as a memory stream instead of downloading it as a file in the browser. To obtain the memory stream of the exported grid, set the `AsMemoryStream` parameter to **true** in the [PdfExport](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.GridExport.GridPdfExport.html#Syncfusion_EJ2_GridExport_GridPdfExport_PdfExport__1_Syncfusion_EJ2_Grids_Grid_System_Collections_IEnumerable_System_Boolean_Syncfusion_EJ2_GridExport_PdfExportProperties_) method.
 
 The following code demonstrates how to get the memory stream of exported grid.
 
@@ -113,11 +113,11 @@ public object PdfExport(string gridModel)
 
 The [Essential PDF](https://help.syncfusion.com/file-formats/pdf/overview) library is used to merge multiple memory streams into a single stream. To learn more about the merge option, please refer to this [documentation](https://help.syncfusion.com/file-formats/pdf/merge-documents).
 
-You can merge a MemoryStream, a FileStream, and a local file with the Grid's MemoryStream in the following ways:
+You can merge a memory stream, a file stream, and a local file with the Grid's memory stream in the following ways:
 
-### Merging with an exisiting memory stream
+### Merging with an existing memory stream
 
-If you already have a MemoryStream, you can directly use it to merge with the Grid's MemoryStream.
+If you already have a memory stream, you can directly use it to merge with the Grid's memory stream.
 
 In the following code, the [Merge](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Merge_Syncfusion_Pdf_PdfDocumentBase_Syncfusion_Pdf_Parsing_PdfLoadedDocument_) method of the [PdfDocumentBase](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.PdfDocumentBase.html) class is used to merge the grid's memory stream with an existing memory stream.
 
@@ -144,7 +144,7 @@ public object PdfExport(string gridModel)
     ms3.Position = 0;
     //Close the document.
     finalDoc.Close(true);
-    //Disposes the streams.
+    //Dispose the streams.
     ms1.Dispose();
     ms2.Dispose();
     return ms3;
@@ -152,9 +152,9 @@ public object PdfExport(string gridModel)
 
 ```
 
-### Merging with an exisiting file stream
+### Merging with an existing file stream
 
-If you already have a FileStream, you can directly use it to merge with the Grid's MemoryStream. In the following code, the existing file stream is merged with the Grid's memory stream.
+If you already have a file stream, you can directly use it to merge with the Grid's memory stream. In the following code, the existing file stream is merged with the Grid's memory stream.
 
 ```ts
 using Syncfusion.Pdf;
@@ -180,7 +180,7 @@ public ActionResult PdfExport(string gridModel)
 
 ### Merging with a local file
 
-To merge a local file with the Grid's MemoryStream, you need to convert it into a FileStream before merging. In the following code, the existing local file is merged with the Grid's memory stream.
+To merge a local file with the Grid's memory stream, you need to convert it into a file stream before merging. In the following code, the existing local file is merged with the Grid's memory stream.
 
 ```ts
 using Syncfusion.Pdf;
@@ -207,7 +207,7 @@ public ActionResult PdfExport(string gridModel)
 
 ### Downloading the merged memory stream
 
-You can download the merged MemoryStream by converting it into a FileStreamResult. In the following code, the merged memory stream is downloaded to the browser.
+You can download the merged memory stream by converting it into a `FileStreamResult`. In the following code, the merged memory stream is downloaded to the browser.
 
 ```ts
 using Syncfusion.Pdf;
@@ -226,7 +226,7 @@ public ActionResult PdfExport(string gridModel)
     fileStreamResult.FileDownloadName = "Export.pdf";
     //Close the document.
     finalDoc.Close(true);
-    //Disposes the streams.
+    //Dispose the streams.
     ms1.Dispose();
     ms2.Dispose();
     // return the file
