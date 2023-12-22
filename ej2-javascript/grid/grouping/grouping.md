@@ -152,7 +152,7 @@ In the following example, the [EJ2 Toggle Switch Button](../../switch/getting-st
 
 The Syncfusion ##Platform_Name## Grid has a default behavior where the grouped column is hidden, to provide a cleaner and more focused view of your data. However, if you prefer to show the grouped column in the grid, you can achieve this by setting the [groupSettings.showGroupedColumn](../../api/grid/groupSettings/#showgroupedcolumn) property to **true**.
 
-In the following example, the [EJ2 Toggle Switch Button](../../switch/getting-started) component is added to hide or show the grouped columns. When the switch is toggled, the [change](../../documentation/api/switch/#change) event is triggered and the `groupSettings.showGroupedColumn` property of the grid is updated accordingly.
+In the following example, the [EJ2 Toggle Switch Button](../../switch/getting-started) control is added to hide or show the grouped columns. When the switch is toggled, the [change](../../documentation/api/switch/#change) event is triggered and the `groupSettings.showGroupedColumn` property of the grid is updated accordingly.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -249,7 +249,7 @@ The following example demonstrates how to sort the **CustomerID** column by sett
 
 ## Group with paging
 
-The Grid component supports grouping columns with paging feature. When grouping is applied, the grid displays aggregated information and total items based on the current page. However, by default, the group footer and group caption footer does not consider the aggregated information and total items from other pages. To get additional details from other pages, set the [groupSettings.disablePageWiseAggregates](../../api/grid/groupSettings#disablePageWiseAggregates) property to **false**.
+The Grid control supports grouping columns with paging feature. When grouping is applied, the grid displays aggregated information and total items based on the current page. However, by default, the group footer and group caption footer does not consider the aggregated information and total items from other pages. To get additional details from other pages, set the [groupSettings.disablePageWiseAggregates](../../api/grid/groupSettings#disablePageWiseAggregates) property to **false**.
 
 > If remote data is bound to grid dataSource, two requests will be sent when performing grouping action one for getting the grouped data and another for getting aggregate details and total items count.
 
@@ -288,11 +288,92 @@ The following example demonstrates how to perform a group action using the `enab
 
 > Numeric columns can be grouped based on formats such as currency or percentage, while datetime columns can be grouped based on specific date or time formats.
 
+## Show grouped rows based on page size
+
+Showing grouped column rows based on the page size in Syncfusion ##Platform_Name## Grid is useful when you have grouped data and want to control the number of grouped rows displayed per page. 
+
+The Grid control allows you to display the number of records based on the [pageSize](../../api/grid/pageSettings/#pagesize). However, by default, the `pageSize` applies to individual grid rows, not to grouped rows. If you want to show grouped column rows based on the `pageSize`, you can achieve it by using a custom implementation.
+
+Customizing the `generateQuery` method of the **Data prototype** allows you to modify the query used for data retrieval. By doing so, you can achieve the display of grouped rows based on the page size according to your specific requirements. This can be achieved in the below example.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-grouping-paging/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-grouping-paging/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-grouping-paging" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-grouping-paging/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-grouping-paging/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-grouping-paging" %}
+{% endif %}
+
+## Collapse all grouped rows at initial rendering
+
+The Syncfusion ##Platform_Name## Grid offers a convenient feature to expand or collapse grouped rows, allowing you to control the visibility of grouped data. The option is useful when dealing with a large dataset that contains many groups, and there is a need to provide a summarized view by initially hiding the details.
+
+To collapse all grouped rows at the initial rendering of the Grid using the [dataBound](../../api/grid/#databound) event along with the [collapseAll](../../api/grid/group/#collapseall) method.
+
+The following example demonstrates how to collapse all grouped rows at the initial rendering.
+
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-grouping-collapse/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-grouping-collapse/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-grouping-collapse" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-grouping-collapse/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-grouping-collapse/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-grouping-collapse" %}
+{% endif %}
+
+> You can also collapse all the grouped rows at the initial rendering using the [groupCollapseAll](../../api/grid/#groupcollapseall) method inside the [dataBound](../../api/grid/#databound) event. This is demonstrated in the below code snippet,
+
+```typescript
+    function dataBound() {
+        if (initial === true) {
+            grid.groupModule.collapseAll();
+            initial = false;
+        }
+    }
+```
+> The collapse all approach is suggested for a limited number of records since collapsing every grouped record takes some time. If you have a large dataset, it is recommended to use [lazy-load grouping](../../grid/grouping/lazy-load-grouping). This approach is also applicable for the [groupExpandAll](../../documentation/api/grid/#groupexpandall) method.
+
 ## Group or ungroup column externally
 
 By default, the Syncfusion Grid supports interaction-oriented column grouping, where users manually group columns by dragging and dropping them into the grouping area of the grid. Grid provides an ability to group and ungroup a column using [groupColumn](../../api/grid/#groupcolumn) and [ungroupColumn](../../api/grid/#ungroupcolumn) methods. These methods provide a programmatic approach to perform column grouping and ungrouping.
 
-The following example demonstrates how to group and upgroup the columns in a grid. It utilizes the [DropDownList](../../drop-down-list/getting-started) component to select the column. When an external button is clicked, the `groupColumn` and `ungroupColumn` methods are called to group or ungroup the selected column.
+The following example demonstrates how to group and upgroup the columns in a grid. It utilizes the [DropDownList](../../drop-down-list/getting-started) control to select the column. When an external button is clicked, the `groupColumn` and `ungroupColumn` methods are called to group or ungroup the selected column.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -329,7 +410,7 @@ The Syncfusion ##Platform_Name## Grid offers a convenient feature to expand or c
 
 Grid provides an ability to expand or collapse grouped rows using [groupExpandAll](../../api/grid/#groupexpandall) and [groupCollapseAll](../../api/grid/#groupcollapseall) methods respectively.
 
-In the following example, the [EJ2 Toggle Switch Button](../../switch/getting-started) component is added to expand or collapse grouped rows. When the switch is toggled, the [change](../../api/switch/#change) event is triggered and the `groupExpandAll` and `groupCollapseAll` methods are called to expand or collapse grouped rows.
+In the following example, the [EJ2 Toggle Switch Button](../../switch/getting-started) control is added to expand or collapse grouped rows. When the switch is toggled, the [change](../../api/switch/#change) event is triggered and the `groupExpandAll` and `groupCollapseAll` methods are called to expand or collapse grouped rows.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -385,7 +466,7 @@ The following example demonstrates the function that collapses the selected row 
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/grid/grid-cs82-grouped" %}
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs82-grouped" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
@@ -394,11 +475,11 @@ The following example demonstrates the function that collapses the selected row 
 {% include code-snippet/grid/grid-cs82-grouped/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs82-grouped/js/index.html %}
+{% include code-snippet/grid/grid-cs82-grouped/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "http://127.0.0.1:4000/ej2-javascript/code-snippet/grid/grid-cs82-grouped" %}
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs82-grouped" %}
 {% endif %}
 
 ## Clear grouping 
@@ -438,7 +519,7 @@ The following example demonstrates how to clear the grouping using `clearGroupin
 
 ## Grouping events
 
-The Grid component provides two events that are triggered during the group action such as [actionBegin](../../api/grid/#actionbegin) and [actionComplete](../../api/grid/#actioncomplete). The `actionBegin` event is triggered before the group action starts, and the `actionComplete` event is triggered after the group action is completed. You can use these events to perform any custom action based on the grouping.
+The Grid control provides two events that are triggered during the group action such as [actionBegin](../../api/grid/#actionbegin) and [actionComplete](../../api/grid/#actioncomplete). The `actionBegin` event is triggered before the group action starts, and the `actionComplete` event is triggered after the group action is completed. You can use these events to perform any custom action based on the grouping.
 
 1. **actionBegin event**: `actionBegin` event is triggered before the group action begins. It provides a way to perform any necessary operations before the group action takes place. This event provides a parameter that contains the current grid state, including the current group field name, requestType information and etc.
 
