@@ -1,36 +1,30 @@
-
-
-import { Grid, Group, Page } from '@syncfusion/ej2-grids';
-import { Button } from '@syncfusion/ej2-buttons';
+import { ChipList } from '@syncfusion/ej2-buttons';
+import { Grid, Group } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
-Grid.Inject(Group,Page);
-    let grid: Grid = new Grid(
-        {
-            dataSource: data,
-            allowPaging: true,
-            dataBound: ()=> {
-                let groupCations: HTMLCollection = document.getElementsByClassName('groupbutton');
-                for(var i=0; i<groupCations.length; i++) {
-                     var button = new Button({
-                        isPrimary: true
-                     });
-                     button.appendTo(groupCations[i] as HTMLElement);
-                }
-            },
-            height: 315
-            allowGrouping: true,
-            groupSettings: {columns: ["ShipCountry"], captionTemplate: "#captiontemplate"},
-            columns: [
-                { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right' },
-                { field: 'CustomerName', headerText: 'Customer Name', width: 150 },
-                { field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd', textAlign: 'Right' },
-                { field: 'Freight', width: 120, format: 'C2', textAlign: 'Right' },
-                { field: 'ShippedDate', headerText: 'Shipped Date', width: 140, format: 'yMd', textAlign: 'Right' },
-                { field: 'ShipCountry', headerText: 'Ship Country', width: 150 }
-            ]
-        });
-    grid.appendTo('#Grid');
+Grid.Inject(Group);
 
+let grid: Grid = new Grid({
+    dataSource: data,
+    allowPaging: true,
+    allowGrouping: true,
+    dataBound: dataBound,
+    groupSettings: {  captionTemplate: '#captiontemplate' },
+    columns: [
+        { field: 'OrderID', headerText: 'ID',textAlign: 'Right',width: 90 },
+        { field: 'CustomerID', headerText: 'Name',width: 100 },
+        { field: 'ShipCity', headerText: 'City', width: 100 },
+        { field: 'ShipName', headerText: 'Value', width: 80 }
+    ],
+    height: 315
+});
+grid.appendTo('#Grid');
 
-
+function dataBound()
+{
+    let groupCations = document.getElementsByClassName('groupChip');
+    for (let i = 0; i < groupCations.length; i++) {
+      let chip = new ChipList({});
+      chip.appendTo(groupCations[i] as HTMLElement);
+    }
+}
