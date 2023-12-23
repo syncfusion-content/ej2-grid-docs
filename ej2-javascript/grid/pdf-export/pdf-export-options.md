@@ -361,3 +361,36 @@ In the following example, we have used Advent Pro font to export the grid with H
 {% endif %}
 
 > `PdfTrueTypeFont` accepts base 64 format of the Custom Font.
+
+## Export grid as blob
+
+The Grid offers an option to export the data as a `Blob` instead of downloading it as a file in the browser. To export the grid as a Blob, set the `isBlob` parameter to **true** in the [pdfExport](../../api/grid/#pdfexport) method. The grid returns the promise of a blob in the [pdfExportComplete](../../api/grid/#pdfexportcomplete) event.
+
+The following example demonstrates how to obtain the blob data of the exported grid by executing the promise in the `pdfExportComplete` event.
+
+{% if page.publishingplatform == "typescript" %}
+
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/export-grid-as-blob-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/export-grid-as-blob-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/export-grid-as-blob-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/export-grid-as-blob-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/export-grid-as-blob-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/export-grid-as-blob-cs1" %}
+{% endif %}
