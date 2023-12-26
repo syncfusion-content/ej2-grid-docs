@@ -6,7 +6,6 @@ Grid.Inject(Group);
 
 let grid: Grid = new Grid({
     dataSource: data,
-    allowPaging: true,
     allowGrouping: true,
     dataBound: dataBound,
     groupSettings: {  captionTemplate: '#captiontemplate' },
