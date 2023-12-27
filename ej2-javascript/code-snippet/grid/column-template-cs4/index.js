@@ -24,14 +24,6 @@ var lineData =
         [6, 4, 0, -3, 2, -5, 1],
     ];
 
-var sparklineInstance = new ej.charts.Sparkline({
-    height: '100px',
-    width: '50%',
-    renderGridSparkline: renderGridSparkline,
-});
-//Render initialized Sparkline
-sparklineInstance.appendTo("#spkline");
-
 function renderGridSparkline() {
     setTimeout(() => {
         var grid = document.getElementById('Grid'); // Change 'Grid' to the actual ID of your Syncfusion EJ2 Grid

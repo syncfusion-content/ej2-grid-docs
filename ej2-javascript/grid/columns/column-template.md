@@ -161,6 +161,9 @@ In the following code, we rendered the ColorPicker control in the Grid column by
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "page.domainurl/code-snippet/grid/column-template-cs5" %}
+{% endif %}
+
 ### Render DropDownList control in a column
 
 To render a custom control in a grid column, you need to define a [template](../../api/grid/column/#template) for the column using the `template` property. In the following code, we rendered the [DropDownList](../../drop-down-list/getting-started) control in the **Order Status** column by defining the `template` property.
@@ -241,20 +244,23 @@ In the following code, we rendered the Chips control in the Grid **First Name** 
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "page.domainurl/code-snippet/grid/column-template-cs6" %}
+{% endif %}
+
 ## Using condition template
 
-<!-- The conditional column [template](../../api/grid/column/#template) allows you to display template elements based on specific conditions.
+The conditional column [template](../../api/grid/column/#template) allows you to display template elements based on specific conditions.
 
-The following example demonstrates how to use the `template` property with an `ng-template` element and add an `*ngIf` directive to render the checkbox based on the value of the **Discontinued** field. The **Discontinued** field will render a checkbox in each row for which the value of the **Discontinued** field is **true**.  -->
+The following example demonstrates how to use the `template` property and `If` condition to render the checkbox based on the value of the **Discontinued** field. The **Discontinued** field will render a checkbox in each row for which the value of the **Discontinued** field is **true**. 
 
 ```
   <script id="template" type="text/x-template">
-            <div class="template_checkbox">
-                ${if(Discontinued)}
-                <input type="checkbox" checked> ${else}
-                <input type="checkbox"> ${/if}
-            </div>
-        </script>
+        <div class="template_checkbox">
+            ${if(Discontinued)}
+            <input type="checkbox" checked> ${else}
+            <input type="checkbox"> ${/if}
+        </div>
+    </script>
 ```
 
 {% if page.publishingplatform == "typescript" %}
