@@ -1,27 +1,24 @@
 #container {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 #loader {
-  color: #008cff;
-  font-family: 'Helvetica Neue','calibiri';
-  font-size: 14px;
-  height: 40px;
-  left: 45%;
-  position: absolute;
-  top: 45%;
-  width: 30%;
+color: #008cff;
+font-family: 'Helvetica Neue','calibiri';
+font-size: 14px;
+height: 40px;
+left: 45%;
+position: absolute;
+top: 45%;
+width: 30%;
 }
 
 .below-30 {
-  background-color: orangered;
+background-color: rgb(211, 225, 248);
 }
-
 .below-80 {
-  background-color: yellow;
-} 
-
-.above-80 {
-  background-color: greenyellow
+background-color: rgb(163, 236, 217);
 }
-
+.above-80 {
+background-color: rgb(220, 248, 177);
+}

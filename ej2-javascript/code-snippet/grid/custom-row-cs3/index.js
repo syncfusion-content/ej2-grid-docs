@@ -5,22 +5,20 @@ var grid = new ej.grids.Grid({
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100 },
         { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
-        { field: 'ShipCity', headerText: 'Ship City', width: 100 },
-        { field: 'Freight', headerText: 'Freight', width: 100, format: 'C2' },
-        { field: 'ShipName', headerText: 'Ship Name', width: 100 }
+        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', format: 'C2' , width: 80 },
+        { field: 'ShipCity', headerText: 'Ship City', width: 130 }
     ],
-    rowDataBound: rowBound,
+    rowDataBound: rowDataBound,
     height: 280
 });
 grid.appendTo('#Grid');
 
-function rowBound(args) {
+function rowDataBound(args) {
     if (args.data['Freight'] < 30) {
         args.row.classList.add('below-30');
-    } else if (args.data['Freight'] < 80) {
+    } else if ((args.data['Freight'] >= 30) && (args.data['Freight'] < 80)) {
         args.row.classList.add('below-80');
     } else {
         args.row.classList.add('above-80');
     }
 }
-
