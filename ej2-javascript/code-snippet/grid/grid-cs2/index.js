@@ -12,8 +12,7 @@ var grid = new ej.grids.Grid({
         { field: 'ShipCity', headerText: 'Customer ID', width: 150 },
         { field: 'ShipCountry', headerText: 'Ship Country', width: 150 },
         { field: 'ShipName', headerText: 'Ship Name', width: 150 }
-     ]
+     ],
     height: 280
 });
 grid.appendTo('#Grid');
-

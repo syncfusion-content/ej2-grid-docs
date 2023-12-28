@@ -10,7 +10,7 @@ System.config({
         }
     },
     paths: {
-        "syncfusion:": "https://cdn.syncfusion.com/ej2/20.3.56/"
+        "syncfusion:": "https://cdn.syncfusion.com/ej2/24.1.41/"
     },
     map: {
         main: "index.ts",
@@ -31,9 +31,7 @@ System.config({
         "@syncfusion/ej2-file-utils": "syncfusion:ej2-file-utils/dist/ej2-file-utils.umd.min.js",
         "@syncfusion/ej2-compression": "syncfusion:ej2-compression/dist/ej2-compression.umd.min.js",
         "@syncfusion/ej2-inputs": "syncfusion:ej2-inputs/dist/ej2-inputs.umd.min.js",
-        "@syncfusion/ej2-calendars": "syncfusion:ej2-calendars/dist/ej2-calendars.umd.min.js",
         "@syncfusion/ej2-dropdowns": "syncfusion:ej2-dropdowns/dist/ej2-dropdowns.umd.min.js",
-        "@syncfusion/ej2-notifications":"syncfusion:ej2-notifications/dist/ej2-notifications.umd.min.js",
         "@syncfusion/ej2-lists": "syncfusion:ej2-lists/dist/ej2-lists.umd.min.js",
         "@syncfusion/ej2-splitbuttons": "syncfusion:ej2-splitbuttons/dist/ej2-splitbuttons.umd.min.js",
         "@syncfusion/ej2-notifications": "syncfusion:ej2-notifications/dist/ej2-notifications.umd.min.js",
@@ -42,7 +40,6 @@ System.config({
        '*.json': { loader: 'plugin-json' }
     }
 });
-
 System.import('index.ts').catch(console.error.bind(console)).then(function () {
     document.getElementById('loader').style.display = "none";
     document.getElementById('container').style.visibility = "visible";
