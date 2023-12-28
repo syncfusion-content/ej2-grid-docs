@@ -2,7 +2,7 @@ ej.grids.Grid.Inject(ej.grids.Edit, ej.grids.Toolbar);
 
 var grid = new ej.grids.Grid({
     dataSource: data,
-    editSettings: { allowEditing: true, allowAdding: true, allowDevaring: true, mode: 'Batch' },
+    editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Batch' },
     allowPaging: true,
     toolbar: ['Add', 'Delete', 'Update', 'Cancel'],
     columns: [

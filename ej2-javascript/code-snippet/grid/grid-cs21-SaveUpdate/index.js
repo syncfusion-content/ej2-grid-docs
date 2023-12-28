@@ -1,4 +1,4 @@
-ej.grids.Grid.Inject(ej.grids.Edit, ej.grids.Toolbar);
+ej.grids.Grid.Inject(ej.grids.Edit, ej.grids.Toolbar,ej.grids.Page);
 
 var grid = new ej.grids.Grid({
     dataSource: data,
