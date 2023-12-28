@@ -6,10 +6,10 @@ var grid = new ej.grids.Grid({
     toolbar: ['Add', 'Delete', 'Update', 'Cancel'],
     editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Batch' },
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100, isPrimaryKey: true },
-        { field: 'Role', headerText: 'Role', width: 120, },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', editType: 'numericedit', width: 120, format: 'C2' },
-        { field: 'ShipCountry', headerText: 'Ship Country', editType: 'dropdownedit', width: 150 }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right',validationRules: { required: true, number: true }, isPrimaryKey: true, width: 100 },
+        { field: 'Role', headerText: 'Role',validationRules: {required: true }, width: 120, },
+        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', editType: 'numericedit',validationRules: { min:1, max:1000 }, width: 120, format: 'C2' },
+        { field: 'ShipCountry', headerText: 'Ship Country',editType: 'dropdownedit', width: 150 }
     ],
     cellEdit: cellEdit,
     beforeBatchAdd: beforeBatchAdd,
@@ -34,13 +34,12 @@ function beforeBatchDelete(args) {
   }
 }
 
-var button = document.createElement('button');
-button.innerText = 'Grid is Addable';
-document.body.insertBefore(button, document.body.children[0]);
-button.addEventListener('click', btnClick.bind(this));
+var button = new ej.buttons.Button({
+  content: 'Grid is Addable',
+});
+button.appendTo('#Add');
 
-function btnClick(args) {
-  args.target.innerText == 'Grid is Addable' ? (args.target.innerText = 'Grid is Not Addable') : (args.target.innerText = 'Grid is Addable');
+document.getElementById('Add').onclick = () => {
+  button.content == 'Grid is Addable'? (button.content = 'Grid is Not Addable'): (button.content = 'Grid is Addable');
   isAddable = !isAddable;
-}
-
+};
