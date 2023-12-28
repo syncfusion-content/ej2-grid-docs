@@ -8,9 +8,9 @@ let grid: Grid = new Grid({
     toolbar: ['Add', 'Delete', 'Update', 'Cancel'],
     editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Batch' },
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', validationRules: { required: true, number: true }, isPrimaryKey: true, width: 100 },
-        { field: 'CustomerID', headerText: 'Customer ID', validationRules: { required: true }, allowEditing: false, width: 140 },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', editType: 'numericedit', width: 120, format: 'C2',validationRules: { min:1, max:1000 } },
+        { field: 'OrderID', isPrimaryKey: true, headerText: 'Order ID', textAlign: 'Right', validationRules: { required: true, number: true }, width: 100 },
+        { field: 'CustomerID', headerText: 'Customer ID', validationRules: { required: true }, width: 140 },
+        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', editType: 'numericedit', width: 120, format: 'C2', validationRules: { min: 1, max: 1000 } },
         { field: 'ShipCountry', headerText: 'Ship Country', editType: 'dropdownedit', width: 150 }
     ],
     height: 265
