@@ -4,7 +4,7 @@ import { DataManager, Query, UrlAdaptor } from '@syncfusion/ej2/data';
 Grid.Inject(Filter, Page, Selection, Sort);
 
 const urlapi: DataManager = new DataManager({
-    url: 'https://ej2services.syncfusion.com/js/release/api/UrlDataSource',
+    url: 'https://services.syncfusion.com/js/production/api/UrlDataSource',
     adaptor: new UrlAdaptor()
 });
 let grid: Grid = new Grid(
