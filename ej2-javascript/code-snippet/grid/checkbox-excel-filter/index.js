@@ -1,6 +1,6 @@
 ej.grids.Grid.Inject(ej.grids.Filter, ej.grids.Page, ej.grids.Selection, ej.grids.Sort);
 var urlapi = new ej.data.DataManager({
-    url: 'https://ej2services.syncfusion.com/js/release/api/UrlDataSource',
+    url: 'https://services.syncfusion.com/js/production/api/UrlDataSource',
     adaptor: new UrlAdaptor()
 });
 var grid = new ej.grids.Grid({
