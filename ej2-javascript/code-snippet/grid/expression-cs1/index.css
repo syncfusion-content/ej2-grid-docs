@@ -1,7 +1,6 @@
 #container {
     visibility: hidden;
 }
-
 #loader {
   color: #008cff;
   font-family: 'Helvetica Neue','calibiri';
@@ -12,4 +11,3 @@
   top: 45%;
   width: 30%;
 }
-

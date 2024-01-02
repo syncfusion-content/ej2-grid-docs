@@ -10,7 +10,7 @@ System.config({
         }
     },
     paths: {
-        "syncfusion:": "https://cdn.syncfusion.com/ej2/20.3.56/"
+        "syncfusion:": "https://cdn.syncfusion.com/ej2/24.1.41/"
     },
     map: {
         main: "index.ts",
@@ -32,13 +32,11 @@ System.config({
         "@syncfusion/ej2-grids": "syncfusion:ej2-grids/dist/ej2-grids.umd.min.js",
         "@syncfusion/ej2-splitbuttons": "syncfusion:ej2-splitbuttons/dist/ej2-splitbuttons.umd.min.js",
         "@syncfusion/ej2-notifications":"syncfusion:ej2-notifications/dist/ej2-notifications.umd.min.js"
-
     },
      meta: { 
        '*.json': { loader: 'plugin-json' }
     }
 });
-
 System.import('index.ts').catch(console.error.bind(console)).then(function () {
     document.getElementById('loader').style.display = "none";
     document.getElementById('container').style.visibility = "visible";
