@@ -1,4 +1,4 @@
-import { Grid, Edit, Toolbar, DialogEditEventArgs } from '@syncfusion/ej2-grids';
+import { Grid, Edit, Toolbar, EditEventArgs } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
 Grid.Inject(Edit, Toolbar);
@@ -14,7 +14,7 @@ let grid: Grid = new Grid({
         { field: 'ShipCountry', headerText: 'Ship Country', width: 150 }
     ],
     height: 265,
-    actionBegin: function (args: DialogEditEventArgs) {
+    actionBegin: function (args: EditEventArgs) {
         if (args.requestType === 'beginEdit') {
             for (let i = 0; i < this.columns.length; i++) {
                 if (this.columns[i].field == "CustomerID") {
