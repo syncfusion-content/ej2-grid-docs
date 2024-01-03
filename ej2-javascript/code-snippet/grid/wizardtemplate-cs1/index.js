@@ -37,7 +37,7 @@ var grid = new ej.grids.Grid({
 grid.appendTo('#Grid');
 
 function initializeWizard() {
-    let currentTab = 0;
+    var currentTab = 0;
     document.getElementById('nextBtn').onclick = function () {
         if (validate()) {
             if (this.innerHTML !== 'SUBMIT'){
@@ -49,7 +49,7 @@ function initializeWizard() {
         }
     }
     function validate(tab) {
-        let valid = true;
+        var valid = true;
             [].slice.call(document.getElementById('tab' + currentTab).querySelectorAll('[name]')).forEach(element => {
             element.form.ej2_instances[0].validate(element.name);
             if (element.getAttribute('aria-invalid') === 'true'){
@@ -70,7 +70,7 @@ function initializeWizard() {
 }
 
 function nextpre(current) {
-    let tabs = [].slice.call(document.getElementsByClassName('tab'))
+    var tabs = [].slice.call(document.getElementsByClassName('tab'))
     tabs.forEach(element => element.style.display = 'none');
     tabs[current].style.display = '';
     if(current) {
