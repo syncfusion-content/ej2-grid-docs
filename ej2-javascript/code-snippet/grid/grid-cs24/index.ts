@@ -16,7 +16,7 @@ let grid: Grid = new Grid({
     height: 265,
     actionBegin: function (args: DialogEditEventArgs) {
         if (args.requestType === 'beginEdit') {
-            for (var i = 0; i < this.columns.length; i++) {
+            for (let i = 0; i < this.columns.length; i++) {
                 if (this.columns[i].field == "CustomerID") {
                     this.columns[i].visible = true;
                 }
@@ -26,14 +26,14 @@ let grid: Grid = new Grid({
             }
         }
         else if (args.requestType === 'add') {
-            for (var i = 0; i < this.columns.length; i++) {
+            for (let i = 0; i < this.columns.length; i++) {
                 if (this.columns[i].field == "CustomerID") {
                     this.columns[i].visible = true;
                 }
             }
         }
         else if (args.requestType === 'save') {
-            for (var i = 0; i < this.columns.length; i++) {
+            for (let i = 0; i < this.columns.length; i++) {
                 if (this.columns[i].field == "CustomerID") {
                     this.columns[i].visible = false;
                 }

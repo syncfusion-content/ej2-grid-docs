@@ -12,31 +12,30 @@ var grid = new ej.grids.Grid({
     height: 273,
     actionBegin: function (args) {
         if (args.requestType === 'beginEdit') {
-            for (var i = 0; i < this.columns.length; i++) {
-                if (this.columns[i].field == "CustomerID") {
-                    this.columns[i].visible = true;
+            for (var i = 0; i < columns.length; i++) {
+                if (columns[i].field == "CustomerID") {
+                    columns[i].visible = true;
                 }
-                else if (this.columns[i].field == "ShipCountry") {
-                    this.columns[i].visible = false;
+                else if (columns[i].field == "ShipCountry") {
+                    columns[i].visible = false;
                 }
             }
         }
         else if (args.requestType === 'add') {
-            for (var i = 0; i < this.columns.length; i++) {
-                if (this.columns[i].field == "CustomerID") {
-                    this.columns[i].visible = true;
+            for (var i = 0; i < columns.length; i++) {
+                if (columns[i].field == "CustomerID") {
+                    columns[i].visible = true;
                 }
 
             }
         }
         else if (args.requestType === 'save') {
-            debugger;
-            for (var i = 0; i < this.columns.length; i++) {
-                if (this.columns[i].field == "CustomerID") {
-                    this.columns[i].visible = false;
+            for (var i = 0; i < columns.length; i++) {
+                if (columns[i].field == "CustomerID") {
+                    columns[i].visible = false;
                 }
-                else if (this.columns[i].field == "ShipCountry") {
-                    this.columns[i].visible = true;
+                else if (columns[i].field == "ShipCountry") {
+                    columns[i].visible = true;
                 }
             }
         }
