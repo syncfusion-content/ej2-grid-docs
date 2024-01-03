@@ -3,19 +3,18 @@ var grid = new ej.grids.Grid({
     toolbar: ['Search'],
     searchSettings: { fields: ['CustomerID'], operator: 'contains', key: 'Ha', ignoreCase: true },
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
-        { field: 'ShipCity', headerText: 'Ship City', width: 150 },
-        { field: 'ShipName', headerText: 'Ship Name', width: 150 }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+        { field: 'ShipCity', headerText: 'Ship City', width: 100 },
+        { field: 'ShipName', headerText: 'Ship Name', width: 120 }
     ],
     height: 272
 });
 grid.appendTo('#Grid');
 
-let clearBtn: Button = new Button();
-clearBtn.appendTo('#clear');
+var clearButton =  new ej.buttons.Button();
+clearButton.appendTo('#clear');
 
 document.getElementById('clear').addEventListener('click', () => {
     grid.searchSettings.key='';
 });
-
