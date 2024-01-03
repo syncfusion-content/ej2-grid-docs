@@ -24,7 +24,7 @@ grid.appendTo('#Grid');
 
 function actionComplete(args) {
     if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
-        let dialog = args.dialog;
+        var dialog = args.dialog;
         // set the height of the dialog
         dialog.height = 300;
         // set the width of the dialog
