@@ -1,4 +1,4 @@
-import { Grid, Edit, Toolbar, DialogEditEventArgs } from '@syncfusion/ej2-grids';
+import { Grid, Edit, Toolbar, EditEventArgs } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 import { L10n } from '@syncfusion/ej2-base';
 import { Dialog } from '@syncfusion/ej2-popups';
@@ -18,7 +18,7 @@ let grid: Grid = new Grid({
     dataSource: data,
     toolbar: ['Add', 'Edit', 'Delete'],
     editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Dialog' },
-    actionComplete: (args: DialogEditEventArgs) => {
+    actionComplete: (args: EditEventArgs) => {
         if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
             let dialog: Dialog = args.dialog;
             // set the height of the dialog
