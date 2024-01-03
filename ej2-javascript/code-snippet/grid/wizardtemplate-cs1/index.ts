@@ -38,7 +38,7 @@ grid.appendTo('#Grid');
 function initializeWizard() {
     let currentTab = 0;
 
-    document.getElementById('nextBtn').onclick = function () {
+    (document.getElementById('nextBtn') as HTMLElement).onclick = function () {
         if (validate()) {
             if (this.innerHTML !== 'SUBMIT'){
                 currentTab++;
@@ -50,7 +50,7 @@ function initializeWizard() {
     }
     function validate(tab) {
         let valid: boolean = true;
-            [].slice.call(document.getElementById('tab' + currentTab).querySelectorAll('[name]')).forEach(element => {
+            [].slice.call(document.getElementById('tab' + currentTab)as HTMLElement).querySelectorAll('[name]')).forEach(element => {
             element.form.ej2_instances[0].validate(element.name);
             if (element.getAttribute('aria-invalid') === 'true'){
                 valid = false;
@@ -61,7 +61,7 @@ function initializeWizard() {
         }
         return true;
     }
-    document.getElementById('prevBtn').onclick = function () {
+    (document.getElementById('prevBtn')as HTMLElement).onclick = function () {
         if (validate()) {
             currentTab--;
             nextpre(currentTab);
@@ -75,11 +75,11 @@ function nextpre(current) {
     tabs.forEach(element => element.style.display = 'none');
     tabs[current].style.display = '';
     if(current) {
-        document.getElementById('prevBtn').style.display = '';
-        document.getElementById('nextBtn').innerHTML = 'SUBMIT';
+        (document.getElementById('prevBtn')as HTMLElement).style.display = '';
+        (document.getElementById('nextBtn')as HTMLElement).innerHTML = 'SUBMIT';
     } else {
-        document.getElementById('prevBtn').style.display = 'none';
-        document.getElementById('nextBtn').innerHTML = 'NEXT';
+        (document.getElementById('prevBtn')as HTMLElement).style.display = 'none';
+        (document.getElementById('nextBtn')as HTMLElement).innerHTML = 'NEXT';
     }
 }
 

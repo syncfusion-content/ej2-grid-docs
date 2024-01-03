@@ -31,4 +31,3 @@ function actionComplete(args) {
 function onCustomButtonClick() {
     alert('Add/Edit dialog custom footer button clicked');
 }
-
