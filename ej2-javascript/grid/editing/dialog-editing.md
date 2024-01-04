@@ -152,7 +152,7 @@ The following example demonstrate the wizard like editing in the grid with the u
 {% previewsample "page.domainurl/code-snippet/grid/wizardtemplate-cs1" %}
 {% endif %}
 
-## Customize Add/Edit Dialog footer
+## Customize Add/Edit dialog footer
 
 The Customize add/edit dialog footer feature in the grid allows you to modify the footer section of the dialog that appears when editing the currently selected row or adding a new row. By default, the dialog displays two buttons in the footer section: Save and Cancel, which allow you to save or discard the changes made in the dialog. This feature is particularly helpful when you want to add custom buttons to the dialog's footer, implement specific actions, or customize the appearance of the buttons, such as changing their color or size in the dialog's footer. This can be achieved using the [actionComplete](../../api/grid/#actioncomplete) event of the Grid component.
 
