@@ -11,10 +11,8 @@ var grid = new ej.grids.Grid({
     columns: [
         { field: 'OrderID', isPrimaryKey: 'true', headerText: 'Order ID', textAlign: 'Right', width: 125 },
         { field: 'CustomerID', headerText: 'Cusomer ID', width: 120 },
-        { field: 'Freight', headerText: 'Freight', width: 170,textAlign: 'Right',
-        editType: 'numericedit', width: 120, format: 'C2' },
-        { field: 'ShipCountry', headerText: 'Shi pCountry', width: 170,textAlign: 'Right',
-        editTyp: 'dropdownedit', width: 120},
+        { field: 'Freight', headerText: 'Freight', width: 170,textAlign: 'Right', editType: 'numericedit', width: 120, format: 'C2' },
+        { field: 'ShipCountry', headerText: 'Shi pCountry', width: 170,textAlign: 'Right', editType: 'dropdownedit', width: 120},
         { headerText: 'Commands', width: 120, commands: commands} 
     ],
     height: 310

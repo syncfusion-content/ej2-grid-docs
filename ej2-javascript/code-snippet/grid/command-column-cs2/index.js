@@ -6,14 +6,8 @@ var grid = new ej.grids.Grid({
     columns: [
         { field: 'OrderID', isPrimaryKey: true, headerText: 'Order ID', textAlign: 'Right', width: 100 },
         { field: 'CustomerID', headerText: 'Cusomer ID', width: 120 },
-        {
-            field: 'Freight', headerText: 'Freight', textAlign: 'Right',
-            editType: 'numericedit', width: 120, format: 'C2'
-        },
-        {
-            field: 'ShipCountry', headerText: 'Ship Country', width: 150, textAlign: 'Right',
-            editType: 'dropdownedit'
-        },
+        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', editType: 'numericedit', width: 120, format: 'C2'},
+        { field: 'ShipCountry', headerText: 'Ship Country', width: 150, textAlign: 'Right', editType: 'dropdownedit'},
         { headerText: 'Commands', width: 120, commands: [{ buttonOption: { content: 'Details', cssClass: 'e-flat' } }] },
     ],
     height: 315
