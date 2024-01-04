@@ -16,7 +16,7 @@ L10n.load({
 
 let grid: Grid = new Grid({
     dataSource: data,
-    toolbar: ['Add', 'Edit', 'Delete'],
+    toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
     editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Dialog' },
     actionComplete: (args: EditEventArgs) => {
         if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {

@@ -16,29 +16,29 @@ let grid: Grid = new Grid({
     height: 265,
     actionBegin: function (args: EditEventArgs) {
         if (args.requestType === 'beginEdit') {
-            for (let i = 0; i < this.columns.length; i++) {
-                if (this.columns[i].field == "CustomerID") {
-                    this.columns[i].visible = true;
+            for (let i = 0; i < grid.columns.length; i++) {
+                if (grid.columns[i].field == "CustomerID") {
+                    grid.columns[i].visible = true;
                 }
-                else if (this.columns[i].field == "ShipCountry") {
-                    this.columns[i].visible = false;
+                else if (grid.columns[i].field == "ShipCountry") {
+                    grid.columns[i].visible = false;
                 }
             }
         }
         else if (args.requestType === 'add') {
-            for (let i = 0; i < this.columns.length; i++) {
-                if (this.columns[i].field == "CustomerID") {
-                    this.columns[i].visible = true;
+            for (let i = 0; i < grid.columns.length; i++) {
+                if (grid.columns[i].field == "CustomerID") {
+                    grid.columns[i].visible = true;
                 }
             }
         }
         else if (args.requestType === 'save') {
-            for (let i = 0; i < this.columns.length; i++) {
-                if (this.columns[i].field == "CustomerID") {
-                    this.columns[i].visible = false;
+            for (let i = 0; i < grid.columns.length; i++) {
+                if (grid.columns[i].field == "CustomerID") {
+                    grid.columns[i].visible = false;
                 }
-                else if (this.columns[i].field == "ShipCountry") {
-                    this.columns[i].visible = true;
+                else if (grid.columns[i].field == "ShipCountry") {
+                    grid.columns[i].visible = true;
                 }
             }
         }
