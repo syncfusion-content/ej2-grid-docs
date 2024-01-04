@@ -9,7 +9,7 @@ ej.base.L10n.load({
 ej.grids.Grid.Inject(ej.grids.Edit, ej.grids.Toolbar);
 var grid = new ej.grids.Grid({
     dataSource: data,
-    toolbar: ['Add', 'Edit', 'Delete'],
+    toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
     editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Dialog' },
     actionComplete: actionComplete,
     columns: [

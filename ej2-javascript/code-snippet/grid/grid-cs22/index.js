@@ -1,7 +1,7 @@
 ej.grids.Grid.Inject(ej.grids.Edit, ej.grids.Toolbar);
 var grid = new ej.grids.Grid({
     dataSource: data,
-    toolbar: ['Add', 'Edit', 'Delete'],
+    toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
     editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Dialog' },
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right',validationRules: { required: true, number: true }, width: 100, isPrimaryKey: true },

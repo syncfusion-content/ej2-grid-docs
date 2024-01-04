@@ -6,9 +6,9 @@ var grid = new ej.grids.Grid({
   editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Dialog', template: '#dialogtemplate'},
   columns: [
     { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100, isPrimaryKey: true},
-    { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
-    { field: 'ShipCity', headerText: 'Ship City', width: 150 },
+    { field: 'CustomerID', headerText: 'Customer Name', width: 120 },
     { field: 'Freight', headerText: 'Freight', width: 150 },
+    { field: 'ShipCity', headerText: 'Ship City', width: 150 },
     { field: 'ShipCountry', headerText: 'Ship Country', width: 150 },
     { field: 'Verified', headerText: 'Verified', type: 'boolean', displayAsCheckBox: 'true', width: 150},
   ],

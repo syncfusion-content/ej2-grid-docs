@@ -20,7 +20,7 @@ grid.appendTo('#Grid');
 
 function actionComplete(args) {
     if (args.requestType === 'beginEdit' || args.requestType === 'add') {
-        const dialogInstance = args.dialog;
+        var dialogInstance = args.dialog;
         dialogInstance.buttons = [
             {
                 buttonModel: { content: 'Discard', cssClass: 'e-primary custom-button-style' },

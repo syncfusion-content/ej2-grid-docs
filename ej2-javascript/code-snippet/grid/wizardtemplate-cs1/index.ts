@@ -1,4 +1,4 @@
-import { Grid, Edit, Toolbar, DialogEditEventArgs } from '@syncfusion/ej2-grids';
+import { Grid, Edit, Toolbar, EditEventArgs } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
 import { DataUtil } from '@syncfusion/ej2-data';
@@ -19,13 +19,15 @@ let grid: Grid = new Grid({
         template: '#dialogtemplate',
     },
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100, isPrimaryKey: true, validationRules: { required: true } },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 120, validationRules: { required: true } },
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100, isPrimaryKey: true},
+        { field: 'CustomerID', headerText: 'Customer Name', width: 120 },
+        { field: 'Freight', headerText: 'Freight', width: 150 },
+        { field: 'ShipCity', headerText: 'Ship City', width: 150 },
         { field: 'ShipCountry', headerText: 'Ship Country', width: 150 },
-        { field: 'Verified', headerText: 'Verified', type: 'boolean', displayAsCheckBox: true, width: 150 },
+        { field: 'Verified', headerText: 'Verified', type: 'boolean', displayAsCheckBox: 'true', width: 150}
     ],
     height: 265,
-    actionComplete: (args: DialogEditEventArgs) => {
+    actionComplete: (args: EditEventArgs) => {
         if (args.requestType === 'beginEdit' || args.requestType === 'add') {
             args.dialog.element.querySelector('.e-footer-content').classList.add('e-hide');
             new DropDownList(
@@ -92,7 +94,7 @@ function initializeWizard() {
     };
 }
 
-function nextpre(current) {
+function nextpre(current: number) {
     let tabs = [].slice.call(document.getElementsByClassName('tab'));
     tabs.forEach((element) => (element.style.display = 'none'));
     tabs[current].style.display = '';
