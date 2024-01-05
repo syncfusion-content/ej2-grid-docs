@@ -1,30 +1,45 @@
-
-
-import { Grid, RecordClickEventArgs } from '@syncfusion/ej2-grids';
-import { employeeData } from './datasource.ts';
-import { closest } from '@syncfusion/ej2-base';
+import { Grid, QueryCellInfoEventArgs } from '@syncfusion/ej2-grids';
+import { employeeData } from './data-source.ts';
+import { Dialog } from '@syncfusion/ej2-popups';
 
 let grid: Grid = new Grid({
-    dataSource: employeeData,
-    columns: [
-        {
-            headerText: 'Employee Data', textAlign: 'Right',
-            template: '#template', width: 150, isPrimaryKey: true
-        },
-        { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 130 },
-        { field: 'FirstName', headerText: 'Name', width: 120 },
-        { field: 'Title', headerText: 'Title', width: 170 }
-    ],
-    height: 315,
-    recordClick: (args: RecordClickEventArgs) => {
-        if (args.target.classList.contains('empData')) {
-            var rowObj = grid.getRowObjectFromUID(closest(args.target, '.e-row').getAttribute('data-uid')
-            );
-            console.log(rowObj);
-        }
-    }
+  dataSource: employeeData,
+  queryCellInfo: queryCellInfo,
+  columns: [
+    { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right',width: 90},
+    { field: 'FirstName', headerText: 'Name', width: 120},
+    { headerText: 'Employee Data', textAlign: 'Right', template: '#columnTemplate', width: 90},
+  ],
+  height: 315,
 });
 grid.appendTo('#Grid');
 
+let dialogVisible =  false;
 
+function queryCellInfo(args: QueryCellInfoEventArgs ) {
 
+  if (args.column.headerText === 'Employee Data') {
+    args.cell.querySelector('#button').addEventListener('click', () => {
+      dialog.visible = true
+      dialog.content =
+        `<p><b>EmployeeID:</b> ${args.data.EmployeeID}</p>
+        <p><b>FirstName:</b> ${args.data.FirstName}</p>
+        <p><b>LastName:</b> ${args.data.LastName}</p>`
+    })
+  }
+}
+
+let dialog: Dialog = new Dialog({
+  header: "Selected Row Details",
+  content: "dialogContent",
+  showCloseIcon: true,
+  width: "400px",
+  visible: dialogVisible,
+  close: dialogClose,
+})
+dialog.appendTo('#dialog');
+
+function dialogClose()
+{
+  dialogVisible = false;
+}
