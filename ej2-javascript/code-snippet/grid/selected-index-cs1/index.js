@@ -1,6 +1,6 @@
 var grid = new ej.grids.Grid({
     dataSource: data,
-    selectionSettings: { allowColumnSelection: true, type: 'Multiple' },
+    selectionSettings: { type: 'Multiple' },
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
         { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
@@ -11,3 +11,15 @@ var grid = new ej.grids.Grid({
 });
 grid.appendTo('#Grid');
 
+var toggle = new ej.buttons.Switch({
+    change: onSwitchChange,
+});
+toggle.appendTo('#switch');
+
+function onSwitchChange(args) {
+    if (args.checked) {
+        grid.selectionSettings.allowColumnSelection = true;
+    } else {
+        grid.selectionSettings.allowColumnSelection = false;
+    }
+}
