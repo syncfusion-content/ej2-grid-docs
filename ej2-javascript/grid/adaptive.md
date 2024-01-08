@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adaptive in JavaScript Grid control | Syncfusion
-description: Learn here all about adaptive in Syncfusion JavaScript Grid control of Syncfusion Essential JS 2 and more.
+description: Learn here all about adaptive in Syncfusion Essential JavaScript Grid control, its elements and more.
 platform: ej2-javascript
 control: Adaptive 
 publishingplatform: JavaScript
