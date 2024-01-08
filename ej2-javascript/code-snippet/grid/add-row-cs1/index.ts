@@ -8,11 +8,11 @@ let grid: Grid = new Grid({
     dataSource: data,
     editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true },
     columns: [
-       { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100, isPrimaryKey: true },
-       { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
-       { field: 'ShipCity', headerText: 'Ship City', width: 100 },
-       { field: 'Freight', headerText: 'Freight', textAlign: 'Right', format: 'C', width: 100 },
-       { field: 'ShipName', headerText: 'Ship Name', width: 150 }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100, isPrimaryKey: true },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
+        { field: 'ShipCity', headerText: 'Ship City', width: 100 },
+        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', format: 'C', width: 100 },
+        { field: 'ShipName', headerText: 'Ship Name', width: 150 }
     ]
 });
 grid.appendTo('#Grid');
