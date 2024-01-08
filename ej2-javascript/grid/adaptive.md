@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Adaptive in ##Platform_Name## Grid control | Syncfusion
-description: Learn here all about Adaptive in Syncfusion ##Platform_Name## Grid control of Syncfusion Essential JS 2 and more.
+title: Adaptive in JavaScript Grid control | Syncfusion
+description: Learn here all about adaptive in Syncfusion JavaScript Grid control of Syncfusion Essential JS 2 and more.
 platform: ej2-javascript
 control: Adaptive 
-publishingplatform: ##Platform_Name##
+publishingplatform: JavaScript
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adaptive in ##Platform_Name## Grid control
+# Adaptive in JavaScript Grid control
 
 The Grid user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, column chooser, column menu(supports only when the `rowRenderingMode` as Horizontal) and edit dialogs adaptively and have an option to render the grid row elements in the vertical direction.
 
@@ -46,7 +46,7 @@ When we enable the [enableAdaptiveUI](../api/grid/#enableadaptiveui) property, t
 
 ## Vertical row rendering
 
-The grid will render the row elements in vertical order while setting the [`rowRenderingMode`](../api/grid/rowRenderingMode) property value as **Vertical**.
+The grid will render the row elements in vertical order while setting the [`rowRenderingMode`](../api/grid/rowRenderingDirection/) property value as **Vertical**.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -96,4 +96,4 @@ A snapshot of the adaptive grid displaying enabled paging along with a pager dro
 
 ![AdaptivePagerDropdown](./images/PagerDropdown_Adaptive.gif)
 
-> The Column Menu feature, which includes grouping, sorting, autofit, filter, and column chooser, is exclusively supported for the Grid in **Horizontal** [`rowRenderingMode`](../api/grid/rowRenderingMode).
+> The Column Menu feature, which includes grouping, sorting, autofit, filter, and column chooser, is exclusively supported for the Grid in **Horizontal** [`rowRenderingMode`](../api/grid/rowRenderingDirection/).
