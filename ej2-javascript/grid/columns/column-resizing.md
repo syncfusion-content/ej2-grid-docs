@@ -83,6 +83,10 @@ In the below code, **OrderID**, **Ship Name** and **Ship Country** columns are d
 {% previewsample "page.domainurl/code-snippet/grid/row-template-cs11" %}
 {% endif %}
 
+>* The [columns.minWidth](../../api/grid/columnDirective/#minwidth) and [columns.maxWidth](../../api/grid/columnDirective/#maxwidth) properties will be considered only when the user resizes the column. When resizing the window, these properties will not be considered. This is because columns cannot be re-rendered when resizing the window.
+>* When setting the `minWidth` and `maxWidth` properties, ensure that the values are appropriate for your data and layout requirements.
+>* The specified `minWidth` and `maxWidth` values take precedence over any user-initiated resizing attempts that fall outside the defined range.
+
 ## Prevent resizing for particular column
 
 The Grid control provides the ability to prevent resizing for a particular column. This can be useful if you want to maintain a consistent column width or prevent users from changing the width of a column.
@@ -93,27 +97,27 @@ You can disable resizing for a particular column by setting the [allowResizing](
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/row-template-resizing/index.ts %}
+{% include code-snippet/grid/row-template-prevent/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-resizing/index.html %}
+{% include code-snippet/grid/row-template-prevent/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/row-template-resizing" %}
+{% previewsample "page.domainurl/code-snippet/grid/row-template-prevent" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/row-template-resizing/index.js %}
+{% include code-snippet/grid/row-template-prevent/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-resizing/index.html %}
+{% include code-snippet/grid/row-template-prevent/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/row-template-resizing" %}
+{% previewsample "page.domainurl/code-snippet/grid/row-template-prevent" %}
 {% endif %}
 
 > You can also prevent resizing by setting `args.cancel` to **true** in the [resizeStart](../../api/grid/#resizestart) event.
@@ -151,62 +155,66 @@ In this below code, we have disabled resize for **Ship City** column.
 {% previewsample "page.domainurl/code-snippet/grid/row-template-header" %}
 {% endif %}
 
-## Column resizing externally
+## Resizing modes
 
-To resize a column, set width to that particular column and then refresh the grid header by using the [`refreshHeader()`](../../api/grid/#refreshheader) method. Please refer the below code
+The Syncfusion Grid control provides a [ResizeSettingsModel](../../api/grid/resizeSettingsModel/#resizesettingsmodel) interface for configuring the resizing behavior of grid columns. The interface includes a property named [mode](../../api/grid/resizeSettings/#mode) which is of the type [ResizeMode](../../api/grid/resizeMode). The `ResizeMode` is an enum that determines the available resizing modes for the grid columns. There are two resizing modes available for grid columns in Grid:
 
-```ts
+1. `Normal Mode`: This mode does not adjust the columns to fit the remaining space. When the sum of column width is less than the grid's width, empty space will be present to the right of the last column. When the sum of column width is greater than the grid's width, columns will overflow, and a horizontal scrollbar will appear.
 
-var grid = document.getElementById('Grid').ej2_instances[0]; //Grid Instance
+2. `Auto Mode`: This mode automatically resizes the columns to fill the remaining space. When the sum of column width is less than the grid's width, the columns will be automatically expanded to fill the empty space. Conversely, when the sum of column width is greater than the grid's width, the columns will be automatically contracted to fit within the available space.
 
-var columns = grid.columns;
-
-columns[0].width = 150;
-
-grid.refreshHeader();
-
-```
-
-## Min and max width
-
-Column resize can be restricted between minimum and maximum width by defining the [`columns->minWidth`](../../api/grid/column/#minwidth) and [`columns->maxWidth`](../../api/grid/column/#maxwidth).
-
-In the following sample, minimum and maximum width are defined for **OrderID**, **Ship Name**, and **Ship Country** columns.
+The following example demonstrates how to set the [resizeSettings.mode](/../../api/grid/resizeSettings/#mode) property to **Normal** and **Auto** on changing the dropdown value using the [change](../../api/drop-down-list/#change) event of the DropDownList control.
 
 {% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/row-template-cs11/index.ts %}
+{% include code-snippet/grid/row-template-resizing/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs11/index.html %}
+{% include code-snippet/grid/row-template-resizing/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/row-template-cs11" %}
+{% previewsample "page.domainurl/code-snippet/grid/row-template-resizing" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/row-template-cs11/index.js %}
+{% include code-snippet/grid/row-template-resizing/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/row-template-cs11/index.html %}
+{% include code-snippet/grid/row-template-resizing/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/row-template-cs11" %}
+{% previewsample "page.domainurl/code-snippet/grid/row-template-resizing" %}
 {% endif %}
 
-> The `maxWidth` and `minWidth` properties will be considered only when the user resizes the column. When resizing the window, these properties will not be considered. This is because columns cannot be re-rendered when resizing the window.
+## Touch interaction
 
-## Resize stacked column
+Grid control provides support for touch interactions to enable users to interact with the grid using their mobile devices. Users can resize columns in the grid by tapping and dragging the floating handler, and can also use the Column menu to autofit columns.
 
-Stacked columns can be resized by clicking and dragging the right edge of the stacked column header. While dragging, the width of the respective child columns will be resized at the same time. You can disable resize for any particular stacked column by setting [`allowResizing`](../../api/grid/#allowresizing) as **false** to its columns.
+**Resizing Columns on Touch Devices**
 
-In this example, we have disabled resize for **Ship City** column.
+To resize columns on a touch device:
+
+1.Tap on the right edge of the header cell of the column that you want to resize.
+
+2.A floating handler will appear over the right border of the column.
+
+3.Tap and drag the floating handler to resize the column to the desired width.
+
+The following screenshot represents the column resizing on the touch device.
+
+![Touch interaction image](../images/column-resizing.jpg)
+
+## Resizing column externally
+
+Grid provides the ability to resize columns using an external button click. This can be achieved by changing the [width](../../api/grid/columnDirective/#width) property of the column and refreshing the grid using the [refreshColumns](../../api/grid#refreshcolumns) method in the external button click function.
+
+The following example demonstrates how to resize the columns in a grid. This is done by using the [change](../../api/drop-down-list/#change) event of the DropDownList control by change the [width](../../api/grid/columnDirective/#width) property of the selected column. This is accomplished using the  [getColumnByField](../../api/grid/#getcolumnbyfield) on external button click. Then, the [refreshColumns](../..api/grid#refreshcolumns) method is called on the grid control to update the displayed columns based on user interaction.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -235,21 +243,17 @@ In this example, we have disabled resize for **Ship City** column.
 {% previewsample "page.domainurl/code-snippet/grid/row-template-cs12" %}
 {% endif %}
 
-## Touch interaction
-
-When the right edge of the header cell is tapped, a floating handler will be visible over the right border of the column. To resize the column, tap and drag the floating handler as needed. You can autoFit a column by using the Column menu of the grid.
-
-The following screenshot represents the column resizing in touch device.
-
-![Touch interaction image](../images/column-resizing.jpg)
-
 ## Resizing events
 
-During the resizing action, the grid component triggers the below three events.
+During the resizing action, the grid control triggers the below three events.
 
-1. The [`resizeStart`](../../api/grid/#resizestart) event triggers when column resize starts.
-2. The [`resizing`](../../api/grid/#resizing) event triggers when column header element is dragged (moved) continuously..
-3. The [`resizeStop`](../../api/grid/#resizestop) event triggers when column resize ends.
+1.The [resizeStart](../../api/grid/#resizestart) event triggers when column resize starts. This event can be used to perform actions when the user begins to resize a column. 
+
+2.The [resizing](../../api/grid/#resizing) event triggers when column header element is dragged (moved) continuously. This event is useful when you want to perform certain actions during the column resize process.
+
+3.The [resizeStop](../../api/grid/#resizestop) event triggers when column resize ends. This event can be used to perform actions after the column is resized.
+
+The following is an example of using the resizing events, the [resizeStart](../../api/grid/#resizestart) event is used to cancel the resizing of the **OrderID** column. The [resizeStop](../../api/grid/#resizestop) event is used to apply custom CSS attributes to the resized column.
 
 {% if page.publishingplatform == "typescript" %}
 
