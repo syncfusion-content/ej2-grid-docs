@@ -25,10 +25,10 @@ let dropDownColumn: DropDownList = new DropDownList({
   popupHeight: '240px',
   width: '120px',
   value: 'Normal',
-  change: change,
+  change: valueChange,
 });
 dropDownColumn.appendTo('#dropdownlist');
 
-function change(args: ChangeEventArgs) {
+function valueChange(args: ChangeEventArgs) {
   grid.resizeSettings.mode = args.value;
 }

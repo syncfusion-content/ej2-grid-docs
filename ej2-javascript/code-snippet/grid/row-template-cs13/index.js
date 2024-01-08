@@ -4,6 +4,7 @@ var grid = new ej.grids.Grid({
   dataSource: data,
   allowResizing: true,
   height: 315,
+  enableHover: false,
   resizeStart: resizeStart,
   resizing: resizing,
   resizeStop: resizeStop,

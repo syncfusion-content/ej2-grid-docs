@@ -11,10 +11,10 @@ let grid: Grid = new Grid({
   allowResizing: true,
   height: 315,
   columns: [
-    { field: 'OrderID', headerText: 'Order ID', width: 100 },
+    { field: 'OrderID', headerText: 'Order ID',textAlign: 'Right', width: 100 },
     { field: 'CustomerID', headerText: 'Customer ID', width: 120},
-    { field: 'ShipCity', headerText: 'Ship City', width: 100 },
-    { field: 'Freight',headerText: 'Freight', width: 80}
+    { field: 'Freight',headerText: 'Freight', width: 80},
+    { field: 'ShipCountry', headerText: 'Ship Country',textAlign: 'Right',width: 100 }
   ]
 });
 grid.appendTo('#Grid');

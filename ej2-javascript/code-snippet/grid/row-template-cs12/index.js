@@ -5,10 +5,10 @@ var grid = new ej.grids.Grid({
   allowResizing: true,
   height: 315,
   columns: [
-    { field: 'OrderID', headerText: 'Order ID', width: 100 },
+    { field: 'OrderID', headerText: 'Order ID',textAlign: 'Right', width: 100 },
     { field: 'CustomerID', headerText: 'Customer ID', width: 120},
     { field: 'Freight',headerText: 'Freight', width: 80},
-    { field: 'ShipCountry', headerText: 'Ship Country', width: 100 }
+    { field: 'ShipCountry', headerText: 'Ship Country',textAlign: 'Right',width: 100 }
   ]
 });
 grid.appendTo('#Grid');
@@ -32,7 +32,7 @@ var textbox = new ej.inputs.TextBox({
 });
 textbox.appendTo('#textboxvalue');
 
-button = new ej.buttons.Button({
+var button = new ej.buttons.Button({
   content: 'Resize',
 });
 button.appendTo('#buttons');

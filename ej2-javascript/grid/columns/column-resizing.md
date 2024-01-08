@@ -192,6 +192,8 @@ The following example demonstrates how to set the [resizeSettings.mode](/../../a
 {% previewsample "page.domainurl/code-snippet/grid/row-template-resizing" %}
 {% endif %}
 
+> When the [autoFit](../../api/grid/#autofit) property is set to **true**, the Grid will automatically adjust its column width based on the content inside them. In `normal` resize mode, if the `autoFit` property is set to **true**, the Grid will maintain any empty space that is left over after resizing the columns. However, in `auto` resize mode, the Grid will ignore any empty space.
+
 ## Touch interaction
 
 Grid control provides support for touch interactions to enable users to interact with the grid using their mobile devices. Users can resize columns in the grid by tapping and dragging the floating handler, and can also use the Column menu to autofit columns.
@@ -243,6 +245,8 @@ The following example demonstrates how to resize the columns in a grid. This is 
 {% previewsample "page.domainurl/code-snippet/grid/row-template-cs12" %}
 {% endif %}
 
+>  The [refreshColumns](../../api/grid#refreshcolumns) method is used to refresh the grid after the column widths are updated. Column resizing externally is useful when you want to provide a custom interface to the user for resizing columns.
+
 ## Resizing events
 
 During the resizing action, the grid control triggers the below three events.
@@ -281,3 +285,5 @@ The following is an example of using the resizing events, the [resizeStart](../.
 
 {% previewsample "page.domainurl/code-snippet/grid/row-template-cs13" %}
 {% endif %}
+
+>The ResizeArgs object passed to the events contains information such as the current column width, new column width, column index, and the original event. The [resizing](../../api/grid/#resizing) event is triggered multiple times during a single resize operation, so be careful when performing heavy operations in this event.
