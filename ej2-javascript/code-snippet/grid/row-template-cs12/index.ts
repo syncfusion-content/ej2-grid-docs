@@ -2,7 +2,7 @@ import { Button } from '@syncfusion/ej2-buttons';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
 import { Grid, Resize } from '@syncfusion/ej2-grids';
 import { TextBox } from '@syncfusion/ej2-inputs';
-import { data } from './data-source.ts';
+import { data } from './datasource.ts';
 
 Grid.Inject(Resize);
 
