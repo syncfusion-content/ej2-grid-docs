@@ -1,3 +1,13 @@
+var listObj = new ej.dropdowns.DropDownList({
+    //set the data to dataSource property
+    dataSource: ddlData,
+    style:"margin-top:5px",
+    index: "0",
+    width: "100",
+    change: valueChange
+});
+listObj.appendTo('#ddl');
+
 var grid = new ej.grids.Grid({
     dataSource: data,
     gridLines: 'Default',
@@ -13,4 +23,8 @@ var grid = new ej.grids.Grid({
     height: 315
 });
 grid.appendTo('#Grid');
+
+function valueChange(args) {
+    grid.textWrapSettings.wrapMode = args.value;
+}
 

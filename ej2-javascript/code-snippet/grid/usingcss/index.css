@@ -13,9 +13,8 @@
   width: 30%;
 }
 
-.custom-css {
-  background: #d7f0f4;
+.e-grid td.e-cellselectionbackground {
+  background: #9ac5ee !important;
   font-style: italic;
-  color:navy
 }
 

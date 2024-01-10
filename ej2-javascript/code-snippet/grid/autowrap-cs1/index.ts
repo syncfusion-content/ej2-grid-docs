@@ -2,6 +2,17 @@
 
 import { Grid } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
+import { DropDownList } from '@syncfusion/ej2-dropdowns';
+
+let listObj = new DropDownList({
+    //set the data to dataSource property
+    dataSource: ddlData,
+    style:"margin-top:5px",
+    index: "0",
+    width: "100",
+    change: valueChange
+});
+listObj.appendTo('#ddl');
 
 let grid: Grid = new Grid({
     dataSource: data,
@@ -19,5 +30,7 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 
-
+function valueChange(args) {
+    grid.textWrapSettings.wrapMode = args.value;
+}
 
