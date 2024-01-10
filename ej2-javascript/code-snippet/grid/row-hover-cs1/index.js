@@ -2,7 +2,7 @@ var grid = new ej.grids.Grid({
   dataSource: data,
   columns: [
     { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
-    { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
+    { field: 'CustomerID', headerText: 'Customer ID',  width: 150 },
     { field: 'ShipCity', headerText: 'ShipCity', width: 150 },
     { field: 'ShipName', headerText: 'ShipName', width: 150 }
   ]
@@ -16,9 +16,5 @@ var toggle = new ej.buttons.Switch({
 toggle.appendTo('#switch');
 
 function onSwitchChange(args) {
-  if (args.checked) {
-    grid.enableHover = true;
-  } else {
-    grid.enableHover = false;
-  }
+  grid.enableHover = args.checked
 }

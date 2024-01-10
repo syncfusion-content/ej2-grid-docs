@@ -20,9 +20,5 @@ let toggle: Switch = new Switch({
 toggle.appendTo('#switch');
 
 function onSwitchChange(args: ChangeEventArgs) {
-    if (args.checked) {
-        grid.enableHover = true;
-    } else {
-        grid.enableHover = false;
-    }
+    grid.enableHover = args.checked
 }

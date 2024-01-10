@@ -40,6 +40,6 @@ let button: Button = new Button({ content: 'Update' });
 button.appendTo('#updateButton');
 
 (document.getElementById('updateButton') as HTMLElement).addEventListener('click', function() {
-  let inputValue = parseInt((document.getElementById('frozenRows')as HTMLElement).value);
-  grid.frozenRows = inputValue;
+  let inputValue = parseInt(numeric.value);
+    grid.frozenRows = inputValue;
 });
