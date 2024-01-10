@@ -1,3 +1,9 @@
+var ddlData = [
+  { text: 'Ellipsis', value: 'Ellipsis' },
+  { text: 'Clip', value: 'Clip' },
+  { text: 'Ellipsis with Tooltip', value: 'EllipsisWithTooltip' },
+]
+
 var data=[
   {RoolNo: 1, Name:"Kia Silverbrook bookbb boookkokki",patentfamilies:4737, Country: "Australia", district: "perambalur", hometown: "perambalur", state: "perambalur",mainfields:"Printing, Digital paper, Internet, Electronics,Lab-on-a-chip, MEMS, Mechanical, VLSI"},
   {RoolNo: 2, Name:"Shunpei Yamazaki", patentfamilies:4677, Country: "Japan", district: "perambalur", hometown: "perambalur", state: "perambalur",mainfields:"Thin film transistors, Liquid crystal displays, Solar cells, Flash memory, OLED"},

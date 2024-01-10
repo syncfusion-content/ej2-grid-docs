@@ -1,3 +1,10 @@
+var ddlData = [
+    { text: 'Default', value: 'Default' },
+    { text: 'Both', value: 'Both' },
+    { text: 'Horizontal', value: 'Horizontal' },
+    { text: 'Vertical', value: 'Vertical' },
+    { text: 'None', value: 'None' },
+]
 var data = [
     {
         OrderID: 10248, CustomerID: 'VINET', EmployeeID: 5, OrderDate: new Date(8364186e5),

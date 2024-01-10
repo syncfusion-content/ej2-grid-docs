@@ -9,6 +9,12 @@ export class Book {
     public state:string;
      public mainfields:string;
 }
+
+export var ddlData: object[] = [
+  { text: 'Content', value: 'Content' },
+  { text: 'Both', value: 'Both' },
+]
+
 export var data:Book[]=[];
  data.push({RoolNo: 1, Name:"Kia Silverbrook bookbb boookkokki",patentfamilies:4737, Country: "Australia", district: "perambalur", hometown: "perambalur", state: "perambalur",mainfields:"Printing, Digital paper, Internet, Electronics,Lab-on-a-chip, MEMS, Mechanical, VLSI"});
   data.push({RoolNo: 2, Name:"Shunpei Yamazaki", patentfamilies:4677, Country: "Japan", district: "perambalur", hometown: "perambalur", state: "perambalur",mainfields:"Thin film transistors, Liquid crystal displays, Solar cells, Flash memory, OLED"});

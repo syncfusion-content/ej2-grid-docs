@@ -23,7 +23,7 @@ grid.appendTo('#Grid');
 
 function beforeRender(args) {
   // event triggered before render the tooltip on target element.
-  tooltip.content = args.target.closest("td").innerText;
+  tooltip.content = 'This is value "' + args.target.closest("td").innerText + '" ';
 }
 
 

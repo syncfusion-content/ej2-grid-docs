@@ -6,6 +6,13 @@ export class Book {
     public Country: String;
      public mainfields:string;
 }
+
+export var ddlData: any = [
+  { text: 'Ellipsis', value: 'Ellipsis' },
+  { text: 'Clip', value: 'Clip' },
+  { text: 'Ellipsis with Tooltip', value: 'EllipsisWithTooltip' },
+]
+
 export var data:Book[]=[];
  data.push({RoolNo: 1, Name:"Kia Silverbrook bookbb boookkokki",patentfamilies:4737, Country: "Australia",mainfields:"Printing, Digital paper, Internet, Electronics,Lab-on-a-chip, MEMS, Mechanical, VLSI"});
   data.push({RoolNo: 2, Name:"Shunpei Yamazaki", patentfamilies:4677, Country: "Japan",mainfields:"Thin film transistors, Liquid crystal displays, Solar cells, Flash memory, OLED"});
