@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Adaptive in JavaScript Grid control | Syncfusion
+title: Adaptive in JavaScript Grid Control | Syncfusion
 description: Learn here all about adaptive in Syncfusion Essential JavaScript Grid control, its elements and more.
 platform: ej2-javascript
 control: Adaptive 
-publishingplatform: JavaScript
+publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adaptive in JavaScript Grid control
+# Adaptive in JavaScript Grid Control
 
 The Grid user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, column chooser, column menu(supports only when the `rowRenderingMode` as Horizontal) and edit dialogs adaptively and have an option to render the grid row elements in the vertical direction.
 
@@ -90,10 +90,10 @@ The following features are only supported in vertical row rendering:
 * Infinite scroll
 * Toolbar - Options like **Add**, **Filter**, **Sort**, **Edit**, **Delete**, **Search**, and **Toolbar template** are available when their respective features are enabled. The toolbar dynamically includes a three-dotted icon, containing additional features like **ColumnChooser**, **Print**, **PdfExport**, **ExcelExport**, or **CsvExport**, once these features are enabled. Please refer to the following snapshot.
 
-![VerticalmodeColumnMenu](./images/VerticalmodeColumnMenu.gif)
+![Vertical mode column menu in JavaScript Grid.](./images/javascript-grid-vertical-mode-column-menu.gif)
 
 A snapshot of the adaptive grid displaying enabled paging along with a pager dropdown.
 
-![AdaptivePagerDropdown](./images/PagerDropdown_Adaptive.gif)
+![Adaptive pager dropdown in JavaScript Grid.](./images/javascript-grid-pager-dropdown-adaptive.gif)
 
 > The Column Menu feature, which includes grouping, sorting, autofit, filter, and column chooser, is exclusively supported for the Grid in **Horizontal** [`rowRenderingMode`](../api/grid/rowRenderingDirection/).
