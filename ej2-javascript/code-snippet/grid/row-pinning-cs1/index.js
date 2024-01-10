@@ -35,6 +35,6 @@ var button = new ej.buttons.Button({ content: 'Update' });
 button.appendTo('#updateButton');
 
 document.getElementById('updateButton').addEventListener('click', function() {
-  var inputValue = parseInt(document.getElementById('frozenRows').value);
-  grid.frozenRows = inputValue;
+  var inputValue = parseInt(numeric.value);
+    grid.frozenRows = inputValue;
 });

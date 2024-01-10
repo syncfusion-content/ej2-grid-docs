@@ -24,5 +24,5 @@ let bigHeightButton: Button = new Button({ cssClass: 'e-small' }, '#big');
 (document.getElementById('changeHeight')as HTMLElement).onclick=function(args:ClickEventArgs)
 {
  let heightRow={small: 20, medium: 40, big: 60};
-  grid.rowHeight = (heightRow)[args.target.id];
+  grid.rowHeight = (heightRow)[((args.target)as HTMLElement).id];
 }
