@@ -11,17 +11,19 @@ domainurl: ##DomainURL##
 
 # Scrolling in ##Platform_Name## Grid control
 
- The scrollbar will be displayed in the grid when content exceeds the element [`width`](../api/grid/#width) or [`height`](../api/grid/#height). The vertical and horizontal scrollbars will be displayed based on the following criteria:
+The scrolling feature in the ##Platform_Name## Grid control allows you to navigate through the content that extends beyond the visible area of the grid . It provides scrollbars that are automatically displayed when the content exceeds the specified `width` or `height` of the grid element. This feature is useful when you have a large amount of data or when the content needs to be displayed within a limited space. The vertical and horizontal scrollbars will be displayed based on the following criteria:
 
 * The vertical scrollbar appears when the total height of rows present in the grid exceeds its element height.
 * The horizontal scrollbar appears when the sum of columns width exceeds the grid element width.
-* The [`height`](../api/grid/#height) and [`width`](../api/grid/#width) are used to set the grid height and width, respectively.
+* The [height](../../api/grid/#height) and [width](../../api/grid/#width) are used to set the grid height and width, respectively.
 
-> The default value for [`height`](../api/grid/#height) and [`width`](../api/grid/#width) is `auto`.
+> The default value for `height`and `width` is `auto`.
 
 ## Set width and height
 
-To specify the [`width`](../api/grid/#width) and [`height`](../api/grid/#height) of the scroller in the pixel, set the pixel value to a number.
+The ##Platform_Name## Grid control offers a straightforward method to tailor the width and height of the scroller to meet your specific requirements. This is particularly useful when you want precise control over the dimensions of the scroller. To achieve this, you can use pixel values as numbers for the [width](../../api/grid/#width) and [height](../../api/grid/#height) properties of the Grid.
+
+In the following example, the scrollbar is enabled, and the grid's `height` is set to 315 pixels, while the `width` is set to 400 pixels:
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -52,8 +54,11 @@ To specify the [`width`](../api/grid/#width) and [`height`](../api/grid/#height)
 
 ## Responsive with parent container
 
-Specify the [`width`](../api/grid/#width) and [`height`](../api/grid/#height) as `100%` to make the grid element fill its parent container.
-Setting the [`height`](../api/grid/#height) to `100%` requires the grid parent element to have explicit height.
+The Grid control allows you to create a responsive layout by making it fill its parent container and automatically adjust its size based on the available space and changes in the container's dimensions. This capability is particularly useful for building applications that need to adapt to various screen sizes and devices.
+
+To achieve this, you need to specify the [width](../../api/grid/#width) and [height](../../api/grid/#height) properties of the Grid as 100%. However, keep in mind that setting the height property to 100% requires the Grid's parent element to have an explicit height defined.
+
+In the following example, the parent container has explicit height and width set, and the Grid container's height and width are both set to 100%. This ensures that the Grid adjusts its size responsively based on the dimensions of the parent container:
 
 {% if page.publishingplatform == "typescript" %}
 
