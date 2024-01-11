@@ -233,8 +233,6 @@ The argument passed to the [`actionFailure`](../api/grid/#actionfailure) event c
 {% include code-snippet/grid/grid-cs127/index.html %}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/grid/grid-cs127" %}
 
 > The [`actionFailure`](../api/grid/#actionfailure) event will be triggered not only for the server errors, but also when there is an exception while processing the grid actions.
 
