@@ -1,7 +1,5 @@
-import { Grid, Page } from '@syncfusion/ej2-grids';
-import { data } from './datasource';
-
-Grid.Inject(Page);
+import { Grid } from '@syncfusion/ej2-grids';
+import { data } from './datasource.ts';
 
 let grid: Grid = new Grid(
     {

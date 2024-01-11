@@ -89,7 +89,7 @@ In the following example, the parent container has explicit height and width set
 
 ## Sticky Header
 
-You can make the Grid column headers remain fixed while scrolling by using the [`enableStickyHeader`](../api/grid/#enablestickyheader) property.
+The ##Platform_Name## Grid control provides a feature that allows you to make column headers remain fixed while scrolling, ensuring they stay visible at all times. To achieve this, you can utilize the [enableStickyHeader](../../api/grid/#enablestickyheader) property by setting it to **true**.
 
 In the below demo, the Grid headers will be sticky while scrolling the Grid's parent div element.
 
@@ -122,7 +122,9 @@ In the below demo, the Grid headers will be sticky while scrolling the Grid's pa
 
 ## Scroll to selected row
 
-You can scroll the grid content to the selected row position by using the [`rowSelected`](../api/grid/#rowselected) event.
+The javascript Grid control allows you to scroll the grid content to the position of the selected row, ensuring that the selected row is automatically brought into view. This feature is particularly useful when dealing with a large dataset and wanting to maintain focus on the selected row. To achieve this, you can utilize the [rowSelected](../../api/grid/#rowselected) event provided by the Grid.
+
+The following example that demonstrates how to use the `rowSelected` event to scroll to the selected row:
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -151,11 +153,11 @@ You can scroll the grid content to the selected row position by using the [`rowS
 {% previewsample "page.domainurl/code-snippet/grid/scroll-to-select-row-cs1" %}
 {% endif %}
 
-## Hide the scrollbar when the content is not overflown
+## Hide the empty placehoder of scrollbar
 
-You can hide the scrollbar of Grid content by using the [`hideScroll`](../api/grid/#hidescroll) method when the content doesn't overflow its parent element.
+The Syncfusion Grid control provides a feature to hide the empty placeholder of the scrollbar, offering a cleaner interface without unnecessary scrollbars. To achieve this, you can utilize the [hideScroll](../../api/grid/#hidescroll) method. This method allows you to determine whether the scrollbar should be hidden based on the content's overflow.
 
-In the following sample, we have invoked the [`hideScroll`](../api/grid/#hidescroll) method inside the [`dataBound`](../api/grid/#databound) event.  
+The following example that demonstrates how to use the `hideScroll` method inside the [dataBound](../../api/grid/#databound) event:
 
 {% if page.publishingplatform == "typescript" %}
 
