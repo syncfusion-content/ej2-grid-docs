@@ -5,7 +5,7 @@ var grid = new ej.grids.Grid({
     allowExcelExport: true,
     toolbar: ['ExcelExport'],
     allowGrouping: true,
-    groupSettings: { columns: ['OrderID', 'CustomerID']};
+    groupSettings: { columns: ['OrderID', 'CustomerID']},
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
         { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
