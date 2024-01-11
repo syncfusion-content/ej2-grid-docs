@@ -66,8 +66,6 @@ The argument passed to the [`actionFailure`](../../api/grid/#actionfailure) even
 {% include code-snippet/grid/grid-cs10/index.html %}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/grid/grid-cs10" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
@@ -80,7 +78,6 @@ The argument passed to the [`actionFailure`](../../api/grid/#actionfailure) even
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/grid-cs10" %}
 {% endif %}
 
 > The [`actionFailure`](../../api/grid/#actionfailure) event will be triggered not only for the server errors, but also when there is an exception while processing the grid actions.

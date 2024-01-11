@@ -12,13 +12,13 @@ var grid = new ej.grids.Grid({
     height: 265,
     actionComplete: (args) => {
         if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
-            new DropDownList({value: args.rowData.ShipCountry, popupHeight: '300px', floatLabelType: 'Always',
-                dataSource: countryData, fields: {text: 'ShipCountry', value: 'ShipCountry'}, placeholder: 'Ship Country'}, args.form.elements.namedItem('ShipCountry') as HTMLInputElement);
+            new ej.dropdowns.DropDownList({value: args.rowData.ShipCountry, popupHeight: '300px', floatLabelType: 'Always',
+                dataSource: countryData, fields: {text: 'ShipCountry', value: 'ShipCountry'}, placeholder: 'Ship Country'}, args.form.elements.namedItem('ShipCountry'));
             // Set initail Focus
             if (args.requestType === 'beginEdit') {
-                (args.form.elements.namedItem('CustomerID')as HTMLInputElement).focus();
+                args.form.elements.namedItem('CustomerID').focus();
             } else {
-                (args.form.elements.namedItem('OrderID') as HTMLInputElement).focus();
+                args.form.elements.namedItem('OrderID').focus();
             }
         }
     }
