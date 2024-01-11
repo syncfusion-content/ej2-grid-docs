@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Column spanning in ##Platform_Name## Grid control
 
-The column spanning feature in the Syncfusion Grid allows you to merge adjacent cells horizontally, creating a visually appealing and informative layout. By defining the [colSpan](../../api/grid/queryCellInfoEventArgs/#colspan) attribute in the [QueryCellInfo](../../api/grid/queryCellInfoEventArgs) event, you can easily span cells and customize the appearance of the grid.
+The column spanning feature in the Syncfusion Grid allows you to merge adjacent cells horizontally, creating a visually appealing and informative layout. By defining the [colSpan](../../api/grid/queryCellInfoEventArgs/#colspan) attribute in the [queryCellInfo](../../api/grid/queryCellInfo) event, you can easily span cells and customize the appearance of the grid.
 
 In the following demo, Employee **Davolio** doing analysis from 9.00 AM to 10.00 AM, so that cells have spanned.
 
@@ -44,7 +44,7 @@ In the following demo, Employee **Davolio** doing analysis from 9.00 AM to 10.00
 
 ## Change the border color while column spanning
 
-You can change the border color for the spanned cells by the using [QueryCellInfo](../../api/grid/queryCellInfoEventArgs) event. This event triggers before the cell element is appended to the Grid element.
+You can change the border color for the spanned cells by the using [queryCellInfo](../../api/grid/queryCellInfo) event. This event triggers before the cell element is appended to the Grid element.
 
 {% if page.publishingplatform == "typescript" %}
 
