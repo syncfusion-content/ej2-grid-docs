@@ -18,10 +18,10 @@ You can use corresponding exporting methods and exportComplete events to get the
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/exporting-blob-data-cs2/index.ts %}
+{% include code-snippet/grid/exporting-blob-data-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/exporting-blob-data-cs2/index.html %}
+{% include code-snippet/grid/exporting-blob-data-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -31,10 +31,10 @@ You can use corresponding exporting methods and exportComplete events to get the
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/exporting-blob-data-cs2/index.js %}
+{% include code-snippet/grid/exporting-blob-data-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/exporting-blob-data-cs2/index.html %}
+{% include code-snippet/grid/exporting-blob-data-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
