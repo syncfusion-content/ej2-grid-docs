@@ -1,20 +1,33 @@
-var datePickerObj;
+
 var excelExpComplete = (args) => {
     //This event will be triggered when excel exporting.  
-    args.promise.then((e: { blobData: Blob }) => {
+    args.promise.then((e) => {
         //In this `then` function, we can get blob data through the arguments after promise resolved.           
-        console.log(e.blobData);
+        exportBlob(e.blobData)
     });
 };
 var pdfExpComplete= (args) => {
     //This event will be triggered when pdf exporting.
-    args.promise.then((e: { blobData: Blob }) => {
+    args.promise.then((e) => {
         //In this `then` function, we can get blob data through the arguments after promise resolved.                 
-        console.log(e.blobData);
+        exportBlob(e.blobData)
     });
 };
+
+var exportBlob= (blob) => {
+    let a = document.createElement('a');
+    document.body.appendChild(a);
+    a.style.display = 'none';
+    let url= window.URL.createObjectURL(blob);
+    a.href = url;
+    a.download = 'Export';
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+
 ej.grids.Grid.Inject(ej.grids.ExcelExport, ej.grids.PdfExport, ej.grids.Page, ej.grids.Toolbar);
-var grid = new ej.grids.Grid({
+var grid = new ej.grids.Grid(
     {
         dataSource: data,
         allowExcelExport: true,
@@ -33,6 +46,7 @@ var grid = new ej.grids.Grid({
         ]
     });
 grid.appendTo('#Grid');
+
 grid.toolbarClick = (args) => {
     if (args['item'].id === 'Grid_pdfexport') {
         grid.pdfExport(null, null, null, true);

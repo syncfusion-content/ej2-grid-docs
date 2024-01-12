@@ -13,9 +13,9 @@ let grid = new ej.grids.Grid({
     ],
     height: 230
 });
-grid.toolbarClick = (args: Object) => {
+grid.toolbarClick = (args) => {
     if (args['item'].id === 'Grid_excelexport') {
-        let excelExportProperties: ExcelExportProperties = {
+        let excelExportProperties = {
             fileName:"new.xlsx"
         };
         grid.excelExport(excelExportProperties);

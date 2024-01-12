@@ -1,26 +1,6 @@
-var customAggregateFn = function(data){
-
-    return ('result' in data ? ( 'records' in data.result ?
-      return data.result.records.filter((item: Object) =>
-    item['CustomerID'] === 'HANAR'
-    ).length :
-    return data.result.filter(function(item){
-    item['CustomerID'] === 'HANAR'
-    }).length)
-    :
-    ( 'items' in data ?
-    return data.items.filter(function(item){
-    item['CustomerID'] === 'HANAR'
-    }).length : 
-     return data.filter(function(item){
-    item['CustomerID'] === 'HANAR'
-     }).length)
-    )
-};
-
 ej.grids.Grid.Inject(ej.grids.Page, ej.grids.Toolbar, ej.grids.Edit, ej.grids.Group, ej.grids.Aggregate);
 
-var grid = new Grid({
+var grid = new ej.grids.Grid({
     dataSource: data,
     allowPaging:true,
     pageSettings:{pageSize:6},
@@ -36,12 +16,7 @@ var grid = new Grid({
     ],
     height: 268,
     aggregates: [{
-        columns: [{
-            type: 'Custom',
-            customAggregate: customAggregateFn,
-            columnName: 'CustomerID',
-            footerTemplate: 'HANAR Count: ${Custom}'
-        },
+        columns: [
         {
           type:'Sum',
           field:'Freight',
