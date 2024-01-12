@@ -1,30 +1,49 @@
-
-
+import { Button } from '@syncfusion/ej2-buttons';
+import { DropDownList } from '@syncfusion/ej2-dropdowns';
 import { Grid, Resize } from '@syncfusion/ej2-grids';
+import { TextBox } from '@syncfusion/ej2-inputs';
 import { data } from './datasource.ts';
 
 Grid.Inject(Resize);
 
 let grid: Grid = new Grid({
-    dataSource: data,
-    allowResizing: true,
-    columns: [
-            { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100, minWidth: 10 },
-            {
-                headerText: 'Order Details', columns: [
-                    { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', width: 125, minWidth: 10, format: 'yMd' },
-                    { field: 'Freight', headerText: 'Freight($)', textAlign: 'Right', width: 100, format: 'C2', minWidth: 10 },
-                ]
-            },
-            {
-                headerText: 'Ship Details', columns: [
-                    { field: 'ShipCity', headerText: 'Ship City', width: 100, minWidth: 10, allowResizing: false },
-                    { field: 'ShipCountry', headerText: 'Ship Country', width: 120, minWidth: 10 },
-                ]
-            }
-        ]
+  dataSource: data,
+  allowResizing: true,
+  height: 315,
+  columns: [
+    { field: 'OrderID', headerText: 'Order ID',textAlign: 'Right', width: 100 },
+    { field: 'CustomerID', headerText: 'Customer ID', width: 120},
+    { field: 'Freight',headerText: 'Freight', width: 80},
+    { field: 'ShipCountry', headerText: 'Ship Country',textAlign: 'Right',width: 100 }
+  ]
 });
 grid.appendTo('#Grid');
 
+let dropDownColumn: DropDownList = new DropDownList({
+  dataSource: [
+    { text: 'OrderID', value: 'OrderID' },
+    { text: 'CustomerID', value: 'CustomerID' },
+    { text: 'Freight', value: 'Freight' },
+    { text: 'ShipCountry', value: 'ShipCountry' }
+  ],
+  value: 'OrderID',
+  popupHeight: '240px',
+  width: '120px'
+});
+dropDownColumn.appendTo('#dropdownlist');
 
+let textbox: TextBox = new TextBox({
+  placeholder: 'Enter new width',
+  width: 140,
+});
+textbox.appendTo('#textboxvalue');
 
+let button: Button = new Button({
+  content: 'Resize',
+});
+button.appendTo('#buttons');
+
+(document.getElementById('buttons') as HTMLElement).onclick = function () {
+  grid.getColumnByField(dropDownColumn.value).width = textbox.element.value;
+  grid.refreshColumns();
+};
