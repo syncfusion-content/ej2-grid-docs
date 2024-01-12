@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 The Grid has options to group records by dragging and dropping the column header to the group drop area. When grouping is applied, grid records are organized into a hierarchical structure to facilitate easier expansion and collapse of records.
 
-To enable grouping in the grid, set the [`allowGrouping`](../../api/grid/#allowgrouping) as true. Grouping options can be configured through the [`groupSettings`](../../api/grid/groupSettings). To group, inject the [`Group`](../../api/grid/group) module in the grid.
+To enable grouping in the grid, set the [`allowGrouping`](../../api/grid/#allowgrouping) as true. Grouping options can be configured through the [`groupSettings`](../../api/grid/groupSettings/). To group, inject the [`Group`](../../api/grid/group/) module in the grid.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -244,6 +244,6 @@ The `CustomerID` column will be sorted in descending order when the grid is init
 
 ## See Also
 
-* [Exporting grouped records](../excel-export/excel-export-options/#exporting-grouped-records)
-* [How to apply formatting for the group caption template](https://www.syncfusion.com/kb/11253/how-to-apply-formatting-for-the-group-caption-template)
-* [How to hide expand/collapse icon for groups with single item](https://www.syncfusion.com/kb/11023/how-to-hide-expand-collapse-icon-for-groups-with-single-item)
+* [Exporting grouped records](../excel-export/excel-export-options#exporting-grouped-records)
+* [How to apply formatting for the group caption template](https://support.syncfusion.com/kb/article/9693/how-to-apply-formatting-for-the-group-caption-template)
+* [How to hide expand/collapse icon for groups with single item](https://support.syncfusion.com/kb/article/9582/how-to-hide-expandcollapse-icon-for-groups-with-single-item-in-javascript-grid)
