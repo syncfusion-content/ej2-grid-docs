@@ -8,7 +8,7 @@ var grid = new ej.grids.Grid({
         { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
         { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 120 },
         { field: 'ShipCity', headerText: 'Ship City', width: 150 },
-        { field: 'ShipCounry', headerText: 'Ship Counry', width: 150 },
+        { field: 'ShipCountry', headerText: 'Ship Counry', width: 150 },
         { field: 'ShipName', headerText: 'Ship Name', textAlign: 'Right', width: 150 }
     ]
 });
