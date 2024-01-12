@@ -320,7 +320,7 @@ Here is an example of how to change the header text of a column using the `getCo
 
 The [headerValueAccessor](../../api/grid/headervalueaccessor/) property in Syncfusion Grid allows you to customize the text of a column header cell, which can be useful in scenarios where you want to change the text to display it in a different language, format or add additional information to the header. This property is triggered every time the header cell is rendered.
 
-To enable the `headerValueAccessor` property, you need to set the `headerValueAccessor` property of the corresponding column. This property accepts a callback function that takes two arguments:
+To enable the `headerValueAccessor` property, you need to set the `headerValueAccessor`vgfcccccccccccccccccccccccccccccccccccc property of the corresponding column. This property accepts a callback function that takes two arguments:
 
   * **field**: Represents the current field of the column.
   * **column**: Represents the current column object.
@@ -375,7 +375,7 @@ If you want to change the header text of all columns in the grid, you can loop t
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/column-header-allcolumn" %}
+{% previewsample "page.domainurl/code-snippet/grid/ccolumn-header-allcolumn" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
