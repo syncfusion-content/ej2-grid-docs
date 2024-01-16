@@ -292,14 +292,9 @@ In this example, the format property specifies the date format as "**yyyy-MMM-dd
 
 ### Format template column value 
 
-Template columns in Grid provide a way to customize the appearance of column values using HTML templates. In addition to HTML markup, you can also use number formatting to format the value displayed in a template column. 
+In the Syncfusion ##Platform_Name## Grid, you have the ability to customize the display of data in a column through the use of template columns. Formatting template column values is essential for enhancing the visual representation of data in a web application. It allows the customization of the appearance of specific column data, such as dates and numbers, to improve readability and user understanding.
 
-```ts
- { field: 'OrderDate', headerText: 'Order Date', template: '#dateTemplate', textAlign: 'Right', width: 120 }
- <script type="text/x-template" id="dateTemplate" >
-  ${formatDate(OrderDate)}
- </script>
- ```
+To illustrate how to format a template column value, consider the following example where the **OrderDate** column is formatted to display dates in the **‘dd/MMM/yyyy’** format.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -363,9 +358,51 @@ In the below example, the **numberFormatOptions** object is used as the `format`
 
 >To learn more about custom formatting, you can refer to [Custom Date formatting](../../common/internationalization#custom-formats) and [Custom Number formatting](../../common/internationalization#custom-number-formatting-and-parsing). 
 
-## Render boolean values as checkbox
+## Align the text of content
 
-To render boolean values as checkbox in columns, you need to set [`displayAsCheckBox`](../../api/grid/column/#displayascheckbox) property as **true**.
+You can align the text in the content of a Grid column using the [textAlign](../../api/grid/column/#textalign) property. This property allows you to specify the alignment of the text within the cells of a particular column in the Grid. By default, the text is aligned to the left, but you can change the alignment by setting the value of the `textAlign` property to one of the following options:
+
+*	**Left**: Aligns the text to the left (default).
+*	**Center**: Aligns the text to the center.
+*	**Right**: Aligns the text to the right.
+*	**Justify**: Align the text to the justify.
+
+Here is an example of using the `textAlign` property to align the text of a Grid column:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs7/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs7/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs7" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs7/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs7/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs7" %}
+{% endif %}
+
+>* The `textAlign` property only changes the alignment content not the column header. If you want to align both the column header and content, you can use the [headerTextAlign](https://ej2.syncfusion.com/documentation/api/grid/column/#headerTextAlign) property.
+
+## Render boolean value as checkbox
+
+The Grid control allows you to render boolean values as checkboxes in columns. This can be achieved by using the [displayAsCheckBox](../../api/grid/column/#displayascheckbox) property, which is available in the [columns](../..api/grid/column/). This property is useful when you have a boolean column in your Grid and you want to display the values as checkboxes instead of the default text representation of **true** or **false**.
+
+To enable the rendering of boolean values as checkboxes, you need to set the `displayAsCheckBox` property of the `columns` to **true**.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -392,6 +429,149 @@ To render boolean values as checkbox in columns, you need to set [`displayAsChec
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs5" %}
+{% endif %}
+
+>* The `displayAsCheckBox` property is only applicable to boolean values in Grid columns.
+>* When `displayAsCheckBox` is set to **true**, the boolean values will be rendered as checkboxes in the Grid column, with checked state indicating **true** and unchecked state indicating **false**.
+
+## How to prevent checkbox in the blank row
+
+To prevent the checkbox in the blank row of the Grid, even if the [displayAsCheckBox](../../api/grid/column/#displayascheckbox) property is set to true for that column, you can use the [rowDataBound](../../api/grid/#rowdatabound) event and check for empty or null values in the row data. If all the values in the row are empty or null, you can set the inner HTML of the corresponding cell to an empty string to hide the checkbox.
+
+Here is an example of how you can prevent a checkbox from being displayed in a blank row in a Grid:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/blank-row-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/blank-row-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/blank-row-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/blank-row-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/blank-row-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/blank-row-cs1" %}
+{% endif %}
+
+## AutoFit columns
+
+The Grid has a feature that allows to automatically adjust column widths based on the maximum content width of each column when you double-click on the resizer symbol located in a specific column header. This feature ensures that all data in the grid rows is displayed without wrapping. To use this feature, you need to inject the **Resize** module in the grid. and enable the resizer symbol in the column header by setting the [allowResizing](../../api/grid/#allowresizing) property to true in the grid.
+
+### Resizing a column to fit its content using autoFit method
+
+The [autoFitColumns](../../api/grid/#autofitcolumns) method resizes the column to fit the widest cell's content without wrapping. You can autofit specific columns at initial rendering by invoking the `autoFitColumns` method in [dataBound](../../api/grid/#databound) event.
+
+To use `autoFitColumns` method, inject the **Resize** module in the grid.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/autofit-columns-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/autofit-columns-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/autofit-columns-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/autofit-columns-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/autofit-columns-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/autofit-columns-cs1" %}
+{% endif %}
+
+> You can autofit all the columns by invoking the `autoFitColumns` method without specifying column names.
+
+### AutoFit columns with empty space
+
+The Autofit feature is utilized to display columns in a grid based on the defined width specified in the columns declaration. If the total width of the columns is less than the width of the grid, this means that white space will be displayed in the grid instead of the columns auto-adjusting to fill the entire grid width.
+
+You can enable this feature by setting the [autoFit](../../api/grid/#autofit) property set to **true**. This feature ensures that the column width is rendered only as defined in the Grid column definition.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/autofit-columns-cs3/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/autofit-columns-cs3/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/autofit-columns-cs3" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/autofit-columns-cs3/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/autofit-columns-cs3/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/autofit-columns-cs3" %}
+{% endif %}
+
+> If any one of the column width is undefined, then the particular column will automatically adjust to fill the entire width of the grid table, even if you have enabled the `autoFit` property of grid.
+
+### AutoFit columns when changing column visibility using column chooser
+
+In Syncfusion Grid, you can auto-fit columns when the column visibility is changed using the column chooser. This can be achieved by calling the [autoFitColumns](../../api/grid/#autofitcolumns) method in the [actionComplete](../../api/grid/#actioncomplete) event. By using the **requestType** property in the event arguments, you can differentiate between different actions, and then call the `autoFitColumns` method when the request type is **columnState**.
+
+Here's an example code snippet in ##Platform_Name## that demonstrates how to auto fit columns when changing column visibility using column chooser:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/autofit-columns-cs4/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/autofit-columns-cs4/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/autofit-columns-cs4" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/autofit-columns-cs4/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/autofit-columns-cs4/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/autofit-columns-cs4" %}
 {% endif %}
 
 ## Visibility
@@ -662,38 +842,6 @@ Grid column supports the following alignments:
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs7" %}
 {% endif %}
 
-## How to prevent checkbox in the blank row
-
-By default, cells in the grid will be blank if the corresponding column values in the data source are null or undefined. The grid also has the option to prevent the rendering of checkboxes in such cases, even if the [displayAsCheckBox](../../api/grid/column/#displayascheckbox) property is set to true for that column, by using the [rowDataBound](../../api/grid/#rowdatabound) event of the Grid.
-
-In the following sample, the `rowDataBound` event of the Grid is used to set the innerHTML of the checkbox element to empty.
-
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/blank-row-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/blank-row-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/grid/blank-row-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/blank-row-cs1/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/blank-row-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/grid/blank-row-cs1" %}
-{% endif %}
 
 ## See Also
 

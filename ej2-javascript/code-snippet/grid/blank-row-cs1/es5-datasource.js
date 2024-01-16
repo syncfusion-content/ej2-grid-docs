@@ -15,6 +15,16 @@ var data = [
         ShipRegion: 'RJ', ShipPostalCode: '05454-876', ShipCountry: 'Brazil', Freight: 65.83, Verified: !0
     },
     {
+        OrderID: null, CustomerID: null, EmployeeID: null, OrderDate: null,
+        ShipName: null, ShipCity: null, ShipAddress: null,
+        ShipRegion: null, ShipPostalCode: null, ShipCountry: null, Freight: null, Verified: null
+    },
+    {
+        OrderID: null, CustomerID: null, EmployeeID: null, OrderDate: null,
+        ShipName: null, ShipCity: null, ShipAddress: null,
+        ShipRegion: null, ShipPostalCode: null, ShipCountry: null, Freight: null, Verified: null
+    },
+    {
         OrderID: 10251, CustomerID: 'VICTE', EmployeeID: 3, OrderDate: new Date(8367642e5),
         ShipName: 'Victuailles en stock', ShipCity: 'Lyon', ShipAddress: '2, rue du Commerce',
         ShipRegion: 'CJ', ShipPostalCode: '69004', ShipCountry: 'France', Freight: 41.34, Verified: !0
@@ -38,16 +48,6 @@ var data = [
         OrderID: 10255, CustomerID: 'RICSU', EmployeeID: 9, OrderDate: new Date(8371098e5),
         ShipName: 'Richter Supermarkt', ShipCity: 'Genève', ShipAddress: 'Starenweg 5',
         ShipRegion: 'CJ', ShipPostalCode: '1204', ShipCountry: 'Switzerland', Freight: 148.33, Verified: !0
-    },
-    {
-        OrderID: null, CustomerID: null, EmployeeID: null, OrderDate: null,
-        ShipName: null, ShipCity: null, ShipAddress: null,
-        ShipRegion: null, ShipPostalCode: null, ShipCountry: null, Freight: null, Verified: null
-    },
-    {
-        OrderID: null, CustomerID: '', EmployeeID: null, OrderDate: null,
-        ShipName: null, ShipCity: null, ShipAddress: null,
-        ShipRegion: null, ShipPostalCode: null, ShipCountry: null, Freight: null, Verified: null
     },
     {
         OrderID: 10256, CustomerID: 'WELLI', EmployeeID: 3, OrderDate: new Date(837369e6),
