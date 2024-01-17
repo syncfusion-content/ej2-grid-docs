@@ -11,14 +11,14 @@ domainurl: ##DomainURL##
 
 # Data binding in ##Platform_Name## Grid control
 
-The Grid uses [`DataManager`](../../data), which supports both RESTful JSON data services binding and local JavaScript object array binding. The [`dataSource`](../../api/grid/#datasource) property can be assigned either with the instance of [`DataManager`](../../data) or JavaScript object array collection.
+The Grid uses [DataManager](../../data), which supports both RESTful JSON data services binding and local JavaScript object array binding. The [dataSource](../../api/grid/#datasource) property can be assigned either with the instance of [DataManager](../../data) or JavaScript object array collection.
 It supports two kinds of data binding method:
 * Local data
 * Remote data
 
 ## Sending additional parameters to the server
 
-To add a custom parameter to the data request, use the **addParams** method of **Query** class. Assign the **Query** object with additional parameters to the grid [`query`](../../api/grid/#query) property.
+To add a custom parameter to the data request, use the **addParams** method of **Query** class. Assign the **Query** object with additional parameters to the grid [query](../../api/grid/#query) property.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -47,44 +47,20 @@ To add a custom parameter to the data request, use the **addParams** method of *
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs9" %}
 {% endif %}
 
-> The parameters added using the [`query`](../../api/grid/#query) property will be sent along with the data request for every grid action.
+> The parameters added using the [query](../../api/grid/#query) property will be sent along with the data request for every grid action.
 
 ## Handling HTTP error
 
 During server interaction from the grid, some server-side exceptions may occur, and you can acquire those error messages or exception details
-in client-side using the [`actionFailure`](../../api/grid/#actionfailure) event.
+in client-side using the [actionFailure](../../api/grid/#actionfailure) event.
 
-The argument passed to the [`actionFailure`](../../api/grid/#actionfailure) event contains the error details returned from the server.
+The argument passed to the [actionFailure](../../api/grid/#actionfailure) event contains the error details returned from the server.
 
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/grid-cs10/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs10/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/grid-cs10/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs10/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% endif %}
-
-> The [`actionFailure`](../../api/grid/#actionfailure) event will be triggered not only for the server errors, but also when there is an exception while processing the grid actions.
+> The [actionFailure](../../api/grid/#actionfailure) event will be triggered not only for the server errors, but also when there is an exception while processing the grid actions.
 
 ## Binding with ajax
 
-You can use Grid [`dataSource`](../../api/grid/#datasource) property to bind the datasource to Grid from external ajax request. In the below code we have fetched the datasource from the server with the help of ajax request and provided that to [`dataSource`](../../api/grid/#datasource) property by using **onSuccess** event of the ajax.
+You can use Grid [dataSource](../../api/grid/#datasource) property to bind the datasource to Grid from external ajax request. In the below code we have fetched the datasource from the server with the help of ajax request and provided that to [dataSource](../../api/grid/#datasource) property by using **onSuccess** event of the ajax.
 
 ```ts
 import { Grid, Page } from '@syncfusion/ej2-grids';
