@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Adaptive in JavaScript Grid Control | Syncfusion
-description: Learn here all about adaptive in Syncfusion Essential JavaScript Grid control, its elements and more.
+title: Adaptive in ##Platform_Name## Grid Control | Syncfusion
+description: Learn here all about adaptive in Syncfusion Essential ##Platform_Name## Grid control, its elements and more.
 platform: ej2-javascript
 control: Adaptive 
 publishingplatform: ##Platform_Name##
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adaptive in JavaScript Grid Control
+# Adaptive in ##Platform_Name## Grid Control
 
 The Grid user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, column chooser, column menu(supports only when the `rowRenderingMode` as Horizontal) and edit dialogs adaptively and have an option to render the grid row elements in the vertical direction.
 
