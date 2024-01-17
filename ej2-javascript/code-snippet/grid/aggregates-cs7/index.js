@@ -1,15 +1,6 @@
 ej.grids.Grid.Inject(ej.grids.Page, ej.grids.Toolbar, ej.grids.Edit, ej.grids.Aggregate);
-var customAggregateFn = function(data){
-    return ('result' in data ?
-   return data.result.filter(function(item){
-    item['CustomerID'] === 'HANAR'
-   }).length: 
-    return data.filter(function(item){
-    item['CustomerID'] === 'HANAR'
-    }).length)
-}
-var window['selectedRecord']={};
-var grid = new Grid({
+
+var grid = new ej.grids.Grid({
     dataSource: data,
     allowPaging:true,
     pageSettings:{pageSize:7},
@@ -40,7 +31,7 @@ var grid = new Grid({
 });
 grid.appendTo('#Grid');
 
-function funChange(args:any):void{
+function funChange(args){
  let gridObj = document.getElementById('Grid')['ej2_instances'][0];
  selectedRecords['Freight'] = args.value; // Set the edited value to aggregate column                 
  gridObj.aggregateModule.refresh(selectedRecords) // Refresh aggregates using edited data          
