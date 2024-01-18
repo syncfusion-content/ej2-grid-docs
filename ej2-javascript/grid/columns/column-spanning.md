@@ -72,3 +72,10 @@ You can change the border color for the spanned cells by the using [queryCellInf
 
 {% previewsample "page.domainurl/code-snippet/grid/column-spanning-cs3" %}
 {% endif %}
+
+## Limitations
+
+* Column spanning is not compatible with the following features:
+    1. Virtual scrolling
+    2. Infinite scrolling
+    3. Lazy load grouping
