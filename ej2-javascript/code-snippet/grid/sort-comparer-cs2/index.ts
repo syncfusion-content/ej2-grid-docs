@@ -1,5 +1,3 @@
-
-
 import { Grid, Sort } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
@@ -21,15 +19,11 @@ let grid: Grid = new Grid({
     dataSource: data,
     allowSorting: true,
     columns: [
-                { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
-                { field: 'CustomerID', sortComparer: sortComparer, width: 140, headerText: 'Customer ID' },
-                { field: 'Freight', textAlign: 'Right', width: 120, format: 'C2' },
-                { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', width: 140, format: 'yMd' }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+        { field: 'CustomerID', sortComparer: sortComparer, width: 100, headerText: 'Customer ID' },
+        { field: 'Freight', textAlign: 'Right', width: 80, format: 'C2' },
+        { field: 'ShipName', headerText: 'Ship Name', width: 120 }
     ],
     height: 315
 });
-
 grid.appendTo('#Grid');
-
-
-
