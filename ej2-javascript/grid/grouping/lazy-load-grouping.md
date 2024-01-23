@@ -143,6 +143,43 @@ This is demonstrated in the following sample:
 
 > The Grid also supports the lazy load grouping with [virtualization](https://ej2.syncfusion.com/documentation/grid/virtual-scroll/)(virtual scrolling).
 
+## Lazy load grouping with custom binding
+
+Lazy load grouping with custom binding feature in the React Grid allows to efficiently handle large datasets, improve the performance and reduce the initial load time. Custom binding allows you to handle data processing externally and then bind the resulting data to the Grid. This help you to provide your own custom data logic. For grid actions such as paging, grouping, sorting etc, the [dataStateChange](https://ej2.syncfusion.com/documentation/api/grid/#datastatechange) event will be invoked. This event is responsible for managing changes in the data state, allowing you to implement custom logic.
+
+When you enable the lazy loading grouping with custom binding, the Grid will display only the initial level caption rows in a collapsed state during grouping. The child rows associated with each caption will be retrieved on demand and rendered in the Grid when you expand the corresponding caption row.
+
+To enable this feature, you need to set the [groupSettings.enableLazyLoading](https://ej2.syncfusion.com/documentation/api/grid/groupSettings/#enableLazyLoading) property to **true**.
+
+The following example demonstrates how to enable the lazy load grouping with custom binding feature using the `groupSettings.enableLazyLoading` property. You can use `onDemandGroupInfo` property. This property allows to the details of expanded caption row grouping of the child records.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/lazy-load-group-cs3/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/lazy-load-group-cs3/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/lazy-load-group-cs3" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/lazy-load-group-cs3/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/lazy-load-group-cs3/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/lazy-load-group-cs3" %}
+{% endif %}
+
 ## Limitations for lazy load grouping
 
 * Due to the element height limitation in browsers, the maximum number of records loaded by the grid is limited due to the browser capability.
