@@ -92,33 +92,33 @@ To enable cache mode, you need to define [enableCache](../../api/grid/infiniteSc
 
 To enable maximum blocks, you need to define `maxBlocks` count of [infiniteScrollSettings](../../api/grid/infiniteScrollSettings), By default this property value is 3.
 
-The following example that demonstrates how to enable/disable cache mode in infinite scrolling of the grid based on a [Switch](../../switch/getting-started) control[change](../../api/switch#change) event :
+The following example that demonstrates how to enable/disable cache mode in infinite scrolling of the grid based on a [Switch](../../switch/getting-started) control [change](../../api/switch#change) event :
 
 {% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/grid-cs114/index.ts %}
+{% include code-snippet/grid/grid-cs115/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs114/index.html %}
+{% include code-snippet/grid/grid-cs115/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/grid-cs114" %}
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs115" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/grid-cs114/index.js %}
+{% include code-snippet/grid/grid-cs115/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs114/index.html %}
+{% include code-snippet/grid/grid-cs115/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/grid-cs114" %}
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs115" %}
 {% endif %}
 
 ## Limitations
@@ -141,5 +141,3 @@ The following example that demonstrates how to enable/disable cache mode in infi
     7. Column virtual scrolling
     8. Detail template
     9. Hierarchy features
-
-
