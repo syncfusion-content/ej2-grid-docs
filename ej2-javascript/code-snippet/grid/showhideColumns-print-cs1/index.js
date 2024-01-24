@@ -9,7 +9,7 @@ var grid= new ej.grids.Grid({
             { field: 'ShipCity', headerText: 'Ship City', width: 150 },
             { field: 'ShipName', headerText: 'Ship Name', width: 150 }
         ],
-        pageSettings: { pageSizes: true, pageSize: 6 },
+        pageSettings: { pageSize: 6 },
 
         toolbarClick : function() {
     for (var i = 0; i < this.columns.length; i++) {
@@ -33,5 +33,3 @@ var grid= new ej.grids.Grid({
     }
 });
 grid.appendTo('#Grid');
-
-

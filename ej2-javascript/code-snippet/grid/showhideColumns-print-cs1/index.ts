@@ -1,9 +1,7 @@
+import { Grid, Toolbar, Page, ClickEventArgs } from '@syncfusion/ej2-grids';
+import { data } from './datasource.ts';
 
-
-import { Grid, DetailRow, Toolbar, Page } from '@syncfusion/ej2-grids';
-import { data, employeeData } from './datasource.ts';
-
-Grid.Inject(DetailRow, Toolbar, Page);
+Grid.Inject( Toolbar, Page);
 
 let grid: Grid = new Grid({
     dataSource: data,
@@ -15,9 +13,9 @@ let grid: Grid = new Grid({
             { field: 'ShipCity', headerText: 'Ship City', width: 150 },
             { field: 'ShipName', headerText: 'Ship Name', width: 150 }
         ],
-        pageSettings: { pageSizes: true, pageSize: 6 },
+        pageSettings: { pageSize: 6 },
 
-        toolbarClick: function(args) {
+        toolbarClick: function(args:ClickEventArgs) {
             for (var i = 0; i < this.columns.length; i++) {
                 if (this.columns[i].field == "CustomerID") {
                     this.columns[i].visible = true;
@@ -39,6 +37,3 @@ let grid: Grid = new Grid({
     }
 });
 grid.appendTo('#Grid');
-
-
-
