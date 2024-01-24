@@ -75,6 +75,7 @@ You can change the border color for the spanned cells by the using [queryCellInf
 
 ## Limitations
 
+* The [updateCell](../../api/grid/#updatecell) method does not support column spanning.
 * Column spanning is not compatible with the following features:
     1. Virtual scrolling
     2. Infinite scrolling
