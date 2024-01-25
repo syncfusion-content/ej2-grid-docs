@@ -1,29 +1,25 @@
 var grid = new ej.grids.Grid({
     dataSource: data,
-    enableHover: false,
-    allowSelection: false,
+    height: '315',
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100 },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
-        { field: 'OrderDate', headerText: 'Order Date', width: 100, format: 'yMd'},
-        { field: 'Freight', headerText: 'Freight', width: 100, format: 'C2'},
-        { field: 'ShipCity', headerText: 'Ship City', width: 100 },
-    ],
-    height: 315,
-    queryCellInfo: customiseCell
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 140 },
+        { field: 'CustomerID', headerText: '<strong> Customer ID </strong>', width: 120 },
+        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', format: 'C2', width: 80 },
+        { field: 'ShipCity', headerText: 'Ship City', width: 130 }
+    ]
 });
 grid.appendTo('#Grid');
 
-function customiseCell(args) {
-    if(args.column.field === 'Freight') {
-        if (args.data['Freight'] < 30){
-            args.cell.classList.add('below-30');
-        } else if(args.data['Freight'] < 80 ) {
-            args.cell.classList.add('below-80');
-        } else {
-            args.cell.classList.add('above-80');
-        }
+var switchObj = new ej.buttons.Switch({
+    change: change,
+});
+switchObj.appendTo('#switch');
+
+function change(args) {
+    if (args.checked) {
+        grid.getColumnByField('CustomerID').disableHtmlEncode = false;
+    } else {
+        grid.getColumnByField('CustomerID').disableHtmlEncode = true;
     }
+    grid.refreshColumns();
 }
-
-
