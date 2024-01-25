@@ -1,0 +1,21 @@
+#container {
+    visibility: hidden;
+}
+
+#loader {
+  color: #008cff;
+  font-family: 'Helvetica Neue','calibiri';
+  font-size: 14px;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+
+.e-row[aria-selected="true"] .e-customizedexpandcell {
+  background-color: #e0e0e0;
+}
+.e-grid.e-gridhover tr[role='row']:hover {
+  background-color: #eee;
+}
