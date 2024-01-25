@@ -46,7 +46,7 @@ When we enable the [enableAdaptiveUI](../api/grid/#enableadaptiveui) property, t
 
 ## Vertical row rendering
 
-The grid will render the row elements in vertical order while setting the [`rowRenderingMode`](../api/grid/rowRenderingDirection/) property value as **Vertical**.
+The grid will render the row elements in vertical order while setting the [`rowRenderingMode`](../api/grid/rowRenderingMode/) property value as **Vertical**.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -96,4 +96,4 @@ A snapshot of the adaptive grid displaying enabled paging along with a pager dro
 
 ![Adaptive pager dropdown in JavaScript Grid.](./images/javascript-grid-pager-dropdown-adaptive.gif)
 
-> The Column Menu feature, which includes grouping, sorting, autofit, filter, and column chooser, is exclusively supported for the Grid in **Horizontal** [`rowRenderingMode`](../api/grid/rowRenderingDirection/).
+> The Column Menu feature, which includes grouping, sorting, autofit, filter, and column chooser, is exclusively supported for the Grid in **Horizontal** [`rowRenderingMode`](../api/grid/rowRenderingMode/).
