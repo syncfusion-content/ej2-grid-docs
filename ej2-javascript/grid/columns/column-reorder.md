@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 Reordering can be done by drag and drop of a particular column header from one index to another index within the grid. To enable reordering, set the [`allowReordering`](../../api/grid/#allowreordering) to true.
 
-To use reordering, inject the [`Reorder`](../../api/grid/reorder) module in the grid.
+To use reordering, inject the [`Reorder`](../../api/grid/reorder/) module in the grid.
 
 {% if page.publishingplatform == "typescript" %}
 

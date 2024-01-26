@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Excel like filter in ##Platform_Name## Grid control
 
-You can enable Excel like filter by defining. [filterSettings.type](../../api/grid/filterSettings#type) as `Excel`.The excel menu contains an option such as Sorting, Clear filter, Sub menu for advanced filtering.
+You can enable Excel like filter by defining. [filterSettings.type](../../api/grid/filterSettings/#type) as `Excel`.The excel menu contains an option such as Sorting, Clear filter, Sub menu for advanced filtering.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -55,13 +55,13 @@ function actionBegin(args: FilterSearchBeginEventArgs) {
 
 The Excel/Checkbox filter type of Grid has a restriction where only the first 1000 unique sorted items are accessible to view in the filter dialog checkbox list content by scrolling. This limitation is in place to avoid any rendering delays when opening the filter dialog. However, the searching and filtering processes consider all unique items in that particular column.
 
-The Excel/Checkbox filter in the Grid provides an option to load large data sets on-demand during scrolling to improve scrolling limitation functionality. This is achieved by setting the [filterSettings.enableInfiniteScrolling](../../api/grid/filterSettings#enableInfiniteScrolling) property to **true**. This feature proves especially beneficial for managing extensive datasets, enhancing data loading performance in the checkbox list, and allowing interactive checkbox selection with persistence for the selection based on filtering criteria.
+The Excel/Checkbox filter in the Grid provides an option to load large data sets on-demand during scrolling to improve scrolling limitation functionality. This is achieved by setting the [filterSettings.enableInfiniteScrolling](../../api/grid/filterSettings/#enableInfiniteScrolling) property to **true**. This feature proves especially beneficial for managing extensive datasets, enhancing data loading performance in the checkbox list, and allowing interactive checkbox selection with persistence for the selection based on filtering criteria.
 
-The Excel/Checkbox filter retrieves distinct data in ascending order, governed by its [filterSettings.itemsCount](../../api/grid/filterSettings#itemsCount) property, with a default value of **50**. As the checkbox list data scroller reaches its end, the next dataset is fetched and displayed, with the notable advantage that this process only requests new checkbox list data without redundantly fetching the existing loaded dataset.
+The Excel/Checkbox filter retrieves distinct data in ascending order, governed by its [filterSettings.itemsCount](../../api/grid/filterSettings/#itemsCount) property, with a default value of **50**. As the checkbox list data scroller reaches its end, the next dataset is fetched and displayed, with the notable advantage that this process only requests new checkbox list data without redundantly fetching the existing loaded dataset.
 
 ### Customize the items count for initial rendering
 
-Based on the items count value, the Excel/Checkbox filter gets unique data and displayed in Excel/Checkbox filter content dialog. You can customize the count of on-demand data rendering for Excel/Checkbox filter by adjusting the [filterSettings.itemsCount](../../api/grid/filterSettings#itemsCount) property. The default value is `50`
+Based on the items count value, the Excel/Checkbox filter gets unique data and displayed in Excel/Checkbox filter content dialog. You can customize the count of on-demand data rendering for Excel/Checkbox filter by adjusting the [filterSettings.itemsCount](../../api/grid/filterSettings/#itemsCount) property. The default value is `50`
 
 ```ts
 grid.filterSettings = { enableInfiniteScrolling = true, itemsCount = 40 };
@@ -108,4 +108,4 @@ In the provided example, On-Demand Excel filter has been enabled for the ##Platf
 
 ## See also
 
-* [How to perform filter by using Wildcard and LIKE operator filter](./filtering/#wildcard-and-like-operator-filter)
+* [How to perform filter by using Wildcard and LIKE operator filter](./filtering#wildcard-and-like-operator-filter)
