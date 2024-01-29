@@ -1,4 +1,5 @@
-var countryData = ej.data.DataUtil.distinct(data, 'ShipCountry', true);
+var shipCountryData = ej.data.DataUtil.distinct(data, 'ShipCountry', true);
+var shipCityData = ej.data.DataUtil.distinct(data, 'ShipCity', true)
 ej.grids.Grid.Inject(ej.grids.Toolbar, ej.grids.Edit);
 var grid = new ej.grids.Grid({
   dataSource: data,
@@ -20,12 +21,29 @@ var grid = new ej.grids.Grid({
         { value: args.rowData.ShipCountry, 
           popupHeight: '300px', 
           floatLabelType: 'Always', 
-          dataSource: countryData,
+          dataSource: shipCountryData,
           fields: { text: 'ShipCountry', value: 'ShipCountry' },
-          placeholder: 'Ship Country',
+          placeholder: 'Ship Country'
         },
         args.form.elements.namedItem('ShipCountry')
       );
+      var numeric = new ej.inputs.NumericTextBox({
+        // sets value to the NumericTextBox
+        floatLabelType: 'Always',
+        placeholder: 'Freight'
+      });
+      numeric.appendTo('#Freight');
+      new ej.dropdowns.DropDownList(
+        {
+          value: args.rowData.ShipCity,
+          popupHeight: '300px',
+          floatLabelType: 'Always',
+          dataSource: shipCityData,
+          fields: { text: 'ShipCity', value: 'ShipCity' },
+          placeholder: 'Ship City'
+        },
+        args.form.elements.namedItem('ShipCity')
+        );
       new ej.buttons.CheckBox(
         { label: 'Verified',
           checked: args.rowData.Verified,
