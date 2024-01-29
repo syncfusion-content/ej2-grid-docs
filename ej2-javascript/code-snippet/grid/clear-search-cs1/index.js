@@ -12,7 +12,7 @@ var grid = new ej.grids.Grid({
 });
 grid.appendTo('#Grid');
 
-let clearBtn: Button = new Button();
+let clearBtn = new ej.buttons.Button();
 clearBtn.appendTo('#clear');
 
 document.getElementById('clear').addEventListener('click', () => {
