@@ -15,9 +15,9 @@ In ##Platform_Name##, lazy loading refers to the technique of loading data dynam
 
 Lazy load grouping in Syncfusion Grid allows you to load and display grouped data efficiently by fetching only the required data on demand. This feature is useful when dealing with large datasets where loading all the data at once might affect performance. The Grid will render only the initial level caption rows in the collapsed state at grouping. The child rows of each caption will be fetched in on demand and render in the Grid when you expand the caption row.
 
-To enable this feature, need to set the [groupSettings.enableLazyLoading](../../api/grid/groupSettings/#enableLazyLoading) property to **true**.
+To enable this feature, need to set the [groupSettings->enableLazyLoading](../../api/grid/groupSettings/#enableLazyLoading) property to **true**.
 
-The following example demonstrates how to enable the lazy load grouping feature by setting `groupSettings.enableLazyLoading` property.
+The following example demonstrates how to enable the lazy load grouping feature by setting `groupSettings->enableLazyLoading` property.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -123,9 +123,9 @@ Lazy loading grouping with infinite scrolling is a valuable feature in scenarios
 
 3. Infinite scrolling enables the Grid to load additional data as the user scrolls to the end of the scrollbar.
 
-To enable this feature, you need to set the [groupSettings.enableLazyLoading](../../api/grid/groupSettings/#enableLazyLoading) and [enableInfiniteScrolling](../../api/grid/#enableinfinitescrolling) properties to **true**.
+To enable this feature, you need to set the [groupSettings->enableLazyLoading](../../api/grid/groupSettings/#enableLazyLoading) and [enableInfiniteScrolling](../../api/grid/#enableinfinitescrolling) properties to **true**.
 
-The following example demonstrates how to enable the lazy load grouping with infinite scrolling feature using the `groupSettings.enableLazyLoading` and `enableInfiniteScrolling` properties.
+The following example demonstrates how to enable the lazy load grouping with infinite scrolling feature using the `groupSettings->enableLazyLoading` and `enableInfiniteScrolling` properties.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -169,7 +169,7 @@ The lazy load grouping with virtual scrolling feature in the Syncfusion ##Platfo
 
 3. Virtual scrolling allows the Grid to load and display a buffered set of records while scrolling vertically.
 
-To enable this feature, you need to set the [groupSettings.enableLazyLoading](../../api/grid/groupSettings/#enableLazyLoading) and [enableVirtualization](../../api/grid/#enablevirtualization) properties to **true**.
+To enable this feature, you need to set the [groupSettings->enableLazyLoading](../../api/grid/groupSettings/#enableLazyLoading) and [enableVirtualization](../../api/grid/#enablevirtualization) properties to **true**.
 
 The following example demonstrates how to enable the lazy load grouping with virtual scrolling feature using the `groupSettings.enableLazyLoading` and `enableVirtualization` properties.
 

@@ -1,4 +1,4 @@
-ej.grids.Grid.Inject(ej.grids.Page, ej.grids.Group, ej.grids.LazyLoadGroup, ej.grids.VirtualScroll);
+ej.grids.Grid.Inject(ej.grids.Group, ej.grids.LazyLoadGroup, ej.grids.VirtualScroll);
 var grid = new ej.grids.Grid({
     dataSource: data,
     enableVirtualization: true,
