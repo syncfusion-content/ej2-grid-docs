@@ -8,7 +8,7 @@ let grid: Grid = new Grid({
     dataSource: data,
     allowGrouping: true,
     dataBound: dataBound,
-    groupSettings: {  captionTemplate: '#captiontemplate' },
+    groupSettings: {  captionTemplate: '#groupSettingsCaptionTemplate' },
     columns: [
         { field: 'OrderID', headerText: 'ID',textAlign: 'Right',width: 90 },
         { field: 'CustomerID', headerText: 'Name',width: 100 },
@@ -21,9 +21,9 @@ grid.appendTo('#Grid');
 
 function dataBound()
 {
-    let groupCations = document.getElementsByClassName('groupChip');
-    for (let i = 0; i < groupCations.length; i++) {
+    let groupCaptions = document.getElementsByClassName('chip');
+    for (let i = 0; i < groupCaptions.length; i++) {
       let chip = new ChipList({});
-      chip.appendTo(groupCations[i] as HTMLElement);
+      chip.appendTo(groupCaptions[i] as HTMLElement);
     }
 }

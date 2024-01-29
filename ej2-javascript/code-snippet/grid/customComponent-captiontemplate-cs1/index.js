@@ -3,7 +3,7 @@ var grid = new ej.grids.Grid({
   dataSource: data,
   dataBound: dataBound,
   allowGrouping: true,
-  groupSettings: { captionTemplate: '#captiontemplate'},
+  groupSettings: { captionTemplate: '#groupSettingsCaptionTemplate'},
   columns: [
     { field: 'OrderID', headerText: 'ID',textAlign: 'Right',width: 90},
     { field: 'CustomerID', headerText: 'Name', width: 100 },
@@ -15,9 +15,9 @@ var grid = new ej.grids.Grid({
 grid.appendTo('#Grid');
 
 function dataBound(){
-  var groupCations = document.getElementsByClassName('groupChip');
-  for (var i = 0; i < groupCations.length; i++) {
+  var groupCaptions = document.getElementsByClassName('chip');
+  for (var i = 0; i < groupCaptions.length; i++) {
     var chip = new ej.buttons.ChipList({});
-    chip.appendTo(groupCations[i]);
+    chip.appendTo(groupCaptions[i]);
   }
 }
