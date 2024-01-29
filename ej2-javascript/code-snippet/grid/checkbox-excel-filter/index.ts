@@ -1,5 +1,5 @@
 import { Grid, Filter, Page, Selection, Sort } from '@syncfusion/ej2-grids';
-import { DataManager, Query, UrlAdaptor } from '@syncfusion/ej2/data';
+import { DataManager, Query, UrlAdaptor } from '@syncfusion/ej2-data';
 
 Grid.Inject(Filter, Page, Selection, Sort);
 

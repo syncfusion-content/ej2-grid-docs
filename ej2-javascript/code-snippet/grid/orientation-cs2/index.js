@@ -1,4 +1,4 @@
-let grid: Grid = new Grid({
+let grid= new ej.grids.Grid({
     dataSource: data,
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100 },

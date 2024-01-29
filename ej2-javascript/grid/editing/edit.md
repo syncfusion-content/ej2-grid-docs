@@ -17,7 +17,7 @@ You can start the edit action either by double clicking the particular row or by
 
 Deletion of the record is possible by selecting the required row and click on `Delete` button in the toolbar.
 
-To use CRUD, inject the [`Edit`](../../api/grid/edit) module in grid.
+To use CRUD, inject the [`Edit`](../../api/grid/edit/) module in grid.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -216,7 +216,7 @@ The Editing functionalities can be performed based upon the primary key value of
 
 Make the Grid column always editable using the column template feature of the Grid.
 
-In the following example, the textbox is rendered in the Freight column using a column template. The keyup event for the Grid is bound using the [created](../../api/grid#created) event of the Grid, and the edited changes are saved in the data source using the [updateRow](../../api/grid#updaterow) method of the Grid.
+In the following example, the textbox is rendered in the Freight column using a column template. The keyup event for the Grid is bound using the [created](../../api/grid/#created) event of the Grid, and the edited changes are saved in the data source using the [updateRow](../../api/grid/#updaterow) method of the Grid.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -252,7 +252,7 @@ In the following example, the textbox is rendered in the Freight column using a 
 * [Customize the Edit Dialog](../how-to/customize-the-edit-dialog)
 * [Tab Inside the Dialog Template](../how-to/using-the-tab-inside-the-dialog-template)
 * [How to bulk edit columns in Grid](https://www.syncfusion.com/blogs/post/bulk-edit-columns-in-javascript-datagrid.aspx)
-* [How to use Document Editor as an edit field in Data Grid](https://www.syncfusion.com/kb/11722/how-to-use-document-editor-as-an-edit-field-in-data-grid)
-* [How to render custom confirmation dialog while updating edit operations](https://www.syncfusion.com/kb/11695/how-to-render-custom-confirmation-dialog-while-updating-edit-operations)
-* [How to render ColorPicker component for particular column while editing a record](https://www.syncfusion.com/kb/11569/how-to-render-colorpicker-component-for-particular-column-while-editing-a-record)
-* [How to positioning the validation error message](https://www.syncfusion.com/kb/11217/how-to-positioning-the-validation-error-message)
+* [How to use Document Editor as an edit field in Data Grid](https://support.syncfusion.com/kb/article/10154/how-to-use-document-editor-as-an-edit-field-in-data-grid)
+* [How to render custom confirmation dialog while updating edit operations](https://support.syncfusion.com/kb/article/10247/how-to-render-custom-confirmation-dialog-while-updating-edit-operations)
+* [How to render ColorPicker component for particular column while editing a record](https://support.syncfusion.com/kb/article/10014/how-to-render-colorpicker-component-for-particular-column-while-editing-a-record)
+* [How to positioning the validation error message](https://support.syncfusion.com/kb/article/9819/how-to-positioning-the-validation-error-message-in-javascript-grid)
