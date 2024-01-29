@@ -48,3 +48,12 @@ In the following demo, **Davolio** cell is spanned to two rows in the **Employee
 
 > To disable the spanning for particular grid page, you need to use **requestType** from `queryCellInfo` event argument.
 > The `rowSpan` and `colSpan` attributes can be used together to merge cells both vertically and horizontally.
+
+## Limitations
+
+* Row spanning is not compatible with the following features:
+    1. Virtual scrolling
+    2. Infinite scrolling
+    3. Lazy load grouping
+    4. Row drag and drop
+    5. Grouping

@@ -1,6 +1,6 @@
 import { Grid, Page, Selection, Toolbar, Edit } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
-import { DataManager } from '@syncfusion/ej2/data';
+import { DataManager } from '@syncfusion/ej2-data';
 
 Grid.Inject(Page, Selection, Toolbar, Edit );
 
