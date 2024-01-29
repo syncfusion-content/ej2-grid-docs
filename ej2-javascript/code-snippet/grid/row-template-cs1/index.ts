@@ -10,7 +10,7 @@ let grid: Grid = new Grid({
         { field: 'NumberofPatentFamilies', headerText: 'Number of Patent Families', width: 180 },
         { field: 'Country', headerText: 'Country', width: 140 },
         { field: 'Active', headerText: 'Active', width: 120 },
-        { field: 'Mainfieldsofinvention', headerText: 'Main fields of invention', width: 200 }
+        { field: 'MainFieldsofInvention', headerText: 'Main Feilds Of Invention', width: 200}
     ]
 });
 grid.appendTo('#Grid');

@@ -9,7 +9,7 @@ var grid = new ej.grids.Grid({
       { field: 'NumberofPatentFamilies', headerText: 'Number of Patent Families', width: 180, textAlign: 'Right'},
       { field: 'Country', headerText: 'Country', width: 140},
       { field: 'Active', width: 120 },
-      { field: 'Mainfieldsofinvention', headerText: 'Main Feilds Of Invention', width: 200},
+      { field: 'Mainfieldsofinvention', headerText: 'Main Feilds Of Invention', width: 200}
     ],
     pageSettings: { pageCount: 5 }
   });
