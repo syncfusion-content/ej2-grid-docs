@@ -3,10 +3,12 @@ import { data } from './datasource.ts';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
 import { DataUtil } from '@syncfusion/ej2-data';
 import { CheckBox } from '@syncfusion/ej2-buttons';
+import { NumericTextBox } from '@syncfusion/ej2-inputs';
 
 Grid.Inject(Edit, Toolbar);
 
-let countryData: {}[] = DataUtil.distinct(data, 'ShipCountry', true);
+let shipCountryData: {}[] = DataUtil.distinct(data, 'ShipCountry', true);
+let shipCityData: {}[] = DataUtil.distinct(data, 'ShipCity', true)
 
 let grid: Grid = new Grid({
     dataSource: data,
@@ -35,12 +37,29 @@ let grid: Grid = new Grid({
                     value: args.rowData.ShipCountry,
                     popupHeight: '300px',
                     floatLabelType: 'Always',
-                    dataSource: countryData,
+                    dataSource: shipCountryData,
                     fields: { text: 'ShipCountry', value: 'ShipCountry' },
                     placeholder: 'Ship Country',
                 },
                 args.form.elements.namedItem('ShipCountry') as HTMLInputElement
             );
+            let numeric: NumericTextBox = new NumericTextBox({
+                // sets value to the NumericTextBox
+                floatLabelType: 'Always',
+                placeholder: 'Freight'
+            });
+            numeric.appendTo('#Freight');
+            new DropDownList(
+                {
+                  value: args.rowData.ShipCity,
+                  popupHeight: '300px',
+                  floatLabelType: 'Always',
+                  dataSource: shipCityData,
+                  fields: { text: 'ShipCity', value: 'ShipCity' },
+                  placeholder: 'Ship City'
+                },
+                args.form.elements.namedItem('ShipCity') as HTMLInputElement
+                );
             new CheckBox(
                 { label: 'Verified', checked: args.rowData.Verified },
                 args.form.elements.namedItem('Verified')
