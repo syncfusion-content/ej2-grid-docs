@@ -21,6 +21,7 @@ let grid: Grid = new Grid({
     actionComplete: (args: EditEventArgs) => {
         if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
             let dialog: Dialog = args.dialog;
+            dialog.showCloseIcon = false;
             // set the height of the dialog
             dialog.height = 300;
             //set the width of the header
