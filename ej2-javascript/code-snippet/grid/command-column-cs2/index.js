@@ -25,14 +25,12 @@ function commandClick(args) {
 var dialogVisible = false;
 
 var dialog = new ej.popups.Dialog({
-
     header: "Row Information",
     content: "dialogContent",
     showCloseIcon: "true",
     width: "400px",
     visible: dialogVisible,
     close: dialogClose,
-
 })
 dialog.appendTo('#dialog');
 
