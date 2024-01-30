@@ -121,7 +121,7 @@ In the following example, the **CustomerID** column is rendered as a hidden colu
 
 Wizard-like dialog editing is a powerful feature in the Grid component that enables the creation of intuitive step-by-step forms. This feature provides a structured approach to form completion or data entry by breaking down the process into manageable steps.This feature is particularly useful when you have complex forms that need to be broken down into smaller sections to guide you through the data entry process.
 
-To achieve wizard-like dialog editing in the grid component, you can use the dialog template feature. This feature allows you to define your own custom editing template using the [`editSettings.mode`](../../api/grid/editSettings/#mode) property set to  **Dialog** and the [editSettingsTemplate](../../api/grid/editSettings/#template) property to specify the template variable that defines the editors for each step of the wizard.
+To achieve wizard-like dialog editing in the grid component, you can use the dialog template feature. This feature allows you to define your own custom editing template using the [`editSettings->mode`](../../api/grid/editSettings/#mode) property set to  **Dialog** and the [editSettingsTemplate](../../api/grid/editSettings/#template) property to specify the template variable that defines the editors for each step of the wizard.
 
 The following example demonstrate the wizard like editing in the grid with the unobtrusive validation.
 
