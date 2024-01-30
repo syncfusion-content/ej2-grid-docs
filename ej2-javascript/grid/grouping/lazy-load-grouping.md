@@ -125,7 +125,7 @@ Lazy loading grouping with infinite scrolling is a valuable feature in scenarios
 
 To enable this feature, you need to set the [groupSettings->enableLazyLoading](../../api/grid/groupSettings/#enableLazyLoading) and [enableInfiniteScrolling](../../api/grid/#enableinfinitescrolling) properties to **true**.
 
-The following example demonstrates how to enable the lazy load grouping with infinite scrolling feature using the `groupSettings->enableLazyLoading` and `enableInfiniteScrolling` properties.
+The following example demonstrates how to enable the lazy load grouping with infinite scrolling feature using the `groupSettings.enableLazyLoading` and `enableInfiniteScrolling` properties.
 
 {% if page.publishingplatform == "typescript" %}
 
