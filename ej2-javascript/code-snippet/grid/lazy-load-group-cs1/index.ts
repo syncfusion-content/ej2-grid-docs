@@ -9,11 +9,10 @@ let grid: Grid = new Grid({
     allowGrouping: true,
     groupSettings: { enableLazyLoading: true, columns: ['ProductName', 'CustomerName'] },
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
-        { field: 'ProductName', headerText: 'Product Name', width: 160 },
-        { field: 'ProductID', headerText: 'Product ID', textAlign: 'Right', width: 120 },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
-        { field: 'CustomerName', headerText: 'Customer Name', width: 160 }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+        { field: 'ProductName', headerText: 'Product Name', width: 100 },
+        { field: 'ProductID', headerText: 'Product ID', textAlign: 'Right', width: 80 },
+        { field: 'CustomerName', headerText: 'Customer Name', width: 120 }
     ],
     height: 240
 });
