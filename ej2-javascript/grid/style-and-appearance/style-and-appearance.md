@@ -84,4 +84,4 @@ In the following sample, the font family of grid content is changed to **cursive
 
 ## See Also
 
-* [How to change the font size of Grid elements](https://www.syncfusion.com/kb/11321/how-to-change-the-font-size-of-grid-elements)
+* [How to change the font size of Grid elements](https://support.syncfusion.com/kb/article/10075/how-to-change-the-font-size-of-grid-elements-in-javascript)
