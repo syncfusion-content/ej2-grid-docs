@@ -18,9 +18,8 @@ function commandClick(args) {
     dialog.visible = true
     dialog.content =
         `<p><b>ShipName:</b> ${args.rowData.ShipName}</p>
-    <p><b>ShipPostalCode:</b> ${args.rowData.ShipPostalCode}</p>
-    <p><b>ShipAddress:</b> ${args.rowData.ShipAddress}</p>`
-
+        <p><b>ShipPostalCode:</b> ${args.rowData.ShipPostalCode}</p>
+        <p><b>ShipAddress:</b> ${args.rowData.ShipAddress}</p>`
 }
 
 var dialogVisible = false;
@@ -36,7 +35,6 @@ var dialog = new ej.popups.Dialog({
 
 })
 dialog.appendTo('#dialog');
-
 
 function dialogClose() {
     dialogVisible = false;
