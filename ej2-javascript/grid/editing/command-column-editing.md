@@ -57,7 +57,7 @@ Here's an example that demonstrates how to add CRUD action buttons in a column u
 
 ## Custom command column
 
- The custom command column feature in the Grid component allows you to add custom command buttons in a column to perform specific actions on individual rows. This feature is particularly useful when you need to provide customized functionality for editing, deleting, or performing any other operation on a row.
+ The custom command column feature in the Grid control allows you to add custom command buttons in a column to perform specific actions on individual rows. This feature is particularly useful when you need to provide customized functionality for editing, deleting, or performing any other operation on a row.
 
 To add custom command buttons in a column, you can utilize the [column->commands](../../api/grid/column/#commands) property. Furthermore, you can define the actions associated with these custom buttons using the [commandClick](../../api/grid/#commandClick) event.
 
