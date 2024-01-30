@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Tool bar in ##Platform_Name## Grid control
 
-The Grid provides ToolBar support to handle grid actions. The [`toolbar`](../../api/grid/#toolbar) property accepts either the collection of built-in toolbar items and [`ItemModel`](../../api/toolbar/itemModel) objects for custom toolbar items or HTML element ID for toolbar template.
+The Grid provides ToolBar support to handle grid actions. The [`toolbar`](../../api/grid/#toolbar) property accepts either the collection of built-in toolbar items and [`ItemModel`](../../api/toolbar/itemModel/) objects for custom toolbar items or HTML element ID for toolbar template.
 
 To use ToolBar, inject [`Toolbar`](../../api/grid/#toolbarmodule) module in the grid.
 
@@ -79,5 +79,5 @@ You can add the Grid toolbar component at the bottom of Grid using the ['created
 
 ## See Also
 
-* [Toolbar Component](../../toolbar/getting-started/)
-* [How to set overflow mode in Grid toolbar](https://www.syncfusion.com/kb/11524/how-to-set-overflow-mode-in-grid-toolbar)
+* [Toolbar Component](../../toolbar/getting-started)
+* [How to set overflow mode in Grid toolbar](https://support.syncfusion.com/kb/article/9929/how-to-set-overflow-mode-in-grid-toolbar)
