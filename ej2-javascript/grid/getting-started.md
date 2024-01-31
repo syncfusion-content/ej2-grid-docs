@@ -328,7 +328,7 @@ Output will be displayed as follows.
 
 * [Overview of Grid](https://www.syncfusion.com/blogs/post/overview-of-grid-in-essential-js-2-part-1.aspx)
 * [Introduction to the Grid control](https://www.syncfusion.com/blogs/post/introduction-to-the-grid-control-for-javascript.aspx)
-* [How to display a table data after clicking Submit button in Javascript?](https://www.syncfusion.com/kb/11810/how-to-display-a-table-data-after-clicking-submit-button-in-javascript)
-* [How to display table in popup window using Javascript?](https://www.syncfusion.com/kb/11781/how-to-display-table-in-popup-window-using-javascript)
-* [How to open pdf document on button click inside a Grid](https://www.syncfusion.com/kb/11693/how-to-open-pdf-document-on-button-click-inside-a-grid)
-* [How to disable the default keyboard actions in Grid](https://www.syncfusion.com/kb/11024/how-to-disable-the-default-keyboard-actions-in-grid)
+* [How to display a table data after clicking Submit button in Javascript?](https://support.syncfusion.com/kb/article/10145/how-to-display-a-table-data-after-clicking-submit-button)
+* [How to display table in popup window using Javascript?](https://support.syncfusion.com/kb/article/10339/how-to-display-table-in-popup-window-using-javascript)
+* [How to open pdf document on button click inside a Grid](https://support.syncfusion.com/kb/article/10246/how-to-open-pdf-document-on-button-click-inside-a-grid)
+* [How to disable the default keyboard actions in Grid](https://support.syncfusion.com/kb/article/9578/how-to-disable-the-default-keyboard-actions-in-js-grid)

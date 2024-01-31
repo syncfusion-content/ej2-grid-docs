@@ -38,7 +38,7 @@ grid.toolbarClick = (args: ClickEventArgs) => {
             let exportProperties = {
                 dataSource: exceldata,
             };
-            grid.pdfExport(exportProperties);
+            grid.excelExport(exportProperties);
         }
     }
 

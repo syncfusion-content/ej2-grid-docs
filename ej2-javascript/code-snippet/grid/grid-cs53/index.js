@@ -1,11 +1,11 @@
 ej.grids.Grid.Inject(ej.grids.PdfExport, ej.grids.ExcelExport, ej.grids.Page, ej.grids.Toolbar, ej.grids.Filter);
 var grid = new ej.grids.Grid({
-    {
         dataSource: data,
         allowPdfExport: true,
         allowExcelExport: true,
         allowPaging: true,
         allowFiltering: true,
+        selectionSettings: {type: 'Multiple'},
         toolbar: ['PdfExport','ExcelExport'],
         pageSettings: { pageCount: 5, pageSize: 5 },
         columns: [
@@ -17,7 +17,7 @@ var grid = new ej.grids.Grid({
         ],
     });
 grid.appendTo('#Grid');
-grid.toolbarClick = (args: ClickEventArgs) => {
+grid.toolbarClick = (args) => {
     if (args.item.id === 'Grid_pdfexport') {
         let pdfdata = grid.getSelectedRecords();
             let exportProperties = {
@@ -30,7 +30,8 @@ grid.toolbarClick = (args: ClickEventArgs) => {
             let exportProperties = {
                 dataSource: exceldata,
             };
-            grid.pdfExport(exportProperties);
+            grid.excelExport(exportProperties);
         }
     }
+
 

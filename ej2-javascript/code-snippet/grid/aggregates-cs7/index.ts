@@ -10,7 +10,7 @@ let grid: Grid = new Grid({
     dataSource: data,
     allowPaging:true,
     pageSettings:{pageSize:7},
-    toolbar: ['Delete', 'Update', 'Cancel'],
+    toolbar: ['Edit', 'Delete', 'Update', 'Cancel'],
     editSettings: { allowEditing: true, allowDeleting: true, mode: 'Normal' },
     actionBegin:(args:any)=>{
         if(args.requestType === 'beginEdit'){
