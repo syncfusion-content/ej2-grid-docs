@@ -92,4 +92,4 @@ button.addEventListener("click", function(e){
 
 ## See Also
 
-* [How to bind SQL Server data in TypeScript DataGrid using SqlClient data provider](https://www.syncfusion.com/kb/11452/how-to-bind-sql-server-data-in-typescript-datagrid-using-sqlclient-data-provider)
+* [How to bind SQL Server data in TypeScript DataGrid using SqlClient data provider](https://support.syncfusion.com/kb/article/9963/how-to-bind-sql-server-data-in-typescript-datagrid-using-sqlclient-data-provider)
