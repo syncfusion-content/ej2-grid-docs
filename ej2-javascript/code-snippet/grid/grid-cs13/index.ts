@@ -4,7 +4,7 @@ import { Grid } from '@syncfusion/ej2-grids';
 import { DataManager, ODataAdaptor } from '@syncfusion/ej2-data';
 
 let data: DataManager = new DataManager({
-    url: 'https://services.syncfusion.com/js/production/api/Orders',
+    url: 'https://services.odata.org/V3/Northwind/Northwind.svc/Orders/',
     adaptor: new ODataAdaptor,
     crossDomain: true
 });

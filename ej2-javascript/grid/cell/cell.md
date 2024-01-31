@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 ## Cell customization
 
-The appearance of cells can be customized by using the [`queryCellInfo`](../../api/grid/#querycellinfo) event. The [`queryCellInfo`](../../api/grid/#querycellinfo) event triggers for every cell. In that event handler, you can get [`QueryCellInfoEventArgs`](../../api/grid/queryCellInfoEventArgs) that contains the details of the cell.
+The appearance of cells can be customized by using the [`queryCellInfo`](../../api/grid/#querycellinfo) event. The [`queryCellInfo`](../../api/grid/#querycellinfo) event triggers for every cell. In that event handler, you can get [`QueryCellInfoEventArgs`](../../api/grid/queryCellInfoEventArgs/) that contains the details of the cell.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -44,7 +44,7 @@ The appearance of cells can be customized by using the [`queryCellInfo`](../../a
 
 ## Custom attributes
 
-You can customize the grid cells by adding a CSS class to the [`customAttribute`](../../api/grid/column#customattributes) property of the column.
+You can customize the grid cells by adding a CSS class to the [`customAttribute`](../../api/grid/column/#customattributes) property of the column.
 
 ```css
 .e-attr {
@@ -133,5 +133,5 @@ The available modes of grid lines are:
 
 ## See Also
 
-* [How to get the clicked Grid cell details](https://www.syncfusion.com/kb/11537/how-to-get-the-clicked-grid-cell-details)
-* [How to customize the Grid cell values while exporting](https://www.syncfusion.com/kb/11324/how-to-customize-the-grid-cell-values-while-exporting)
+* [How to get the clicked Grid cell details](https://support.syncfusion.com/kb/article/9937/how-to-get-the-clicked-grid-cell-details)
+* [How to customize the Grid cell values while exporting](https://support.syncfusion.com/kb/article/10087/how-to-customize-the-grid-cell-values-while-exporting-in-javascript)

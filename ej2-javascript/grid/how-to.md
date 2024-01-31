@@ -842,27 +842,27 @@ The following example demonstrates rendering the tab control inside the edit dia
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/tabtemplate-cs2/index.ts %}
+{% include code-snippet/grid/tabtemplate-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/tabtemplate-cs2/index.html %}
+{% include code-snippet/grid/tabtemplate-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/tabtemplate-cs2" %}
+{% previewsample "page.domainurl/code-snippet/grid/tabtemplate-cs1" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/tabtemplate-cs2/index.js %}
+{% include code-snippet/grid/tabtemplate-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/tabtemplate-cs2/index.html %}
+{% include code-snippet/grid/tabtemplate-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/tabtemplate-cs2" %}
+{% previewsample "page.domainurl/code-snippet/grid/tabtemplate-cs1" %}
 {% endif %}
 
 ### Disable editing for a particular row/cell
@@ -1187,27 +1187,27 @@ In the following example, The `Employee Name` is a foreign key column. DropDownL
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/foreign-key-cs8/index.ts %}
+{% include code-snippet/grid/foreign-key-cs3/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs8/index.html %}
+{% include code-snippet/grid/foreign-key-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/foreign-key-cs8" %}
+{% previewsample "page.domainurl/code-snippet/grid/foreign-key-cs3" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/foreign-key-cs8/index.js %}
+{% include code-snippet/grid/foreign-key-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs8/index.html %}
+{% include code-snippet/grid/foreign-key-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/foreign-key-cs8" %}
+{% previewsample "page.domainurl/code-snippet/grid/foreign-key-cs3" %}
 {% endif %}
 
 ### Use filter bar template in foreign key column
@@ -1253,27 +1253,27 @@ In the following example, The `Employee Name` is a foreign key column and the ag
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/grid/foreign-key-cs10/index.ts %}
+{% include code-snippet/grid/foreign-key-cs5/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs10/index.html %}
+{% include code-snippet/grid/foreign-key-cs5/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/foreign-key-cs10" %}
+{% previewsample "page.domainurl/code-snippet/grid/foreign-key-cs5" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/foreign-key-cs10/index.js %}
+{% include code-snippet/grid/foreign-key-cs5/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/foreign-key-cs10/index.html %}
+{% include code-snippet/grid/foreign-key-cs5/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/grid/foreign-key-cs10" %}
+{% previewsample "page.domainurl/code-snippet/grid/foreign-key-cs5" %}
 {% endif %}
 
 ### Bind foreign key dataSource on dropdown edit
