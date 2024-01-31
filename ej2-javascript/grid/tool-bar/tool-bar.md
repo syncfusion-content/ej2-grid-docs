@@ -158,5 +158,5 @@ The following example demonstrates how to change the background color of the `Ad
 
 ## See Also
 
-* [Toolbar Component](../../toolbar/getting-started/)
-* [How to set overflow mode in Grid toolbar](https://www.syncfusion.com/kb/11524/how-to-set-overflow-mode-in-grid-toolbar)
+* [Toolbar Component](../../toolbar/getting-started)
+* [How to set overflow mode in Grid toolbar](https://support.syncfusion.com/kb/article/9929/how-to-set-overflow-mode-in-grid-toolbar)

@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 You can search records in a Grid, by using the [`search`](../api/grid/#search) method with search key as a parameter. This also provides an option to integrate search text box in grid's toolbar by adding `search` item to the [`toolbar`](../api/grid/#toolbar).
 
-To search records, inject the [`Search`](../api/grid/search) module in the grid.
+To search records, inject the [`Search`](../api/grid/search/) module in the grid.
 
 > The clear icon is shown in the Data Grid search text box when it is focused on search text or after typing the single character in the search text box. A single click of the clear icon clears the text in the search box as well as the search results in the Data Grid.
 
@@ -284,6 +284,6 @@ You can perform a searching operation in the Grid using multiple keywords. This 
 
 ## See Also
 
-* [How to perform searching in Date type column](https://www.syncfusion.com/kb/11251/how-to-perform-searching-in-date-type-column)
-* [How to search the records in grid on each keystroke](https://www.syncfusion.com/kb/11248/how-to-search-the-records-in-grid-on-each-keystroke)
-* [How to perform search by using Wildcard and LIKE operator filter](./filtering/filtering/#wildcard-and-like-operator-filter)
+* [How to perform searching in Date type column](https://support.syncfusion.com/kb/article/9695/how-to-perform-searching-in-date-type-column)
+* [How to search the records in grid on each keystroke](https://support.syncfusion.com/kb/article/9696/how-to-search-the-records-in-grid-on-each-keystroke)
+* [How to perform search by using Wildcard and LIKE operator filter](./filtering/filtering#wildcard-and-like-operator-filter)

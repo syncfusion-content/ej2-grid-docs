@@ -4,7 +4,7 @@ var grid = new ej.grids.Grid({
     dataSource: data,
     allowPaging: true,
     toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
-    pageSettings: { pageSizes: true, pageSize: 8 }
+    pageSettings: { pageSizes: true, pageSize: 8 },
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
         { field: 'CustomerID', headerText: 'Customer ID', width: 150 },

@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Tool bar in ##Platform_Name## Grid control
 
-The Grid provides ToolBar support to handle grid actions. The [`toolbar`](../api/grid/#toolbar) property accepts either the collection of built-in toolbar items and [`ItemModel`](../api/toolbar/itemModel) objects for custom toolbar items or HTML element ID for toolbar template.
+The Grid provides ToolBar support to handle grid actions. The [`toolbar`](../api/grid/#toolbar) property accepts either the collection of built-in toolbar items and [`ItemModel`](../api/toolbar/itemModel/) objects for custom toolbar items or HTML element ID for toolbar template.
 
 To use ToolBar, inject `Toolbar` module in the grid.
 
@@ -65,10 +65,10 @@ The following table shows built-in toolbar items and its actions.
 
 ## Custom toolbar items
 
-Custom toolbar items can be added by defining the [`toolbar`](../api/grid/#toolbar) as a collection of [`ItemModels`](../api/toolbar/itemModel).
+Custom toolbar items can be added by defining the [`toolbar`](../api/grid/#toolbar) as a collection of [`ItemModels`](../api/toolbar/itemModel/).
 Actions for this customized toolbar items are defined in the [`toolbarClick`](../api/grid/#toolbarclick) event.
 
-By default, Custom toolbar items are in position `Left`. You can change the position by using the [`align`](../api/toolbar/itemModel) property. In the below sample, we have applied position `Right` for the `Collapse All` toolbar item.
+By default, Custom toolbar items are in position `Left`. You can change the position by using the [`align`](../api/toolbar/itemModel/) property. In the below sample, we have applied position `Right` for the `Collapse All` toolbar item.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -199,5 +199,5 @@ You can enable/disable toolbar items by using the `enableItems` method.
 ## See Also
 
 * [Define your own toolbar](./how-to/create-custom-tool-bar-with-drop-down-list)
-* [Toolbar Component](../../toolbar/getting-started/)
-* [How to set overflow mode in Grid toolbar](https://www.syncfusion.com/kb/11524/how-to-set-overflow-mode-in-grid-toolbar)
+* [Toolbar Component](../../toolbar/getting-started)
+* [How to set overflow mode in Grid toolbar](https://support.syncfusion.com/kb/article/9929/how-to-set-overflow-mode-in-grid-toolbar)
