@@ -11,7 +11,11 @@ domainurl: ##DomainURL##
 
 # Dialog editing in ##Platform_Name## Grid control
 
-In Dialog edit mode, when you start editing the currently selected row data will be shown on a dialog. You can change the cell values and save edited data to the data source. To enable Dialog edit, set the [`editSettings.mode`](../../api/grid/editSettings/#mode) as `Dialog`.
+Dialog editing is a feature in the Grid control that allows you to edit the data of the currently selected row using a dialog window. With dialog editing, you can easily modify cell values and save the changes back to the data source.This feature is particularly beneficial in scenarios where you need to quickly modify data without navigating to a separate page or view, and it streamlines the process of editing multiple cells.
+
+To enable dialog editing in grid control, you need to set the [editSettings->mode](../../api/grid/editSettings/#mode) property to **Dialog**. This property determines the editing mode for the grid, and when set to **Dialog**, it enables the dialog editing feature.
+
+Here's an example how to enable dialog editing in the javascript grid control:
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -42,9 +46,13 @@ In Dialog edit mode, when you start editing the currently selected row data will
 
 ## Customize edit dialog
 
-You can customize the Header and Footer appearance of the edit dialog in the [`actionComplete`](../../api/grid/#actioncomplete) event based on `requestType` as `beginEdit` or `add`.
+The edit dialog in the Grid control allows you to customize its appearance and behavior based on the type of action being performed, such as editing or adding a record. You can modify properties like header text, showCloseIcon, and height to tailor the edit dialog to your specific requirements. Additionally, you can override default localization strings to provide custom text for buttons or other elements within the dialog.
 
-In the following example, We have customized the dialog's height and title of the dialog's header and also we have changed the button content name in the dialog's footer.
+To customize the edit dialog, you need to handle the [actionComplete](../../api/grid/#actioncomplete) event of the Grid control and perform the necessary modifications based on the **requestType** parameter. The **requestType** parameter identifies the type of action being performed, such as **beginEdit** for editing a record or **add** for adding a new record.
+
+>You can refer the Grid [Default text](../global-local/) list for more localization.
+
+The following example that demonstrates how to customize the edit dialog using the `actionComplete` event:
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -77,12 +85,11 @@ In the following example, We have customized the dialog's height and title of th
 
 ## Show or hide columns in dialog editing
 
-The Grid has the option to show hidden columns or hide visible columns while editing in the dialog edit mode by using the [actionBegin](../../api/grid/#actionbegin) event of the Grid.
+The show or hide columns in dialog editing feature in the grid allows you to dynamically control the visibility of columns while editing in the dialog edit mode. This feature is useful when you want to display specific columns based on the type of action being performed, such as editing an existing record or adding a new record. To achieve this, you can utilize the [actionBegin](../../api/grid/#actionbegin) event of the Grid. 
 
-In the `actionBegin` event, when the `requestType` is `beginEdit` or add, the column will be shown or hidden using the `column.visible` property. When the `requestType` is `save`, the properties will be reset to their original state.
+The `actionBegin` event is triggered whenever an action is initiated in the grid, such as editing, adding, or deleting a record. Within the event handler, you can check the **requestType** parameter to determine the type of action being performed. If the **requestType** is `beginEdit` or `add`, you can modify the visibility of columns using the `column.visible` property. This property is used to determine whether a column should be displayed or hidden. Then, when the **requestType** is `save`, you can reset the column visibility to its initial state using the `column.visible` property.
 
-In the following example, the CustomerID column is rendered as a hidden column, and the ShipCountry column is rendered as a visible column. In the edit mode, the CustomerID column will be changed to a visible state and the ShipCountry column will be changed to a hidden state.
-
+In the following example, the **CustomerID** column is rendered as a hidden column, and the **ShipCountry** column is rendered as a visible column. In the edit mode, the **CustomerID** column will be changed to a visible state and the **ShipCountry** column will be changed to a hidden state.
 {% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
@@ -112,9 +119,11 @@ In the following example, the CustomerID column is rendered as a hidden column, 
 
 ## Use wizard like dialog editing
 
-Wizard helps you to create intuitive step-by-step forms to fill. You can achieve the wizard-like editing by using the dialog template feature. It supports your own editing template by defining the [`editSettings.mode`](../../api/grid/editSettings/#mode) as `Dialog` and [`editSetting.template`](../../api/grid/editSettings/#template) as SCRIPT element ID or HTML string which holds the template.
+Wizard-like dialog editing is a powerful feature in the Grid control that enables the creation of intuitive step-by-step forms. This feature provides a structured approach to form completion or data entry by breaking down the process into manageable steps.This feature is particularly useful when you have complex forms that need to be broken down into smaller sections to guide you through the data entry process.
 
-The following example demonstrates the wizard-like editing in the grid with obtrusive validation.
+To achieve wizard-like dialog editing in the grid control, you can use the dialog template feature. This feature allows you to define your own custom editing template using the [editSettings->mode](../../api/grid/editSettings/#mode) property set to  **Dialog** and the [editSettingsTemplate](../../api/grid/editSettings/#template) property to specify the template variable that defines the editors for each step of the wizard.
+
+The following example demonstrate the wizard like editing in the grid with the unobtrusive validation.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -143,9 +152,9 @@ The following example demonstrates the wizard-like editing in the grid with obtr
 {% previewsample "page.domainurl/code-snippet/grid/wizardtemplate-cs1" %}
 {% endif %}
 
-## Customize Add/Edit Dialog footer
+## Customize Add/Edit dialog footer
 
-In dialog edit mode, a dialog will show up when editing the currently selected row or adding a new row. By default, you can save or cancel the edited changes by clicking the Save or Cancel button in the dialog's footer. Along with these buttons, it is possible to add a custom button in the footer section using the [actionComplete](../../api/grid/#actioncomplete) event of the Grid.
+The Customize add/edit dialog footer feature in the grid allows you to modify the footer section of the dialog that appears when editing the currently selected row or adding a new row. By default, the dialog displays two buttons in the footer section: Save and Cancel, which allow you to save or discard the changes made in the dialog. This feature is particularly helpful when you want to add custom buttons to the dialog's footer, implement specific actions, or customize the appearance of the buttons, such as changing their color or size in the dialog's footer. This can be achieved using the [actionComplete](../../api/grid/#actioncomplete) event of the Grid control.
 
 In the following sample, using the `dialog` argument of the `actionComplete` event, the action for the custom button can be customized.
 
