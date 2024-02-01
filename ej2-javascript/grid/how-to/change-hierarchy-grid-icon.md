@@ -15,7 +15,7 @@ You can change default expand/collapse icon of the Hierarchy Grid by using custo
 
 You can change the content code of the corresponding icon which you want.
 
-To use hierarchical binding, inject the [`DetailRow`](../../api/grid/detailRow) module in the grid.
+To use hierarchical binding, inject the [`DetailRow`](../../api/grid/detailRow/) module in the grid.
 
 **Css**:
 
