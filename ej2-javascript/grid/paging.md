@@ -11,11 +11,11 @@ domainurl: ##DomainURL##
 
 # Paging in ##Platform_Name## Grid control
 
-Paging provides an option to display Grid data in page segments. To enable paging, set the [`allowPaging`](../api/grid/#allowpaging-boolean) to true. When paging is enabled, pager component renders at the bottom of the grid. Paging options can be configured through the [`pageSettings`](../api/grid/pageSettings).
+Paging provides an option to display Grid data in page segments. To enable paging, set the [`allowPaging`](../api/grid/#allowpaging-boolean) to true. When paging is enabled, pager component renders at the bottom of the grid. Paging options can be configured through the [`pageSettings`](../api/grid/pageSettings/).
 
 In the below sample, `pageSize` is calculated based on the grid height by using the `load` event.
 
-To use paging, inject the [`Page`](../api/grid/page) module in the grid.
+To use paging, inject the [`Page`](../api/grid/page/) module in the grid.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -146,4 +146,4 @@ By default, Pager will be rendered at the bottom of the Grid. You can also rende
 
 ## See Also
 
-* [Group with Paging](./grouping/grouping/#group-with-paging)
+* [Group with Paging](./grouping/grouping#group-with-paging)
