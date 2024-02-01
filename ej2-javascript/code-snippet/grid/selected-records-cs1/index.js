@@ -1,24 +1,34 @@
-ej.grids.Grid.Inject(ej.grids.Page, ej.grids.Selection);
+ej.grids.Grid.Inject(ej.grids.Page);
+
 var grid = new ej.grids.Grid({
     dataSource: data,
-    allowSelection: true,
     allowPaging: true,
-    selectionSettings: { type: 'Multiple', persistSelection: true },
+    allowSelection: true,
+    pageOptions: { pageSize: 5 },
+    selectionSettings: { type: 'Multiple' },
     columns: [
-        { type: 'checkbox', width: 50 },
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', isPrimaryKey: true, width: 120 },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
-        { field: 'ShipCountry', headerText: 'Ship Country', width: 130 },
-        { field: 'Freight', headerText: 'Freight', format: 'C2', width: 100 }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 150, textAlign: 'Right' },
+        { field: 'ShipCountry', headerText: 'Ship Country', width: 150, textAlign: 'Right' },
+        { field: 'Freight', headerText: 'Freight', width: 100, textAlign: 'Right', format: 'C2' }
     ],
-    pageSettings: { pageSizes: true, pageSize: 5 }
+    height: 315,
 });
 grid.appendTo('#Grid');
 
-var btn = new ej.buttons.Button({ cssClass: 'e-flat' }, '#show');
-document.getElementById('show').onclick = () => {
-    var selectedrecords = grid.getSelectedRecords();
-    var selectedRecordsCount = selectedrecords.length;
-    alert(selectedRecordsCount);
-}
+var message = document.getElementById('message');
 
+var button = new ej.buttons.Button({
+    content: 'Selected Records count',
+});
+button.appendTo('#buttons');
+
+document.getElementById('buttons').onclick = function () {
+    selectedRecords = grid.getSelectedRecords().length;
+    if (selectedRecords > 0) {
+        message.textContent = `Selected record count: ${selectedRecords}`
+    }
+    else {
+        message.textContent = ''
+    }
+};

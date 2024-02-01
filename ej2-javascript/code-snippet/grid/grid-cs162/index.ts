@@ -1,12 +1,10 @@
-
-
 import { Grid, Selection } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
 let grid: Grid = new Grid({
     dataSource: data,
-    selectionSettings: { type: 'Multiple', mode: 'Both' },
     selectedRowIndex: 1,
+    selectionSettings: { type: 'Multiple', mode: 'Row' },
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
         { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
@@ -16,6 +14,3 @@ let grid: Grid = new Grid({
     height: 315
 });
 grid.appendTo('#Grid');
-
-
-

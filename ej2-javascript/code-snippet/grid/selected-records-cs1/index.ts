@@ -1,33 +1,37 @@
-
-
-import { Grid, Selection, RowSelectEventArgs, Page } from '@syncfusion/ej2-grids';
 import { Button } from '@syncfusion/ej2-buttons';
+import { Grid, Page } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
-Grid.Inject(Page, Selection);
+Grid.Inject(Page);
 
 let grid: Grid = new Grid({
     dataSource: data,
-    allowSelection: true,
     allowPaging: true,
-    selectionSettings: { type: 'Multiple', persistSelection: true },
+    allowSelection: true,
+    selectionSettings: { type: 'Multiple' },
     columns: [
-        { type: 'checkbox', width: 50 },
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', isPrimaryKey: true, width: 120 },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
-        { field: 'ShipCountry', headerText: 'Ship Country', width: 130 },
-        { field: 'Freight', headerText: 'Freight', format: 'C2', width: 100 }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 150, textAlign: 'Right' },
+        { field: 'ShipCountry', headerText: 'Ship Country', width: 150, textAlign: 'Right' },
+        { field: 'Freight', headerText: 'Freight', width: 100, textAlign: 'Right', format: 'C2' }
     ],
-    pageSettings: { pageSizes: true, pageSize: 5 }
+    height: 315,
 });
 grid.appendTo('#Grid');
 
-let show: Button = new Button({ cssClass: 'e-flat' }, '#show');
-document.getElementById('show').onclick = () => {
-    let grid = document.getElementById('Grid').ej2_instances[0];
-    let selectedrecords: Object[] = grid.getSelectedRecords();
-    let selectedRecordsCount: number = selectedrecords.length;
-    alert(selectedRecordsCount);
-}
+let message = document.getElementById('message');
 
+let button: Button = new Button({
+    content: 'Selected Records count',
+});
+button.appendTo('#buttons');
 
+(document.getElementById('buttons') as HTMLElement).onclick = function (args) {
+    let selectedRecords = grid.getSelectedRecords().length;
+    if (selectedRecords > 0) {
+        (message as HTMLElement).textContent = `Selected record count: ${selectedRecords}`
+    }
+    else {
+        (message as HTMLElement).textContent = ''
+    }
+};
