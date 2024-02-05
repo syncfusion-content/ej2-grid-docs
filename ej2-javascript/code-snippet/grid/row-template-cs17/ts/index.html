@@ -8,66 +8,25 @@
     <meta name="description" content="Typescript Grid Control" />
     <meta name="author" content="Syncfusion" />
     <link href="index.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-base/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-grids/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-buttons/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-popups/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-navigations/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-dropdowns/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-lists/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-inputs/styles/material.css" rel="stylesheet" />
-    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-calendars/styles/material.css" rel="stylesheet" />
-    
-    
-    
-    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
-    
-    
+    <link href="https://cdn.syncfusion.com/ej2/24.2.3/ej2-base/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/24.2.3/ej2-grids/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/24.2.3/ej2-buttons/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/24.2.3/ej2-popups/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/24.2.3/ej2-navigations/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/24.2.3/ej2-dropdowns/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/24.2.3/ej2-lists/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/24.2.3/ej2-inputs/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/24.2.3/ej2-calendars/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/24.2.3/ej2-splitbuttons/styles/material.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
 </head>
 <body>
-   <script id="rowtemplate" type="text/x-template">
-    <tr>
-        <td class="photo">
-            <img src="${EmployeeID}.png" alt="${EmployeeID}" />
-        </td>
-        <td class="details">
-            <table class="CardTable" cellpadding="3" cellspacing="2">
-                <colgroup>
-                    <col width="50%">
-                    <col width="50%">
-                </colgroup>
-                <tbody>
-                    <tr>
-                        <td class="CardHeader">First Name </td>
-                        <td>${FirstName} </td>
-                    </tr>
-                    <tr>
-                        <td class="CardHeader">Last Name</td>
-                        <td>${LastName} </td>
-                    </tr>
-                    <tr>
-                        <td class="CardHeader">Title
-                        </td>
-
-                        <td>${Title}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="CardHeader">Country
-                        </td>
-                        <td>${Country}
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </td>
-     </tr>
-    </script>
     <div id='loader'>Loading....</div>
     <div id='container'>
-        <div id='Grid'></div>
+        <label style="padding: 10px 10px"> Enable or disable context menu items </label>
+        <input id="switch" type="checkbox"/>
+        <div id='Grid' style="padding: 10px"></div>
     </div>
 </body>
 </html>
