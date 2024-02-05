@@ -1,32 +1,45 @@
-var rowIndex = [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14];
+var dropdowndata = [{ text: 'Edit' }, { text: 'Delete' }, { text: 'Update' }];
 
 ej.grids.Grid.Inject(ej.grids.Toolbar);
 var grid = new ej.grids.Grid({
     dataSource: data,
     toolbarTemplate: '#toolbar-template',
-    dataBound: dataBound,
+    editSettings: { allowDeleting: true, allowAdding: true, allowEditing: true },
+  
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
-        { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C2' },
-        { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', width: 140, format: 'yMd' }
+      { field: 'OrderID', headerText: 'Order ID', isPrimaryKey: true, textAlign: 'Right', width: 90 },
+      { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+      { field: 'ShipCity', headerText: 'ShipCity', width: 100 },
+      { field: 'ShipName', headerText: 'ShipName', width: 120 }
     ],
-    height: 200
-});
-grid.appendTo('#Grid');
-
-function dataBound() {
-
-    var dropDownListObject = new ej.dropdowns.DropDownList({
-        // set the data to dataSource property
-        dataSource: rowIndex,
-        change: change,
-        popupHeight :200
-    });
-    dropDownListObject.appendTo('#ddlelement');
-}
-
-function change(args) {
-    grid.selectRow(args.itemData);
-}
-
+    height: 200,
+  });
+  grid.appendTo('#Grid');
+  
+  var dropDownListObject = new ej.dropdowns.DropDownList({
+    dataSource: dropdowndata,
+    change: onChange,
+    popupHeight: 200,
+    placeholder: 'select a value',
+  });
+  dropDownListObject.appendTo('#dropdownelement');
+  
+  function onChange(args) {
+    var selectedRow = grid.getSelectedRecords()[0];
+  
+    if (args.value === 'Update') {
+      grid.endEdit();
+      dropdownelement.value = '';
+      dropdownelement.placeholder = args.itemData.text;
+    }
+    if (args.value === 'Edit') {
+      grid.startEdit();
+      dropdownelement.value = '';
+      dropdownelement.placeholder = args.itemData.text;
+    }
+    if (args.value === 'Delete') {
+      grid.deleteRecord(selectedRow);
+      dropdownelement.value = '';
+      dropdownelement.placeholder = args.itemData.text;
+    }
+  }
