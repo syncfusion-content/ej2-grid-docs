@@ -305,6 +305,33 @@ You can programmatically select specific rows in the ##Platform_Name## Grid cont
 
 In the below demo, we have selected the grid rows only when **EmployeeID** column value greater than **3**.
 
+ {% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs189/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs189/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs189" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs189/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs189/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs189" %}
+{% endif %}
+
 ## How to get selected row indexes 
 
 You can retrieve the indexes of the currently selected rows in the Grid control. This feature is particularly useful when you need to perform actions or operations specifically on the selected rows. 
