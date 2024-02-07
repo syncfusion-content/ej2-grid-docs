@@ -11,19 +11,19 @@ domainurl: ##DomainURL##
 
 # Accessibility in ##Platform_Name## Grid control
 
-The Grid component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Grid control followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 ## WAI-ARIA attributes
 
-The Grid component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) patterns to meet the accessibility. The following ARIA attributes are used in the Grid component:
+The Grid control followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) patterns to meet the accessibility. The following ARIA attributes are used in the Grid control:
 
 | Attributes | Purpose |
 | --- | --- |
-| `role=grid` | To represent the element containing the grid component. |
+| `role=grid` | To represent the element containing the grid control. |
 | `role=row` | To represent the element containing the cells of the row in the grid. |
 | `role=rowgroup` | To represent the group of rows in the grid. |
 | `role=columnheader` | To represent the cell in a row contains header information for a column in the grid. |
-| `role=gridcell` | To represent a cell in the grid component. |
+| `role=gridcell` | To represent a cell in the grid control. |
 | `role=button` | To represent the element that acts as a button in the grid. |
 | `role=search` | To represent the element that acts as a search region in the grid. |
 | `role=presentation` | To represent the element to be not available for accessibility concerns. |
@@ -45,8 +45,7 @@ The Grid component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patte
 
 ## Keyboard interaction
 
-
-The Grid component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Grid component.
+The Grid control followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Grid control.
 
 <b>Pager</b>
 
@@ -154,8 +153,93 @@ The Grid component followed the [keyboard interaction](https://www.w3.org/WAI/AR
 
 <br>
 
-> * The <kbd>Command</kbd> and <kbd>Control</kbd> keys on Mac devices can be interchanged. When this switch occurs, use the <kbd>Command</kbd> key in place of the <kbd>Control</kbd> key and the <kbd>Control</kbd> key in place of the <kbd>Command</kbd> key for the above listed key interactions with Mac devices. 
-> * For example, after switching the keys to group the columns when the header element is focused use <kbd>Command + Space</kbd> and for expanding the visible groups use <kbd>Ctrl + Down Arrow</kbd>.
+> * The <kbd>Command</kbd> and <kbd>Control</kbd> keys on Mac devices can be interchanged. When this switch occurs, use the <kbd>Command</kbd> key in place of the <kbd>Control</kbd> key and the <kbd>Control</kbd> key in place of the <kbd>Command</kbd> key for the above listed key interactions with Mac devices. For example, after switching the keys to group the columns when the header element is focused use <kbd>Command + Space</kbd> and for expanding the visible groups use <kbd>Ctrl + Down Arrow</kbd>.
+
+### How to prevent default key action behavior
+
+The Syncfusion ##Platform_Name## Grid provides flexibility to prevent the default key action behavior based on your requirements. This enables you to intercept and customize the behavior when specific keys are pressed within a web application
+
+To prevent the default key action behavior in the grid, you can utilize the [keyPressed](../../api/grid/#keypressed) event. This event is triggered for every key press, allowing you to customize the behavior based on the pressed key.
+
+The following example demonstrates how to prevent the default behavior of the **"ENTER"** key using the `keyPressed` event.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/keyboard-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/keyboard-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/keyboard-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/keyboard-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/keyboard-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/keyboard-cs1" %}
+{% endif %}
+
+### Custom shortcut keys to perform grid actions
+
+The Syncfusion ##Platform_Name## Grid control enables you to enhance the usablity of keyboard shortcuts for various grid actions and navigation. In addition to the built-in keyboard navigation capabilities, you can implement custom keyboard shortcuts to execute specific actions.
+
+To achieve this, you can utilize the [keyPressed](../../api/grid/#keypressed) event of the grid. This event is triggered for every key press, allowing you to customize the behavior based on the pressed key.
+
+The following example demonstrates how to perform grid actions using shortcut keys through the `keyPressed` event. Within the event, define the following custom shortcuts to perform various grid actions:
+
+* Pressing N adds a new record.
+* Pressing Ctrl + S save a record by invoking endEdit.
+* Pressing Ctrl + D deletes a record.
+* Pressing Ctrl + A selects all rows.
+* Pressing Ctrl + G groups the grid by a specified column.
+
+And prevented the default actions associated with the following keyboard shortcuts used for default grouping and editing action:
+
+* Ctrl + Space
+* Insert
+* F2 
+* Delete 
+* Enter
+
+You can add more custom shortcuts and actions as needed to enhance the functionality of your Syncfusion ##Platform_Name## Grid control.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/keyboard-cs2/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/keyboard-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/keyboard-cs2" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/keyboard-cs2/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/keyboard-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/keyboard-cs2" %}
+{% endif %}
 
 ## Ensuring accessibility
 
