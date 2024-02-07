@@ -3,16 +3,17 @@ ej.grids.Grid.Inject(ej.grids.Page, ej.grids.Toolbar, ej.grids.Edit, ej.grids.Gr
 var grid = new ej.grids.Grid({
     dataSource: data,
     allowPaging:true,
-    pageSettings:{pageSize:6},
     toolbar: ['Delete', 'Update', 'Cancel'],
     editSettings: { allowEditing: true, allowDeleting: true, mode: 'Batch' },
     allowGrouping: true,
     groupSettings: { showDropArea: false, columns: ['ShipCountry'] },
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', isPrimaryKey:true, textAlign: 'Right', width: 120 },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
-        { field: 'Freight', headerText: 'Freight', width: 150, format: 'C2' },
-        { field: 'ShipCountry', headerText: 'Ship Name', width: 150 }
+        { field: "OrderID", headerText: "Order ID", isPrimaryKey: true, textAlign: "Right", width: 120 },
+        { field: "CustomerID", headerText: "Customer ID", width: 150 },
+        { field: "OrderDate", headerText: "OrderDate", width: 120, format: "yMd" },
+        { field: "Freight", headerText: "Freight", width: 150, format: "C2", editType:"numericedit" },
+        { field: "ShipCountry", headerText: "Ship Country", width: 150 },
+        { field: "ShipCity", headerText: "Ship City", width: 150 },
     ],
     height: 268,
     aggregates: [{
@@ -26,10 +27,10 @@ var grid = new ej.grids.Grid({
     },
     {
         columns:[{
-            type:'Sum',
+            type:'Average',
             field:'Freight',
             format:'C2',
-            groupCaptionTemplate:'Sum : ${Sum}'
+            groupCaptionTemplate:'Average : ${Average}'
         }]
     },
     {
@@ -43,4 +44,3 @@ var grid = new ej.grids.Grid({
     ]
 });
 grid.appendTo('#Grid');
-
