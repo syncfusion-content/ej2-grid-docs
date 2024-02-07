@@ -20,8 +20,8 @@ The column definitions are used as the [`dataSource`](../../api/grid/#datasource
 
 Column type can be specified using the [`columns.type`](../../api/grid/column/#type) property. It specifies the type of data the column binds.
 
-If the [`format`](../../api/grid/column/#format)  is defined for a column, the column uses [`type`](../../api/grid/column/#type) to select the appropriate format option ([number](../../common/internationalization/#number-formatting)
- or [date](../../common/internationalization/#manipulating-datetime)).
+If the [`format`](../../api/grid/column/#format)  is defined for a column, the column uses [`type`](../../api/grid/column/#type) to select the appropriate format option ([number](../../common/internationalization#number-formatting)
+ or [date](../../common/internationalization#manipulating-datetime)).
 
 Grid column supports the following types:
 * string
@@ -128,7 +128,7 @@ You can achieve the expression column by using the [`valueAccessor`](../../api/g
 
 ## Format
 
-To format cell values based on specific culture, use the [`columns.format`](../../api/grid/column/#format) property. The grid uses [Internalization](../../common/internationalization/) library to format [`number`](../../common/internationalization/#number-formatting) and [`date`](../../common/internationalization/#date-formatting)
+To format cell values based on specific culture, use the [`columns.format`](../../api/grid/column/#format) property. The grid uses [Internalization](../../common/internationalization) library to format [`number`](../../common/internationalization#number-formatting) and [`date`](../../common/internationalization#date-formatting)
 values.
 
 {% if page.publishingplatform == "typescript" %}
@@ -158,7 +158,7 @@ values.
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs4" %}
 {% endif %}
 
-> By default, the [`number`](../../common/internationalization/#number-formatting) and [`date`](../../common/internationalization/#date-formatting) values are formatted in **en-US** locale. You can localize the currency and date in different locale as explained [`here`](../../common/internationalization/)
+> By default, the [`number`](../../common/internationalization#number-formatting) and [`date`](../../common/internationalization#date-formatting) values are formatted in **en-US** locale. You can localize the currency and date in different locale as explained [`here`](../../common/internationalization)
 
 ### Number formatting
 
@@ -170,13 +170,13 @@ N | Denotes numeric type. | The numeric format is followed by integer value as N
 C | Denotes currency type. | The currency format is followed by integer value as C2, C3. etc which denotes the number of precision to be allowed.
 P | Denotes percentage type | The percentage format expects the input value to be in the range of 0 to 1. For example the cell value **0.2** is formatted as **20%**. The percentage format is followed by integer value as P2, P3. etc which denotes the number of precision to be allowed.
 
-Please refer to the link to know more about [`Number formatting`](../../common/internationalization/#number-formatting).
+Please refer to the link to know more about [`Number formatting`](../../common/internationalization#number-formatting).
 
 ### Date formatting
 
 You can format date values either using built-in date format string or custom format string.
 
-For built-in date format you can specify [`columns.format`](../../api/grid/column/#format) property as string   (Example: **yMd**). Please refer to the link to know more about [`Date formatting`](../../common/internationalization/#date-formatting).
+For built-in date format you can specify [`columns.format`](../../api/grid/column/#format) property as string   (Example: **yMd**). Please refer to the link to know more about [`Date formatting`](../../common/internationalization#date-formatting).
 
 You can also use custom format string to format the date values. Some of the custom formats and the formatted date values are given in the below table.
 
@@ -553,9 +553,9 @@ In the following sample, the `rowDataBound` event of the Grid is used to set the
 * [How to set complex column as Foreignkey column](../how-to/complex-column-as-foreign-key-column)
 * [Complex Data Binding with list of Array Of Objects](../how-to/list-of-array-of-objects)
 * [Compare columns effortlessly using column pinning feature in Grid](https://www.syncfusion.com/blogs/post/compare-columns-effortlessly-using-column-pinning-data-grid.aspx)
-* [How to edit the column in Grid using the uploader control](https://www.syncfusion.com/kb/12693/how-to-edit-the-column-in-grid-using-the-uploader-control)
-* [How to add the aggregate option functionalities in the column menu's feature](https://www.syncfusion.com/kb/12692/how-to-add-the-aggregate-option-functionalities-in-the-column-menus-feature)
-* [How to render tooltip with custom content on Grid columns](https://www.syncfusion.com/kb/12227/how-to-render-tooltip-with-custom-content-on-grid-columns)
-* [How to display the multiplication table of a number accepted from the user](https://www.syncfusion.com/kb/11809/how-to-display-the-multiplication-table-of-a-number-accepted-from-the-user)
-* [How to drag and drop within grid and between grids](https://www.syncfusion.com/kb/11022/how-to-drag-and-drop-within-grid-and-between-grids)
-* [How to format date values received in JSON data through ajax post](https://www.syncfusion.com/kb/10626/how-to-format-date-values-received-in-json-data-through-ajax-post)
+* [How to edit the column in Grid using the uploader control](https://support.syncfusion.com/kb/article/11098/how-to-edit-the-column-in-grid-using-the-uploader-control)
+* [How to add the aggregate option functionalities in the column menu's feature](https://support.syncfusion.com/kb/article/11095/how-to-add-the-aggregate-option-functionalities-in-the-column-menus-feature)
+* [How to render tooltip with custom content on Grid columns](https://support.syncfusion.com/kb/article/10599/how-to-render-tooltip-with-custom-content-on-grid-columns)
+* [How to display the multiplication table of a number accepted from the user](https://support.syncfusion.com/kb/article/10144/how-to-display-the-multiplication-table-of-a-number-accepted-from-the-user)
+* [How to drag and drop within grid and between grids](https://support.syncfusion.com/kb/article/9595/how-to-drag-and-drop-within-grid-and-between-grids-in-javascript)
+* [How to format date values received in JSON data through ajax post](https://support.syncfusion.com/kb/article/9156/how-to-format-date-values-received-in-json-data-through-ajax-post)
