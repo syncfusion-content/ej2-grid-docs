@@ -69,6 +69,16 @@ The Grid component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patte
 | `aria-labelledby` | Provides an accessible name for the checkbox labels in excel filter, checkbox filter and column chooser dialog.  |
 | `aria-describedby` | Provides an description about the features enabled in the header when the grid header cell is focused. |
 
+The Syncfusion Grid component is structured with a two-table architecture for its header and content. In order to improve accessibility for screen readers, roles and aria-attributes are incorporated for both the grid parent and all its child elements.
+
+The accessibility checker highlights the following known issues:
+
+* aria-required-children: This warning appears when rendering the grid without any features, as it contains textarea and grid content. Additionally, it appears when enabling features such as the toolbar and grouping.
+
+![Accessibility checker issue](images/accessibility-checker-issue.png)
+
+It's important to note that this limitation does not impact the readability of the grid content over screen readers. 
+
 ## Keyboard interaction
 
 
