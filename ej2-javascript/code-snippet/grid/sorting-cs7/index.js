@@ -1,7 +1,4 @@
 loadCultureFiles();
-ej.base.setCulture('ar');
-ej.base.setCurrencyCode('QAR');
-
 var formatOptions = { type: 'date', format: 'yyyy/MMM/dd' };
 var sortComparer = (reference, comparer, sortOrder) => {
     const referenceDate = new Date(reference);
@@ -20,7 +17,6 @@ var sortComparer = (reference, comparer, sortOrder) => {
         return sortOrder === 'Ascending' ? -comparisonResult : comparisonResult;
     }
 };
-
 var grid = new ej.grids.Grid({
     dataSource: data,
     allowSorting: true,
@@ -33,19 +29,29 @@ var grid = new ej.grids.Grid({
     ],
     height: 315,
 });
+grid.appendTo('#Grid');
 function loadCultureFiles() {
-  var files = ['ca-gregorian.json', 'numbers.json', 'currencies.json', 'timeZoneNames.json','numberingSystems.json'];
-  var loader = ej.base.loadCldr;
+  var files = ['ca-gregorian.json', 'numbers.json', 'currencies.json', 'timeZoneNames.json', 'numberingSystems.json'];
   var loadCulture = function (prop) {
-      var val, ajax;
-      ajax = new ej.base.Ajax('./' + files[prop], 'GET', false);
-      ajax.onSuccess = function (value) {
-          val = value;
+    var fetch = new ej.base.Fetch('./' + files[prop], 'GET', false);
+    fetch.onSuccess = function (response) {
+        if (typeof response=== 'object') {
+         // If the response is an object, convert it to a JSON string
+          var jsonString = JSON.stringify(response);
+          ej.base.loadCldr(JSON.parse(jsonString));
+        } else if (typeof response=== 'string') {
+          // If the response is already a JSON string, parse and load it
+          ej.base.loadCldr(JSON.parse(response));
+
+        } else {
+          console.error('Invalid responsetype received:', response);
+        }
+        ej.base.setCulture('ar');
+        ej.base.setCurrencyCode('QAR');
       };
-      ajax.send();
-      loader(JSON.parse(val));
+    fetch.send();
   };
   for (var prop = 0; prop < files.length; prop++) {
-      loadCulture(prop);
-}}
-grid.appendTo('#Grid');
+    loadCulture(prop);
+  }
+}
