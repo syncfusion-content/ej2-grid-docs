@@ -81,7 +81,6 @@ It's important to note that this limitation does not impact the readability of t
 
 ## Keyboard interaction
 
-
 The Grid component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Grid component.
 
 <b>Pager</b>
