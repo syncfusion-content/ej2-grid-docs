@@ -1,9 +1,7 @@
 import { Button } from '@syncfusion/ej2-buttons';
-import { Grid,Page } from '@syncfusion/ej2-grids';
+import { Grid } from '@syncfusion/ej2-grids';
 import { TextBox } from '@syncfusion/ej2-inputs';
 import { data } from './datasource.ts';
-
-Grid.Inject(Page);
 
 let grid: Grid = new Grid({
   dataSource: data,

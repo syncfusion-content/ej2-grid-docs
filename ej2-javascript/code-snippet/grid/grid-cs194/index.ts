@@ -1,8 +1,6 @@
 import { DropDownList, ChangeEventArgs } from '@syncfusion/ej2-dropdowns';
-import { Grid, Selection } from '@syncfusion/ej2-grids';
+import { Grid } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
-
-Grid.Inject(Selection)
 
 let grid: Grid = new Grid({
   dataSource: data,
