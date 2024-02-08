@@ -1,5 +1,3 @@
-ej.grids.Grid.Inject(ej.grids.Page);
-
 var grid = new ej.grids.Grid({
   dataSource: data,
   selectionSettings: {    mode:'Cell', type: 'Multiple', persistSelection: true   },

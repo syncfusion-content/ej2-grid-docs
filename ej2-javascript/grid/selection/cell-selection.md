@@ -348,4 +348,3 @@ In the following example, cell selection is canceled when the value of **ShipCou
 
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs158" %}
 {% endif %}
-

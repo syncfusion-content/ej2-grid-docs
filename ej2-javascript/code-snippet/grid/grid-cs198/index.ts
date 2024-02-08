@@ -1,9 +1,7 @@
 import { Button } from '@syncfusion/ej2-buttons';
-import { Grid,Page } from '@syncfusion/ej2-grids';
+import { Grid } from '@syncfusion/ej2-grids';
 import { Dialog } from '@syncfusion/ej2-popups';
 import { data } from './datasource.ts';
-
-Grid.Inject(Page);
 
 let grid: Grid = new Grid({
   dataSource: data,
@@ -29,7 +27,6 @@ button.appendTo('#buttons');
   dialog.visible = true;
   dialog.content = `<p><b>Selected Cell Indexes:</b></p><br> `
   for (let i = 0; i < selectedCells.length; i++) {
-    console.log(selectedCells[i])
     dialog.content += `<p><li>Row: ${selectedCells[i].rowIndex}, cellIndex: ${selectedCells[i].cellIndexes} <p>`;
   }
 };
