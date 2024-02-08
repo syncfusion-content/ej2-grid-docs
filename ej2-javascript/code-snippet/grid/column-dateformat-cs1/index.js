@@ -1,7 +1,4 @@
 loadCultureFiles();
-ej.base.setCulture('es-AR');
-ej.base.setCurrencyCode('ARS');
-
 var formatOptions = { type: 'date', format: 'yyyy-MMM-dd' };
 
 var grid = new ej.grids.Grid({
@@ -16,19 +13,30 @@ var grid = new ej.grids.Grid({
     ],
     height: 315,
 });
+grid.appendTo('#Grid');
+
 function loadCultureFiles() {
   var files = ['ca-gregorian.json', 'numbers.json', 'currencies.json', 'timeZoneNames.json'];
-  var loader = ej.base.loadCldr;
   var loadCulture = function (prop) {
-      var val, ajax;
-      ajax = new ej.base.Ajax('./' + files[prop], 'GET', false);
-      ajax.onSuccess = function (value) {
-          val = value;
+    var fetch = new ej.base.Fetch('./' + files[prop], 'GET', false);
+    fetch.onSuccess = function (response) {
+        if (typeof response=== 'object') {
+         // If the response is an object, convert it to a JSON string
+          var jsonString = JSON.stringify(response);
+          ej.base.loadCldr(JSON.parse(jsonString));
+        } else if (typeof response=== 'string') {
+          // If the response is already a JSON string, parse and load it
+          ej.base.loadCldr(JSON.parse(response));
+
+        } else {
+          console.error('Invalid responsetype received:', response);
+        }
+        ej.base.setCulture('es-AR');
+        ej.base.setCurrencyCode('ARS');
       };
-      ajax.send();
-      loader(JSON.parse(val));
+    fetch.send();
   };
   for (var prop = 0; prop < files.length; prop++) {
-      loadCulture(prop);
-}}
-grid.appendTo('#Grid');
+    loadCulture(prop);
+  }
+}

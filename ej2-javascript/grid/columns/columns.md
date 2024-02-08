@@ -15,7 +15,7 @@ In Syncfusion ##Platform_Name## Grid, Columns are fundamental elements that play
 
 ## Column types
 
-The Syncfusion Grid control allows you to specify the type of data that a column binds using the [columns->type](../../api/grid/column/#type) property. The `type` property is used to determine the appropriate [format](../../api/grid/column/#format), such as [number](../../common/internationalization/#number-formatting) or [date](../../common/internationalization/#manipulating-datetime), for displaying the column data. 
+The Syncfusion Grid control allows you to specify the type of data that a column binds using the [columns->type](../../api/grid/column/#type) property. The `type` property is used to determine the appropriate [format](../../api/grid/column/#format), such as [number](../../common/internationalization#number-formatting) or [date](../../common/internationalization#manipulating-datetime), for displaying the column data. 
 
 Grid supports the following column types:
 
@@ -212,7 +212,7 @@ The following example code demonstrates the formatting of data for **Mark 1** an
 {% previewsample "page.domainurl/code-snippet/grid/column-numberformat-cs1" %}
 {% endif %}
 
->To learn more about number formatting, you can refer to the [number](https://ej2.syncfusion.com/angular/documentation/common/globalization/internationalization#number-formatting) section.
+>To learn more about number formatting, you can refer to the [number](../../common/globalization/internationalization#number-formatting) section.
 
 ### Date formatting
 
@@ -396,11 +396,11 @@ Here is an example of using the `textAlign` property to align the text of a Grid
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs7" %}
 {% endif %}
 
->* The `textAlign` property only changes the alignment content not the column header. If you want to align both the column header and content, you can use the [headerTextAlign](https://ej2.syncfusion.com/documentation/api/grid/column/#headerTextAlign) property.
+>* The `textAlign` property only changes the alignment content not the column header. If you want to align both the column header and content, you can use the [headerTextAlign](../../api/grid/column/#headerTextAlign) property.
 
 ## Render boolean value as checkbox
 
-The Grid control allows you to render boolean values as checkboxes in columns. This can be achieved by using the [displayAsCheckBox](../../api/grid/column/#displayascheckbox) property, which is available in the [columns](../..api/grid/column/). This property is useful when you have a boolean column in your Grid and you want to display the values as checkboxes instead of the default text representation of **true** or **false**.
+The Grid control allows you to render boolean values as checkboxes in columns. This can be achieved by using the [displayAsCheckBox](../../api/grid/column/#displayascheckbox) property, which is available in the [columns](../..api/grid/column). This property is useful when you have a boolean column in your Grid and you want to display the values as checkboxes instead of the default text representation of **true** or **false**.
 
 To enable the rendering of boolean values as checkboxes, you need to set the `displayAsCheckBox` property of the `columns` to **true**.
 
@@ -821,7 +821,7 @@ This method returns an array of field names of all the columns in the Grid.
 let fieldNames = grid.getColumnFieldNames()
 ```
 
-> For a complete list of column methods and properties, refer to this [section](../../api/grid/column/).
+> For a complete list of column methods and properties, refer to this [section](../../api/grid/column).
 
 ### Updating column definitions
 
@@ -899,7 +899,7 @@ grid.refreshColumns();
 
 ## Responsive columns
 
-The Syncfusion ##Platform_Name## Grid provides a built-in feature to toggle the visibility of columns based on media queries using the [hideAtMedia](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#hideatmedia) property of the column object. The `hideAtMedia` accepts valid [Media Queries](http://cssmediaqueries.com/what-are-css-media-queries.html). 
+The Syncfusion ##Platform_Name## Grid provides a built-in feature to toggle the visibility of columns based on media queries using the [hideAtMedia](../..api/grid/column/#hideatmedia) property of the column object. The `hideAtMedia` accepts valid [Media Queries](http://cssmediaqueries.com/what-are-css-media-queries.html). 
 
 In this example, we have a Grid that displays data with three columns: **Order ID, Customer ID, and Freight**. We have set the `hideAtMedia` property of the **OrderID** column to (min-width: 700px) which means that this column will be hidden when the browser screen width is less than or equal to 700px.
 
