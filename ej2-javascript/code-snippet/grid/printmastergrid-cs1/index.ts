@@ -1,6 +1,4 @@
-
-
-import { Grid, RowSelectEventArgs, Selection, Toolbar } from '@syncfusion/ej2-grids';
+import { Grid, RowSelectEventArgs, Selection, Toolbar, PrintEventArgs } from '@syncfusion/ej2-grids';
 import { data, customerData } from './datasource.ts';
 
 Grid.Inject(Selection, Toolbar);
@@ -30,24 +28,21 @@ function rowSelected(args: RowSelectEventArgs): void {
     document.getElementById('key').innerHTML = selectedRecord.ContactName;
 }
 
-function beforePrint(args) {
-    let customEle = document.createElement('div');
-    customEle.innerHTML = document.getElementsByClassName('e-statustext')[0].innerHTML + grid.element.innerHTML;
-    customEle.appendChild(document.createElement('br'));
-    args.element.append(customEle);
+function beforePrint(args:  PrintEventArgs) {
+    let customElement = document.createElement('div');
+    customElement.innerHTML = document.getElementsByClassName('e-statustext')[0].innerHTML + grid.element.innerHTML;
+    customElement.appendChild(document.createElement('br'));
+    args.element.append(customElement);
 }
 
 let grid: Grid = new Grid({
     allowSelection: false,
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', width: 100, textAlign: 'Right' },
+        { field: 'OrderID', headerText: 'Order ID', width: 100 },
         { field: 'Freight', headerText: 'Freight', width: 100, format: 'C2', type: 'number' },
-        { field: 'ShipName', headerText: 'Ship Name', width: 200 },
+        { field: 'ShipName', headerText: 'Ship Name', width: 150 },
         { field: 'ShipCountry', headerText: 'Ship Country', width: 150 },
-        { field: 'ShipAddress', headerText: 'Ship Address', width: 200 },
+        { field: 'ShipAddress', headerText: 'Ship Address', width: 150 },
     ],
 });
 grid.appendTo('#DetailGrid');
-
-
-
