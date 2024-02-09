@@ -49,7 +49,7 @@ var chart = new ej.charts.Chart({
 });
 chart.appendTo('#chart-container');
 
-var printBtn = new ej.buttons.Button({ cssClass: 'e-danger' },'#printbtn');
+var printButton = new ej.buttons.Button({ cssClass: 'e-danger' },'#printbtn');
 document.getElementById('printbtn').addEventListener('click', function () {
   grid.print();
 });

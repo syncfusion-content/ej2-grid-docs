@@ -55,8 +55,7 @@ let chart: Chart = new Chart({
 });
 chart.appendTo('#chart-container');
 
-
-let printBtn: Button = new Button({ cssClass: 'e-danger' },'#printbtn');
+let printButton: Button = new Button({ cssClass: 'e-danger' },'#printbtn');
 (document.getElementById('printbtn') as HTMLElement).addEventListener('click',function () {
     grid.print();
   });
