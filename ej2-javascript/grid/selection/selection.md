@@ -193,8 +193,8 @@ In the following example, it demonstrates how to clear all selection by calling 
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs180" %}
 {% endif %}
 
-> In **Both** mode, if you call `clearCellSelection` first, it will clear cell selections, and then if you call `clearRowSelection`, it will clear row selections. The order of method calls determines which type of selection is cleared first.
-> To remove a specific selection in a row, cell, or column, utilize the following methods: `clearRowSelection` for clearing row selections, `clearCellSelection` for clearing cell selections, and clearColumnSelection for clearing column selections.
+> In **Both** mode, if you call [clearCellSelection](../../api/grid/#clearcellselection) first, it will clear cell selections, and then if you call [clearRowSelection](../../api/grid/#clearrowselection), it will clear row selections. The order of method calls determines which type of selection is cleared first.
+> To remove a specific selection in a row, cell, or column, utilize the following methods: `clearRowSelection` for clearing row selections, `clearCellSelection` for clearing cell selections, and `clearColumnSelection` for clearing column selections.
 
 ## Persist selection 
 
