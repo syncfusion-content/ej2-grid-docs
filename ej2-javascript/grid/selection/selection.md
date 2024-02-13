@@ -65,7 +65,7 @@ To enable selection mode, you can set the [selectionSettings->mode](../../api/gr
 
 * **Both** - Allows you to select rows and cells at the same time.
 
-The following example, demonstrates how to dynamically enable and change the `selectionSettings->mode` using the `DropDownList` control:
+The following example, demonstrates how to dynamically enable and change the `selectionSettings.mode` using the `DropDownList` control:
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -194,7 +194,7 @@ In the following example, it demonstrates how to clear all selection by calling 
 {% endif %}
 
 > In **Both** mode, if you call `clearCellSelection` first, it will clear cell selections, and then if you call `clearRowSelection`, it will clear row selections. The order of method calls determines which type of selection is cleared first.
-> To remove a specific selection in a row, cell, or column, utilize the following methods: clearRowSelection for clearing row selections, clearCellSelection for clearing cell selections, and clearColumnSelection for clearing column selections.
+> To remove a specific selection in a row, cell, or column, utilize the following methods: `clearRowSelection` for clearing row selections, `clearCellSelection` for clearing cell selections, and clearColumnSelection for clearing column selections.
 
 ## Persist selection 
 
