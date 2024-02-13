@@ -198,7 +198,7 @@ You can perform single row selection, multiple row selection, and range of row s
 
 Single row selection allows you to select a single row at a time within the Grid. This feature is useful when you want to focus on specific rows or perform actions on the data within a particular row.
 
-To achieve single row selection, you can use the [selectRow](../../api/grid/selection/#selectcolumns) method. This method allows you to programmatically select a specific row within the Grid by specifying its index.
+To achieve single row selection, you can use the [selectRow](../../api/grid/#selectrow) method. This method allows you to programmatically select a specific row within the Grid by specifying its index.
 
 The following example demonstrates how to select a single row within the Grid by obtaining the selected row index through a textbox control and passing these row index as argument to the `selectRow` method. When the button event is triggered by clicking the **Select Row** button, a single row is selected within the Grid:
 

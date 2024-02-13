@@ -1,5 +1,5 @@
 import { Grid,Page, RowDataBoundEventArgs } from '@syncfusion/ej2-grids';
-import { data } from './data-source.ts';
+import { data } from './datasource.ts';
 
 Grid.Inject(Page);
 
