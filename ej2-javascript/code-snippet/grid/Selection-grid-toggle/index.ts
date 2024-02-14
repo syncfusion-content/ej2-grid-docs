@@ -18,11 +18,9 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 
-let enableToggleSelection = true;
-
 let toggle: Switch = new Switch({
   change: toggleColumnSelection,
-  checked: enableToggleSelection,
+  checked: true,
 });
 toggle.appendTo('#switch');
 
