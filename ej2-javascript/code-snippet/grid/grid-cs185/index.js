@@ -11,11 +11,9 @@ var grid = new ej.grids.Grid({
 });
 grid.appendTo('#Grid');
 
-var enableSelection = false;
-
 var toggle = new ej.buttons.Switch({
   change: toggleRowSelection,
-  checked: enableSelection,
+  checked: false,
 });
 toggle.appendTo('#switch');
 

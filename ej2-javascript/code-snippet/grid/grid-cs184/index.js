@@ -14,7 +14,7 @@ var grid = new ej.grids.Grid({
 });
 grid.appendTo('#Grid');
 
-var mod;
+var modulus;
 var value;
 
 var dropdownData = [
@@ -42,25 +42,25 @@ dropdown.appendTo('#dropdown');
 
 function actionComplete(args) {
   if (args.requestType === "paging") {
-    grid.selectRow(mod);
+    grid.selectRow(modulus);
   }
 }
 
 function valueChange(args) {
   value = +args.value;
-  mod = (value - 1) % 10;
+  modulus = (value - 1) % 10;
   var page = Math.ceil(value / 10);
 
   if (page === 1) {
     if (grid.pagerModule.pagerObj.currentPage != 1) {
       grid.pagerModule.goToPage(1);
     }
-    grid.selectRow(mod);
+    grid.selectRow(modulus);
   }
   else {
     grid.pagerModule.goToPage(page);
     if (grid.pagerModule.pagerObj.currentPage == page) {
-      grid.selectRow.mod;
+      grid.selectRow(modulus);
     }
   }
 }

@@ -17,11 +17,9 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 
-let enableSelection = false;
-
 let toggle: Switch = new Switch({
   change: toggleRowSelection,
-  checked: enableSelection,
+  checked: false,
 });
 toggle.appendTo('#switch');
 
