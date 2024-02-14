@@ -23,11 +23,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
     <script src="systemjs.config.js"></script>
 </head>
+
 <body>
     <div id='loader'>Loading....</div>
     <div id='container'>
-        <div style="padding: 20px 0 0px 240px;"><p style="color:red;" id="message"></p></div></br>
+        </br></br> 
+        <div style="padding-bottom: 10px">
+            <label padding: 30px 17px 0 0>Enter the start row index: </label>
+            <input type="text" tabindex="2" id="textboxvalue1"/>
+        </div>
+        <div style="padding-bottom: 10px">
+            <label padding: 30px 17px 0 0>Enter the start column index: </label>
+            <input type="text" tabindex="2" id="textboxvalue2"/>
+        </div>
+        <div style="padding-bottom: 10px">
+            <label padding: 30px 17px 0 0>Enter the end row index: </label>
+            <input type="text" tabindex="2" id="textboxvalue3"/>
+        </div>
+        <div style="padding-bottom: 10px">
+            <label padding: 30px 17px 0 0>Enter the end column index: </label>
+            <input type="text" tabindex="2" id="textboxvalue4"/>
+        </div>
+        <div style="padding-bottom: 10px">
+            <button ejs-button id="buttons" cssClass="e-small"></button>
+        </div>
         <div id='Grid'></div>
     </div>
 </body>
+
 </html>
