@@ -15,17 +15,17 @@ var grid = new ej.grids.Grid({
 });
 grid.appendTo('#Grid');
 
-var selIndex = [];
+var cellIndex = [];
 
 function rowDataBound(args) {
   if (args.data['EmployeeID'] > 3) {
-    selIndex.push(parseInt(args.row.getAttribute('data-rowindex'), 10));
+    cellIndex.push(parseInt(args.row.getAttribute('data-rowindex'), 10));
   }
 }
 
 function dataBound() {
-  if (selIndex.length) {
-    grid.selectRows(selIndex);
-    selIndex = [];
+  if (cellIndex.length) {
+    grid.selectRows(cellIndex);
+    cellIndex = [];
   }
 }

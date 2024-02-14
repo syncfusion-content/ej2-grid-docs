@@ -20,17 +20,17 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 
-let selIndex: number[]  = [];
+let cellIndex: number[]  = [];
 
 function rowDataBound(args: RowDataBoundEventArgs) {
   if (args.data['EmployeeID'] > 3) {
-    selIndex.push(parseInt(args.row.getAttribute('data-rowindex'), 10));
+    cellIndex.push(parseInt(args.row.getAttribute('data-rowindex'), 10));
   }
 }
 
 function dataBound() {
-  if (selIndex.length) {
-    grid.selectRows(selIndex);
-    selIndex = [];
+  if (cellIndex.length) {
+    grid.selectRows(cellIndex);
+    cellIndex = [];
   }
 }
