@@ -205,5 +205,5 @@ The Grid control provides a set of events that are triggered during drag and dro
 
 ## See also
 
-[Sorting data in the Syncfusion Grid](../sorting.md)
-[Filtering data in the Syncfusion Grid](../filtering/filtering.md)
+[Sorting data in the Syncfusion Grid](../sorting)
+[Filtering data in the Syncfusion Grid](../filtering/filtering)
