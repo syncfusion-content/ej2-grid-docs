@@ -371,7 +371,7 @@ The following example demonstrates how to get selected row indexes using  `getSe
 
 The Grid control allows you to retrieve the selected records even when navigating to different pages. This feature is useful when working with large data sets and allows you to perform actions on the selected records across multiple pages. 
 
-To persist the selection across pages, you need to enable the [persistselection](../../api/grid/selectionSettings/#persistselection) property. By default, this property is set to **false**. To enable it, set the value to **true** in the `selectionSettings` property of the Grid control.
+To persist the selection across pages, you need to enable the [persistSelection](../../api/grid/selectionSettings/#persistselection) property. By default, this property is set to **false**. To enable it, set the value to **true** in the `selectionSettings` property of the Grid control.
 
 To retrieve the selected records from different pages, you can use the  [getSelectedRecords](../../documentation/api-grid.html#getSelectedRecords) method. This method returns an array of the selected records.
 

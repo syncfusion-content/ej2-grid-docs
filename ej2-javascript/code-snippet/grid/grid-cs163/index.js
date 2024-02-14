@@ -9,8 +9,7 @@ var grid = new ej.grids.Grid({
     { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
     { field: 'ShipCountry', headerText: 'Ship Country', width: 130 },
     { field: 'Freight', headerText: 'Freight', format: 'C2', width: 100 }
-  ],
-  height: 315
+  ]
 });
 grid.appendTo('#Grid');
 
