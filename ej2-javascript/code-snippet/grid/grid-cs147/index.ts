@@ -1,7 +1,9 @@
 
 
 
-import { Grid, Page, Toolbar, PdfExport, PdfExportProperties } from '@syncfusion/ej2-grids';
+import { Grid, Page, Toolbar, PdfExport } from '@syncfusion/ej2-grids';
+import { TextBox } from '@syncfusion/ej2-inputs';
+import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { data } from './datasource.ts';
 
 Grid.Inject(Page, Toolbar, PdfExport);
@@ -10,25 +12,37 @@ let grid: Grid = new Grid({
     dataSource: data,
     allowPaging: true,
     allowPdfExport: true,
-    pageSettings: { pageSize: 6 },
+    toolbarClick: toolbarClick,
     toolbar: ['PdfExport'],
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
-        { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C' },
-        { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', width: 140, format: 'yMd' }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+        { field: 'ShipCity', headerText: 'ShipCity', width: 100 },
+        { field: 'ShipName', headerText: 'Ship Name', width: 120 }
     ],
     height: 220
 });
 grid.appendTo('#Grid');
-grid.toolbarClick = (args: Object) => {
-    if (args['item'].id === 'Grid_pdfexport') {
-        let exportProperties: PdfExportProperties = {
-           fileName:"new.pdf"
-        };
-        grid.pdfExport(exportProperties);
+
+let textbox: TextBox = new TextBox({
+    placeholder: 'Enter file name:',
+    width: 140,
+  });
+textbox.appendTo('#textboxvalue');
+
+function toolbarClick(args: ClickEventArgs){
+    if (args.item.id === 'Grid_pdfexport') {
+        // 'Grid_pdfexport' -> Grid control id + _ + toolbar item name
+        if (textbox.value) {
+            var pdfExportProperties = {
+                fileName: textbox.value + '.pdf',
+            };
+            grid.pdfExport(pdfExportProperties);
+        } else {
+            var pdfExportProperties = {
+                fileName: 'new.pdf',
+            };
+            grid.pdfExport(pdfExportProperties);
+        }
     }
 }
-
-
-

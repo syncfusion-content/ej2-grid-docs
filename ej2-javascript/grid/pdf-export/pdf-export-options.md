@@ -146,7 +146,7 @@ Exporting hidden columns in the Syncfusion ##Platform_Name## Grid allows you to 
 
 To export hidden columns of the grid to a PDF file, you need to set the [includeHiddenColumn](../../api/grid/pdfExportProperties/#includehiddencolumn) property as **true** in the [pdfExportProperties](../../api/grid/pdfExportProperties) property.
 
-The following example demonstrates how to export hidden columns to a PDF file. In this example, the **ShipCity** column, which is not visible in the UI, is exported to the PDF document. You can also export the grid by changing the `pdfExportProperties.includeHiddenColumn` property based on the switch toggle using the [checked](../../api/switch/#checked) property of the [EJ2 Toggle Switch Button](../../switch/getting-started) component.
+The following example demonstrates how to export hidden columns to a PDF file. In this example, the **ShipCity** column, which is not visible in the UI, is exported to the PDF document. You can also export the grid by changing the `pdfExportProperties.includeHiddenColumn` property based on the switch toggle using the [checked](../../api/switch/#checked) property of the [EJ2 Toggle Switch Button](../../switch/getting-started) control.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -175,15 +175,21 @@ The following example demonstrates how to export hidden columns to a PDF file. I
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs143" %}
 {% endif %}
 
-## Show or hide columns
+## Show or hide columns while exporting
 
-You can show a hidden column or hide a visible column while exporting the grid using [`toolbarClick`](../../api/grid/#toolbarclick) and [`pdfExportComplete`](../../api/grid/#pdfexportcomplete) events.
+The Syncfusion ##Platform_Name## Grid control provides the functionality to show or hide columns dynamically during the export process. This feature allows you to selectively display or hide specific columns based on your requirements.
 
-In the `toolbarClick` event, based on `args.item.id` as `Grid_pdfexport`. We can show or hide columns by setting `column.visible` property to `true` or `false` respectively.
+To show or hide columns based on user interaction during the export process, you can follow these steps:
 
-In the pdfExportComplete event, We have reversed the state back to the previous state.
+1. Handle the [toolbarClick](../../api/grid/#toolbarclick) event of the Grid control.
 
-In the below example, we have `CustomerID` as a hidden column in the grid. While exporting, we have changed `CustomerID` to visible column and `ShipCity` as hidden column.
+2. Update the visibility of the desired columns by setting the [visible](../../api/grid/column/#visible) property of the column to **true** or **false**.
+
+3. Export the grid to PDF.
+
+4. Handle the [pdfExportComplete](../../api/grid/#pdfexportcomplete) event to restore the column visibility to its original state.
+
+In the following example, the **CustomerID** is initially a hidden column in the grid. However, during the export process, the **CustomerID** column is made visible, while the **ShipCity** column is hidden.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -214,7 +220,17 @@ In the below example, we have `CustomerID` as a hidden column in the grid. While
 
 ## Change page orientation
 
-Page orientation can be changed Landscape(Default Portrait) for the exported document using the `exportProperties`.
+The Syncfusion ##Platform_Name## Grid control allows you to change the page orientation of the exported PDF document from the default portrait mode to landscape mode. This feature provides the flexibility to adjust the layout and presentation of the exported PDF according to your needs.
+
+To change the page orientation to landscape for the exported document, you can set the [pageOrientation](../../api/grid/pdfExportProperties/#pageorientation) property of the [pdfExportProperties](../../api/grid/pdfExportProperties) property. 
+
+The supported `pageOrientation` options are:
+
+1. **Landscape**: Exports the grid with a landscape PDF page orientation.
+
+2. **Portrait**: Exports the grid with a portrait PDF page orientation.
+
+The following example demonstrates how to export the grid into PDF document by setting the `pdfExportProperties.pageOrientation` property using the [value](../../api/drop-down-list#value) property of the `DropDownList` control.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -245,8 +261,11 @@ Page orientation can be changed Landscape(Default Portrait) for the exported doc
 
 ## Change page size
 
-Page size can be customized for the exported document using the `exportProperties`.
-Supported page sizes are:
+The Syncfusion ##Platform_Name## Grid control allows you to customize the page size of the exported PDF document according to your requirements. This feature provides the flexibility to adjust the layout and dimensions of the exported PDF to fit different paper sizes or printing needs. 
+
+To customize the page size for the exported document, you can set the [pageSize](../../api/grid/pdfExportProperties/#pagesize) property of the [pdfExportProperties](../../api/grid/pdfExportProperties) property to the desired page size. 
+
+Supported `pdfPageSize` are:
 * Letter
 * Note
 * Legal
@@ -254,6 +273,7 @@ Supported page sizes are:
 * A1
 * A2
 * A3
+* A4
 * A5
 * A6
 * A7
@@ -274,6 +294,8 @@ Supported page sizes are:
 * HalfLetter
 * Letter11x17
 * Ledger
+
+The following example demonstrates how to export the grid into PDF document by setting the `pdfExportProperties.pageSize` property by using [value](../../api/drop-down-list#value) property of the `DropDownList` control.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -304,7 +326,11 @@ Supported page sizes are:
 
 ## Define file name
 
-You can assign the file name for the exported document by defining `fileName` property in [`PdfExportProperties`](../../api/grid/pdfExportProperties).
+The Syncfusion ##Platform_Name## Grid control allows you to specify a custom file name for the exported PDF document. This feature enables you to provide a meaningful and descriptive name for the exported file, making it easier to identify and manage the exported data.
+
+To assign a custom file name for the exported document, you can set the [fileName](../../api/grid/pdfExportProperties/#filename) property of the [pdfExportProperties](../../api/grid/pdfExportProperties) property to the desired file name.
+
+The following example demonstrates how to define a file name using `pdfExportProperties.fileName` property when exporting to PDF, based on the entered value as the file name. 
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -331,6 +357,82 @@ You can assign the file name for the exported document by defining `fileName` pr
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs147" %}
+{% endif %}
+
+## Enabling horizontal overflow
+
+The Syncfusion ##Platform_Name## Grid control allows you to display all defined grid columns on a single page even when the number of columns exceeds the maximum limits for columns in the exported PDF document. This ensures that your exported PDF maintains its readability and comprehensiveness.
+
+You can achieve this by utilizing the [pdfExportProperties->allowHorizontalOverflow](../../api/grid/pdfExportProperties/#allowhorizontaloverflow) property of the grid.
+
+In the following example, the [EJ2 Toggle Switch Button](../../switch/getting-started) control is added to enable and disable the `pdfExportProperties.allowHorizontalOverflow` property. Based on the switch toggle, the `pdfExportProperties.allowHorizontalOverflow` property is updated using the [checked](../../api/switch/#checked) property, and the export action is performed accordingly when the toolbar is clicked.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-horizontal-overflow/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-horizontal-overflow/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-horizontal-overflow" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-horizontal-overflow/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-horizontal-overflow/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-horizontal-overflow" %}
+{% endif %}
+
+## Customizing columns on export
+
+The Syncfusion ##Platform_Name## Grid control allows you to customize the appearance of grid columns in your exported PDF documents. This feature empowers you to tailor specific column attributes such as field, header text, and text alignment, ensuring that your exported PDFs align perfectly with your design and reporting requirements.
+
+To customize the grid columns, you can follow these steps:
+
+1. Access the [pdfExportProperties->column](../../api/grid/pdfExportProperties/#columns) of the Grid control.
+
+2. Set the `column` object with attributes such as `field`, `headerText`, and `textAlign` to define the desired format.
+
+3. Trigger the PDF export operation to apply the customized column settings.
+
+The following example demonstrates how to customize the grid columns when exporting a document. In this scenario, the attributes for different columns have been customized: **OrderID** with `textAlign` set to **Right**, **CustomerID** with `headerText` as **"Customer Name"**, and **Freight** with a center-aligned `textAlign` property, which is not rendered in the grid columns.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-customize-column/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-customize-column/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-customize-column" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-customize-column/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-customize-column/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-customize-column" %}
 {% endif %}
 
 ## Font customization

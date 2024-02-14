@@ -22,7 +22,7 @@ toggle.appendTo('#switch');
 
 function toolbarClick(args){
     if (args.item.id === 'Grid_pdfexport') {
-        // 'Grid_pdfexport' -> Grid component id + _ + toolbar item name
+        // 'Grid_pdfexport' -> Grid control id + _ + toolbar item name
         var pdfExportProperties = {
             includeHiddenColumn: toggle.checked,
         };
