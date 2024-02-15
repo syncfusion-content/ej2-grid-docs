@@ -435,11 +435,13 @@ The following example demonstrates how to customize the grid columns when export
 {% previewsample "page.domainurl/code-snippet/grid/grid-customize-column" %}
 {% endif %}
 
-## Font customization
+## Font and color customization
+
+The Syncfusion ##Platform_Name## Grid control provides the ability to customize the font in the exported PDF document. This feature allows you to control the appearance and styling of the text in the exported file, ensuring consistency with your application's design.
 
 ### Default fonts
 
-By default, grid uses `Helvetica` font in the exported document. You can change the default font by using `pdfExportProperties.theme` property. The available default fonts are,
+By default, the Grid uses the **Helvetica** font in the exported document. However, you can change the default font by utilizing the [pdfExportProperties->theme](../../api/grid/pdfExportProperties/#theme) property. The available default fonts that you can choose from are:
 
 * Helvetica
 * TimesRoman
@@ -447,29 +449,50 @@ By default, grid uses `Helvetica` font in the exported document. You can change 
 * Symbol
 * ZapfDingbats
 
-The code example for changing default font,
+To change the default font, you can follow these steps:
 
-```ts
+1. Access the `pdfExportProperties` of the Grid control.
 
-    import { PdfStandardFont, PdfFontFamily, PdfFontStyle } from '@syncfusion/ej2-pdf-export';
+2. Set the `theme` property to the desired default font.
 
-    ...
+3. Trigger the PDF export operation.
 
-    let pdfExportProperties: PdfExportProperties = {
-        theme: {
-            header: {font:  new PdfStandardFont(PdfFontFamily.TimesRoman, 11, PdfFontStyle.Bold),
-            caption: { font: new PdfStandardFont(PdfFontFamily.TimesRoman, 9) },
-            record: { font: new PdfStandardFont(PdfFontFamily.TimesRoman, 10) }
-        }
-    };
+The following example demonstrates, how to change the default font when exporting a document.
 
-```
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-default-fonts/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-default-fonts/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-default-fonts" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-default-fonts/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-default-fonts/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-default-fonts" %}
+{% endif %}
 
 ### Add custom font
 
-You can change the default font of Grid header, content and caption cells in the exported document by using `pdfExportProperties.theme` property.
+In addition to changing the default font, the Syncfusion ##Platform_Name## Grid allows you to use a custom font for the Grid header, content, and caption cells in the exported document. This can be achieved by utilizing the [pdfExportProperties->theme](../../api/grid/pdfExportProperties/#theme) property.
 
-In the following example, we have used Advent Pro font to export the grid with Hungarian fonts.
+When using a custom font, it's important to provide the font in a format that can be easily embedded in the exported document. This is typically done by encoding the font file into a base64 string. This base64 encoded font data can then be used within the export settings to ensure the custom font is applied to the exported PDF.
+
+The following example demonstrates how to use the custom **Algeria** font for exporting the grid. The **base64AlgeriaFont** variable contains the base64 encoded string representing the **Algeria** font file. This encoded font data is used in the PDF export properties to specify the custom font.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -498,7 +521,42 @@ In the following example, we have used Advent Pro font to export the grid with H
 {% previewsample "page.domainurl/code-snippet/grid/gridcustomfont-cs1" %}
 {% endif %}
 
-> `PdfTrueTypeFont` accepts base 64 format of the Custom Font.
+> **PdfTrueTypeFont** accepts base64 format of the custom font.
+
+## Conditional cell customization
+
+When exporting data from the Syncfusion ##Platform_Name## Grid, you have an option to conditionally format the cells in the exported PDF document. This allows you to customize the appearance of specific cells based on their values or other criteria.
+
+To implement conditional cell formatting, you can utilize the [pdfQueryCellInfo](../../api/grid/#pdfquerycellinfo) event of the Grid. Within this event, you can access the cell object using the `args.cell` property and modify its properties, such as the background color, based on your desired conditions.
+
+The following example demonstrate how to customize the background color of the **Freight** column in the exported PDF document using the **args.cell** and **backgroundColor** properties of the `pdfQueryCellInfo` event.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/gridcustomfont-cs2/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/gridcustomfont-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/gridcustomfont-cs2" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/gridcustomfont-cs2/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/gridcustomfont-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/gridcustomfont-cs2" %}
+{% endif %}
 
 ## Export grid as blob
 
