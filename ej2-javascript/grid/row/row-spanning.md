@@ -51,9 +51,12 @@ In the following demo, **Davolio** cell is spanned to two rows in the **Employee
 
 ## Limitations
 
+* When freezing rows, it becomes unable to set rowspan values as the table reaches its boundaries.
 * Row spanning is not compatible with the following features:
     1. Virtual scrolling
     2. Infinite scrolling
-    3. Lazy load grouping
+    3. Grouping
     4. Row drag and drop
-    5. Grouping
+    5. Autofill
+    6. Inline editing
+    7. Batch editing
