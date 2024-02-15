@@ -1,7 +1,8 @@
-
-
+import { DropDownList, ChangeEventArgs } from '@syncfusion/ej2-dropdowns';
 import { Grid, Selection } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
+
+Grid.Inject(Selection)
 
 let grid: Grid = new Grid({
     dataSource: data,
@@ -16,5 +17,22 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 
+let dropdownData = [
+  { text: 'Row', value: 'Row' },
+  { text: 'Cell', value: 'Cell' },
+  { text: 'Both', value: 'Both' }
+];
 
+let dropDownColumn: DropDownList = new DropDownList({
+  value: grid.selectionSettings.mode,
+  popupHeight: '240px',
+  width: 100,
+  dataSource: dropdownData,
+  change: valueChange,
+});
+dropDownColumn.appendTo('#dropdown');
 
+function valueChange(args: ChangeEventArgs)
+{
+  grid.selectionSettings.mode = args.value;
+}
