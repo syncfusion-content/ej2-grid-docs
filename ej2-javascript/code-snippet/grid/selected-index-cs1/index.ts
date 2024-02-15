@@ -14,10 +14,10 @@ let grid: Grid = new Grid({
     height: 315
 });
 grid.appendTo('#Grid');
-let columnSelection = false;
+
 let toggle: Switch = new Switch({
     change: onSwitchChange,
-    checked: columnSelection 
+    checked: false
 });
 toggle.appendTo('#switch');
 

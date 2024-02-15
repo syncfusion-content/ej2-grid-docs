@@ -10,10 +10,10 @@ var grid = new ej.grids.Grid({
     height: 315
 });
 grid.appendTo('#Grid');
-var columnSelection = false;
+
 var toggle = new ej.buttons.Switch({
     change: onSwitchChange,
-    checked: columnSelection 
+    checked: false
 });
 toggle.appendTo('#switch');
 
