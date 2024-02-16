@@ -59,3 +59,4 @@ In the following demo, **Davolio** cell is spanned to two rows in the **Employee
     5. Autofill
     6. Inline editing
     7. Batch editing
+    8. CRUD
