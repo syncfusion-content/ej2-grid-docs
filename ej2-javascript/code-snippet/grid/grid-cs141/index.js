@@ -16,7 +16,7 @@ var grid = new ej.grids.Grid({
 grid.appendTo('#Grid');
 
 function toolbarClick(args) {
-    if (args['item'].id === 'Grid_pdfexport') {
+    if (args.item.id === 'Grid_pdfexport') {
         var exportProperties = {
             exportType: 'CurrentPage'
         };

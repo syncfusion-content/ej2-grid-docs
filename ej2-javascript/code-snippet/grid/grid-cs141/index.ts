@@ -21,7 +21,7 @@ let grid: Grid = new Grid({
 grid.appendTo('#Grid');
 
 function toolbarClick(args: ClickEventArgs){
-    if (args['item'].id === 'Grid_pdfexport') {
+    if (args.item.id === 'Grid_pdfexport') {
         let exportProperties: PdfExportProperties = {
             exportType: 'CurrentPage'
         };
