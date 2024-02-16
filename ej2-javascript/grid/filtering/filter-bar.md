@@ -127,4 +127,4 @@ In this below demo, we have applied the filter operator `contains` for CustomerI
 
 ## See also
 
-* [How to perform filter by using Wildcard and LIKE operator filter](./filtering/#wildcard-and-like-operator-filter)
+* [How to perform filter by using Wildcard and LIKE operator filter](./filtering#wildcard-and-like-operator-filter)
