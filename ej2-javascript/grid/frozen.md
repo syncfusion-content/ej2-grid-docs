@@ -51,6 +51,7 @@ The following features are not supported in frozen rows and columns:
 
 * Detail Template
 * Hierarchy Grid
+* Autofill
 
 ## Freeze particular columns
 

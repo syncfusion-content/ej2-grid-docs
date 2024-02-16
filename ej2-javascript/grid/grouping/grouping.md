@@ -242,6 +242,11 @@ The `CustomerID` column will be sorted in descending order when the grid is init
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs84" %}
 {% endif %}
 
+## Limitations
+
+* Grouping is not compatible with the following features:
+    1. Autofill
+
 ## See Also
 
 * [Exporting grouped records](../excel-export/excel-export-options#exporting-grouped-records)
