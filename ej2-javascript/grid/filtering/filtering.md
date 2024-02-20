@@ -181,8 +181,8 @@ In the following sample, type **aero** in `Name` column to filter diacritic char
 ## See Also
 
 * [Customizing Filter Dialog by using an additional parameter](../how-to/add-params-for-filtering)
-* [How to implement 'not contains' operator for Grid filtering](https://www.syncfusion.com/kb/12691/how-to-implement-not-contains-operator-for-grid-filtering)
-* [How to filter custom date ranges in Grid column using date range picker](https://www.syncfusion.com/kb/12390/how-to-filter-custom-date-ranges-in-grid-column-using-date-range-picker)
-* [How to filter multiple records using the filter bar template](https://www.syncfusion.com/kb/11808/how-to-filter-multiple-records-using-the-filter-bar-template)
-* [How to change the data source for checkbox filter popup in Grid?](https://www.syncfusion.com/kb/11339/how-to-change-the-data-source-for-checkbox-filter-popup-in-grid)
-* [How to perform advanced filtering in grid using custom queries](https://www.syncfusion.com/kb/11256/how-to-perform-advanced-filtering-in-grid-using-custom-queries)
+* [How to implement 'not contains' operator for Grid filtering](https://support.syncfusion.com/kb/article/11092/how-to-implement-not-contains-operator-for-grid-filtering)
+* [How to filter custom date ranges in Grid column using date range picker](https://support.syncfusion.com/kb/article/11016/how-to-filter-custom-date-ranges-in-grid-column-using-date-range-picker)
+* [How to filter multiple records using the filter bar template](https://support.syncfusion.com/kb/article/10143/how-to-filter-multiple-records-using-the-filter-bar-template-in-javascript-grid)
+* [How to change the data source for checkbox filter popup in Grid?](https://support.syncfusion.com/kb/article/10065/how-to-change-the-data-source-for-checkbox-filter-popup-in-grid)
+* [How to perform advanced filtering in grid using custom queries](https://support.syncfusion.com/kb/article/9690/how-to-perform-advanced-filtering-in-grid-using-custom-queries)
