@@ -170,7 +170,7 @@ To customize the column menu icon, follow these steps:
 
 ```css
 .e-grid .e-columnheader .e-icons.e-columnmenu::before {
-    content: "\e99a";
+    content: "\e799";
 }
 ```
 
