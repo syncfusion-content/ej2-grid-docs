@@ -3,10 +3,7 @@ var grid = new ej.grids.Grid({
     dataSource: data,
     allowPaging: true,
     allowPdfExport: true,
-    allowGrouping: true,
-    groupSettings: { columns: ['ShipCity'] },
     toolbarClick: toolbarClick,
-    queryCellInfo: queryCellInfo,
     pdfQueryCellInfo: pdfQueryCellInfo,
     queryCellInfo: queryCellInfo,
     toolbar: ['PdfExport'],
@@ -22,11 +19,11 @@ grid.appendTo('#Grid');
 
 function toolbarClick(args){
     if (args.item.id === 'Grid_pdfexport') {
-        grid.pdfExport(pdfExportProperties);
+        grid.pdfExport();
     }
 }
 
-function pdfQueryCellInfo()
+function pdfQueryCellInfo(args)
 {
     if (args.column.field === 'Freight') {
         if ((args.value) < 30) {
@@ -39,8 +36,11 @@ function pdfQueryCellInfo()
     }
 }
 
-function queryCellInfo()
+function queryCellInfo(args)
 {
+    var column = args.column;
+    var cell = args.cell;
+    var data = args.data;
     if (column.field === 'Freight') {
         var FreightData= data.Freight;
         if (FreightData < 30) {
@@ -48,7 +48,7 @@ function queryCellInfo()
         } else if (FreightData < 60) {
             cell.style.background = '#ffffb3';
         } else {
-            cell.style.background = '#ff704d';
+           cell.style.background = '#ff704d';
         }
     }
 }
