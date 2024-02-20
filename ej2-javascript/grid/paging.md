@@ -93,6 +93,41 @@ The following example demonstrates how to change the page count of a Grid using 
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs135" %}
 {% endif %}
 
+### Change the current page
+
+The Syncfusion Grid allows you to change the currently displayed page, which can be particularly useful when you need to navigate through different pages of data either upon the initial rendering of the grid or update the displayed page based on interactions or specific conditions. The default value of `currentPage` property is **1**.
+
+To change the current page in the Syncfusion Grid, you can utilize the [pageSettings.currentPage](../../api/grid/pageSettings/#currentpage) property, which defines the current page number of the pager.
+
+The following example demonstrates how to dynamically change the current page using an external button click based on **TextBox** input:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs136/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs136/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs136" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs136/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs136/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs136" %}
+{% endif %}
+
 ### Add current page in URL as a query string 
 
 The Syncfusion Grid allows you to include the current page information as a query string in the URL. This feature is particularly useful for scenarios where you need to maintain and share the state of the grid's pagination.
