@@ -1,7 +1,7 @@
-var grid= new ej.grids.Grid({
+var grid = new ej.grids.Grid({
     dataSource: data,
-    selectionSettings: { type: 'Multiple', mode: 'Both' },
     selectedRowIndex: 1,
+    selectionSettings: { type: 'Multiple', mode: 'Row' },
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
         { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
@@ -11,4 +11,3 @@ var grid= new ej.grids.Grid({
     height: 315
 });
 grid.appendTo('#Grid');
-
