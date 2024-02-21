@@ -36,10 +36,10 @@ function excelExportComplete(args) {
 }
 
 function exportBlob(blob) {
-    const a = document.createElement('a');
+    var a = document.createElement('a');
     document.body.appendChild(a);
     a.style.display = 'none';
-    const url = window.URL.createObjectURL(blob); // Fix typo here
+    var url = window.URL.createObjectURL(blob); // Fix typo here
     a.href = url;
     a.download = 'Export';
     a.click();
