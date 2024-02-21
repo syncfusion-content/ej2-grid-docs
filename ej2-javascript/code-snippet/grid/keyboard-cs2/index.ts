@@ -1,5 +1,7 @@
-import { Grid, KeyboardEventArgs } from '@syncfusion/ej2-grids';
+import { Grid, Group, Edit, Selection, Toolbar, KeyboardEventArgs } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
+
+Grid.Inject(Group, Edit, Selection, Toolbar);
 
 let grid: Grid = new Grid({
     dataSource: data,
@@ -9,10 +11,9 @@ let grid: Grid = new Grid({
     allowGrouping: true,
     keyPressed:keyPressed,
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
-        { field: 'ShipCity', headerText: 'Ship City', width: 150 },
-        { field: 'ShipName', headerText: 'Ship Name', width: 150 },
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', isPrimaryKey:true, width: 120 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
+        { field: 'ShipCountry', headerText: 'Ship Country', width: 150 }
     ],
     height: 315
 });
