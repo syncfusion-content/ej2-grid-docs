@@ -361,11 +361,11 @@ To customize the sort icon in the Grid, you can override the default grid classe
 
 ```css
 .e-grid .e-icon-ascending::before {
-  content: '\e306';
+  content: '\e822';
 }
 	
 .e-grid .e-icon-descending::before {
-  content: '\e304';
+  content: '\e7fe';
 }
 ```
 In the below sample, grid is rendered with a customized sort icon.
