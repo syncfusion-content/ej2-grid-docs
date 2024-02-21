@@ -1,6 +1,6 @@
 import { Grid, Filter, Page } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
-import { DropDownList,  ChangeEventArgs } from '@syncfusion/ej2-dropdowns';
+import { DropDownList, ChangeEventArgs } from '@syncfusion/ej2-dropdowns';
 
 Grid.Inject(Filter, Page);
 
@@ -23,7 +23,8 @@ grid.appendTo('#Grid');
 let filterModesData = ['Immediate', 'OnEnter'];
 let dropDownList: DropDownList = new DropDownList({
     dataSource: filterModesData,
-    change: onModeChange
+    change: onModeChange,
+    width:180
 });
 dropDownList.appendTo('#dropdown');
 

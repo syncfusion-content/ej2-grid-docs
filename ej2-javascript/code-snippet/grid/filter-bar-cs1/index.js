@@ -18,7 +18,8 @@ grid.appendTo('#Grid');
 
 var dropDownList = new ej.dropdowns.DropDownList({
     dataSource: filterModesData,
-    change: onModeChange
+    change: onModeChange,
+    width: 180
 });
 dropDownList.appendTo('#dropdown');
 
