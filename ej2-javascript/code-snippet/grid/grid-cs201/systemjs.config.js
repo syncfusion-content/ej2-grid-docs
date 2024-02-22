@@ -36,7 +36,7 @@ System.config({
         "@syncfusion/ej2-splitbuttons": "syncfusion:ej2-splitbuttons/dist/ej2-splitbuttons.umd.min.js",
         "@syncfusion/ej2-notifications": "syncfusion:ej2-notifications/dist/ej2-notifications.umd.min.js"
     },
-     meta: { 
+     meta: {
        '*.json': { loader: 'plugin-json' }
     }
 });

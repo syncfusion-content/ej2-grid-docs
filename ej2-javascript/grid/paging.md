@@ -174,7 +174,6 @@ To use the pager template, you need to specify the [pagerTemplate](../../api/gri
 The following example demonstrates how to render a **NumericTextBox** control in the pager using the `pagerTemplate` property:
 
 {% if page.publishingplatform == "typescript" %}
-
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
 {% include code-snippet/grid/pager-template-cs1/index.ts %}
@@ -204,7 +203,7 @@ The following example demonstrates how to render a **NumericTextBox** control in
 
 The pager with a page size dropdown in Syncfusion Grid allows you to dynamically change the number of records displayed in the grid. This feature is useful when you want to easily customize the number of records to be shown per page.
 
-To enable the page size Dropdown feature in the Syncfusion Grid, you need to set the [pageSettings.pageSizes](../../api/grid/pageSettings/#pagesizes) property to **true** in the grid configuration. This property configuration triggers the rendering of a dropdown list within the pager, allowing you to select the desired page size. The selected page size determines the number of records displayed on each page of the grid.
+To enable the page size Dropdown feature in the Syncfusion Grid, you need to set the [pageSettings->pageSizes](../../api/grid/pageSettings/#pagesizes) property to **true** in the grid configuration. This property configuration triggers the rendering of a dropdown list within the pager, allowing you to select the desired page size. The selected page size determines the number of records displayed on each page of the grid.
 
 The following example that demonstrates how to integrate the page size Dropdown feature by configuring the `pageSizes` property:
 
