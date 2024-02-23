@@ -394,7 +394,7 @@ The following example demonstrates how to retrieve selected records from various
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/grid/ggrid-cs163/index.js %}
+{% include code-snippet/grid/grid-cs163/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/grid/grid-cs163/index.html %}
