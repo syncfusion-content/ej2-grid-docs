@@ -1,7 +1,7 @@
-import { Grid, Page, Selection } from '@syncfusion/ej2-grids';
+import { Grid, Page } from '@syncfusion/ej2-grids';
 import { data } from './datasource';
 
-Grid.Inject(Page, Selection);
+Grid.Inject(Page);
 
 let grid: Grid = new Grid(
     {
@@ -9,10 +9,10 @@ let grid: Grid = new Grid(
         allowPaging: true,
         pageSettings: { pageSizes: ['5', '10','15','20', 'All'] },
         columns: [
-            { field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right' },
-            { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
-            { field: 'ShipCity', headerText: 'Ship City', width: 135,   textAlign: 'Right' },
-            { field: 'ShipName', width: 120,  textAlign: 'Right'}
-        ],
+            { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+            { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
+            { field: 'Freight', headerText: 'Freight', textAlign: 'Right',format: 'C2', width: 90 },
+            { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right',format: 'yMd', width: 120 }
+        ]
     });
 grid.appendTo('#Grid');

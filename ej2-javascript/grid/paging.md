@@ -304,13 +304,21 @@ The following example demonstrates how to dynamically navigate to a particular p
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs203" %}
 {% endif %}
 
+## How to get the pager element
+
+You can get pager element in the Syncfusion Grid. This allows you to customize the pager's appearance or behavior to meet the requirements of your application.
+
+[getPager](../../api/grid/#getpager)- This method allows you to obtain a reference to the pager element within the Syncfusion Grid. It returns an HTML element representing the pager.
+
+```ts
+  grid.getPager()
+```
+
 ## Dynamically calculate page size based on element height
 
 You have an option to dynamically calculate the page size of a grid by considering the height of its parent element. This functionality proves invaluable in ensuring that the grid's content remains within the available space, preventing the need for excessive scrolling. It primarily serves the purpose of automatically adjusting the `pageSize` when the height of the grid's parent element changes dynamically. Upon each alteration in the parent element's height, invoking this method will compute the grid's `pageSize` and present the current page records accordingly. This feature effectively addresses situations where a static `pageSize` value does not cater to the varying heights of different parent elements, preventing any unwanted empty spaces within the grid.
 
 To achieve page size calculation based on an element's height in the Grid, you can utilize the [calculatePageSizeByParentHeight](../../api/grid/#calculatepagesizebyparentheight) method. This method calculates the page size based on the height of the parent element.
-
-The following example demonstrates how to calculate the page size based on element height using the `calculatePageSizeByParentHeight` method triggered by a change event based on the **NumericTextBox** input:
 
 {% if page.publishingplatform == "typescript" %}
 

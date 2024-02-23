@@ -7,6 +7,7 @@ let grid: Grid = new Grid({
     dataSource: data,
     allowPaging: true,
     pageSettings: { pageSizes: true, pageSize: 12 },
+    height: 268,
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
         { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
