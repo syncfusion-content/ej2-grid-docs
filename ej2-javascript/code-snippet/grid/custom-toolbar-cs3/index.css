@@ -12,12 +12,3 @@
   top: 45%;
   width: 30%;
 }
-
-.e-expand::before {
-  content: '\e82e';
-}
-
-.e-collapse::before {
-  content: '\e834';
-}
-
