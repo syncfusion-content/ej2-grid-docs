@@ -20,13 +20,13 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 
-let dropDownList: DropDownList = new DropDownList({
+let dropDown: DropDownList = new DropDownList({
     dataSource: dropdowndata,
     change: onChange,
     placeholder: 'select a value',
     width: 180
 });
-dropDownList.appendTo('#dropdownelement');
+dropDown.appendTo('#dropdownelement');
 
 
 function onChange(args: ChangeEventArgs): void {
