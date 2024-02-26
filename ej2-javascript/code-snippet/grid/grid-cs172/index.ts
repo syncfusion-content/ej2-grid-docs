@@ -1,5 +1,3 @@
-
-
 import { Grid, Edit, Toolbar } from '@syncfusion/ej2-grids';
 import { EmitType } from '@syncfusion/ej2-base';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
@@ -9,7 +7,7 @@ Grid.Inject(Edit, Toolbar);
 
 let clickHandler: EmitType<ClickEventArgs> = (args: ClickEventArgs) => {
     if (args.item.id === 'Click') {
-        alert("Custom toolbar click...");
+        (document.getElementById('message') as HTMLElement).innerText = `Custom Toolbar Clicked`;
     }
 };
 
@@ -19,14 +17,11 @@ let grid: Grid = new Grid({
     toolbarClick: clickHandler,
     editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true },
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100, isPrimaryKey: true },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C2' },
-        { field: 'ShipCountry', headerText: 'Ship Country', width: 150 }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+        { field: 'ShipCity', headerText: 'ShipCity', width: 100 },
+        { field: 'ShipName', headerText: 'ShipName', width: 120 }
     ],
     height: 265
 });
 grid.appendTo('#Grid');
-
-
-
