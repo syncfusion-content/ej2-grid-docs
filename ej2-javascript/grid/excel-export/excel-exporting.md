@@ -399,6 +399,45 @@ The following example demonstrates how to perform an export without the header b
 {% previewsample "page.domainurl/code-snippet/grid/excel-exporting-cs3" %}
 {% endif %}
 
+## How to add formula for the cell while exporting
+
+The Grid control provides a convenient way to add formulas to cells during the export process. This feature allows you to perform calculations and apply formulas to specific cells in the exported Excel document. This can be particularly useful when you need to include calculated values or perform complex calculations.
+
+To add formulas to cells during the export process, you can utilize the [valueAccessor](../../api/grid/valueAccessor/) method along with the [excelQueryCellInfo](../../api/grid/#excelquerycellinfo) event. 
+
+In the following example, the [toolbarClick](../../api/grid/#toolbarclick) function handles a toolbar button click event. When the Excel Export button is clicked, it triggers the Excel export process. Inside this function, an [excelExportProperties](../../api/grid/excelExportProperties/) object is defined, specifying that hidden columns should be included in the export. Inside the `excelQueryCellInfo` event, the `valueAccessor` method generates formulas for the desired cells and assigns these formulas to the cell's formula property, ensuring that the calculated values are exported to the Excel document:
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/excel-exporting-cs4/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/excel-exporting-cs4/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/excel-exporting-cs4" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/excel-exporting-cs4/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/excel-exporting-cs4/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/excel-exporting-cs4" %}
+{% endif %}
+
+## Limitations
+
+* A CSV is a plain text format that does not support features such as cell rotation, font and color customization, column and row spanning, or adding formulas. CSV files store raw data without any formatting or styling.
+
 ## See Also
 
 * [Exporting Grid in Cordova application](../how-to/exporting-grid-in-cordova-application)
