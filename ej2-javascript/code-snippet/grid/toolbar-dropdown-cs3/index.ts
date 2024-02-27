@@ -1,40 +1,47 @@
-
-
-
-import { Grid, Toolbar } from '@syncfusion/ej2-grids';
+import { Grid, Toolbar, Edit } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 import { DropDownList, ChangeEventArgs } from '@syncfusion/ej2-dropdowns';
-let rowIndex: any = [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14];
-Grid.Inject(Toolbar);
+
+let dropdowndata = [{ text: 'Edit' }, { text: 'Delete' }, { text: 'Update' }];
+
+Grid.Inject(Toolbar, Edit);
 
 let grid: Grid = new Grid({
     dataSource: data,
     toolbarTemplate: '#toolbar-template',
-    dataBound: dataBound,
+    editSettings: { allowDeleting: true, allowAdding: true, allowEditing: true },
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
-        { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C2' },
-        { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', width: 140, format: 'yMd' }
+      { field: 'OrderID', headerText: 'Order ID', isPrimaryKey: true, textAlign: 'Right', width: 90 },
+      { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+      { field: 'ShipCity', headerText: 'ShipCity', width: 100 },
+      { field: 'ShipName', headerText: 'ShipName', width: 120 }
     ],
     height: 200
 });
 grid.appendTo('#Grid');
 
-function dataBound(): void {
+let dropDown: DropDownList = new DropDownList({
+    dataSource: dropdowndata,
+    change: onChange,
+    placeholder: 'select a value',
+    width: 180
+});
+dropDown.appendTo('#dropdownelement');
 
-    let dropDownListObject: DropDownList = new DropDownList({
-        // set the data to dataSource property
-        dataSource: rowIndex,
-        change: change,
-        popupHeight :200
-    });
-    dropDownListObject.appendTo('#ddlelement');
+
+function onChange(args: ChangeEventArgs): void {
+
+  let selectedRow = grid.getSelectedRecords()[0];
+
+  if (args.itemData.text === 'Update') {
+    grid.endEdit();
+  }
+  if (args.itemData.text === 'Edit') {
+    grid.startEdit();
+  }
+  if (args.itemData.text === 'Delete') {
+    grid.deleteRecord(selectedRow);
+  }
+  dropDown.value = '';
+  dropDown.placeholder = args.itemData.text;
 }
-
-function change(args: ChangeEventArgs): void {
-    grid.selectRow(<number>args.itemData);
-}
-
-
-
