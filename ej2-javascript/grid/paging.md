@@ -320,6 +320,8 @@ You have an option to dynamically calculate the page size of a grid by consideri
 
 To achieve page size calculation based on an element's height in the Grid, you can utilize the [calculatePageSizeByParentHeight](../../api/grid/#calculatepagesizebyparentheight) method. This method calculates the page size based on the height of the parent element.
 
+The following example demonstrates how to calculate the page size based on element height using the `calculatePageSizeByParentHeight` method triggered by a change event based on the **NumericTextBox** input:
+
 {% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
