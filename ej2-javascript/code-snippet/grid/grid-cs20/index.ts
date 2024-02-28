@@ -1,5 +1,5 @@
 import { Switch } from '@syncfusion/ej2-buttons';
-import { Grid, Edit, Toolbar } from '@syncfusion/ej2-grids';
+import { Grid, Edit, Toolbar, EditSettingsModel } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
 Grid.Inject(Edit, Toolbar);
@@ -26,7 +26,7 @@ toggle.appendTo('#switch');
 
 function toggleShowConfirmDialog()
 {
-   grid.editSettings.showConfirmDialog = toggle.checked;
+  (grid.editSettings as EditSettingsModel).showConfirmDialog = toggle.checked;
 }
 
 let toggleDelete: Switch = new Switch({
@@ -36,5 +36,5 @@ toggleDelete.appendTo('#switchDelete');
 
 function toggleShowDeleteConfirmDialog()
 {
-  grid.editSettings.showDeleteConfirmDialog = toggleDelete.checked;
+  (grid.editSettings as EditSettingsModel).showDeleteConfirmDialog = toggleDelete.checked;
 }

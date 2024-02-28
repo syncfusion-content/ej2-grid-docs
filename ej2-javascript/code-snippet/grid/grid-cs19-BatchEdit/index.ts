@@ -1,5 +1,5 @@
 import { DropDownList, ChangeEventArgs } from '@syncfusion/ej2-dropdowns';
-import { Grid, Edit, Toolbar } from '@syncfusion/ej2-grids';
+import { Grid, Edit, Toolbar,EditSettingsModel } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
 Grid.Inject(Edit, Toolbar);
@@ -35,5 +35,5 @@ let dropDown: DropDownList = new DropDownList({
 dropDown.appendTo('#dropdown');
 
 function change(args: ChangeEventArgs) {
-  grid.editSettings.newRowPosition = args.value;
+  (grid.editSettings as EditSettingsModel).newRowPosition = args.value;
 }
