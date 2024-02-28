@@ -363,7 +363,7 @@ The following example demonstrates how to collapse all grouped rows at the initi
 ```typescript
     function dataBound() {
         if (initial === true) {
-            grid.groupModule.collapseAll();
+            (grid.groupModule as Group).collapseAll();
             initial = false;
         }
     }

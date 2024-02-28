@@ -1,4 +1,4 @@
-import { Grid, Group} from '@syncfusion/ej2-grids';
+import { Grid, Group,GroupSettingModel} from '@syncfusion/ej2-grids';
 import { Button } from '@syncfusion/ej2-buttons';
 import { data } from './datasource.ts';
 
@@ -26,12 +26,13 @@ button.appendTo('#button');
 let message = document.getElementById('message');
 
 (document.getElementById('button') as HTMLElement).onclick = () => {
-  let groupedRows = Array.from(grid.getContentTable().querySelectorAll('.e-recordplusexpand, .e-recordpluscollapse'));
+  let groupedRows = Array.from(
+    (grid.getContentTable() as HTMLTableElement).querySelectorAll('.e-recordplusexpand, .e-recordpluscollapse'));
   let groupedRowIndex = parseInt((document.getElementById('rowIndex') as HTMLInputElement).value);
   if (groupedRows.length >= 0 && groupedRowIndex < groupedRows.length) {
     (message as HTMLElement).innerHTML = '';
     let groupCaptionElement = groupedRows[groupedRowIndex];
-    grid.groupModule.expandCollapseRows(groupCaptionElement);
+    (grid.groupModule as GroupSettingModel).expandCollapseRows(groupCaptionElement);
   }
   else {
     (message as HTMLElement).innerHTML = 'The entered index exceeds the total number of grouped rows. Please enter a valid grouped index.';

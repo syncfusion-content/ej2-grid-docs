@@ -22,7 +22,7 @@ grid.appendTo('#Grid');
 
 function dataBound() {
     if (initial === true) {
-        grid.groupModule.collapseAll();
+        (grid.groupModule  as Group).collapseAll();
         initial = false;
     }
 }

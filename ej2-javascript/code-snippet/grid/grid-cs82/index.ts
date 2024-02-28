@@ -1,5 +1,5 @@
 import { Switch, ChangeEventArgs } from '@syncfusion/ej2-buttons';
-import { Grid, Group } from '@syncfusion/ej2-grids';
+import { Grid, Group,GroupSettingsModel } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
 Grid.Inject(Group);
@@ -27,8 +27,8 @@ let toggle: Switch = new Switch({
 function onSwitchChange(args: ChangeEventArgs)
 {
     if (args.checked) {
-        grid.groupSettings.showDropArea = true;
+        (grid.groupSettings as GroupSettingsModel).showDropArea = true;
       } else {
-        grid.groupSettings.showDropArea = false;
+        (grid.groupSettings as GroupSettingsModel).showDropArea = false;
       }
 }

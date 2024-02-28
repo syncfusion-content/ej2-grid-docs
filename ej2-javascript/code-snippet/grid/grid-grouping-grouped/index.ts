@@ -1,5 +1,5 @@
 import { Switch, ChangeEventArgs } from '@syncfusion/ej2-buttons';
-import { Grid, Group } from '@syncfusion/ej2-grids';
+import { Grid, Group, GroupSettingsModel } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
 Grid.Inject(Group);
@@ -25,8 +25,8 @@ toggle.appendTo('#switch');
 
 function onSwitchChange(args: ChangeEventArgs) {
     if (args.checked) {
-        grid.groupSettings.showGroupedColumn = false;
+        (grid.groupSettings as GroupSettingsModel).showGroupedColumn = false;
     } else {
-        grid.groupSettings.showGroupedColumn = true;
+        (grid.groupSettings as GroupSettingsModel).showGroupedColumn = true;
     }
 }
