@@ -1,7 +1,7 @@
 import { Grid, Group,GroupEventArgs } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
-Grid.Inject(Group, Sort);
+Grid.Inject(Group);
 
 let grid: Grid = new Grid({
   dataSource: data,
