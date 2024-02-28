@@ -25,34 +25,34 @@ grid.appendTo('#Grid');
 
 function created() {
     grid.getContentTable().addEventListener('click', function(args: ClickEventArgs) {
-        if ((args.target).classList.contains('e-rowcell')) {
-            grid.editModule.editCell(parseInt((args.target).getAttribute('index')),
-              grid.getColumnByIndex(parseInt(args.target.getAttribute('data-colindex'))).field);
+        if ((args.target as HTMLElement).classList.contains('e-rowcell')) {
+            grid.editModule.editCell(parseInt((args.target as HTMLElement).getAttribute('index') as string),
+              grid.getColumnByIndex(parseInt((args.target as HTMLElement).getAttribute('data-colindex') as string)).field);
         }
     });
 }
 
 function load() {
     grid.element.addEventListener('keydown', function(e: KeyboardEventArgs) {
-        let closesttd = (e.target).closest('td');
-        if (e.keyCode === 39 && !isNullOrUndefined(closesttd.nextSibling)) {
-            editACell(closesttd.nextSibling);
+        let closesttd = (e.target as HTMLElement).closest('td');
+        if (e.keyCode === 39 && !isNullOrUndefined((closesttd as HTMLTableCellElement).nextSibling)) {
+            editACell((closesttd as HTMLTableCellElement).nextSibling as HTMLElement);
         }
-        if (e.keyCode === 37 && !isNullOrUndefined(closesttd.previousSibling) &&
+        if (e.keyCode === 37 && !isNullOrUndefined((closesttd as HTMLTableCellElement).previousSibling as HTMLElement) &&
             !grid.getColumnByIndex(
-                parseInt(closesttd.previousSibling.getAttribute('data-colindex'))).isPrimaryKey)
+                parseInt(((closesttd as HTMLTableCellElement).previousSibling as HTMLElement).getAttribute('data-colindex') as string)).isPrimaryKey)
         {
-             editACell(closesttd.previousSibling);
+             editACell((closesttd as HTMLTableCellElement).previousSibling as HTMLElement);
         }
-        if (e.keyCode === 40 && !isNullOrUndefined(closesttd.closest('tr').nextSibling)) {
+        if (e.keyCode === 40 && !isNullOrUndefined(((closesttd as HTMLTableCellElement).closest('tr') as HTMLTableRowElement).nextSibling)) {
             editACell(
-                closesttd.closest('tr').nextSibling.querySelectorAll('td')[
-                parseInt(closesttd.getAttribute('data-colindex'))]);
+                (((closesttd as HTMLTableCellElement).closest('tr') as HTMLTableRowElement).nextSibling as HTMLElement).querySelectorAll('td')[
+                parseInt((closesttd as HTMLTableCellElement).getAttribute('data-colindex') as string)]);
         }
-        if ( e.keyCode === 38 && !isNullOrUndefined(closesttd.closest('tr').previousSibling)) {
+        if ( e.keyCode === 38 && !isNullOrUndefined(((closesttd as HTMLTableCellElement).closest('tr')as HTMLTableRowElement).previousSibling)) {
             editACell(
-                closesttd.closest('tr').previousSibling.querySelectorAll('td')[
-                 parseInt(closesttd.getAttribute('data-colindex'))]);
+                ((closesttd as HTMLTableCellElement).closest('tr').previousSibling as HTMLElement).querySelectorAll('td')[
+                 parseInt((closesttd as HTMLTableCellElement).getAttribute('data-colindex')as string)]);
         }
     });
 }
@@ -60,5 +60,5 @@ function load() {
 function editACell(args: { getAttribute: (arg0: string) => string; }) {
     grid.editModule.editCell(
         parseInt(args.getAttribute('index')),
-        grid.getColumnByIndex(parseInt(args.getAttribute('data-colindex'))).field);
+        grid.getColumnByIndex(parseInt(args.getAttribute('data-colindex') as string)).field);
 }
