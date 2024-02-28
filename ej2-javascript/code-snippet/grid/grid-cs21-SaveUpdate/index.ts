@@ -1,4 +1,4 @@
-import { Grid, Edit, Toolbar,Page  } from '@syncfusion/ej2-grids';
+import { Grid, Edit, Toolbar,Page,EditSettingsModel  } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
 Grid.Inject(Edit, Toolbar,Page );
@@ -22,5 +22,5 @@ let grid: Grid = new Grid({
 grid.appendTo('#Grid');
 
 function save() {
-  grid.editModule.batchSave();
+  (grid.editModule as EditSettingsModel).batchSave();
 }
