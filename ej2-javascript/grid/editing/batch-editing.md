@@ -46,7 +46,7 @@ Here's an example how to enable batch editing in the javascript grid control:
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs17" %}
 {% endif %}
 
-## Automatically update the column based on another column edited value in batch mode
+## Automatically update the column based on another column edited value 
 
 You can automatically update the value of a column based on the edited value of another column in batch mode. This feature is useful when you want to dynamically calculate and update a column's value in real-time based on the changes made in another related column. This can be achieved using the [Cell Edit Template](../../editing/edit-types#custom-editors-using-template) feature in the Grid control.
 
@@ -79,7 +79,7 @@ In the following example, the **TotalCost** column value is updated based on cha
 {% previewsample "page.domainurl/code-snippet/grid/grid-cs18" %}
 {% endif %}
 
-> * You can utilize the [updateCell](../../api/grid/#updatecell) property to update cells in batch mode.
+> * You can utilize the [updateCell](../../api/grid/#updatecell) method to update cells in batch mode.
 
 ## Cancel edit based on condition 
 
