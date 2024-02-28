@@ -1,4 +1,4 @@
-import { Grid, Edit, Toolbar, CellEditArgs } from '@syncfusion/ej2-grids';
+import { Grid, Edit, Toolbar, CellEditArgs,column } from '@syncfusion/ej2-grids';
 import { productData } from './productData.ts';
 import { NumericTextBox , ChangeEventArgs } from '@syncfusion/ej2-inputs';
 
@@ -34,7 +34,7 @@ let grid: Grid = new Grid({
           let rowData = args.rowData;
           let rowIndex = (grid.getRowInfo(args.row) as any).rowIndex;
           priceObj = new NumericTextBox({
-            value: args.rowData[args.column.field],
+            value: args.rowData[(args.column as column).field],
             change: function (args: ChangeEventArgs) {
               let totalCostValue = args.value * rowData['UnitsInStock'];
               grid.updateCell(rowIndex, 'TotalCost', totalCostValue);
@@ -60,7 +60,7 @@ let grid: Grid = new Grid({
           let rowData = args.rowData;
           let rowIndex = (grid.getRowInfo(args.row) as any).rowIndex;
           stockObj = new NumericTextBox({
-            value: args.rowData[args.column.field],
+            value: args.rowData[(args.column as column).field],
             change: function (args: ChangeEventArgs) {
               let totalCostValue = args.value * rowData['UnitPrice'];
               grid.updateCell(rowIndex, 'TotalCost', totalCostValue);
