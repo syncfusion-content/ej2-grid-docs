@@ -32,7 +32,7 @@ let grid: Grid = new Grid({
         },
         write: function(args: CellEditArgs) {
           let rowData = args.rowData;
-          let rowIndex = grid.getRowInfo(args.row).rowIndex;
+          let rowIndex = (grid.getRowInfo(args.row) as any).rowIndex;
           priceObj = new NumericTextBox({
             value: args.rowData[args.column.field],
             change: function (args: ChangeEventArgs) {
@@ -58,7 +58,7 @@ let grid: Grid = new Grid({
         },
         write: function(args: CellEditArgs) {
           let rowData = args.rowData;
-          let rowIndex = grid.getRowInfo(args.row).rowIndex;
+          let rowIndex = (grid.getRowInfo(args.row) as any).rowIndex;
           stockObj = new NumericTextBox({
             value: args.rowData[args.column.field],
             change: function (args: ChangeEventArgs) {
