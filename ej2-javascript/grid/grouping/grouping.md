@@ -331,6 +331,7 @@ To collapse all grouped rows at the initial rendering of the Grid using the [dat
 
 The following example demonstrates how to collapse all grouped rows at the initial rendering.
 
+{% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
