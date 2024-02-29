@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Footer aggregate in ##Platform_Name## Grid control
 
-Footer aggregate value is calculated for all the rows, and it is displayed in the footer cells. Use the [`footerTemplate`](../../api/grid/aggregateColumn/#footertemplate) property to render the aggregate value in footer cells.
+The Syncfusion ##Platform_Name## Grid control allows you to calculate and display aggregate values in the footer cells. The footer aggregate value is calculated from all the rows in the grid. You can use the [footerTemplate](../../api/grid/aggregateColumn/#footertemplate) property to render the aggregate value in the footer cells.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -40,11 +40,12 @@ Footer aggregate value is calculated for all the rows, and it is displayed in th
 {% previewsample "page.domainurl/code-snippet/grid/aggregates-cs2" %}
 {% endif %}
 
-> The aggregate values must be accessed inside the template using their corresponding [`type`](../../api/grid/aggregateColumn/#type) name.
+> * Use the template reference variable name **#footerTemplate** to specify the footer template.
+> * Inside the template, access the aggregate values using their corresponding [type](../../api/grid/aggregateColumn/#type) name. For example, to access the sum aggregate value, use **Sum**.
 
-## How to format aggregate value
+## Format the aggregate value
 
-You can format the aggregate value result by using the [`format`](../../api/grid/aggregateColumn/#format) property.
+To format the aggregate value result in the Syncfusion ##Platform_Name## Grid control, you can use the [format](../../api/grid/aggregateColumn/#format) property of the [AggregateColumn](../../api/grid/aggregateColumn/). The `format` property allows you to specify a format string that determines how the aggregate value will be displayed.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -77,7 +78,7 @@ You can format the aggregate value result by using the [`format`](../../api/grid
 
 By default, the aggregated values are placed at the bottom of the footer section. It is possible to place the aggregated values at the top of the header. This is achieved by using the [dataBound](../../api/grid/#databound) event, [getHeaderContent](../../api/grid/#getheadercontent), and [getFooterContent](../../api/grid/#getfootercontent) methods of the Grid.
 
-In the following sample, the footer element is appended to the header element using the `getHeaderContent` and `getFooterContent` methods in the `dataBound` event.
+In the following, footer content is appended to the header content using the `dataBound` event of the Grid.
 
 {% if page.publishingplatform == "typescript" %}
 
