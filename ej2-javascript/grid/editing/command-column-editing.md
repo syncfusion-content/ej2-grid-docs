@@ -35,7 +35,7 @@ Here's an example that demonstrates how to add CRUD action buttons in a column u
 {% include code-snippet/grid/command-column-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/command-column-cs1/index.html %}
+{% include code-snippet/grid/command-column-cs1/ts/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -48,7 +48,7 @@ Here's an example that demonstrates how to add CRUD action buttons in a column u
 {% include code-snippet/grid/command-column-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/command-column-cs1/index.html %}
+{% include code-snippet/grid/command-column-cs1/js/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -70,7 +70,7 @@ Here's an example that demonstrates how to add custom command buttons using the 
 {% include code-snippet/grid/command-column-cs2/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/command-column-cs2/index.html %}
+{% include code-snippet/grid/command-column-cs2/ts/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -83,7 +83,7 @@ Here's an example that demonstrates how to add custom command buttons using the 
 {% include code-snippet/grid/command-column-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/command-column-cs2/index.html %}
+{% include code-snippet/grid/command-column-cs2/js/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
