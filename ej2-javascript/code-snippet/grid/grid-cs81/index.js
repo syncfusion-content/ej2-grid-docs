@@ -1,15 +1,15 @@
-ej.grids.Grid.Inject(ej.grids.Sort, ej.grids.Group);
+ej.grids.Grid.Inject(ej.grids.Group);
+
 var grid = new ej.grids.Grid({
     dataSource: data,
     allowGrouping: true,
     groupSettings: { columns: ['CustomerID', 'ShipCity'] },
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
-        { field: 'ShipCity', headerText: 'Ship City', width: 150 },
-        { field: 'ShipName', headerText: 'Ship Name', width: 150 }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+        { field: 'ShipCity', headerText: 'Ship City', width: 100 },
+        { field: 'ShipName', headerText: 'Ship Name', width: 120 }
     ],
     height: 267
 });
 grid.appendTo('#Grid');
-
