@@ -1,23 +1,18 @@
-
-
 import { Grid, Group } from '@syncfusion/ej2-grids';
-import { employeeData } from './datasource.ts';
+import { data } from './datasource.ts';
 
 Grid.Inject(Group);
 
 let grid: Grid = new Grid({
-    dataSource: employeeData,
+    dataSource: data,
     allowGrouping: true,
-    groupSettings: { captionTemplate: '#captiontemplate', columns: ['EmployeeID'] },
+    groupSettings: { captionTemplate: '#captiontemplate',showDropArea: false, columns: ['CustomerID', 'ShipCity'] },
     columns: [
-        { field: 'EmployeeID', headerText: 'Employee ID' },
-        { field: 'CustomerID', headerText: 'Customer ID' },
-        { field: 'FirstName', headerText: 'Name', width: 120 },
-        { field: 'Title', headerText: 'Title', width: 170 }
+        { field: 'OrderID', headerText: 'Order ID',textAlign: 'Right',width: 90 },
+        { field: 'CustomerID', headerText: 'Customer ID',width: 100 },
+        { field: 'ShipCity', headerText: 'Ship City', width: 100 },
+        { field: 'ShipName', headerText: 'Ship Name', width: 120 }
     ],
     height: 315
 });
 grid.appendTo('#Grid');
-
-
-
