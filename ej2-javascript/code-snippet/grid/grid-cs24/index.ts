@@ -1,4 +1,4 @@
-import { Grid, Edit, Toolbar, EditEventArgs } from '@syncfusion/ej2-grids';
+import { Grid, Edit, Toolbar, EditEventArgs,Column } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
 Grid.Inject(Edit, Toolbar);
@@ -17,28 +17,28 @@ let grid: Grid = new Grid({
     actionBegin: function (args: EditEventArgs) {
         if (args.requestType === 'beginEdit') {
             for (let i = 0; i < grid.columns.length; i++) {
-                if (grid.columns[i].field == "CustomerID") {
-                    grid.columns[i].visible = true;
+                if ((grid.columns[i] as Column).field == "CustomerID") {
+                    (grid.columns[i] as Column).visible = true;
                 }
-                else if (grid.columns[i].field == "ShipCountry") {
-                    grid.columns[i].visible = false;
+                else if ((grid.columns[i] as Column).field == "ShipCountry") {
+                    (grid.columns[i] as Column).visible = false;
                 }
             }
         }
         else if (args.requestType === 'add') {
             for (let i = 0; i < grid.columns.length; i++) {
-                if (grid.columns[i].field == "CustomerID") {
-                    grid.columns[i].visible = true;
+                if ((grid.columns[i] as Column).field == "CustomerID") {
+                    (grid.columns[i] as Column).visible = true;
                 }
             }
         }
         else if (args.requestType === 'save') {
             for (let i = 0; i < grid.columns.length; i++) {
-                if (grid.columns[i].field == "CustomerID") {
-                    grid.columns[i].visible = false;
+                if ((grid.columns[i] as Column).field == "CustomerID") {
+                    (grid.columns[i] as Column).visible = false;
                 }
-                else if (grid.columns[i].field == "ShipCountry") {
-                    grid.columns[i].visible = true;
+                else if ((grid.columns[i] as Column).field == "ShipCountry") {
+                    (grid.columns[i] as Column).visible = true;
                 }
             }
         }

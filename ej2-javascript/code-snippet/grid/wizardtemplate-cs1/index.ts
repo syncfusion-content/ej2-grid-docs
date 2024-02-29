@@ -62,7 +62,7 @@ let grid: Grid = new Grid({
                 );
             new CheckBox(
                 { label: 'Verified', checked: args.rowData.Verified },
-                args.form.elements.namedItem('Verified')
+                args.form.elements.namedItem('Verified') as HTMLInputElement
             );
             // Set initail Focus
             if (args.requestType === 'beginEdit') {

@@ -1,4 +1,4 @@
-import { Grid, Edit, Toolbar, EditEventArgs } from '@syncfusion/ej2-grids';
+import { Grid, Edit, Toolbar, EditEventArgs,EditSettingsModel } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
 Grid.Inject(Edit, Toolbar);
@@ -29,13 +29,13 @@ function actionComplete(args: EditEventArgs) {
             {
                 buttonModel: { content: 'Discard', cssClass: 'e-primary custom-button-style' },
                 click: () => {
-                    grid.editModule.closeEdit();
+                    (grid.editModule as EditSettingsModel).closeEdit();
                 }
             },
             {
                 buttonModel: { content: 'Submit', cssClass: 'e-success custom-button-style' },
                 click: () => {
-                    grid.editModule.endEdit();
+                    (grid.editModule as EditSettingsModel).endEdit();
                 }
             }
         ];
