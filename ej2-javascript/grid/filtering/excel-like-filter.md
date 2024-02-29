@@ -2,7 +2,7 @@
 layout: post
 title: Excel like filter in ##Platform_Name## Grid control | Syncfusion
 description: Learn here all about Excel like filter in Syncfusion ##Platform_Name## Grid control of Syncfusion Essential JS 2 and more.
-platform: ej2-javascript
+platform: ej2-java-script
 control: Excel like filter 
 publishingplatform: ##Platform_Name##
 documentation: ug
@@ -20,7 +20,7 @@ You can enable Excel like filter by defining. [filterSettings.type](../../api/gr
 {% include code-snippet/grid/grid-cs63/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/grid/grid-cs63/index.html %}
+{% include code-snippet/gri/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
