@@ -1,5 +1,3 @@
-
-
 import { Grid, Aggregate } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
@@ -14,7 +12,7 @@ let grid: Grid = new Grid({
         { field: 'Freight', headerText: 'Freight', width: 150 },
         { field: 'ShipName', headerText: 'Ship Name', width: 150 }
     ],
-    height: 210,
+    height: 290,
     aggregates: [{
         columns: [{
             type: 'Sum',
@@ -35,6 +33,3 @@ grid.appendTo('#Grid');
 function dataBound() {
     grid.getHeaderContent().append(grid.getFooterContent());
 }
-
-
-
