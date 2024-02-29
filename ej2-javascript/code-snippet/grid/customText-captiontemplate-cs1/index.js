@@ -1,15 +1,14 @@
 ej.grids.Grid.Inject(ej.grids.Group);
 var grid = new ej.grids.Grid({
-    dataSource: employeeData,
+    dataSource: data,
     allowGrouping: true,
-    groupSettings: { captionTemplate: '#captiontemplate', columns: ['EmployeeID'] },
+    groupSettings: { captionTemplate: '#captiontemplate'},
     columns: [
-        { field: 'EmployeeID', headerText: 'Employee ID' },
-        { field: 'CustomerID', headerText: 'Customer ID' },
-        { field: 'FirstName', headerText: 'Name', width: 120 },
-        { field: 'Title', headerText: 'Title', width: 170 }
+        { field: 'OrderID', headerText: 'ID',textAlign: 'Right',width: 90 },
+        { field: 'CustomerID', headerText: 'Name',width: 100 },
+        { field: 'ShipCity', headerText: 'City', width: 100 },
+        { field: 'Freight', headerText: 'Value', width: 80 }
     ],
     height: 315
 });
 grid.appendTo('#Grid');
-
