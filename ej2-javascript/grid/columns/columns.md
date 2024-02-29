@@ -469,7 +469,7 @@ Here is an example of how you can prevent a checkbox from being displayed in a b
 
 ## AutoFit columns
 
-The Grid has a feature that allows to automatically adjust column widths based on the maximum content width of each column when you double-click on the resizer symbol located in a specific column header. This feature ensures that all data in the grid rows is displayed without wrapping. To use this feature, you need to inject the **Resize** module in the grid. and enable the resizer symbol in the column header by setting the [allowResizing](../../api/grid/#allowresizing) property to true in the grid.
+The Grid has a feature that allows to automatically adjust column widths based on the maximum content width of each column when you double-click on the resizer symbol located in a specific column header. This feature ensures that all data in the grid rows is displayed without wrapping. To use this feature, you need to inject the **Resize** module in the grid and enable the resizer symbol in the column header by setting the [allowResizing](../../api/grid/#allowresizing) property to true in the grid.
 
 ### Resizing a column to fit its content using autoFit method
 
