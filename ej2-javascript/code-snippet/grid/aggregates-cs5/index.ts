@@ -1,5 +1,3 @@
-
-
 import { Grid, Group, Aggregate } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
@@ -21,20 +19,8 @@ let grid: Grid = new Grid({
         columns: [{
             type: 'Sum',
             field: 'Freight',
-            format: 'C2',
             groupFooterTemplate: 'Sum: ${Sum}'
-        }]
-    },
-    {
-        columns: [{
-            type: 'Max',
-            field: 'Freight',
-            format: 'C2',
-            groupCaptionTemplate: 'Max: ${Max}'
         }]
     }]
 });
 grid.appendTo('#Grid');
-
-
-
