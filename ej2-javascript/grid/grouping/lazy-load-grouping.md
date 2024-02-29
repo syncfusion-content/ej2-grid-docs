@@ -17,7 +17,7 @@ Lazy load grouping in Syncfusion Grid allows you to load and display grouped dat
 
 To enable this feature, need to set the [groupSettings->enableLazyLoading](../../api/grid/groupSettings/#enableLazyLoading) property to **true**.
 
-The following example demonstrates how to enable the lazy load grouping feature by setting `groupSettings->enableLazyLoading` property.
+The following example demonstrates how to enable the lazy load grouping feature by setting `groupSettings.enableLazyLoading` property.
 
 {% if page.publishingplatform == "typescript" %}
 
