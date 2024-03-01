@@ -132,7 +132,19 @@ let exportProperties: PdfExportProperties = {
 
 ## Insert an image in header and footer
 
-Image (Base64 string) can be added in the exported document in header/footer using the `exportProperties`.
+The Syncfusion ##Platform_Name## Grid have an option to include an image in the header and footer section when exporting data from the Grid to PDF document. This feature allows you to add a custom logo, branding, or any other relevant image to the exported document.
+
+You can use a base64 string with the .jpeg format to represent the image. This can be achieved using the [pdfExportProperties](../../api/grid/pdfExportProperties) property of the Grid control.
+
+To insert an image in the header or footer of the exported PDF document, follow these steps:
+
+1. Convert your desired image to a base64 string in the .jpeg format.
+
+2. Access the `pdfExportProperties` of the Grid control.
+
+3. Set the `header.contents.src` property to the respective file of the image or the base64 string of the image.
+
+4. Trigger the PDF export operation.
 
 ```ts
 
@@ -153,7 +165,7 @@ let exportProperties: PdfExportProperties = {
 
 ```
 
-The below code illustrates the pdf export customization.
+The following example demonstrates how to add a header and footer to the exported grid. In the given example, we added lines in the header and footer, inserted an image in the header, and also added page number in the footer.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -184,9 +196,12 @@ The below code illustrates the pdf export customization.
 
 ## Repeat column header on every page
 
-By default, column header will be placed on the first page of the pdf document but you can display column header on every page using `repeatHeader` property of `pdfGrid`.
+When exporting data from the Syncfusion ##Platform_Name## Grid to a PDF document, you have an option to repeat the column header on every page. This feature ensures that the column header remains visible and easily identifiable, even when the data spans multiple pages in the exported PDF document.
 
-In the below sample, we have enabled `repeatHeader` property in [`pdfHeaderQueryCellInfo`](../../api/grid/#pdfheaderquerycellinfo) event to show the header on every page.
+By default, the column header is occurs only on the first page of the PDF document. However, you can enable the `repeatHeader` property of the **pdfGrid** object to **true** which display the column header on every page. This can be achieved using the [pdfHeaderQueryCellInfo](../../api/grid/#pdfheaderquerycellinfo) event of the Grid.
+
+The following example demonstrates how to repeat the column header on every page of the exported PDF document using the `pdfHeaderQueryCellInfo` event.
+
 
 {% if page.publishingplatform == "typescript" %}
 
