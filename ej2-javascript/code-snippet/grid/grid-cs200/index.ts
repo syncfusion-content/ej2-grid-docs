@@ -1,9 +1,9 @@
 
-import { Grid, Page, Selection } from '@syncfusion/ej2-grids';
+import { Grid, Page, PageSettingsModel } from '@syncfusion/ej2-grids';
 import { Switch } from '@syncfusion/ej2-buttons';
-import { data } from './datasource';
+import { data } from './datasource.ts';
 
-Grid.Inject(Page, Selection);
+Grid.Inject(Page);
 
 let grid: Grid = new Grid(
     {
@@ -26,5 +26,5 @@ toggle.appendTo('#switch');
 
 function toggleQueryString()
 {
-    grid.pageSettings.enableQueryString = toggle.checked;
+    (grid.pageSettings as PageSettingsModel).enableQueryString = toggle.checked;
 }

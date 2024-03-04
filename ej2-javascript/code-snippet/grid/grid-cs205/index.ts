@@ -1,7 +1,7 @@
-import { Grid, Page, Selection } from '@syncfusion/ej2-grids';
-import { data } from './datasource';
+import { Grid, Page } from '@syncfusion/ej2-grids';
+import { data } from './datasource.ts';
 
-Grid.Inject(Page, Selection);
+Grid.Inject(Page);
 
 let grid: Grid = new Grid(
     {
@@ -26,9 +26,9 @@ function dataBound()
     if (initialGridLoad) {
         initialGridLoad = false;
         let pager = document.getElementsByClassName('e-gridpager');
-        let topElement;
+        let topElement: HTMLCollectionOf<Element>;
         if (grid.allowGrouping || grid.toolbar) {
-            topElement = grid.allowGrouping ? document.getElementsByClassName('e-groupdroparea') :
+            topElement = grid.allowGrouping ? document.getElementsByClassName('e-groupdroparea')as HTMLCollection :
                 document.getElementsByClassName('e-toolbar');
         } else {
             topElement = document.getElementsByClassName('e-gridheader');

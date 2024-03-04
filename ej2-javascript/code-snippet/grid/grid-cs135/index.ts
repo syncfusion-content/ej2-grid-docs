@@ -1,6 +1,6 @@
 
 
-import { Grid, Page } from '@syncfusion/ej2-grids';
+import { Grid, Page, PageSettingsModel } from '@syncfusion/ej2-grids';
 import { TextBox } from '@syncfusion/ej2-inputs';
 import { Button } from '@syncfusion/ej2-buttons';
 import { data } from './datasource.ts';
@@ -32,5 +32,5 @@ let button: Button = new Button({
   button.appendTo('#buttons');
 
 (document.getElementById('buttons') as HTMLElement).onclick = function () {
-    grid.pageSettings.pageCount = parseInt(textbox.value, 10);  
+    (grid.pageSettings as PageSettingsModel).pageCount = parseInt(textbox.value, 10);  
 };

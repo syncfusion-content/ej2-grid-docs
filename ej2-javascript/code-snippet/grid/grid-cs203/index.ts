@@ -2,7 +2,7 @@
 import { Button } from '@syncfusion/ej2-buttons';
 import { Grid, Page } from '@syncfusion/ej2-grids';
 import { TextBox } from '@syncfusion/ej2-inputs';
-import { data } from './datasource';
+import { data } from './datasource.ts';
 
 Grid.Inject(Page);
 
@@ -31,5 +31,5 @@ let button: Button = new Button({
 button.appendTo('#buttons');
 
 (document.getElementById('buttons') as HTMLElement).onclick = function () {
-    grid.pagerModule.goToPage(parseInt(textbox.value));
+    (grid.pagerModule as Page).goToPage(parseInt(textbox.value));
 }

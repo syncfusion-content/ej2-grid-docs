@@ -1,8 +1,8 @@
-import { Grid, Page, Selection } from '@syncfusion/ej2-grids';
+import { Grid, Page,PageSettingsModel } from '@syncfusion/ej2-grids';
 import {NumericTextBox, ChangeEventArgs} from '@syncfusion/ej2-inputs';
-import { data } from './datasource';
+import { data } from './datasource.ts';
 
-Grid.Inject(Page, Selection);
+Grid.Inject(Page);
 
 let grid: Grid = new Grid(
     {
@@ -30,5 +30,5 @@ numeric.appendTo('#numeric');
 function calculatePageSize( {value}: ChangeEventArgs) {
     let stringValue = value.toString();
     let pageSize = grid.calculatePageSizeByParentHeight(stringValue);
-    grid.pageSettings.pageSize = pageSize;
+    (grid.pageSettings as PageSettingsModel).pageSize = pageSize;
 }

@@ -1,9 +1,9 @@
 import { Button } from '@syncfusion/ej2-buttons';
-import { Grid, Page, Selection } from '@syncfusion/ej2-grids';
+import { Grid, Page,PageSettingsModel } from '@syncfusion/ej2-grids';
 import { TextBox } from '@syncfusion/ej2-inputs';
-import { data } from './datasource';
+import { data } from './datasource.ts';
 
-Grid.Inject(Page, Selection);
+Grid.Inject(Page);
 
 let grid: Grid = new Grid(
     {
@@ -24,7 +24,7 @@ let textbox: TextBox = new TextBox({
     placeholder: 'Enter page size:',
     width: 140,
     });
-    textbox.appendTo('#textboxvalue');
+textbox.appendTo('#textboxvalue');
 
 let button: Button = new Button({
     content: 'click button',
@@ -32,5 +32,5 @@ let button: Button = new Button({
 button.appendTo('#buttons');
 
 (document.getElementById('buttons') as HTMLElement).onclick = function () {
-    grid.pageSettings.pageSize = parseInt(textbox.value, 10);
+    (grid.pageSettings as PageSettingsModel).pageSize = parseInt(textbox.value, 10);
 }
