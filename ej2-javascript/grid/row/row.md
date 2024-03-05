@@ -329,7 +329,7 @@ Here's an example that demonstrates how to use the `rowDataBound` event and `get
 
 >The `getRowInfo` method can only be used in the `rowDataBound` event. Attempting to use it elsewhere will result in an error.
 
-## Row pinning (Frozen) in ##Platform_Name## Grid control
+## Row pinning (Frozen)
 
 The Syncfusion ##Platform_Name## Grid allows you to freeze rows to keep them visible while scrolling vertically through large datasets. This feature enhances the experience by maintaining important information within view at all times.
 
