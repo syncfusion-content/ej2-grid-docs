@@ -310,7 +310,7 @@ The accessibility compliance of the Grid control is shown in the following sampl
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/adaptive-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/ensuring-accessibility-cs1" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
