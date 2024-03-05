@@ -1,5 +1,3 @@
-
-
 import { Grid, Selection, Edit, Toolbar } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
@@ -8,7 +6,6 @@ Grid.Inject(Selection, Edit, Toolbar);
 let grid: Grid = new Grid({
     dataSource: data,
     enableAutoFill: true,
-    enableHover: false,
     allowSelection: true,
     toolbar: ['Add', 'Update', 'Cancel'],
     selectionSettings: { type: 'Multiple', mode: 'Cell', cellSelectionMode: 'Box' },
@@ -19,9 +16,7 @@ let grid: Grid = new Grid({
         { field: 'ShipCity', headerText: 'ShipCity', width: 150 },
         { field: 'ShipCountry', headerText: 'Ship Country', width: 150 },
         { field: 'ShipName', headerText: 'Ship Name', width: 150 }
-     ]
+     ],
+     height: 280
 });
 grid.appendTo('#Grid');
-
-
-
