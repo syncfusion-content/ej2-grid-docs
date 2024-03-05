@@ -1,7 +1,6 @@
 ej.grids.Grid.Inject(ej.grids.Edit, ej.grids.Toolbar);
 var grid = new ej.grids.Grid({
     dataSource: data,
-    enableHover: false,
     enableAutoFill: true,
     toolbar: ['Add', 'Update', 'Cancel'],
     selectionSettings: { type: 'Multiple', mode: 'Cell', cellSelectionMode: 'Box' },
@@ -16,4 +15,3 @@ var grid = new ej.grids.Grid({
     height: 280
 });
 grid.appendTo('#Grid');
-

@@ -1,58 +1,53 @@
+ej.grids.Grid.Inject(ej.grids.Edit, ej.grids.Toolbar);
+
 var grid = new ej.grids.Grid({
     dataSource: data,
     allowPaging: true,
     enableHover: false,
     created: created,
     load: load,
-    editSettings: {
-        allowEditing: true,
-        allowAdding: true,
-        allowDeleting: true,
-        mode: 'Batch',
-    },
-    toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
+    editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Batch'},
+    toolbar: ['Add', 'Delete', 'Update', 'Cancel'],
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 100, isPrimaryKey: true,
-          visible: false, validationRules: { required: true, number: true } },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 120, validationRules: { required: true }
-        },
-        { field: 'Freight', headerText: 'Freight', format: 'C2', width: 100, textAlign: 'Right' },
-        { field: 'OrderDate', headerText: 'Order Date', editType: 'datepickeredit', format: 'yMd', width: 100},
-        { field: 'ShipCountry', headerText: 'Ship Country', width: 100 },
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', isPrimaryKey: true, validationRules: { required: true, number: true }, width: 120},
+        { field: 'CustomerID', headerText: 'Customer ID', width: 120, validationRules: { required: true }},
+        { field: 'Freight', headerText: 'Freight', format: 'C2', width: 150, textAlign: 'Right',validationRules: { min:1,max:1000} },
+        { field: 'OrderDate', headerText: 'Order Date', editType: 'datepickeredit', format: 'yMd', width: 150 },
+        { field: 'ShipCountry', headerText: 'Ship Country', width: 150 }
     ],
+    height: 272
 });
 grid.appendTo('#Grid');
 
-function created(args) {
-    grid.getContentTable().addEventListener('click', function (args) {
+function created() {
+    grid.getContentTable().addEventListener('click', function(args) {
         if (args.target.classList.contains('e-rowcell')) {
             grid.editModule.editCell(parseInt(args.target.getAttribute('index')),
-              grid.getColumnByIndex(parseInt(args.target.getAttribute('data-colindex'))).field);
+                grid.getColumnByIndex(parseInt(args.target.getAttribute('data-colindex'))).field);
         }
     });
 }
 
 function load() {
-    grid.element.addEventListener('keydown', function (e) {
+    grid.element.addEventListener('keydown', function(e) {
         var closesttd = e.target.closest('td');
-        if (e.keyCode === 39 && !isNullOrUndefined(closesttd.nextSibling)) {
+        if (e.keyCode === 39 && !ej.base.isNullOrUndefined(closesttd.nextSibling)) {
             editACell(closesttd.nextSibling);
         }
-        if (e.keyCode === 37 && !isNullOrUndefined(closesttd.previousSibling) &&
+        if (e.keyCode === 37 && !ej.base.isNullOrUndefined(closesttd.previousSibling) &&
             !grid.getColumnByIndex(
-                parseInt(closesttd.previousSibling.getAttribute('data-colindex'))).isPrimaryKey)
-        {
-             editACell(closesttd.previousSibling);
+                parseInt(closesttd.previousSibling.getAttribute('data-colindex'))).isPrimaryKey) {
+            editACell(closesttd.previousSibling);
         }
-        if (e.keyCode === 40 && !isNullOrUndefined(closesttd.closest('tr').nextSibling)) {
+        if (e.keyCode === 40 && !ej.base.isNullOrUndefined(closesttd.closest('tr').nextSibling)) {
             editACell(
                 closesttd.closest('tr').nextSibling.querySelectorAll('td')[
                 parseInt(closesttd.getAttribute('data-colindex'))]);
         }
-        if ( e.keyCode === 38 && !isNullOrUndefined(closesttd.closest('tr').previousSibling)) {
+        if (e.keyCode === 38 && !ej.base.isNullOrUndefined(closesttd.closest('tr').previousSibling)) {
             editACell(
                 closesttd.closest('tr').previousSibling.querySelectorAll('td')[
-                 parseInt(closesttd.getAttribute('data-colindex'))]);
+                parseInt(closesttd.getAttribute('data-colindex'))]);
         }
     });
 }
@@ -62,4 +57,3 @@ function editACell(args) {
         parseInt(args.getAttribute('index')),
         grid.getColumnByIndex(parseInt(args.getAttribute('data-colindex'))).field);
 }
-
