@@ -15,7 +15,7 @@ Paging provides an option to display grid data in segmented pages, making it eas
 
 To enable paging, you need to set the [allowPaging](../../api/grid/#allowpaging) property to **true**. This property determines whether paging is enabled or disabled for the grid. When paging is enabled, a pager control rendered at the bottom of the grid, allowing you to navigate through different pages of data.
 
-To use paging, you need to inject the **Page** into the **Grid**. 
+To use paging, you need to inject the **Page** module in the **Grid**. 
 
 Paging options can be configured through the [pageSettings](../../api/grid/pageSettings) property. The `pageSettings` object allows you to control various aspects of paging, such as the page size, current page, and total number of records.
 

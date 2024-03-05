@@ -1,4 +1,4 @@
-import { Grid, Page } from '@syncfusion/ej2-grids';
+import { Grid, Page,GridComponent } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
 Grid.Inject(Page);
@@ -33,6 +33,6 @@ function dataBound()
         } else {
             topElement = document.getElementsByClassName('e-gridheader');
         }
-        grid.element.insertBefore(pager[0], topElement[0]);
+        (grid as GridComponent).element.insertBefore(pager[0], topElement[0]);
     }
 }
