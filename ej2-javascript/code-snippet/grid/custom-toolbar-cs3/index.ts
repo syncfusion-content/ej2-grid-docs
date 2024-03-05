@@ -1,5 +1,3 @@
-
-
 import { Grid, Toolbar, Group } from '@syncfusion/ej2-grids';
 import { EmitType } from '@syncfusion/ej2-base';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
@@ -22,14 +20,11 @@ let grid: Grid = new Grid({
     toolbar: [{ text: 'Expand All', tooltipText: 'Expand All', prefixIcon: 'e-expand', id: 'expandall', align: 'Left'}, { text: 'Collapse All', tooltipText: 'collection All', prefixIcon: 'e-collapse', id: 'collapseall', align: 'Right' }, { text: 'Search', align: 'Center'}],
     toolbarClick: clickHandler,
     columns: [
-        { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 120, type: 'number' },
-        { field: 'FirstName', width: 140, headerText: 'First Name', type: 'string' },
-        { field: 'Country', headerText: 'Country', textAlign: 'Right', width: 120, country: 'string' },
-        { field: 'PostalCode', headerText: 'Postal Code', textAlign: 'Right', width: 140, type:'string' }
+        { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 80 },
+        { field: 'FirstName', headerText: 'First Name', width: 140 },
+        { field: 'Country', headerText: 'Country', width: 120 },
+        { field: 'PostalCode', headerText: 'Postal Code', width: 140 }
     ],
     height: 200,
 });
 grid.appendTo('#Grid');
-
-
-

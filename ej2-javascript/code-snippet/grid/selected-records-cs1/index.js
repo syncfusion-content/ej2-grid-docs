@@ -1,24 +1,33 @@
-ej.grids.Grid.Inject(ej.grids.Page, ej.grids.Selection);
 var grid = new ej.grids.Grid({
     dataSource: data,
-    allowSelection: true,
     allowPaging: true,
-    selectionSettings: { type: 'Multiple', persistSelection: true },
+    allowSelection: true,
+    selectionSettings: { type: 'Multiple' },
     columns: [
-        { type: 'checkbox', width: 50 },
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', isPrimaryKey: true, width: 120 },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
-        { field: 'ShipCountry', headerText: 'Ship Country', width: 130 },
-        { field: 'Freight', headerText: 'Freight', format: 'C2', width: 100 }
+        { field: 'OrderID',isPrimaryKey: 'true', headerText: 'Order ID', width: 120, textAlign: 'Right' },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
+        { field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd', textAlign: 'Right' },
+        { field: 'Freight', headerText: 'Freight', width: 120, format: 'C2', textAlign: 'Right' },
+        { field: 'ShipCountry', headerText: 'Ship Country', width: 130,format: "yMd", textAlign: 'Right' }
     ],
-    pageSettings: { pageSizes: true, pageSize: 5 }
+    height: 315
 });
 grid.appendTo('#Grid');
 
-var btn = new ej.buttons.Button({ cssClass: 'e-flat' }, '#show');
-document.getElementById('show').onclick = () => {
-    var selectedrecords = grid.getSelectedRecords();
-    var selectedRecordsCount = selectedrecords.length;
-    alert(selectedRecordsCount);
-}
+var message = document.getElementById('message');
+var selectedRecordscount = 0;
 
+var button = new ej.buttons.Button({
+    content: 'Selected Records count',
+});
+button.appendTo('#buttons');
+
+document.getElementById('buttons').onclick = function () {
+    selectedRecordscount = grid.getSelectedRecords().length;
+    if (selectedRecordscount > 0) {
+        message.textContent = `Selected record count: ${selectedRecordscount}`
+    }
+    else {
+        message.textContent = ''
+    }
+};
