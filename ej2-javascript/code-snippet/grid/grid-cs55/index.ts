@@ -1,4 +1,4 @@
-import { Grid, Toolbar, ExcelExport, Page } from '@syncfusion/ej2-grids';
+import { Grid, Toolbar, ExcelExport, Page, Column } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 
@@ -19,13 +19,13 @@ let grid: Grid = new Grid({
 });
 grid.toolbarClick = (args: ClickEventArgs) => {
     if (args['item'].id === 'Grid_excelexport') {
-        grid.columns[1].visible = true;
-        grid.columns[3].visible = false;
+        ((grid.columns[1]) as Column).visible = true;
+        ((grid.columns[3]) as Column).visible = false;
         grid.excelExport();
     }
 }
 grid.excelExportComplete = () => {
-        grid.columns[1].visible = false;
-        grid.columns[3].visible = true;
+        ((grid.columns[1]) as Column).visible = false;
+        ((grid.columns[3]) as Column).visible = true;
     }
 grid.appendTo('#Grid');

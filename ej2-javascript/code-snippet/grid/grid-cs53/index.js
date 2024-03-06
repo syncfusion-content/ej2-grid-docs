@@ -1,7 +1,6 @@
-ej.grids.Grid.Inject(ej.grids.PdfExport, ej.grids.ExcelExport, ej.grids.Page, ej.grids.Toolbar, ej.grids.Filter);
+ej.grids.Grid.Inject(ej.grids.ExcelExport, ej.grids.Page, ej.grids.Toolbar, ej.grids.Filter);
 var grid = new ej.grids.Grid({
         dataSource: data,
-        allowPdfExport: true,
         allowExcelExport: true,
         allowPaging: true,
         toolbar: ['ExcelExport'],
