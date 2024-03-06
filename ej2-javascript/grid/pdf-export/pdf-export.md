@@ -86,7 +86,7 @@ The following example demonstrates how to show and hide the spinner during PDF e
 
 ## Binding custom data source while exporting
 
-The Syncfusion ##Platform_Name## Grid component provides a convenient way to export data to a PDF format. With the PDF export feature, you can define a custom data source while exporting. This allows you to export data that is not necessarily bind to the grid, which can be generated or retrieved based on your application logic.
+The Syncfusion ##Platform_Name## Grid control provides a convenient way to export data to a PDF format. With the PDF export feature, you can define a custom data source while exporting. This allows you to export data that is not necessarily bind to the grid, which can be generated or retrieved based on your application logic.
 
 To export data, you need to define the [dataSource](../../api/grid/pdfExportProperties/#datasource) property within the [pdfExportProperties](../../documentation/api/grid/pdfExportProperties/) object. This property represents the data source that will be used for the PDF export.
 
@@ -230,7 +230,7 @@ The following example demonstrates how to export the grid data with custom date 
 
 ## Exporting multiple grids
 
-Exporting multiple grids in the Syncfusion ##Platform_Name## Grid component allows you to export different grids to compare them side by side in external applications on the same or different pages of a PDF file.  Each grid is identified by its unique ID. You can specify which grid to export by listing their **IDs** in the [exportGrids](../../api/grid/#exportgrids) property.
+Exporting multiple grids in the Syncfusion ##Platform_Name## Grid control allows you to export different grids to compare them side by side in external applications on the same or different pages of a PDF file.  Each grid is identified by its unique ID. You can specify which grid to export by listing their **IDs** in the [exportGrids](../../api/grid/#exportgrids) property.
 
 ### Same page
 
@@ -271,7 +271,7 @@ PDF export functionality enables the exporting of multiple grids into separate p
 
 To achieve this, you can follow these steps:
 
-1. Access the [pdfExportProperties](../../api/grid/pdfExportProperties/#multipleexport) of the Grid component.
+1. Access the [pdfExportProperties](../../api/grid/pdfExportProperties/#multipleexport) of the Grid control.
 
 2. Set the [multipleExport->type](../../api/grid/multiplePdfExport/#type) property to **NewPage**.
 
@@ -312,7 +312,7 @@ The following example demonstrates how to export multiple grids to a PDF file wh
 
 ## Exporting hierarchy grid
 
-Exporting a hierarchy grid in the Syncfusion ##Platform_Name## Grid component allows you to generate a PDF document that includes the master grid along with its child grids. This feature is useful when you need to export hierarchical data with its related details.
+Exporting a hierarchy grid in the Syncfusion ##Platform_Name## Grid control allows you to generate a PDF document that includes the master grid along with its child grids. This feature is useful when you need to export hierarchical data with its related details.
 
 To achieve this, you can customize the exporting behavior by using the `pdfExportProperties.hierarchyExportMode` property of the Grid.
 
@@ -324,7 +324,7 @@ The `hierarchyExportMode` property allows you to specify the exporting behavior 
 | All      | Exports the master grid with all child grids, expanded or not. |
 | None     | Exports only the master grid without any child grids. |
 
-The following example demonstrates how to export hierarchical grid to PDF document. Also change the `pdfExportProperties.hierarchyExportMode` property by using [value](../../api/drop-down-list#value) property of the `DropDownList` component.
+The following example demonstrates how to export hierarchical grid to PDF document. Also change the `pdfExportProperties.hierarchyExportMode` property by using [value](../../api/drop-down-list#value) property of the `DropDownList` control.
 
 {% if page.publishingplatform == "typescript" %}
 
