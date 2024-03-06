@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Scrolling in ##Platform_Name## Grid control
 
-The scrolling feature in the ##Platform_Name## Grid control allows you to navigate through the content that extends beyond the visible area of the grid . It provides scrollbars that are automatically displayed when the content exceeds the specified `width` or `height` of the grid element. This feature is useful when you have a large amount of data or when the content needs to be displayed within a limited space. The vertical and horizontal scrollbars will be displayed based on the following criteria:
+The scrolling feature in the ##Platform_Name## Grid control allows you to navigate through the content that extends beyond the visible area of the grid. It provides scrollbars that are automatically displayed when the content exceeds the specified `width` or `height` of the grid element. This feature is useful when you have a large amount of data or when the content needs to be displayed within a limited space. The vertical and horizontal scrollbars will be displayed based on the following criteria:
 
 * The vertical scrollbar appears when the total height of rows present in the grid exceeds its element height.
 * The horizontal scrollbar appears when the sum of columns width exceeds the grid element width.
