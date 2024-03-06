@@ -91,7 +91,7 @@ In the below code, **OrderID**, **Ship Name** and **Ship Country** columns are d
 
 The Grid control provides the ability to prevent resizing for a particular column. This can be useful if you want to maintain a consistent column width or prevent users from changing the width of a column.
 
-You can disable resizing for a particular column by setting the [allowResizing](../../api/grid/columnDirective/#allowresizing) property of the column to **false**. The following example demonstrates, how to disabled resize for **Customer ID** column.
+You can disable resizing for a particular column by setting the [allowResizing](../../api/grid/columnDirective/#allowresizing) property of the column to **false**. The following example demonstrates, how to disable resizing for the **Customer ID** column.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -216,7 +216,7 @@ The following screenshot represents the column resizing on the touch device.
 
 Grid provides the ability to resize columns using an external button click. This can be achieved by changing the [width](../../api/grid/columnDirective/#width) property of the column and refreshing the grid using the [refreshColumns](../../api/grid#refreshcolumns) method in the external button click function.
 
-The following example demonstrates how to resize the columns in a grid. This is done by using the [change](../../api/drop-down-list/#change) event of the DropDownList control by change the [width](../../api/grid/columnDirective/#width) property of the selected column. This is accomplished using the  [getColumnByField](../../api/grid/#getcolumnbyfield) on external button click. Then, the [refreshColumns](../..api/grid#refreshcolumns) method is called on the grid control to update the displayed columns based on user interaction.
+The following example demonstrates how to resize the columns in a grid. This is done by using the [change](../../api/drop-down-list/#change) event of the DropDownList control by changing the [width](../../api/grid/columnDirective/#width) property of the selected column. This is accomplished using the  [getColumnByField](../../api/grid/#getcolumnbyfield) on external button click. Then, the [refreshColumns](../..api/grid#refreshcolumns) method is called on the grid control to update the displayed columns based on user interaction.
 
 {% if page.publishingplatform == "typescript" %}
 
