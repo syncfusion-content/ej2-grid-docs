@@ -15,7 +15,7 @@ Paging provides an option to display grid data in segmented pages, making it eas
 
 To enable paging, you need to set the [allowPaging](../../api/grid/#allowpaging) property to **true**. This property determines whether paging is enabled or disabled for the grid. When paging is enabled, a pager control rendered at the bottom of the grid, allowing you to navigate through different pages of data.
 
-To use paging, you need to inject the **Page** module in the **Grid**. 
+To use paging, you need to inject the **Page** module in the **Grid**. This module provides the necessary methods and events to handle paging functionality.
 
 Paging options can be configured through the [pageSettings](../../api/grid/pageSettings) property. The `pageSettings` object allows you to control various aspects of paging, such as the page size, current page, and total number of records.
 
@@ -169,7 +169,7 @@ In the following example, the [EJ2 Toggle Switch Button](../../switch/getting-st
 
 The pager template in Syncfusion Grid allows you to customize the appearance and behavior of the pager element, which is used for navigation through different pages of grid data. This feature is particularly useful when you want to use custom elements inside the pager instead of the default elements.
 
-To use the pager template, you need to specify the [template](../../api/grid/pageSettings/#template) property in your Syncfusion Grid configuration. The `template` property allows you to define a custom template for the pager. Within the template, you can access the [currentPage](../../api/grid/pageSettings/#currentpage), [pageSize](../../api/grid/pageSettings/#pagesize), [pageCount](../../api/grid/pageSettings/#pagecount), **totalPage** and **totalRecordCount** values.
+To use the pager template, you need to specify the [template](../../api/grid/pageSettings/#template) property of `pageSettings` in your Syncfusion Grid configuration. The `template` property allows you to define a custom template for the pager. Within the template, you can access the [currentPage](../../api/grid/pageSettings/#currentpage), [pageSize](../../api/grid/pageSettings/#pagesize), [pageCount](../../api/grid/pageSettings/#pagecount), **totalPage** and **totalRecordCount** values.
 
 The following example demonstrates how to render a **NumericTextBox** control in the pager using the `template` property:
 
