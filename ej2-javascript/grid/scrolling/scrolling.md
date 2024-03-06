@@ -87,7 +87,7 @@ In the following example, the parent container has explicit height and width set
 {% previewsample "page.domainurl/code-snippet/grid/scroll-parent-cs1" %}
 {% endif %}
 
-## Sticky Header
+## Sticky header
 
 The ##Platform_Name## Grid control provides a feature that allows you to make column headers remain fixed while scrolling, ensuring they stay visible at all times. To achieve this, you can utilize the [enableStickyHeader](../../api/grid/#enablestickyheader) property by setting it to **true**.
 
@@ -153,7 +153,7 @@ The following example that demonstrates how to use the `rowSelected` event to sc
 {% previewsample "page.domainurl/code-snippet/grid/scroll-to-select-row-cs1" %}
 {% endif %}
 
-## Hide the empty placehoder of scrollbar
+## Hide the empty placeholder of scrollbar
 
 The Syncfusion Grid control provides a feature to hide the empty placeholder of the scrollbar, offering a cleaner interface without unnecessary scrollbars. To achieve this, you can utilize the [hideScroll](../../api/grid/#hidescroll) method. This method allows you to determine whether the scrollbar should be hidden based on the content's overflow.
 
