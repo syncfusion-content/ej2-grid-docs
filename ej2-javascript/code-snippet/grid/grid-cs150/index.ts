@@ -1,34 +1,29 @@
+import { Grid, Toolbar, PdfExport,ClickEventArgs } from '@syncfusion/ej2-grids';
+import { data, changedData} from './datasource.ts';
 
-
-
-import { Grid, Toolbar, Page, PdfExport, PdfExportProperties } from '@syncfusion/ej2-grids';
-import { data } from './datasource.ts';
-
-Grid.Inject(Page, Toolbar, PdfExport);
+Grid.Inject(Toolbar, PdfExport);
 
 let grid: Grid = new Grid({
     dataSource: data,
-    allowPaging: true,
     allowPdfExport: true,
+    allowPaging: true,
     toolbar: ['PdfExport'],
+    toolbarClick: toolbarClick,
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
-        { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C' },
-        { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', width: 140, format: 'yMd' }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+        { field: 'ShipCity', headerText: 'Ship City', width: 110},
+        { field: 'ShipName', headerText: 'Ship Name', width: 120}
     ],
-    height: 230
+    height: 220
 });
 grid.appendTo('#Grid');
-grid.toolbarClick = (args: Object) => {
-    if (args['item'].id === 'Grid_pdfexport') {
-        let exportProperties: PdfExportProperties = {
-            dataSource: data,
+
+function toolbarClick(args: ClickEventArgs) {
+    if (args['item'].id === 'Grid_pdfexport') { 
+        let pdfExportProperties = {
+            dataSource: changedData,
         };
-        grid.pdfExport(exportProperties);
-    }
+        grid.pdfExport(pdfExportProperties);
+    } 
 }
-
-
-
-
