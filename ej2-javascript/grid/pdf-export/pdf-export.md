@@ -15,7 +15,7 @@ The PDF export feature in the Syncfusion ##Platform_Name## Grid allows you to ex
 
 To enable PDF export in the grid, you need to set the [allowPdfExport](../../api/grid/#allowpdfexport) property to **true** and use the [pdfExport](../../api/grid/#pdfexport) method for exporting. 
 
-To use PDF export, inject the **PdfExportService** in the **Grid**.
+To use PDF export, inject the **PdfExport** in the **Grid**.
 
 The following example demonstrates how to perform a PDF export action in the grid.
 
