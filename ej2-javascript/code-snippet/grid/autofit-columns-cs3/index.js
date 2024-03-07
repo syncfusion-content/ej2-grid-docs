@@ -10,7 +10,7 @@ var grid = new ej.grids.Grid({
         { field: 'Mainfieldsofinvention', headerText: 'Main fields of invention', width: 150 }
     ],
     dataBound: function(){
-       grid.autoFitColumns(['Inventor', 'Number of INPADOC patents', 'Main fields of invention'], 1, 3)
+       grid.autoFitColumns(['Inventor', 'Number of INPADOC patents', 'Mainfieldsofinvention'], 1, 3)
     },
     height: 315
 });

@@ -13,7 +13,7 @@ let grid: Grid = new Grid({
         { field: 'Active', headerText: 'Active', width: 150 },
         { field: 'Mainfieldsofinvention', headerText: 'Main fields of invention', width: 150 }
     ],
-    dataBound: () => grid.autoFitColumns(['Inventor', 'Number of INPADOC patents', 'Main fields of invention'], 1, 3),
+    dataBound: () => grid.autoFitColumns(['Inventor', 'Number of INPADOC patents', 'Mainfieldsofinvention'], 1, 3),
     height: 315
 });
 grid.appendTo('#Grid');
