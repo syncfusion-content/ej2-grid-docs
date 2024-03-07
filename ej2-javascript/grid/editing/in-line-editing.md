@@ -248,6 +248,47 @@ By default, a new row will be added at the top of the grid. You can change it by
 
 > Add newRowPostion is supported for `Normal` and `Batch` editing modes.
 
+## Show add new row always in grid
+
+The Syncfusion Grid simplifies the addition of new records by consistently presenting a blank, "add new row" form within the grid. To enable this feature, you can set the `showAddNewRow` property within the `editSettings` configuration to **true**. This allows for continuous addition of new records. You can display the add a new row at either the **top** or **bottom** of the grid content, depending on the [newRowPosition](https://ej2.syncfusion.com/documentation/api/grid/editSettings/#newrowposition) property of `editSettings`. By default, the add new row is displayed at the top row of the grid content.
+
+The following sample demonstrates how to add a new record continuously using `showAddNewRow` property.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/grid/grid-cs183/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs183/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs183" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/grid/grid-cs183/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/grid/grid-cs183/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/grid-cs183" %}
+{% endif %}
+
+> To save the newly added records, you can either hit the **Enter** key or click on the **Update** button located on the toolbar after filling in the new add form.
+
+### Limitations
+
+* This feature is supported only for Inline/Normal editing mode and is not compatible with other edit modes.
+* The new blank add row form will always be displayed at the top, even if you have set the new row position as the bottom for Virtual Scrolling and Infinite Scrolling enabled grid.
+* This feature is not compatible with the column virtualization feature.
+
 ## Move the focus to a particular cell instead of first cell while editing a row
 
 The [recordDoubleClick](../../api/grid/#recordDoubleClick) event allows you to move the focus to the corresponding cell (the cell that you doubled-clicked to edit a row) instead of the first cell in edit form. With the help of this event, you can focus the double-clicked column in inline edit mode.
