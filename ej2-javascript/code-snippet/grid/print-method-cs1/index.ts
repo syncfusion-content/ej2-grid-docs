@@ -1,5 +1,3 @@
-
-
 import { Grid } from '@syncfusion/ej2-grids';
 import { Button } from '@syncfusion/ej2-buttons';
 import { data } from './datasource.ts';
@@ -16,12 +14,8 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 
-let printBtn: Button = new Button();
-printBtn.appendTo('#print');
+let printBtn: Button = new Button({ cssClass: 'e-primary' },'#print');
 
-document.getElementById('print').addEventListener('click', () => {
+(document.getElementById('print')as HTMLElement).addEventListener('click', () => {
     grid.print();
 });
-
-
-

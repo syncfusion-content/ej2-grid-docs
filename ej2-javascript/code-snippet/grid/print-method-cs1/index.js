@@ -10,10 +10,8 @@ var grid = new ej.grids.Grid({
 });
 grid.appendTo('#Grid');
 
-var printBtn = new ej.buttons.Button();
-printBtn.appendTo('#print');
+var printBtn = new ej.buttons.Button({ cssClass: 'e-primary' },'#print');
 
 document.getElementById('print').addEventListener('click', function(){
     grid.print();
 });
-

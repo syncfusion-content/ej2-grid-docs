@@ -1,7 +1,6 @@
-
-
 import { Grid, Toolbar, Page } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
+import { DropDownList, ChangeEventArgs } from '@syncfusion/ej2-dropdowns';
 
 Grid.Inject(Toolbar, Page);
 
@@ -20,5 +19,14 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 
-
-
+let dropdownList = ['CurrentPage', 'AllPages'];
+let dropDownObject: DropDownList = new DropDownList({
+    index: "0",
+    width: "120",
+    dataSource: dropdownList,
+    change: onChange,
+});
+dropDownObject.appendTo('#dropdown');
+function onChange(args:ChangeEventArgs) {
+    grid.printMode = args.value;
+}
