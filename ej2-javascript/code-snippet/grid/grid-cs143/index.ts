@@ -1,6 +1,6 @@
-import { Grid, Toolbar, Page, PdfExport } from '@syncfusion/ej2-grids';
+import { Grid, Toolbar, Page, PdfExport,PdfExportProperties } from '@syncfusion/ej2-grids';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
-import { Switch } from '@syncfusion/ej2-buttons';
+import { Switch  } from '@syncfusion/ej2-buttons';
 import { data } from './datasource.ts';
 
 Grid.Inject(Page, Toolbar, PdfExport);
@@ -28,10 +28,10 @@ toggle.appendTo('#switch');
 
 function toolbarClick(args: ClickEventArgs){
     if (args.item.id === 'Grid_pdfexport') {
-        // 'Grid_pdfexport' -> Grid component id + _ + toolbar item name
-        var pdfExportProperties = {
-            includeHiddenColumn: toggle.checked,
+        // 'Grid_pdfexport' -> Grid control id + _ + toolbar item name
+        let pdfExportProperties: PdfExportProperties = {
+            includeHiddenColumn: (toggle as Switch).checked,
         };
-        grid.pdfExport(pdfExportProperties);
+        (grid as Grid).pdfExport(pdfExportProperties);
     }
 }

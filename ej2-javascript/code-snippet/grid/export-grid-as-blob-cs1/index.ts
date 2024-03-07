@@ -23,7 +23,7 @@ grid.appendTo('#Grid');
 function toolbarClick(args: ClickEventArgs) {
     if (args.item.id === 'Grid_pdfexport') {
         // pass fourth parameter as true to get the blob data of exported grid
-        grid.pdfExport(null, null, null, true);
+        (grid as Grid).pdfExport(null, null, null, true);
     }
 }
 
@@ -38,7 +38,7 @@ function pdfExportComplete(args: PdfExportCompleteArgs) {
 };
 
 function exportBlob(blob: Blob) {
-    let a = document.createElement('a');
+    let a: HTMLAnchorElement = document.createElement('a');
     document.body.appendChild(a);
     a.style.display = 'none';
     let url = window.URL.createObjectURL(blob); // Fix typo here

@@ -1,4 +1,4 @@
-import { Grid, Toolbar, PdfExport} from '@syncfusion/ej2-grids';
+import { Grid, Toolbar ,PdfExport, PdfExportProperties} from '@syncfusion/ej2-grids';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { data } from './datasource.ts';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
@@ -35,9 +35,9 @@ dropDownList.appendTo('#dropdown');
 
 function toolbarClick(args: ClickEventArgs){
     if(args.item.id === 'Grid_pdfexport') {
-        let pdfExportProperties = {
-            pageOrientation: dropDownList.value,
+        let pdfExportProperties: PdfExportProperties = {
+            pageOrientation: (dropDownList as DropDownList).value  as PdfExportProperties,
         };
-        grid.pdfExport(pdfExportProperties);
+        (grid as Grid).pdfExport(pdfExportProperties);
     }
 }

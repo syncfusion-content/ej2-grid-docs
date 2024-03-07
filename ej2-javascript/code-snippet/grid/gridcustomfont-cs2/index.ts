@@ -1,4 +1,4 @@
-import { Grid, Toolbar, PdfExport, PdfQueryCellInfoEventArgs, QueryCellInfoEventArgs } from '@syncfusion/ej2-grids';
+import { Grid, Toolbar, PdfExport, PdfQueryCellInfoEventArgs, QueryCellInfoEventArgs,PdfStyle } from '@syncfusion/ej2-grids';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { data } from './datasource.ts';
 
@@ -24,19 +24,19 @@ grid.appendTo('#Grid');
 
 function toolbarClick(args: ClickEventArgs) {
     if (args.item.id === 'Grid_pdfexport') {
-        grid.pdfExport();
+        (grid as Grid).pdfExport();
     }
 }
 
 function pdfQueryCellInfo(args: PdfQueryCellInfoEventArgs)
 {
     if (args.column.field === 'Freight') {
-        if ((args.value) < 30) {
-            (args.style)= { backgroundColor: '#99ffcc' };
+        if ((args.value as number) < 30) {
+            (args.style as PdfStyle)= { backgroundColor: '#99ffcc' };
         } else if ((args.value) < 60) {
-            (args.style) = { backgroundColor: '#ffffb3' };
+            (args.style as PdfStyle) = { backgroundColor: '#ffffb3' };
         } else {
-            (args.style) = { backgroundColor: '#ff704d' };
+            (args.style as PdfStyle) = { backgroundColor: '#ff704d' };
         }
     }
 }
@@ -47,7 +47,7 @@ function queryCellInfo(args: QueryCellInfoEventArgs)
     let cell = args.cell;
     let data = args.data;
     if (column.field === 'Freight') {
-        let FreightData= data.Freight;
+        let FreightData= (data as columnDataType).Freight;
         if (FreightData < 30) {
             (cell as HTMLElement).style.background = '#99ffcc';
         } else if (FreightData < 60) {
@@ -56,4 +56,12 @@ function queryCellInfo(args: QueryCellInfoEventArgs)
            (cell as HTMLElement).style.background = '#ff704d';
         }
     }
+}
+
+interface columnDataType{
+    field: number;
+    OrderID:number,
+    Freight:number,
+    CustomerID:string,
+    ShipName:string
 }

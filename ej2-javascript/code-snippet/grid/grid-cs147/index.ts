@@ -1,7 +1,7 @@
 
 
 
-import { Grid, Page, Toolbar, PdfExport } from '@syncfusion/ej2-grids';
+import { Grid, Page, Toolbar, PdfExport, PdfExportProperties } from '@syncfusion/ej2-grids';
 import { TextBox } from '@syncfusion/ej2-inputs';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { data } from './datasource.ts';
@@ -33,16 +33,16 @@ textbox.appendTo('#textboxvalue');
 function toolbarClick(args: ClickEventArgs){
     if (args.item.id === 'Grid_pdfexport') {
         // 'Grid_pdfexport' -> Grid control id + _ + toolbar item name
-        if (textbox.value) {
-            var pdfExportProperties = {
-                fileName: textbox.value + '.pdf',
+        if ((textbox as TextBox).value) {
+            let pdfExportProperties: PdfExportProperties  = {
+                fileName: (textbox as TextBox).value + '.pdf',
             };
-            grid.pdfExport(pdfExportProperties);
+            (grid as Grid).pdfExport(pdfExportProperties);
         } else {
-            var pdfExportProperties = {
+            let pdfExportProperties: PdfExportProperties  = {
                 fileName: 'new.pdf',
             };
-            grid.pdfExport(pdfExportProperties);
+            (grid as Grid).pdfExport(pdfExportProperties);
         }
     }
 }

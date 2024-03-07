@@ -1,5 +1,5 @@
 import { Grid, Toolbar, PdfExport, PdfExportProperties } from '@syncfusion/ej2-grids';
-import { DropDownList } from '@syncfusion/ej2-dropdowns';
+import { DropDownList} from '@syncfusion/ej2-dropdowns';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { data } from './datasource.ts';
 
@@ -20,7 +20,7 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 
-let ddlData = [
+let dropdownData = [
     { text: 'Letter', value: 'Letter' },
     { text: 'Note', value: 'Note' },
     { text: 'Legal', value: 'Legal' },
@@ -54,16 +54,16 @@ let dropDownList: DropDownList = new DropDownList({
     value: 'Letter',
     popupHeight: '240px',
     width: 100,
-    dataSource: ddlData
+    dataSource: dropdownData
 });
 dropDownList.appendTo('#dropdown');
 
 function toolbarClick(args: ClickEventArgs){
     if (args.item.id === 'Grid_pdfexport') {
-        let exportProperties = {
-            pageSize: dropDownList.value
+        let exportProperties: PdfExportProperties = {
+            pageSize: (dropDownList as DropDownList).value as PdfExportProperties
         };
-        grid.pdfExport(exportProperties);
+        (grid as Grid).pdfExport(exportProperties);
     }
 }
 

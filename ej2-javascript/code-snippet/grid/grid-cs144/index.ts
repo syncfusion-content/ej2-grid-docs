@@ -1,4 +1,4 @@
-import { Grid, Toolbar, PdfExport, ColumnModel } from '@syncfusion/ej2-grids';
+import { Grid, Toolbar, PdfExport, Column } from '@syncfusion/ej2-grids';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { data } from './datasource.ts';
 
@@ -23,12 +23,12 @@ grid.appendTo('#Grid');
 
 function toolbarClick(args: ClickEventArgs) {
     if (args.item.id === 'Grid_pdfexport') {
-        (grid.columns[1] as ColumnModel).visible = true;
-        (grid.columns[2] as ColumnModel).visible = false;
-        grid.pdfExport();
+        ((grid as Grid).columns[1] as Column).visible = true;
+        ((grid as Grid).columns[2] as Column).visible = false;
+        (grid as Grid).pdfExport();
     }
 }
 function pdfExportComplete() {
-    (grid.columns[1] as ColumnModel).visible = false;
-    (grid.columns[2] as ColumnModel).visible = true;
+    ((grid as Grid).columns[1] as Column).visible = false;
+    ((grid as Grid).columns[2] as Column).visible = true;
 }

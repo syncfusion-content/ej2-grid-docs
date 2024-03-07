@@ -1,4 +1,4 @@
-import { Grid, Toolbar, PdfExport } from '@syncfusion/ej2-grids';
+import { Grid, Toolbar, PdfExport,PdfExportProperties,Column  } from '@syncfusion/ej2-grids';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { data } from './datasource.ts';
 
@@ -22,15 +22,15 @@ grid.appendTo('#Grid');
 function toolbarClick(args: ClickEventArgs) {
     if (args.item.id === 'Grid_pdfexport') {
         // 'Grid_pdfexport' -> Grid control id + _ + toolbar item name
-        let pdfExportColumns = [
+        let pdfExportColumns: Partial<Column>[] = [
             { field: 'OrderID', textAlign: 'Right', width: '90' },
             { field: 'CustomerID', headerText: 'Customer Name', width: '100' },
             { field: 'Freight', textAlign: 'Center', width: '80' },
         ];
 
-        let pdfExportProperties = {
-            columns: pdfExportColumns
+        let pdfExportProperties: PdfExportProperties  = {
+            columns: pdfExportColumns as Column[]
         };
-        grid.pdfExport(pdfExportProperties);
+        (grid as Grid).pdfExport(pdfExportProperties);
     }
 }

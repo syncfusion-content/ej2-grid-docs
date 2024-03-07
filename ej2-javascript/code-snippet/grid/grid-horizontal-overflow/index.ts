@@ -1,4 +1,4 @@
-import { Grid, Toolbar, PdfExport } from '@syncfusion/ej2-grids';
+import { Grid, Toolbar, PdfExport,PdfExportProperties } from '@syncfusion/ej2-grids';
 import { Switch } from '@syncfusion/ej2-buttons';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { data } from './datasource.ts';
@@ -32,9 +32,9 @@ toggle.appendTo('#switch');
 function toolbarClick(args: ClickEventArgs) {
     if (args.item.id === 'Grid_pdfexport') {
         // 'Grid_pdfexport' -> Grid control id + _ + toolbar item name
-        let pdfExportProperties = {
-            allowHorizontalOverflow: !(toggle.checked)
+        let pdfExportProperties: PdfExportProperties  = {
+            allowHorizontalOverflow: !((toggle as Switch).checked)
         };
-        grid.pdfExport(pdfExportProperties);
+        (grid as Grid).pdfExport(pdfExportProperties);
     }
 }

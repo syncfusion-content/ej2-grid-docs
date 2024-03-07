@@ -25,6 +25,6 @@ function toolbarClick(args: ClickEventArgs){
         let exportProperties: PdfExportProperties = {
             exportType: 'CurrentPage'
         };
-        grid.pdfExport(exportProperties);
+        (grid as Grid).pdfExport(exportProperties);
     }
 }

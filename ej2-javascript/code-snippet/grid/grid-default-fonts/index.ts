@@ -1,4 +1,4 @@
-import { Grid, Toolbar, PdfExport,Group } from '@syncfusion/ej2-grids';
+import { Grid, Toolbar, PdfExport,Group,PdfExportProperties } from '@syncfusion/ej2-grids';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { PdfStandardFont, PdfFontFamily, PdfFontStyle } from '@syncfusion/ej2-pdf-export';
 import { data } from './datasource.ts';
@@ -25,7 +25,7 @@ grid.appendTo('#Grid');
 function toolbarClick(args: ClickEventArgs) {
     if (args.item.id === 'Grid_pdfexport') {
         // 'Grid_pdfexport' -> Grid control id + _ + toolbar item name
-        let pdfExportProperties = {
+        let pdfExportProperties: PdfExportProperties = {
             theme: {
                 header: {
                     font: new PdfStandardFont(PdfFontFamily.TimesRoman, 11, PdfFontStyle.Bold),
@@ -45,6 +45,6 @@ function toolbarClick(args: ClickEventArgs) {
                 },
             }
         };
-        grid.pdfExport(pdfExportProperties);
+        (grid as Grid).pdfExport(pdfExportProperties);
     }
 }

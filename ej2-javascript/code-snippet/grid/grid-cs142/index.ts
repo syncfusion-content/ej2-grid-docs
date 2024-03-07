@@ -1,4 +1,4 @@
-import { Grid, Toolbar, Page, PdfExport } from '@syncfusion/ej2-grids';
+import { Grid, Toolbar, Page, PdfExport,PdfExportProperties } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 
@@ -22,9 +22,9 @@ grid.appendTo('#Grid');
 function toolbarClick(args: ClickEventArgs){
     if (args.item.id === 'Grid_pdfexport') {
         let selectedRecords = grid.getSelectedRecords();
-            let exportProperties = {
+            let exportProperties: PdfExportProperties  = {
                 dataSource: selectedRecords,
             };
-            grid.pdfExport(exportProperties);
+            (grid as Grid).pdfExport(exportProperties);
         }
 }

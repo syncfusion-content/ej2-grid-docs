@@ -1,4 +1,4 @@
-import { Grid, Page, Toolbar, PdfExport, Group } from '@syncfusion/ej2-grids';
+import { Grid, Page, Toolbar, PdfExport, Group, PdfExportProperties } from '@syncfusion/ej2-grids';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { data, base64AlgeriaFont } from './datasource.ts';
 import { PdfTrueTypeFont } from '@syncfusion/ej2-pdf-export';
@@ -25,7 +25,7 @@ grid.appendTo('#Grid');
 
 function toolbarClick(args: ClickEventArgs) {
     if (args.item.id === 'Grid_pdfexport') {
-        let pdfExportProperties = {
+        let pdfExportProperties: PdfExportProperties  = {
             theme: {
                 header: {
                     font: new PdfTrueTypeFont(base64AlgeriaFont, 12),
@@ -45,6 +45,6 @@ function toolbarClick(args: ClickEventArgs) {
                 }
             }
         };
-        grid.pdfExport(pdfExportProperties);
+        (grid as Grid).pdfExport(pdfExportProperties);
     }
 }

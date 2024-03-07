@@ -1,4 +1,4 @@
-import { Grid, Toolbar, Page, PdfExport, Filter } from '@syncfusion/ej2-grids';
+import { Grid, Toolbar, Page, PdfExport, Filter,ClickEventArgs } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
 Grid.Inject(Page, Toolbar, PdfExport, Filter);
@@ -19,10 +19,12 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 
-function toolbarClick(){
-    let filteredRecords = grid.getFilteredRecords();
+function toolbarClick(args: ClickEventArgs){
+    if (args.item.id === 'Grid_pdfexport') {
+    let filteredRecords = (grid  as Grid).getFilteredRecords();
         let exportProperties = {
           dataSource: filteredRecords,
         };
-    grid.pdfExport(exportProperties);
+    (grid as Grid).pdfExport(exportProperties);
+    }
 }
