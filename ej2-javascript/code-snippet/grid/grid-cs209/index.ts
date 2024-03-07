@@ -1,4 +1,4 @@
-import { Grid, Toolbar, PdfExport, ClickEventArgs} from '@syncfusion/ej2-grids';
+import { Grid, Toolbar, PdfExport, ClickEventArgs,GridComponent,PdfExportProperties} from '@syncfusion/ej2-grids';
 import { data,employeeData } from './datasource.ts';
 
 Grid.Inject(Toolbar, PdfExport);
@@ -30,12 +30,12 @@ let SecondGrid: Grid = new Grid({
 });
 SecondGrid.appendTo('#SecondGrid');
 
-let sameSheetPdfProperties = {
+let appendPdfExportProperties: PdfExportProperties = {
     multipleExport: { type: 'AppendToPage', blankSpace: 10 },
   }; 
 
-firstGrid.toolbarClick = function (args: ClickEventArgs) {
+function toolbarClick(args: ClickEventArgs) {
     if (args.item.text === 'PDF Export') {
-      firstGrid.pdfExport(sameSheetPdfProperties, true);
+      (firstGrid as GridComponent).pdfExport(appendPdfExportProperties, true);
     }
   };

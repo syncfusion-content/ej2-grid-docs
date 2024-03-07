@@ -1,4 +1,4 @@
-import { Grid, Toolbar, PdfExport, Column, ClickEventArgs, PdfQueryCellInfoEventArgs, QueryCellInfoEventArgs} from '@syncfusion/ej2-grids';
+import { Grid, Toolbar, PdfExport, Column,PdfCell, ClickEventArgs, GridComponent, PdfQueryCellInfoEventArgs, QueryCellInfoEventArgs} from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
 Grid.Inject(Toolbar, PdfExport);
@@ -25,7 +25,7 @@ grid.appendTo('#Grid');
 
 function toolbarClick(args: ClickEventArgs) {
     if (args.item.id === 'Grid_pdfexport') {
-        grid.pdfExport();
+        (grid as GridComponent).pdfExport();
     }
 }
 
@@ -66,7 +66,7 @@ function pdfQueryCellInfo(args: PdfQueryCellInfoEventArgs)
         switch (data) {
             case 10248:
                 if ((args.column as Column).field === 'CustomerID') {
-                    (args.cell ).rowSpan = 2;
+                    (args.cell as PdfCell).rowSpan = 2;
                 }
                 break;
             case 10250:
@@ -76,7 +76,7 @@ function pdfQueryCellInfo(args: PdfQueryCellInfoEventArgs)
                 break;
             case 10252:
                 if ((args.column as Column).field === 'OrderID') {
-                    (args.cell ).rowSpan = 3;
+                    (args.cell as PdfCell).rowSpan = 3;
                 }
                 break;
             case 10256:
@@ -99,4 +99,8 @@ interface columnDataType{
     CustomerID:string,
     ShipCity:string,
     ShipCountry:string,
+}
+
+interface PdfCell {
+    rowSpan: number;  
 }

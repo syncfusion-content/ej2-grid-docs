@@ -1,4 +1,4 @@
-import { Grid, Toolbar, PdfExport,  Aggregate, ClickEventArgs} from '@syncfusion/ej2-grids';
+import { Grid, Toolbar, PdfExport,  Aggregate, ClickEventArgs, GridComponent} from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
 Grid.Inject(Toolbar, PdfExport,Aggregate);
@@ -28,7 +28,7 @@ grid.appendTo('#Grid');
 
 function toolbarClick(args: ClickEventArgs) {
     if (args.item.id === 'Grid_pdfexport') {
-        grid.pdfExport();
+        (grid as GridComponent).pdfExport();
     }
 }
 
@@ -41,7 +41,7 @@ function customAggregateFn(customData: Item[]) {
         data = customData as Item[];
     }
 
-    let brazilCount = data.filter((item) => item.ShipCountry === 'Brazil').length;
+    let brazilCount = data.filter(item => item.ShipCountry === 'Brazil').length;
     return `${brazilCount}`;
 }
 

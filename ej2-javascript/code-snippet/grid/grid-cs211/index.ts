@@ -1,5 +1,5 @@
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
-import { Grid, Toolbar, PdfExport, DetailRow, ClickEventArgs} from '@syncfusion/ej2-grids';
+import { Grid, Toolbar, PdfExport, DetailRow,GridComponent, ClickEventArgs} from '@syncfusion/ej2-grids';
 import { data,employeeData } from './datasource.ts';
 
 Grid.Inject(Toolbar, PdfExport,DetailRow);
@@ -20,13 +20,11 @@ let grid: Grid = new Grid({
         dataSource: data,
         queryString: 'EmployeeID',
         columns: [
-            {
-                field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90
-            },
+            { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90},
             { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
             { field: 'ShipCity', headerText: 'Ship City', width: 100 },
-            { field: 'ShipName', headerText: 'Ship Name', width: 110 },
-        ],
+            { field: 'ShipName', headerText: 'Ship Name', width: 110 }
+        ]
     }
 });
 grid.appendTo('#Grid');
@@ -35,9 +33,9 @@ function toolbarClick(args: ClickEventArgs) {
   if (args.item.id === 'Grid_pdfexport') {
     // 'Grid_pdfexport' -> Grid component id + _ + toolbar item name
     let exportProperties = {
-        hierarchyExportMode: dropDownColumn.value,
+        hierarchyExportMode: (dropDownColumn as DropDownList).value,
     };
-    grid.pdfExport(exportProperties);
+    (grid as GridComponent).pdfExport(exportProperties);
 }
 };
 
