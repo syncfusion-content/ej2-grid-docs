@@ -1,37 +1,43 @@
-ej.grids.Grid.Inject(ej.grids.Page, ej.grids.PdfExport, ej.grids.ExcelExport, ej.grids.Toolbar);
-var queryClone;
+ej.grids.Grid.Inject(ej.grids.Toolbar, ej.grids.PdfExport);
+
 var grid = new ej.grids.Grid({
     dataSource: data,
-    allowPaging: true,
     allowPdfExport: true,
-    allowExcelExport: true,
-    toolbar: ['PdfExport', 'ExcelExport'],
+    toolbar: ['PdfExport'],
+    toolbarClick: toolbarClick,
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
-        { field: 'CustomerID', width: 140, headerText: 'Customer ID', visible: false },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120 },
-        { field: 'ShipCity', headerText: 'ShipCity', textAlign: 'Right', width: 140 }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+        { field: 'ShipCity', headerText: 'Ship City', width: 100},
+        { field: 'ShipCountry', headerText: 'Ship Country', width: 100}
     ],
-    height: 260
+    height: 272,
+    aggregates: [{
+                    columns: [{
+                        type: 'Custom',
+                        customAggregate: customAggregateFn,
+                        columnName: 'ShipCountry',
+                        footerTemplate: 'Brazil Count: ${Custom}'
+                    }]
+    }]
 });
 grid.appendTo('#Grid');
-grid.toolbarClick = function(args){
-    if (args['item'].id === 'Grid_pdfexport') {
-        queryClone = grid.query;
-        grid.query = new ej.data.Query().addParams("recordcount", "12");
+
+function toolbarClick(args) {
+    if (args.item.id === 'Grid_pdfexport') {
         grid.pdfExport();
     }
-    if (args['item'].id === 'Grid_excelexport') {
-        queryClone = grid.query;
-        grid.query = new ej.data.Query().addParams("recordcount", "12");
-        grid.excelExport();
-    }
 }
-grid.pdfExportComplete = () => {
-        grid.query = queryClone;
-    }
-grid.excelExportComplete = () => {
-        grid.query = queryClone;
+
+function customAggregateFn(customData) {
+    var data;
+
+    if ('result' in customData && Array.isArray(customData.result)) {
+        data = customData.result;
+    } else {
+        data = customData;
     }
 
-
+    var brazilCount = data.filter((item) => item.ShipCountry === 'Brazil').length;
+    return `${brazilCount}`;
+}
