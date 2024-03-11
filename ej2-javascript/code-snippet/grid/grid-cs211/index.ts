@@ -1,5 +1,5 @@
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
-import { Grid, Toolbar, PdfExport, DetailRow,GridComponent, ClickEventArgs} from '@syncfusion/ej2-grids';
+import { Grid, Toolbar, PdfExport, DetailRow, ClickEventArgs} from '@syncfusion/ej2-grids';
 import { data,employeeData } from './datasource.ts';
 
 Grid.Inject(Toolbar, PdfExport,DetailRow);
@@ -31,11 +31,11 @@ grid.appendTo('#Grid');
 
 function toolbarClick(args: ClickEventArgs) {
   if (args.item.id === 'Grid_pdfexport') {
-    // 'Grid_pdfexport' -> Grid component id + _ + toolbar item name
+    // 'Grid_pdfexport' -> Grid control id + _ + toolbar item name
     let exportProperties = {
         hierarchyExportMode: (dropDownColumn as DropDownList).value,
     };
-    (grid as GridComponent).pdfExport(exportProperties);
+    (grid as Grid).pdfExport(exportProperties);
 }
 };
 

@@ -1,4 +1,4 @@
-import { Grid, Toolbar, PdfExport, ClickEventArgs,GridComponent,PdfExportProperties} from '@syncfusion/ej2-grids';
+import { Grid, Toolbar, PdfExport, ClickEventArgs,PdfExportProperties} from '@syncfusion/ej2-grids';
 import { data,employeeData } from './datasource.ts';
 
 Grid.Inject(Toolbar, PdfExport);
@@ -36,6 +36,6 @@ let appendPdfExportProperties: PdfExportProperties = {
 
 function toolbarClick(args: ClickEventArgs) {
     if (args.item.text === 'PDF Export') {
-      (firstGrid as GridComponent).pdfExport(appendPdfExportProperties, true);
+      (firstGrid as Grid).pdfExport(appendPdfExportProperties, true);
     }
   };
