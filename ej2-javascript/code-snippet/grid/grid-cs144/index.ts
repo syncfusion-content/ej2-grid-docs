@@ -23,6 +23,7 @@ grid.appendTo('#Grid');
 
 function toolbarClick(args: ClickEventArgs) {
     if (args.item.id === 'Grid_pdfexport') {
+        // 'Grid_pdfexport' -> Grid control id + _ + toolbar item name
         ((grid as Grid).columns[1] as Column).visible = true;
         ((grid as Grid).columns[2] as Column).visible = false;
         (grid as Grid).pdfExport();

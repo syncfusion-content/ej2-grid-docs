@@ -22,6 +22,7 @@ grid.appendTo('#Grid');
 
 function toolbarClick(args: ClickEventArgs) {
     if (args.item.id === 'Grid_pdfexport') {
+        // 'Grid_pdfexport' -> Grid control id + _ + toolbar item name
         // pass fourth parameter as true to get the blob data of exported grid
         (grid as Grid).pdfExport(null, null, null, true);
     }

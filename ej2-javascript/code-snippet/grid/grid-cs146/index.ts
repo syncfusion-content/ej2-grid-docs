@@ -60,6 +60,7 @@ dropDownList.appendTo('#dropdown');
 
 function toolbarClick(args: ClickEventArgs){
     if (args.item.id === 'Grid_pdfexport') {
+        // 'Grid_pdfexport' -> Grid control id + _ + toolbar item name
         let exportProperties: PdfExportProperties = {
             pageSize: (dropDownList as DropDownList).value as PdfExportProperties
         };

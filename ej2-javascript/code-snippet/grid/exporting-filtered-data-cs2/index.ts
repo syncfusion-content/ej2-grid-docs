@@ -21,6 +21,7 @@ grid.appendTo('#Grid');
 
 function toolbarClick(args: ClickEventArgs){
     if (args.item.id === 'Grid_pdfexport') {
+    // 'Grid_pdfexport' -> Grid control id + _ + toolbar item name
     let filteredRecords = (grid  as Grid).getFilteredRecords();
         let exportProperties = {
           dataSource: filteredRecords,
