@@ -36,6 +36,7 @@ let appendPdfExportProperties: PdfExportProperties = {
 
 function toolbarClick(args: ClickEventArgs) {
   if (args.item.text === 'PDF Export') {
+    // 'Grid_pdfexport' -> Grid control id + _ + toolbar item name
     (firstGrid as Grid).pdfExport(appendPdfExportProperties, true);
   }
 };
