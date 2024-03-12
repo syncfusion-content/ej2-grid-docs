@@ -1,4 +1,4 @@
-ej.grids.Grid.Inject(ej.grids.Page, ej.grids.Group, ej.grids.Sort, ej.grids.Filter, ej.grids.ColumnMenu);
+ej.grids.Grid.Inject(ej.grids.Page, ej.grids.Sort, ej.grids.ColumnMenu);
 var grid = new ej.grids.Grid({
     dataSource: data,
     allowPaging: true,

@@ -1,17 +1,16 @@
 ej.grids.Grid.Inject(ej.grids.Resize);
 var grid = new ej.grids.Grid({
-    dataSource: inventoryData,
+    dataSource: data,
+    allowResizing: true,
+    autoFit: true,
+    height: 400,
+    width: 850,
     columns: [
-        { field: 'Inventor', headerText: 'Inventor', width: 140, clipMode: 'EllipsisWithTooltip' },
-        { field: 'NumberofPatentFamilies', headerText: 'Number of Patent Families', width: 130 },
-        { field: 'Country', headerText: 'Country', width: 120 },
-        { field: 'Number of INPADOC patents', headerText: 'Number of INPADOC patents', width: 150 },
-        { field: 'Active', headerText: 'Active', width: 150 },
-        { field: 'Mainfieldsofinvention', headerText: 'Main fields of invention', width: 150 }
+        { field: 'OrderID', headerText: 'Order ID', minWidth:100, width: 150, maxWidth: 200, textAlign:'Right' },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
+        { field: 'Freight', headerText: 'Freight', minWidth:8, width: 120, format:'C2', textAlign:'Right' },
+        { field: 'ShipCity', headerText: 'Ship City', allowResizing:false, width: 150, textAlign:'Right' },
+        { field: 'ShipCountry', headerText: 'ShipCountry', minWidth:8, width: 120 },
     ],
-    dataBound: function(){
-       grid.autoFitColumns(['Inventor', 'Number of INPADOC patents', 'Mainfieldsofinvention'], 1, 3)
-    },
-    height: 315
 });
 grid.appendTo('#Grid');

@@ -9,10 +9,11 @@ var grid= new ej.grids.Grid({
             { field: 'ShipCity', headerText: 'Ship City', width: 150 },
             { field: 'ShipName', headerText: 'Ship Name', width: 150 }
         ],
-        pageSettings: { pageSizes: true, pageSize: 6 },
+        pageSettings: { pageSize: 6 },
 
-        toolbarClick : function() {
-    for (var i = 0; i < this.columns.length; i++) {
+        toolbarClick : function(args) {
+            if(args.item.id== 'Grid_print'){
+            for (var i = 0; i < this.columns.length; i++) {
                 if (this.columns[i].field == "CustomerID") {
                     this.columns[i].visible = true;
                 }
@@ -20,6 +21,7 @@ var grid= new ej.grids.Grid({
                     this.columns[i].visible = false;
                 }
         }
+    }
     },
     printComplete : function() {
     for (var i = 0; i < this.columns.length; i++) {
@@ -33,5 +35,3 @@ var grid= new ej.grids.Grid({
     }
 });
 grid.appendTo('#Grid');
-
-
