@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 The virtual scrolling feature in the Grid allows you to efficiently handle and display a large amount of data without experiencing any performance degradation. It optimizes the rendering process by loading only the visible rows in the Grid viewport, rather than rendering the entire dataset at once. This is particularly useful when dealing with datasets that contain thousands of records.
 
-To enable virtualization in the Grid, you need to inject the **VirtualScrollService**. This service is responsible for managing the virtual scrolling behavior and optimizing the rendering of data to enhance performance.
+To enable virtualization in the Grid, you need to inject the **VirtualScroll**. This module is responsible for managing the virtual scrolling behavior and optimizing the rendering of data to enhance performance.
 
 ## Row virtualization
 
