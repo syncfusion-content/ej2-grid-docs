@@ -1,14 +1,12 @@
 var grid = new ej.grids.Grid({
     dataSource: data,
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
-        { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
-        { field: 'ShipCity', width: 140, headerText: 'Ship City', visible: false },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C' },
-        { field: 'OrderDate', headerText: 'Order Date', width: 140, format: 'yMd', textAlign: 'Right' }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 140, },
+        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', format: 'C', width: 120},
+        { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', format: 'yMd',width: 140, },
+        { field: 'ShipCity', headerText: 'Ship City', visible: false, width: 100 }    
     ],
     height: 315
 });
 grid.appendTo('#Grid');
-
-

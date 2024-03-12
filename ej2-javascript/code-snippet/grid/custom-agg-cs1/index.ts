@@ -1,25 +1,20 @@
-
-
-import { Grid, Page, Aggregate  } from '@syncfusion/ej2-grids';
+import { Grid, Aggregate  } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
-import { DataManager, Query, DataUtil } from '@syncfusion/ej2-data';
+import { DataUtil } from '@syncfusion/ej2-data';
 
-Grid.Inject(Page, Aggregate );
-
+Grid.Inject(Aggregate );
 
 let customAggregateFn = function() {
-let results = new DataManager(this.currentViewData).executeLocal(new Query().select(['ShipCountry']));
-let distinct = DataUtil.distinct(results, 'ShipCountry', true);
-return distinct.length;
+  let distinct = DataUtil.distinct(data, "ShipCountry", true);
+  return distinct.length;
 }
 
 let grid: Grid = new Grid({
     dataSource: data,
-    allowPaging: true,
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
         { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C2' },
+        { field: 'Freight', headerText: 'Freight', width: 120, format: 'C2' },
         { field: "ShipCountry", headerText: "Ship Country", width: 150 }
     ],
     height: 220,
@@ -33,6 +28,3 @@ let grid: Grid = new Grid({
     }]
 });
 grid.appendTo('#Grid');
-
-
-

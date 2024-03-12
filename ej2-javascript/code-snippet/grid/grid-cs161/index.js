@@ -1,9 +1,11 @@
 var grid = new ej.grids.Grid({
     dataSource: data,
-    selectionSettings: { persistSelection: true },
-    allowFiltering: true,
+    allowSelection:true,
+    selectionSettings: { type: 'Multiple', persistSelection: true },
+    allowFiltering:true,
     filterSettings: { type: 'CheckBox' },
-    pageSettings: { pageSize: 20 },
+    allowPaging:true,
+    pageSettings: { pageSize: 5 },
     editSettings: {
         allowEditing: true,
         allowAdding: true,
@@ -30,4 +32,3 @@ grid.rowDataBound = function(args) {
 for (var i = 0; i < data.length; i++) {
     data[i]['List'] = i + 1;
 }
-

@@ -11,7 +11,11 @@ domainurl: ##DomainURL##
 
 # Command column editing in ##Platform_Name## Grid control
 
-The command column provides an option to add CRUD action buttons in a column. This can be defined by the [`column.commands`](../../api/grid/column/#commands) property.
+The command column editing feature allows you to add CRUD (Create, Read, Update, Delete) action buttons in a column for performing operations on individual rows.This feature is commonly used when you need to enable inline editing, deletion, or saving of row changes directly within the grid. 
+
+To enable command column editing, you can utilize the [column->commands](../../api/grid/column/#commands) property. By defining this property, you can specify the command buttons to be displayed in the command column, such as Edit, Delete, Save, and Cancel.
+
+To utilize CRUD operations, you need to inject the **CommandColumn**  into the grid. This provides the necessary functionalities for handling the command column actions.
 
 The available built-in command buttons are:
 
@@ -21,6 +25,8 @@ The available built-in command buttons are:
 | Delete | Delete the current row.|
 | Save | Update the edited row.|
 | Cancel | Cancel the edited state. |
+
+Here's an example that demonstrates how to add CRUD action buttons in a column using the `command` column property : 
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -51,7 +57,11 @@ The available built-in command buttons are:
 
 ## Custom command column
 
- The custom command buttons can be added in a column by using the [`column.commands`](../../api/grid/column/#commands) property and the action for the custom buttons can be defined in the [`commandClick`](../../api/grid/#commandClick) event.
+ The custom command column feature in the Grid control allows you to add custom command buttons in a column to perform specific actions on individual rows. This feature is particularly useful when you need to provide customized functionality for editing, deleting, or performing any other operation on a row.
+
+To add custom command buttons in a column, you can utilize the [column->commands](../../api/grid/column/#commands) property. Furthermore, you can define the actions associated with these custom buttons using the [commandClick](../../api/grid/#commandClick) event.
+
+Here's an example that demonstrates how to add custom command buttons using the `commands` property and customize the button click behavior to display grid details in a dialog using the `commandClick` event:
 
 {% if page.publishingplatform == "typescript" %}
 
