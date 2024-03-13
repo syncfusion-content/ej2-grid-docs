@@ -42,6 +42,6 @@ let toggle: Switch = new Switch({
 toggle.appendTo('#switch');
 
 function toggleCacheMode(args: ChangeEventArgs) {
-    grid.infiniteScrollSettings.enableCache = args.checked;
-    grid.refresh();
+    (grid as Grid).infiniteScrollSettings.enableCache = args.checked;
+    (grid as Grid).refresh();
 }

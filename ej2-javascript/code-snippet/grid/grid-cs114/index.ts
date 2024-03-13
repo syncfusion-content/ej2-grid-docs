@@ -55,6 +55,6 @@ let dropDownColumn: DropDownList = new DropDownList({
 dropDownColumn.appendTo('#dropdownlist');
 
 function valueChange(args: ChangeEventArgs) {
-    grid.infiniteScrollSettings.initialBlocks = parseInt(args.value as string, 10);
-    grid.refresh();
+    (grid as Grid).infiniteScrollSettings.initialBlocks = parseInt(args.value as string, 10);
+    (grid as Grid).refresh();
 }
