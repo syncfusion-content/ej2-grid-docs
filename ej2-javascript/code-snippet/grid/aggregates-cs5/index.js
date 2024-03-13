@@ -15,18 +15,8 @@ var grid = new ej.grids.Grid({
         columns: [{
             type: 'Sum',
             field: 'Freight',
-            format: 'C2',
             groupFooterTemplate: 'Sum: ${Sum}'
-        }]
-    },
-    {
-        columns: [{
-            type: 'Max',
-            field: 'Freight',
-            format: 'C2',
-            groupCaptionTemplate: 'Max: ${Max}'
         }]
     }]
 });
 grid.appendTo('#Grid');
-

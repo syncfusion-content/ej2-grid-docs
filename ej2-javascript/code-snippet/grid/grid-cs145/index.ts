@@ -1,33 +1,44 @@
-
-
-
-import { Grid, Page, Toolbar, PdfExport, PdfExportProperties } from '@syncfusion/ej2-grids';
+import { Grid, Toolbar ,PdfExport, PdfExportProperties} from '@syncfusion/ej2-grids';
+import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { data } from './datasource.ts';
+import { DropDownList } from '@syncfusion/ej2-dropdowns';
 
-Grid.Inject(Page, Toolbar, PdfExport);
+Grid.Inject(Toolbar, PdfExport);
 
 let grid: Grid = new Grid({
     dataSource: data,
-    allowPaging: true,
     allowPdfExport: true,
+    toolbarClick: toolbarClick,
     toolbar: ['PdfExport'],
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
-        { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C' },
-        { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', width: 140, format: 'yMd' }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+        { field: 'ShipCity', headerText: 'ShipCity', width: 120 },
+        { field: 'ShipName', headerText: 'Ship Name', width: 100 }
     ],
-    height: 230
+    height: 272
 });
 grid.appendTo('#Grid');
-grid.toolbarClick = (args: Object) => {
-    if (args['item'].id === 'Grid_pdfexport') {
-        let exportProperties: PdfExportProperties = {
-            pageOrientation: 'Landscape',
+
+let dropDownData = [
+    { text: 'Portrait', value: 'Portrait' },
+    { text: 'Landscape', value: 'Landscape' }
+];
+
+let dropDownList: DropDownList = new DropDownList({
+    value: 'Portrait',
+    popupHeight: '240px',
+    width: 100,
+    dataSource: dropDownData
+});
+dropDownList.appendTo('#dropdown');
+
+function toolbarClick(args: ClickEventArgs){
+    if(args.item.id === 'Grid_pdfexport') {
+        // 'Grid_pdfexport' -> Grid control id + _ + toolbar item name
+        let pdfExportProperties: PdfExportProperties = {
+            pageOrientation: (dropDownList as DropDownList).value  as PdfExportProperties,
         };
-        grid.pdfExport(exportProperties);
+        (grid as Grid).pdfExport(pdfExportProperties);
     }
 }
-
-
-

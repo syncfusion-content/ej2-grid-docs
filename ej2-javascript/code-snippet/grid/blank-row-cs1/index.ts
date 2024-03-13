@@ -1,6 +1,4 @@
-
-
-import { Grid, Toolbar } from '@syncfusion/ej2-grids';
+import { Grid, Toolbar, RowDataBoundEventArgs } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
 Grid.Inject(Toolbar);
@@ -18,7 +16,7 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 
-function rowDataBound(args) {
+function rowDataBound(args:RowDataBoundEventArgs) {
     let count = 0;
     let keys = Object.keys(args.data);
     for (let i = 0; i < keys.length; i++) {
