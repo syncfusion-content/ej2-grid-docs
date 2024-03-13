@@ -1,8 +1,7 @@
-ej.grids.Grid.Inject(ej.grids.Page);
 var grid = new ej.grids.Grid({
     dataSource: data,
     allowPaging: true,
-    pageSettings: { pageSizes: true, pageSize: 8 },
+    height: 325,
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
         { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
@@ -12,3 +11,17 @@ var grid = new ej.grids.Grid({
 });
 grid.appendTo('#Grid');
 
+var textbox = new ej.inputs.TextBox({
+    placeholder: 'Enter page count:',
+    width: 140
+});
+textbox.appendTo('#textboxvalue');
+
+var button = new ej.buttons.Button({
+    content: 'click button',
+});
+button.appendTo('#buttons');
+
+document.getElementById('buttons').onclick = function () {
+    grid.pageSettings.pageCount = parseInt(textbox.value, 10);
+}
