@@ -1,40 +1,55 @@
-
-
-import { Grid, RowSelectEventArgs } from '@syncfusion/ej2-grids';
-import { NumericTextBox } from '@syncfusion/ej2-inputs';
+import { DropDownList, ChangeEventArgs } from '@syncfusion/ej2-dropdowns';
+import { Grid,GridComponent } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
 let grid: Grid = new Grid({
     dataSource: data,
-    height: '270',
+    height: 315,
     width: '100%',
+    rowSelected: rowSelected,
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
         { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
-        { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 120 },
-        { field: 'ShipName', headerText: 'Ship Name', width: 150 }
-    ],
-    rowSelected: rowSelected
+        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120 },
+        { field: 'ShipAddress', headerText: 'Ship Address', width: 150 }
+    ]
 });
 grid.appendTo('#Grid');
 
-let numeric: NumericTextBox = new NumericTextBox({
-    width: 200,
-    min: 0,
-    showSpinButton: false,
-    format: 'N',
-    placeholder: 'Enter index to select a row',
-    change: onchange
-}, '#numeric');
+let dropDownData = [
+    { text: 'Select count' },
+    { text: '10', value: '10' },
+    { text: '20', value: '20' },
+    { text: '30', value: '30' },
+    { text: '80', value: '80' },
+    { text: '100', value: '100' },
+    { text: '200', value: '200' },
+    { text: '232', value: '232' },
+    { text: '300', value: '300' },
+    { text: '500', value: '500' },
+    { text: '800', value: '800' },
+    { text: '820', value: '850' },
+    { text: '920', value: '920' },
+    { text: '2020', value: '2020' },
+    { text: '3000', value: '3000' },
+    { text: '4000', value: '4000' },
+    { text: '4999', value: '4999' }
+];
 
-function onchange(): void {
-    grid.selectionModule.selectRow(parseInt(numeric.getText(), 10));
+let dropdown: DropDownList = new DropDownList({
+    value: 'Select count',
+    popupHeight: '240px',
+    width: 120,
+    dataSource: dropDownData,
+    change: valueChange
+});
+dropdown.appendTo('#dropdowns');
+
+function valueChange(args: ChangeEventArgs) {
+    grid.selectionModule.selectRow(parseInt((args.value as string), 10));
 }
 
-function rowSelected(args: RowSelectEventArgs) {
-    let rowHeight: number = grid.getRows()[grid.getSelectedRowIndexes()[0]].scrollHeight;
-    grid.getContent().children[0].scrollTop = rowHeight * grid.getSelectedRowIndexes()[0];
+function rowSelected() {
+    let rowHeight = (grid as GridComponent).getRows()[grid.getSelectedRowIndexes()[0]].scrollHeight;
+    (grid as GridComponent).getContent().children[0].scrollTop = rowHeight * grid.getSelectedRowIndexes()[0];
 }
-
-
-
