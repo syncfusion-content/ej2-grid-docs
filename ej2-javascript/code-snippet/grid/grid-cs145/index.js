@@ -1,24 +1,37 @@
-ej.grids.Grid.Inject(ej.grids.Page, ej.grids.PdfExport, ej.grids.Toolbar);
+ej.grids.Grid.Inject(ej.grids.PdfExport, ej.grids.Toolbar);
 var grid = new ej.grids.Grid({
     dataSource: data,
-    allowPaging: true,
     allowPdfExport: true,
+    toolbarClick: toolbarClick,
     toolbar: ['PdfExport'],
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
-        { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C' },
-        { field: 'OrderDate', headerText: 'Order Date', textAlign: 'Right', width: 140, format: 'yMd' }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+        { field: 'ShipCity', headerText: 'ShipCity', width: 120 },
+        { field: 'ShipName', headerText: 'Ship Name', width: 100 }
     ],
-    height: 260
+    height: 272
 });
 grid.appendTo('#Grid');
-grid.toolbarClick = function(args){
-    if (args['item'].id === 'Grid_pdfexport') {
-        let exportProperties = {
-            pageOrientation: 'Landscape',
+
+var dropDownData = [
+    { text: 'Portrait', value: 'Portrait' },
+    { text: 'Landscape', value: 'Landscape' }
+];
+
+var dropDownList = new ej.dropdowns.DropDownList({
+    value: 'Portrait',
+    popupHeight: '240px',
+    width: 100,
+    dataSource: dropDownData
+  });
+dropDownList.appendTo('#dropdown');
+
+function toolbarClick(args){
+    if(args.item.id === 'Grid_pdfexport') {
+        var pdfExportProperties = {
+            pageOrientation: dropDownList.value,
         };
-        grid.pdfExport(exportProperties);
+        grid.pdfExport(pdfExportProperties);
     }
 }
-
