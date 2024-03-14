@@ -1,6 +1,4 @@
-
-
-import { Grid, Search, Toolbar, QueryCellInfoEventArgs, SearchEventArgs } from '@syncfusion/ej2-grids';
+import { Grid, Search, Toolbar, QueryCellInfoEventArgs, SearchEventArgs, Column } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
 Grid.Inject(Search, Toolbar);
@@ -10,12 +8,14 @@ let grid: Grid = new Grid({
     dataSource: data,
     toolbar: ['Search'],
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
-        { field: 'ShipCity', headerText: 'Ship City', width: 150 },
-        { field: 'ShipName', headerText: 'Ship Name', width: 150 }
+      { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+      { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+      { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 80 },
+      { field: 'ShipCity', headerText: 'Ship City', width: 100 },
+      { field: 'ShipCountry', headerText: 'ShipCountry', width: 100 },
+      { field: 'ShipName', headerText: 'Ship Name', width: 120 },
     ],
-    height: 272,
+    height: 400,
     actionBegin: (args: SearchEventArgs) => {
     if (args.requestType === 'searching') {
       key = args.searchString.toLowerCase();
@@ -23,7 +23,7 @@ let grid: Grid = new Grid({
   },
   queryCellInfo: (args: QueryCellInfoEventArgs) => {
     if (key != '') {
-      let cellContent: string = args.data[args.column.field];
+      let cellContent: string = args.data[(args.column as Column).field];
       let parsedContent: string = cellContent.toString().toLowerCase();
       if (parsedContent.includes(key.toLowerCase())) {
         let i: number = 0;
@@ -33,7 +33,7 @@ let grid: Grid = new Grid({
           searchStr = searchStr + cellContent.toString()[index];
           i++;
         }
-        args.cell.innerHTML = (args.cell as any).innerText.replaceAll(
+        (args.cell as HTMLElement).innerHTML = args.cell.innerText.replaceAll(
           searchStr,
           "<span class='customcss'>" + searchStr + '</span>'
         );
@@ -42,6 +42,3 @@ let grid: Grid = new Grid({
   }
 });
 grid.appendTo('#Grid');
-
-
-

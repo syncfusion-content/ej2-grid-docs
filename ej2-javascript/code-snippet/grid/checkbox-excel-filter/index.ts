@@ -14,15 +14,12 @@ let grid: Grid = new Grid(
         allowPaging: true,
         allowFiltering: true,
         allowSorting: true,
-        filterSettings: { type: 'Excel', enableInfiniteScrolling: true, itemsCount: 40, loadingIndicator: 'Spinner' },
+        filterSettings: { type: 'Excel', enableInfiniteScrolling: true },
         columns: [
-            { field: 'EmployeeID', headerText: 'Employee ID', isPrimaryKey: true, width: 100 },
-            { field: 'Employees', headerText: 'Employee Name', width: 120 },
-            { field: 'Designation', headerText: 'Designation', width: 100 },
-            {
-                field: 'CurrentSalary', headerText: 'Current Salary', format: 'C2',
-                textAlign: 'Right', width: 100
-            },
+            { field: 'EmployeeID', headerText: 'Employee ID', width: 120, textAlign: 'Right' },
+            { field: 'Employees', headerText: 'Employee Name', width: 150 },
+            { field: 'Designation', headerText: 'Designation', width: 130, textAlign: 'Right' },
+            { field: 'CurrentSalary', headerText: 'CurrentSalary', width: 120, format: 'C2', textAlign: 'Right' }
         ],
         pageSettings: { pageCount: 5 }
     });
