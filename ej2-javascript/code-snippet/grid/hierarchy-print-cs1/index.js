@@ -5,34 +5,41 @@ var grid= new ej.grids.Grid({
     toolbar: ["ExcelExport"],
     allowExcelExport: true,
     columns: [
-        { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 120 },
-        { field: 'FirstName', headerText: 'First Name', width: 150 },
-        { field: 'City', headerText: 'City', width: 150 },
-        { field: 'Country', headerText: 'Country', width: 150 }
+        { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 90 },
+        { field: 'FirstName', headerText: 'First Name', width: 100 },
+        { field: 'City', headerText: 'City', width: 100 },
+        { field: 'Country', headerText: 'Country', width: 100 }
     ],
-    childGrid: {
+    childGrid: {                
         dataSource: data,
         queryString: 'EmployeeID',
         columns: [
-            { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
-            { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
-            { field: 'ShipCity', headerText: 'Ship City', width: 150 },
-            { field: 'ShipName', headerText: 'Ship Name', width: 150 }
+            { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+            { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+            { field: 'ShipCity', headerText: 'Ship City', width: 100 },
+            { field: 'ShipName', headerText: 'Ship Name', width: 110 }
         ],
     },
-    beforeExcelExport: beforeExcelExport,
     toolbarClick: toolbarClick
 });
 grid.appendTo('#Grid');
-
-function beforeExcelExport(args) {
-    args.isChild = true;
-}
+var dropdownData = [
+    { text: 'None', value: 'None' },
+    { text: 'Expanded', value: 'Expanded' },
+    { text: 'All', value: 'All' },
+  ];
+  
+var dropDown = new ej.dropdowns.DropDownList({
+    index: 0,
+    width: 150,
+    dataSource: dropdownData,
+  });
+  dropDown.appendTo('#dropdown');
 
 function toolbarClick(args) {
     if (args['item'].id === 'Grid_excelexport') {
         var exportProperties = {
-           hierarchyExportMode: "Expanded"
+            hierarchyExportMode: dropDown.value,
         };
         grid.excelExport(exportProperties);
     }
