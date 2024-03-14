@@ -1,29 +1,28 @@
-
-
-
-import { Grid, Toolbar, ExcelExport, Page } from '@syncfusion/ej2-grids';
+import { Grid, Toolbar, ExcelExport, ClickEventArgs } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
-Grid.Inject(Toolbar, ExcelExport, Page);
+
+Grid.Inject(Toolbar, ExcelExport);
 
 let grid: Grid = new Grid({
     dataSource: data,
-    allowPaging: true,
     allowExcelExport: true,
-    toolbar: ['ExcelExport'],
+    toolbar: ['ExcelExport', 'CsvExport'],
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
-        { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C' },
-        { field: 'OrderDate', headerText: 'Order Date', width: 140, format: 'yMd', textAlign: 'Right' }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
+        { field: 'ShipCity', headerText: 'Ship City', width: 150 },
+        { field: 'ShipName', headerText: 'Ship Name', width: 150 }
     ],
-    height: 230
+    height: 272
 });
-grid.toolbarClick = (args: Object) => {
+grid.toolbarClick = (args: ClickEventArgs) => {
     if (args['item'].id === 'Grid_excelexport') {
+        // 'Grid_excelexport' -> Grid control id + _ + toolbar item name
         grid.excelExport();
+    }
+    else if (args['item'].id === 'Grid_csvexport') {
+         // 'Grid_csvexport' -> Grid control id + _ + toolbar item name
+        grid.csvExport();
     }
 }
 grid.appendTo('#Grid');
-
-
-
