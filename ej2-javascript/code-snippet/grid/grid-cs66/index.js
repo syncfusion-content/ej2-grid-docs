@@ -9,7 +9,6 @@ var grid = new ej.grids.Grid({
                 field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right', filter: {
                     ui: {
                         create: function(args){
-                            var db = new ej.data.DataManager(data);
                             var flValInput = new ej.base.createElement('input', { className: 'flm-input' });
                             args.target.appendChild(flValInput);
                             this.dropInstance = new ej.dropdowns.DropDownList({
@@ -30,11 +29,9 @@ var grid = new ej.grids.Grid({
                     }
                 }
             },
-            { field: 'CustomerID', headerText: 'Customer Name', width: 150 },
-            { field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd', textAlign: 'Right' },
-            { field: 'Freight', width: 120, format: 'C2', textAlign: 'Right' }
+            { field: 'CustomerID', headerText: 'Customer Name', width: 120 },
+            { field: 'ShipCity', headerText: 'Ship City', width: 100 },
+            { field: 'ShipName', headerText: 'Ship Name', width: 100 }
         ]
 });
 grid.appendTo('#Grid');
-
-

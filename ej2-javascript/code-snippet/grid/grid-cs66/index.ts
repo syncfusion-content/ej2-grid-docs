@@ -1,10 +1,9 @@
-
-
 import { Grid, Filter } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 import { DataManager } from '@syncfusion/ej2-data';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
 import { createElement } from '@syncfusion/ej2-base';
+
 
 Grid.Inject(Filter);
 
@@ -17,7 +16,6 @@ let grid: Grid = new Grid({
                 field: 'OrderID', headerText: 'Order ID', width: 120, textAlign: 'Right', filter: {
                     ui: {
                         create: (args: { target: Element, column: Object }) => {
-                            let db: Object = new DataManager(data);
                             let flValInput: HTMLElement = createElement('input', { className: 'flm-input' });
                             args.target.appendChild(flValInput);
                             this.dropInstance = new DropDownList({
@@ -41,13 +39,10 @@ let grid: Grid = new Grid({
                     }
                 }
             },
-            { field: 'CustomerID', headerText: 'Customer Name', width: 150 },
-            { field: 'OrderDate', headerText: 'Order Date', width: 130, format: 'yMd', textAlign: 'Right' },
-            { field: 'Freight', width: 120, format: 'C2', textAlign: 'Right' }
-        ]
+            { field: 'CustomerID', headerText: 'Customer Name', width: 120 },
+            { field: 'ShipCity', headerText: 'Ship City', width: 100 },
+            { field: 'ShipName', headerText: 'Ship Name', width: 100 }
+        ],
     height: 273
 });
 grid.appendTo('#Grid');
-
-
-

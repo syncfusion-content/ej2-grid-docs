@@ -20,19 +20,19 @@ var mastergrid = new ej.grids.Grid({
 mastergrid.appendTo('#MasterGrid');
 
 function rowSelected(args){
-    let selectedRecord = args.data;
+    var selectedRecord = args.data;
     grid.dataSource = data.filter((record) => record.CustomerName === selectedRecord.ContactName).slice(0, 5);
     document.getElementById('key').innerHTML = selectedRecord.ContactName;
 }
 
 function toolbarClick(args) {
     if (args.item.id === 'MasterGrid_excelexport') {
-        const appendExcelExportProperties = {
+        var appendExcelExportProperties = {
             multipleExport: { type: 'AppendToSheet', blankRows: 2 },
         };
-        const firstGridExport = mastergrid.excelExport(appendExcelExportProperties, true);
-        firstGridExport.then((fData) => {
-            grid.excelExport(appendExcelExportProperties, false, fData);
+        var firstGridExport = mastergrid.excelExport(appendExcelExportProperties, true);
+       firstGridExport.then((fData) => {
+             grid.excelExport(appendExcelExportProperties, false, fData);
         });
     }
 }
@@ -43,10 +43,9 @@ var grid = new ej.grids.Grid({
     columns: [
         { field: 'OrderID', headerText: 'Order ID', width: 100, textAlign: 'Right' },
         { field: 'Freight', headerText: 'Freight', width: 100, format: 'C2', type: 'number' },
-        { field: 'ShipName', headerText: 'Ship Name', width: 200 },
+        { field: 'ShipName', headerText: 'Ship Name', width: 150 },
         { field: 'ShipCountry', headerText: 'Ship Country', width: 150 },
-        { field: 'ShipAddress', headerText: 'Ship Address', width: 200 },
+        { field: 'ShipAddress', headerText: 'Ship Address', width: 150 },
     ],
 });
 grid.appendTo('#DetailGrid');
-
