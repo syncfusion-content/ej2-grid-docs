@@ -262,6 +262,8 @@ Let's see the step by step procedure for how we can overcome the limitation in t
 
 You can view the hosted link for this sample [here](https://ej2.syncfusion.com/aspnetcore/Grid/GridOverview#/fluent)
 
+![Prevent browser height limitation](../images/external-button.png)
+
 > If you perform grid actions such as filtering, sorting, etc., after scrolling through the 0.5 million data, the Grid performs those data actions with the whole records, not just the current loaded 0.5 million data.
 
 ### Solution 2: Using RowHeight property
@@ -269,6 +271,8 @@ You can view the hosted link for this sample [here](https://ej2.syncfusion.com/a
 You can reduce the [row height](../../grid/row/row-height/) using the [rowHeight](../../api/grid/#rowheight) property of the Grid. It will reduce the overall height to accommodate more rows. But this approach optimizes the limitation, but if the height limit is reached after reducing row height also, you have to opt for the previous solution or use paging.
 
 In the following image, you can see how many records will be scrollable when setting rowHeight to "36px" and "30px".
+
+![Row Height](../images/row-height.gif)
 
 ### Solution 3: Using paging instead of virtual scrolling
 
