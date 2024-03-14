@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 Filtering is a powerful feature in the Syncfusion Grid control that enables you to selectively view data based on specific criteria. It allows you to narrow down large datasets and focus on the information you need, thereby enhancing data analysis and decision-making.
 
-To use filter, inject the [`Filter`](../../api/grid/filter/) module in the grid.
+To use filter, inject the [Filter](../../api/grid/filter/) module in the grid.
 
 To enable filtering in the Grid, you need to set the [allowFiltering](../../api/grid/#allowfiltering) property of the Grid control to true. Once filtering is enabled, you can configure various filtering options through the [filterSettings](../../api/grid/filterSettings/) property of the Grid control. This property allows you to define the behavior and appearance of the filter.
 
