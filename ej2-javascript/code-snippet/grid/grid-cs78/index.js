@@ -1,47 +1,50 @@
-ej.base.setCulture('de');
-ej.base.setCurrencyCode('EUR');
+loadLocalizationData();
+function loadLocalizationData() {
+    var fetch = new ej.base.Fetch('./locale.json', 'GET', false);
+    fetch.onSuccess = function(deDELocalization) {
+      ej.base.L10n.load(deDELocalization );
+      loadCultureFiles(); 
+    };
+    fetch.send();
+ }
 
-ej.base.L10n.load({
-    'de-DE': {
-        'grid': {
-            'EmptyRecord': 'Keine Aufzeichnungen angezeigt',
-            'GroupDropArea': 'Ziehen Sie einen Spaltenkopf hier, um die Gruppe ihre Spalte',
-            'UnGroup': 'Klicken Sie hier, um die Gruppierung aufheben',
-            'EmptyDataSourceError': 'DataSource darf bei der Erstauslastung nicht leer sein, da Spalten aus der dataSource im AutoGenerate Spaltenraster',
-            'Item': 'Artikel',
-            'Items': 'Artikel'
-        },
-        'pager': {
-            'currentPageInfo': '{0} von {1} Seiten',
-            'totalItemsInfo': '({0} Beiträge)',
-            'firstPageTooltip': 'Zur ersten Seite',
-            'lastPageTooltip': 'Zur letzten Seite',
-            'nextPageTooltip': 'Zur nächsten Seite',
-            'previousPageTooltip': 'Zurück zur letzten Seit',
-            'nextPagerTooltip': 'Gehen Sie zu den nächsten Pager-Elementen',
-            'previousPagerTooltip': 'Gehen Sie zu vorherigen Pager-Elementen'
-        }
-    }
-});
-ej.grids.Grid.Inject(ej.grids.Page, ej.grids.Group);
-var grid = new ej.grids.Grid({
+var formatOptions={ format: 'C2', useGrouping: false, minimumSignificantDigits: 1, maximumSignificantDigits: 3 };
+  var grid = new ej.grids.Grid({
     dataSource: data,
-    locale: 'de-DE',
-    allowGrouping: true,
     allowPaging: true,
-    pageSettings: { pageSize: 6 },
+    allowGrouping: true,
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
-        {
-            field: 'Freight', headerText: 'Freight', width: 150, format: {
-                format: 'C2', useGrouping: false,
-                minimumSignificantDigits: 1, maximumSignificantDigits: 3, currency: 'EUR'
-            }, textAlign: 'Right'
-        },
-        { field: 'ShipName', headerText: 'Ship Name', width: 150 }
+        { field: 'CustomerID', headerText: 'Customer ID', width: 100 },
+        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', format: formatOptions , width: 80 },
+        { field: 'ShipName', headerText: 'Ship Name', width: 120 }
     ],
     height: 220
-});
-grid.appendTo('#Grid');
+  });
+  grid.appendTo('#Grid');
 
+function loadCultureFiles() {
+  var files = ['ca-gregorian.json', 'numbers.json', 'currencies.json', 'timeZoneNames.json', 'numberingSystems.json'];
+  var loadCulture = function (prop) {
+    var fetch = new ej.base.Fetch('./' + files[prop], 'GET', false);
+    fetch.onSuccess = function (response) {
+        if (typeof response=== 'object') {
+         // If the response is an object, convert it to a JSON string
+          var jsonString = JSON.stringify(response);
+          ej.base.loadCldr(JSON.parse(jsonString));
+        } else if (typeof response=== 'string') {
+          // If the response is already a JSON string, parse and load it
+          ej.base.loadCldr(JSON.parse(response));
+
+        } else {
+          console.error('Invalid responsetype received:', response);
+        }
+        ej.base.setCulture('de-DE'); // Change the Grid culture
+        ej.base.setCurrencyCode('EUR');
+      };
+    fetch.send();
+  };
+  for (var prop = 0; prop < files.length; prop++) {
+    loadCulture(prop);
+  }
+}
