@@ -1,4 +1,4 @@
-export let data: Object[] = [
+export let data: Object[] =  [
     {
         OrderID: 10248, CustomerID: 'VINET', EmployeeID: 5, OrderDate: new Date(8364186e5),
         ShipName: 'Vins et alcools Chevalier', ShipCity: 'Reims', ShipAddress: '59 rue de l Abbaye',
@@ -13,6 +13,16 @@ export let data: Object[] = [
         OrderID: 10250, CustomerID: 'HANAR', EmployeeID: 2, OrderDate: new Date(8367642e5),
         ShipName: 'Hanari Carnes', ShipCity: 'Rio de Janeiro', ShipAddress: 'Rua do Paço, 67',
         ShipRegion: 'RJ', ShipPostalCode: '05454-876', ShipCountry: 'Brazil', Freight: 65.83, Verified: !0
+    },
+    {
+        OrderID: null, CustomerID: null, EmployeeID: null, OrderDate: null,
+        ShipName: null, ShipCity: null, ShipAddress: null,
+        ShipRegion: null, ShipPostalCode: null, ShipCountry: null, Freight: null, Verified: null
+    },
+    {
+        OrderID: null, CustomerID: null, EmployeeID: null, OrderDate: null,
+        ShipName: null, ShipCity: null, ShipAddress: null,
+        ShipRegion: null, ShipPostalCode: null, ShipCountry: null, Freight: null, Verified: null
     },
     {
         OrderID: 10251, CustomerID: 'VICTE', EmployeeID: 3, OrderDate: new Date(8367642e5),
@@ -38,16 +48,6 @@ export let data: Object[] = [
         OrderID: 10255, CustomerID: 'RICSU', EmployeeID: 9, OrderDate: new Date(8371098e5),
         ShipName: 'Richter Supermarkt', ShipCity: 'Genève', ShipAddress: 'Starenweg 5',
         ShipRegion: 'CJ', ShipPostalCode: '1204', ShipCountry: 'Switzerland', Freight: 148.33, Verified: !0
-    },
-    {
-        OrderID: null, CustomerID: null, EmployeeID: null, OrderDate: null,
-        ShipName: null, ShipCity: null, ShipAddress: null,
-        ShipRegion: null, ShipPostalCode: null, ShipCountry: null, Freight: null, Verified: null
-    },
-    {
-        OrderID: null, CustomerID: '', EmployeeID: null, OrderDate: null,
-        ShipName: null, ShipCity: null, ShipAddress: null,
-        ShipRegion: null, ShipPostalCode: null, ShipCountry: null, Freight: null, Verified: null
     },
     {
         OrderID: 10256, CustomerID: 'WELLI', EmployeeID: 3, OrderDate: new Date(837369e6),
