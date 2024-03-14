@@ -1,42 +1,27 @@
-
-
-
-import { Grid, Page, Toolbar, PdfExport, ExcelExport } from '@syncfusion/ej2-grids';
+import { Grid, Toolbar, ExcelExport, ClickEventArgs } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
-Grid.Inject(Page, Toolbar, PdfExport, ExcelExport);
+Grid.Inject(Toolbar, ExcelExport);
 
 let grid: Grid = new Grid({
     dataSource: data,
-    allowPaging: true,
-    allowPdfExport: true,
     allowExcelExport: true,
-    toolbar: ['PdfExport', 'ExcelExport'],
+    toolbar: ['ExcelExport'],
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
-        { field: 'CustomerID', width: 140, headerText: 'Customer ID', visible: false },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C' },
-        { field: 'ShipCity', headerText: 'ShipCity', textAlign: 'Right', width: 140 }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+        { field: 'ProductName', headerText: 'Product Name', width: 100 },
+        { field: 'ProductID', headerText: 'Product ID', textAlign: 'Right', width: 80 },
+        { field: 'CustomerName', headerText: 'Customer Name', width: 120 }
     ],
-    height: 230
+    height: 272
 });
 grid.appendTo('#Grid');
-grid.toolbarClick = (args: Object) => {
-    if (args['item'].id === 'Grid_pdfexport') {
-        grid.showSpinner();
-        grid.pdfExport();
-    }
+grid.toolbarClick = (args: ClickEventArgs) => {
     if (args['item'].id === 'Grid_excelexport') {
         grid.showSpinner();
         grid.excelExport();
     }
 }
-grid.pdfExportComplete = () => {
-        grid.hideSpinner();
-    }
 grid.excelExportComplete = () => {
-        grid.hideSpinner();
-    }
-
-
-
+    grid.hideSpinner();
+}
