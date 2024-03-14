@@ -1,4 +1,5 @@
 import { Grid, VirtualScroll, Edit, Toolbar } from '@syncfusion/ej2-grids';
+import { Switch,ChangeEventArgs } from '@syncfusion/ej2-buttons';
 Grid.Inject(VirtualScroll, Edit, Toolbar);
 let virtualData: Object[] = [];
 let names: string[] = ['hardire', 'abramjo01', 'aubucch01', 'Hook', 'Rumpelstiltskin', 'Belle', 'Emma', 'Regina', 'Aurora', 'Elsa', 'Anna', 'Snow White', 'Prince Charming', 'Cora', 'Zelena', 'August', 'Mulan', 'Graham', 'Discord', 'Will', 'Robin Hood', 'Jiminy Cricket', 'Henry', 'Neal', 'Red', 'Aaran', 'Aaren', 'Aarez', 'Aarman', 'Aaron', 'Aaron-James', 'Aarron', 'Aaryan', 'Aaryn', 'Aayan', 'Aazaan', 'Abaan', 'Abbas', 'Abdallah', 'Abdalroof', 'Abdihakim', 'Abdirahman', 'Abdisalam', 'Abdul', 'Abdul-Aziz', 'Abdulbasir', 'Abdulkadir', 'Abdulkarem', 'Abdulkhader', 'Abdullah', 'Abdul-Majeed', 'Abdulmalik', 'Abdul-Rehman', 'Abdur', 'Abdurraheem', 'Abdur-Rahman', 'Abdur-Rehmaan', 'Abel', 'Abhinav', 'Abhisumant', 'Abid', 'Abir', 'Abraham', 'Abu', 'Abubakar', 'Ace', 'Adain', 'Adam', 'Adam-James', 'Addison', 'Addisson', 'Adegbola', 'Adegbolahan', 'Aden', 'Adenn', 'Adie', 'Adil', 'Aditya', 'Adnan', 'Adrian', 'Adrien', 'Aedan', 'Aedin', 'Aedyn', 'Aeron', 'Afonso', 'Ahmad', 'Ahmed', 'Ahmed-Aziz', 'Ahoua', 'Ahtasham', 'Aiadan', 'Aidan', 'Aiden', 'Aiden-Jack', 'Aiden-Vee'];
@@ -16,7 +17,7 @@ function dataSource(): void {
 dataSource();
 let grid: Grid = new Grid({
     dataSource: virtualData,
-    enableColumnVirtualization: true,
+    enableVirtualization: true,
     height: 300,
     editSettings: { allowAdding: true, allowEditing: true, allowDeleting: true, mode: 'Normal' },
     toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
@@ -54,3 +55,16 @@ let grid: Grid = new Grid({
         { field: 'FIELD30', headerText: 'PostRebounds', width: 130, textAlign: 'Right', editType: 'numericedit', validationRules: { required: true } }]
 });
 grid.appendTo('#Grid');
+
+let toggle: Switch = new Switch({
+    change: onSwitchChange
+});
+toggle.appendTo('#switch');
+
+function onSwitchChange(args: ChangeEventArgs) {
+    if (args.checked) {
+        grid.enableColumnVirtualization = true;
+    } else {
+        grid.enableColumnVirtualization = false;
+    }
+}
