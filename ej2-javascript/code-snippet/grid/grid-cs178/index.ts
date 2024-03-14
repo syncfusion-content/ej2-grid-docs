@@ -32,7 +32,7 @@ let grid: Grid = new Grid(
             { field: 'TaskID', headerText: 'Task ID', textAlign: 'Right', width: 100, isPrimaryKey: true, validationRules: { required: true } },
             { field: 'Engineer', headerText: 'Engineer', width: 100 },
             { field: 'Designation', headerText: 'Designation', width: 100, editType: 'dropdownedit', validationRules: { required: true }, textAlign: 'Right' },
-            { field: 'Estimation', headerText: 'Estimation', textAlign: 'Right', width: 100, editType: 'numericedit' },
+            { field: 'Estimation', headerText: 'Estimation', textAlign: 'Right', width: 100, editType: 'numericedit',validationRules: { required: true } },
             { field: 'Status', headerText: 'Status', width: 100, editType: 'dropdownedit' }
         ]
     });

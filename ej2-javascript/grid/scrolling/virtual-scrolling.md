@@ -83,7 +83,7 @@ Column virtualization feature in the Syncfusion Grid that allows you to optimize
 
 To enable column virtualization, you need to set the [enableColumnVirtualization](../../api/grid/#enablecolumnvirtualization) property of the Grid to **true**. This configuration instructs the Grid to only render the columns that are currently visible in the viewport. 
 
-The following example enable/disble using `enableColumnVirtualization` property based on  a [Switch](../../documentation/switch/getting-started) control [change](../../documentation/api/switch#change) event:
+The following example enable/disable using `enableColumnVirtualization` property based on  a [Switch](../../documentation/switch/getting-started) control [change](../../documentation/api/switch#change) event:
 
 {% if page.publishingplatform == "typescript" %}
 
