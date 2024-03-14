@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Filtering in ##Platform_Name## Grid control
 
-Filtering allows you to view particular records based on filter criteria. To enable filtering in the Grid, set the [`allowFiltering`](../../api/grid/#allowfiltering) to true. Filtering options can be configured through [`filterSettings`](../../api/grid/filterSettings/).
+Filtering is a powerful feature in the Syncfusion Grid control that enables you to selectively view data based on specific criteria. It allows you to narrow down large datasets and focus on the information you need, thereby enhancing data analysis and decision-making.
 
 To use filter, inject the [`Filter`](../../api/grid/filter/) module in the grid.
 
@@ -47,7 +47,7 @@ To use filter, inject the [`Filter`](../../api/grid/filter/) module in the grid.
 
 ## Initial filter
 
-To apply the filter at initial rendering, set the filter [`predicate`](../../api/grid/predicate/) object in [`filterSettings.columns`](../../api/grid/filterSettingsModel/#columns).
+To apply the filter at initial rendering, set the filter [predicate](../../api/grid/predicate/) object in [filterSettings.columns](../../api/grid/filterSettingsModel/#columns).
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -199,7 +199,7 @@ a* |Everything that starts with "a".
 The **LIKE** filter can process single search patterns using the "%" symbol, retrieving values matching the specified patterns. The following Grid features support LIKE filtering on string-type columns:
 
 * Filter Menu
-* Filter Bar with the [`filterSettings.showFilterBarOperator`](../../api/grid/filter/#showFilterBarOperator-boolean) property enabled on the Grid [`filterSettings`](../../api/grid/filterSettings/).
+* Filter Bar with the [filterSettings.showFilterBarOperator](../../api/grid/filter/#showFilterBarOperator) property enabled on the Grid [filterSettings](../../api/grid/filterSettings/).
 * Custom Filter of Excel filter type.
 
 **For example:**
