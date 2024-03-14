@@ -15,6 +15,10 @@ Filtering is a powerful feature in the Syncfusion Grid control that enables you 
 
 To use filter, inject the [`Filter`](../../api/grid/filter/) module in the grid.
 
+To enable filtering in the Grid, you need to set the [allowFiltering](../../api/grid/#allowfiltering) property of the Grid control to true. Once filtering is enabled, you can configure various filtering options through the [filterSettings](../../api/grid/filterSettings/) property of the Grid control. This property allows you to define the behavior and appearance of the filter.
+
+Here is an example that demonstrates the default filtering feature of the grid:
+
 {% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
