@@ -1,29 +1,28 @@
-
-
-
-import { Grid, Toolbar, ExcelExport, Page } from '@syncfusion/ej2-grids';
+import { Grid, Toolbar, ExcelExport, QueryCellInfoEventArgs, ExcelQueryCellInfoEventArgs } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
-Grid.Inject(Toolbar, ExcelExport, Page);
+import { ClickEventArgs } from '@syncfusion/ej2-navigations';
+
+Grid.Inject(Toolbar, ExcelExport);
 
 let grid: Grid = new Grid({
     dataSource: data,
-    allowPaging: true,
     allowExcelExport: true,
     toolbar: ['ExcelExport'],
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
-        { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120 },
-        { field: 'OrderDate', headerText: 'Order Date', width: 140, format: 'yMd', textAlign: 'Right' }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
+        { field: 'Freight', headerText: 'Freight', width: 150 },
+        { field: 'ShipCity', headerText: 'Ship City', width: 150 }
     ],
     height: 230
 });
-grid.toolbarClick = (args: Object) => {
+grid.toolbarClick = (args: ClickEventArgs) => {
     if (args['item'].id === 'Grid_excelexport') {
+        // 'Grid_excelexport' -> Grid control id + _ + toolbar item name
         grid.excelExport();
     }
 }
-grid.excelQueryCellInfo = (args: Object) => {
+grid.excelQueryCellInfo = (args: ExcelQueryCellInfoEventArgs) => {
         if(args.column.field == 'Freight'){
             if(args.value < 30) {
                 args.style = {backColor: '#99ffcc'};
@@ -36,7 +35,7 @@ grid.excelQueryCellInfo = (args: Object) => {
             }
         }
     }
-grid.queryCellInfo = (args: Object) => {
+grid.queryCellInfo = (args:QueryCellInfoEventArgs) => {
         if(args.column.field == 'Freight'){
             if(args.data['Freight'] < 30) {
                 args.cell.bgColor = '#99ffcc';
@@ -50,6 +49,3 @@ grid.queryCellInfo = (args: Object) => {
         }
     }
 grid.appendTo('#Grid');
-
-
-

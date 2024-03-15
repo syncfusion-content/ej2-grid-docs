@@ -1,21 +1,24 @@
-ej.grids.Grid.Inject(ej.grids.Page, ej.grids.ExcelExport, ej.grids.Toolbar);
+ej.grids.Grid.Inject(ej.grids.ExcelExport, ej.grids.Toolbar);
 var grid = new ej.grids.Grid({
     dataSource: data,
-    allowPaging: true,
     allowExcelExport: true,
-    toolbar: ['ExcelExport'],
+    toolbar: ['ExcelExport', 'CsvExport'],
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
-        { field: 'CustomerID', width: 140, headerText: 'Customer ID', type: 'string' },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C' },
-        { field: 'OrderDate', headerText: 'Order Date', width: 140, format: 'yMd', textAlign: 'Right' }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
+        { field: 'ShipCity', headerText: 'Ship City', width: 150 },
+        { field: 'ShipName', headerText: 'Ship Name', width: 150 }
     ],
-    height: 260
+    height: 272
 });
-grid.toolbarClick = function(args){
+grid.toolbarClick = function (args) {
     if (args['item'].id === 'Grid_excelexport') {
+         // 'Grid_excelexport' -> Grid control id + _ + toolbar item name
         grid.excelExport();
+    }
+    else if (args['item'].id === 'Grid_csvexport') {
+         // 'Grid_csvexport' -> Grid control id + _ + toolbar item name
+        grid.csvExport();
     }
 }
 grid.appendTo('#Grid');
-
