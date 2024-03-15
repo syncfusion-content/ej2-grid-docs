@@ -1,9 +1,8 @@
-
-
 import { Grid, VirtualScroll, Edit, Toolbar } from '@syncfusion/ej2-grids';
 Grid.Inject(VirtualScroll, Edit, Toolbar);
 
-let names: string[] = ['TOM', 'Hawk', 'Jon', 'Chandler', 'Monica', 'Rachel', 'Phoebe', 'Gunther', 'Ross', 'Geller', 'Joey', 'Bing', 'Tribbiani', 'Janice', 'Bong', 'Perk', 'Green', 'Ken', 'Adams'];
+let names: string[] = ['TOM', 'Hawk', 'Jon', 'Chandler', 'Monica', 'Rachel', 'Phoebe', 'Gunther', 'Ross', 'Geller', 'Joey', 'Bing', 'Tribbiani',
+    'Janice', 'Bong', 'Perk', 'Green', 'Ken', 'Adams'];
 let hours: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let designation: string[] = ['Manager', 'Engineer 1', 'Engineer 2', 'Developer', 'Tester'];
 let status: string[] = ['Completed', 'Open', 'In Progress', 'Review', 'Testing']
@@ -21,32 +20,20 @@ let data: Function = (count: number) => {
     return result;
 };
 
-(<IWindow>window).getStatus = (status: string) => {
-    let colors: Object = { 'Completed': 'green', 'Open': 'red', 'In Progress': '#FB1E77', 'Review': 'brown', 'Testing': '#1EC1FB' };
-    return '<span style="color:' + colors[status] + '">' + status + '</span>';
-};
-
-let grid: Grid = new Grid({
-    dataSource: data(1000),
-    height: 300,
-    enableVirtualization: true,
-    editSettings: { allowAdding: true, allowEditing: true, allowDeleting: true, mode: 'Normal' },
-    toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
-    pageSettings: { pageSize: 50 },
-    columns: [
-        { field: 'TaskID', headerText: 'Task ID', textAlign: 'Right', width: 100, type: 'number', isPrimaryKey: true, validationRules: { required: true } },
-        { field: 'Engineer', width: 100 },
-        { field: 'Designation', width: 140, editType: 'dropdownedit', validationRules: { required: true } },
-        { field: 'Estimation', textAlign: 'Right', width: 110, editType: 'numericedit', validationRules: { required: true } },
-        { field: 'Status', width: 140, template: '${getStatus(data.Status)}', editType: 'dropdownedit' }
-    ]
-});
-
+let grid: Grid = new Grid(
+    {
+        dataSource: data(5000),
+        height: 300,
+        enableVirtualization: true,
+        pageSettings: { pageSize: 50 },
+        editSettings: { allowAdding: true, allowEditing: true, allowDeleting: true, mode: 'Normal' },
+        toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
+        columns: [
+            { field: 'TaskID', headerText: 'Task ID', textAlign: 'Right', width: 100, isPrimaryKey: true, validationRules: { required: true } },
+            { field: 'Engineer', headerText: 'Engineer', width: 100 },
+            { field: 'Designation', headerText: 'Designation', width: 100, editType: 'dropdownedit', validationRules: { required: true }, textAlign: 'Right' },
+            { field: 'Estimation', headerText: 'Estimation', textAlign: 'Right', width: 100, editType: 'numericedit',validationRules: { required: true } },
+            { field: 'Status', headerText: 'Status', width: 100, editType: 'dropdownedit' }
+        ]
+    });
 grid.appendTo('#Grid');
-
-interface IWindow extends Window {
-    getStatus?: Function;
-}
-
-
-
