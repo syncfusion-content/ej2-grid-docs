@@ -119,7 +119,7 @@ The following example demonstrates how to customize the filter choice count in t
 
 ## Add current selection to filter checkbox
 
-By default, the CheckBox filter can only filter the selected items. If filtering is done multiple times on the same column, the previously filtered values in the column will be cleared. Now, it is possible to retain those previous values by using the `Add current selection to filter` checkbox. This checkbox is displayed when data is searched in the search bar of the **CheckBox/Excel** filter.
+By default, the CheckBox/Excel filter can only filter the selected items. If filtering is done multiple times on the same column, the previously filtered values in the column will be cleared. Now, it is possible to retain those previous values by using the `Add current selection to filter` CheckBox/Excel. This CheckBox/Excel is displayed when data is searched in the search bar of the CheckBox/Excel filter.
 
 The following image describes the above mentioned behavior.
 
