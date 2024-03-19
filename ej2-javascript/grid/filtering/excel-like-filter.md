@@ -117,9 +117,9 @@ The following example demonstrates how to customize the filter choice count in t
 
 > The specified filter choice count value determines the display of unique items as a checkbox list in the Excel/checkbox type filter dialog. This can result in a delay in rendering these checkbox items when opening the filter dialog. Therefore, it is advisable to set a restricted filter choice count value.
 
-## Add current selection to filter checkbox
+## Add current selection to filter Checkbox/Excel
 
-By default, the CheckBox/Excel filter can only filter the selected items. If filtering is done multiple times on the same column, the previously filtered values in the column will be cleared. Now, it is possible to retain those previous values by using the `Add current selection to filter` CheckBox/Excel. This CheckBox/Excel is displayed when data is searched in the search bar of the CheckBox/Excel filter.
+By default, the CheckBox/Excel filter can only filter the selected items. If filtering is done multiple times on the same column, the previously filtered values in the column will be cleared. Now, it is possible to retain those previous values by using the `Add current selection to filter` CheckBox/Excel filter. This CheckBox/Excel is displayed when data is searched in the search bar of the CheckBox/Excel filter.
 
 The following image describes the above mentioned behavior.
 
