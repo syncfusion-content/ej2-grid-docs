@@ -1,5 +1,3 @@
-
-
 import { Grid, Filter, ActionEventArgs, Page } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
 
@@ -13,17 +11,15 @@ let grid: Grid = new Grid({
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
         { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
+        { field: 'EmployeeID', headerText: 'Employee ID', width: 150 },
         { field: 'ShipCity', headerText: 'Ship City', width: 150 },
         { field: 'ShipName', headerText: 'Ship Name', width: 150 }
     ],
-    actionBegin: actionHandler,
+    actionBegin: actionBegin,
     height: 230
 });
 grid.appendTo('#Grid');
 
-function actionHandler(args: ActionEventArgs) {
-    this.query.addParams('$filter', 'EmployeeID eq 1');
+function actionBegin(args: ActionEventArgs) {
+    grid.query.addParams('dataSource', 'data');
 }
-
-
-

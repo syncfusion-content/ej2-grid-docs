@@ -1,8 +1,6 @@
-
-
-
-import { Grid, Filter, ActionEventArgs, Page } from '@syncfusion/ej2-grids';
+import { Grid, Filter, Page } from '@syncfusion/ej2-grids';
 import { data } from './datasource.ts';
+import { Button } from '@syncfusion/ej2-buttons';
 
 Grid.Inject(Filter, Page);
 
@@ -21,13 +19,12 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 
-document.getElementById('restore').onclick = () => {
+let restoreButton: Button = new Button({ cssClass: 'e-primary'});
+restoreButton.appendTo('#restore');
+
+(document.getElementById('restore')as HTMLElement).onclick = () => {
     grid.enablePersistence = false;
-    window.localStorage.setItem("gridGrid", "");
+    window.localStorage.setItem("gridOrderDetails", ""); // Here grid is control name and OrderDetails is control ID
     grid.destroy();
-    //reloads the page
     location.reload();
-}
-
-
-
+};
