@@ -17,6 +17,18 @@ var grid = new ej.grids.Grid({
 });
 grid.appendTo('#Grid');
 
+var filtergrid = new ej.grids.Grid({
+  allowPaging: true,
+  height: 200,
+  columns: [
+    { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+    { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
+    { field: 'Freight', headerText: 'Freight', textAlign: 'Right', format: 'C2', width: 90 },
+    { field: 'ShipCity', headerText: 'Ship City', width: 120 }
+  ],
+});
+filtergrid.appendTo('#filtergrid');
+
 var getFilteredData = new ej.buttons.Button({ cssClass: 'e-success' }, '#getFilteredData');
 var clearFilter = new ej.buttons.Button({ cssClass: 'e-danger' }, '#clearFilter');
 
@@ -28,18 +40,7 @@ document.getElementById('getFilteredData').addEventListener('click', function ()
   document.getElementById('msg_warning').style.display = showWarning ? 'block' : 'none';
 
   if (showRecords) {
-    var filtergrid = new ej.grids.Grid({
-      dataSource: filteredData,
-      allowPaging: true,
-      height: 200,
-      columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', format: 'C2', width: 90 },
-        { field: 'ShipCity', headerText: 'Ship City', width: 120 }
-      ],
-    });
-    filtergrid.appendTo('#filtergrid');
+    filtergrid.dataSource = filteredData;
   }
 });
 
