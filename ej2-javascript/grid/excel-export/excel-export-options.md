@@ -15,7 +15,7 @@ The Syncfusion ##Platform_Name## Grid control allows you to customize the Excel 
 
 The Excel or CSV export action can be customized based on your requirements using the [excelExportProperties](../../api/grid/excelExportProperties/) property. By using the `excelExportProperties` property, you can export specific columns, exclude or include hidden column, export with custom data source, enable filter in the exported excel or CSV file, change the file name, add header and footer, multiple grid exporting, customize the data based on query, define delimiter for CSV exporting and set the theme.
 
-## Export current page
+## Export current page records
 
 Exporting the current page in Syncfusion ##Platform_Name## Grid to a Excel or CSV document provides the ability to export the currently displayed page records. This feature allows for generating Excel or CSV documents that specifically include the content from the current page of the grid. 
 

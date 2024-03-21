@@ -23,6 +23,18 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#Grid');
 
+let filtergrid: Grid  = new Grid({
+  allowPaging: true,
+  height: 200,
+  columns: [
+    { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
+    { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
+    { field: 'Freight', headerText: 'Freight', textAlign: 'Right', format: 'C2', width: 90 },
+    { field: 'ShipCity', headerText: 'Ship City', width: 120 }
+  ]
+});
+filtergrid.appendTo('#filtergrid');
+
 let getFilteredData: Button = new Button({ cssClass: 'e-success' }, '#getFilteredData');
 let clearFilter: Button = new Button({ cssClass: 'e-danger' }, '#clearFilter');
 
@@ -34,18 +46,7 @@ let clearFilter: Button = new Button({ cssClass: 'e-danger' }, '#clearFilter');
   (<HTMLElement>document.getElementById('msg_warning')).style.display = showWarning ? 'block' : 'none';
 
   if (showRecords) {
-    var filtergrid = new Grid({
-      dataSource: filteredData,
-      allowPaging: true,
-      height: 200,
-      columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 90 },
-        { field: 'CustomerID', headerText: 'Customer ID', width: 120 },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', format: 'C2', width: 90 },
-        { field: 'ShipCity', headerText: 'Ship City', width: 120 }
-      ]
-    });
-    filtergrid.appendTo('#filtergrid');
+    filtergrid.dataSource = filteredData;
   }
 });
 

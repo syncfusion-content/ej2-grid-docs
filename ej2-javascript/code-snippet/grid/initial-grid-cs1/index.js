@@ -13,11 +13,14 @@ var grid = new ej.grids.Grid({
 });
 grid.appendTo('#Grid');
 
+var restoreButton = new ej.buttons.Button({
+    cssClass: 'e-primary'
+});
+restoreButton.appendTo('#restore');
+
 document.getElementById('restore').onclick = function () {
     grid.enablePersistence = false;
-    window.localStorage.setItem("gridGrid", "");
+    window.localStorage.setItem("gridOrderDetails", ""); // Here grid is control name and OrderDetails is control ID
     grid.destroy();
-    //reloads the page 
     location.reload();
 };
-
