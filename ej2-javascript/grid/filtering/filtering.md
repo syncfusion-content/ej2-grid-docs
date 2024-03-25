@@ -13,9 +13,9 @@ domainurl: ##DomainURL##
 
 Filtering is a powerful feature in the Syncfusion Grid control that enables you to selectively view data based on specific criteria. It allows you to narrow down large datasets and focus on the information you need, thereby enhancing data analysis and decision-making.
 
-To use filter, inject the [Filter](../../api/grid/filter) module in the grid.
+To use filter, inject the [Filter](../../api/grid/filter/) module in the grid.
 
-To enable filtering in the Grid, you need to set the [allowFiltering](../../api/grid/#allowfiltering) property of the Grid control to true. Once filtering is enabled, you can configure various filtering options through the [filterSettings](../../api/grid/filterSettings) property of the Grid control. This property allows you to define the behavior and appearance of the filter.
+To enable filtering in the Grid, you need to set the [allowFiltering](../../api/grid/#allowfiltering) property of the Grid control to true. Once filtering is enabled, you can configure various filtering options through the [filterSettings](../../api/grid/filterSettings/) property of the Grid control. This property allows you to define the behavior and appearance of the filter.
 
 Here is an example that demonstrates the default filtering feature of the grid:
 
@@ -51,7 +51,7 @@ Here is an example that demonstrates the default filtering feature of the grid:
 
 ## Initial filter
 
-To apply an initial filter, you need to specify the filter criteria using the [predicate](../../api/grid/predicate) object in [filterSettings.columns](../../api/grid/filterSettingsModel/#columns). The `predicate` object represents the filtering condition and contains properties such as field, operator, and value.
+To apply an initial filter, you need to specify the filter criteria using the [predicate](../../api/grid/predicate/) object in [filterSettings.columns](../../api/grid/filterSettingsModel/#columns). The `predicate` object represents the filtering condition and contains properties such as field, operator, and value.
 
 Here is an example of how to configure the initial filter using the `predicate` object:
 
@@ -205,8 +205,7 @@ a* |Everything that starts with "a".
 The **LIKE** filter can process single search patterns using the "%" symbol, retrieving values matching the specified patterns. The following Grid features support LIKE filtering on string-type columns:
 
 * Filter Menu
-* Filter Bar with the [filterSettings.showFilterBarOperator](../../api/grid/filter/#showFilterBarOperator) property enabled on the Grid [filterSettings](../../api/grid/filterSettings).
-* Custom Filter of Excel filter type.
+* Filter Bar with the [filterSettings.showFilterBarOperator](../../api/grid/filter/#showFilterBarOperator) property enabled on the Grid [filterSettings](../../api/grid/filterSettings/).
 
 **For example:**
 
