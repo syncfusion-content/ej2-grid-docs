@@ -1,9 +1,7 @@
-
-
-import { Grid, Filter, Page } from '@syncfusion/ej2-grids';
+import { Grid, Filter} from '@syncfusion/ej2-grids';
 import { data } from 'datasource.ts';
 
-Grid.Inject(Page, Filter);
+Grid.Inject(Filter);
 
 let grid: Grid = new Grid({
     dataSource: data,
@@ -13,11 +11,7 @@ let grid: Grid = new Grid({
         { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', width: 140 },
         { field: 'Name', headerText: 'Name', width: 170 },
         { field: 'ShipName', headerText: 'Ship Name', width: 170 },
-        { field: 'CustomerID', headerText: 'Supplier Name', width: 140 }
-    ],
-    allowPaging: true,
+        { field: 'CustomerID', headerText: 'Customer ID', width: 140 }
+    ]
 });
 grid.appendTo('#Grid');
-
-
-

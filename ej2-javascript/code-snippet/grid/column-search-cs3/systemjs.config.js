@@ -10,7 +10,7 @@ System.config({
         }
     },
     paths: {
-        "syncfusion:": "https://cdn.syncfusion.com/ej2/20.3.56/"
+        "syncfusion:": "https://cdn.syncfusion.com/ej2/24.2.3/"
     },
     map: {
         main: "index.ts",
@@ -37,7 +37,6 @@ System.config({
        '*.json': { loader: 'plugin-json' }
     }
 });
-
 System.import('index.ts').catch(console.error.bind(console)).then(function () {
     document.getElementById('loader').style.display = "none";
     document.getElementById('container').style.visibility = "visible";

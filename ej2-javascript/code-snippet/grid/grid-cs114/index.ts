@@ -1,9 +1,9 @@
-
-
+import { DropDownList, ChangeEventArgs } from '@syncfusion/ej2-dropdowns';
 import { Grid, InfiniteScroll } from '@syncfusion/ej2-grids';
 Grid.Inject(InfiniteScroll);
 
-let names: string[] = ['TOM', 'Hawk', 'Jon', 'Chandler', 'Monica', 'Rachel', 'Phoebe', 'Gunther', 'Ross', 'Geller', 'Joey', 'Bing', 'Tribbiani', 'Janice', 'Bong', 'Perk', 'Green', 'Ken', 'Adams'];
+let names: string[] = ['TOM', 'Hawk', 'Jon', 'Chandler', 'Monica', 'Rachel', 'Phoebe', 'Gunther', 'Ross', 'Geller', 'Joey', 'Bing', 'Tribbiani',
+    'Janice', 'Bong', 'Perk', 'Green', 'Ken', 'Adams'];
 let hours: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let designation: string[] = ['Manager', 'Engineer 1', 'Engineer 2', 'Developer', 'Tester'];
 let status: string[] = ['Completed', 'Open', 'In Progress', 'Review', 'Testing']
@@ -21,31 +21,40 @@ let data: Function = (count: number) => {
     return result;
 };
 
-(<IWindow>window).getStatus = (status: string) => {
-    let colors: Object = { 'Completed': 'green', 'Open': 'red', 'In Progress': '#FB1E77', 'Review': 'brown', 'Testing': '#1EC1FB' };
-    return '<span style="color:' + colors[status] + '">' + status + '</span>';
-};
-
 let grid: Grid = new Grid({
-    dataSource: data(1000),
+    dataSource: data(5000),
     height: 300,
     enableInfiniteScrolling: true,
-    infiniteScrollSettings: { initialBlocks: 5 },
     pageSettings: { pageSize: 50 },
     columns: [
-        { field: 'TaskID', headerText: 'Task ID', textAlign: 'Right', width: 50, type: 'number' },
+        { field: 'TaskID', headerText: 'Task ID', textAlign: 'Right', width: 70 },
         { field: 'Engineer', width: 100 },
         { field: 'Designation', width: 100 },
         { field: 'Estimation', textAlign: 'Right', width: 100 },
-        { field: 'Status', width: 100, template: '${getStatus(data.Status)}' }
+        { field: 'Status', width: 100 }
     ]
 });
-
 grid.appendTo('#Grid');
 
-interface IWindow extends Window {
-    getStatus?: Function;
+let dropDownColumn: DropDownList = new DropDownList({
+    dataSource: [
+        { text: 'Select count' },
+        { text: '1', value: '1' },
+        { text: '2', value: '2' },
+        { text: '3', value: '3' },
+        { text: '4', value: '4' },
+        { text: '5', value: '5' },
+        { text: '6', value: '6' },
+        { text: '7', value: '7' }
+    ],
+    popupHeight: '240px',
+    width: '220px',
+    value: 'Select count',
+    change: valueChange
+});
+dropDownColumn.appendTo('#dropdownlist');
+
+function valueChange(args: ChangeEventArgs) {
+    (grid as Grid).infiniteScrollSettings.initialBlocks = parseInt(args.value as string, 10);
+    (grid as Grid).refresh();
 }
-
-
-

@@ -1,20 +1,20 @@
-ej.grids.Grid.Inject(ej.grids.Page, ej.grids.ExcelExport, ej.grids.Toolbar);
+ej.grids.Grid.Inject(ej.grids.ExcelExport, ej.grids.Toolbar);
 var grid = new ej.grids.Grid({
     dataSource: data,
-    allowPaging: true,
-    allowPdfExport: true,
+    allowExcelExport: true,
     toolbar: ['ExcelExport'],
     columns: [
-        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, type: 'number' },
-        { field: 'CustomerID', width: 140, headerText: 'Customer ID', width: 120 },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120 },
-        { field: 'ShipCity', headerText: 'ShipCity', textAlign: 'Right', width: 140 }
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 150 },
+        { field: 'Freight', headerText: 'Freight', width: 150 },
+        { field: 'ShipCity', headerText: 'Ship City', width: 150 }
     ],
     height: 260
 });
 grid.appendTo('#Grid');
 grid.toolbarClick = function(args){
     if (args['item'].id === 'Grid_excelexport') {
+        // 'Grid_excelexport' -> Grid control id + _ + toolbar item name
         grid.excelExport();
     }
 }
