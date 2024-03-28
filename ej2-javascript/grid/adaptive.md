@@ -100,6 +100,6 @@ The following features are only supported in vertical row rendering:
 
 A snapshot of the adaptive grid displaying enabled paging along with a pager dropdown.
 
-![AdaptivePagerDropdown](./images/javascript-grid-pager-dropdown-adaptive.gif)
+![AdaptivePagerDropdown](./images/PagerDropdown_Adaptive.gif)
 
 > The Column Menu feature, which includes grouping, sorting, autofit, filter, and column chooser, is exclusively supported for the Grid in **Horizontal** [rowRenderingMode](../../api/grid#rowrenderingmode).
