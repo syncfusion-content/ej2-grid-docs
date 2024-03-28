@@ -30,3 +30,16 @@ var grid = new ej.grids.Grid({
 });
 grid.appendTo('#verticalrender');
 
+var dropdown = new ej.dropdowns.DropDownList({
+    dataSource: [
+        { text: 'Vertical', value: 'Vertical' },
+        { text: 'Horizontal', value: 'Horizontal' },,
+    ],
+    index: 0,
+    width: 150,
+    change:  changeAlignment,
+});
+dropdown.appendTo('#dropdownlist');
+function  changeAlignment(args) {
+    grid.rowRenderingMode = args.value;
+}

@@ -1,5 +1,3 @@
-
-
 import { Grid, Filter, Sort, Edit, Toolbar, Page } from '@syncfusion/ej2-grids';
 import { Browser } from '@syncfusion/ej2-base';
 import { data } from './datasource.ts';
@@ -28,6 +26,3 @@ let grid: Grid = new Grid({
     ]
 });
 grid.appendTo('#adaptivebrowser');
-
-
-

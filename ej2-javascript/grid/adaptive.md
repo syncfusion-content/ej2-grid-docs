@@ -15,7 +15,9 @@ The Grid user interface (UI) was redesigned to provide an optimal viewing experi
 
 ## Render adaptive dialogs
 
-When we enable the [enableAdaptiveUI](../api/grid/#enableadaptiveui) property, the grid will render the filter, sort, and edit dialogs in full screen for a better user experience. This behavior is demonstrated in the below demo.
+The Syncfusion ##Platform_Name## Grid offers a valuable feature for rendering adaptive dialogs, specifically designed to enhance the user experience on smaller screens. This feature proves especially useful for optimizing the interface on devices with limited screen real estate. The functionality is achieved by enabling the [enableAdaptiveUI](../../api/grid/#enableadaptiveui) property, allowing the grid to render filter, sort, and edit dialogs in full-screen mode.
+
+The following sample demonstrates how to enable and utilize adaptive dialogs in the Syncfusion ##Platform_Name## Grid:
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -46,7 +48,11 @@ When we enable the [enableAdaptiveUI](../api/grid/#enableadaptiveui) property, t
 
 ## Vertical row rendering
 
-The grid will render the row elements in vertical order while setting the [`rowRenderingMode`](../api/grid/rowRenderingMode/) property value as **Vertical**.
+The Syncfusion ##Platform_Name## Grid introduces the feature of vertical row rendering, allowing you to display row elements in a vertical order. This is particularly useful for scenarios where a vertical presentation enhances data visibility. This is achieved by setting the [rowRenderingMode](../../api/grid#rowrenderingmode) property to the value **Vertical**.
+
+>The default row rendering mode is **Horizontal**.
+
+The following sample demonstrates how to dynamically change the row rendering mode between **Vertical** and **Horizontal** based on a DropDownList selection:
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -75,7 +81,7 @@ The grid will render the row elements in vertical order while setting the [`rowR
 {% previewsample "page.domainurl/code-snippet/grid/vertical-rendering-cs1" %}
 {% endif %}
 
-> * [`enableAdaptiveUI`](../api/grid/#enableadaptiveui) property must be enabled for vertical row rendering.
+> [enableAdaptiveUI](../../api/grid/#enableadaptiveui) property must be enabled for vertical row rendering.
 
 ### Supported features by vertical row rendering
 
@@ -90,10 +96,10 @@ The following features are only supported in vertical row rendering:
 * Infinite scroll
 * Toolbar - Options like **Add**, **Filter**, **Sort**, **Edit**, **Delete**, **Search**, and **Toolbar template** are available when their respective features are enabled. The toolbar dynamically includes a three-dotted icon, containing additional features like **ColumnChooser**, **Print**, **PdfExport**, **ExcelExport**, or **CsvExport**, once these features are enabled. Please refer to the following snapshot.
 
-![Vertical mode column menu in JavaScript Grid.](./images/javascript-grid-vertical-mode-column-menu.gif)
+![VerticalmodeColumnMenu](./images/javascript-grid-vertical-mode-column-menu.gif)
 
 A snapshot of the adaptive grid displaying enabled paging along with a pager dropdown.
 
-![Adaptive pager dropdown in JavaScript Grid.](./images/javascript-grid-pager-dropdown-adaptive.gif)
+![AdaptivePagerDropdown](./images/PagerDropdown_Adaptive.gif)
 
-> The Column Menu feature, which includes grouping, sorting, autofit, filter, and column chooser, is exclusively supported for the Grid in **Horizontal** [`rowRenderingMode`](../api/grid/rowRenderingMode/).
+> The Column Menu feature, which includes grouping, sorting, autofit, filter, and column chooser, is exclusively supported for the Grid in **Horizontal** [rowRenderingMode](../../api/grid#rowrenderingmode).

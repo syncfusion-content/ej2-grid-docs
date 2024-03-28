@@ -1,7 +1,5 @@
-
-
 import { Grid, Filter, Sort, Edit, Toolbar, Aggregate, Page } from '@syncfusion/ej2-grids';
-import { Browser } from '@syncfusion/ej2-base';
+import { DropDownList, ChangeEventArgs } from '@syncfusion/ej2-dropdowns';
 import { data } from './datasource.ts';
 
 Grid.Inject(Filter, Sort, Edit, Toolbar, Aggregate, Page);
@@ -37,5 +35,16 @@ let grid: Grid = new Grid({
 });
 grid.appendTo('#verticalrender');
 
-
-
+let dropDown: DropDownList = new DropDownList({
+    dataSource: [
+        { text: 'Vertical', value: 'Vertical' },
+        { text: 'Horizontal', value: 'Horizontal' },,
+    ],
+    index: 0,
+    width: 150,
+    change:  changeAlignment,
+});
+dropDown.appendTo('#dropdownlist');
+function changeAlignment(args: ChangeEventArgs ) {
+    grid.rowRenderingMode = args.value;
+}
