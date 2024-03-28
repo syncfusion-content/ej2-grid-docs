@@ -1,5 +1,6 @@
-export let productData: Object[] = [
+export const categoryData: Object[] = [
     {
+        "CategoryName": "Beverages",
         'ProductID': 1,
         'ProductName': 'Chai',
         'SupplierID': 1,
@@ -10,6 +11,7 @@ export let productData: Object[] = [
     },
 
     {
+        "CategoryName": "Beverages",
         'ProductID': 2,
         'ProductName': 'Chang',
         'SupplierID': 1,
@@ -20,6 +22,7 @@ export let productData: Object[] = [
     },
 
     {
+        "CategoryName": "Beverages",
         'ProductID': 3,
         'ProductName': 'Aniseed Syrup',
         'SupplierID': 1,
@@ -30,6 +33,7 @@ export let productData: Object[] = [
     },
 
     {
+        "CategoryName": "Beverages",
         'ProductID': 4,
         'ProductName': 'Chef Anton\'s Cajun Seasoning',
         'SupplierID': 2,
@@ -40,6 +44,7 @@ export let productData: Object[] = [
     },
 
     {
+        "CategoryName": "Beverages",
         'ProductID': 5,
         'ProductName': 'Chef Anton\'s Gumbo Mix',
         'SupplierID': 2,
@@ -50,6 +55,7 @@ export let productData: Object[] = [
     },
 
     {
+        "CategoryName": "Beverages",
         'ProductID': 6,
         'ProductName': 'Grandma\'s Boysenberry Spread',
         'SupplierID': 3,
@@ -60,6 +66,7 @@ export let productData: Object[] = [
     },
 
     {
+        "CategoryName": "Beverages",
         'ProductID': 7,
         'ProductName': 'Uncle Bob\'s Organic Dried Pears',
         'SupplierID': 3,
@@ -70,6 +77,7 @@ export let productData: Object[] = [
     },
 
     {
+        "CategoryName": "Beverages",
         'ProductID': 8,
         'ProductName': 'Northwoods Cranberry Sauce',
         'SupplierID': 3,
@@ -80,6 +88,7 @@ export let productData: Object[] = [
     },
 
     {
+        "CategoryName": "Beverages",
         'ProductID': 9,
         'ProductName': 'Mishi Kobe Niku',
         'SupplierID': 4,
@@ -87,4 +96,5 @@ export let productData: Object[] = [
         'UnitPrice': 97.00,
         'UnitsInStock': 29,
         'Discontinued': true
-    }]
+    }];
+    

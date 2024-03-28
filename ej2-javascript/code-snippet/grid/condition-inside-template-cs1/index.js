@@ -1,16 +1,14 @@
 var grid = new ej.grids.Grid({
-    dataSource: productData,
-   columns: [
+    dataSource: categoryData,
+    columns: [
             {
                 headerText: 'Discontinued', textAlign: 'Center',
-                template: '#template', width: 120
+                template: '#template', width: 150
             },
-            { field: 'ProductID', headerText: 'Product ID', textAlign: 'Right', width: 100 },
-            { field: 'ProductName', headerText: 'Name', width: 120 },
-            { field: 'SupplierID', headerText: 'SupplierID', width: 100 },
-            { field: 'UnitsInStock', headerText: 'Stock', width: 100, textAlign: 'Right' }
+            { field: 'ProductID', headerText: 'Product ID', textAlign: 'Right', width: 150 },
+            { field: 'CategoryName', headerText: 'Category Name', width: 150 },
+            { field: 'ProductName', headerText: 'Product Name', width: 150 }
         ],
     height: 315
 });
 grid.appendTo('#Grid');
-
