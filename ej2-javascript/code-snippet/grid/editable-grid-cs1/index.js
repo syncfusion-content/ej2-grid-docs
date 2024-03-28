@@ -3,12 +3,11 @@ var grid = new ej.grids.Grid({
     columns: [
         { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 120, isPrimaryKey: true },
         { field: 'OrderDate', headerText: 'Order Date', width: 130, textAlign: 'Right', format:'yMd' },
-        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 120, format: 'C2' },
         { field: 'ShipCountry', headerText: 'Ship Country', width: 140 },
         { field: 'Freight', headerText: 'Receipt Amount', width: 150, template:'#template' }
     ],
     height: 315,
-    created: (args) => {
+    created: () => {
         grid.element.addEventListener('keyup', function (e) { // Bind the keyup event for the grid.
             if (e.target.classList.contains('custemp')) { // Based on this condition, you can find whether the target is an input element or not.
                 var row = ej.grids.parentsUntil(e.target, 'e-row');
